@@ -2,7 +2,6 @@
 
 namespace XORC
 {
-
     static __m256i zero_vec32 = _mm256_set1_epi8('\0');
 
     static __m128i zero_vec16 = _mm_set1_epi8('\0');
@@ -28,6 +27,11 @@ namespace XORC
     static std::vector<char> bitsetToVectorChar(const boost::dynamic_bitset<> &bitset)
     {
 
+        if (bitset.size() % 8 != 0)
+        {
+            throw std::invalid_argument("The size of the bitset must be a multiple of 8.");
+        }
+
         std::vector<char> data(bitset.size() / 8);
 
         for (size_t i = 0; i < data.size(); ++i)
@@ -46,18 +50,60 @@ namespace XORC
         return data;
     }
 
-    static void integerToBitset(size_t value, boost::dynamic_bitset<> &output_data, uint64_t &len_output_data, size_t bit_count = STREAM_ENCODER_COUNT)
+    static boost::dynamic_bitset<> stringToBitset(const std::string &data)
     {
+        boost::dynamic_bitset<> bitset(data.size() * 8);
+
+        for (size_t i = 0; i < data.size(); ++i)
+        {
+            for (size_t j = 0; j < 8; ++j)
+            {
+                if (data[i] & (1 << j))
+                {
+                    bitset[i * 8 + j] = 1;
+                }
+            }
+        }
+
+        return bitset;
+    }
+
+    static std::string bitsetToString(const boost::dynamic_bitset<> &bitset)
+    {
+
+        std::string data;
+        data.resize(bitset.size() / 8);
+        char c = 0;
+        for (size_t i = 0; i < data.size(); ++i)
+        {
+            c = 0;
+            for (size_t j = 0; j < 8; ++j)
+            {
+                if (bitset[i * 8 + j])
+                {
+                    c |= (1 << j);
+                }
+            }
+            data[i] = c;
+        }
+
+        return data;
+    }
+
+    static boost::dynamic_bitset<> integerToBitset(size_t value, size_t bit_count)
+    {
+        boost::dynamic_bitset<> bitset(bit_count);
         for (size_t i = 0; i < bit_count; ++i)
         {
-            output_data[len_output_data++] = (value >> i) & 1;
+            bitset[i] = (value >> i) & 1;
         }
+        return bitset;
     }
 
     Stream_Compress::Stream_Compress() {}
     Stream_Compress::~Stream_Compress() {}
 
-    void Stream_Compress::stream_compress(const std::string &single_data, boost::dynamic_bitset<> &output_data, uint64_t &len_output_data)
+    void Stream_Compress::stream_compress(const std::string &single_data, std::vector<boost::dynamic_bitset<>> &bitset_vector)
     {
         const size_t len_single_data = single_data.size();
 
@@ -77,7 +123,6 @@ namespace XORC
             // int i = 0;
             for (int j = this->window[len_single_data].size() - 1; j >= 0; --j)
             {
-
                 XORC::bitwiseXor(single_data, this->window[len_single_data][j], xor_result);
 
                 count = 0;
@@ -117,19 +162,50 @@ namespace XORC
                 }
             }
 
-            output_data[len_output_data++] = 1;
+            boost::dynamic_bitset<> min_rle_result(2 * 8 * len_single_data);
 
-            integerToBitset(min_index, output_data, len_output_data, EACH_WINDOW_SIZE_COUNT);
+            boost::dynamic_bitset<> isRLE_bitset(len_single_data);
 
-            size_t tem_index = len_output_data;
-            len_output_data += STREAM_ENCODER_COUNT;
+            XORC::runLengthEncodeString(min_xor_result, min_rle_result, isRLE_bitset, single_data);
 
-            size_t len_xor_rle_bitset = XORC::runLengthEncodeString(min_xor_result, output_data, len_output_data, single_data);
+            boost::dynamic_bitset<> tem_bitset(1);
+            tem_bitset.set(0);
+            bitset_vector.push_back(tem_bitset);
 
-            for (size_t i = 0; i < STREAM_ENCODER_COUNT; ++i)
+            boost::dynamic_bitset<> min_index_bitset = integerToBitset(min_index, EACH_WINDOW_SIZE_COUNT);
+            bitset_vector.push_back(min_index_bitset);
+
+            int len_header_byte;
+            int len_header_bit = isRLE_bitset.size();
+            int len_last_bit = len_header_bit % 8;
+            if (len_last_bit == 0)
             {
-                output_data[tem_index + i] = (len_xor_rle_bitset >> i) & 1;
+                len_header_byte = len_header_bit / 8;
             }
+            else
+            {
+                len_header_byte = len_header_bit / 8 + 1;
+            }
+
+            boost::dynamic_bitset<> len_last_bit_bitset = integerToBitset(len_last_bit, 3);
+            bitset_vector.push_back(len_last_bit_bitset);
+
+            int padding = 8 - (1 + EACH_WINDOW_SIZE_COUNT + 3) % 8;
+            if (padding != 8)
+                bitset_vector.push_back(boost::dynamic_bitset<>(padding));
+
+            boost::dynamic_bitset<> len_header_bitset = integerToBitset(len_header_byte, HEAD_BIT_LEN);
+
+            bitset_vector.push_back(len_header_bitset);
+
+            bitset_vector.push_back(isRLE_bitset);
+
+            if (len_last_bit != 0)
+            {
+                bitset_vector.push_back(boost::dynamic_bitset<>(8 - len_last_bit));
+            }
+
+            bitset_vector.push_back(min_rle_result);
 
             if (this->window[len_single_data].size() < EACH_WINDOW_SIZE)
             {
@@ -143,17 +219,15 @@ namespace XORC
         }
         else if (len_single_data >= MAX_LEN || len_single_data == 0)
         {
-            output_data[len_output_data++] = 0;
+            boost::dynamic_bitset<> original_bitset = stringToBitset(single_data);
+            size_t len_original_bitset = original_bitset.size();
 
-            integerToBitset(len_single_data, output_data, len_output_data, ORIGINAL_LENGTH_COUNT);
+            bitset_vector.push_back(boost::dynamic_bitset<>(1));
 
-            for (size_t i = 0; i < len_single_data; i++)
-            {
-                for (size_t j = 0; j < 8; ++j)
-                {
-                    output_data[len_output_data++] = (single_data[i] >> j) & 1;
-                }
-            }
+            boost::dynamic_bitset<> original_length_bitset = integerToBitset(len_single_data, ORIGINAL_LENGTH_COUNT);
+            bitset_vector.push_back(original_length_bitset);
+
+            bitset_vector.push_back(original_bitset);
         }
         else
         {
@@ -161,40 +235,16 @@ namespace XORC
             newDeque.push_back(single_data);
             this->window[len_single_data] = newDeque;
 
-            output_data[len_output_data++] = 0;
+            boost::dynamic_bitset<> original_bitset = stringToBitset(single_data);
+            size_t len_original_bitset = original_bitset.size();
 
-            integerToBitset(len_single_data, output_data, len_output_data, ORIGINAL_LENGTH_COUNT);
+            bitset_vector.push_back(boost::dynamic_bitset<>(1));
 
-            for (size_t i = 0; i < len_single_data; i++)
-            {
-                for (size_t j = 0; j < 8; ++j)
-                {
-                    output_data[len_output_data++] = (single_data[i] >> j) & 1;
-                }
-            }
+            boost::dynamic_bitset<> original_length_bitset = integerToBitset(len_single_data, ORIGINAL_LENGTH_COUNT);
+            bitset_vector.push_back(original_length_bitset);
+
+            bitset_vector.push_back(original_bitset);
         }
-    }
-
-    static std::string bitsetToString(const boost::dynamic_bitset<> &bitset)
-    {
-
-        std::string data;
-        data.resize(bitset.size() / 8);
-        char c = 0;
-        for (size_t i = 0; i < data.size(); ++i)
-        {
-            c = 0;
-            for (size_t j = 0; j < 8; ++j)
-            {
-                if (bitset[i * 8 + j])
-                {
-                    c |= (1 << j);
-                }
-            }
-            data[i] = c;
-        }
-
-        return data;
     }
 
     static void simdReplaceNullCharacters(std::string &xor_result, const std::string &pattern)
@@ -243,20 +293,20 @@ namespace XORC
         }
     }
 
-    void Stream_Compress::stream_decompress(const boost::dynamic_bitset<> &single_data, const bool isRLE, const int original_length_or_window_id, std::string &output_data, std::string &xor_result)
+    void Stream_Compress::stream_decompress(const boost::dynamic_bitset<> &single_data, const int &vec_len_header_bit, const bool isRLE, const int original_length_or_window_id, std::string &output_data, std::string &xor_result)
     {
         xor_result.clear();
         if (isRLE)
         {
 
-            size_t len_single_data = single_data.size();
             size_t i = 0;
+            size_t k = vec_len_header_bit;
 
             int zero_count = 0;
 
             unsigned char byte = 0;
 
-            while (i < len_single_data)
+            while (i < vec_len_header_bit)
             {
 
                 if (single_data[i])
@@ -264,11 +314,11 @@ namespace XORC
                     i++;
 
                     byte = 0;
-                    for (std::size_t j = 0; j < 8; ++j)
+                    for (size_t j = 0; j < 8; ++j)
                     {
-                        byte |= (single_data[i + j]) << j;
+                        byte |= (single_data[k + j]) << j;
                     }
-                    i += RLE_SKIM;
+                    k += RLE_SKIM;
 
                     xor_result.push_back(byte);
                 }
@@ -277,9 +327,9 @@ namespace XORC
                     i++;
 
                     zero_count = 0;
-                    for (size_t j = 0; j < RLE_COUNT; ++j, ++i)
+                    for (size_t j = 0; j < RLE_COUNT; ++j, ++k)
                     {
-                        if (single_data[i])
+                        if (single_data[k])
                         {
                             zero_count |= (1 << j);
                         }
@@ -295,7 +345,6 @@ namespace XORC
             simdReplaceNullCharacters(xor_result, pattern);
 
             output_data += xor_result;
-            output_data += "\n";
             // output_data += "\r\n";
 
             if (this->window[len_xor_result].size() < EACH_WINDOW_SIZE)
@@ -312,8 +361,8 @@ namespace XORC
         {
 
             std::string tem = bitsetToString(single_data);
+
             output_data += tem;
-            output_data += "\n";
             // output_data += "\r\n";
 
             if (original_length_or_window_id < MAX_LEN)

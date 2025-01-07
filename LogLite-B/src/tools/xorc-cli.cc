@@ -17,12 +17,12 @@ static struct config
 {
     bool stream_compress;
     bool stream_decompress;
+
     bool is_test;
 
     const char *file_path;
     const char *com_output_path;
     const char *decom_output_path;
-
 } config;
 
 static void parseOptions(int argc, const char **argv)
@@ -90,20 +90,49 @@ bool areFilesEqual(const std::string &filePath1, const std::string &filePath2)
 
     if (file1.tellg() != file2.tellg())
     {
+
         return false;
     }
 
     file1.seekg(0, std::ifstream::beg);
     file2.seekg(0, std::ifstream::beg);
 
+    // Compare file contents
     std::istreambuf_iterator<char> begin1(file1), begin2(file2);
     std::istreambuf_iterator<char> end;
     return std::equal(begin1, end, begin2);
 }
 
+boost::dynamic_bitset<> merge_bitset_vector(const std::vector<boost::dynamic_bitset<>> &bitset_vector)
+{
+
+    std::size_t total_bits = 0;
+    for (const auto &bitset : bitset_vector)
+    {
+        total_bits += bitset.size();
+    }
+
+    boost::dynamic_bitset<> merged_bitset(total_bits);
+
+    std::size_t current_position = 0;
+
+    for (const auto &bitset : bitset_vector)
+    {
+
+        for (std::size_t i = 0; i < bitset.size(); ++i)
+        {
+            merged_bitset[current_position + i] = bitset[i];
+        }
+
+        current_position += bitset.size();
+    }
+
+    return merged_bitset;
+}
+
 int main(int argc, const char *argv[])
 {
-    // Parse command line options
+
     parseOptions(argc, argv);
 
     if (config.is_test)
@@ -121,9 +150,6 @@ int main(int argc, const char *argv[])
         std::string all_data;
         XORC::read_string_from_file(all_data, config.file_path);
 
-        boost::dynamic_bitset<> output_data(all_data.size() * 8);
-        uint64_t len_output_data = 0;
-
         std::vector<std::string> split_all_data;
 
         std::istringstream stream(all_data);
@@ -132,13 +158,15 @@ int main(int argc, const char *argv[])
         int line_count = 0;
         while (std::getline(stream, token, '\n'))
         {
-            if (!token.empty() && token.back() == '\r')
-            {
-                token.pop_back();
-            }
+
+            token.push_back('\n');
+
             split_all_data.push_back(token);
             ++line_count;
         }
+
+        std::vector<boost::dynamic_bitset<>> bitset_vector;
+        bitset_vector.reserve(line_count * 20);
 
         XORC::Stream_Compress *sc = new XORC::Stream_Compress();
 
@@ -146,25 +174,29 @@ int main(int argc, const char *argv[])
         start_time = clock();
         for (size_t i = 0; i < split_all_data.size(); ++i)
         {
-            sc->stream_compress(split_all_data[i], output_data, len_output_data);
+            sc->stream_compress(split_all_data[i], bitset_vector);
         }
         end_time = clock();
 
-        output_data.resize(len_output_data);
-        XORC::write_bitset_to_file(output_data, config.com_output_path);
+        boost::dynamic_bitset<> merged_bitset = merge_bitset_vector(bitset_vector);
+        XORC::write_bitset_to_file(merged_bitset, config.com_output_path);
 
-        std::cout << "line_count:"
-                  << line_count
-                  << std::endl;
+        int64_t raw_size = file_size(config.file_path);
+        int64_t compressed_size = file_size(config.com_output_path);
 
-        int64_t raw_size1 = (all_data.size() - 1 * line_count) * 8;
-        int64_t compressed_size1 = len_output_data - line_count * STREAM_ENCODER_COUNT;
+        if (raw_size <= 0 || compressed_size < 0)
+        {
+            std::cerr << "Error: Invalid file size. Raw size: " << raw_size
+                      << ", Compressed size: " << compressed_size << std::endl;
+            return 0;
+        }
+
         std::cout << "compression rate:"
-                  << static_cast<double>(compressed_size1) / static_cast<double>(raw_size1)
+                  << static_cast<double>(compressed_size) / static_cast<double>(raw_size)
                   << std::endl;
 
         std::cout << "compression speed: "
-                  << (double)raw_size1 / 8 / (double)1024 / (double)1024 /
+                  << (double)raw_size / (double)1024 / (double)1024 /
                          (static_cast<double>(end_time - start_time) / CLOCKS_PER_SEC)
                   << "MB/s" << std::endl;
 
@@ -173,6 +205,7 @@ int main(int argc, const char *argv[])
 
     if (config.stream_decompress || config.is_test)
     {
+
         const char *temp;
         if (config.is_test)
         {
@@ -188,6 +221,7 @@ int main(int argc, const char *argv[])
         boost::dynamic_bitset<> compressed_bitset;
         XORC::read_bitset_from_file(compressed_bitset, config.file_path);
 
+        std::vector<int> vec_len_header_bit;
         std::vector<boost::dynamic_bitset<>> split_compressed_bitset;
         std::vector<bool> isRLE;
         std::vector<int> original_length_or_window_id;
@@ -200,7 +234,7 @@ int main(int argc, const char *argv[])
                 isRLE.push_back(false);
                 i++;
 
-                int tem_original_length = 0;
+                size_t tem_original_length = 0;
                 for (size_t j = 0; j < ORIGINAL_LENGTH_COUNT; ++j, ++i)
                 {
                     if (compressed_bitset[i])
@@ -217,12 +251,14 @@ int main(int argc, const char *argv[])
                 }
                 i += tem_original_length * 8;
 
+                vec_len_header_bit.push_back(-1);
                 split_compressed_bitset.push_back(tem_bitset);
             }
             else
             {
                 isRLE.push_back(true);
                 i++;
+
                 int tem_window_id = 0;
                 for (size_t j = 0; j < EACH_WINDOW_SIZE_COUNT; ++j, ++i)
                 {
@@ -233,28 +269,57 @@ int main(int argc, const char *argv[])
                 }
                 original_length_or_window_id.push_back(tem_window_id);
 
-                int len_single_data = 0;
-                for (size_t j = 0; j < STREAM_ENCODER_COUNT; ++j, ++i)
+                int len_last_bit = 0;
+                for (size_t j = 0; j < 3; ++j, ++i)
                 {
                     if (compressed_bitset[i])
                     {
-                        len_single_data |= (1 << j);
+                        len_last_bit |= (1 << j);
+                    }
+                }
+                if (len_last_bit == 0)
+                {
+                    len_last_bit = 8;
+                }
+
+                int padding = 8 - (1 + EACH_WINDOW_SIZE_COUNT + 3) % 8;
+                if (padding != 8)
+                    i += (padding);
+
+                int len_header_byte = 0;
+                for (size_t j = 0; j < HEAD_BIT_LEN; ++j, ++i)
+                {
+                    if (compressed_bitset[i])
+
+                    {
+                        len_header_byte |= (1 << j);
                     }
                 }
 
-                boost::dynamic_bitset<> tem_bitset(len_single_data);
-                for (size_t j = 0; j < len_single_data; j++)
-                {
-                    tem_bitset[j] = compressed_bitset[i + j];
-                }
-                i += len_single_data;
+                int len_header_bit = len_header_byte * 8 - 8 + len_last_bit;
 
+                boost::dynamic_bitset<> tem_bitset(len_header_bit + len_header_bit * 8);
+                size_t len_tem_bitset = 0;
+
+                for (int j = 0; j < len_header_bit; j++)
+                {
+                    tem_bitset[len_tem_bitset++] = compressed_bitset[i++];
+                }
+
+                i += 8 - len_last_bit;
+
+                for (int j = 0; j < len_header_bit * 8; j++)
+                {
+                    tem_bitset[len_tem_bitset++] = compressed_bitset[i++];
+                }
+
+                vec_len_header_bit.push_back(len_header_bit);
                 split_compressed_bitset.push_back(tem_bitset);
             }
         }
 
         std::string all_data;
-        all_data.reserve(static_cast<size_t>(1024) * 1024 * 1024 * 33);
+        all_data.reserve(static_cast<size_t>(1024) * 1024 * 1024 * Reserved_Memory);
 
         XORC::Stream_Compress *sc = new XORC::Stream_Compress();
 
@@ -265,7 +330,7 @@ int main(int argc, const char *argv[])
         start_time = clock();
         for (size_t i = 0; i < split_compressed_bitset.size(); ++i)
         {
-            sc->stream_decompress(split_compressed_bitset[i], isRLE[i], original_length_or_window_id[i], all_data, xor_result);
+            sc->stream_decompress(split_compressed_bitset[i], vec_len_header_bit[i], isRLE[i], original_length_or_window_id[i], all_data, xor_result);
         }
         end_time = clock();
 
@@ -277,11 +342,6 @@ int main(int argc, const char *argv[])
                          (static_cast<double>(end_time - start_time) / CLOCKS_PER_SEC)
                   << "MB/s" << std::endl;
 
-        // bool isEqual=areFilesEqual(original_file_path,output_path);
-        // std::cout << "is Equal?  "<< (isEqual?"yes":"no") << std::endl;
-
         delete sc;
     }
-
-    return 0;
 }
