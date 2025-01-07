@@ -22,7 +22,7 @@ sudo apt install libboost-all-dev
 
 ```bash
 
-cd LogLite-b/   OR    cd LogLite-B/
+cd LogLite-b/   OR   cd LogLite-B/
 
 
 g++-9 -Ofast -march=native -fdiagnostics-color=always -g ./src/compress/*.cc ./src/common/*.cc ./src/tools/*.cc -I ./src -o ./src/tools/xorc-cli -mavx512f
@@ -133,6 +133,7 @@ string3
 All datasets are publicly available and can be downloaded directly. Only a few log datasets require delimiter handling or need to be merged into a single file.
 
 LogHub Datasets (TEXT): [https://github.com/logpai/loghub](https://github.com/logpai/loghub)
+
 uslope Datasets (JSON): [https://docs.yscope.com/clp/main/user-guide/resources-datasets](https://docs.yscope.com/clp/main/user-guide/resources-datasets)
 
 
@@ -141,9 +142,13 @@ uslope Datasets (JSON): [https://docs.yscope.com/clp/main/user-guide/resources-d
 #### Line-by-line Compression
 
 PBC: [https://github.com/antgroup/pbc](https://github.com/antgroup/pbc)
+
 FSST: [https://github.com/cwida/fsst](https://github.com/cwida/fsst)
+
 LZ4-d and Zstd-d:  
+
 - Similar to FSST, we implemented LZ-dict and Zstd-dic in the linetest-zstd.cpp file under the LogLite-b/src/additional directory.
+
 - Download FSST，Copy the linetest-zstd.cpp file into the paper directory of FSST.
 
 ```bash
@@ -162,10 +167,16 @@ g++ -std=c++14 -W -Wall -fpermissive -olinetest-zstd -Izstd -Lzstd -g -O3 -DNDEB
 
 #### File Compression
 LogReducer: [https://github.com/THUBear-wjy/LogReducer](https://github.com/THUBear-wjy/LogReducer)
+
 LogShrink: [https://github.com/IntelligentDDS/LogShrink](https://github.com/IntelligentDDS/LogShrink)
+
 LogGrep-Z: [https://github.com/THUBear-wjy/LogGrep-zstd](https://github.com/THUBear-wjy/LogGrep-zstd)
+
 LogGrep-L: [https://github.com/THUBear-wjy/LogGrep](https://github.com/THUBear-wjy/LogGrep)
+
 CLP and uslope: [https://github.com/y-scope/clp](https://github.com/y-scope/clp)
+
 PBC-Z and PBC-L: [https://github.com/antgroup/pbc](https://github.com/antgroup/pbc)
+
 LZ4, Zstd, LZMA: [https://github.com/inikep/lzbench](https://github.com/inikep/lzbench)
 
