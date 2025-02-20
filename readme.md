@@ -180,3 +180,38 @@ PBC-Z and PBC-L: [https://github.com/antgroup/pbc](https://github.com/antgroup/p
 
 LZ4, Zstd, LZMA: [https://github.com/inikep/lzbench](https://github.com/inikep/lzbench)
 
+
+
+## Plug-and-Play
+1.The following examples and guidelines assist developers in seamlessly integrating LogLite into real-world applications.
+
+2.Copy both the `common` and `compress` directories into your project, ensuring they are accessible for linking.
+
+3.Below is a example where `pipe` represents the log data stream. Logs are retrieved from the log data stream, and LogLite is used to plug-and-play for real-time compression of the streaming data.
+
+
+```cpp
+void log_compressor(FILE *pipe)
+{
+
+    XORC::Stream_Compress *sc = new XORC::Stream_Compress();
+
+    boost::dynamic_bitset<> output_data(3000 * 8 * 2);
+    uint64_t len_output_data = 0;
+    char buffer[1024];
+
+    while (!stop_flag && fgets(buffer, sizeof(buffer), pipe) != nullptr)
+    {
+        std::string log_line(buffer);
+
+        len_output_data = 0;
+        sc->stream_compress(log_line, output_data, len_output_data);
+
+    }
+
+    delete sc;
+}
+
+```
+
+4.For more detailed usage, please refer to the `tool` folder.

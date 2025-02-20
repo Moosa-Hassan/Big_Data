@@ -19,8 +19,13 @@ constexpr int ORIGINAL_LENGTH_COUNT = 15;
 // it can influence the compression rate of certain data sets
 constexpr int MAX_LEN = 10000;
 
+//Reserved memory GB
+//Adjust according to the size of the compressed file
+constexpr double Reserved_Memory = 33;
 
 
+
+//====================================//
 //Parameters that should not be adjusted
 constexpr int RLE_COUNT = 8;
 constexpr int RLE_POW_COUNT = 1 << RLE_COUNT;
