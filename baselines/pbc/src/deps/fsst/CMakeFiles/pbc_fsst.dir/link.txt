@@ -1,0 +1,2 @@
+llvm-ar qc libpbc_fsst.a  CMakeFiles/pbc_fsst.dir/libfsst.cpp.o CMakeFiles/pbc_fsst.dir/fsst_avx512.cpp.o
+llvm-ranlib libpbc_fsst.a
