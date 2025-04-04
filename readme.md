@@ -508,3 +508,9 @@ void log_compressor(FILE *pipe)
 ```
 
 4.For more detailed usage, please refer to the `tool` folder.
+
+
+## Appendix
+Detailed Table 4 is added as an appendix in the Appendix folder.
+
+The table of LogLite's gains and losses relative to other methods is added to the appendix folder.
