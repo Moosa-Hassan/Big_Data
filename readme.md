@@ -144,9 +144,9 @@ uslope Datasets (JSON): [https://docs.yscope.com/clp/main/user-guide/resources-d
 
 We are committed to reproducibility. 
 
-We provide a compilation script that is `scripts/compile.py`. when run it, it can compile all the compressors. 
+We provide a compilation script that is `scripts/compile.py`. When run it, it can compile all the compressors. 
 
-We also provide a run script that is `scripts/run.py`, when run it, it can compress a dataset using all the compressors. All results is saved in `scripts/results/`.
+We also provide a run script that is `scripts/run.py`. When run it, it can compress a dataset using all the compressors. All results is saved in `scripts/results/`.
 
 ```bash
 cd scripts/
@@ -161,9 +161,9 @@ python3 run.py
 
 If you want to modify the dataset, simply place the dataset as a single file in the `scripts/datasets/` directory and modify the `dataset` variable in `run.py`. 
 
-Our scripts do not include CLP and μSlope because they are recommended to be tested in a Docker environment.
+Our scripts do not include CLP and μSlope because they are recommended to be tested in a Docker environment. Following the instructions for CLP and μSlope in the `Baselines`, it is easy to reproduce their results. 
 
-For large datasets, some compressors may report errors. You can split the file into smaller files (for example, split a large file into smaller ones with a maximum size of no more than 10 GB).
+For large datasets, some compressors may report errors. You can split the file into smaller files (for example, split a large file into smaller ones with a maximum size of no more than 10 GB) or turn up the size of their buffer.
 
 For CockroachDB (Coc), the results of LogLite need to first convert the string form of “\n” in the dataset to the actual newline character \n.
 
