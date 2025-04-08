@@ -5,6 +5,7 @@ import sys
 
 # dataset="Apache.log"
 dataset=sys.argv[1]
+dataset_name=dataset.split(".")[0]
 
 pbc_metrics={}
 
@@ -265,7 +266,7 @@ decompressed_output_file_path=f"./decom_output/{dataset}.pbc.decom"
 
 
 # pbc
-command = f"{pbc_dir}/bin/pbc-cli --test-compress --file-path {input_file_path} --pattern-path {pbc_dir}/data/patterns/patterns/Apache.pattern  --compressed-file-path {compressed_output_file_path}"
+command = f"{pbc_dir}/bin/pbc-cli --test-compress --file-path {input_file_path} --pattern-path {pbc_dir}/data/patterns/patterns/{dataset_name}.pattern  --compressed-file-path {compressed_output_file_path}"
 print(f"********************PBC***********************")
 run_command(command, f"Using **PBC** compress and decompress **{dataset}**")
 print(f"****************************************************")
