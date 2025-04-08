@@ -140,6 +140,35 @@ LogHub Datasets (TEXT): [https://github.com/logpai/loghub](https://github.com/lo
 uslope Datasets (JSON): [https://docs.yscope.com/clp/main/user-guide/resources-datasets](https://docs.yscope.com/clp/main/user-guide/resources-datasets)
 
 
+## Reproduceability 
+
+We are committed to reproducibility. 
+
+We provide a compilation script that is `scripts/compile.py`. when run it, it can compile all the compressors. 
+
+We also provide a run script that is `scripts/run.py`, when run it, it can compress a dataset using all the compressors. All results is saved in `scripts/results/`.
+
+```bash
+cd scripts/
+
+# compilation
+python3 compile.py
+
+# compress Apache.log
+python3 run.py
+
+```
+
+If you want to modify the dataset, simply place the dataset as a single file in the `scripts/datasets/` directory and modify the `dataset` variable in `run.py`. 
+
+Our scripts do not include CLP and μSlope because they are recommended to be tested in a Docker environment.
+
+For large datasets, some compressors may report errors. You can split the file into smaller files (for example, split a large file into smaller ones with a maximum size of no more than 10 GB).
+
+For CockroachDB (Coc), the results of LogLite need to first convert the string form of “\n” in the dataset to the actual newline character \n.
+
+More detailed instructions are provided in the `Baselines` below.
+
 ## Baselines
 
 ### Line-by-line Compression
@@ -192,7 +221,7 @@ training
 ./bin/pbc-cli --test-compress --file-path <input datasets file path> --pattern-path <patterns file path> --compressed-file-path <compressed file output path>
 
 # Example
-./bin/pbc-cli --test-compress --file-path data/path/Apache.log --pattern-path data/patterns/patterns/Apache.log.pattern  --compressed-file-path data/datasets/pbc/Apache.log.pbc
+./bin/pbc-cli --test-compress --file-path data/path/Apache.log --pattern-path data/patterns/patterns/Apache.pattern  --compressed-file-path data/datasets/pbc/Apache.log.pbc
 ```
 
 **PBC-F**
@@ -213,10 +242,12 @@ cd lzbench/
 make
 
 # Usage
+./lzbench -elz4 <input datasets file path>
 ./lzbench -ezstd,3  <input datasets file path>
 ./lzbench -elzma,6  <input datasets file path>
 
 # Example
+./lzbench -elz4  data/path/Apache.log
 ./lzbench -ezstd,3  data/path/Apache.log
 ./lzbench -elzma,6  data/path/Apache.log
 ```
@@ -340,6 +371,8 @@ You can also find a compression summary under ./compression such as ./compressio
 
 **LogGrep-Z** [https://github.com/THUBear-wjy/LogGrep-zstd](https://github.com/THUBear-wjy/LogGrep-zstd)
 ```bash
+cd loggrep-Z
+
 mkdir ./output
 
 mkdir ./example_zip
@@ -366,10 +399,11 @@ First compress these log blocks.
 ```bash
 cd ./compression
 
-python3 largeTest.py ../LogHub_Seg/
+# python3 largeTest.py ../LogHub_Seg/
+python3 quickTest.py
 ```
 
-Then you can find compressed files in ./LogHub_Seg_zip/
+Then you can find compressed files in ./example_zip/.
 
 You can also find a compression summary under ./compression such as ./compression/Log_2022-09-21, which records whether there is an error and the compression speed.
 
@@ -511,6 +545,6 @@ void log_compressor(FILE *pipe)
 
 
 ## Appendix
-Detailed Table 4 is added as an appendix in the Appendix folder.
+Detailed Table 4 is added as an appendix in the `appendix` folder.
 
-The table of LogLite's gains and losses relative to other methods is added to the appendix folder.
+The table of LogLite's gains and losses relative to other methods is added to the `appendix` folder.
