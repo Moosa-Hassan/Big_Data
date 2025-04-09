@@ -159,6 +159,8 @@ python3 run.py
 
 ```
 
+We provide an example of compressing Apache.log using all the compressors, and the results are saved in `/scripts/results/Apache.log.txt`.
+
 If you want to modify the dataset, simply place the dataset as a single file in the `scripts/datasets/` directory and modify the `dataset` variable in `run.py`. 
 
 Our scripts do not include CLP and μSlope because they are recommended to be tested in a Docker environment. Following the instructions for CLP and μSlope in the `Baselines`, it is easy to reproduce their results. 
