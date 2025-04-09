@@ -337,6 +337,8 @@ python3 decompress_run.py -E E -K lzma -I ../out/Apache/Apache -T ../template/ -
 
 **LogGrep**
 
+LogGrep does not provide open source decompression code.
+
 **LogGrep-L** [https://github.com/THUBear-wjy/LogGrep](https://github.com/THUBear-wjy/LogGrep)
 ```bash
 cd loggrep-L
