@@ -549,6 +549,6 @@ void log_compressor(FILE *pipe)
 
 
 ## Appendix
-Detailed Table 4 is added as an appendix in the `appendix` folder.
+Detailed Table of file compression for TEXT log datasets is added as an appendix in the `appendix` folder.
 
 The table of LogLite's gains and losses relative to other methods is added to the `appendix` folder.
