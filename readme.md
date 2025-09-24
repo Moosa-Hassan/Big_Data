@@ -1,6 +1,8 @@
 # README
 
 ## LogLite
+LogLite has been accepted by VLDB2025.
+
 **LogLite-b:** A lightweight compression method proposed by us, outputting bitstreams and offering the best compression ratio and speed for line-by-line compression.
 
 **LogLite-B:** A lightweight compression method proposed by us, outputting bytestreams, which can be further compressed by general-purpose compression algorithms.
@@ -16,7 +18,10 @@ To compile the program, use the following commands:
 
 sudo apt update
 
-sudo apt install libboost-all-dev
+sudo apt install clang lldb llvm-dev lld libboost-all-dev
+sudo apt install liblz4-dev libzstd-dev
+sudo apt install cmake make
+
 
 ```
 
