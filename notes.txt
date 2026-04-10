@@ -3,3 +3,15 @@ Citations
 LogHub : 
 Jieming Zhu, Shilin He, Pinjia He, Jinyang Liu, Michael R. Lyu. Loghub: A Large Collection of System Log Datasets for AI-driven Log Analytics. IEEE International Symposium on Software Reliability Engineering (ISSRE), 2023.
 
+Week 1:  Establish and validate the pipline.
+        - implemend the keyword_search_loglite_binary function so that we can query compressed data.
+        - Select 2-3 datasets and devise simple queries to validate weather our engine is working
+        - Store the results and visualize them optionally (not necessary at this week)
+        - Use time function to measure the performance
+
+Week 2 : Improve and optimize the Engine
+        - Build support for more complex queries 
+        - using all the datasets to evluate our model
+        - Visualization should be made here now.
+
+Week 3 : Just improve the engine furthur and documentation. For now will do whatever was left from week 2.
