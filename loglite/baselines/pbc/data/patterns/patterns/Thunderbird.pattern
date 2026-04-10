@@ -1,0 +1,176 @@
+171
+- 11* 200*: *
+- 11* 200* tbird-sm1 * src@tbird-sm1 ib_sm.x[*]: [ib_sm_sweep.c:1831]: \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\* NEW SWEEP \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+- 113* 2005.11.* *Nov *
+- 113* 200* kernel*
+- 113* 200* ntpd[*]: synchronized to 10.100.*, stratum *
+- 113* 200* kernel: Probing IDE interface ide*...
+- 113* 200*kernel: ACPI: PCI interrupt 0000:0*] -> GSI * (level, low) -> IRQ *
+- 11* 200*xinetd[*]: Reading included configuration file: /etc/xinetd.d/* [file=/etc/xinetd.*] [line=1*]
+- 113* 2005.11.* tbird-admin1 Nov * local@tbird-admin1 /apps/x86_64/system/ganglia-3.0.1/sbin/gmetad[1684]: data_thread() got not answer from any [Thunderbird_*] datasource
+- 113* 200* tbird-sm* src@tbird-sm* ib_sm*]: [ib_sm_*.c:*]: *
+- 11* 200* tbird-sm1 * src@tbird-sm1 ib_sm.x[*]: [ib_sm_sweep.c:1482]: No configuration change required
+- 113* 200* sendmail[*]: *: from=root, size=*, class=0, nrcpts=1, msgid=<200*1*>, relay=#7#@localhost
+- 113* 2005.11.* dn* Nov * dn*/dn* ntpd[*]: synchronized to 10.100.*.250, stratum 3
+- 11* 200* crond(pam_unix)[*]: session opened for user root by (uid=0)
+- 113* 200* s*d(pam_unix)[*]: session opened for user * by (uid=0)
+- 11* 200* crond(pam_unix)[*]: session closed for user root
+- 11* 200*admin* src@*admin* xinetd[*]: START: rsync pid=* from=10.100.*
+- 113* 2005.11.* Nov * sshd[*]: Accepted publickey for * from ::ffff:10.100.* port * ssh2
+- 113* 200*admin* src@*admin* dhcpd: DHCP* 00:1* via eth1*
+- 113* 200* kernel: ACPI: LAPIC_NMI (acpi_id[0x0*] high edge lint[0x1])
+- 113* 200* kernel: PCI: Setting latency timer of device 0000:0* to 64
+- 113* 200*1.* *ntpd[*]: Listening on interface *, *#123
+- 113* 200*admin* src@*admin* dhcpd: DHCPDISCOVER from 00:11:43:e* via eth1: network *_net: no free leases
+- 113* 200*1.* kernel: *hci_hcd 0000:00:1d.*: new USB bus registered, assigned bus number *
+- 113* 200* kernel: ACPI: IOAPIC (id[0x0*] address[0xfec*000] gsi_base[*])
+- 113* 200* *kernel: BIOS-e820: 0000000*0*00* - 0000000*00* (*)
+- 113* 200*rc.sysinit: *ing * succeeded
+- 113* 200* kernel: ACPI: * (v001 DELL PE BKC 0x00000001 MSFT 0x0100000*) @ 0x00000000000*
+- 113* 200* kernel: * hash table entries: * (order*, * bytes)
+- 113* 200* kernel: IOAPIC[*]: apic_id *, version 32, address 0xfec*000, GSI *
+- 113* 200* kernel: divert: *allocating divert_blk for *
+- 113* 200* kernel: *Intel(R) Xeon(TM) CPU 3.60GHz stepping 03
+- 11* 200* kernel: ACPI: LAPIC (acpi_id[0x0*] lapic_id[0x0*] *abled)
+- 113* 200* Server Administrator: Instrumentation Service EventID: 100* Server Administrator start*
+- 113* 200* kernel: ip_tables: (C) 2000-2002 Netfilter core team
+- 113* 2005.11.* Nov * snmpd[*]: Got trap from peer on fd 13
+- 113* 200* sysctl: net.ipv4.* = *
+- 11316* 2005.11.1* tbird-admin1 Nov 1* local@tbird-admin1 VFS: file-max limit 65536 reached
+- 11316* 2005.11.1* tbird-admin1 Nov 1* local@tbird-admin1 /apps/x86_64/system/ganglia-3.0.1/sbin/gmetad[1684]: Unable to write meta data for metric * to RRD
+- 113* 200*1.* tbird-sm1 *src@tbird-sm1 ib_sm.x[24904]: [ib_sm_discovery.c:1103]: Failed discover node test, node 5ad000002*, port_num= *, error code 1
+- 113* 2005.1* sshd(pam_unix)[*]: session opened for user root by (uid=0)
+- 113* 200* kernel: [KERNEL_IB][ib_mad_dispatch][/mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/ib/ts_api_ng/mad/obj_host_amd64_custom1_rhel4/ts_ib_mad/mad_filter.c:292]mad_process failed (0) for InfiniHost0 port 1 QPN 0 (class 0x81, aid 0x0011)
+- 113* 200* instsvcdrv: dcd* device driver *loaded
+- 113* 200* 1* snmpd[*]: accepted smux peer: oid SNMPv2-SMI::enterprises.674.10892.1, password , descr Systems Management SNMP MIB Plug-in Manager
+- 11* 200* snmpd[*]: Got trap from peer on fd 13
+- 11*01 200*admin1 *0:01 src@*admin1 crond[*]: (root) CMD (/projects/tbird/temps/get_temps *)
+- 11* 200* Server Administrator: Instrumentation Service EventID: 1052 Temperature sensor returned to a normal value Sensor location: BMC Ambient Temp Chassis location: Main System Chassis Previous state was: Non-Critical (Warning) Temperature sensor value (in Degrees Celsius): 11.0
+- 11* 200* Server Administrator: Instrumentation Service EventID: 1053 Temperature sensor detected a warning value Sensor location: BMC Ambient Temp Chassis location: Main System Chassis Previous state was: OK (Normal) Temperature sensor value (in Degrees Celsius): 10.0
+- 11* 200* tbird-sm1 * src@tbird-sm1 ib_sm.x[*]: [INFO]: Configuration caused by some ports in INIT state
+- 11* 200* tbird-sm1 * src@tbird-sm1 ib_sm.x[*]: [ib_sm_sweep.c:411]: IB node 0x0005AD000002* port * is INIT state
+VAPI 113* 200* kernel: [KERNEL_IB][tsIbTavorMadProcess][/mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/ib/tavor/provider/obj_host_amd64_custom1_rhel4/ts_ib_tavor/tavor_mad.c:152]InfiniHost0: EVAPI_process_local_mad failed, return code = -254 (Fatal error (Local Catastrophic Error))
+- 113* 200* tbird-sm1 * src@tbird-sm1 ib_sm.x[24904]: [ib_sm_discovery.c:490]: Failed to GetNodeInfo() - hop_count: *, direct_path: 0, 1, *, *, *, *, 0, 0, 0
+- 113* 2005.11.* tbird-sm1 Nov * src@tbird-sm1 ib_sm.x[24904]: [ib_sm_discovery.c:470]: Failed to GetNodeInfo() because of NO RESPONSE
+- 113* 200* kernel: THH(1): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/hob_comm.c[1597]: XHH_hob_process_local_mad: Device in FATAL state
+- 113* 200* tbird-sm1 * src@tbird-sm1 ib_sm.x[*]: [ib_sm_sweep.c:1264]: Rediscover the subnet
+- 113* 2005.11.* dn30 Nov * dn30/dn30 kernel: [KERNEL_IB][ib_mad_dispatch][/mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/ib/ts_api_ng/mad/obj_host_amd64_custom1_rhel4/ts_ib_mad/mad_filter.c:292]mad_process failed (0) for InfiniHost0 port 1 QPN 0 (class 0x81, aid 0x0011)
+- 113* 2005.11.* dn30 Nov * dn30/dn30 kernel: THH(1): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/hob_comm.c[1597]: XHH_hob_process_local_mad: Device in FATAL state
+- 11* 200* tbird-sm1 * src@tbird-sm1 ib_sm.x[*]: [ib_sm_sweep.c:1455]: No topology change
+- 113* 200*.1* sendmail[*]: *: to=root, ctladdr=root (0/0), delay=00:00:0*, xdelay=00:00:00, mailer=relay, pri=*, relay=[127.0.0.1] [127.0.0.1], dsn=4.0.0, stat=Deferred: Connection refused by [127.0.0.1]
+- 113* 200* sendmail[*]: unable to qualify my own domain name (*) -- using short name
+- 113* 200* sysctl: net.core.*mem_* = 262144
+- 113* 200* crond[*]: (root) CMD (run-parts /etc/cron.*ly)
+- 113* 200* userhelper[1*]: running '/usr/sbin/up2date*' with root privileges on behalf of 'root'
+- 113* 200* kernel: audit(113*:0): avc: denied { * } for pid=1* comm=* dev=* ino=* scontext=user_u:system_r:*d_t tcontext=*_u:*t*_r:*_t tclass=*
+- 113* 200*1.* kernel: EXT3-fs: mounted filesystem with ordered data mode.
+- 113* 200*: pan_ips: error -- *re*, 0x* (* *me*), err_loc=* rhel_4_amd64/release/build/panfs/ips/pan_ips*.c:*
+- 113* 2005.11.2* tbird-admin1 Nov 2* local@tbird-admin1 syslog-ng[1*]: Cannot open file /var/log/syslog-ng/*/2005.11.2* for writing (*o * file*)
+- 113* 200* tbird-sm1 * src@tbird-sm1 ib_sm.x[*]: [ib_sm_sweep.c:254]: An existing IB node GUID 0005AD000004* LID * was removed
+- 11* 200* tbird-sm1 * src@tbird-sm1 ib_sm.x[*]: [ib_sm_bringup.c:513]: Program port state, node=5ad0000027*, port= *, current state *, neighbor node=*000*00*, port= *, current state *
+- 113* 200*an* mount*: bindcache: failed init IPS: 0x5 (Out of memory)
+- 113* 200* kernel: ACPI: PCI Interrupt Routing Table [\\_SB_.PCI0.*_PRT]
+- 113* 200* kernel: kjournald starting. Commit interval 5 seconds
+- 113* 200* fsck: [/sbin/fsck.ext3 (1) -- /*] fsck.ext3 -a /dev/sda*
+- 113* 200* kernel: EXT3 FS on sda*, internal journal
+- 113* 200*1.* bn* bn*/bn* kernel: <ffffffff*a0*>{:panfs:pan_*}
+- 113* 200*1.*an* kernel: Node 0 * free:*kB min:*kB low:*kB high:*kB active:*kB inactive:*kB present:*kB pages_scanned:* all_unreclaimable? *
+- 11* 200*0* tbird-sm1 * src@tbird-sm1 ib_sm.x[*]: [INFO]: Generate SM *_SERVICE trap for GID=0x000000fe800000000005ad00000*
+- 113* 2005.12.* Dec * crond[*]: (root) CMD (run-parts /etc/cron.hourly)
+- 113*1 2005.12.* Dec *:0*:01 * crond(pam_unix)[*]: session opened for user root by (uid=0)
+- 113* 2005.12.* Dec * crond(pam_unix)[*]: session closed for user root
+- 113* 2005.12.* bn971 Dec * bn971/bn971 kernel: THH(1): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/hob_comm.c[1597]: XHH_hob_process_local_mad: Device in FATAL state
+- 113* 2005.12.* Dec * snmpd[*]: Got trap from peer on fd 13
+- 11* 200*2.* sshd[*]: Accepted publickey for * from ::ffff:10.100.* port * ssh2
+- 113* 200* sendmail[*]: My unqualified host name (*) unknown; sleeping for retry
+- 113* 2005.12.* tbird-sm1 Dec * src@tbird-sm1 ib_sm.x[24904]: [ib_sm_discovery.c:1103]: Failed discover node test, node 5ad000002*, port_num= *, error code 1
+- 113* 2005.12.* Dec *
+- 113* 200*.0* kernel: * *command line* ro root=LABEL=/* tsc console=tty0 console=ttyS0,1*200 rhgb quiet*
+- 113* 2005.12.* tbird-sm1 Dec * src@tbird-sm1 ib_sm.x[24904]: [ib_sm_discovery.c:470]: Failed to GetNodeInfo() because of NO RESPONSE
+- 11* 200* 0* anacron[*]: Updated timestamp for job `cron.*ly' to 200*
+- 113* 200* en*en*/en* ntpd[*]: can't open /var/lib/ntp/drift.TEMP: Permission denied
+- 113* 2005.12.* dn* Dec * dn*/dn* crond(pam_unix)[*]: session opened for user root by (uid=0)
+- 1134* 2005.12.1* Dec 1* kernel: rpc: request timed out, request *, pan_rm_vsmdb_get_mgr_addrs_rpc_v1 (async), to *
+- 11343* 2005.12.1* Dec 1* kernel: rpc: request timed out, request *, pan_fm_obj_get_r_capability_rpc_v2 (async), to #27#:10622
+- 11343* 2005.12.11 * Dec 11 * kernel: *pan_rpc_*ti*e*_*poll*req*le* s*en*t 0*x2399 (pan_sock: connection reset by peer)
+- 113* 200*2.* tbird-admin1 *0:0* local@tbird-admin1 crond[*]: (root) CMD (/apps/contrib/check-disks aadmin[1-4],badmin[1-4],cadmin[1-4],dadmin[1-4],eadmin[1-2])
+VAPI 113* 2005.12.* an690 Dec * an690/an690 kernel: [KERNEL_IB][tsIbTavorMadProcess][/mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/ib/tavor/provider/obj_host_amd64_custom1_rhel4/ts_ib_tavor/tavor_mad.c:152]InfiniHost0: EVAPI_process_local_mad failed, return code = -254 (Fatal error (Local Catastrophic Error))
+- 113* 2005.12.* an690 Dec *an690/an690 kernel: THH(1): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/hob_comm.c[1597]: XHH_hob_process_local_mad: Device in FATAL state
+- 113* 2005.12.* an690 Dec * an690/an690 kernel: [KERNEL_IB][ib_mad_dispatch][/mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/ib/ts_api_ng/mad/obj_host_amd64_custom1_rhel4/ts_ib_mad/mad_filter.c:292]mad_process failed (0) for InfiniHost0 port 1 QPN 0 (class 0x81, aid 0x0011)
+- 1135* 2005.12.2* tbird-sm1 Dec 2* src@tbird-sm1 ib_sm.x[24904]: [ib_sm_discovery.c:490]: Failed to GetNodeInfo() - hop_count: 6, direct_path: 0, 1, *, 13, *, *, *, 0, 0, 0
+- 113* 200* ibr*-southern * ibr*-southern/ibr*-southern slot101:10.100.253.14* plugnplay[87d87c*0]: Osa: Leaf * is reporting fiber latch *t condition on port *
+- 113* 200* kernel: VIPKL(1): [create_mr] MM_bld_hh_mr failed (-25*:VAPI_E*)
+- 113* 200*.2* 2* kernel: VIPKL(1): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/vip/obj_host_amd64_custom1_rhel4/mod_vip/mmu.c[243]: make_iobuf: MOSAL_iobuf_register failed: va=0x*000size=0x*000
+- 113* 200* kernel: *): *mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlx*/obj_host_amd64_custom1_rhel4/m*al_*: *
+- 113* 2005.12.* dn825 Dec * dn825/dn825 kernel: [KERNEL_IB][ib_mad_dispatch][/mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/ib/ts_api_ng/mad/obj_host_amd64_custom1_rhel4/ts_ib_mad/mad_filter.c:292]mad_process failed (0) for InfiniHost0 port 1 QPN 0 (class 0x81, aid 0x0011)
+VAPI 113* 2005.12.* dn825 Dec * dn825/dn825 kernel: [KERNEL_IB][tsIbTavorMadProcess][/mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/ib/tavor/provider/obj_host_amd64_custom1_rhel4/ts_ib_tavor/tavor_mad.c:152]InfiniHost0: EVAPI_process_local_mad failed, return code = -254 (Fatal error (Local Catastrophic Error))
+- 113* 2005.12.* dn825 Dec * dn825/dn825 kernel: THH(1): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/hob_comm.c[1597]: XHH_hob_process_local_mad: Device in FATAL state
+- 1135* 2005.12.2* dn* Dec 2* dn*/dn* kernel: MOSAL(4): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxsys/obj_host_amd64_custom1_rhel4/mlxsys/mosal_mlock.c[1226]: MOSAL_mlock_iobuf: Failed (MT_EAGAIN) priv_mosal_mlock for addr=0x*000 size=0x*000
+- 11355* 2005.12.25 dn1013 Dec 25 1* dn1013/dn1013 kernel: MOSAL(1): *
+- 1135* 2005.12.2* dn* Dec 2* dn*/dn* kernel: MOSAL(1): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxsys/obj_host_amd64_custom1_rhel4/mlxsys/mosal_iobuf.c[126]: dump iobuf at 0000010* :
+- 113* 2005.12.* bn971 Dec * bn971/bn971 kernel: [KERNEL_IB][ib_mad_dispatch][/mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/ib/ts_api_ng/mad/obj_host_amd64_custom1_rhel4/ts_ib_mad/mad_filter.c:292]mad_process failed (0) for InfiniHost0 port 1 QPN 0 (class 0x81, aid 0x0011)
+- 11356* 2005.12.26 dn8* Dec 26 * dn8*/dn8* kernel: MOSAL(1): * = 0000000000000000
+- 11356* 2005.12.26 dn8* Dec 26 * dn8*/dn8* kernel: MOSAL(1): *
+- 11356* 2005.12.26 dn8* Dec 26 * dn8*/dn8* kernel: MOSAL(1): alegra_3D_alegr[*]: mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxsys/obj_host_amd64_custom1_rhel4/mlxsys/mosal_iobuf.c:1136: MOSAL_mlock_iobuf failed - MT_EAGAIN
+- 1135* 2005.12.2* Dec 2* kernel: THH(4): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/tptm.c[1093]: alloc_reg_pages: Out of MTT entries
+- 1135* 2005.12.2* Dec 2* kernel: THH(4): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/tptm.c[263]: reserve_mtt_segs: Cannot reserve * MTT segments (* dynamic MTT segments left)
+- 1135* 2005.12.2* Dec 2* kernel: THH(1): XHH_mrwm_register_mr: rc=HH_EAGAIN
+- 1135* 2005.12.2* Dec 2* kernel: VIPKL(1): [MM_create_mr]:MM_mr_get_keys failed
+- 11* 2006.0* tbird-sm1 * src@tbird-sm1 ib_sm.x[*]: [ib_sm_discovery.c:470]: Failed to GetNodeInfo() because of NO RESPONSE
+- 113* 2006.01.* Jan *d(pam_unix)[*]: session opened for user root by (uid=0)
+- 113*61 2006.01.* Jan *:01:01 * crond(pam_unix)[*]: session opened for user root by (uid=0)
+- 113* 2006.01.* bn* Jan * bn*/bn* snmpd[*]: Got trap from peer on fd 13
+- 113* 2006.01.* Jan *: *
+- 113*1 2006.01.* Jan *:01:01 * crond[*]: (root) CMD (run-parts /etc/cron.hourly)
+- 113* 2006.01.* Jan * sshd[*]: Accepted publickey for root from ::ffff:10.100.* port * ssh2
+- 113* 2006.01.* an* Jan * an*/an* snmpd[*]: Got trap from peer on fd 13
+- 113* 2006.01.*admin* Jan * src@*admin* dhcpd: DHCPREQUEST for 10.100.* (10.100.*.250) from 00:11:43:e* via eth1: unknown lease 10.100.*.
+- 113* 2006.01.*admin* Jan * src@*admin* xinetd[*]: START: rsync pid=* from=10.100.*
+- 113* 2006.01.* Jan *: * startup succeeded
+- 113* 2006.01.* Jan * xinetd[*]: removing *
+- 113* 2006.01.* Jan *: * shutdown succeeded
+- 113* 2006.01.* Jan * kernel: ACPI: PCI Interrupt Link [LNK*] (IRQs 3 4 5 6 *7 *10 *11 12)*
+- 1136* 2006.01.0* Jan * kernel: [IB_NET][ipoib_sarp_rewrite_send][/mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/host/ulp/ipoib/obj_host_amd64_custom1_rhel4/ts_ipoib/ipoib_arp.c:1008]ib0: can't find hw address for hash 00:00:00:00:00:00
+- 113* 2006.01.* Jan * kernel: NET: Registered protocol family *
+- 113* 2006.01.* Jan * kernel: hub *:1.0: * ports detected
+- 113* 2006.01.* Jan * sysctl: net.ipv4.neigh.default.gc_thresh* = 8192
+- 113* 2006.01.* Jan * 1* kernel: *hci_hcd 0000:00:1d.*: *HCI Host Controller
+- 113*1 2006.01.* Jan *:01:01 * crond(pam_unix)[*]: session closed for user root
+- 113* 2006.01.* Jan * 0* kernel: ext3_orphan_cleanup: deleting unreferenced inode *
+- 113* 2006.01.* Jan * ntpd[22*]: synchronized to 10.100.*.250, stratum 3
+- 113* 2006.01.* bn* Jan *bn*/bn*
+- 113* 2006.01.* dn* Jan * dn*/dn* kernel:*
+- 1136* 2006.01.* bn* Jan *bn*/bn* kernel: <ffffffffa04*>{:panfs:pan_rm_bindcache_*}
+- 1136* 2006.01.* bn971 Jan *bn971/bn971 kernel:*
+- 11* 2006.0* tbird-sm1 * src@tbird-sm1 ib_sm.x[15679]: [ib_sm_discovery.c:1103]: Failed discover node test, node 5ad000002*, port_num= *, error code 1
+- 1136* 2006.01.* bn971 Jan * bn971/bn971 kernel: cpu *: low *, high *, batch 1*
+- 1136* 2006.01.* bn410 Jan *bn410/bn410 kernel:*
+- 1136* 2006.01.* bn* Jan * bn*/bn* kernel: Node 0 *: *\*4kB *\*8kB *\*16kB *\*32kB *\*64kB *\*128kB *\*256kB *\*512kB 0\*1024kB *\*2048kB *\*4096kB = *kB
+- 11* 2006.0* tbird-sm1 * src@tbird-sm1 ib_sm.x[15679]: [ib_sm_discovery.c:490]: Failed to GetNodeInfo() - hop_count: 6, direct_path: 0, 1, *, 1*, *, *, *, 0, 0, 0
+- 113* 2006.0* kernel: LustreError: *:0:(*ent*.c:*:*request*()) @@@ t* *s*t*at* 1* #316#@0000010*00 x*/t0 o*8->*#@NID_ca8*_UUID:* lens 240/272 ref * fl */0/0 rc *0/0
+- 113* 2006.0* kernel: Lustre*: *:0:(*.c:*()) previously skipped * similar messages
+- 1137* 2006.01.1* cn* Jan 1* cn*/cn* kernel: THH(4): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/tptm.c[1093]: alloc_reg_pages: Out of MTT entries
+- 1137* 2006.01.1* Jan 1* kernel: THH(1): XHH_mrwm_register_mr: rc=HH_EAGAIN
+- 1137* 2006.01.1* cn* Jan 1* cn*/cn* kernel: THH(4): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/tptm.c[263]: reserve_mtt_segs: Cannot reserve 255 MTT segments (* dynamic MTT segments left)
+- 1137* 2006.01.1* cn* Jan 1* cn*/cn* kernel: VIPKL(1): [MM_create_mr]:MM_mr_get_keys failed
+- 11* 2006.0* *smartd[*]: Device: /dev/sda, Temperature changed * Celsius to * Celsius since last report
+- 113* 2006.01.* #*# Jan * #*#/#*# kernel: LustreError: *:0:(socknal_lib-linux.c:813:ksocknal_lib_connect_sock()) Error -11* connecting 10.100.*.251/1023 -> 10.0.4.*/988
+- 113* 2006.01.* bn471 Jan * bn471/bn471 postfix/postdrop[*]: warning: mail_queue_enter: create file maildrop/*: Read-only file system
+- 1138* 2006.01.2* bn* Jan 2* 1* bn*/bn* kernel: MOSAL(1): IMB-MPI1[*]: mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxsys/obj_host_amd64_custom1_rhel4/mlxsys/mosal_iobuf.c:539: region not in process's address space. va=0x34*000 size=0x10001000
+- 11* 2006.0* postfix/postdrop[*]: warning: mail_queue_enter: create file maildrop/*: Read-only file system
+- 1138* 2006.01.* an538 Jan * an538/an538 postfix/postdrop[*]: warning: mail_queue_enter: create file maildrop/*: Read-only file system
+- 11* 2006.02.* Feb *:01:0* crond(pam_unix)[*]: session closed for user root
+- 11*61 2006.02.* Feb *:01:01 * crond(pam_unix)[*]: session opened for user root by (uid=0)
+- 11* 2006.02.* an538 Feb *an538/an538 postfix/postdrop[*]: warning: mail_queue_enter: create file maildrop/*: Read-only file system
+- 11* 2006.02.* an538 Feb * an538/an538 postfix/postdrop[7694]: warning: mail_queue_enter: create file maildrop/926172.7694: Read-only file system
+- 11* 2006.02.* Feb *(pam_unix)[*]: session opened for user root by *(uid=0)
+* 11* 2006.02.* Feb *
+- 11* 2006.02.* Feb *:01:0* crond[*]: (root) CMD (run-parts /etc/cron.hourly)
+- 11* 2006.02.* Feb * ntpd[*]: synchronized to 10.100.*.250, stratum 3
+- 11* 2006.02.* cn551 Feb *cn551/cn551 postfix/postdrop[*]: warning: mail_queue_enter: create file maildrop/*: Read-only file system
+- 11* 2006.02.* bn425 Feb * bn425/bn425 postfix/postdrop[2*]: warning: mail_queue_enter: create file maildrop/*.2*: Read-only file system
+- 11* 2006.02.* bn875 Feb *bn875/bn875 postfix/postdrop[3*]: warning: mail_queue_enter: create file maildrop/*.3*: Read-only file system
+ÁêA<–ÿ 0Ä0Ä`    0Ä    Ä 0Ä Ä$   Ä ‡ 
+¿ 
+p  ∞†"YH4z1ãZ8±ìP †   ‡ HÄ  ‡ (pÄÄ( `    
+   `Ä&'h¯àBÅ¡Ç dÄ Í$b •Ñ≤(            0                                                                      

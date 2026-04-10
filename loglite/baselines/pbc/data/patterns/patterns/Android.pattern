@@ -1,0 +1,875 @@
+871
+12-1*  1795  1825 I PowerManager_screenOn: DisplayPowerStatesetColorFadeLevel: level=*
+12-1*  1795 * D PowerManagerService: Acquiring suspend blocker "PowerManagerService.WakeLocks".
+12-1*:3*  1795  1795 I PowerManager_screenOn: PowerManagerNotifier Sending *e*p broadcast.
+12-1*   606  2379 E libteec : send data return = 1*
+12-1*  2852  2852 I StackScroller: generateAddAnimation:null, false
+12-1*  1795  *PowerManagerService*
+12-1*  2852  2852 I Hw*at*BarTransitions: *BackgroundColor:new=0, old=*
+12-1* E HW-JPEG-DEC: [HME_JPEG_DEC_Delete](3298): HME_JPEG_DEC_Delete: decoder_ctx=null
+12-1*  3626 *I iMonitor: send: 9030010*
+12-1* 1*  1795  1795 I TrafficMonitor: update:rxPkts:*,txPkts:*,rxBytes:*,txBytes:*
+12-17 *: *
+12-17 *9:31*  2852  2852 I NotificationGroupManager: onEntryAdded:0|com.android.incallui|2|null|1001, group=0|com.android.incallui|2|null|1001
+12-1*  835  2385 E libteec : receive data len = 1*
+12-17 *1:*  2852  2852 D KeyguardViewMediator: handleNotifyScreenTurn*
+12-1*  1795  2671 D WifiStateMachine:  *State *CMD_SCREEN_STATE_CHANGED  rt=1*/4* 0
+12-1*  3608  3608 D InCall  : InCallActivity - *on*
+12-1*  1795  1825 W LightSensor: LightSensor, enable, 28*: *
+12-1*  2852  * *Keyguard*: *
+12-1*1:*  2852  2852 I StackScrollAlgorithm: overlapAmount:763.6, previousNotificationEnd:607.0, newYTranslation:-156.59998, location:2, i:1, getTopPadding:499.0, getLocationOnScreen():-36
+12-1* 1*  2852  2852 I SignalClusterView: mWifiVisible is:truemWifiStrengthId is:2130839427mWifiDescription is:WLAN 信号强度满格。
+12-1*  1795 * I HwActivityManagerService: Split enqueueing broadcast [callerApp]:ProcessRecord{580cfb2 5224:com.huawei.health:DaemonService/u0a99}
+12-1*  2852  2852 I ToggleSlider:  mSeekListener onProgressChanged progress:* fromUser:false
+12-17 *  2852  *28* D KeyguardViewMediator: *FinishedGoingToSleep*
+12-1*  1795  3077 D GnssLocationProvider: receive broadcast intent, action: android.intent.action.SCREEN_O*
+12-1* 1*  1795  * HuaweiWifiWatchdogStateMachine: *
+12-1*   606  2379 E libteec : QSEECom_send_cmd return!
+12-17 *   832  * E Parcel  : Reading a NULL string not supported here.
+12-17 *1:*5.*  1795  1795 I qti_sensors_hal: batch:sensor(android.sensor.accelerometer) handle:0 flags:0x0 period_ns 200000000
+12-1*   835  2385 E libteec : begin
+12-1*  2852  2852 I StatusBarWindowManager: apply skiped :0
+12-1*  1795  2668 * *WifiP2pService: *e*{ when=* what=14346* target=com.android.internal.util.StateMachine$SmHandler }
+12-1*  3626 * I iMonitor: create: 90*00*
+12-1*  1795 * FpDataCollector: *
+12-1*  2852  2852 I StackScrollAlgorithm: updateDimmedActivatedHideSensitive overlap:true
+12-1*   835  2385 * fpc_fingerprint_hal: *
+12-17 19:3*:4*0  5215  5215 D wpa_supplicant: *IEs - hexdump(len=19*): 00 0* 77 6* 6* 6* 6* 6* 6* 65 *01 08 82 84 0b 16 0c 12 18 24 03 01 0d 05 04 *...
+12-1*  *  * I *: *
+12-1*  7741  7758 D TmoMonitor: Cache monitor msg as screen_off
+12-1*  2852  28* E KeyguardUpdateMonitor: isSimPinSecure mSimDatas is null or empty 
+12-17 19:*.5*  2852  2852 I TintManager: updateBarBgColor:emuiStyle=*,statusBarColor=#*,navigationBarColor=#*000000, isEmuiLight=*1
+12-1*  1795 * qti_sensors_hal: *
+12-1*  1795  2371 E huawei_ProximitySensor_CPP_Test: ProximitySensor: 9 is far event,0 is close event,value = 9.000000
+12-1*   606  2379 E libteec : qsc_send_cmd finish
+12-17 *  3626  3626 E PTM.FileNodeInfo: getTempInfo error: null, 0
+12-1*  1795  1825 D AutomaticBrightnessController: ambient lux=*.0,timeStamp =*000
+12-1*  2852  2852 W HwPhoneLayoutInflater: onCreateView : ClassNotFoundException, In this case we want to let the base class take a crack at it
+12-1*7 * 1795  3957 E IzatSvc_OSObserver: I/LocTech-Label :: OSOBSERVER :: Data Items In
+12-1* I SendBroadcastPermission: action:*, mPermissionType:0
+12-1*  1795  2750 I PowerManager_screenOn: DisplayPowerState Updating screen state: state=O*, backlight=0
+12-1*  1795  *ifi*: *
+12-1*  1795  1825 I PowerManager_screenOn: DisplayPowerController updatePowerState mPendingRequestLocked=policy=*, useProximitySensor=*e, useProximitySensorbyPhone=true, screenBrightness=33, screenAutoBrightnessAdjustment=0.0, brightnessSetByUser=true, useAutoBrightness=true, blockScreenOn=false, lowPowerMode=false, boostScreenBrightness=false, dozeScreenBrightness=-1, dozeScreenState=UNKNOWN, useTwilight=false, useSmartBacklight=true, brightnessWaitMode=false, brightnessWaitRet=*e, screenAutoBrightness=-1, userId=0
+12-1*  1795  2750 D HW_DISPLAY_EFFECT: presently, hw_update_color_temp_for_rg_led interface not achieved.
+12-1* 1*  5*  5* D wpa_supplicant: * freq=24*2 qual=0 noise=-89~ level=-* snr=* flags=0xb age=*0 est=*00*
+12-1*  5*  5* E wpa_supplicant: bssid=*;freq=24*;level=-*;flags=11;ssid=*;
+12-1*  2852  2852 I BarTransitions.HwNavigationBarView: transitionTo: mode=MODE_*, animate=false
+12-1*  3218 * D PhoneInterfaceManager: [PhoneIntfMgr] *etDataEnabled: subId=0 *
+12-1*  2852  * I SystemUIIdleHandler: enter addToIdleMessage(type:100*), mainloop is busy, add to idleMessage
+12-1* 1*  1795  5350 I MQoS    : skip-low-Level:0(0),DataDisable;use level-0
+12-1*  1795  * I ActivityManager_broadcast: Enqueueing ordered broadcast[foreground] BroadcastRecord{* u-1 android.intent.action.*}: prev had 0
+12-1*:3*  1046 * D audio_hw_spkr_prot: audio_extn_fbsp_set_parameters: Speaker protection disabled
+12-17 *   836  2387 I knuckle_sensor: Sending SAM_*ABLE to fs_data
+12-1*8 1* I TotemWeather: *TaskController:* is *
+12-1*7 * 1795  * I PowerManager_screenOn: PowerManagerNotifier onUserActivity: event=*, uid=100*
+12-1*  2852  2852 * BarTransitions.HwPhoneStatusBarView: *MODE_*PA* animate=false
+12-1*  2852  3556 D NetworkController.MobileSignalController(0): mSimSubId:0 onDataActivity: direction=*
+12-1*  1046  * I Huawei_audio_cust: huawei_audio huawei_choose_Hands*_device_incall_forHWtest: test Type =4
+12-1*  2852  2852 I HwBrightnessController: updateSlider* seekBarProgress:*
+12-1*  1795  2748 D HwAmbientLuxFilterAlgo: earliestValidTime + POWER_ON_BRIGHTENING_LIGHT_DEBOUNCE
+12-1*  1795  1* I WindowOrientationListener: WindowOrientationListener *abled
+12-1*  2852  2852 V KeyguardStatusView: *able transport text marquee
+12-1*  1795  182* I WindowManger_keyguard: Setting mDismissKeyguard true by win Window{e6a6b5e u0 com.android.incallui/com.android.incallui.InCallActivity}
+12-1* 31949 31967 I ECS     : WatchThread{4786} TcpClient.clearAll(TcpClient.java:240) ==================== TCP CLIENT CLEAR ALL ====================
+12-1*: *
+12-1*   633   692 I eSpaceService: Watch Thread{4481} LoginC.doWatch(LoginC.java:1459) Login_By_Step-> watch count =  *
+12-1*  1795  2323 E UsbDeviceManager: 	at android.os.UEventObserver$UEventThread.sendEvent(UEventObserver.java:210)
+12-1*  2852  2852 * KeyguardUpdateMonitor: *
+12-17 *  1795 * D WindowManager: mKeyguardDelegate.ShowListener.onDrawn.
+12-17 *  5224  5283 I Step_DataCache: 20002302|getTodayTotalSteps *
+12-17 *  2883  2996 E HwSystemManager: NormalTrafficAnalysis:alert byte = 0, so return
+12-1* 1*  5*  5* D wpa_supplicant: CTRL-DEBUG: *ctrl_sock-send*: sock=16 sndbuf=229376 outq=0 send_len=*
+12-1*  2852  2852 I HwSignalClusterView: apply hwPhoneState.mSubId:0 anyMobileVisible:false mIsAirplaneMode:false, mobileGroupVisible=true
+12-17 *  *  * D HwKeyguardManagerImpl: isLockScreenDisabled HwKeyguardManagerImpl result = false
+12-17 *  1795  * W FingerprintService: onAcquired *
+12-17 *2*  3608  3608 D InCall  : AnswerPresenter - onCallListChange callList=com.android.incallui.CallList@86c7f97
+12-1*  1795  *95* E IzatSvc_OSObserver: I/LocTech-Value :: Data Item Value: *ON*: *e
+12-1* 31949 31967 I TCP     : *tc*re*{47*} TcpClientThread.closeSocket(TcpClientThread.java:396) closed socket.
+12-1*  2852  2852 I *PhoneStatusBar*: *
+12-1*  2852  2852 I NotificationContentView: transferRemoteInputFocus: *
+12-1*  1795  2323 E UsbDeviceManager: 	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+12-1*  2852  2852 I PhoneStatusBar: notifyUiVisibilityChanged:vis=0x*0*, SystemUiVisibility=0x*0*
+12-1*  1795 * D PowerManagerService: acquire lock=184063844, flags=0x1, tag="NetworkStats", name=android, ws=null, uid=1000, pid=1795
+12-1*  1795 * I PGManagerService: proxyWakeLockByPidUid, pid: *, uid: 101*, proxy: *e
+12-1*  2852  * D KeyguardService: Caller checkPermission fail
+12-1* I TCP     : *tc*re*{4*} TcpSocket.close(TcpSocket.java:1*) shutdown *put: java.net.SocketException: Socket is closed
+12-1*8 * 3879  3879 I HwLauncher: Model  onReceive intent=Intent { act=android.intent.action.TIME_TICK flg=0x50000014 (has extras) }
+12-17 *  7741  7741 D Mms_TX_NOTIFY: Get no-perm notification callback android.intent.action.SCREEN_O*
+12-17 *:3*  1795  1821 I DisplayManagerService: Display device changed state: "内置屏幕", O*
+12-1*  2852  2852 I *PhoneStatusBar: updateNotificationShade
+12-1*  2852  3556 I NetworkController.MobileSignalController(0): onDataActivity: direction=*
+12-1*  3218 * I PhoneInterfaceManager: shouldBlockLocation  ret:false
+12-1*  1046  * Huawei_audio_cust: huawei_c*_set_parameters: exit with code(0)
+12-1*  1795  1825 * HW_DISPLAY_EFFECT: *hw_*et_*orte*
+12-1*  2852  2852 I HwNotificationIconAreaController: showNotificationAll
+12-1*  2883  2996 E HwSystemManager: SimCardMethod:/getSimCardInfo: imsi is null
+12-1*  3608  3608 * InCall  : *Fragment - *
+12-1*  1795  2377 I AwareLog: AwareMem_EventTracker: [*O*N*_1*] is abandoned for memory *
+12-1*  1795  2671 D WifiStateMachine:  *State *CMD_SET_SUSPEND_OPT_ENABLED  rt=1* 0
+12-1*  1795  1795 I NotificationManager: enqueueNotificationInternal: n.getKey = 0|com.huawei.health|10010|null|10099
+12-1*  1795 * D PowerManagerService: acquire lock=*, flags=0x1, tag="*", name=*android*, ws=null, uid=100*, pid=*
+12-1*  5*  5* D wpa_supplicant: * - hexdump(len=*): [REMOVED]
+12-1* 1*  1795  2750 I QTI PowerHAL: Got set_interactive hint
+12-1*  1795  1795 D *Wifi*Service: onReceive, action:android.intent.action.*
+12-1*  2852  2852 D StatusBar: updateNotification(StatusBarNotification(pkg=com.huawei.health user=UserHandle{0} id=10010 tag=null key=0|com.huawei.health|10010|null|10099: Notification(pri=0 contentView=null vibrate=null sound=null defaults=0x0 flags=0x62 color=0x00000000 vis=PRIVATE)))
+12-17 *  3608  3608 * InCall  : ProximitySensor - *
+12-1*  3608  3608 * InCall  : *Presenter - *
+12-1*  5224  5283 I Step_HSNH: 20002302|upDateHealthNotification()|*
+12-1*  1795  2665 D NetdConnector: RCV <- {613 IfaceClass *e *}
+12-17 *  1795  1825 D DisplayPowerController: mode change : autoBrightnessEnabled=*e,adjustment=0.0,state=*
+12-1*  1795  2736 E hwintelligencewifi: getCurrentCellid type * PHONE_TYPE_GSM
+12-17 *  1795 * D PowerManagerService: ready=true,policy=0,wakefulness=0,wksummary=0x*,uasummary=0x0,bootcompleted=true,boostinprogress=false,waitmodeenable=false,mode=true,manual=33,auto=-1,adj=0.0userId=0
+12-1*  1795 *5* D PowerManagerService: *ing suspend blocker "PowerManagerService.Broadcasts".
+12-17 *:5*8*2*  1795  1795 I Sensor  : updateLight --> mIsNotificationExisting: false ledOnMS: 0 ledOffMS :0
+12-1*  1795 * I HwActivityManagerService: Split enqueueing broadcast [callerApp]:ProcessRecord{34bf34f 0:system/1000}
+12-1*  1795 * D PowerManagerService: ready=true,policy=3,wakefulness=1,wksummary=0x*,uasummary=0x1,bootcompleted=true,boostinprogress=false,waitmodeenable=false,mode=true,manual=33,auto=-1,adj=0.0userId=0
+12-1*  1046  1125 * ACDB-LOADER: ACDB -> *
+12-1*  1046  * audio_hw_primary: *_set_parameters: e*
+12-1*  1046  1125 * audio_hw_primary: *
+12-1*  3218  3517 I QImsService: ImsSenderRxr :  networkMode = * status = * restrictCause = 0 registered = *[SUB0]
+12-1*  3626  3770 I LSC_90*00*: process buffer and get message
+12-1*  1795 *23* I TransactionSponsor: Transact:getHwAdminCached*to device policy manager service.
+12-1*: 	at android.os.Handler*(Handler*.java:*)
+12-1*  1795 * I ActivityManager_broadcast: Enqueueing ordered broadcast[*] BroadcastRecord{* u0 *}: prev had *
+12-1* 1*  2852  2852 D TintTextView: #B3* com.android.systemui.tint.TintTextView{f83e2df V.ED..... ......ID 0,1-66,43 #7f1401be app:id/battery_outside_percent}
+12-1*  2852  2852 I HwDateUtils: formatChinaDateTime, change to China normalTime:*
+12-1*  5224  5283 I Step_ExtendStepDataManager: 20002302|compensate 24*
+12-1*  2852  2852 D HwCust  : Create obj success use class android.app.HwCustNotificationImpl
+12-1*  2852  2852 I HwBrightnessController: onChange selfChange:false uri.toString():content://settings/system/screen_auto_brightness mIsObserveAutoBrightnessChange:true
+12-1*  2852  2925 I EventCenter: ContentChange for slot: 1
+12-1*8 * 1795  2750 I HwLightsService: back light level before map = *
+12-1*  2852  3556 I NetworkController.MobileSignalController(0): onSignalStrengthsChanged signalStrength=SignalStrength: -1 0 -1 255 -1 255 -1 255 255 * -* 2147483647 2147483647 false gw|lte level=5 isSuspend=false levelOld=5,mSignalStrength level=5
+12-1*  1795 * D WifiMonitor: Dispatching event to interface: wlan0
+12-1*:3*  2852  2852 I vol.VolumeDialog*Control* onDismissRequested reason = 2
+12-17 *  5215  5215 D wpa_supplicant: wlan0: Control interface command '*'
+12-1*  2852  2852 I QSContainer: updateQsState:false
+12-1*  2852  2852 I StackScrollAlgorithm: state.clipTopAmount:*, i:*
+12-1* 1*  1795  2728 D HwArpVerifier: *AccessWebStatus : *
+12-1*  1795  1795 I MQoS    : received cell-signal:*
+12-1*   606  2379 E libteec : receive data len = 1*
+12-17 *  5215  5215 D wpa_supplicant: *
+12-1*  2852  2852 V KeyguardUpdateMonitor: \*\*\* *register callback for com.android.keyguard.*ge*
+12-1*  1795 * D PFW.HwPFWAppRestartPolicy: proc: com.*:push* launch *times, lastTimes = *
+12-1*  1795  2323 E UsbDeviceManager: 	at android.os.FileUtils.readTextFile(FileUtils.java:267)
+12-1*9:*:5*  7194  7208 W PushLog2824: 	at com.huawei.android.bastet.HwBastet.*(HwBastet.java:*)
+12-1*  1795 * D PowerManagerService: ready=*e,policy=0,wakefulness=0,wksummary=0x*,uasummary=0x0,bootcompleted=true,boostinprogress=false,waitmodeenable=false,mode=true,manual=33,auto=-1,adj=0.0userId=0
+12-1*  1795  1819 D NetworkManagement: notifyInterfaceClassActivity: client is com.android.server.connectivity.Tethering@ff4a50f
+12-1*  3180 * I PGServer: report state:* event type:* pid:* uid:10* pkg:* to pid: 1795
+12-1* * 1795 *D HwPFWLogger: AutoStartupDataMgr:isUnderControll third party not in whitelist: c*
+12-1*  3879  3879 I HwLauncher: Launcher*
+12-1* 1*5* E wpa_supplicant: RSSI=-4*;LINKSPEED=72;NOISE=9999;FREQUENCY=24*2;
+12-1*  3626  4889 E PTM.FileNodeInfo: getTempInfo error: null, 0
+12-1*  1795  1795 V NotificationService: disableEffects=null canInterrupt=false once update: false
+12-1*  1795 * D PowerManagerService: Releasing suspend blocker "PowerManagerService.WakeLocks".
+12-1*  1795 * I HwActivityManagerService: keyAppBroadcastQueueForIntent intent Intent { act=com.tencent.mm.ui.ACTION_*ACTIVE flg=0x10 (has extras) } on bgkeyapp queue
+12-1*  1795 * D HwActivityManagerService: handleANRFilterFIFO,uid = 101*cmd = *
+12-1*  1795 * D HwInputMethodManagerService: ------------startInput--------------
+12-1*  * D ApplicationPackageManager: queryIntentActivitiesAsUser size results:1, for package:com.*
+12-1*  1795  2380 D PowerManagerService: ready=true,policy=3,wakefulness=1,wksummary=0x0,uasummary=0x1,bootcompleted=true,boostinprogress=false,waitmodeenable=false,mode=true,manual=33,auto=-1,adj=0.0userId=0
+12-17 *  2883  2883 I HwSystemManager: AutoCleanReceiveServer:*an*e*
+12-1*  1795 * I Sensor  : updateLightsLocked --> mBatteryLight.turnOff
+12-1*   633 * SDK     : *
+12-1*  2883  2996 I HwSystemManager: NatTrafficNotifyService:delta byte = 0 no traffic delta = 0Traffic state is 301
+12-1*6*  3168  3307 W System.err: 	at com.huawei.android.chr.qcom.QcomModemInfoCollector.getHardWareVersion(QcomModemInfoCollector.java:1462)
+12-1*  3218  3218 I QImsService: ImsServiceSub* : *e *
+12-1*   828   898 D QC-time-services: Daemon: Connection accepted:time_genoff
+12-1* D HwCust  : Create obj success use class *android.*HwCust*Impl
+12-1*  1795  2323 E UsbDeviceManager: 	at android.os.UEventObserver$UEventThread.run(UEventObserver.java:187)
+12-1*  1795  1819 D NetdConnector: RCV unsolicited event from native daemon, event = 613 IfaceClass *e *0*
+12-1*  1795 * D PowerManagerService: ready=true,policy=0,wakefulness=0,wksummary=0x1,uasummary=0x0,bootcompleted=true,boostinprogress=false,waitmodeenable=false,mode=true,manual=33,auto=-1,adj=0.0userId=0
+12-17 *   633 318* I SDK     : 
+12-17 *   633 31870 I SDK     : <2016-12-17 *> [WARN] SDK: UE-SeC 2016-12-17 * Level[WARN] magic[3362781472 684]:PubEvt_Close Getting a socket[*] from the Socket-table Failed!
+12-1*  2852  2852 I StatusBarIconView: updateTint: tint=*
+12-1*  2852  2852 I TrafficPanelManager: hideTraffic
+12-1*  1795 * I ActivityManager_broadcast: dispatch ordered broadcast [*] BroadcastRecord{* u*}, has * receivers
+12-1*  1795  1819 D NetworkManagement: notifyInterfaceClassActivity: client is com.android.server.net.NetworkPolicyManagerService$13@4df0feb
+12-1*: 	at android.os.Looper.loop(Looper.java:1*)
+12-1*  1795  1819 D NetworkManagement: notifyInterfaceClassActivity: client is com.android.server.ConnectivityService$1@e0f099c
+12-1* 2852  2852 *View: *
+12-1* 1795  1795 D HwConnectivityService: CtrlSocket Receiver,disable: false locked: *e action: android.*n*t.* mSmartKeyguardLevel: normal_level mStartPowerSaving: false
+12-1*  1795  2332 I qti_sensors_hal: [ACC]processReportInd: X: * Y: * Z: *  x_offset:0.160831 y_offset:0.184366 z_offset:0.985027
+12-1*  1795  2748 D HwAmbientLuxFilterAlgo: earliestValidTime + POWER_ON_DARKENING_LIGHT_DEBOUNCE
+12-1*  3180  3578 I ash     : *
+12-1* 1*  1795  2728 E HwCHRWifiRSSIGroupSummery: updateTcpSummery mRSSI:-*  HwCHRWifiRSSIGroup [rssi_index=*, rtt_tcp_packets=*, rtt_tcp_duration=*, rtt_lan_duration=*, rtt_lan_failures=0, rtt_lan_succ=*, rtt_lan_max=4*, rtt_lan_min=*,same_area_frequency=0,adjacent_area_frequency=0]
+12-1*   633 * I SDK     : <2016-12-1*> [NOTICE] SDK: UE-SeC 2016-12-1* Level[NOTICE] magic[*]:*
+12-1* 1*  2852  2852 I PhoneStatusBar: setSystemUiVisibility vis=* mask=ffffffff oldVal=* newVal=* diff=*
+12-1*  1795  2737 W WifiProJNI: poll before: g_monitor_fd =310
+12-1*  1795 * D ActivityManager: getRecentTasks: topActivity=ComponentInfo{com.*/com.*u*i.*}
+12-1*  5224  5283 I Step_LSC: 20002302|REPORT : * 0
+12-1*  2852  2852 I HwDateUtils:  formatChinaDateTime equals.
+12-1*  1795 * D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { act=android.intent.action.VIEW dat=file:///storage/emulated/0/Downloads/*6*.apk typ=application/vnd.android.package-archive flg=0x10800000 cmp=com.android.packageinstaller/.PackageInstallerActivity (has extras) }
+12-1* 1* D wpa_supplicant: Add randomness: count=* entropy=*
+12-1* 1*  3858  4126 I amsnl   : *: false, *: false
+12-1* 1*  1795  2739 I HuaweiWifiWatchdogStateMachine: PTcp RTT:*0, rtt pkt=*, tcp_rx=*, tcp_tx=*, tcp_reTran=*, rtRate=0
+12-1*  1795 * W ActivityManager: getRunningAppProcesses: caller 10* does not hold REAL_GET_TASKS; limiting output
+12-1* 1*4*.3*3*  1795  2728 E HwCHRWebMonitor: Good NetWork Traffic , so mOnAppSuckTime, mUnModifyCount reset 0
+12-1* 1*  1795  1795 I TrafficMonitor: *
+12-1*  1795  2* D WifiHW  : wifi_send_command: cmd:'IFNAME=wlan0 *'
+12-1*  1795  1809 I InputManager_fingersense: Multiple rapid taps detecting, aborting Knuckle Gestures.
+12-1* 1*  3858  4126 I amsnl   : t:false, fl: false, p: 2147483647000, ce: true, we: true
+12-1*:4*  2852  2852 D TintManager: statusBarIconTint=#B3*,navigationBarIconTint=#*000000
+12-1*  3180  3578 I ash     :  ignore audio app: com.* stop delta time:*
+12-1*  1795  2739 D HuaweiWifiWatchdogStateMachine: * loss[-*]=*%, volume=*
+12-17 *19*  5215  5215 D wpa_supplicant: EAPOL: SUPP_BE entering state RE*E
+12-1* D KeyEvent: obtain, mHwFlags=*
+12-1*  1795 * W ActivityManager: getTasks: caller 101* does not hold REAL_GET_TASKS; limiting output
+12-1* D wpa_supplicant: wlan0: * sc*an request*
+12-1* 1*  5*  5* D wpa_supplicant: CTRL_IFACE monitor sent successfully to /data/misc/wifi/sockets/wpa_ctrl_1795-*\\x00
+12-1*  2852  2852 I HwNavigationBarTransitions: transitionTo:mode=*, isEmuiStyle=*e
+12-1*  1795  2750 D PowerManagerService: Setting HAL *e* mode to *e
+12-1*  2852  2852 W PanelView: set notification panel padding = 1*
+12-1*  1795  1* DeviceIdleController: *
+12-1*  2852  2852 D StepCounterView: onStepCounterChange stepsNum:*
+12-1* 31949 31967 I TCP     : *tc*{47*} TcpClientThread.*connect*(TcpClientThread.java:*) *connect* to uc.huawei.com:7801
+12-1* 1*  1795 *D Tethering: upstreamIfaceTypes.add:9
+12-17 *  5215  5215 D wpa_supplicant: WPS: attr type=0x10* len=*
+12-17 19:5*  5215  5215 D wpa_supplicant: CTRL_IFACE: GET_NETWORK id=0 name='*'
+12-17 19:5*56*  5215  5215 D wpa_supplicant: nl80211: Register frame type=0xd0 (WLAN_FC_STYPE_ACTION) nl_handle=0x7fb504d600 match=0*
+12-1*  2852  2852 I StackScrollAlgorithm: updateDimmedActivatedHideSensitive overlap:false
+12-1* 1* D wpa_supplicant: CTRL_IFACE: Failed to get network variable '*'
+12-1*  1795 * I ActivityManager_broadcast: collectReceiverComponents, callerApp: *, intent:*, receiver size:*, flags: 10000400
+12-1*  2852  2852 I StackScrollAlgorithm: updateClipping isOverlap:false
+12-1*  1795  2323 E UsbDeviceManager: 	at com.android.server.usb.UsbDeviceManager$2.onUEvent(UsbDeviceManager.java:328)
+12-1*   818  1152 I logserver: handle_exception_events enter
+12-1*  1795  * E hwintelligencewifi: *
+12-1* 1*  5*  5* D wpa_supplicant: *s* - hexdump(len=22): 30 14 01 00 00 0f ac 04 01 00 00 0f ac 04 01 00 00 0f ac 0* 00 00
+12-1* 1*:3*  1795 * E WifiMonitor: WifiMonitor:wlan0 cnt=31* dispatchEvent: CTRL-EVENT-*
+12-17 19:58:*  1795  2671 I ActivityManager_broadcast: Enqueueing ordered broadcast[background] BroadcastRecord{*a*e* u-1 android.net.wifi.supplicant.STATE_CHANGE}: prev had *
+12-1*  1795  2323 E UsbDeviceManager: 	at java.io.FileInputStream.open(Native Method)
+12-1*  1795  2323 D HwBatteryService: onUEvent fcpStatus = 0,scpStatus =0,ovpStatus=0
+12-1* 2852  2852 I SignalClusterView: applyIconTint ignore
+12-1*  1795 * D HwPFWLogger: AutoStartupDataMgr:retrieveStartupSettings type 0 of c* is 0
+12-1* * 5224  5283 I Step_LSC: 20002302|calculate*WithCache *ta*
+12-17 *:5*.5*2*  2883  2996 I HwSystemManager: ITrafficInfo:ITrafficInfo create 301updateBytes = 17*
+12-1*:0*  1795 *32* D ActivityManager: ActivityManagerService,attachApplication,callingPid = *
+12-1*7 *  633   692 I eSpaceService: msg.recv{4490} LoginResp.decodeFromAck(LoginResp.java:53) 111110001010001111000000100000000100001000100000011101111111101011001
+12-1* I HwOUC   : [*]getFirmwareVersion(), getDisplayFirmwareVersion MLA-AL00C00B318-log(hwouc/HwOucUtility.java:3162)
+12-1*  1795  2323 E UsbDeviceManager: java.io.FileNotFoundException: sys/class/hw_power/charger/charge_data/water_intrused (No such file or directory)
+12-1*7 * D AndroidCommon: [SdcardManager.isMounted]*:/storage/emulated/0*
+12-1*  1795  1795 I NotificationManager: cancelNotification,index:-1
+12-1*  1795  1819 D NetworkManagement: notifyInterfaceClassActivity: client is android.net.INetworkManagementEventObserver$Stub$Proxy@*
+12-1*  7194 * PushLog2824: 	at *(Unknown Source)
+12-1*  1795  2685 I HwPFWLogger: AppAutoStartupPolicy:prevent start receiver of package com.* for action android.net.conn.CONNECTIVITY_CHANGE
+12-17 20:*   633 31870 I SDK     : <2016-12-17 20:*> [WARN] SDK: UE-SeC 2016-12-17 20:* Level[WARN] magic[3362781472 684]:PubEvt_Close Getting a socket[*] from the Socket-table Failed!
+12-1*  1795  1795 I AlarmManager: scheduleTimeTickEvent triggerAtTime = *
+12-1*1*:3*0*7 * I UX      : CollectorManager--isCollectorEnabled--getBoolean: false
+12-1*  1795 *2* I ActivityManager: new Process app=ProcessRecord{* 0:com.huawei.betaclub:loguploadservice/1000}, name: com.huawei.betaclub:loguploadservice, euid: 0
+12-1*  1795 * ActivityManager: cleanUpApplicationRecord*
+12-1*  2852  2852 I NotificationGroupManager: onEntryUpdated:0|com.huawei.health|10010|null|10099
+12-1*  2852  2852 I NotificationGroupManager: onEntryAdded:0|com.huawei.health|10010|null|10099, group=0|com.huawei.health|10010|null|10099
+12-1*  2852  2852 I PhoneStatusBar: removeNotificationChildren
+12-1*  5224  5283 I Step_ExtendStepDataManager: 20002302|after compensate: cache step_*
+12-1*  1795  * D Sensors : bh1745-light calling driver *e*
+12-17 2*  3858  4126 I amsnl   : csr
+12-1*  2852  2852 D StatusBar: reusing notification for key: 0|com.huawei.health|10010|null|10099
+12-1*  5224  5283 I SendBroadcastPermission: action:android.com.huawei.bone.NOTIFY_SPORT_DATA, mPermissionType:0
+12-1*  2852  2852 I TrafficPanelViewContent: onShowStatusChange show:false
+12-1*  1795  2376 I AlarmManager: Alarm triggering (type 0 or 2): [Alarm{* type * when *}]
+12-1*  2852  2852 D DateTimeView: Change to single clock mode!
+12-1*  1795  1825 D Sensors : pa2240-proximity calling driver *e*
+12-1*  2852  2852 V KeyguardUpdateMonitor: FingerStat Visible: *e; Interactive: *e; Switching: false; Bouncer:*e; GoingToSleep: *e Occluded: false; dreaming: false; Authenticated: *e
+12-1*  1795  3341 E LocSvc_ApiV02: I/<--- void globalRespCb(locClientHandleType, uint32_t, const locClientRespIndUnionType, uint32_t, void \*) line 140 QMI_LOC_GET_BEST_AVAILABLE_POSITION_REQ_V02
+12-1* 1795 * D PowerManagerService: *re*lock=*, fl*=0x*, tag="hibernation", name=com.huawei.powergenie*, ws=null, uid=1000, pid=3180
+12-17 2*1:*  1795  1809 I WindowManager: rotationForOrientationLw(orient=*, last=*); user=0 
+12-1*  2852  3556 I HwMobileSignalController: mExtDataOld:ExtData [mMasterNetWorkType=3, mSlaveNetWorkType=0, mMasterNetWorkLevel=*, mSlaveNetWorkLevel=-1, mDataState=*, mDataActivity=*, mDataNetType=13] mExtData:ExtData [mMasterNetWorkType=3, mSlaveNetWorkType=0, mMasterNetWorkLevel=*, mSlaveNetWorkLevel=-1, mDataState=2, mDataActivity=*, mDataNetType=13]
+12-1*  2883  3125 I HwSystemManager: StartupResidentService:InnerHandler Message:*
+12-1*  *  * V AudioManager: querySoundEffectsEnabled...
+12-1*  1795  2381 D libfingersense_wrapper: Calling fingersense_touch_up()
+12-1* 7194  7208 * PushLog2824: [ReceiverDispatcher-336]*(android/null:-1)
+12-1*:11*  3879  3879 I HwLauncher: FPSMonitor  [Launcher , dispatchTouchEvent *n*, false, true] * event  x = * y = 1*9*
+12-17 2*   633 31870 I SDK     : 
+12-1*  2852  2852 D NetWorkUtils: mVSimCurCardType is -1
+12-1*  2852  2852 I HwBrightnessUtils: APS brightness=*.0,ConvertToPercentage=0.*
+12-1*  2852  2852 D HwCustMobileSignalControllerImpl: sub =0,strMccMnc =null,hashMccMnc =[],strPlmn =hw_show_4g
+12-17 2*  2852  2852 D HwCustMobileSignalControllerImpl: isCurrentBySim()=false
+12-1* 1795 * I HwActivityManagerService: Split enqueueing broadcast [callerApp]:ProcessRecord{*:com.*android.*}
+12-1*  1795  1809 I WindowManager: updateRotationUnchecked(alwaysSendConfiguration=false)
+12-1*  1795 * V *InputMethodManagerService: Client requesting input be hidden, pid=*
+12-1*  2852  2852 I EventCenter: EventCenter Get :android.com.huawei.bone.NOTIFY_SPORT_DATA
+12-1*  2852  2852 I HwBrightnessUtils:  getSeekBarProgress isAutoMode:true current brightness:* percentage:*
+12-1*  2852  2852 D StatusBar: applyInPlace=true shouldPeek=false alertAgain=true
+12-1*  1795 * *GnssLocationProvider: *at*
+12-1*  5224  5224 I Step_LSC: 20002302|onStandStepChanged *
+12-1*  1795  1795 I MQoS    : rtt=360,tcp_tx_pkts=1485554,tcp_rx_pkts=1771325
+12-1*  5224  5224 I Step_LSC: 20002302|compensate received
+12-1*  1795 * D PowerManagerService: release:lock=*, flg=0x0, tag="RILJ_ACK_WL", name=com.android.phone", ws=null, uid=1001, pid=3218
+12-1*49*49* I 2DSDR   : APS: 2DSDR: AbsListView.FlingRunnable.endFling, we will clear SDR ratio
+12-1*  1795 * I NotificationManager: enqueueNotificationInternal: pkg=com.huawei.health id=10010 notification=Notification(pri=0 contentView=null vibrate=null sound=null defaults=0x0 flags=0x2 color=0x00000000 vis=PRIVATE)
+12-1*  1795  1819 I SendBroadcastPermission: action:android.net.conn.DATA_ACTIVITY_CHANGE, mPermissionType:0
+12-1*  3858  4126 I amsnl   : t:false, fl: false, p: 2147483647000, ce: true, we: false
+12-1*:1*:1*2*4 *7 E SQLiteLog: (14) os_unix.c:32731: (13) open(/storage/emulated/0/baidu/tempdata/ls.db) - 
+12-1*  1795 * I ActivityManager_broadcast: collectReceiverComponents, callerApp: ProcessRecord{*d* 1*:com.huawei.android.totemweather/u0a28}, intent:com.huawei.android.action.*, receiver size:1, flags: 10000400
+12-1*  2852  2914 I SimCardMethod: isCardAbsent slot:0 slotState:5
+12-1*  3180  3578 I PacketsControl: not 3G net type. do nothing.
+12-1*  3168  3168 I CHR_TelStatusListenr*: writeSummaryFromParcelLocked, *n:*0
+12-1*  3382  3399 D QcrilMsgTunnelSocket: To broadcast an Intent via the notifier to external apps
+12-1*  3382  3399 D QcrilMsgTunnelSocket: Rac Change (PDC) data: [-1, -1]
+12-1*  7194 * PushLog2824: [SocketRead_*-1*(android/null:-1)
+12-17 2*   633   692 I TCP     : *TcpClientThread.*(TcpClientThread.java:3*
+12-1*   633   692 I eSpaceService: LoginThread{*} Login*(LoginC.java:*) Login_By_Step->*
+12-17 2*:4*5*   633   692 I eSpaceService: msg.recv{4490} LoginResp.printNonSensitiveComponentParams(LoginResp.java:65) {heartBeatTime=2, sipDSCP=0, mobileAnr=3, myBonusChineseName=整点一问, myBonusURL=http://eapp.huawei.com/emall/, feedbackUrl=http://3ms.huawei.com/hi/group/2028001/threads.html#category=1136267, dataDSCP=0, maxcontact=5000, regExpires=300, gatewaySVNAddr=byod-web.huawei.com, voiceDSCP=46, cloudUserId=espace_client, kindlyTips=MsgType:9;Tips:;MsgType:10;Tips: 未知消息类型，您当前的版本不支持 / Unknown message type, your current version is not supported;, myBonusDisplay=0, cpuCheckCircle=0.5, audiocodecMobile=112,98,18,8,109,110,0,97, anyContactUserId=espace_client, cloudServerURL=http://app-inter.huawei.com/AnyContacts/api/v1/userauth/getserverconf, timeEnable=0, wrMDMFile=1, myBonusEnglishDis=Treasure-hunt for bonus points!, noPushStart=00:00, cloudUploadURL=http://app-inter.huawei.com/AnyContacts/api/v1/user_call_log/call, anyContactToken=865906b4f8d93484707e8565b38b97a375637cd2, anyContactUploadURL=http://spes.huawei.com/AnyContacts/api/v1/user_call_log/call, mosValue=3.0, pushType=2, anyContactServerURL=http://spes.huawei.com/AnyContacts/api/v1/userauth/getserverconf, audioCodec=112,98,18,8,109,110,0,97, audioDSCP=4, totalsize=60, portraitpixelw=320, noPushEnd=00:00, VoIPRegister=1, isEnableAnyOfficeBrowser=YES, gatewaySVNPort=443, clientsBothOnline=1, maaDSCP=0, sipTLSPort=5061, limittext=30000, performanceIMReport=200, rejectResponse=486, callsessiontimeout=180, imageEncry=1, priorityRtp=2, limitimagebytes=100, JailbreakingDetect=1, performancedataReport=200, myBonusEnglishName=Fight for Points, pushflag=1, videoDSCP=0, enableSRTP=1, maxConfMember=10, revokeMsg=1, enableSipTLS=1, portraitpixelh=320}
+12-1*  1795 * D PowerManagerService: release:lock=*, flg=0x0, tag="*", name=android", ws=*, uid=1000, pid=*
+12-1*  633 31868 E SDK     : <2016-12-1*> [ERR] SDK: UE-SeC 2016-12-1*Level[ERR] magic[3365677344 *]:*
+12-1* 31949 31967 E TCP     : tcp.recv{4790} TcpClientThread.readSocket(TcpClientThread.java:452) <<< ERROR(6) >>> socket read length failure -1*
+12-1*   633 * I SDK     : <2016-12-1*> [NOTICE] SDK: UE-SeC 2016-12-1* Level[NOTICE] magic[* 2421]:FileSec: have right to open file due to cur app sec level = 0 is higher than file app(*) sec level = 0.
+12-1*   816 * D DnsProxyListener: GetAddrInfoHandler addr: * {3*, 9178*, 10*} *
+12-1*  2852  2852 I StatusBar: onNotificationPosted: StatusBarNotification(pkg=com.huawei.health user=UserHandle{0} id=10010 tag=null key=0|com.huawei.health|10010|null|10099: Notification(pri=0 contentView=null vibrate=null sound=null defaults=0x0 flags=0x62 color=0x00000000 vis=PRIVATE)) important=2, post=148*, when=1481531589202, vis=0, userid=0
+12-1*2* I ECS     : *Thread*} TcpClient.connect(TcpClient.java:162) ==================== TCP CLIENT CONNECT [2] ====================
+12-1*  1795  2376 W AlarmManager: mIsScreenOn is: *e, WAKEUP alarm trigger action = * package name is: com.*
+12-1*  3879  4201 I TotemWeather: WidgetDataManager:my location is *
+12-1*   835  2385 E libteec : qsc_decode end
+12-1*  1795 * I ActivityManager_activity: *in*: ActivityRecord{930e418 u0 com.huawei.android.launcher/.unihome.UniHomeLauncher t297}*
+12-1*  1795  1808 I ActivityManager_broadcast: dispatch ordered broadcast [*ground] BroadcastRecord{* u* android.intent.action.*}, has * receivers
+12-17 2*  2852  2852 D NetWorkUtils: is3GCalling is false,mCdmaSlot is -1
+12-1*  2852  2852 D HwCustMobileSignalControllerImpl: sub =0,strMccMnc =null,hashMccMnc =[],strPlmn =hw_show_4_5G_for_mcc
+12-1*  5224  5283 I Step_HSNH: 20002302|rebuild notification
+12-1*  1795  1795 D HwConnectivityService: *
+12-1*  2852  2852 W KeyguardUpdateMonitor: ACTION_BATTERY_CHANGED AMP: 0; Volt: 0
+12-1*1*9:4*1  2852  * D WeatherHelper: homeWeatherInfo = com.huawei.keyguard.events.weather.WeatherInfo@*
+12-17 2*  2852  2852 D ReporterUtil:  e id:3* type:{*}
+12-1*  3879  407* I HwLauncher: Launcher.LauncherProvider  queried count: *
+12-1*  1795  2323 E UsbDeviceManager: Error reading charge file
+12-1*3*  3879  4071 I HwLauncher: Launcher.Utilities  unread scaledHeight = 55;sBigIconSize = 175
+12-17 2*  3180  4303 I AwareLog: MemoryRecoveryDMEPlugin: receive sceen o* event
+12-1*   633   692 I ECS     : Heartbeat timer.timers{*} SimpleThread.on*_i(SimpleThread.java:1*) thread *
+12-1*:1*   633 3186* E SDK     : <2016-12-1*:1*0*> [ERR] SDK: UE-SeC 2016-12-1*:1* Level[ERR] magic[336* 2890]:listing available engine types
+12-1*   633   692 I TCP     : tcp.recv{4488} TcpClientThread.onReceiverWork(TcpClientThread.java:307) get tcp message *
+12-17 2*  2852  3556 I NetworkController.MobileSignalController(0): Change in state from: connected=true,enabled=true,level=*,inetCondition=1,iconGroup=IconGroup(4G*),activityIn=true,activityOut=true,rssi=0,lastModified=12-17 *,isRoaming=false,dataSim=true,networkName=中国移动,networkNameData=中国移动,dataConnected=true,isDefault=true,isEmergency=false,airplaneMode=false,carrierNetworkChangeMode=false,userSetup=true
+12-1*  1795  2381 D libfingersense_wrapper: fingersense_classify_touch() finished
+12-1*  2852  2852 D HwCustMobileSignalControllerImpl: sub =0,strMccMnc =null,hashMccMnc =[],strPlmn =hw_customized_networkType_entry
+12-1* D CubicBezierInterpolator: CubicBezierInterpolator  mControlPoint1x = 0.*, mControlPoint1y = 0.*, mControlPoint2x = 0.*, mControlPoint2y = *
+12-1*  2852  2852 I HwSignalClusterView: setMobileDataIndicatorsHuawei subId:0 visible:true strengthIcon:2130839311 typeIcon:213083919* contentDescription:手机信号满格。 typeContentDescription:* isTypeIconWide:true showActivity:true activityIn:true activityOut:true isRoaming:false
+12-1*  1795  1809 I WindowManager: Application requested orientation 1, got rotation 0 which has compatible metrics
+12-1*  2852  3556 I HwNetworkControllerImpl: onReceive: action = android.intent.action.*E_*STATE
+12-1*  3168  3* I CHR_ChrVolteStatisticInfoUtil: *chrVolteStatisticInfo* mCount=0, mAvgValue=0, mMaxValue=0, mMinValue=0
+12-1*:2*  3168  3369 E CHR_CenumENCSubEventId: set ordinal Value failed! name is not in the enum map, name = ChrVolteStatisticInfo
+12-1*  2852  2852 D HwCustMobileSignalControllerImpl: sub =0,strMccMnc =null,hashMccMnc =[],strPlmn =hw_show_lte
+12-1*  2852  2852 D HwCustMobileSignalControllerImpl: sub =0,strMccMnc =null,hashMccMnc =[],strPlmn =hw_mcc_mnc
+12-1*  2852  2852 I HwSignalClusterView: setMobileDataIndicatorsHuawei subId:0 visible:true strengthIcon:2130839311 typeIcon:2130839195 contentDescription:手机信号满格。 typeContentDescription:4G isTypeIconWide:true showActivity:true activityIn:false activityOut:false isRoaming:false
+12-17 2*  2852  2852 I HwSignalClusterView: getOrInflateState subId:0
+12-1*  1795 * W ActivityManager: Sending non-protected broadcast org.codeaurora.VOIP_VOPS_SSAC_STATUS from system 3218:com.android.phone/1001 pkg com.android.phone
+12-1*  2852  2852 I HwDateUtils: begin of formatChinaDateRange chinaDate:*
+12-1*  1795  1795 D HuaweiWifiWatchdogStateMachine:  not in link monitoring mode, ignore TCP result .
+12-1*  1795  2737 I QosMonitor: postEventFromNative: msg=100,arg1=*,arg2=9
+12-1*  2852  2914 I HwMobileSignalController: subId:0 phoneType:1 networktype:13 targetClass:3 masterLevel:* slaveLevel:-1
+12-1*  2852  2852 I BitmapUtils: 	at com.huawei.keyguard.support.magazine.*Wallpaper*d*Wallpaper.java*)
+12-1*  1795  1795 I NotificationManager: updateLightsLocked,mInCall =*e,mScreenOn = *e,ledNotification == null?true
+12-1*7 * 3879  4071 I HwLauncher: BadgeContentObserver *ge*BadgeNumber:* mComponentName :*ComponentInfo{com.tencent.mm/com.tencent.mm.ui.LauncherUI}
+12-17 2*25* I SendBroadcastPermission: action:com.tencent.mm.plugin.report.service.KVCommCrossProcessReceiver, mPermissionType:0
+12-1*  2852  2914 I HwMobileSignalController: updateSignalStrength: signalStrength=SignalStrength: -1 0 -1 255 -1 255 -1 255 255 * -* -* 2147483647 2147483647 false gw|lte
+12-17 2*  3180  3578 I ash     : pkg null calling: com.huawei.espacev2, pid: 0 ,type: acquire_provider
+12-1*  1795 * D PowerManagerService: *re*lock=*, fl*g*=0x*, tag="WakerLock:*", name=com.tencent.mm*, ws=null, uid=10105, pid=*
+12-1*  3382  3399 I SendBroadcastPermission: action:qualcomm.intent.action.ACTION_RAC_CHANGED, mPermissionType:0
+12-1*  1795  1825 I HwCustPowerManager_FLOW: handleDreamLocked
+12-1*  5224  5283 I Step_FlushableStepDataCache: 20002302|upLoadOneMinuteDataToEngine time=24* step=* altitude=0 motion=20002
+12-1*  5224  5283 I Step_LSC: 20002302|MSG_RECORD_DATA_TO_FILE*
+12-1*  1795  1795 I MQoS    : onSignal: mSubId=*,currDataSubID=0
+12-1*  1795  1819 D NetworkManagement: notifyInterfaceClassActivity: client is com.android.server.ethernet.EthernetNetworkFactory$InterfaceObserver@fccfd35
+12-1*  2852  2852 I HwPowerUI: doTemperatueWarning, health:2
+12-1*  1795  1819 D NetworkManagement: notifyInterfaceClassActivity: client is android.net.ip.IpManager$2@4c99c84
+12-1*  2852  2852 E DateLunarView: mDateString is: 12月1*日星期*
+12-1* 1795 * D PowerManagerService: ready=*e,policy=3,wakefulness=1,wksummary=0x1*,uasummary=0x1,bootcompleted=true,boostinprogress=false,waitmodeenable=*e,mode=true,manual=33,auto=-1,adj=0.0userId=0
+12-1*  1795 * D PowerManagerService: acquire lock=*, flags=0x1, tag="RILJ_ACK_WL", name=com.android.phone, ws=null, uid=1001, pid=3218
+12-17 2*   633   692 I Hw_Fluent: RecentLogic{4456} RecentLogic.addConversationEntity(RecentLogic.java:906) add chat recent!
+12-1*   633 318* I SDK     : <2016-12-1*> [NOTICE] SDK: UE-SeC 2016-12-1* Level[NOTICE] magic[33*56* 2623]:FileSec: write app bundle id  = &5ߢ[@ñ?z]I= to file tail.
+12-1*  1795  2737 D WifiProJNI: Received kernel message payload: event *
+12-1*  3218 * W PhoneInterfaceManager: shouldBlockLocation running ...
+12-17 2*0:3*29*  2883  2992 I HwSystemManager: NotificationGuideService:handle MSG_ACTIVIY_FOREGROUND, uid:10*
+12-1*  1795  1795 I DeviceIdleController: updateChargingLocked: charging=*e
+12-1*  1795  1795 I WifiProJNI: ######### * ########
+12-1*7.*  1795  *88* I PowerManager_screenOn: HwPhoneWindowManager has intercept Key : 4, isdown : true, flags : 72
+12-1*  1795 * D WindowManager: interceptKeyBeforeQueueing: key * , result : *
+12-1*:3*  2883  3258 I HwNetworkPolicyManager: getHwUidPolicy uid = 10* policy = 0
+12-1*8 * D ActivityThread: ActivityThread,attachApplication
+12-17 2*1:*6* D qiyippsplay: org.qiyi.android.coreplayer.b.com1.o()<-1> : 初始化 zip中的so ：>> so : /data/user/0/com.qiyi.video/files/libs-6_92_CA910943_15926449_/lib*.so
+12-17 2*1:*5 24266 24* I DEVICE_MD5_QYID: org.qiyi.android.corejar.utils.DeviceUtils.get*V2()<-1> : get*V2 memory:*
+12-1*  1795 * I ActivityManager_service: bindServiceLocked, r: ServiceRecord{* u0 euid: 0 com.*Service*}, euid: 0
+12-17 2* 24266 24* I *: [qiyi_LOG_INFO *
+12-17 20:31:44.9* 24766 24766 I nativeProcess: iqiyi message: failed to open /proc/*/cmdline
+12-17 2*1:*.0* D Feed    : com.iqiyi.qyplayercardview.j.con.a()<-1> :  mEmotions.get(i) = Emotion@*6*mOrder = *1,mId = *0,mName = pp_icon_expression_*1,mContent = [�*],mImagePath = /data/user/0/com.qiyi.video/app_feed/feedemotion/pp_icon_expression_*1.png,mImageUrl = http://img5.qiyipic.com/image/qitan/qitan_pp_icon_expression_*1_default.png
+12-17 2*1:*12* 24266 24266 I QimoPluginAction.Host: [qiyi_LOG_INFO QimoPluginAction.Host] getConnectedDevice # * connected* *ic*
+12-1*7 * V BoostFramework: BoostFramework() : mPerf = com.qualcomm.qti.Performance@*
+12-1*  1795 * I ActivityManager_activity: Moving to PAUSED: ActivityRecord{* u0 com.*oi* t3*} (pause complete)
+12-17 2* 24266 24* I Utility : [qiyi_LOG_INFO Utility] isQiyiPackage *
+12-17 2*1:* 24266 24266 I DownloadEpisodeAdapter: [qiyi_LOG_INFO DownloadEpisodeAdapter] *
+12-17 2*1:*.4* 24266 24266 I DownloadEpisodeAdapter: [qiyi_LOG_INFO DownloadEpisodeAdapter] localPath = /storage/emulated/0/Android/data/com.qiyi.video/files/203364601_57562*00/203364601_57562*00.jpg
+12-1*  1795 * W AwareLog: AwareMem_Kill: updateGroupList p*e*: move high frequent=com.*, uid=10*
+12-1*1*  1795  2380 D InputDispatcher: Dispatch frozen.  Waiting some more. last for *ms
+12-17 20:*:1* 24266 2* D JOBS    : *hread-*: load factor check. true = (* < 8)|| (* \* 3 < 0 + *). consumer thread: *e
+12-17 20:*8* 24266 24266 I PlayerLogic: [qiyi_LOG_INFO PlayerLogic] revisePlayIndexForEpisode +tid=null  aid=null
+12-17 2* 24802 24802 I nativeProcess: iqiyi message: ==== isProcesssExist: stat=0, errno=13
+12-1*  1795  * D Telecom : TelecomServiceImpl: isInCall callState is 0: *
+12-17 2*  1046  * I APM_AudioPolicyManager: setStreamVolumeIndex() stream *, device 0x*000*, index *
+12-1*0*  1795 * I AwareLog: AwareUserHabit: getTopList is called
+12-17 2* 24266 24266 V chaunce : org.iqiyi.video.vote.b.aux.a()<-1> : checkVoteShowTime--hideVoteView
+12-1*:3*:3*  1795 *45 D ProcessCleaner: [aware_mem] process cleaner success pid:*,uid:10078,com.android.printspooler,[com.android.printspooler],mHasShownUi:false,base,class:6,6,6,6,adj:90* is killed
+12-1*  1795 * I SendBroadcastPermission: action:android.intent.action.SIG_STR, mPermissionType:0
+12-1*   816  156* W SocketListener: sending broadcast to Pid = 1795, Uid = 1000 
+12-1*  2852  2852 D HwCustMobileSignalControllerImpl: sub =0,strMccMnc =null,hashMccMnc =[],strPlmn =hw_hspap_show_4g
+12-17 2* 24802 24802 I nativeProcess: iqiyi message: create--runOnSubprocess isProcessExist true
+12-17 2* 24266 24266 I qiyippsplay: org.iqiyi.video.ui.bf.h()<-1> : 当前时间*
+12-17 2* 24266 24266 D seekbar : org.iqiyi.video.ui.ci.onProgressChanged()<-1> : 当前进度：* 缓冲大小:* 缓冲进度：2*68*
+12-17 2* 24266 24266 V chaunce : org.iqiyi.video.vote.b.aux.a()<-1> : checkVoteShowTime-->*
+12-1*8 * 1795 * I HwActivityManagerService: Split enqueueing broadcast [callerApp]:ProcessRecord{4ff57fc 3382:com.qualcomm.qcrilmsgtunnel/1001}
+12-1*  3218  3517 I QImsService: ImsSenderRxr :  Tag -1 3 219 0[SUB0]
+12-17 2* 24802 24802 I nativeProcess: iqiyi message: ==== do something  executeCmd isProcessExist true =====
+12-1*8 * 1795  2377 I AwareLog: AwareMem_EventTracker: [POLLING_TIMEOUT_1*3*] trigger memory critical *
+12-1*  3858  4126 I amsnl   : m1: false
+12-1*:05.*   633 2*3* I SDK     : <2016-12-1*:05> [NOTICE] SDK: UE-SeC 2016-12-1*:5:* Level[NOTICE] magic[2*52* 7737]:CMTM_API_SendDNSRequestMsg , callback=CCAA8295, data=*0,self =2*52*
+12-17 2* 24266 24266 D VideoPlayerImpl: org.iqiyi.video.player.cv.ag()<-1> : current progress: progress= *
+12-17 2*  1795 * D PowerManagerService: ready=true,policy=3,wakefulness=1,wksummary=0x23,uasummary=0x4,bootcompleted=true,boostinprogress=false,waitmodeenable=false,mode=true,manual=33,auto=-1,adj=0.0userId=0
+12-1*  1795  5350 I MQoS    : MSG_QUERY_TCP_INFO called,count:*
+12-1*  3858  4126 I amsnl   : c: true, w: false, t: false, l: false
+12-1*   802   802 E Thermal-daemon: [Thermal_Hw] temperature_valid, battery : temperature is invalid, invalid temperatrue is *
+12-1*  2852  2852 I TimeManager: chinaDateTime:*
+12-17 2*  3879  4071 D HwLauncher: Launcher.LauncherProvider  launcher-restore query - uri:content://com.huawei.android.launcher.settings/badge
+12-17 2*  2852  2852 I *Notification*0|com.qiyi.video|1000074*3|null|10140*
+12-1*1:0*  2852  2852 I EventCenter: EventCenter Get :android.intent.action.TIME_TICK
+12-17 2*  2852  2852 W ExpandableNotificationRow: setActionsBackground,null == view,mP*Layout
+12-1*  1795  1819 I EventHub: EventHub monitor: no key events in the past *s, *
+12-1*  2852  2852 D KeyguardUpdateMonitor: received broadcast android.intent.action.*
+12-1*  3168  3168 I CHR_ChrDataServiceTracker: handleLteCaStatusChange
+12-1*  3180  3578 I ash     : Application com.*ce* is im app and connected ok, delay to H!
+12-1*  2852  2852 W ResourceType: Failure getting entry for 0xffffffff (t=254 e=65535) (error -2147483647)
+12-1*   633   692 I eSpaceService: Watch Thread{4481} WatchThread.onLoop(WatchThread.java:94) watch thread onLoop... 
+12-1*  1795 * I ActivityManager_broadcast: Enqueueing ordered broadcast[background] BroadcastRecord{* u0 android.intent.action.LTE_CA_STATE}: prev had 0
+12-1*   818  1086 E iMonitor: Systrace:: buffer is full and will reset.
+12-1*   802   802 E Thermal-daemon: [Thermal_Hw] temperature_filter: get invalid temperature, use old temp
+12-1*   633 3186* E SDK     : <2016-12-1*> [ERR] SDK: UE-SeC 2016-12-1* Level[ERR] magic[336* 1532]:RefreshLoginTime: u(w00290667) refresh time 148*19*
+12-1*  1795  * I AlarmManager: sending alarm Alarm{* type * when *},repeatInterval = *0,listenerTag =*
+12-1*  2852  2852 I HwMobileSignalController: notifyListenerHuawei::origin typeIcon:213083919* icons.mName:4G* isSuspend:false, showDataIcon=true, dataConnected=true, isRoaming=false
+12-1*  1795  1795 D WifiProJNI: send_cmd_kernel: cmd=*
+12-1* 31949 31967 I TCP     : tcp.recv{4790} TcpClientThread.onReceiverWork(TcpClientThread.java:314) disconnected
+12-1*   633 * I SDK     : <2016-12-1*> [NOTICE] SDK: UE-SeC 2016-12-1* Level[NOTICE] magic[* 6458]:FSM_Tool_TreatFolderEncEx => [START]: pcFileName [*] 
+12-1*   633 31868 I SDK     : <2016-12-1*> [NOTICE] SDK: UE-SeC 2016-12-1* Level[NOTICE] magic[3365677344 *]:*
+12-1* E libc    : Access denied finding property "persist.sys.*"
+12-1*  1795  * D lux trace:: [*]
+12-1*  1795  5350 I MQoS    : QOS_level:*),use R*AT*Lvl:*
+12-1*   633   692 I TCP     : msg.recv{4490} TcpClientThread.onRecv(TcpClientThread.java:515) TCP Msg *TCP_OK
+12-1*:11*5*   633   692 I ECS     : main{1} XmlMsg.encodeBuf(XmlMsg.java:215) SEND 128 bytes [16]_00_00_00_7C_00_03_01_06_0E_05_8*_7*5*_A*C cmdCode(CC_ReqCircleState.0x060E)msgType(MT_ARG.1)msgClass(MC_FriendsCircle.6)sender(ST_Mobile.0)crypted(true)zipped(false)nobase64(true)length(124)version(3)sno(8*)
+12-1*  2852  3556 I NetworkController.MobileSignalController(0): onSignalStrengthsChanged signalStrength=SignalStrength: -* 0 -1 255 -1 255 -1 255 255 * 2147483647 2147483647 false gw|lte level=* isSuspend=false levelOld=*,mSignalStrength level=*
+12-1*  2852  * I NetworkController.MobileSignalController(0): 	to: connected=true,enabled=true,level=*,inetCondition=1,iconGroup=IconGroup(4G*),activityIn=*e,activityOut=*e,rssi=0,lastModified=12-1*,isRoaming=false,dataSim=true,networkName=中国移动,networkNameData=中国移动,dataConnected=true,isDefault=true,isEmergency=false,airplaneMode=false,carrierNetworkChangeMode=false,userSetup=true
+12-1* 1046  * APM_AudioPolicyManager: setOutputDevice() *evice 0x000*
+12-1*  1046  11* soundtrigger: audio_extn_sound_trigger_update_*e*_status: * of type 0 for Event *, with Raise=0
+12-17 20:59:5* 24266 24266 I qiyippsplay: org.iqiyi.video.player.lpt9.*()<-1> : �*当前播放状态 ：m*PlayerStatus = PLAYING
+12-17 2*  4585  4599 I HiApp.ScheduleRepeatService: IntentService[RepeatingTaskManager]{81*} RepTaskHandler end repeating task!!!time:14819*51*
+12-1*3*  5224  5283 I Step_LSC: 20002302| ## MSG_DEAL_SYSTEM_EVENT android.intent.action.*
+12-1*:19*7 *3* D MagicLink: NearBy-Service:====>DisabledState{ when=0 what=50 target=com.android.internal.util.StateMachine$SmHandler }
+12-1*  1795 * I DisplayManagerService: stopWifiDisplayScanLocked *mWifiDisplayScanRequest*
+12-1* D HwIntelligent3_BitmapUtil: bmp is null : false
+12-1*  3218  3218 I QImsService: ImsServiceSubHandler : Message received: what = 2*
+12-1*   633 * I SDK     : <2016-12-1*> [NOTICE] SDK: UE-SeC 2016-12-1*1*:4* Level[NOTICE] magic[2* 1541]:FSM_Tool_Tree_Enc_Path =>Access [/mnt/sdcard/sandbox/AnyOfficeSDK/sdk/QDJ7lEGuRlJb2r2mqrSExBTDjN4QhUgEPVptBL0HnX4=] real path  ok 
+12-1*   802   802 E Thermal-daemon: [*] temp_new :2*  temp_old :*
+12-17 21:*   633 31870 I SDK     : <2016-12-17 21:*> [WARN] SDK: UE-SeC 2016-12-17 21:* Level[WARN] magic[3362781472 684]:PubEvt_Close Getting a socket[*] from the Socket-table Failed!
+12-1*   633 * I SDK     : <2016-12-1*> [NOTICE] SDK: UE-SeC 2016-12-1* Level[NOTICE] magic[* 2326]:FSM_OpenFile => [START],Mode[*]
+12-1*  2852  2852 I StackScrollAlgorithm: updateClipping isOverlap:true
+12-17 2*   633 31868 I SDK     : <2016-12-17 2*> [NOTICE] SDK: UE-SeC 2016-12-17 2* Level[NOTICE] magic[3365677344 5452]:FSM_Tool_ParseFile => [END] apply cycle<-1>
+12-17 2*:4*.*83*   633   692 I ECS     : pool-3-thread-1{4478} XmlMsg.encodeBuf(XmlMsg.java:215) SEND 160 bytes [16]_00_00_00_9C_00_03_01_08_01_05_88_*2_*C_* cmdCode(CC_QueryRecentSessions.0x0801)msgType(MT_ARG.1)msgClass(MC_RecentSessions.8)sender(ST_Mobile.0)crypted(true)zipped(false)nobase64(true)length(156)version(3)sno(88*)
+12-1*  7194 * I PushLog2824: [*-1*]broadcast(),and mReceivers  4(android/null:-1)
+12-1*   533  3739 E ANDR-PERF-MPCTL: Invalid profile no. 0, total profiles 0 only
+12-1*  2852  2852 I BarTransitions.HwPhoneStatusBarView: transitionTo: mode=MODE_TRANS*ENT, animate=false
+12-1*  2852  2925 D KGWallpaper_Magazine: getNextIndex: *; from * to *; size: 44
+12-1*  3*  3* I *LogDatabase*: msg = * received
+12-17 2*1:*4.*8  3218  3218 E QtiImsExtUtils: getImsPhoneId failed. Exception = org.codeaurora.ims.QtiImsException: ImsService is not running
+12-1*  2852  2852 I StackScroller: set*ed: *e
+12-17 21:*.6*1*  2883  2996 I HwSystemManager: NormalTraffic:update notification type = -1
+12-1*  1795  2709 I ActivityManager_service: retrieveServiceLocked, callerApp: ProcessRecord{34bf34f 0:system/1000}, flags: 10000400
+12-1*  3608  3608 * InCall  : StatusBarNotifier - *on*
+12-1*  1046  *2* I Huawei_audio_cust: get_spk_pa_type: pa is max98925
+12-1*  2852  2852 I HwSignalClusterView: setMobileDataIndicatorsHuawei subId:0 visible:true strengthIcon:2130839* typeIcon:21308391* contentDescription:手机信号*格。 typeContentDescription:* isTypeIconWide:*e showActivity:*e activityIn:*e activityOut:*e isRoaming:false
+12-1*  * E libteec : *
+12-1*7 * 2883  *8*6 I HwSystemManager: HoldService:checkBeforeShowDialogWithPid, current value:*, type:33554432, pkg:com.*
+12-1*  1795  1825 I PowerManager_screenOn: PowerManagerNotifier onWakefulnessChangeStarted: wakefulness=*, reason=*, interactive=*e, mInteractive=false, mInteractiveChanging=*e
+12-1*  1795  2736 E hwintelligencewifi: DisabledState cellid = 46000*
+12-1*  1795 * D StubTelephonyRegistry: uid:100* pid:1* PhoneStateListener.LISTEN_CELL_LOCATION:16 events:*
+12-1*  1795  2665 D NetdConnector: RCV <- {200 1* Tethering stats list completed}
+12-17 21:*  1795  1825 D HwNormalizedAutomaticBrightnessController: set power status:mPowerStatus=*e,powerStatus=*e
+12-1* 1795 * I WindowManger_keyguard: *
+12-1* 31949 31967 I PushService: main{1} PushService.onStartCommand(PushService.java:87) Push Service Start by  userEvent
+12-1*  3608  3608 D InCall  : VideoPauseController: - VideoPauseController:on*e*
+12-1*  1795  1825 * DisplayPowerController*
+12-1*  1795 * I qti_sensors_hal: batch:load_acc_oeminf_data x_offset:0.160831 y_offset:0.184366 z_offset:0.985027
+12-1*  1795  2736 D hwintelligencewifi: current cell id is not monitor ..... cellid = 46000*
+12-1*  1795  * D *AutomaticBrightnessController: *mAmbientLux*
+12-1*  1795  1825 D DisplayPowerController: Animating brightness: target=*, rate=*0
+12-1*1*:27*  3608  3608 I ActivityManager_activity: Re*ing *ActivityRecord{fd45985 token=android.os.BinderProxy@af8ea9b {com.android.incallui/com.android.incallui.InCallActivity}} *is*ed=*false
+12-1*  2852  2852 I SystemServicesProxy: get the task from ActivityManager size is *0 AMS:getRecentTasksForUser,args:numTasksToQuery=*0,flags=62,userId=*
+12-1*   633 * W imssdk_CloudRecord: CloudRecordGetCfgInfoRspNotify* *le*
+12-1* I HwOUC   : [CheckNewVersionThread-*]getMax*MC*ommon return cacheMax* 3*.0* GB(hwouc/HwOucUtility.java:15*1)
+12-1*1:2*9.*  7741 * V Mms_TXM_SVC: Handling incoming message: { when=0 what=5 arg1=1 obj=Intent { cmp=com.android.mms/.transaction.TransactionService } target=com.android.mms.transaction.TransactionService$ServiceHandler } = EVENT_NEW_INTENT
+12-1*  2852  2852 I StatusBarWindowManager: apply mLp:0 -> 0; Height: *; Flag: 818*004*
+12-1*8 * D HwIntelligent3_IntelligentReceiver: onReceive ,intent:Intent { act=com.*android.*ar*e* flg=0x10 cmp=com.huawei.intelligent/.main.receiver.IntelligentReceiver (has extras) }
+12-1* D MagicLink: MagicLink2-BroadcastReceiver:====>*ACTION*
+12-1*  1795 * I AlarmManager: remove(PendingIntent{*: PendingIntentRecord{* broadcastIntent}}) changed bounds; rebatching
+12-1*  1795 * E HsmCoreServiceImpl: onTransact in code is: 10*
+12-1*  2883  2996 * HwSystemManager: *TrafficSetting:result is empty
+12-1*  3879  3879 I HwLauncher: *DynamicUpdater *
+12-1*1*8.*  1795 * I ActivityManager_activity: resumeTopActivityLocked: Skip resume: * pausing*
+12-1*  1795 * I NotificationManager: cancelNotificationWithTag pid *,uid = 10*,tag = *l*,pkg =com.*,id =*
+12-1*  1795  * D PowerManagerService: userActivityNoUpdateLocked: eventTime=1*, event=*, flags=0x0, uid=100*
+12-1*  1795 1* I Security_fingerprint: FingerprintService *e*nt*
+12-1*  2852  2852 W StatusBarWindowManager: Apply window *t *
+12-1*  3218  3375 I SendBroadcastPermission: action:com.huawei.android.intent.action.RAC_CHANGED, mPermissionType:0
+12-1*   633   692 I eSpaceService: Watch Thread{4481} WatchThread.onLoop(WatchThread.java:98) watch thread onLoop...--》 iWatched.doWatch() 
+12-1*   633   692 I *: msg.recv{4490} TupHelper.configSip(TupHelper.java:*) *
+12-1*  3879  4071 W HwLauncher: UnreadContentObserver newUnreadCount:*,oldUnreadCount:* className :com.huawei.android.launcher.NewEspaceMessageContentObserver
+12-1*1:*  3218  3218 I QImsService: ImsServiceSub : StatusForAccessTech networkMode = * registered = 2 status = 0 restrictCause = 0
+12-1*  5224  5283 I Step_ExtendStepDataManager: 20002302|before compensate: cache step_*
+12-17 21:*  1795  18* I WindowManger_keyguard: Setting mHideLockScreen to true by win Window{e6a6b5e u0 com.android.incallui/com.android.incallui.InCallActivity}
+12-1*  1795  2381 D libfingersense_wrapper: fingersense_touch_up() finished
+12-1*  2852  2852 D StatusBar: No peeking: not in use: 0|com.huawei.health|10010|null|10099
+12-1*  1046 *V msm8916_platform: platform_set_parameters: e*
+12-1*  3782  3782 W DPMJ    : |SERVICE| DPM received ACTION_ANY_DATA_CONNECTION_STATE_CHANGEDdefault
+12-1*  2852  2852 I *: *TouchEvent*MotionEvent { action=ACTION_*, actionButton=0, id[0]=*, x[0]=*.0, y[0]=*, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=*, eventTime=1*, downTime=1*, deviceId=10, source=0x1002 }*
+12-1*   633   692 I ECS     : Heartbeat timer.timers{*} XmlMsg.encodeBuf(XmlMsg.java:215) SEND 112 bytes [16]_00_00_00_6C_00_03_01_03_12_05_8* cmdCode(CC_Heartbeat.0x0312)msgType(MT_ARG.1)msgClass(MC_InstanceMessage.3)sender(ST_Mobile.0)crypted(true)zipped(false)nobase64(true)length(108)version(3)sno(8*)
+12-1*  1795  2381 D libfingersense_wrapper: Calling fingersense_classify_touch()
+12-1*  2852  2852 I StackScrollAlgorithm: overlapAmount:*.0, previousNotificationEnd:0.0, newYTranslation:-*.0, location:4, i:0, getTopPadding:*.0, getLocationOnScreen():-*
+12-17 21:*  2852  * D TimeKeeper: getTimeTickInfo:[mMillisUntilFinished:0, mHour:0, mMinute:0, mSecond:0]
+12-1*  2852  2925 W ExifData: The tag is null error!
+12-1*  3626  3626 I HourObserver: left handleScrnOnOffTimeStats, mScrnOffAccTime = *, mScrnOffAccTime = *, mScrnOnAccTime = *
+12-17 2*  3879  4071 I HwLauncher: NewEspaceMessageContentObserver  getNewEspaceMessageCount: *
+12-1*   633 * E SDK     : <2016-12-1*> [ERR] SDK: UE-SeC 2016-12-1* Level[ERR] magic[* 3436]:KeySpace : getkey w00290667_* null
+12-1*1:*6*  3879  4071 I HwLauncher: Workspace updateCustomizeShortcuts view invalidate ShortcutInfo(title=*)
+12-1*  2852  2852 I HwSignalClusterView: setMobileDataIndicatorsHuawei subId:0 visible:true strengthIcon:2130839311 typeIcon:2130839197 contentDescription:手机信号满格。 typeContentDescription:LTE isTypeIconWide:true showActivity:true activityIn:false activityOut:false isRoaming:false
+12-1*  3218  3218 I SendBroadcastPermission: action:android.intent.action.LTE_CA_STATE, mPermissionType:0
+12-1*  3218  3218 D QC_RIL_OEM_HOOK: Oem ID in QCRILHOOK UNSOL RESP is QOEMHOOK
+12-1*  3382  3399 D QcrilMsgTunnelSocket: readRilMessage: Buffer = [B@204bb9f HexData = [010000000404000012000000514f454d484f4f4b1d04080002000000ffff]
+12-1*  1795  1819 D NetworkManagement: notifyInterfaceClassActivity: client is com.android.server.net.NetworkStatsService$6@5d6efc
+12-1* 2852  28* W AppHandler: sendMessage *
+12-1*  1795  3975 E LocSvc_libulp: I/int ulp_msg_process_start_req(), at ulp state = 1
+12-1*8 * 1795  1809 I WindowManager: MyOrientationListener: updateRotation.
+12-1*8 * 3382  3399 D QcrilMsgTunnelSocket: readRilMessage: Buffer = [B@204bb9f HexData = [0100000004040000*000000514f454d484f4f4bf*030800*000000*]
+12-1*  3466  3466 I Contacts: DialpadFragment mBroadcastReceiver action:*.intent.action.*
+12-17 21:*8:*  1795 1*7* D StatusBarManagerService: manageDisableList userId=0 what=0x*0 pkg=com.android.*ui
+12-1*  1795 * I ActivityManager_broadcast: Enqueueing ordered broadcast[background] BroadcastRecord{* u-1 com.android.systemui.statusbar.visible.change}: prev had *
+12-1*  3879  4071 I HwLauncher: Launcher.IconCache, cacheLocked  Utilities.createIconBitmap entry.title = * ComponentName:ComponentInfo{com.*/com.*} user:UserHandle{0}
+12-17 21:*  2852  2852 I PowerUI : onReceive intent:act:android.intent.action.SCREEN_O*  flag:1342177296 
+12-1*8:*   633 31875 E SDK     : <2016-12-1*8:*4*> [ERR] SDK: UE-SeC 2016-12-1*8:* Level[ERR] magic[3359111456 820]:Tracker: save log,/data/user/0/com.huawei.espacev2/AnyOfficeSDKWorkPath/Tracker/20161217_195902.log
+12-1*  2852  2852 W HwLockScreenPanel: Handle message: *
+12-1*  1795 * D SmartHeartBeat: setAlarmsPending ...
+12-1* *21*  1795 * I ActivityManager_broadcast: collectReceiverComponents, callerApp: ProcessRecord{506ad58 2852:com.android.systemui/u0a33}, intent:com.android.systemui.statusbar.visible.change, receiver size:1, flags: 10000400
+12-1*  3879  4071 I HwLauncher: WeatherDynamicUpdater update before : mDrawingData[*] = *, *, 0
+12-1*7 *I eSpaceService: *Thread*6*} TcpCirChannel.shutdown(TcpCirChannel.java:257) Login_By_Step-> shut down now connect
+12-1*  2852  2852 I ActivatableNotificationView: setOverlap mOverlap:*e, mDimmed:false
+12-17 2*1:*  1795 *31* I ActivityManager_broadcast: collectReceiverComponents, callerApp: ProcessRecord{5ab4fa6 25103:com.tencent.mm:push/u0a105}, intent:com.tencent.mm.plugin.report.service.KVCommCrossProcessReceiver, receiver size:1, flags: 10000400
+12-1*  3218  3517 I QImsService: ImsSenderRxr : Response data: [12, 13, -1, -1, -1, -1, 16, 3, 24, -37, 1, 32, 0, 13, 100, 0, 0, 0, 21, 10, 0, 0, 0, 29, 100, 0, 0, 0, 37, 0, 0, 0, 0, 45, -1, 0, 0, 0, 53, -1, -1, 0, 0, 61, -1, 0, 0, 0, 69, -1, -1, 0, 0][SUB0]
+12-1*  1046  * APM_AudioPolicyManager: *
+12-1*  3168  3168 I CHR_TelStatusListenr: onCellLocationChanged: cellInfo = [*,-1]
+12-17 2*  1795  * I qti_sensors_hal: batch:sensor(android.sensor.accelerometer) sample_rate=14.999925Hz report_rate_f=0.000000Hz curr sample rate:* cur rpt rate:0 max:400.000000 min:1.000000
+12-1*  2883  2996 I HwSystemManager: NormalTrafficAnalysis:alert byte = * last alert byte = 10*
+12-17 2*  1795  1825 D HwAmbientLuxFilterAlgo: clear buffer data and algo flags
+12-1*:5*:0*  2883  3040 E HwSystemManager: TrafficNotifyAfterLocked:screen notification will not notify
+12-1*  1795 * I AlarmManager: set(PendingIntent{*: PendingIntentRecord{* com.tencent.mm broadcastIntent}}) : type=2 triggerAtTime=* win=* tElapsed=* maxElapsed=* interval=0 flags=0x8
+12-1*8 * 3168  33*0* I CHR_ChrUtil: is Beta User, userType = 3
+12-17 2*  1795  2750 D libfingersense_wrapper: *fingersense_on_*e()*
+12-1*  1795 * E BatteryStatsService: no controller energy info supplied
+12-1*  1795  2371 E LightSensor: read Events lux:*.0
+12-1*1*:5*  1795  1825 D HwAmbientLuxFilterAlgo: updateAmbientLux: Initializing: mAmbientLightRingBuffer=[*.0 / 0ms], mAmbientLux=*.0
+12-1*1:*  1795 *32* D HwInputMethodManagerService: hideSecSoftInput = false
+12-17 2*:2*  1795  1825 D *PowerManagerService: setColorTemperatureAccordingToSetting
+12-17 2*  1795  * I ActivityManager_activity: *: ActivityRecord{b46dc67 u0 com.android.incallui/.InCallActivity t310}*
+12-1*  1795  1825 * KeyguardServiceDelegate* onScreenTurnedO*(*)
+12-1*  1795  * D HwPFWLogger: PFW.HwPFWService:*
+12-1*  2852  2852 W DisabledFeatureUtils: Dis-Feature : 0
+12-1*  3382  3399 D QcrilMsgTunnelSocket: Broadcasting intent ACTION_RAC_CHANGED
+12-17 2*:5*  1795  1825 I PowerManager_screenOn: PowerManagerNotifier onWakefulnessChangeFinished mInteractiveChanging=true, mInteractive=*e
+12-17 21:5*8*4*  1795  1795 I EyeProtectionControllerImpl: onReceive intent action = android.intent.action.SCREEN_ON
+12-1*2*.5*  2852  2852 * HwLockScreenReporter: report *msg*:{picture: Deepwater-0*-2.3.001-bigpicture_0*.jpg*}
+12-17 2*  1795  2326 * FingerprintService: *ent*com.android.systemui*
+12-1*  3180  3332 I ScenarioAction: new ScenarioAction sPoolSize: 0
+12-1*  1795 * I AlarmManager: set(PendingIntent{*: PendingIntentRecord{7f86237 com.huawei.espacev2 broadcastIntent}}) : type=0 triggerAtTime=148* win=0 tElapsed=* maxElapsed=* interval=300000 flags=0x1
+12-17 21:5*9.*  3626  3626 I HourObserver: enter into handleScrnOnOffTimeStats, scrnOn = false, mIsPreScrnOn = true, mScrnSwitchTime = 1481982*, occurTime = 1481982*99*, delta = *, mScrnOffAccTime = 1*, mScrnOnAccTime = 17*7*6*
+12-1*  2852  2852 I BadgedIconHelper: isCloneProcess = false
+12-1*  835  2385 D fpc_fingerprint_hal: wait_finger_*, took * ms
+12-1* 31949 31967 I eSpaceService: WatchThread{4786} TcpCirChannel.connect(TcpCirChannel.java:219) Connect to server  address = [uc.huawei.com,]  port = 7801
+12-17 21:5*  1795  1825 D AutomaticBrightnessController: Enable LightSensor at time:mLightSensorEnableTime=127*14*,mLightSensorEnableElapsedTimeNanos=451*24*
+12-1*  1795 * D HwNetworkStatsService: mActiveIface: *
+12-1*   835   835 I fingerprintd: FingerprintDaemonProxyEx::*
+12-1*  3626  3753 I LogCollectService: msg = 103 received
+12-17 2*   633   692 I eSpaceService: LoginThread{6*} SvnWapper.getSSOInfoOk(SvnWapper.java:310) [HWUC SSO] ---> Get sso Login params succeed
+12-17 2*   633 31868 I SDK     : <2016-12-17 2*> [NOTICE] SDK: UE-SeC 2016-12-17 2* Level[NOTICE] magic[3365677344 1210]:waiting for useful network..........
+12-1*  1795  3975 E LocSvc_libulp: I/===> int ulp_brain_turn_onoff_dr_provider() line 848 
+12-1*  1795  2708 D HwPFWLogger: PFW.HwPFWAppRestartPolicy:receive action = android.intent.action.SCREEN_O*
+12-1*:3*  1795  * E huawei_ProximitySensor_CPP_Test: write 20* failed
+12-17 2*20*  2852  2852 I HwExpandableNotificationRowHelper: unclear notification ,notificationPkgName:com.android.incallui key:0|com.android.incallui|2|null|1001
+12-17 2*8:*6  2852  2852 D NetworkController.MobileSignalController(0): mSimSubId:0 onDataActivity: direction=0
+12-1*  1046  * D audio_hw_extn: audio_extn_set_anc_parameters: anc_enabled:0
+12-1*  1795 *I Sensor  : updateLightsLocked --> level:*at*
+12-1*  1795 * D Sensors : batch called handle:* sample_ns:*0000000* latency_ns:0
+12-17 2*:5*1*  3608  3608 D InCall  : StatusBarNotifier - Notifying IN_CALL_NOTIFICATION: Notification(pri=2 contentView=null vibrate=null sound=null defaults=0x0 flags=0x2 color=0x00000000 actions=3 vis=PRIVATE publicVersion=Notification(pri=0 contentView=null vibrate=null sound=null defaults=0x0 flags=0x0 color=0xff33b5e5 vis=PRIVATE))
+12-1*  3180  3578 I ThermalStateManager: handle action thermal policy:20*
+12-1*  1795  2670 D WifiController: *State what=1556*
+12-1* 1*5  1795 *I Sensor  : turn off notificationLight due to incall or screenon
+12-1*  2852  2852 I PowerUI : buckets   .....15 .. 10 .. 5level          * --> *status         * --> *plugType       * --> *invalidCharger 0 --> 0bucket         1 --> 1plugged        *e --> *e
+12-1*7 *  612   612 D SurfaceFlinger: Set power mode=*, type=0 flinger=0x7f9a25b400
+12-1*  1795  1825 I DisplayPowerController: checkPhoneWindowIsTop:pakcage name:com.*,ClassName name:com.*
+12-1*  1795 * I AlarmManager: set(PendingIntent{*: PendingIntentRecord{*a*nd* broadcastIntent}}) : type=* triggerAtTime=* win=* tElapsed=4* maxElapsed=4* interval=0 flags=0x*
+12-1*85   633   692 I eSpaceService: Thread-*} TcpCirChannel.connect(TcpCirChannel.java:219) Connect to server  address = [*,]  port = 7801
+12-1*  2883  *1 I HwSystemManager: BatteryStatisticsHelper:uap.getUid() =10* uap.getPower() =*
+12-1*  1795  1795 D WifiService: ACTION_BATTERY_CHANGED pluggedType: 0
+12-1*  2883  3* I HwSystemManager: RemainingTimeSceneHelper:*update*ime*cene*
+12-1*:1*  3180  4303 I AwareLog: MemoryRecoveryDMEPlugin: reportScene typeId = 2002
+12-1*:21:*29*  3180  3332 I DeviceMonitor:  uid:10105 pid:2*3* flags:1 tag:WakerLock:14509116 wakeup time:*6*5
+12-1*  3168 * D HwRepairHelper: getRcvData() Time*Level* :  0
+12-1*:50.*  3218  3218 D VideoCall_LowBattery:  allowVideoCallsInLowBattery: false isCarrierOneSupported: false mIsLowbattery: false
+12-1* 1* I art     : Background *ti* concurrent mark sweep GC freed *B) AllocSpace objects, *B) LOS objects, *% free, *MB/*MB, paused *ms total *ms
+12-17 2*:2*  1795  3077 I GnssLocationProvider: disableGps:false  isEnabled()=true
+12-17 22:2*8*.8*  1795 * D HwConnectivityService: return the background wifi network info for system manager.
+12-1*  1795  1795 D HwConnectivityService: CtrlSocket processCtrlSocket pid = 1000 cmd = 100 param = 0 ret = 0
+12-1*  1795  2377 V HwPackageManagerService: Returning system default Launcher 
+12-1*  2852  2852 I HwMobileSignalController: notifyListenerHuawei::origin typeIcon:213083915* icons.mName:*G isSuspend:false, showDataIcon=false, dataConnected=false, isRoaming=false
+12-1*  1795 * D NetdConnector: SND -> {1*}
+12-1*  1795 * D PFW.HwPFWAppWakeLockPolicy: getUidWakeLock uid: 10* wakelock(minutes): *
+12-1*  3782 * V AudioManager: isWiredHeadsetOn...
+12-1*  3382  3399 D QcrilMsgTunnelSocket: Rcvd UNSOL response with *8 bytes data for SUB0
+12-1*  1046  * V APM_AudioPolicyManager: selectOutput() commonFlags for output *, 000*
+12-17 2*:3*3*  1046  1125 I audio_hw_utils: audio_extn_utils_send_app_type_cfg PLAYBACK app_type 69937, acdb_dev_id *, sample_rate 48000
+12-1*  1795 *2* W ActivityManager: Sending non-protected broadcast com.huawei.betaclub.*S*S* from system *:com.huawei.betaclub*/1000 pkg com.huawei.betaclub
+12-1*  1795 * V HwWindowManagerService: moveTaskToTop mTaskChanged:true
+12-1*  2852  2852 D TintTextView: #B3FFFFFF com.android.systemui.tint.TintTextView{*1d* V.ED..... ......* 0,*-144,* #7f14004e app:id/msim_status_bar_operators_card_one_id}
+12-1*8 * E SQLiteDatabase: 	at android.database.sqlite.SQLite*.open*(SQLite*.java:*)
+12-1*  3879  * I HwLauncher: Launcher.LauncherProvider  launcher call - method:setAppBadgeCount arg:null extras:[app_shortcut_custom_id=*][app_shortcut_class_name=com.tencent.mm.ui.LauncherUI][app_badge_count=0] uid =10105 pid =4492
+12-1*8 * D 2DSDR   : APS: 2DSDR: CanvasContext::setSDRZoomout(), the SDR ratio from ViewRootImpl is *1.000000, native window width = 1080, height = 1920
+12-1*  1795  1821 I ActivityManager_activity: windowsVisibleLocked(): ActivityRecord{* u0 com.*.mm*/.ui.*er* t3*} idle: *e
+12-1*  2852  2852 I HwStatusBarIconController: applyIconTint*
+12-17 2*3:*  3218  3517 I QImsService: ImsSenderRxr : Response data: [12, 13, -1, -1, -1, -1, 16, 3, 24, -37, 1, 32, 0, 13, -1, 0, 0, 0, 21, -1, -1, 0, 0, 29, -1, 0, 0, 0, 37, -1, -1, 0, 0, 45, -1, 0, 0, 0, 53, -1, -1, 0, 0, 61, -1, 0, 0, 0, 69, -1, -1, 0, 0][SUB0]
+12-1*  3879  4160 I Adreno  : Local Branch                     : 
+12-1*:32*9*  1046  1467 V APM_AudioPolicyManager: getOutputForAttr() usage=*, content=4, tag= flags=00000000 session * selectedDeviceId 0
+12-1*   802   802 E ThermalBinder: mThermalService is NULL!
+12-1*   802   802 E Thermal-daemon: Report temperature: [*] temp :*  report_threshold:1
+12-1*:4*  1795 15528 I PackageManager_scan: measureTask getPackageSizeInfoLI : PackageStats{* com.*}, for user 0
+12-1*  3782 * V AudioManager: isMusicActive...
+12-1*  2852  2852 I HwBatteryManager: onBatteryLevelChanged: level=*, pluggedIn=*e, charging=*e, PercentColor=-1275068417
+12-1*:1*  3879  3879 I HwLauncher: Model  onReceive user=UserHandle{0}
+12-1*  1795  5350 I TrafficMonitor: getStatic,count:0,work status:false
+12-1*  3218  3517 I QImsService: ImsSenderRxr : [UNSL]< UNSOL_SSAC_CHANGED org.codeaurora.ims.ImsQmiIF$SsacInfo@*[SUB0]
+12-1*:1*  2852  2852 I *PowerUI*: *o*ce*ve* intent:act:android.intent.action.BATTERY_CHANGED  flag:1610612752 technology=Li-ion icon-small=173032* max_charging_voltage=0 health=2 max_charging_current=0 status=* plugged=* present=true charge_counter=0 level=* scale=100 temperature=* voltage=4* invalid_charger=0 
+12-1*  3782  3862 W QCNEJ   : |CORE| CNE received unexpected action: android.intent.action.BATTERY_CHANGED
+12-1*  * D MediaPlayer: [virtual void android::MediaPlayer::notify(int, int, int, const android::Parcel \*)] : [113*] callback app*li*
+12-1* 25067 * I ret     : *
+12-1*7:*6*  3879 11576 I HwLauncher: Launcher.LauncherProvider  launcher call - method:setAppBadgeCount arg:null extras:[app_shortcut_custom_id=[shortcut_c2a01ec39446c2aac387c386c2b27ec2aa40c3a7c289c3bec28b547dc2b0c2a6]][app_shortcut_class_name=com.tencent.mm.ui.LauncherUI][app_badge_count=*] uid =10105 pid =4492
+12-1*  3218  3218 I QImsService: ImsServiceSub : broadcastVopsSsacIntent Vops = true , Ssac = false
+12-17 23:*   633 31870 I SDK     : <2016-12-17 23:*> [WARN] SDK: UE-SeC 2016-12-17 23:* Level[WARN] magic[3362781472 684]:PubEvt_Close Getting a socket[*] from the Socket-table Failed!
+12-1*  2852  2852 D TintTextView: #B3FFFFFF com.android.systemui.tint.TintTextView{* V.ED..... ......ID 0,0-0,0 #7f1403* app:id/*}
+12-17 23:0*.2*  1795 * I HwActivityManagerService: keyAppBroadcastQueueForIntent intent Intent { act=com.tencent.mm.plugin.report.service.KVCommCrossProcessReceiver flg=0x10 cmp=com.tencent.mm/.plugin.report.service.KVCommCrossProcessReceiver (has extras) } on bgkeyapp queue
+12-1*  2852  2852 I BitmapUtils: 	at com.huawei.keyguard.util.BitmapUtils.get*ColorInfo(BitmapUtils.java:*)
+12-1*:4*   633 * I SDK     : <2016-12-1*:4*> [NOTICE] SDK: UE-SeC 2016-12-1*:4* Level[NOTICE] magic[* 830]:End to proc tunnel status change: result=0
+12-1*  1795 1*32 D ActivityManager: getRecentTasks: num=*,flags=*,totalTasks=48
+12-1*.2*  2852  * I NetworkController.MobileSignalController(0): need to force refresh view
+12-1*7 *  818  1086 E iMonitor: error writing to /sys/kernel/debug/tracing/trace_marker: Bad file descriptor (9)
+12-1*   814 * W SimpleSoftOMXComponent: checkTransitions mState = *, mTargetState = *
+12-1*  1795 * I NotificationManager: onNotification*si*Changed called
+12-1*   800 * D         : oem-qmi: *ec*
+12-1*  1795 * I ActivityManager_broadcast: collectReceiverComponents, callerApp: ProcessRecord{5299443 4690:com.baidu.input_huawei/u0a74}, intent:com.tencent.mm.plugin.openapi.Intent.ACTION_HANDLE_APP_REGISTER, receiver size:1, flags: 10000400
+12-1*3:*0.*  1795  * W NetworkStatsFactory: mStatsXtProcUid: /proc/net/comm/stats does not exist!
+12-1*  1046  1125 D audio_hw_primary: *able_audio_route: *r* and update *path: low-latency-playback speaker
+12-1*  1795 * W MediaProcessHandler: remove target not exist, maybe the UI process: uid: 10*, pid: *
+12-1*  3180 * I DownloadState: @@@@@@@@@@@@ uid :10* download :*e
+12-1*  4492  4492 V AudioManager: *e*...
+12-1*  3218  3218 I SendBroadcastPermission: action:org.codeaurora.VOIP_VOPS_SSAC_STATUS, mPermissionType:0
+12-1*:57*  2852  2852 I BitmapUtils: getSuggestColorInfo::isStatusBarArea=*e, colorMSD=1*, average color=13*, color type=*, mask type=*; light 2*0*8.*
+12-1*  3879 * I HwLauncher: ProviderCallUtils callBadge isCloned = false
+12-1*   818  108* iMonitor: *
+12-1*  1046  1125 * audio_hw_primary: st*_output_stream: enter: *usecase(1: low-latency-playback)*
+12-1*1*.5*   633   692 I eSpaceService: msg.recv{4490} 1.onCertFailed(EspaceService.java:862) get TLS cert failed !!!
+12-1*  1795  3* D PowerManagerService: *re*lock=*, fl*=0x*, tag="*lock*a*ck", name=com.android.systemui*, ws=null, uid=10033, pid=2852
+12-1*  4492  4492 I HwResourcesImpl: *icon *: com.baidu.input_huawei*
+12-1*  1795  1819 D NetworkManagement: notifyInterfaceClassActivity: client is com.android.server.connectivity.Vpn$2@e40aefb
+12-1*9  2852  2852 D PhoneStatusBar: disable: < expand *\* alerts *\* * clock navigationbar * quick_settings >
+12-17 23:*34*  1795  1795 D HwAutoConnectManager: ACTION_USER_PRESENT received, has PortalNotifyDelayed = false
+12-1*:2*  1795  1795 D qdlights: set_speaker_light_locked mode 1, colorRGB=FF00FF00, onMS=*00, offMS=*000
+12-1*  1046  1125 V msm8916_platform: platform_get_native_support:napb: ui Prop enabled(0) version(0)
+12-1*:1*5*  4690  4690 I SendBroadcastPermission: action:com.tencent.mm.plugin.openapi.Intent.ACTION_HANDLE_APP_REGISTER, mPermissionType:0
+12-1*  1795  1812 I ActivityManager_broadcast: dispatch ordered broadcast [bgkeyapp] BroadcastRecord{*7* u0 com.tencent.mm.plugin.report.service.KVCommCrossProcessReceiver}, has 1 receivers
+12-1*  1795 * I ActivityManager_service: retrieveServiceLocked, callerApp: ProcessRecord{*:com.*ua*i.*}, flags: 10000400
+12-17 23:34:27.*5*  1795 *88* D HwPowerManagerService: startWakeUpReadyInternal, mBrightnessWaitModeEnabled = *e
+12-1*0.*36*  1795  2376 I ActivityManager_broadcast: Enqueueing ordered broadcast[background] BroadcastRecord{* u0 com.huawei.hwsystemmanager.power.SCHEDULE_RECORD_REMAING_TIME_SCENE}: prev had 1
+12-1*   633   692 I ECS     : msg.recv{4490} XmlMsg.decodeBuf(XmlMsg.java:237) RECV * bytes [12]_00_03_02_0*_0*_8* cmdCode(CC_*.0x0*)msgType(MT_ACK.2)msgClass(MC_*)sender(ST_Mobile.0)crypted(*e)zipped(false)nobase64(true)length(*)version(3)sno(8*)
+12-1*   633   692 I SsoLogin: LoginThread{6*1} LoginRequester.getRequestData(LoginRequester.java:120) [Aynoffice SSO] --> getStrAnyofficeSsoTicket failed, set no sso login., setAuthType = 1
+12-1*:4*3.*  7194  7208 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcast:975 android.content.ContextWrapper.sendBroadcast:421 ah.onReceive:-1 f.run:-1 android.os.Handler.handleCallback:755 
+12-1*  *  * W CfgFilePolicy: CFG_DIRS length : 9
+12-1*:4*  1795  2376 W ActivityManager: Sending non-protected broadcast com.huawei.*.action.* from system uid 1000 pkg *
+12-1*  1046  * I APM_AudioPolicyManager: st*Output() output 13, stream *, session *
+12-1*  5224  5283 I Step_SharedPerferenceUtils: 20002302|*etTodayTotalDetailSteps * Prefence *todaySendorSteps=*148*0000##*##17*##0##0##4*
+12-1*  1795  1819 I EventHub: monitor check touch devices
+12-18 *  3626  3626 E PTM.FileNodeInfo: getTempInfo error: null, 0
+12-18 0*   633 31870 I SDK     : <2016-12-18 0*> [WARN] SDK: UE-SeC 2016-12-18 * Level[WARN] magic[3362781472 684]:PubEvt_Close Getting a socket[*] from the Socket-table Failed!
+12-18 *   633 31870 I SDK     : 
+12-18 *   633 * I SDK     : 
+12-18 *  2852  2852 D HwCustMobileSignalControllerImpl: isCurrentBySim()=false
+12-18 *  1795 * W huawei_ProximitySensor_CPP_Test: ProximitySensor, enable, 24*: *
+12-18 *  1046  1125 * msm8916_platform: platform_check_backends_match: *d* snd_device* = 
+12-18 *  *: *
+12-18 *  2852  2852 I HwSignalClusterView: getOrInflateState subId:0
+12-18 *  2852  2852 D NetWorkUtils: is3GCalling is false,mCdmaSlot is -1
+12-18 *  1795  2380 I PowerManager_screenOn: PowerManagerNotifier onUserActivity: event=2, uid=1000
+12-18 *  3858  4126 I amsnl   : csr
+12-18 *  1795 * I ActivityManager_service: ServiceNeeded not bring down service:ServiceRecord{* u0 euid: 0 com.huawei.*Service}
+12-18 *  3180  3578 I ash     : Application com.baidu.input_huawei is depended by other app, delay to H!
+12-18 *  1795  1808 I ActivityManager: new Process app=ProcessRecord{* 0:com.*ua*i.*/u0a*}, name: com.*ua*i.*, euid: 0
+12-18 *  1795  1809 I MultiTaskManagerService: onProcessDied pid = *, uid = 10*
+12-18 *  1795 * MediaProcessHandler: processOp *uid* 10*
+12-18 *  1795  1809 D NavigationBarPolicy: onFling::not valid gesture or touch plus on, false, return!
+12-18 *  1795  2377 W AwareLog: AwareMem_Kill: kill action canBeExecuted waiting next operation, real interval=*
+12-18 *  1795 * D PowerManagerService: ready=true,policy=3,wakefulness=1,wksummary=0x1,uasummary=0x1,bootcompleted=true,boostinprogress=false,waitmodeenable=false,mode=true,manual=33,auto=-1,adj=0.0userId=0
+12-18 *:2*  2883  2996 I HwSystemManager: TafficState:default sub id = 0slotIndex = 0 subscriptionId = 0
+12-18 *:2*  1795 * I AlarmManager: remove(PendingIntent{*8*c*: PendingIntentRecord{*75* com.*ua*i.*t* startService}}) changed bounds; rebatching
+12-18 *:2*0*  1795  2685 D HwConnectivityService: hintUserSwitchToMobileWhileWifiDisconnected, state=*CONNECTED  type =0
+12-18 *  1795  1819 D NetdConnector: RCV unsolicited event from native daemon, event = 60*
+12-18 *:3*  3168  3369 I CHR_TelphonyStatusService: triggerAllStatsReport: Sun Dec 18 *:3* GMT+08:00 2016
+12-18 *7:*  1795  3304 D GnssLocationProvider: svid: * cn0: *.*0* elev: *.0 azimuth: *.0   *
+12-18 *  1795  3341 E LocSvc_ApiV02: I/<--- void globalEventCb(locClientHandleType, uint32_t, const locClientEventIndUnionType, void \*) line 114 QMI_LOC_EVENT_*_IND_V02
+12-18 *  3626  3729 D NCCHR_LogDatabaseNc: metricFileReportProcess *t*e*r for metricId = 1*
+12-18 *1*  3218  3517 I QImsService: ImsSenderRxr : Response data: [12, 13, -1, -1, -1, -1, 16, 3, 24, -52, 1, 32, 0, 8, 2, 21, 0, 0, 0, 0, 32, 14][SUB0]
+12-18 *  1795  1819 I InputDispatcher: frozenCheckLocked mDispatchFrozen=0 mNextUnblockedEvent=0
+12-18 *  1795 * I ActivityManager_broadcast: collectReceiverComponents, callerApp: ProcessRecord{24cdca7 3218:com.android.phone/1001}, intent:*i*.intent.action.*E_*STATE*, receiver size:1, flags: 10000400
+12-18 *  3168 * D HwRepairHelper: update()   updated:  00
+12-18 *  3168  3307 W System.err: 	at com.huawei.android.chr.ProtocolLogManager.add*Common*Para*o*(ProtocolLogManager.java:*)
+12-18 0*:0*  3626  3626 I HourObserver: * updateHourScrnOnOffTimeStatsResult, m*ScrnSwitchTime = 148201*, mScrnOnAccTime = *0, mScrnOffAccTime = *
+12-18 *  2852  2* I Tile.*Tile: refreshState=*, BooleanState[,icon=ResourceIcon[resId=0x7f020*],label=*,labelTint=*,textChangedDelay=*,contentDescription=*,dualLabelContentDescription=null,minimalContentDescription=null,minimalAccessibilityClassName=android.widget.Switch,expandedAccessibilityClassName=android.widget.Switch,autoMirrorDrawable=false,disabledByPolicy=false,enforcedAdmin=null,value=*e]
+12-18 07:*  1795  2748 D HwAmbientLuxFilterAlgo: t=135*,BT=135*,DT=135*,BT1=135*,DT1=135*,Bn=false,Dn=false,lx=[0.0/135*, 0.0/135*, 0.0/135*, 0.0/135*, 0.0/135*, 0.0/135*],mLx=0.0,s=5.0,ss=0.*,AuIntervened=false,mProximityState=false,bLux=6.0,dLux=-1.0,bLux1=6.0,dLux1=-1.0
+12-18 *  1795  2665 D NetdConnector: RCV <- {200 12* succe*}
+12-18 0*7:2*.3*  1046  1125 D audio_hw_primary: check_usecases_codec_backend:becf: (40) check_usecases curr device: speaker, usecase device: backends match 0
+12-18 0*7:*  1795 * I TransactionProcessor: HwDPMS received transaction_is*l*ed, the ret: false
+12-18 *   633   692 I ECS     : pool-1-thread-1{4483} XmlMsg.encodeBuf(XmlMsg.java:215) SEND 144 bytes [16]_00_00_00_8C_00_03_01_03_13_05_8*5_* cmdCode(CC_SetPersonalState.0x0313)msgType(MT_ARG.1)msgClass(MC_InstanceMessage.3)sender(ST_Mobile.0)crypted(true)zipped(false)nobase64(true)length(140)version(3)sno(8*)
+12-18 0*  2852 * I WeatherUtils: getCurrentWeatherInfo currentTemperature is :1*.0 mWeatherIcon Id is: *
+12-18 *7:3*49*49* I 2DSDR   : APS: 2DSDR: AbsListView.FlingRunnable.run(), SDR ratio = 1.0, layer height = 1920, scroll view height = 14*4*
+12-18 *7:*  1046  1125 D msm8916_platform: platform_check_codec_backend_cfg:becf: afe: *on*support*e* Configure afe to default Sample Rate(48k)
+12-18 *  7194  7208 I SendBroadcastPermission: action:com.huawei.android.push.intent.SOCKET_INFO, mPermissionType:0
+12-18 *  2852  2852 W HwLockScreenPanel: refreshBatteryInfo: null
+12-18 *:5*  5224  5224 I Step_LSC: 20002302|logicalDealBroadcastEvent : Intent { act=android.intent.action.SCREEN_ON flg=0x50000010 }
+12-18 *  5224  5283 I Step_DataCache: 20002302|getTodayTotalSteps *
+12-18 *5*   633   692 I ECS     : msg.recv{4490} XmlMsg.encodeBuf(XmlMsg.java:215) SEND 288 bytes [16]_00_00_01_1C_00_03_01_07_01_05_8*C_* cmdCode(CC_ExtendRequest.0x0701)msgType(MT_ARG.1)msgClass(MC_JsonExtend.7)sender(ST_Mobile.0)crypted(true)zipped(false)nobase64(true)length(284)version(3)sno(8*)
+12-18 *8:*:02.1*6*  1795  2376 I HwActivityManagerService: keyAppBroadcastQueueForIntent intent Intent { act=ALARM_ACTION(23480) flg=0x14 (has extras) } on bgkeyapp queue
+12-18 *  1795  2377 E ProcessInfoCollector: getProcessInfo: failed to find this proc 
+12-18 *   625   718 E libnav  : CablComputeBacklightLevel(): UpdateType = DifferentSceneUpdate
+12-18 08:1*  2852  2852 I HwSystemIcons: onLayout:left=*, top=0, right=1056, bottom=72, offset=0
+12-18 08:15:0* 25329 25329 D wpa_supplicant: *: *
+12-18 *  2852  * I NetworkController.MobileSignalController(0): Change in state from: connected=true,enabled=true,level=5,inetCondition=1,iconGroup=IconGroup(*),activityIn=*e,activityOut=*e,rssi=0,lastModified=12-18 0*,isRoaming=false,dataSim=true,networkName=中国移动,networkNameData=中国移动,dataConnected=*e,isDefault=true,isEmergency=false,airplaneMode=false,carrierNetworkChangeMode=false,userSetup=true
+12-18 *8:*  1046  1125 D msm8916_platform: platform_can_split_snd_device: snd_device(2) num devices(*) new_snd_devices(*)
+12-18 *  4492  4492 I SendBroadcastPermission: action:com.tencent.mm.ui.ACTION_*ACTIVE, mPermissionType:0
+12-18 *:5*7*  1795  1808 I ActivityManager_broadcast: dispatch ordered broadcast [background] BroadcastRecord{*e* u0 com.tencent.mm.plugin.openapi.Intent.ACTION_HANDLE_APP_REGISTER}, has 1 receivers
+12-18 *   597   597 I rmt_storage: rmt_storage_*connect_cb: clnt_h=0x1* conn_h=0x7f8862a370
+12-18 *  3218  3218 D VideoCall_LowBattery: BatteryIntent received: android.intent.action.BATTERY_CHANGED
+12-18 * I TCP     : tcp.*{4*} TcpClientThread.onRecv(TcpClientThread.java:522) tcp connection event TCP_C*ED
+12-18 * 31949 31967 I ECS     : WatchThread{4786} TcpClient.disconnect_i(TcpClient.java:202) ==================== TCP CLIENT DISCONNECT ====================
+12-18 *9:0*:0* 31949 31967 I TCP     : 	at com.huawei.ecs.mip.proxy.TcpSocket.connect*(TcpSocket.java:*7)
+12-18 *  * W CfgFilePolicy: No config file found for:/themes/diff/icons
+12-18 * 16628 27121 I TotemWeather: WeatherParserFactorys:type is 1
+12-18 * E SQLiteDatabase: 	at com.baidu.location.*.a*(Unknown)
+12-18 *1*  1795 1* W WifiStateMachine: Can't find ssid.
+12-18 *:3*  1795  2685 D ConnectivityService: *nd*ing * *in*Network*or* NetworkRequest [ id=*, legacyType=-1, [ *Capabilities: *NOT_RESTRICTED&TRUSTED&NOT_VPN] ]
+12-18 09:*5:*.9*  3382  3382 I SendBroadcastPermission: action:com.qualcomm.intent.action.ACTION_UNSOL_RESPONSE_OEM_HOOK_RAW, mPermissionType:0
+12-18 *:3*   828 * D QC-time-services: Daemon:*e* read * mseconds *= *36*
+12-18 *:0*  1795 * D HwPowerManagerService: remove pxy wl, pid: *, uid: 1010* from pxy process list.
+12-18 1*  1046  *2* I APM_AudioPolicyManager: setOutputDevice() createAudioPatch returned 0 patchHandle 2* num_sources 1 num_sinks 1
+12-18 1*   816 *0* D DnsProxyListener: GetAddrInfoHandler: getaddrinfo failed! count=10*, total=11*5 szlong.weixin.qq.com {0,0,0,917504,10105}
+12-18 1*   633 31870 I SDK     : <2016-12-18 1*> [WARN] SDK: UE-SeC 2016-12-18 1* Level[WARN] magic[3362781472 684]:PubEvt_Close Getting a socket[*] from the Socket-table Failed!
+12-18 1*:3*1* 1* 1* I HwOUC   : [*i*n*-*1]getRealFirmwareVersion(),send ro.build.product.real.id = (hwouc/HwOucUtility.java:3159)
+12-18 1*  1795 * E PF_API_NATIVE: check perfhub service fail! 
+12-18 1*:3*5  1795 1* I ActivityManager_activity: launch r: ActivityRecord{*8* u0 com.*.m*/.p*i.*oi* t*}, uid = 101*, r.info.applicationInfo.euid  = 0
+12-18 10:40:*  1795 * D PowerManagerService: ready=*e,policy=*,wakefulness=1,wksummary=0x*,uasummary=0x*,bootcompleted=true,boostinprogress=false,waitmodeenable=false,mode=false,manual=216,auto=-1,adj=0.0userId=0
+12-18 1*  3879  4071 I HwLauncher: WeatherDynamicUpdater  picNames.length not equal tmpMapList.size(), so no need to updatePreData... ; picNames.length = 4 , tmpMapList.size() = 1
+12-18 1*  1795 * D WindowManager: interceptKeyTq keycode=* interactive=true keyguardActive=false policyFlags=2*00000* down *e canceled false
+12-18 1*  1795 * D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { *flg=0x*000* cmp=com.*an*Activity * }
+12-18 1*  1795 * D PowerManagerService: *re*lock=230301592, fl*=0x*, tag="\*launch\*", name=android*, ws=WorkSource{10*}, uid=1000, pid=1795
+12-18 1*5*  3218  3536 E SharedPreferencesImpl: Couldn't create directory for SharedPreferences file /data/user_de/0/com.android.settings/shared_prefs/caStatePreferences.xml
+12-18 1*5*93* I memcheck: needTrimMemory: trimFrom = 0, avail = 9*, vmSize = 2*0, vssLimit = 4190896, totalPss = 8*, pssLimit = 2876772, agressiveGrowthLimit = 1150708, gentleGrowthLimit = 2013740, availablePmThreshold = 221184, availableVmThreshold = 153600
+12-18 10:52:0*   808   547 D [HWCamera] IppAlgoSmartAE: int android::IppAlgoSmartAE::doSmartAEAlgo(unsigned char \*, void \*, int, int, int) mAlgoAeCompToDriver[*]=0, resultComp[*]=0
+12-18 10:52:06.*78   808   547 D [HWCamera] IppAlgoSmartAE: void android::IppAlgoSmartAE::setHdrAndExifInfo(AE_OutputData \*) sizeof SmartAE_EXIF_INFO:56, sizeof pOutput->exifInfo:56
+12-18 10:52:0*   808   547 D [HWCamera] IppAlgoSmartAE: int android::IppAlgoSmartAE::doSmartAEAlgo(unsigned char \*, void \*, int, int, int)*
+12-18 10:52:0*   808   547 D [HWCamera] IppAlgoSmartAE: int android::IppAlgoSmartAE::doSmartAEAlgo(unsigned char \*, void \*, int, int, int) cameraId=0,isptype=3,aelock=0,imgerotation=0,uiev=0,uibrightness=0,uisaturation=0,uicontrast=0
+12-18 10:52:*   808   547 D [HWCamera] IppAlgoSmartAE: virtual void android::IppAlgoSmartAE::onNewArrival(void \*, void \*, int, int, int) e*
+12-18 10:52:0*   808   547 D QCameraParameters: int qcamera::QCameraParameters::get*void\*, int\**) const *
+12-18 10:52:*   808   549 D QCamera2HWI: static void qcamera::QCamera2HardwareInterface::metadata_stream_cb_routine(mm_camera_super_buf_t\*, qcamera::QCameraStream\*, void\*) get flashHDR state. est_state = 0, led_state=0, frameid=*
+12-18 10:52:0*   808   547 D [HWCamera] IppAlgoSmartAE: int android::IppAlgoSmartAE::doSmartAEAlgo(unsigned char \*, void \*, int, int, int), frameParam[0]:aeTarget=4*,exposureTime=100,iso=*,aeStabled=*,currentY=*,SAE_EVComp=0
+12-18 1*:1*  1795 * I TransactionProcessor: HwDPMS received transaction_getHwFrameworkAdminList user: 0:4006
+12-18 1*  3180  3578 I ash     : *AppNetworkRestrict >> com.android.*er*, uids : [100*]
+12-18 1*4:*12*5  1795 *I WindowManager: Destroying surface Surface(name=*) called by com.android.server.wm.WindowStateAnimator.destroySurface:2056 com.android.server.wm.WindowStateAnimator.destroySurfaceLocked:907 com.android.server.wm.WindowState.removeLocked:1527 com.android.server.wm.WindowManagerService.removeWindowInnerLocked:2723 com.android.server.wm.WindowManagerService.removeWindowInnerLocked:2688 com.android.server.wm.WindowManagerService.removeWindowLocked:2677 com.android.server.wm.WindowManagerService.removeWindowLocked:2546 com.android.server.wm.WindowManagerService.removeWindow:2541 
+12-18 1*5:2*1*1*   633  *8* E SDK     : <2016-12-18 1*5:2*> [ERR] SDK: UE-SeC 2016-12-18 1*5:2*1*1* Level[ERR] magic[21* 10969]:FSM_Tool_LibcAccess ==> call access err path:</mnt/sdcard/sandbox/AnyOfficeSDK/sdk/cffb628ad277b3e98d6e9ae9dceca2a7_*ic*t*>, errno:<2>
+12-18 1*2*  1795  1809 D HwPhoneWindowManager: Transact:setSystemUIColor to status bar service
+12-18 1*8*  1795  2381 I PowerManager_screenOn: PowerManagerService goToSleepNoUpdateLocked: eventTime=1*, reason=4, flags=0, uid=1000
+12-18 1*:0*  3180  3578 I AppManager: check dependency pid: 4690 is depended by pid: 1795
+12-18 11:*1:*  7194  *4 E PushLog2824: Caused by: java.net.SocketException: Connection reset
+12-18 1*  *  * D ConnectivityManager: getMobileDataEnabled()* subId=0*
+12-18 1*:1*   633 *3* E SDK     : <2016-12-18 1*:1*> [ERR] SDK: UE-SeC 2016-12-18 1*:5*1* Level[ERR] magic[*6* 2503]:FSM_OpenFile => [ERROR] fname</mnt/sdcard/sandbox/AnyOfficeSDK/sdk/cffb628ad277b3e98d6e9ae9dceca2a7_*ic*> handle<00000000> err<-1000>
+12-18 1*1*  2883  * I HwSystemManager: PermissionDbVisitor:insertHistoryRecord:HistoryRecord[packageName:com.tencent.mm,permissionType:1*,action:11,dateStartTime:1481990400000,timestamp:14820*34*0*]
+12-18 1*  2852  2852 W ScrimController: startScrimAnimation 0.0 @ com.android.systemui.statusbar.ScrimView{*a* V.ED..*.. ......* 0,0-1080,1920 #7f140* app:id/scrim_*in*}
+12-18 1*:3*  *1*  *1* W WindowDecorActionBar: should not do the transition or the transition anim is null or it is running or the mContainer view is null or mContainer view hasn't been drawn to screen 
+12-18 1*  3218  * I  ctaifs <*>[*][com.android.*]: [*msProvider.query]读取*信数据
+12-18 1*:3*6.*  1046  1125 D hardware_info: hw_info_append_hw_type : device_name = speaker
+12-18 1* W System.err: 	at com.huawei.systemmanager.rainbow.comm.request.Abs*Request.*(Abs*Request.java:*)
+12-18 1*  3218  3218 D QC_RIL_OEM_HOOK: Received Broadcast Intent ACTION_UNSOL_RESPONSE_OEM_HOOK_RAW
+12-18 1*:1*  1795 *32* I ActivityManager_service: New app record ProcessRecord{*:com.huawei.*logupload*0*} thread=android.os.BinderProxy@* pid=* procname=com.huawei.*logupload*
+12-18 1*  2883  *6 I HwSystemManager: HoldService:PHONE_CODE_PERMISSION  is allowed  . packagename =  com.sankuai.meituan*
+12-18 1*  2883  * I HwSystemManager: PermissionDbVisitor:insertHistoryRecord:HistoryRecord[packageName:com.sankuai.meituan*,permissionType:8,action:11,dateStartTime:1481990400000,timestamp:14820*]
+12-18 1*7:4*.4*0 *W DeviceId: galaxy lib host missing meta-data,make sure you know the right way to integrate galaxy
+12-18 1*  2852  2852 I NotificationGroupManager: *ll*
+12-18 1*:08*  1795  3304 E LocSvc_api_v02: I/---> locClientSendReq line 2069 QMI_LOC_*T*S*_REQ_V02
+12-18 14:*  1795 * D HwActivityManagerService: handleANRFilterFIFO,uid = 10113cmd = *
+12-18 1*  2883  * I HwSystemManager: HoldService:locationInfo switch is on . pid = *
+12-18 14:0*9*  5157  5157 I ActivityManager_activity: Reporting idle of ActivityRecord{* token=android.os.BinderProxy@* {com.sankuai.meituanhd/com.sankuai.meituan.search.SearchActivity}} finished=false
+12-18 14:*  1795 * I ActivityManager_activity: Start pausing: ActivityRecord{* u0 com.sankuai.meituanhd/com.*meituan.*se*Activity t393*}
+12-18 1*  1795 * V WindowManager: Skipping AppWindowToken{* token=Token{* ActivityRecord{* u0 com.sankuai.meituan*Activity t*}}} -- going to hide
+12-18 1* D TelephonyManager: getNeighboringCellInfo calling app is com.sankuai.meituan*
+12-18 1*:3*2*.1*  1795  1821 I ActivityManager_activity: windows*e*(): ActivityRecord{*7*0d* u0 com.sankuai.meituan*.activity.MainActivity t*}*
+12-18 14:1*  5157  5157 D test    : sending:{"handlerName":"getRegisteredJsHandler","callbackId":"java_cb_1","data":null}
+12-18 14:1*  5157  5157 I chromium: [INFO:CONSOLE(1)] "Uncaught ReferenceError: WebViewJavascriptBridge is not defined", source:  (1)
+12-18 14:1*  5157  5157 W cr_BindingManager: Cannot call determinedVisibility() - never saw a connection for the pid: 5157
+12-18 14:1*  5157  5157 I chromium: [INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token var", source:  (1)
+12-18 14:*  5994  * wpa_supplicant: *: *
+12-18 14:1*  5994  5994 D wpa_supplicant: wlan0: Control interface command '*'
+12-18 1*  5994  5994 D wpa_supplicant: WPS: attr type=0x10* len=*
+12-18 1*4 *4 D wpa_supplicant: WPS: WFA subelement id=0 len=1
+12-18 14:*:0*  5994  5994 D wpa_supplicant: *IEs - hexdump(len=*): 00 0*3 * 01 08 82 84 8b 96 0c 12 18 24 03 01 0* 0* 00 *01 00 00 * 01 0*0 ...
+12-18 1*  1795  2671 D HwWifiStateMachine: isWifiProEvaluatingAP, connectedConfig = null, selectedConfig = null
+12-18 1*4 *4 D wpa_supplicant: *IEs - hexdump(len=*): 00 0* 54 50 2d 4c 49 4e 4b 5f * 01 08 82 84 8b 96 0c 12 18 24 03 01 0* 0* 00 *...
+12-18 1*00*  * D AccessPointPreference: onBindView linkPlus = true, detailedState = *, noInternet = false, noHandover = false, reason = *, ssid:*
+12-18 1*4:*  1795  * I PackageManager_scan: setComponentEnabledSetting pkg:com.*an*ing*e.*ho*t*, newState:*, flags:1, userId:0, CallingPid:*, CallingUid:10*
+12-18 1*:1*9.*0  1795  * D HwWifiCHRStateManager: reportHwCHRAccessNetworkEventInfoList:ReportReason = *
+12-18 1*:3*  1795  1795 D *Wifi*er*: *Receive* action:*android.net.wifi.STATE_CHANGE
+12-18 1*:3*0.*  1795  2665 D NetdConnector: RCV <- {614 Address *ed fe80::*:a*3*3/64 *a*0 1* 253}
+12-18 1*4*:1*  2852  * I NetworkController.WifiSignalController: *: connected=true,enabled=true,level=4,inetCondition=1,iconGroup=IconGroup(Wi-Fi Icons),activityIn=*e,activityOut=*e,rssi=-6*,lastModified=12-18 0*:3*,isChaged:false,wifiNoInternet=false,ssid="*"
+12-18 1*  1795 * D ProcessCleaner: [aware_mem] process cleaner success pid:*,uid:100*,com.huawei.*,[com.huawei.*],mHasShownUi:false,base,class:6,6,6,6,adj:* is killed
+12-18 14:1*  6673  6* I ChinaUpload*: *
+12-18 1*3*  1795  1795 I TrafficMonitor: count:*,rx_sum:*,tx_sum:*,rxBytes:*,during_ms:200*,rx_speed:*,tx_speed:*,rto:*
+12-18 1*2*:3*  2852  3556 I HwWifiSignalController: wifi handleBroadcast action:android.net.wifi.*_CHANGE*wifi state: mCurrentState.inetCondition:* mCurrentState.level:* mCurrentState.rssi:-* mCurrentState.ssid:* mCurrentState.time:1482041*71* mCurrentState.activityIn:true mCurrentState.activityOut:true mCurrentState.connected:*e mCurrentState.enabled:true mIsWifiCharged:false mIsWifiNoInternet:false
+12-18 1*  1795  * I *Location*rovider*equest* ProviderRequest[O*]
+12-18 1*  2852  2852 I SlideTouchEvent: vel=0.0, MinimumFlingVelocity=150
+12-18 14:15:20.*   633 31870 I SDK     : <2016-12-18 14:15:20> [WARN] SDK: UE-SeC 2016-12-18 14:15:20:* Level[WARN] magic[3362781472 684]:PubEvt_Close Getting a socket[*] from the Socket-table Failed!
+12-18 1*06*  2883  2883 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1527 android.content.ContextWrapper.startService:613 com.huawei.systemmanager.service.InitValueService$ConnectivityBroadcastReceiver.onReceive:100 android.app.LoadedApk$ReceiverDispatcher$Args.run:1218 android.os.Handler.handleCallback:755 
+12-18 15:28:*3*  1795 * D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { act=android.intent.action.VIEW dat=file:///storage/emulated/0/tencent/TMAssistantSDK/Download/com.tencent.mm/1a41cb224d6d4b020176381a7c790891 typ=application/vnd.android.package-archive flg=0x10800000 cmp=com.android.packageinstaller/.PackageInstallerActivity (has extras) }
+12-18 1*:3*  1795 * V InputMethodManagerService: Unspecified window will hide input
+12-18 15:29:1*1  9659  9659 I chromium: [INFO:CONSOLE(1)] "Uncaught ReferenceError: WebViewJavascriptBridge is not defined", source:  (1)
+12-18 15:29:1*.7*  9659  9659 W cr_BindingManager: Cannot call determinedVisibility() - never saw a connection for the pid: 9659
+12-18 15:* 10334 10334 * wpa_supplicant: *
+12-18 15:* 10334 10334 D wpa_supplicant: wlan0: Control interface command '*'
+12-18 15:3* 10334 10334 D wpa_supplicant: WPS: attr type=0x10* len=*
+12-18 15:33:*  9017 10* V SQLiteDatabase: triggerBuildingIndex(): invalid id, return.
+12-18 1* 10334 10334 D wpa_supplicant: WPS: attr type=0x10* len=*
+12-18 15:3*8.* 10334 10334 D wpa_supplicant: random*pool - hexdump(len=*): [REMOVED]
+12-18 15:* 10334 10334 D wpa_supplicant: CTRL-DEBUG: global_ctrl_sock-sendto: sock=16 sndbuf=229376 outq=0 send_len=*
+12-18 1*  2852  2852 I Tile.*ot*Tile: refreshState=*t, *State[,icon=*n*u*l*l*,label=*,labelTint=-1,textChangedDelay=0,contentDescription=null,dualLabelContentDescription=null,minimalContentDescription=null,minimalAccessibilityClassName=null,expandedAccessibilityClassName=null,autoMirrorDrawable=false,disabledByPolicy=false,enforcedAdmin=null*]
+12-18 1*  1795  1809 I PowerManager_screenOn: *waitForAllWindowsDrawn*
+12-18 1*:5*  1795  * I ActivityManager: Start proc 1*9*:com.huawei.* for broadcast com.huawei.*ro*Receiver
+12-18 1*:3*.1* 1*2* 1*2* W System  : ClassLoader referenced unknown path: /system/*app/*Se*/lib/arm64
+12-18 15:3*.10*  1795  2675 D HwGnssLog_GpsRecord: gps engine has stopped, not report sv info, just return!
+12-18 15:36:*.*91* 10334 10334 D wpa_supplicant: IEs - hexdump(len=*): 00 0c *5*5 * 5f 3* 3* 3* 01 08 82 84 *b *6 *24 *48 6c 03 01 0* 2a 01 0*2* 0* ...
+12-18 15:*  1795 * V HwWifiServiceFactory: get AllImpl object = com.android.server.wifi.HwWifiServiceFactoryImpl@c332618
+12-18 15:3* 10334 10334 E wpa_supplicant: bssid=30:fc:68:18:90:ee;freq=2462;level=-9*;flags=11;ssid=TP-LINK_90EE;
+12-18 1*  1795 * I ActivityManager_activity: *: ActivityRecord{* u0 com.android.browser/com.*UCMobile t40*
+12-18 1*6:0*8*  1795 *47 I HwPFWLogger: AppAutoStartupPolicy:prevent start receiver of package com.Qunar for action android.intent.action.USER_PRESENT
+12-18 1*6:0*3*9*3 * W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.stopService:1533 android.content.ContextWrapper.stopService:618 com.huawei.logupload.util.*s$M*Handler.handleMessage:5* android.os.Handler.dispatchMessage:102 android.os.Looper.loop:199 
+12-18 1*20*5  1795  1820 I Bluetooth_framework: BluetoothManagerService:Added *callback: android.bluetooth.IBluetooth*an*ge*Callback$Stub$Proxy@*:true pid = 1*
+12-18 1*  2852  2852 D StatusBar: No peeking: unimportant notification: 0|com.huawei.health|10010|null|10099
+12-18 1*:4*54 *D NetworkSecurityConfig: No Network Security Config specified, using platform default
+12-18 1*:5*   633 * I SDK     : <2016-12-18 1*:5*> [NOTICE] SDK: UE-SeC 2016-12-18 1*:5* Level[NOTICE] magic[* 247]:Send udp detect packet ok when login,id:[*];count:[*]!
+12-18 1*  2852  2852 * *PhoneStatusBar: *No*tification*0|com.sankuai.meituan|2147483647|null|10146
+12-18 1*  2852  2852 I NotificationGroupManager: onEntry*ed*:0|com.sankuai.meituan|2147483647|null|10146, group=0|com.sankuai.meituan|2147483647|null|10146
+12-18 1*0  1795  1825 D HwAmbientLuxFilterAlgo: t=142*0*,BT=142*0*,DT=142*,BT1=142*,DT1=142*,Bn=false,Dn=false,lx=[1.0/142*0*],mLx=1.0,s=5.0,ss=0.0,AuIntervened=false,mProximityState=false,bLux=7.8,dLux=0.0,bLux1=7.8,dLux1=0.0
+12-18 18:2*  1795 *11* I AlarmManager: set(PendingIntent{*: PendingIntentRecord{* com.sankuai.meituan startService}}) : type=* triggerAtTime=*91* win=*0000 tElapsed=52*1*8* maxElapsed=5*18* interval=*0000 flags=0x8
+12-18 18:*  1795 * I ActivityManager_service: New app record ProcessRecord{1* 2*:com.sankuai.meituan:dppushservice/u0a146} thread=android.os.BinderProxy@d* pid=2* procname=com.sankuai.meituan:dppushservice
+12-18 1*26*  1046  *04* I APM_AudioPolicyManager: getOutput() device *, stream *, samplingRate 0, format 0, channelMask 3, flags 0
+�A�X X���D� F(�  �` � P  @   �70�    �0 d� �P@5�эXl�m�)zP#   �   �P  @�
+$��(0�p�  P    Q<x�E
+$��E!@2zh�F �Dc0          @                              �0 �                        c           

@@ -1,0 +1,88 @@
+Using **LogLite-b** compress and decompress **Apache.log**
+compression_rate: 0.09064
+compression_speed: 169.072
+decompression_speed: 360.438
+
+Using **LogLite-B** compress and decompress **Apache.log**
+compression_rate: 0.115456
+compression_speed: 81.452
+decompression_speed: 368.819
+
+Using **LogLite-BZ** compress and decompress **Apache.log**
+compression_rate: 0.042891904
+compression_speed: 76.47173975893288
+decompression_speed: 349.97953736792596
+
+Using **LogLite-BL** compress and decompress **Apache.log**
+compression_rate: 0.034590617600000005
+compression_speed: 33.167919175432026
+decompression_speed: 213.03269750808968
+
+Using **PBC** compress and decompress **Apache.log**
+compression_rate: 0.181924
+compression_speed: 45.9927
+decompression_speed: 996.521
+
+Using **PBC-F** compress and decompress **Apache.log**
+compression_rate: 0.10976657426000001
+compression_speed: 43.39543774500686
+decompression_speed: 523.7849559238031
+
+Using **PBC-Z** compress and decompress **Apache.log**
+compression_rate: 0.0382222324
+compression_speed: 44.294029460786966
+decompression_speed: 813.2324668455603
+
+Using **PBC-L** compress and decompress **Apache.log**
+compression_rate: 0.026742828
+compression_speed: 22.115749433997113
+decompression_speed: 356.2698069499119
+
+Using **FSST** compress and decompress **Apache.log**
+compression_rate: 0.381222
+compression_speed: 304.367
+decompression_speed: 892.636
+
+Using **LZ4-d** compress and decompress **Apache.log**
+compression_rate: 0.349871
+compression_speed: 27.2378
+decompression_speed: 864.112
+
+Using **Zstd-d** compress and decompress **Apache.log**
+compression_rate: 0.428558
+compression_speed: 7.26272
+decompression_speed: 328.538
+
+Using **LZ4** compress and decompress **Apache.log**
+compression_rate: 0.08839999999999999
+compression_speed: 1351.61
+decompression_speed: 4815.37
+
+Using **Zstd** compress and decompress **Apache.log**
+compression_rate: 0.0526
+compression_speed: 856.52
+decompression_speed: 2280.56
+
+Using **LZMA** compress and decompress **Apache.log**
+compression_rate: 0.0397
+compression_speed: 14.62
+decompression_speed: 407.01
+
+Using **LogReducer** compress and decompress **Apache.log**
+compression_rate: 0.022412145464571185
+compression_speed: 2.495276787583949
+decompression_speed: 6.932155090468766
+
+Using **LogShrink** compress and decompress **Apache.log**
+compression_ratio: 0.016638381418255632
+compression_speed: 1.064434229850769
+decompression_speed: 3.0624241884879346
+
+Using **LogGrep-L** compress **Apache.log**
+compression_rate: 0.02276768364345245
+compression_speed: 7.637362265597321
+
+Using **LogGrep-Z** compress **Apache.log**
+compression_rate: 0.026564698991953857
+compression_speed: 33.74414670122634
+
