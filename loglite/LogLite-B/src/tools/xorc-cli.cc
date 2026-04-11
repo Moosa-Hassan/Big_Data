@@ -127,17 +127,19 @@ int main(int argc, const char *argv[])
         std::cout << "compressed output file path:" << config.com_output_path << std::endl;
 
         std::string all_data;
+        // load whole file as a string
         XORC::read_string_from_file(all_data, config.file_path);
 
         boost::dynamic_bitset<> output_data(all_data.size() * 8);
         uint64_t len_output_data = 0;
 
         std::vector<std::string> split_all_data;
-
+        // convets the string into a bitstream
         std::istringstream stream(all_data);
         std::string token;
 
         int line_count = 0;
+        // gets all lines in the stream
         while (std::getline(stream, token, '\n'))
         {
             if (!token.empty() && token.back() == '\r')

@@ -15,3 +15,6 @@ Week 2 : Improve and optimize the Engine
         - Visualization should be made here now.
 
 Week 3 : Just improve the engine furthur and documentation. For now will do whatever was left from week 2.
+
+
+loglite.py : 

@@ -76,7 +76,7 @@ namespace XORC
 
             // int i = 0;
             for (int j = this->window[len_single_data].size() - 1; j >= 0; --j)
-            {
+            {// finding best match in a window
 
                 XORC::bitwiseXor(single_data, this->window[len_single_data][j], xor_result);
 
