@@ -1,13 +1,45 @@
 Citations
-
+Have to include the following
 LogHub : 
 Jieming Zhu, Shilin He, Pinjia He, Jinyang Liu, Michael R. Lyu. Loghub: A Large Collection of System Log Datasets for AI-driven Log Analytics. IEEE International Symposium on Software Reliability Engineering (ISSRE), 2023.
 
+
+How the compressed logs are stored
+
+Raw String not compressed
+┌─────┬──────────────────┬────────────────────────────────────┐
+│  0  │  length (15 bits)│  raw bytes (length × 8 bits)       │
+└─────┴──────────────────┴────────────────────────────────────┘
+0 indicates that the string has not been compressed.
+length indicates what is the length of the whole string.
+raw bytes is just the string in bitstream.
+
+If a log is compressed:
+┌─────┬─────────────────────┬──────────────────────┬──────────────────────────────────┐
+│  1  │  window_id (3 bits) │  rle_length (13 bits)│  RLE delta payload               │
+└─────┴─────────────────────┴──────────────────────┴──────────────────────────────────┘
+       where each chunk of RLE payload is either:
+       ┌───┬──────────────┐     ┌───┬──────────────┐
+       │ 0 │ count 8 bits │  or │ 1 │ byte  8 bits │
+       └───┴──────────────┘     └───┴──────────────┘
+
+1 indicates the log is compressed.
+window_id shows which template in window[len of log] was used to compress the log
+rle_length is the length of the whole rle encoded bitstring
+rle delta payload is a contigous 8 bit blocks of either count or byte
+count means these bits are same as template
+byte means these bits are different from template so decode these
+
+
 Week 1:  Establish and validate the pipline.
         - implemend the keyword_search_loglite_binary function so that we can query compressed data.
+                : Problem in here is that since compressed logs are stored contigously so we will have to read 
+                all compressed logs 
         - Select 2-3 datasets and devise simple queries to validate weather our engine is working
         - Store the results and visualize them optionally (not necessary at this week)
         - Use time function to measure the performance
+
+
 
 Week 2 : Improve and optimize the Engine
         - Build support for more complex queries 
