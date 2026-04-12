@@ -31,13 +31,52 @@ count means these bits are same as template
 byte means these bits are different from template so decode these
 
 
-Week 1:  Establish and validate the pipline.
-        - implemend the keyword_search_loglite_binary function so that we can query compressed data.
+Ok whatever we do in week 1 is our submission for the deliverable on 20. Point 1 has been done by me and Im currently on modifying loglite
+to get better control and results. Im currently exploring how to aleviate the problems listed under my point.
+Note that main.ipynb has some initial work which we can use to do the tasks above, but final version of the engine has not been made yet. 
+It will probably be in our next deliverable.
+
+Ive structured the duties into 4 points for 4 menbers. Each point left should take 2-3 days from my estinmate. 
+I read the template a few days back and we just have to show some progress so I don't think we need a correct functional version at this stag
+The points are structured such that there is little deoendancy between them. Point 2 has some functions from point 1 (listed below)
+which they will use to query. Point 3 would have queries as functions from point 2. point 4 is entorely seperate.
+Ive adpoted a function interface so that everyone can work on their part parrelly and just call functions from their previous dependant parts.
+
+Week 1:  Establish and validate the pipline. 
+        1- implemend the keyword_search_loglite_binary function so that we can query compressed data. : Moosa
                 : Problem in here is that since compressed logs are stored contigously so we will have to read 
-                all compressed logs 
-        - Select 2-3 datasets and devise simple queries to validate weather our engine is working
-        - Store the results and visualize them optionally (not necessary at this week)
-        - Use time function to measure the performance
+                all compressed logs. 
+                : L window also needs to be updated to decomress correctly.
+
+        2- Select 3-5 datasets and devise simple queries to validate how good our engine is
+                : We need to select 3-5 more datasets from dataset/Loghub directory other than the linux one.
+                : these need to be be distinct from each other (AL,NDL). See the table in the loglite paper to select the datasets
+                : You will have to make queries on the datsets which we can test (do keyword search ones)
+                : make compressed bin files for the datasets. (you can see documentation on compressing in loglite's readme)
+                : You just have to find queries which will tell how good/bad our model is performing
+                : You will need to do execute every query made above on three modes
+                        1- first decompress the log binary (instuctions in loglite readme) and perform on that
+                        2- query performed with the function keyword_search_loglite_binary_full_decompression() 
+                                (This decompresses the data but only stores matched strings)
+                        3- query performed with keyword_search_loglite_binary_minor_optimization function
+                : provide each query in a function with the interface (mode_chosen, dataset)
+
+
+        3- Store the results and visualize them optionally:
+                : call the query functions with the following interface (mode_chosen, dataset)
+                : With the results above you will first have to store the results in a data structure 
+                : Make precision, recall, accuracy, f1 score calculations with the above queries. call the query functions
+                : between the three modes listed above see memory usage / cpu usage and other usages we defined in proposal
+                : visualize these results with graphs
+
+        4- Analysing loglite
+                : So we will be modifying the loglite framework so we need to keep a baseline of how the 
+                        orignal published model is performing 
+                : you will need to clone the repo (https://github.com/benzhaotang/LogLite) as changes have been made to the copy in this repo.
+                : You will need to analayse the following
+                        1- resources each component of loglite takes in both compression and decompresses
+                        2- analayse which component we can reduce the resources used. (for now Im just not decompressing some lines)
+                        3- make an interface with which we can test our modified loglite performnace against the orignal.
 
 
 
