@@ -2,11 +2,15 @@
 
 namespace XORC
 {
-
+    // Pre-built vectors of zero bytes used by the SIMD routines
+    // when counting matches or replacing '\0' bytes.
     static __m256i zero_vec32 = _mm256_set1_epi8('\0');
 
     static __m128i zero_vec16 = _mm_set1_epi8('\0');
 
+    // Helper: pack a vector<char> into a bitset (LSB-first per byte).
+    // This is only used by some experimental / unused paths and is
+    // not part of the main LogLite-B format.
     static boost::dynamic_bitset<> vectorCharToBitset(const std::vector<char> &data)
     {
         boost::dynamic_bitset<> bitset(data.size() * 8);
@@ -25,6 +29,8 @@ namespace XORC
         return bitset;
     }
 
+    // Helper: unpack a bitset (LSB-first per byte) back into chars.
+    // Again, this is not used by the production encoder/decoder.
     static std::vector<char> bitsetToVectorChar(const boost::dynamic_bitset<> &bitset)
     {
 
@@ -46,6 +52,9 @@ namespace XORC
         return data;
     }
 
+    // Write a fixed-width unsigned integer into the output bitset.
+    // Bits are stored LSB-first so that the decoder can reconstruct
+    // the value with the same convention.
     static void integerToBitset(size_t value, boost::dynamic_bitset<> &output_data, uint64_t &len_output_data, size_t bit_count = STREAM_ENCODER_COUNT)
     {
         for (size_t i = 0; i < bit_count; ++i)
@@ -63,6 +72,9 @@ namespace XORC
 
         if (this->window.find(len_single_data) != this->window.end())
         {
+            // We already have templates of this length in the window.
+            // Try each template (from newest to oldest), pick the one
+            // that gives the sparsest XOR mask, and then RLE-encode it.
             std::string xor_result;
             xor_result.resize(len_single_data);
 
@@ -74,7 +86,6 @@ namespace XORC
             int count = 0;
             float tem_rate;
 
-            // int i = 0;
             for (int j = this->window[len_single_data].size() - 1; j >= 0; --j)
             {// finding best match in a window
 
@@ -84,6 +95,8 @@ namespace XORC
 
                 size_t i = 0;
 
+                // Count how many bytes in the XOR result are zero using
+                // SIMD equality comparisons and a popcount over the mask.
                 for (; i + simd_width32 <= len_single_data; i += simd_width32)
                 {
 
@@ -94,6 +107,7 @@ namespace XORC
                     count += _mm_popcnt_u32(_mm256_movemask_epi8(result));
                 }
 
+                // Handle any remaining bytes that did not fit into SIMD.
                 for (; i < len_single_data; ++i)
                 {
                     if (xor_result[i] == '\0')
@@ -117,20 +131,25 @@ namespace XORC
                 }
             }
 
+            // Flag bit 1: this line is stored as (template index + RLE XOR).
             output_data[len_output_data++] = 1;
 
             integerToBitset(min_index, output_data, len_output_data, EACH_WINDOW_SIZE_COUNT);
 
+            // Reserve STREAM_ENCODER_COUNT bits for the length of the
+            // RLE-encoded XOR mask; we fill them after encoding.
             size_t tem_index = len_output_data;
             len_output_data += STREAM_ENCODER_COUNT;
 
             size_t len_xor_rle_bitset = XORC::runLengthEncodeString(min_xor_result, output_data, len_output_data, single_data);
 
+            // Now backfill the length bits we reserved above.
             for (size_t i = 0; i < STREAM_ENCODER_COUNT; ++i)
             {
                 output_data[tem_index + i] = (len_xor_rle_bitset >> i) & 1;
             }
 
+            // Update the L-window with the current line as a new template.
             if (this->window[len_single_data].size() < EACH_WINDOW_SIZE)
             {
                 this->window[len_single_data].push_back(single_data);
@@ -143,6 +162,7 @@ namespace XORC
         }
         else if (len_single_data >= MAX_LEN || len_single_data == 0)
         {
+            // Very long or empty line: store it raw with flag bit 0.
             output_data[len_output_data++] = 0;
 
             integerToBitset(len_single_data, output_data, len_output_data, ORIGINAL_LENGTH_COUNT);
@@ -157,6 +177,8 @@ namespace XORC
         }
         else
         {
+            // First time we see this length: initialise a new deque
+            // in the window and store the line raw.
             std::deque<std::string> newDeque;
             newDeque.push_back(single_data);
             this->window[len_single_data] = newDeque;
@@ -175,6 +197,8 @@ namespace XORC
         }
     }
 
+    // Decode a sequence of bits (LSB-first per byte) into a std::string.
+    // This is used when a line was stored "raw" in the bitstream.
     static std::string bitsetToString(const boost::dynamic_bitset<> &bitset)
     {
 
@@ -197,6 +221,9 @@ namespace XORC
         return data;
     }
 
+    // Given an XOR mask and its template pattern, fill in any '\0'
+    // bytes in xor_result with the corresponding bytes from pattern.
+    // After this pass, xor_result holds the reconstructed plaintext line.
     static void simdReplaceNullCharacters(std::string &xor_result, const std::string &pattern)
     {
         size_t len = xor_result.size();
@@ -248,7 +275,7 @@ namespace XORC
         xor_result.clear();
         if (isRLE)
         {
-
+            // Path for lines that were encoded as (template index + RLE XOR).
             size_t len_single_data = single_data.size();
             size_t i = 0;
 
@@ -256,6 +283,9 @@ namespace XORC
 
             unsigned char byte = 0;
 
+            // Walk over the RLE-coded XOR mask and rebuild the byte stream:
+            //   tag 1 -> read one literal byte
+            //   tag 0 -> read run length and append that many '\0' bytes
             while (i < len_single_data)
             {
 
@@ -290,14 +320,18 @@ namespace XORC
             }
 
             int len_xor_result = xor_result.size();
+            // Look up the template we referenced during compression.
             std::string &pattern = this->window[len_xor_result][original_length_or_window_id];
 
             simdReplaceNullCharacters(xor_result, pattern);
 
+            // Merge XOR mask and template to get the original line.
             output_data += xor_result;
             output_data += "\n";
             // output_data += "\r\n";
 
+            // Update the L-window with the newly reconstructed line
+            // so it can be used as a template in future records.
             if (this->window[len_xor_result].size() < EACH_WINDOW_SIZE)
             {
                 this->window[len_xor_result].push_back(xor_result);
@@ -310,7 +344,7 @@ namespace XORC
         }
         else
         {
-
+            // Path for raw lines that were written without XOR/RLE.
             std::string tem = bitsetToString(single_data);
             output_data += tem;
             output_data += "\n";

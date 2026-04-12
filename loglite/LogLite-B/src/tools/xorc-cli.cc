@@ -1,3 +1,21 @@
+// xorc-cli.cc
+// -------------
+// This file implements the **command-line front-end** for LogLite-B.
+//
+// It does **not** implement the compression algorithm itself; instead it:
+//   - Parses command-line flags (compress / decompress / test).
+//   - Loads the raw log file into memory.
+//   - Calls `XORC::Stream_Compress::stream_compress` once per line to
+//     build a single global bitstream in a `boost::dynamic_bitset`.
+//   - Writes that bitstream to disk via `write_bitset_to_file`.
+//   - For decompression, reads the bitstream back, splits it into
+//     per-line chunks, and calls `Stream_Compress::stream_decompress`
+//     to reconstruct the original text.
+//
+// In other words: this file wires together I/O + timing + the
+// **per-line** compressor/decompressor implemented in
+// `compress/stream_compress.{h,cc}`.
+
 #include <ctime>
 #include <iostream>
 #include <fstream>
@@ -11,9 +29,25 @@
 #include <stdio.h>
 #include <filesystem>
 
-#include "common/file.h"
-#include "compress/stream_compress.h"
+#include "common/file.h"              // read/write compressed bitsets and plain strings
+#include "compress/stream_compress.h" // Stream_Compress: core LogLite per-line codec
 
+// Simple global configuration object filled by `parseOptions` and used in `main`.
+//
+// Important fields:
+//   - stream_compress / stream_decompress / is_test
+//       control which phases run.
+//   - file_path
+//       path to the raw input log for compression, or compressed file for
+//       decompression (in test mode this is reassigned).
+//   - com_output_path
+//       where the compressed `.lite` bitstream is written.
+//   - decom_output_path
+//       where the fully decompressed text is written when we run
+//       stream decompression.
+//   - window_output_path
+//       optional path where we dump the internal L-window (templates
+//       used by the compressor) after compression.
 static struct config
 {
     bool stream_compress;
@@ -28,6 +62,22 @@ static struct config
 
 } config;
 
+// parseOptions
+// -------------
+// Parses the `xorc-cli` command-line arguments and populates the
+// global `config` structure. This function does not do any I/O or
+// compression; it only sets flags and paths that `main` will use.
+//
+// Expected options (used elsewhere in this file):
+//   --compress             : enable streaming compression
+//   --decompress           : enable streaming decompression
+//   --test                 : run both compression and decompression
+//                            in one invocation
+//   --file-path <path>     : input file (raw log for compress, or
+//                            compressed file in test/decompress mode)
+//   --com-output-path <p>  : compressed bitstream output path
+//   --decom-output-path <p>: decompressed text output path
+//   --window-output-path <p>: optional dump of the final L-window
 static void parseOptions(int argc, const char **argv)
 {
     // Default values
@@ -111,7 +161,7 @@ bool areFilesEqual(const std::string &filePath1, const std::string &filePath2)
 
 int main(int argc, const char *argv[])
 {
-    // Parse command line options
+    // Step 1: parse command-line options into `config`.
     parseOptions(argc, argv);
 
     if (config.is_test)
@@ -119,6 +169,24 @@ int main(int argc, const char *argv[])
         std::cout << "==================Test mode==================" << std::endl;
     }
 
+    // ==========================
+    //  Compression (stream mode)
+    // ==========================
+    //
+    // Enabled when either:
+    //   - user passes `--compress`, or
+    //   - user passes `--test` (run compress + decompress back-to-back).
+    //
+    // High level flow under the hood:
+    //   1) Read the entire raw log into `all_data`.
+    //   2) Split into lines and store them in `split_all_data`.
+    //   3) For each line, call `Stream_Compress::stream_compress`.
+    //      That function:
+    //        - looks up a similar template in the L-window,
+    //        - encodes either raw or XOR+RLE, and
+    //        - appends bits into `output_data`.
+    //   4) After all lines, trim `output_data` to the used bit length
+    //      and write it to disk as a `.lite` file.
     if (config.stream_compress || config.is_test)
     {
 
@@ -127,19 +195,28 @@ int main(int argc, const char *argv[])
         std::cout << "compressed output file path:" << config.com_output_path << std::endl;
 
         std::string all_data;
-        // load whole file as a string
+        // Load the entire raw log file into memory as one big string.
+        // This is the input stream that we will split into individual
+        // log lines and feed into `Stream_Compress::stream_compress`.
         XORC::read_string_from_file(all_data, config.file_path);
 
+        // `output_data` holds the **global compressed bitstream**.
+        // We over-allocate (size ~ original bits) and let the compressor
+        // fill it; actual used length is tracked in `len_output_data`.
         boost::dynamic_bitset<> output_data(all_data.size() * 8);
         uint64_t len_output_data = 0;
 
+        // `split_all_data` holds the log file as **one string per line**.
+        // `Stream_Compress` operates at this granularity: each call
+        // compresses exactly one line.
         std::vector<std::string> split_all_data;
-        // convets the string into a bitstream
         std::istringstream stream(all_data);
         std::string token;
 
         int line_count = 0;
-        // gets all lines in the stream
+        // Split `all_data` into lines on '\n'. Any trailing '\r'
+        // (Windows-style CRLF) is stripped so the compressor always
+        // sees pure log content.
         while (std::getline(stream, token, '\n'))
         {
             if (!token.empty() && token.back() == '\r')
@@ -150,16 +227,28 @@ int main(int argc, const char *argv[])
             ++line_count;
         }
 
+        // Create the LogLite per-line compressor. Internally this
+        // object maintains the L-window (templates) and exposes
+        // `stream_compress` / `stream_decompress`.
         XORC::Stream_Compress *sc = new XORC::Stream_Compress();
 
         clock_t start_time, end_time;
         start_time = clock();
+        // For each raw line, call into LogLite's **core compressor**.
+        // `stream_compress` decides, per line, whether to:
+        //   - store it raw (flag=0 + length + bytes), or
+        //   - encode it as XOR+RLE against a template from the window
+        //     (flag=1 + window id + RLE-encoded mask).
         for (size_t i = 0; i < split_all_data.size(); ++i)
         {
             sc->stream_compress(split_all_data[i], output_data, len_output_data);
         }
         end_time = clock();
 
+        // Trim the global bitset down to the number of bits actually
+        // produced, then persist it using the `file.cc` helper. On
+        // disk, this is stored as blocks of unsigned long + a trailing
+        // `last_block_bits` field.
         output_data.resize(len_output_data);
         XORC::write_bitset_to_file(output_data, config.com_output_path);
 
@@ -167,6 +256,10 @@ int main(int argc, const char *argv[])
                   << line_count
                   << std::endl;
 
+        // Rough compression-ratio accounting in **bits**:
+        //   raw_size1         ~ size of original payload bits
+        //   compressed_size1  ~ size of encoded bits minus per-line
+        //                        length bookkeeping
         int64_t raw_size1 = (all_data.size() - 1 * line_count) * 8;
         int64_t compressed_size1 = len_output_data - line_count * STREAM_ENCODER_COUNT;
         std::cout << "compression rate:"
@@ -178,6 +271,10 @@ int main(int argc, const char *argv[])
                          (static_cast<double>(end_time - start_time) / CLOCKS_PER_SEC)
                   << "MB/s" << std::endl;
 
+        // Optional: dump the **final L-window** used by the compressor.
+        // This is useful for analysis and for building compressed-
+        // domain query engines, since it exposes, per length, the set
+        // of templates that future lines reference.
         if (config.window_output_path)
         {
             std::ofstream ofs(config.window_output_path);
@@ -199,6 +296,21 @@ int main(int argc, const char *argv[])
         delete sc;
     }
 
+    // ============================
+    //  Decompression (stream mode)
+    // ============================
+    //
+    // Enabled when either:
+    //   - user passes `--decompress`, or
+    //   - user passes `--test` (after the compression phase completes).
+    //
+    // High level flow under the hood:
+    //   1) Read the compressed `.lite` file into a global bitset.
+    //   2) Iterate bit-by-bit, reconstructing **per-line** bitsets
+    //      and their metadata (raw vs compressed, length/window id).
+    //   3) For each per-line bitset, call `Stream_Compress::stream_decompress`
+    //      which rebuilds the original text and updates its own L-window.
+    //   4) Concatenate all lines and write them to `decom_output_path`.
     if (config.stream_decompress || config.is_test)
     {
         const char *temp;
@@ -213,14 +325,36 @@ int main(int argc, const char *argv[])
         std::cout << "compressed file path:" << config.file_path << std::endl;
         std::cout << "decompressed output file path:" << config.decom_output_path << std::endl;
 
+        // Load the entire compressed bitstream produced earlier by
+        // `write_bitset_to_file`. This reconstructs the global
+        // `boost::dynamic_bitset` used below.
         boost::dynamic_bitset<> compressed_bitset;
         XORC::read_bitset_from_file(compressed_bitset, config.file_path);
 
+        // We now **parse the global bitstream** into per-line chunks,
+        // mirroring the encoding decisions made in `stream_compress`.
+        // For each line we collect:
+        //   - a boolean flag `isRLE`  (0 = raw, 1 = XOR+RLE compressed)
+        //   - an integer `original_length_or_window_id`
+        //       * if raw: original byte length of the line
+        //       * if compressed: index into the L-window of templates
+        //   - a `boost::dynamic_bitset` holding that line's payload bits
+        //       * raw:  original_length * 8 bits of data
+        //       * compressed: RLE-coded XOR mask bits
         std::vector<boost::dynamic_bitset<>> split_compressed_bitset;
         std::vector<bool> isRLE;
         std::vector<int> original_length_or_window_id;
         size_t len_compressed_bitset = compressed_bitset.size();
         size_t i = 0;
+        // Walk the entire compressed bitstream and split it into
+        // per-line records using the same layout as in
+        // `Stream_Compress::stream_compress`:
+        //   - bit 0            : isRLE flag
+        //   - if flag == 0     : ORIGINAL_LENGTH_COUNT bits of length,
+        //                        then `length * 8` bits of raw bytes
+        //   - if flag == 1     : EACH_WINDOW_SIZE_COUNT bits of window id,
+        //                        STREAM_ENCODER_COUNT bits of RLE length,
+        //                        then that many bits of RLE payload
         while (i < len_compressed_bitset)
         {
             if (compressed_bitset[i] == 0)

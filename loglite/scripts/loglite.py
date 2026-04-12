@@ -1,15 +1,35 @@
+"""Top-level driver script for running LogLite-B experiments.
+
+This script:
+    * Runs LogLite-b and LogLite-B on a given dataset using their xorc-cli
+        front-ends in "--test" mode (compress + decompress in one run).
+    * Parses the reported compression rate / speed / decompression speed.
+    * Optionally chains LogLite-B output through lzbench with Zstd or LZMA
+        to get combined "LogLite-BZ" / "LogLite-BL" baselines.
+    * Appends all metrics to ./results/<dataset>.txt so they can be
+        compared across runs and other baselines.
+
+Usage:
+        python loglite.py <dataset_name>
+
+Assumes datasets/<dataset_name> exists and that the C++ binaries and
+lzbench have already been built.
+"""
+
 import os
 import subprocess
 import re
 import sys
 
-# dataset="Apache.log"
-dataset=sys.argv[1]
+# Name of the log file to benchmark, e.g. "Apache.log".
+dataset = sys.argv[1]
 
-logliteB_metrics={}
+# Metrics from the pure LogLite-B run are cached here so we can
+# combine them with downstream lzbench results.
+logliteB_metrics = {}
 
 
-def save_metrics_to_file(metrics, description ,filename=f"./results/{dataset}.txt"):
+def save_metrics_to_file(metrics, description, filename=f"./results/{dataset}.txt"):
     try:
         with open(filename, 'a') as f:
             f.write(description)
@@ -22,17 +42,17 @@ def save_metrics_to_file(metrics, description ,filename=f"./results/{dataset}.tx
         print(f"Error writing to file: {e}")
 
 
-def run_command(command,  description=None, cwd=None, is_LogliteB=False):
+def run_command(command, description=None, cwd=None, is_LogliteB=False):
     if description:
         print(f"Executing: {description}")
     print(f"$ {command}")
     
     try:
-        # Run command and capture output
+        # Run command and capture output from the C++ tool.
         result = subprocess.run(command, shell=True, check=True, 
                               cwd=cwd, capture_output=True, text=True)
         
-        # Parse the output
+        # Parse the stdout printed by xorc-cli into numeric metrics.
         metrics = parse_xorc_output(result.stdout)
         
         if all(v is not None for v in metrics.values()):
@@ -40,7 +60,9 @@ def run_command(command,  description=None, cwd=None, is_LogliteB=False):
             for k, v in metrics.items():
                 print(f"{k}: {v}")
                 if is_LogliteB:
-                    logliteB_metrics[k]=v
+                    # Cache metrics from the pure LogLite-B run so we
+                    # can compute combined numbers for LogLite-BZ/BL.
+                    logliteB_metrics[k] = v
 
             # Save to file
             save_metrics_to_file(metrics,description)
@@ -85,19 +107,22 @@ def run_command_lzbench(command, description=None, cwd=None):
     print(f"$ {command}")
     
     try:
-        # Run command and capture output
+        # Run lzbench and capture its tabular output.
         result = subprocess.run(command, shell=True, check=True, 
                               cwd=cwd, capture_output=True, text=True)
 
         # print(result.stdout)
         
-        # Parse the output
+        # Parse lzbench output (we only look at the third line, which
+        # corresponds to the configured codec) and extract rate/speeds.
         metrics = parse_xorc_output_lzbench(result.stdout)
 
+        # Combine LogLite-B and lzbench metrics to get an end-to-end
+        # picture for two-stage pipelines like LogLite-BZ / LogLite-BL.
         metrics_combined = {}
-        metrics_combined['compression_rate'] =  logliteB_metrics['compression_rate'] * metrics['compression_rate']
-        metrics_combined['compression_speed'] = logliteB_metrics['compression_speed'] * metrics['compression_speed'] / (logliteB_metrics['compression_speed']*logliteB_metrics['compression_rate']+metrics['compression_speed'])
-        metrics_combined['decompression_speed'] = logliteB_metrics['decompression_speed'] * metrics['decompression_speed'] / (logliteB_metrics['decompression_speed']*logliteB_metrics['compression_rate']+metrics['decompression_speed'])
+        metrics_combined['compression_rate'] = logliteB_metrics['compression_rate'] * metrics['compression_rate']
+        metrics_combined['compression_speed'] = logliteB_metrics['compression_speed'] * metrics['compression_speed'] / (logliteB_metrics['compression_speed'] * logliteB_metrics['compression_rate'] + metrics['compression_speed'])
+        metrics_combined['decompression_speed'] = logliteB_metrics['decompression_speed'] * metrics['decompression_speed'] / (logliteB_metrics['decompression_speed'] * logliteB_metrics['compression_rate'] + metrics['decompression_speed'])
         
         if all(v is not None for v in metrics_combined.values()):
             # print("Successfully extracted metrics:")
@@ -124,7 +149,7 @@ def parse_xorc_output_lzbench(output):
     
     parts = [p.strip() for p in zstd_line.split(',')]
     
-    # 提取并转换所需指标
+    # Extract the three metrics we care about from the CSV-like row.
     metrics = {
         'compression_rate': float(parts[5])/100,  
         'compression_speed': float(parts[1]),      
@@ -137,9 +162,9 @@ def parse_xorc_output_lzbench(output):
 loglite_dir_b = "../LogLite-b"
 loglite_dir_B = "../LogLite-B"
 
-input_file_path=f"./datasets/{dataset}"
-compressed_output_file_path=f"./com_output/{dataset}.lite"
-decompressed_output_file_path=f"./decom_output/{dataset}.lite.decom"
+input_file_path = f"./datasets/{dataset}"
+compressed_output_file_path = f"./com_output/{dataset}.lite"
+decompressed_output_file_path = f"./decom_output/{dataset}.lite.decom"
 
 # loglite-b
 command = f"{loglite_dir_b}/src/tools/xorc-cli --test --file-path {input_file_path} --com-output-path {compressed_output_file_path}.b --decom-output-path {decompressed_output_file_path}.b"

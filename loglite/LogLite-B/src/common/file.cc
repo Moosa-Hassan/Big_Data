@@ -3,6 +3,18 @@
 namespace XORC
 {
 
+    // write_bitset_to_file
+    // ---------------------
+    // Serialize a `boost::dynamic_bitset<>` to disk in a compact
+    // block-based representation:
+    //   - First, the bitset is packed into an array of `unsigned long`
+    //     blocks using `boost::to_block_range`.
+    //   - Those blocks are written as raw bytes.
+    //   - Finally, we append a `size_t last_block_bits` value that
+    //     records how many bits of the final block are actually used.
+    //
+    // The decompression path uses `read_bitset_from_file` to reverse
+    // this process and recover the exact bit length.
     void write_bitset_to_file(const boost::dynamic_bitset<> &bitset, const char *filename)
     {
         std::ofstream file(filename, std::ios::binary);
@@ -16,6 +28,9 @@ namespace XORC
 
         file.write(reinterpret_cast<const char *>(blocks.data()), blocks.size() * sizeof(unsigned long));
 
+        // Compute how many bits in the last block are meaningful. If the
+        // bitset size is an exact multiple of the block size, we store
+        // a full-block width here.
         size_t last_block_bits = bitset.size() % (sizeof(unsigned long) * 8);
         if (last_block_bits == 0 && bitset.size() != 0)
         {
@@ -25,6 +40,17 @@ namespace XORC
         file.close();
     }
 
+    // read_bitset_from_file
+    // ----------------------
+    // Reconstruct a `boost::dynamic_bitset<>` from the file produced
+    // by `write_bitset_to_file`.
+    //
+    // Steps:
+    //   1) Read the trailing `last_block_bits` value.
+    //   2) Read all `unsigned long` blocks from the front of the file.
+    //   3) Use `boost::from_block_range` to reconstruct a bitset.
+    //   4) Trim the bitset so that it has exactly the number of bits
+    //      implied by (num_blocks, last_block_bits).
     void read_bitset_from_file(boost::dynamic_bitset<> &bitset, const char *filename)
     {
         std::ifstream file(filename, std::ios::binary);
