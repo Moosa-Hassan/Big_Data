@@ -1,22 +1,5 @@
 # Query Evaluation Subsystem README
 
-This README is the authoritative handoff document for the `query_eval` package.
-It is written for two audiences:
-
-1. Human teammates, especially the person doing part 3.
-2. LLMs or coding agents that need to understand how this project works and how
-   to run the evaluation pipeline without inventing their own workflow.
-
-This document explains:
-- what the overall project is
-- what the research goal is
-- the methodology behind the evaluation
-- what part 1 established
-- what part 2 implemented
-- what part 3 should do next
-- how to run the system from the CLI
-- how to use it from Python or a notebook
-- how to inspect and interpret results
 
 ## 1. Project Summary
 
