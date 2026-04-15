@@ -1,0 +1,4 @@
+mode_name,aggregate_level,cell_count,median_wall_time_ms,median_cpu_time_ms,median_peak_rss_mb,median_match_count,median_tp,median_fp,median_fn,median_precision,median_recall,median_f1,all_cells_exact_set_match
+decompressed_text,suite_summary,4,0.8061044973146636,0.8039999999999992,26.53125,456.5,326.5,0.0,0.0,1.0,1.0,1.0,True
+full_decompression,suite_summary,4,41.355500001373,40.926,26.7890625,456.5,326.5,0.0,0.0,1.0,1.0,1.0,True
+minor_optimization,suite_summary,4,28.17768699969747,27.901,26.71875,456.5,326.5,0.0,0.0,1.0,1.0,1.0,False

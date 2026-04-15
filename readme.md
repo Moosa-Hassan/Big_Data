@@ -15,6 +15,20 @@ Top-Level Layout
 
 At the root of this repository you will find:
 
+- `query_eval/`
+	The research-grade evaluation subsystem for part 2 and onward. This is the
+	current authoritative execution and reporting layer for multi-dataset query
+	evaluation.
+	- Start here for the modern workflow:
+		- `query_eval/README.md` – detailed handoff guide for humans and LLMs
+		- `query_eval/cli.py` – reproducible CLI entrypoints
+		- `query_eval/queries.py` – note-compatible `(mode_chosen, dataset)` query API
+
+- `part3_starter.ipynb`
+	A lightweight analysis notebook for the part-3 teammate. It reads the
+	generated `evaluation_results/query_eval/...` CSV outputs and produces
+	first-pass tables and plots without re-implementing the execution pipeline.
+
 - `main.ipynb`  
 	The main experimentation notebook. It:
 	- Locates a target log file in `dataset/loghub` (e.g., `Linux_2k.log`).
@@ -41,6 +55,20 @@ At the root of this repository you will find:
 
 - `notes.txt`  
 	Scratch notes and TODOs related to experiments, observations, and future ideas. Not required for running the pipeline.
+
+Recommended Modern Workflow
+---------------------------
+
+If you are continuing the project after the original notebook prototype, prefer
+the `query_eval/` subsystem rather than adding new execution logic to
+`main.ipynb`.
+
+- For detailed project and handoff documentation:
+	- `query_eval/README.md`
+- For reproducible suite execution:
+	- `python3 -m query_eval.cli run-suite ...`
+- For part-3 analysis and first-pass plotting:
+	- `part3_starter.ipynb`
 
 LogLite Subtree
 ----------------
@@ -128,4 +156,3 @@ How the Pieces Fit Together
 5. **Run queries**  
 	 - Baseline (uncompressed) queries: run directly over the raw `.log` file using pure Python string search, storing counts and sample lines.
 	 - Compressed-domain queries: operate on the binary `.lite`/`.lite.b` file and/or the window templates to evaluate how much work can be done without fully materializing all logs.
-

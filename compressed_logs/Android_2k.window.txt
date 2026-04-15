@@ -1,0 +1,862 @@
+len=136
+03-17 16:16:07.071  1702  8671 D ActivityManager: getRecentTasks: topActivity=ComponentInfo{com.tencent.mm/com.tencent.mm.ui.LauncherUI}
+03-17 16:16:07.084  1702  3694 D ActivityManager: getRecentTasks: topActivity=ComponentInfo{com.tencent.mm/com.tencent.mm.ui.LauncherUI}
+---
+len=213
+03-17 16:16:06.785  1702  3137 W ActivityManager: startActivity called from non-Activity context; forcing Intent.FLAG_ACTIVITY_NEW_TASK for: Intent { flg=0x24000000 cmp=com.tencent.mm/.ui.LauncherUI (has extras) }
+---
+len=115
+03-17 16:16:04.774  1702  2107 I NotificationManager: Marking notification as seen 0|com.tencent.mm|4097|null|10112
+---
+len=73
+03-17 16:16:02.899  1702  2121 D WifiController: DefaultState what=155652
+---
+len=101
+03-17 16:16:02.899  1702  1702 D WifiService: onReceive, action:android.intent.action.BATTERY_CHANGED
+03-17 16:16:04.647  2227  2227 I PhoneStatusBar: addNotification key=0|com.tencent.mm|4097|null|10112
+---
+len=135
+03-17 16:15:49.527  1702  1702 I NotificationManager: cancelNotification,cancelNotificationLocked,callingUid = 10111,callingPid = 28601
+---
+len=656
+03-17 16:15:48.334  1702 17622 I WindowManager: Destroying surface Surface(name=com.example.android.notepad/com.example.android.notepad.NoteEditor) called by com.android.server.wm.WindowStateAnimator.destroySurface:2060 com.android.server.wm.WindowStateAnimator.destroySurfaceLocked:913 com.android.server.wm.WindowState.destroyOrSaveSurface:2201 com.android.server.wm.AppWindowToken.destroySurfaces:374 com.android.server.wm.AppWindowToken.notifyAppStopped:400 com.android.server.wm.WindowManagerService.notifyAppStopped:4869 com.android.server.am.ActivityStack.activityStoppedLocked:1393 com.android.server.am.ActivityManagerService.activityStopped:7690 
+03-17 16:15:48.336  1702 17622 I WindowManager: Destroying surface Surface(name=com.example.android.notepad/com.example.android.notepad.NoteEditor) called by com.android.server.wm.WindowStateAnimator.destroySurface:2060 com.android.server.wm.WindowStateAnimator.destroySurfaceLocked:913 com.android.server.wm.WindowState.destroyOrSaveSurface:2201 com.android.server.wm.AppWindowToken.destroySurfaces:374 com.android.server.wm.AppWindowToken.notifyAppStopped:400 com.android.server.wm.WindowManagerService.notifyAppStopped:4869 com.android.server.am.ActivityStack.activityStoppedLocked:1393 com.android.server.am.ActivityManagerService.activityStopped:7690 
+---
+len=596
+03-17 16:15:42.580  1702  1815 I WindowManager: Destroying surface Surface(name=PopupWindow:6ac503e) called by com.android.server.wm.WindowStateAnimator.destroySurface:2060 com.android.server.wm.WindowStateAnimator.destroySurfaceLocked:913 com.android.server.wm.WindowState.destroyOrSaveSurface:2201 com.android.server.wm.AppWindowToken.destroySurfaces:374 com.android.server.wm.WindowStateAnimator.finishExit:590 com.android.server.wm.WindowStateAnimator.stepAnimationLocked:516 com.android.server.wm.WindowAnimator.updateWindowsLocked:311 com.android.server.wm.WindowAnimator.animateLocked:738 
+---
+len=144
+03-17 16:15:36.922  1702  2113 I ActivityManager: ActivityRecord info: ActivityInfo{f39182 com.example.android.notepad.NotePadActivity}, euid: 0
+---
+len=245
+03-17 16:15:36.921  1702  2113 I ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.example.android.notepad/.NotePadActivity bnds=[8,820][184,1011]} from uid 10057 on display 0
+---
+len=247
+03-17 16:15:33.419  1702  8290 I NotificationManager: enqueueNotificationInternal: pkg=com.tencent.mobileqq id=121 notification=Notification(pri=1 contentView=null vibrate=[100] sound=null tick defaults=0x0 flags=0x11 color=0x00000000 vis=PRIVATE)
+---
+len=130
+03-17 16:15:26.277  2227  2227 I PhoneStatusBar: animateCollapsePanels:flags=0, force=false, delayed=false, mExpandedVisible=false
+03-17 16:15:47.622  2227  2227 I PhoneStatusBar: animateCollapsePanels:flags=0, force=false, delayed=false, mExpandedVisible=false
+03-17 16:15:48.718  2227  2227 I PhoneStatusBar: animateCollapsePanels:flags=0, force=false, delayed=false, mExpandedVisible=false
+03-17 16:15:49.568  2227  2227 I PhoneStatusBar: animateCollapsePanels:flags=0, force=false, delayed=false, mExpandedVisible=false
+03-17 16:16:04.189  2227  2227 I PhoneStatusBar: animateCollapsePanels:flags=0, force=false, delayed=false, mExpandedVisible=false
+03-17 16:16:06.773  1702  3137 I ActivityManager: ActivityRecord info: ActivityInfo{80c2e70 com.tencent.mm.ui.LauncherUI}, euid: 0
+---
+len=614
+03-17 16:15:25.448  1702  1815 I WindowManager: Destroying surface Surface(name=InputMethod) called by com.android.server.wm.WindowStateAnimator.destroySurface:2060 com.android.server.wm.WindowStateAnimator.destroySurfaceLocked:913 com.android.server.wm.WindowState.destroyOrSaveSurface:2201 com.android.server.wm.WindowSurfacePlacer.performSurfacePlacementInner:517 com.android.server.wm.WindowSurfacePlacer.performSurfacePlacementLoop:291 com.android.server.wm.WindowSurfacePlacer.performSurfacePlacement:233 com.android.server.wm.WindowManagerService$H.handleMessage:8670 android.os.Handler.dispatchMessage:105 
+03-17 16:15:46.914  1702  1815 I WindowManager: Destroying surface Surface(name=InputMethod) called by com.android.server.wm.WindowStateAnimator.destroySurface:2060 com.android.server.wm.WindowStateAnimator.destroySurfaceLocked:913 com.android.server.wm.WindowState.destroyOrSaveSurface:2201 com.android.server.wm.WindowSurfacePlacer.performSurfacePlacementInner:517 com.android.server.wm.WindowSurfacePlacer.performSurfacePlacementLoop:291 com.android.server.wm.WindowSurfacePlacer.performSurfacePlacement:233 com.android.server.wm.WindowManagerService$H.handleMessage:8670 android.os.Handler.dispatchMessage:105 
+03-17 16:16:01.319  1702  1815 I WindowManager: Destroying surface Surface(name=InputMethod) called by com.android.server.wm.WindowStateAnimator.destroySurface:2060 com.android.server.wm.WindowStateAnimator.destroySurfaceLocked:913 com.android.server.wm.WindowState.destroyOrSaveSurface:2201 com.android.server.wm.WindowSurfacePlacer.performSurfacePlacementInner:517 com.android.server.wm.WindowSurfacePlacer.performSurfacePlacementLoop:291 com.android.server.wm.WindowSurfacePlacer.performSurfacePlacement:233 com.android.server.wm.WindowManagerService$H.handleMessage:8670 android.os.Handler.dispatchMessage:105 
+---
+len=167
+03-17 16:15:20.995  1702  1765 I ActivityManager: new Process app=ProcessRecord{6eaaf00 0:com.tencent.mobileqq:qzone/u0a111}, name: com.tencent.mobileqq:qzone, euid: 0
+---
+len=176
+03-17 16:15:19.993  1702  2644 W ActivityManager: Scheduling restart of crashed service com.tencent.mobileqq/cooperation.qzone.remote.logic.QzoneWebPluginProxyService in 1000ms
+---
+len=90
+03-17 16:15:18.859 28601 12278 I MediaPlayer: [HSM] stayAwake false uid: 10111, pid: 28601
+---
+len=215
+03-17 16:15:03.502  1702  2639 W ActivityManager: Unable to start service Intent { act=com.tencent.android.tpush.action.keepalive cmp=com.qqgame.hlddz/com.tencent.android.tpush.service.XGPushService } U=0: not found
+---
+len=168
+03-17 16:15:00.967  1702  3137 I AlarmManager: remove(PendingIntent{e4e2534: PendingIntentRecord{e204f60 com.android.phone broadcastIntent}}) changed bounds; rebatching
+---
+len=117
+03-17 16:14:27.059  1702 17621 I ActivityManager: Killing 23484:com.android.calendar/u0a13 (adj 906): empty for 1810s
+---
+len=221
+03-17 16:14:27.045  1702  2096 I AlarmManager: sending alarm Alarm{19069ff type 3 when 509169377 PendingIntent{50303cc: PendingIntentRecord{e204f60 com.android.phone broadcastIntent}}},repeatInterval = 0,listenerTag =null
+03-17 16:16:05.512  1702  2096 I AlarmManager: sending alarm Alarm{2741459 type 3 when 509267844 PendingIntent{f75f81e: PendingIntentRecord{e204f60 com.android.phone broadcastIntent}}},repeatInterval = 0,listenerTag =null
+---
+len=631
+03-17 16:14:04.319  1702  2555 I WindowManager: Destroying surface Surface(name=PopupWindow:9b04807) called by com.android.server.wm.WindowStateAnimator.destroySurface:2060 com.android.server.wm.WindowStateAnimator.destroySurfaceLocked:913 com.android.server.wm.WindowState.removeLocked:1554 com.android.server.wm.WindowManagerService.removeWindowInnerLocked:2739 com.android.server.wm.WindowManagerService.removeWindowInnerLocked:2702 com.android.server.wm.WindowManagerService.removeWindowLocked:2691 com.android.server.wm.WindowManagerService.removeWindowLocked:2560 com.android.server.wm.WindowManagerService.removeWindow:2555 
+03-17 16:14:06.107  1702  1737 I WindowManager: Destroying surface Surface(name=PopupWindow:d76a91d) called by com.android.server.wm.WindowStateAnimator.destroySurface:2060 com.android.server.wm.WindowStateAnimator.destroySurfaceLocked:913 com.android.server.wm.WindowState.removeLocked:1554 com.android.server.wm.WindowManagerService.removeWindowInnerLocked:2739 com.android.server.wm.WindowManagerService.removeWindowInnerLocked:2702 com.android.server.wm.WindowManagerService.removeWindowLocked:2691 com.android.server.wm.WindowManagerService.removeWindowLocked:2560 com.android.server.wm.WindowManagerService.removeWindow:2555 
+03-17 16:14:06.127  1702  8671 I WindowManager: Destroying surface Surface(name=PopupWindow:9b04807) called by com.android.server.wm.WindowStateAnimator.destroySurface:2060 com.android.server.wm.WindowStateAnimator.destroySurfaceLocked:913 com.android.server.wm.WindowState.removeLocked:1554 com.android.server.wm.WindowManagerService.removeWindowInnerLocked:2739 com.android.server.wm.WindowManagerService.removeWindowInnerLocked:2702 com.android.server.wm.WindowManagerService.removeWindowLocked:2691 com.android.server.wm.WindowManagerService.removeWindowLocked:2560 com.android.server.wm.WindowManagerService.removeWindow:2555 
+03-17 16:14:15.072  1702  2395 I WindowManager: Destroying surface Surface(name=PopupWindow:d76a91d) called by com.android.server.wm.WindowStateAnimator.destroySurface:2060 com.android.server.wm.WindowStateAnimator.destroySurfaceLocked:913 com.android.server.wm.WindowState.removeLocked:1554 com.android.server.wm.WindowManagerService.removeWindowInnerLocked:2739 com.android.server.wm.WindowManagerService.removeWindowInnerLocked:2702 com.android.server.wm.WindowManagerService.removeWindowLocked:2691 com.android.server.wm.WindowManagerService.removeWindowLocked:2560 com.android.server.wm.WindowManagerService.removeWindow:2555 
+03-17 16:14:15.087  1702  2555 I WindowManager: Destroying surface Surface(name=PopupWindow:9b04807) called by com.android.server.wm.WindowStateAnimator.destroySurface:2060 com.android.server.wm.WindowStateAnimator.destroySurfaceLocked:913 com.android.server.wm.WindowState.removeLocked:1554 com.android.server.wm.WindowManagerService.removeWindowInnerLocked:2739 com.android.server.wm.WindowManagerService.removeWindowInnerLocked:2702 com.android.server.wm.WindowManagerService.removeWindowLocked:2691 com.android.server.wm.WindowManagerService.removeWindowLocked:2560 com.android.server.wm.WindowManagerService.removeWindow:2555 
+03-17 16:14:22.516  1702 27357 I WindowManager: Destroying surface Surface(name=PopupWindow:9b04807) called by com.android.server.wm.WindowStateAnimator.destroySurface:2060 com.android.server.wm.WindowStateAnimator.destroySurfaceLocked:913 com.android.server.wm.WindowState.removeLocked:1554 com.android.server.wm.WindowManagerService.removeWindowInnerLocked:2739 com.android.server.wm.WindowManagerService.removeWindowInnerLocked:2702 com.android.server.wm.WindowManagerService.removeWindowLocked:2691 com.android.server.wm.WindowManagerService.removeWindowLocked:2560 com.android.server.wm.WindowManagerService.removeWindow:2555 
+03-17 16:16:00.249  1702  8290 I WindowManager: Destroying surface Surface(name=PopupWindow:9b04807) called by com.android.server.wm.WindowStateAnimator.destroySurface:2060 com.android.server.wm.WindowStateAnimator.destroySurfaceLocked:913 com.android.server.wm.WindowState.removeLocked:1554 com.android.server.wm.WindowManagerService.removeWindowInnerLocked:2739 com.android.server.wm.WindowManagerService.removeWindowInnerLocked:2702 com.android.server.wm.WindowManagerService.removeWindowLocked:2691 com.android.server.wm.WindowManagerService.removeWindowLocked:2560 com.android.server.wm.WindowManagerService.removeWindow:2555 
+---
+len=85
+03-17 16:14:00.003  1702  1702 V AlarmManager: Received TIME_TICK alarm; rescheduling
+03-17 16:15:00.005  1702  1702 V AlarmManager: Received TIME_TICK alarm; rescheduling
+03-17 16:15:49.595  2626  2808 I PhoneInterfaceManager: shouldBlockLocation  ret:true
+03-17 16:15:51.189  2626  3066 I PhoneInterfaceManager: shouldBlockLocation  ret:true
+03-17 16:15:51.199  2626  2643 I PhoneInterfaceManager: shouldBlockLocation  ret:true
+03-17 16:15:52.569  2626  2838 I PhoneInterfaceManager: shouldBlockLocation  ret:true
+03-17 16:16:00.005  1702  1702 V AlarmManager: Received TIME_TICK alarm; rescheduling
+---
+len=216
+03-17 16:14:00.001  1702  2096 I AlarmManager: sending alarm Alarm{aa90550 type 3 when 509142332 PendingIntent{1749923: PendingIntentRecord{9600e20 android broadcastIntent}}},repeatInterval = 0,listenerTag =time_tick
+03-17 16:15:00.001  1702  2096 I AlarmManager: sending alarm Alarm{c1705d3 type 3 when 509202333 PendingIntent{1749923: PendingIntentRecord{9600e20 android broadcastIntent}}},repeatInterval = 0,listenerTag =time_tick
+03-17 16:16:00.001  1702  2096 I AlarmManager: sending alarm Alarm{d764221 type 3 when 509262332 PendingIntent{1749923: PendingIntentRecord{9600e20 android broadcastIntent}}},repeatInterval = 0,listenerTag =time_tick
+---
+len=108
+03-17 16:13:55.937  1702  1737 I ActivityManager: cleanUpApplicationRecordLocked, pid: 12025, restart: false
+03-17 16:14:27.170  1702  1736 I ActivityManager: cleanUpApplicationRecordLocked, pid: 23484, restart: false
+03-17 16:15:19.993  1702  2644 I ActivityManager: cleanUpApplicationRecordLocked, pid: 12236, restart: false
+03-17 16:15:27.830  1702 27365 I ActivityManager: cleanUpApplicationRecordLocked, pid: 13094, restart: false
+---
+len=152
+03-17 16:13:55.791  1702  2153 D PowerManagerService: release:lock=86152250, flg=0x0, tag="handleAudioEvent", name=android", ws=null, uid=1000, pid=1702
+---
+len=147
+03-17 16:13:55.783  1702  2113 D PowerManagerService: acquire lock=219829192, flags=0x1, tag="AudioMix", name=audioserver, ws=null, uid=1041, pid=0
+03-17 16:16:00.338  1702  1737 D PowerManagerService: acquire lock=191063310, flags=0x1, tag="AudioMix", name=audioserver, ws=null, uid=1041, pid=0
+03-17 16:16:00.345  1702  1737 D PowerManagerService: acquire lock=149977903, flags=0x1, tag="AudioMix", name=audioserver, ws=null, uid=1041, pid=0
+03-17 16:16:00.366  1702  1737 D PowerManagerService: acquire lock=155645244, flags=0x1, tag="AudioMix", name=audioserver, ws=null, uid=1041, pid=0
+03-17 16:16:00.367  1702  1737 D PowerManagerService: acquire lock=173466309, flags=0x1, tag="AudioMix", name=audioserver, ws=null, uid=1041, pid=0
+---
+len=350
+03-17 16:16:06.733  2227  2227 I PanelView: onInterceptTouchEvent MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=622.0, y[0]=86.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=261991368, downTime=261991304, deviceId=3, source=0x1002 }, mBlockTouches=false
+---
+len=153
+03-17 16:13:54.745  1702  1702 D PowerManagerService: acquire lock=86152250, flags=0x1, tag="handleAudioEvent", name=android, ws=null, uid=1000, pid=1702
+---
+len=96
+03-17 16:13:50.766  1702  3693 I ActivityManager: Start dump, calling from : pid=12782, uid=1000
+---
+len=118
+03-17 16:15:55.047  1702  3697 W ActivityManager: getTasks: caller 10111 does not hold REAL_GET_TASKS; limiting output
+03-17 16:16:04.790  1702 17621 W ActivityManager: getTasks: caller 10111 does not hold REAL_GET_TASKS; limiting output
+03-17 16:16:04.791  1702  3694 W ActivityManager: getTasks: caller 10111 does not hold REAL_GET_TASKS; limiting output
+03-17 16:16:05.061  1702  3697 W ActivityManager: getTasks: caller 10111 does not hold REAL_GET_TASKS; limiting output
+03-17 16:16:05.065  1702  2633 W ActivityManager: getTasks: caller 10111 does not hold REAL_GET_TASKS; limiting output
+03-17 16:16:05.070  1702 14638 W ActivityManager: getTasks: caller 10111 does not hold REAL_GET_TASKS; limiting output
+03-17 16:16:05.076  1702  2113 W ActivityManager: getTasks: caller 10111 does not hold REAL_GET_TASKS; limiting output
+03-17 16:16:05.079  1702 27365 W ActivityManager: getTasks: caller 10111 does not hold REAL_GET_TASKS; limiting output
+---
+len=145
+03-17 16:13:47.743  2227  2794 V KeyguardUpdateMonitor: *** unregister callback for com.android.systemui.statusbar.policy.KeyguardMonitor@712d093
+---
+len=238
+03-17 16:16:01.183  2227  2227 I PhoneStatusBar: setSystemUiVisibility vis=0 mask=1 oldVal=40000500 newVal=40000500 diff=0 fullscreenStackVis=0 dockedStackVis=0, fullscreenStackBounds=Rect(0, 0 - 0, 0), dockedStackBounds=Rect(0, 0 - 0, 0)
+03-17 16:16:01.208  2227  2227 I PhoneStatusBar: setSystemUiVisibility vis=0 mask=1 oldVal=40000500 newVal=40000500 diff=0 fullscreenStackVis=0 dockedStackVis=0, fullscreenStackBounds=Rect(0, 0 - 0, 0), dockedStackBounds=Rect(0, 0 - 0, 0)
+03-17 16:16:01.318  2227  2227 I PhoneStatusBar: setSystemUiVisibility vis=0 mask=1 oldVal=40000500 newVal=40000500 diff=0 fullscreenStackVis=0 dockedStackVis=0, fullscreenStackBounds=Rect(0, 0 - 0, 0), dockedStackBounds=Rect(0, 0 - 0, 0)
+03-17 16:16:03.002  2227  2227 I PhoneStatusBar: setSystemUiVisibility vis=0 mask=1 oldVal=40000500 newVal=40000500 diff=0 fullscreenStackVis=0 dockedStackVis=0, fullscreenStackBounds=Rect(0, 0 - 0, 0), dockedStackBounds=Rect(0, 0 - 0, 0)
+03-17 16:16:04.205  2227  2227 I PhoneStatusBar: setSystemUiVisibility vis=0 mask=1 oldVal=40000500 newVal=40000500 diff=0 fullscreenStackVis=0 dockedStackVis=0, fullscreenStackBounds=Rect(0, 0 - 0, 0), dockedStackBounds=Rect(0, 0 - 0, 0)
+03-17 16:16:04.213  2227  2227 I PhoneStatusBar: setSystemUiVisibility vis=0 mask=1 oldVal=40000500 newVal=40000500 diff=0 fullscreenStackVis=0 dockedStackVis=0, fullscreenStackBounds=Rect(0, 0 - 0, 0), dockedStackBounds=Rect(0, 0 - 0, 0)
+03-17 16:16:04.224  2227  2227 I PhoneStatusBar: setSystemUiVisibility vis=0 mask=1 oldVal=40000500 newVal=40000500 diff=0 fullscreenStackVis=0 dockedStackVis=0, fullscreenStackBounds=Rect(0, 0 - 0, 0), dockedStackBounds=Rect(0, 0 - 0, 0)
+03-17 16:16:04.243  2227  2227 I PhoneStatusBar: setSystemUiVisibility vis=0 mask=1 oldVal=40000500 newVal=40000500 diff=0 fullscreenStackVis=0 dockedStackVis=0, fullscreenStackBounds=Rect(0, 0 - 0, 0), dockedStackBounds=Rect(0, 0 - 0, 0)
+---
+len=248
+03-17 16:15:49.209  1702  2250 I ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.tencent.mobileqq/.activity.SplashActivity bnds=[360,820][536,1011]} from uid 10057 on display 0
+---
+len=51
+03-17 16:15:39.598  2227  2227 I PanelView: closeQs
+03-17 16:15:47.625  2227  2227 I PanelView: closeQs
+03-17 16:15:48.718  2227  2227 I PanelView: closeQs
+03-17 16:15:49.569  2227  2227 I PanelView: closeQs
+03-17 16:16:04.189  2227  2227 I PanelView: closeQs
+03-17 16:16:06.759  2227  2227 I PanelView: closeQs
+03-17 16:16:06.782  2227  2227 I PanelView: closeQs
+03-17 16:16:06.784  2227  2227 I PanelView: closeQs
+---
+len=81
+03-17 16:15:49.535  1702  1702 I NotificationManager: cancelNotification,index:-1
+03-17 16:15:49.536  1702  1702 I NotificationManager: cancelNotification,index:-1
+03-17 16:15:49.552  1702  1702 I NotificationManager: cancelNotification,index:-1
+03-17 16:15:49.552  1702  1702 I NotificationManager: cancelNotification,index:-1
+03-17 16:15:49.555  1702  1702 I NotificationManager: cancelNotification,index:-1
+03-17 16:15:49.560  1702  1702 I NotificationManager: cancelNotification,index:-1
+03-17 16:15:49.567  1702  1702 I NotificationManager: cancelNotification,index:-1
+03-17 16:15:49.593  1702  1702 I NotificationManager: cancelNotification,index:-1
+---
+len=95
+03-17 16:15:47.974  1702 17630 D ActivityManager: getRecentTasks: num=20,flags=62,totalTasks=46
+03-17 16:15:47.989  1702  2558 D ActivityManager: getRecentTasks: num=10,flags=62,totalTasks=46
+03-17 16:15:49.498  1702  2633 D ActivityManager: getRecentTasks: num=20,flags=62,totalTasks=46
+03-17 16:15:49.508  1702 17621 D ActivityManager: getRecentTasks: num=10,flags=62,totalTasks=46
+03-17 16:16:04.460  1702  2633 D ActivityManager: getRecentTasks: num=20,flags=62,totalTasks=46
+03-17 16:16:04.476  1702  3694 D ActivityManager: getRecentTasks: num=10,flags=62,totalTasks=46
+03-17 16:16:07.071  1702  8671 D ActivityManager: getRecentTasks: num=20,flags=62,totalTasks=46
+03-17 16:16:07.084  1702  3694 D ActivityManager: getRecentTasks: num=10,flags=62,totalTasks=46
+---
+len=630
+03-17 16:14:04.360  1702  1736 I WindowManager: Destroying surface Surface(name=PopupWindow:317e46) called by com.android.server.wm.WindowStateAnimator.destroySurface:2060 com.android.server.wm.WindowStateAnimator.destroySurfaceLocked:913 com.android.server.wm.WindowState.removeLocked:1554 com.android.server.wm.WindowManagerService.removeWindowInnerLocked:2739 com.android.server.wm.WindowManagerService.removeWindowInnerLocked:2702 com.android.server.wm.WindowManagerService.removeWindowLocked:2691 com.android.server.wm.WindowManagerService.removeWindowLocked:2560 com.android.server.wm.WindowManagerService.removeWindow:2555 
+03-17 16:14:22.534  1702 14638 I WindowManager: Destroying surface Surface(name=PopupWindow:317e46) called by com.android.server.wm.WindowStateAnimator.destroySurface:2060 com.android.server.wm.WindowStateAnimator.destroySurfaceLocked:913 com.android.server.wm.WindowState.removeLocked:1554 com.android.server.wm.WindowManagerService.removeWindowInnerLocked:2739 com.android.server.wm.WindowManagerService.removeWindowInnerLocked:2702 com.android.server.wm.WindowManagerService.removeWindowLocked:2691 com.android.server.wm.WindowManagerService.removeWindowLocked:2560 com.android.server.wm.WindowManagerService.removeWindow:2555 
+03-17 16:15:25.196  1702  3693 I WindowManager: Destroying surface Surface(name=PopupWindow:317e46) called by com.android.server.wm.WindowStateAnimator.destroySurface:2060 com.android.server.wm.WindowStateAnimator.destroySurfaceLocked:913 com.android.server.wm.WindowState.removeLocked:1554 com.android.server.wm.WindowManagerService.removeWindowInnerLocked:2739 com.android.server.wm.WindowManagerService.removeWindowInnerLocked:2702 com.android.server.wm.WindowManagerService.removeWindowLocked:2691 com.android.server.wm.WindowManagerService.removeWindowLocked:2560 com.android.server.wm.WindowManagerService.removeWindow:2555 
+03-17 16:15:46.546  1702  2113 I WindowManager: Destroying surface Surface(name=PopupWindow:317e46) called by com.android.server.wm.WindowStateAnimator.destroySurface:2060 com.android.server.wm.WindowStateAnimator.destroySurfaceLocked:913 com.android.server.wm.WindowState.removeLocked:1554 com.android.server.wm.WindowManagerService.removeWindowInnerLocked:2739 com.android.server.wm.WindowManagerService.removeWindowInnerLocked:2702 com.android.server.wm.WindowManagerService.removeWindowLocked:2691 com.android.server.wm.WindowManagerService.removeWindowLocked:2560 com.android.server.wm.WindowManagerService.removeWindow:2555 
+03-17 16:16:00.289  1702  2250 I WindowManager: Destroying surface Surface(name=PopupWindow:317e46) called by com.android.server.wm.WindowStateAnimator.destroySurface:2060 com.android.server.wm.WindowStateAnimator.destroySurfaceLocked:913 com.android.server.wm.WindowState.removeLocked:1554 com.android.server.wm.WindowManagerService.removeWindowInnerLocked:2739 com.android.server.wm.WindowManagerService.removeWindowInnerLocked:2702 com.android.server.wm.WindowManagerService.removeWindowLocked:2691 com.android.server.wm.WindowManagerService.removeWindowLocked:2560 com.android.server.wm.WindowManagerService.removeWindow:2555 
+03-17 16:16:01.098  1702  2633 I WindowManager: Destroying surface Surface(name=PopupWindow:317e46) called by com.android.server.wm.WindowStateAnimator.destroySurface:2060 com.android.server.wm.WindowStateAnimator.destroySurfaceLocked:913 com.android.server.wm.WindowState.removeLocked:1554 com.android.server.wm.WindowManagerService.removeWindowInnerLocked:2739 com.android.server.wm.WindowManagerService.removeWindowInnerLocked:2702 com.android.server.wm.WindowManagerService.removeWindowLocked:2691 com.android.server.wm.WindowManagerService.removeWindowLocked:2560 com.android.server.wm.WindowManagerService.removeWindow:2555 
+---
+len=236
+03-17 16:13:47.518  1702  8671 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { act=com.android.contacts.action.CHOOSE_SUB dat=tel:xxxxxxxxxxx flg=0x10808000 cmp=com.android.contacts/.ChooseSubActivity (has extras) }
+03-17 16:15:26.530  1702  2639 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { act=com.android.contacts.action.CHOOSE_SUB dat=tel:xxxxxxxxxxx flg=0x10808000 cmp=com.android.contacts/.ChooseSubActivity (has extras) }
+03-17 16:15:37.138  1702 10454 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { act=com.android.contacts.action.CHOOSE_SUB dat=tel:xxxxxxxxxxx flg=0x10808000 cmp=com.android.contacts/.ChooseSubActivity (has extras) }
+03-17 16:15:47.974  1702 17630 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { act=com.android.contacts.action.CHOOSE_SUB dat=tel:xxxxxxxxxxx flg=0x10808000 cmp=com.android.contacts/.ChooseSubActivity (has extras) }
+03-17 16:15:49.498  1702  2633 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { act=com.android.contacts.action.CHOOSE_SUB dat=tel:xxxxxxxxxxx flg=0x10808000 cmp=com.android.contacts/.ChooseSubActivity (has extras) }
+03-17 16:16:04.459  1702  2633 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { act=com.android.contacts.action.CHOOSE_SUB dat=tel:xxxxxxxxxxx flg=0x10808000 cmp=com.android.contacts/.ChooseSubActivity (has extras) }
+03-17 16:16:07.070  1702  8671 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { act=com.android.contacts.action.CHOOSE_SUB dat=tel:xxxxxxxxxxx flg=0x10808000 cmp=com.android.contacts/.ChooseSubActivity (has extras) }
+---
+len=182
+03-17 16:15:47.973  1702 17630 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { flg=0x18800000 cmp=com.tencent.mm/.plugin.base.stub.WXEntryActivity (has extras) }
+03-17 16:15:47.988  1702  2558 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { flg=0x18800000 cmp=com.tencent.mm/.plugin.base.stub.WXEntryActivity (has extras) }
+03-17 16:15:49.497  1702  2633 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { flg=0x18800000 cmp=com.tencent.mm/.plugin.base.stub.WXEntryActivity (has extras) }
+03-17 16:15:49.507  1702 17621 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { flg=0x18800000 cmp=com.tencent.mm/.plugin.base.stub.WXEntryActivity (has extras) }
+03-17 16:16:04.459  1702  2633 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { flg=0x18800000 cmp=com.tencent.mm/.plugin.base.stub.WXEntryActivity (has extras) }
+03-17 16:16:04.476  1702  3694 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { flg=0x18800000 cmp=com.tencent.mm/.plugin.base.stub.WXEntryActivity (has extras) }
+03-17 16:16:07.070  1702  8671 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { flg=0x18800000 cmp=com.tencent.mm/.plugin.base.stub.WXEntryActivity (has extras) }
+03-17 16:16:07.084  1702  3694 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { flg=0x18800000 cmp=com.tencent.mm/.plugin.base.stub.WXEntryActivity (has extras) }
+---
+len=129
+03-17 16:13:47.403  2227  2227 I PhoneStatusBar: animateCollapsePanels:flags=0, force=false, delayed=false, mExpandedVisible=true
+03-17 16:15:37.011  1702  8303 I WindowManager: Application requested orientation -1, got rotation 0 which has compatible metrics
+---
+len=91
+03-17 16:16:02.899  2227  2227 V KeyguardUpdateMonitor: RefreshBatteryInfo isBatteryLow: 23
+03-17 16:16:02.900  2227  2227 V KeyguardUpdateMonitor: RefreshBatteryInfo isBatteryLow: 23
+03-17 16:16:04.772  2227  2227 I PhoneStatusBar: updateNotificationShade: total=0, active=0
+03-17 16:16:04.774  2227  2227 I PhoneStatusBar: updateNotificationShade: total=1, active=1
+03-17 16:16:04.808  1702 27365 I NotificationManager: onNotificationExpansionChanged called
+03-17 16:16:06.756  2227  2227 I PhoneStatusBar: updateNotificationShade: total=1, active=1
+03-17 16:16:06.761  2227  2227 I PhoneStatusBar: updateNotificationShade: total=1, active=1
+03-17 16:16:06.783  2227  2227 I PhoneStatusBar: updateNotificationShade: total=1, active=1
+---
+len=105
+03-17 16:13:47.402  2227  2227 I PhoneStatusBar: removeNotification:0|com.tencent.mobileqq|121|null|10111
+03-17 16:13:54.744  1702  1702 V AudioManager: setWiredDeviceConnectionState  type: -2147483632  state: 0
+03-17 16:15:19.992  1702  2644 I ActivityManager: Process com.tencent.mobileqq:qzone (pid 12236) has died
+03-17 16:15:39.444  1702  2618 D WindowManager: ACTIVITY check resid: com.example.android.notepad, size=0
+03-17 16:15:47.405  1702 17621 D WindowManager: ACTIVITY check resid: com.example.android.notepad, size=1
+03-17 16:15:49.564  2227  2227 I PhoneStatusBar: removeNotification:0|com.tencent.mobileqq|121|null|10111
+---
+len=149
+03-17 16:13:47.224  2227  2227 I PanelView: flingToHeight: vel=0.0, expand=false, target=0.0, collapseSpeedUpFactor=1.0, expandBecauseOfFalsing=false
+---
+len=190
+03-17 16:15:47.973  1702 17630 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { flg=0x10804000 cmp=com.android.systemui/.recents.RecentsActivity bnds=[264,444][920,908] }
+03-17 16:15:47.988  1702  2558 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { flg=0x10804000 cmp=com.android.systemui/.recents.RecentsActivity bnds=[264,444][920,908] }
+03-17 16:15:49.497  1702  2633 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { flg=0x10804000 cmp=com.android.systemui/.recents.RecentsActivity bnds=[264,444][920,908] }
+03-17 16:15:49.507  1702 17621 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { flg=0x10804000 cmp=com.android.systemui/.recents.RecentsActivity bnds=[264,444][920,908] }
+03-17 16:16:04.459  1702  2633 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { flg=0x10804000 cmp=com.android.systemui/.recents.RecentsActivity bnds=[264,444][920,908] }
+03-17 16:16:04.476  1702  3694 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { flg=0x10804000 cmp=com.android.systemui/.recents.RecentsActivity bnds=[264,444][920,908] }
+03-17 16:16:07.070  1702  8671 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { flg=0x10804000 cmp=com.android.systemui/.recents.RecentsActivity bnds=[264,444][920,908] }
+03-17 16:16:07.084  1702  3694 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { flg=0x10804000 cmp=com.android.systemui/.recents.RecentsActivity bnds=[264,444][920,908] }
+---
+len=93
+03-17 16:13:47.150  1702 17633 E ActivityManager: applyOptionsLocked: Unknown animationType=0
+03-17 16:13:47.600  2227  2227 D PhoneStatusBar: makeExpandedInvisible: mExpandedVisible=true
+03-17 16:15:39.597  2227  2227 D PhoneStatusBar: makeExpandedInvisible: mExpandedVisible=true
+03-17 16:16:06.781  2227  2227 D PhoneStatusBar: makeExpandedInvisible: mExpandedVisible=true
+03-17 16:16:06.872  1702  2639 E ActivityManager: applyOptionsLocked: Unknown animationType=0
+---
+len=107
+03-17 16:13:47.150  1702  1702 I NotificationManager: cancelNotificationLocked,remove =com.tencent.mobileqq
+03-17 16:13:55.938  1702  1737 I ActivityManager: cleanUpApplicationRecordLocked, reset pid: 12025, euid: 0
+03-17 16:14:27.162  1702  3693 I ActivityManager: cleanUpApplicationRecordLocked, pid: 5784, restart: false
+03-17 16:14:27.171  1702  1736 I ActivityManager: cleanUpApplicationRecordLocked, reset pid: 23484, euid: 0
+03-17 16:14:27.182  1702  1737 I ActivityManager: cleanUpApplicationRecordLocked, pid: 5769, restart: false
+03-17 16:15:19.993  1702  2644 I ActivityManager: cleanUpApplicationRecordLocked, reset pid: 12236, euid: 0
+03-17 16:15:27.830  1702 27365 I ActivityManager: cleanUpApplicationRecordLocked, reset pid: 13094, euid: 0
+03-17 16:15:49.528  1702  1702 I NotificationManager: cancelNotificationLocked,remove =com.tencent.mobileqq
+---
+len=116
+03-17 16:13:47.150  1702  1702 I NotificationManager: cancelNotificationLocked:0|com.tencent.mobileqq|121|null|10111
+03-17 16:15:49.528  1702  1702 I NotificationManager: cancelNotificationLocked:0|com.tencent.mobileqq|121|null|10111
+---
+len=134
+03-17 16:13:47.150  1702  1702 I NotificationManager: cancelNotification,cancelNotificationLocked,callingUid = 10037,callingPid = 2227
+03-17 16:15:33.427  1702  1702 I NotificationManager: updateLightsLocked,mInCall =false,mScreenOn = true,ledNotification == null?false
+03-17 16:16:04.609  1702  1702 I NotificationManager: updateLightsLocked,mInCall =false,mScreenOn = true,ledNotification == null?false
+---
+len=80
+03-17 16:13:47.149  1702 10454 I NotificationManager: onNotificationClick called
+03-17 16:13:47.149  1702  1702 I NotificationManager: cancelNotification,index:0
+03-17 16:15:49.527  1702  1702 I NotificationManager: cancelNotification,index:0
+03-17 16:16:06.818  1702  1737 I NotificationManager: onNotificationClick called
+03-17 16:16:06.819  1702  1702 I NotificationManager: cancelNotification,index:0
+---
+len=211
+03-17 16:13:47.113  1702 17622 I ActivityManager: START u0 {act=com.tencent.mobileqq.action.MAINACTIVITY flg=0x14000000 cmp=com.tencent.mobileqq/.activity.SplashActivity (has extras)} from uid 10111 on display 0
+---
+len=127
+03-17 16:13:47.100  2227  2227 I PhoneStatusBar: animateCollapsePanels:flags=2, force=true, delayed=true, mExpandedVisible=true
+03-17 16:16:06.758  2227  2227 I PhoneStatusBar: animateCollapsePanels:flags=2, force=true, delayed=true, mExpandedVisible=true
+---
+len=106
+03-17 16:15:26.462  1702  8303 I WindowManager: The change in focus caused us to need to do a layout begin
+03-17 16:15:33.438  2227  2227 I PhoneStatusBar: addNotification key=0|com.tencent.mobileqq|121|null|10111
+03-17 16:15:37.077  1702 14638 I WindowManager: The change in focus caused us to need to do a layout begin
+03-17 16:15:47.927  1702  8290 I WindowManager: The change in focus caused us to need to do a layout begin
+03-17 16:15:49.436  1702  3694 I WindowManager: The change in focus caused us to need to do a layout begin
+03-17 16:16:00.058  2227  2227 D KeyguardUpdateMonitor: received broadcast android.intent.action.TIME_TICK
+03-17 16:16:02.899  2227  2227 W KeyguardUpdateMonitor: ChargingSpeed  Wattage: -1 ST: 5000000 --> 7500000
+03-17 16:16:04.399  1702  1736 I WindowManager: The change in focus caused us to need to do a layout begin
+---
+len=201
+03-17 16:15:47.973  1702 17630 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { act=android.intent.action.MAIN flg=0x10840000 cmp=com.android.incallui/.InCallActivity (has extras) }
+03-17 16:15:47.988  1702  2558 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { act=android.intent.action.MAIN flg=0x10840000 cmp=com.android.incallui/.InCallActivity (has extras) }
+03-17 16:15:49.497  1702  2633 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { act=android.intent.action.MAIN flg=0x10840000 cmp=com.android.incallui/.InCallActivity (has extras) }
+03-17 16:15:49.507  1702 17621 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { act=android.intent.action.MAIN flg=0x10840000 cmp=com.android.incallui/.InCallActivity (has extras) }
+03-17 16:16:04.459  1702  2633 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { act=android.intent.action.MAIN flg=0x10840000 cmp=com.android.incallui/.InCallActivity (has extras) }
+03-17 16:16:04.476  1702  3694 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { act=android.intent.action.MAIN flg=0x10840000 cmp=com.android.incallui/.InCallActivity (has extras) }
+03-17 16:16:07.070  1702  8671 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { act=android.intent.action.MAIN flg=0x10840000 cmp=com.android.incallui/.InCallActivity (has extras) }
+03-17 16:16:07.084  1702  3694 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { act=android.intent.action.MAIN flg=0x10840000 cmp=com.android.incallui/.InCallActivity (has extras) }
+---
+len=104
+03-17 16:13:46.778  2626  2839 D PhoneInterfaceManager: [PhoneIntfMgr] getDataEnabled: subId=1 phoneId=1
+03-17 16:13:47.410  1702 27357 I WindowManager: The change in focus caused us to need to do a layout end
+03-17 16:15:26.462  1702  8303 I WindowManager: The change in focus caused us to need to do a layout end
+03-17 16:15:37.077  1702 14638 I WindowManager: The change in focus caused us to need to do a layout end
+03-17 16:15:47.927  1702  8290 I WindowManager: The change in focus caused us to need to do a layout end
+03-17 16:15:49.436  1702  3694 I WindowManager: The change in focus caused us to need to do a layout end
+03-17 16:16:04.399  1702  1736 I WindowManager: The change in focus caused us to need to do a layout end
+---
+len=88
+03-17 16:13:46.765  2227  2794 V KeyguardUpdateMonitor: *** unregister callback for null
+---
+len=143
+03-17 16:13:46.765  2227  2794 V KeyguardUpdateMonitor: *** register callback for com.android.systemui.statusbar.policy.KeyguardMonitor@712d093
+03-17 16:15:49.595  2626  2808 D PhoneInterfaceManager: getAllCellInfo is blocked by permission manager . callingPackage = com.tencent.mobileqq
+03-17 16:15:51.189  2626  3066 D PhoneInterfaceManager: getAllCellInfo is blocked by permission manager . callingPackage = com.tencent.mobileqq
+03-17 16:15:52.569  2626  2838 D PhoneInterfaceManager: getAllCellInfo is blocked by permission manager . callingPackage = com.tencent.mobileqq
+---
+len=320
+03-17 16:13:47.518  1702  8671 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { act=android.intent.action.VIEW dat=file:///storage/emulated/0/Tencent/QQfile_recv/b.apk typ=application/vnd.android.package-archive flg=0x10800000 cmp=com.android.packageinstaller/.PackageInstallerActivity (has extras) }
+03-17 16:15:26.530  1702  2639 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { act=android.intent.action.VIEW dat=file:///storage/emulated/0/Tencent/QQfile_recv/b.apk typ=application/vnd.android.package-archive flg=0x10800000 cmp=com.android.packageinstaller/.PackageInstallerActivity (has extras) }
+03-17 16:15:37.138  1702 10454 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { act=android.intent.action.VIEW dat=file:///storage/emulated/0/Tencent/QQfile_recv/b.apk typ=application/vnd.android.package-archive flg=0x10800000 cmp=com.android.packageinstaller/.PackageInstallerActivity (has extras) }
+03-17 16:15:47.974  1702 17630 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { act=android.intent.action.VIEW dat=file:///storage/emulated/0/Tencent/QQfile_recv/b.apk typ=application/vnd.android.package-archive flg=0x10800000 cmp=com.android.packageinstaller/.PackageInstallerActivity (has extras) }
+03-17 16:15:49.498  1702  2633 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { act=android.intent.action.VIEW dat=file:///storage/emulated/0/Tencent/QQfile_recv/b.apk typ=application/vnd.android.package-archive flg=0x10800000 cmp=com.android.packageinstaller/.PackageInstallerActivity (has extras) }
+03-17 16:16:04.459  1702  2633 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { act=android.intent.action.VIEW dat=file:///storage/emulated/0/Tencent/QQfile_recv/b.apk typ=application/vnd.android.package-archive flg=0x10800000 cmp=com.android.packageinstaller/.PackageInstallerActivity (has extras) }
+03-17 16:16:07.071  1702  8671 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { act=android.intent.action.VIEW dat=file:///storage/emulated/0/Tencent/QQfile_recv/b.apk typ=application/vnd.android.package-archive flg=0x10800000 cmp=com.android.packageinstaller/.PackageInstallerActivity (has extras) }
+---
+len=123
+03-17 16:14:00.039  2227  2227 I StackScrollAlgorithm: updateClipping isOverlap:false, getTopPadding=333.0, Translation=0.0
+03-17 16:15:00.026  2227  2227 I StackScrollAlgorithm: updateClipping isOverlap:false, getTopPadding=333.0, Translation=0.0
+03-17 16:15:00.050  2227  2227 I StackScrollAlgorithm: updateClipping isOverlap:false, getTopPadding=333.0, Translation=0.0
+03-17 16:15:26.475  2227  2227 I StackScrollAlgorithm: updateClipping isOverlap:false, getTopPadding=333.0, Translation=0.0
+03-17 16:15:49.585  2227  2227 I StackScrollAlgorithm: updateClipping isOverlap:false, getTopPadding=333.0, Translation=0.0
+03-17 16:16:00.031  2227  2227 I StackScrollAlgorithm: updateClipping isOverlap:false, getTopPadding=333.0, Translation=0.0
+03-17 16:16:00.049  2227  2227 I StackScrollAlgorithm: updateClipping isOverlap:false, getTopPadding=333.0, Translation=0.0
+03-17 16:16:04.419  2227  2227 I StackScrollAlgorithm: updateClipping isOverlap:false, getTopPadding=333.0, Translation=0.0
+---
+len=352
+03-17 16:16:06.676  2227  2227 I PanelView: onInterceptTouchEvent MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=622.0, y[0]=86.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=261991304, downTime=261991304, deviceId=3, source=0x1002 }, mBlockTouches=false
+---
+len=155
+03-17 16:13:46.398  2227  2227 I PanelView: flingToHeight: vel=2849.079, expand=true, target=553.0, collapseSpeedUpFactor=1.0, expandBecauseOfFalsing=false
+---
+len=92
+03-17 16:13:46.671  1702 17633 I NotificationManager: onNotificationVisibilityChanged called
+03-17 16:13:47.103  1702  3137 I NotificationManager: onNotificationVisibilityChanged called
+03-17 16:15:34.298  1702 14640 I NotificationManager: onNotificationVisibilityChanged called
+03-17 16:15:39.599  1702  2113 I NotificationManager: onNotificationVisibilityChanged called
+03-17 16:16:05.595  1702  2618 I NotificationManager: onNotificationVisibilityChanged called
+03-17 16:16:06.763  1702  8303 I NotificationManager: onNotificationVisibilityChanged called
+---
+len=189
+03-17 16:13:46.352  2227  2227 I StackScrollAlgorithm: overlapAmount:5.0, previousNotificationEnd:0.0, newYTranslation:-5.0, location:4, i:0, getTopPadding:333.0, getLocationOnScreen():-338
+---
+len=82
+03-17 16:13:46.318  2227  2227 I StackScrollAlgorithm: state.clipTopAmount:69, i:0
+03-17 16:13:46.339  2227  2227 I StackScrollAlgorithm: state.clipTopAmount:30, i:0
+03-17 16:13:46.352  2227  2227 I StackScrollAlgorithm: state.clipTopAmount:-1, i:0
+03-17 16:13:47.441  2227  2227 I StackScrollAlgorithm: state.clipTopAmount:79, i:0
+03-17 16:14:27.162  1702  3693 D ActivityManager: cleanUpApplicationRecord -- 5784
+03-17 16:14:27.182  1702  1737 D ActivityManager: cleanUpApplicationRecord -- 5769
+---
+len=102
+03-17 16:13:46.352  2227  2227 I StackScrollAlgorithm: updateDimmedActivatedHideSensitive overlap:true
+03-17 16:13:47.441  2227  2227 I StackScrollAlgorithm: updateDimmedActivatedHideSensitive overlap:true
+03-17 16:13:47.460  2227  2227 I StackScrollAlgorithm: updateDimmedActivatedHideSensitive overlap:true
+03-17 16:13:47.471  2227  2227 I StackScrollAlgorithm: updateDimmedActivatedHideSensitive overlap:true
+03-17 16:15:39.249  2227  2227 I StackScrollAlgorithm: updateDimmedActivatedHideSensitive overlap:true
+03-17 16:15:39.589  2227  2227 I StackScrollAlgorithm: updateDimmedActivatedHideSensitive overlap:true
+03-17 16:16:06.774  2227  2227 I StackScrollAlgorithm: updateDimmedActivatedHideSensitive overlap:true
+03-17 16:16:06.794  2227  2227 I StackScrollAlgorithm: updateDimmedActivatedHideSensitive overlap:true
+---
+len=83
+03-17 16:14:27.170  1702  1736 D ActivityManager: cleanUpApplicationRecord -- 23484
+03-17 16:15:19.992  1702  2644 D ActivityManager: cleanUpApplicationRecord -- 12236
+03-17 16:15:27.829  1702 27365 D ActivityManager: cleanUpApplicationRecord -- 13094
+03-17 16:15:39.249  2227  2227 I StackScrollAlgorithm: state.clipTopAmount:148, i:0
+03-17 16:15:39.589  2227  2227 I StackScrollAlgorithm: state.clipTopAmount:204, i:0
+03-17 16:16:02.899  1702  1702 D WifiService: ACTION_BATTERY_CHANGED pluggedType: 0
+03-17 16:16:06.774  2227  2227 I StackScrollAlgorithm: state.clipTopAmount:204, i:0
+03-17 16:16:06.794  2227  2227 I StackScrollAlgorithm: state.clipTopAmount:204, i:0
+---
+len=193
+03-17 16:15:39.249  2227  2227 I StackScrollAlgorithm: overlapAmount:164.0, previousNotificationEnd:0.0, newYTranslation:-164.0, location:4, i:0, getTopPadding:333.0, getLocationOnScreen():-497
+03-17 16:15:39.587  2227  2227 I StackScrollAlgorithm: overlapAmount:220.0, previousNotificationEnd:0.0, newYTranslation:-220.0, location:4, i:0, getTopPadding:333.0, getLocationOnScreen():-553
+03-17 16:15:47.974  1702 17630 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { flg=0x10800000 cmp=com.tencent.qqmusic/.business.lockscreen.LockScreenActivity (has extras) }
+03-17 16:15:49.497  1702  2633 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { flg=0x10800000 cmp=com.tencent.qqmusic/.business.lockscreen.LockScreenActivity (has extras) }
+03-17 16:16:04.459  1702  2633 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { flg=0x10800000 cmp=com.tencent.qqmusic/.business.lockscreen.LockScreenActivity (has extras) }
+03-17 16:16:06.774  2227  2227 I StackScrollAlgorithm: overlapAmount:220.0, previousNotificationEnd:0.0, newYTranslation:-220.0, location:4, i:0, getTopPadding:333.0, getLocationOnScreen():-553
+03-17 16:16:06.793  2227  2227 I StackScrollAlgorithm: overlapAmount:220.0, previousNotificationEnd:0.0, newYTranslation:-220.0, location:4, i:0, getTopPadding:333.0, getLocationOnScreen():-553
+03-17 16:16:07.070  1702  8671 D ActivityManager: Skipping, withExcluded: false, tr.intent:Intent { flg=0x10800000 cmp=com.tencent.qqmusic/.business.lockscreen.LockScreenActivity (has extras) }
+---
+len=196
+03-17 16:13:46.654  1702 10454 W ActivityManager: Sending non-protected broadcast com.android.systemui.statusbar.visible.change from system 2227:com.android.systemui/u0a37 pkg com.android.systemui
+03-17 16:13:47.499  1702  2555 W ActivityManager: Sending non-protected broadcast com.android.systemui.statusbar.visible.change from system 2227:com.android.systemui/u0a37 pkg com.android.systemui
+---
+len=99
+03-17 16:13:47.341  1702  1702 I NotificationManager: updateLightsLocked,turn off notificationLight
+03-17 16:15:33.427  1702  1702 I NotificationManager: updateLightsLocked,turn off notificationLight
+03-17 16:15:34.297  2227  2318 I PhoneStatusBar: logNotificationVisibilityChanges runInThread start
+03-17 16:15:39.599  2227  2318 I PhoneStatusBar: logNotificationVisibilityChanges runInThread start
+03-17 16:15:49.529  1702  1702 I NotificationManager: updateLightsLocked,turn off notificationLight
+03-17 16:16:04.609  1702  1702 I NotificationManager: updateLightsLocked,turn off notificationLight
+03-17 16:16:05.594  2227  2318 I PhoneStatusBar: logNotificationVisibilityChanges runInThread start
+03-17 16:16:06.762  2227  2318 I PhoneStatusBar: logNotificationVisibilityChanges runInThread start
+---
+len=133
+03-17 16:13:46.158  1702  2113 I NotificationManager: updateLightsLocked,mInCall =false,mScreenOn = true,ledNotification == null?true
+03-17 16:13:46.161  1702  3137 I NotificationManager: updateLightsLocked,mInCall =false,mScreenOn = true,ledNotification == null?true
+03-17 16:13:47.341  1702  1702 I NotificationManager: updateLightsLocked,mInCall =false,mScreenOn = true,ledNotification == null?true
+03-17 16:15:49.529  1702  1702 I NotificationManager: updateLightsLocked,mInCall =false,mScreenOn = true,ledNotification == null?true
+---
+len=351
+03-17 16:13:47.078  2227  2227 I PanelView: onInterceptTouchEvent MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=317.0, y[0]=419.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=261851713, downTime=261851646, deviceId=3, source=0x1002 }, mBlockTouches=false
+---
+len=154
+03-17 16:13:46.155  2227  2227 D PhoneStatusBar: disable: < expand ICONS* alerts SYSTEM_INFO* back home recent clock navigationbar search quick_settings >
+03-17 16:13:47.603  2227  2227 D PhoneStatusBar: disable: < expand icons* alerts system_info* back home recent clock navigationbar search quick_settings >
+03-17 16:15:33.527  2227  2227 D PhoneStatusBar: disable: < expand ICONS* alerts SYSTEM_INFO* back home recent clock navigationbar search quick_settings >
+03-17 16:15:39.601  2227  2227 D PhoneStatusBar: disable: < expand icons* alerts system_info* back home recent clock navigationbar search quick_settings >
+03-17 16:16:04.769  2227  2227 D PhoneStatusBar: disable: < expand ICONS* alerts SYSTEM_INFO* back home recent clock navigationbar search quick_settings >
+03-17 16:16:06.786  2227  2227 D PhoneStatusBar: disable: < expand icons* alerts system_info* back home recent clock navigationbar search quick_settings >
+---
+len=264
+03-17 16:15:37.078  2227  2227 I PhoneStatusBar: setSystemUiVisibility vis=80000608 mask=ffffffff oldVal=c0000700 newVal=80000608 diff=40000108 fullscreenStackVis=0 dockedStackVis=0, fullscreenStackBounds=Rect(0, 0 - 720, 1280), dockedStackBounds=Rect(0, 0 - 0, 0)
+03-17 16:15:37.178  2227  2227 I PhoneStatusBar: setSystemUiVisibility vis=40000600 mask=ffffffff oldVal=80000608 newVal=40000600 diff=c0000008 fullscreenStackVis=0 dockedStackVis=0, fullscreenStackBounds=Rect(0, 0 - 720, 1280), dockedStackBounds=Rect(0, 0 - 0, 0)
+03-17 16:15:49.462  2227  2227 I PhoneStatusBar: setSystemUiVisibility vis=80000508 mask=ffffffff oldVal=c0000700 newVal=80000508 diff=40000208 fullscreenStackVis=0 dockedStackVis=0, fullscreenStackBounds=Rect(0, 0 - 720, 1280), dockedStackBounds=Rect(0, 0 - 0, 0)
+03-17 16:15:49.537  2227  2227 I PhoneStatusBar: setSystemUiVisibility vis=40000500 mask=ffffffff oldVal=80000508 newVal=40000500 diff=c0000008 fullscreenStackVis=0 dockedStackVis=0, fullscreenStackBounds=Rect(0, 0 - 720, 1280), dockedStackBounds=Rect(0, 0 - 0, 0)
+---
+len=67
+03-17 16:13:46.153  1702  2113 V AudioManager: getRingtonePlayer...
+03-17 16:13:46.159  1702  3137 V AudioManager: getRingtonePlayer...
+03-17 16:13:46.398  2227  2227 I PanelView: onTrackingStopped: true
+03-17 16:13:55.800 28601 28601 V AudioManager: isBluetoothA2dpOn...
+---
+len=253
+03-17 16:16:04.598  1702  2644 I NotificationManager: enqueueNotificationInternal: pkg=com.tencent.mm id=4097 notification=Notification(pri=1 contentView=null vibrate=[] sound=null tick defaults=0x0 flags=0x101 color=0x00000000 category=msg vis=PRIVATE)
+---
+len=56
+03-17 16:13:46.148  2227  2227 I PanelView: schedulePeek
+---
+len=100
+03-17 16:13:45.466  1702 17632 W ActivityManager: Bad activity token: android.os.BinderProxy@2bd79ce
+---
+len=191
+03-17 16:13:46.318  2227  2227 I StackScrollAlgorithm: overlapAmount:85.0, previousNotificationEnd:0.0, newYTranslation:-85.0, location:4, i:0, getTopPadding:333.0, getLocationOnScreen():-418
+03-17 16:13:46.339  2227  2227 I StackScrollAlgorithm: overlapAmount:46.0, previousNotificationEnd:0.0, newYTranslation:-46.0, location:4, i:0, getTopPadding:333.0, getLocationOnScreen():-379
+03-17 16:13:47.441  2227  2227 I StackScrollAlgorithm: overlapAmount:95.0, previousNotificationEnd:0.0, newYTranslation:-95.0, location:4, i:0, getTopPadding:333.0, getLocationOnScreen():-428
+03-17 16:15:21.065  1702  1765 I ActivityManager: Start proc 13003:com.tencent.mobileqq:qzone/u0a111 for service com.tencent.mobileqq/cooperation.qzone.remote.logic.QzoneWebPluginProxyService
+---
+len=685
+03-17 16:13:46.277  1702 14640 I WindowManager: Destroying surface Surface(name=com.tencent.qt.qtl/com.tencent.qt.qtl.activity.info.NewsDetailXmlActivity) called by com.android.server.wm.WindowStateAnimator.destroySurface:2060 com.android.server.wm.WindowStateAnimator.destroySurfaceLocked:913 com.android.server.wm.WindowState.removeLocked:1554 com.android.server.wm.WindowManagerService.removeWindowInnerLocked:2739 com.android.server.wm.WindowManagerService.removeWindowInnerLocked:2702 com.android.server.wm.WindowManagerService.removeWindowLocked:2691 com.android.server.wm.WindowManagerService.removeWindowLocked:2560 com.android.server.wm.WindowManagerService.removeWindow:2555 
+---
+len=94
+03-17 16:15:47.589  1702  3697 D WindowManager: interceptKeyBeforeQueueing: key 3 , result : 1
+03-17 16:15:48.659  1702  3694 D WindowManager: interceptKeyBeforeQueueing: key 3 , result : 1
+03-17 16:15:48.694  1702  3693 D WindowManager: interceptKeyBeforeQueueing: key 3 , result : 1
+03-17 16:16:00.005  1702  1702 I AlarmManager: scheduleTimeTickEvent triggerAtTime = 509322332
+03-17 16:16:02.897  2227  2227 W KeyguardUpdateMonitor: ACTION_BATTERY_CHANGED AMP: 0; Volt: 0
+03-17 16:16:04.105  1702 27353 D WindowManager: interceptKeyBeforeQueueing: key 3 , result : 1
+03-17 16:16:04.165  1702 10454 D WindowManager: interceptKeyBeforeQueueing: key 3 , result : 1
+03-17 16:16:06.808  2227  2227 D PhoneStatusBar: makeExpandedInvisible: mExpandedVisible=false
+---
+len=98
+03-17 16:16:06.734  1702  1820 D DisplayPowerController: Animating brightness: target=38, rate=200
+03-17 16:16:06.764  2227  2318 I PhoneStatusBar: logNotificationVisibilityChanges runInThread over
+03-17 16:16:07.635  1702  1820 D DisplayPowerController: Animating brightness: target=38, rate=200
+03-17 16:16:07.936  1702  1820 D DisplayPowerController: Animating brightness: target=38, rate=200
+03-17 16:16:08.237  1702  1820 D DisplayPowerController: Animating brightness: target=38, rate=200
+03-17 16:16:08.538  1702  1820 D DisplayPowerController: Animating brightness: target=38, rate=200
+03-17 16:16:08.840  1702  1820 D DisplayPowerController: Animating brightness: target=38, rate=200
+03-17 16:16:09.141  1702  1820 D DisplayPowerController: Animating brightness: target=38, rate=200
+---
+len=146
+03-17 16:15:49.554  1702  2113 I NotificationManager: cancelNotificationWithTag pid 28601,uid = 10111,tag = null,pkg =com.tencent.mobileqq,id =135
+03-17 16:15:49.559  1702 17621 I NotificationManager: cancelNotificationWithTag pid 28601,uid = 10111,tag = null,pkg =com.tencent.mobileqq,id =140
+03-17 16:15:49.566  1702 10454 I NotificationManager: cancelNotificationWithTag pid 28601,uid = 10111,tag = null,pkg =com.tencent.mobileqq,id =144
+03-17 16:15:49.593  1702 17632 I NotificationManager: cancelNotificationWithTag pid 28601,uid = 10111,tag = null,pkg =com.tencent.mobileqq,id =193
+03-17 16:16:03.351  1702  8303 D PowerManagerService: release:lock=149977903, flg=0x0, tag="AudioMix", name=audioserver", ws=null, uid=1041, pid=0
+03-17 16:16:03.352  1702  3693 D PowerManagerService: release:lock=155645244, flg=0x0, tag="AudioMix", name=audioserver", ws=null, uid=1041, pid=0
+03-17 16:16:03.354  1702 27353 D PowerManagerService: release:lock=191063310, flg=0x0, tag="AudioMix", name=audioserver", ws=null, uid=1041, pid=0
+03-17 16:16:03.360  1702 17622 D PowerManagerService: release:lock=173466309, flg=0x0, tag="AudioMix", name=audioserver", ws=null, uid=1041, pid=0
+---
+len=59
+03-17 16:15:26.278  2227  2227 I PanelView: instantCollapse
+03-17 16:15:39.598  2227  2227 I PanelView: instantCollapse
+03-17 16:15:47.630  2227  2227 I PanelView: instantCollapse
+03-17 16:15:48.719  2227  2227 I PanelView: instantCollapse
+03-17 16:15:49.573  2227  2227 I PanelView: instantCollapse
+03-17 16:16:04.190  2227  2227 I PanelView: instantCollapse
+03-17 16:16:06.761  2227  2227 I PanelView: instantCollapse
+03-17 16:16:06.783  2227  2227 I PanelView: instantCollapse
+---
+len=353
+03-17 16:13:47.016  2227  2227 I PanelView: onInterceptTouchEvent MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=317.0, y[0]=419.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=261851646, downTime=261851646, deviceId=3, source=0x1002 }, mBlockTouches=false
+---
+len=156
+03-17 16:13:45.316  1702 14640 D WindowManager: interceptKeyTq keycode=4 interactive=true keyguardActive=false policyFlags=2b000002 down true canceled false
+03-17 16:15:25.170  1702 14638 D WindowManager: interceptKeyTq keycode=4 interactive=true keyguardActive=false policyFlags=2b000002 down true canceled false
+03-17 16:15:25.482  1702 27353 D WindowManager: interceptKeyTq keycode=4 interactive=true keyguardActive=false policyFlags=2b000002 down true canceled false
+03-17 16:15:26.153  1702 27353 D WindowManager: interceptKeyTq keycode=3 interactive=true keyguardActive=false policyFlags=2b000002 down true canceled false
+03-17 16:15:47.524  1702 10454 D WindowManager: interceptKeyTq keycode=3 interactive=true keyguardActive=false policyFlags=2b000002 down true canceled false
+03-17 16:15:48.659  1702  3694 D WindowManager: interceptKeyTq keycode=3 interactive=true keyguardActive=false policyFlags=2b000002 down true canceled false
+03-17 16:16:04.105  1702 27353 D WindowManager: interceptKeyTq keycode=3 interactive=true keyguardActive=false policyFlags=2b000002 down true canceled false
+---
+len=206
+03-17 16:13:45.402  1702  3694 V WindowManager: Skipping AppWindowToken{9f4ef63 token=Token{a64f992 ActivityRecord{de9231d u0 com.tencent.qt.qtl/.activity.info.NewsDetailXmlActivity t761}}} -- going to hide
+03-17 16:13:45.512  1702  2639 V WindowManager: Skipping AppWindowToken{9f4ef63 token=Token{a64f992 ActivityRecord{de9231d u0 com.tencent.qt.qtl/.activity.info.NewsDetailXmlActivity t761}}} -- going to hide
+03-17 16:13:47.289  1702 17633 I WindowManager: Taking screenshot from Surface with crop:[Rect(0, 48 - 720, 1208)], width:[432], height:[696], minLayer:[21085], maxLayer:[21085], inRotation:[false], rot:[0]
+03-17 16:15:26.376  1702 14640 I WindowManager: Taking screenshot from Surface with crop:[Rect(0, 48 - 720, 1208)], width:[432], height:[696], minLayer:[21000], maxLayer:[21080], inRotation:[false], rot:[0]
+03-17 16:15:47.778  1702  8289 I WindowManager: Taking screenshot from Surface with crop:[Rect(0, 48 - 720, 1208)], width:[432], height:[696], minLayer:[21080], maxLayer:[21085], inRotation:[false], rot:[0]
+03-17 16:16:04.291  1702 17632 I WindowManager: Taking screenshot from Surface with crop:[Rect(0, 48 - 720, 1208)], width:[432], height:[696], minLayer:[21000], maxLayer:[21080], inRotation:[false], rot:[0]
+---
+len=109
+03-17 16:14:08.234  3664  3807 D TelephonyManager: getNeighboringCellInfo calling app is com.amap.android.ams
+03-17 16:15:02.022  3664  3807 D TelephonyManager: getNeighboringCellInfo calling app is com.amap.android.ams
+03-17 16:15:06.192  3664  3807 D TelephonyManager: getNeighboringCellInfo calling app is com.amap.android.ams
+03-17 16:15:08.059  3664  3807 D TelephonyManager: getNeighboringCellInfo calling app is com.amap.android.ams
+03-17 16:15:21.126  1702  2250 D ActivityManager: ActivityManagerService,attachApplication,callingPid = 13003
+03-17 16:15:26.889  1702  2644 D ActivityManager: ActivityManagerService,attachApplication,callingPid = 13094
+03-17 16:15:46.770  1702  2558 D ActivityManager: ActivityManagerService,attachApplication,callingPid = 13175
+03-17 16:15:49.527  1702  1702 I NotificationManager: cancelNotificationLocked called,tell the app,reason = 8
+---
+len=87
+03-17 16:15:27.305  2626  2808 W PhoneInterfaceManager: shouldBlockLocation running ...
+03-17 16:15:28.099  2626  8682 W PhoneInterfaceManager: shouldBlockLocation running ...
+03-17 16:15:29.173  2626  2643 W PhoneInterfaceManager: shouldBlockLocation running ...
+03-17 16:15:49.562  2626  2808 W PhoneInterfaceManager: shouldBlockLocation running ...
+03-17 16:15:51.183  2626  3066 W PhoneInterfaceManager: shouldBlockLocation running ...
+03-17 16:15:51.192  2626  2643 W PhoneInterfaceManager: shouldBlockLocation running ...
+03-17 16:15:52.561  2626  2838 W PhoneInterfaceManager: shouldBlockLocation running ...
+03-17 16:16:00.489  7111  7111 I MediaPlayer: setDataSource(166, 0, 576460752303423487)
+---
+len=112
+03-17 16:16:03.361  1702 17622 D PowerManagerService: Releasing suspend blocker "PowerManagerService.WakeLocks".
+03-17 16:16:04.209  1702  2105 D PowerManagerService: Acquiring suspend blocker "PowerManagerService.WakeLocks".
+03-17 16:16:04.598  1702  2633 D PowerManagerService: Releasing suspend blocker "PowerManagerService.WakeLocks".
+03-17 16:16:05.514  1702  2096 D PowerManagerService: Acquiring suspend blocker "PowerManagerService.WakeLocks".
+03-17 16:16:05.529  1702  1702 D PowerManagerService: Releasing suspend blocker "PowerManagerService.WakeLocks".
+03-17 16:16:05.579  1702  8671 D PowerManagerService: Acquiring suspend blocker "PowerManagerService.WakeLocks".
+03-17 16:16:05.768  1702 14640 D PowerManagerService: Releasing suspend blocker "PowerManagerService.WakeLocks".
+03-17 16:16:06.809  1702  3137 D PowerManagerService: Acquiring suspend blocker "PowerManagerService.WakeLocks".
+---
+len=259
+03-17 16:13:46.240  2227  2227 I PhoneStatusBar: setSystemUiVisibility vis=40000600 mask=ffffffff oldVal=40000500 newVal=40000600 diff=300 fullscreenStackVis=0 dockedStackVis=0, fullscreenStackBounds=Rect(0, 0 - 720, 1280), dockedStackBounds=Rect(0, 0 - 0, 0)
+03-17 16:13:47.124  2227  2227 I PhoneStatusBar: setSystemUiVisibility vis=40000500 mask=ffffffff oldVal=40000600 newVal=40000500 diff=300 fullscreenStackVis=0 dockedStackVis=0, fullscreenStackBounds=Rect(0, 0 - 720, 1280), dockedStackBounds=Rect(0, 0 - 0, 0)
+03-17 16:13:47.599  2227  2227 I PhoneStatusBar: setSystemUiVisibility vis=40000500 mask=ffffffff oldVal=508 newVal=40000500 diff=40000008 fullscreenStackVis=0 dockedStackVis=0, fullscreenStackBounds=Rect(0, 0 - 720, 1280), dockedStackBounds=Rect(0, 0 - 0, 0)
+03-17 16:15:26.577  2227  2227 I PhoneStatusBar: setSystemUiVisibility vis=c0000700 mask=ffffffff oldVal=708 newVal=c0000700 diff=c0000008 fullscreenStackVis=0 dockedStackVis=0, fullscreenStackBounds=Rect(0, 0 - 720, 1280), dockedStackBounds=Rect(0, 0 - 0, 0)
+03-17 16:15:47.410  2227  2227 I PhoneStatusBar: setSystemUiVisibility vis=40000000 mask=ffffffff oldVal=40000600 newVal=40000000 diff=600 fullscreenStackVis=0 dockedStackVis=0, fullscreenStackBounds=Rect(0, 0 - 720, 1280), dockedStackBounds=Rect(0, 0 - 0, 0)
+03-17 16:15:47.425  2227  2227 I PhoneStatusBar: setSystemUiVisibility vis=40000600 mask=ffffffff oldVal=40000000 newVal=40000600 diff=600 fullscreenStackVis=0 dockedStackVis=0, fullscreenStackBounds=Rect(0, 0 - 720, 1280), dockedStackBounds=Rect(0, 0 - 0, 0)
+03-17 16:15:48.106  2227  2227 I PhoneStatusBar: setSystemUiVisibility vis=c0000700 mask=ffffffff oldVal=708 newVal=c0000700 diff=c0000008 fullscreenStackVis=0 dockedStackVis=0, fullscreenStackBounds=Rect(0, 0 - 720, 1280), dockedStackBounds=Rect(0, 0 - 0, 0)
+03-17 16:16:04.540  2227  2227 I PhoneStatusBar: setSystemUiVisibility vis=c0000700 mask=ffffffff oldVal=708 newVal=c0000700 diff=c0000008 fullscreenStackVis=0 dockedStackVis=0, fullscreenStackBounds=Rect(0, 0 - 720, 1280), dockedStackBounds=Rect(0, 0 - 0, 0)
+---
+len=62
+03-17 16:13:46.242  2227  2227 I PanelView: onExpandingStarted
+03-17 16:13:47.101  2227  2227 I PanelView: onExpandingStarted
+---
+len=159
+03-17 16:15:37.139  1702 10454 D ActivityManager: getRecentTasks: topActivity=ComponentInfo{com.example.android.notepad/com.example.android.notepad.NoteEditor}
+03-17 16:15:37.153  1702  2639 D ActivityManager: getRecentTasks: topActivity=ComponentInfo{com.example.android.notepad/com.example.android.notepad.NoteEditor}
+03-17 16:15:47.669  1702  2105 D PowerManagerService: acquire lock=189667585, flags=0x1, tag="*launch*", name=android, ws=WorkSource{10057}, uid=1000, pid=1702
+03-17 16:15:47.974  1702 17630 D ActivityManager: getRecentTasks: topActivity=ComponentInfo{com.example.android.notepad/com.example.android.notepad.NoteEditor}
+03-17 16:15:47.989  1702  2558 D ActivityManager: getRecentTasks: topActivity=ComponentInfo{com.example.android.notepad/com.example.android.notepad.NoteEditor}
+03-17 16:15:49.228  1702  2250 D PowerManagerService: acquire lock=189667585, flags=0x1, tag="*launch*", name=android, ws=WorkSource{10111}, uid=1000, pid=1702
+03-17 16:16:04.208  1702  2105 D PowerManagerService: acquire lock=189667585, flags=0x1, tag="*launch*", name=android, ws=WorkSource{10057}, uid=1000, pid=1702
+03-17 16:16:06.809  1702  3137 D PowerManagerService: acquire lock=189667585, flags=0x1, tag="*launch*", name=android, ws=WorkSource{10112}, uid=1000, pid=1702
+---
+len=128
+03-17 16:13:39.207  1702  1815 I WindowManager: Application requested orientation 1, got rotation 0 which has compatible metrics
+03-17 16:15:47.746  1702 17621 I WindowManager: Application requested orientation 1, got rotation 0 which has compatible metrics
+---
+len=125
+03-17 16:15:39.249  2227  2227 I StackScrollAlgorithm: updateClipping isOverlap:true, getTopPadding=333.0, Translation=-497.0
+03-17 16:15:39.589  2227  2227 I StackScrollAlgorithm: updateClipping isOverlap:true, getTopPadding=333.0, Translation=-553.0
+03-17 16:15:39.709  2227  2227 I StackScrollAlgorithm: updateClipping isOverlap:false, getTopPadding=333.0, Translation=-24.0
+03-17 16:15:47.945  2227  2227 I StackScrollAlgorithm: updateClipping isOverlap:false, getTopPadding=333.0, Translation=-24.0
+03-17 16:15:49.450  2227  2227 I StackScrollAlgorithm: updateClipping isOverlap:false, getTopPadding=333.0, Translation=-24.0
+03-17 16:16:06.774  2227  2227 I StackScrollAlgorithm: updateClipping isOverlap:true, getTopPadding=333.0, Translation=-553.0
+03-17 16:16:06.794  2227  2227 I StackScrollAlgorithm: updateClipping isOverlap:true, getTopPadding=333.0, Translation=-553.0
+03-17 16:16:07.188  2227  2227 I StackScrollAlgorithm: updateClipping isOverlap:false, getTopPadding=333.0, Translation=-24.0
+---
+len=222
+03-17 16:16:04.209  1702  2105 D PowerManagerService: ready=true,policy=3,wakefulness=1,wksummary=0x1,uasummary=0x1,bootcompleted=true,boostinprogress=false,waitmodeenable=false,mode=false,manual=38,auto=-1,adj=0.0userId=0
+03-17 16:16:04.598  1702  2633 D PowerManagerService: ready=true,policy=3,wakefulness=1,wksummary=0x0,uasummary=0x1,bootcompleted=true,boostinprogress=false,waitmodeenable=false,mode=false,manual=38,auto=-1,adj=0.0userId=0
+03-17 16:16:05.514  1702  2096 D PowerManagerService: ready=true,policy=3,wakefulness=1,wksummary=0x1,uasummary=0x1,bootcompleted=true,boostinprogress=false,waitmodeenable=false,mode=false,manual=38,auto=-1,adj=0.0userId=0
+03-17 16:16:05.528  1702  1702 D PowerManagerService: ready=true,policy=3,wakefulness=1,wksummary=0x0,uasummary=0x1,bootcompleted=true,boostinprogress=false,waitmodeenable=false,mode=false,manual=38,auto=-1,adj=0.0userId=0
+03-17 16:16:05.579  1702  8671 D PowerManagerService: ready=true,policy=3,wakefulness=1,wksummary=0x1,uasummary=0x1,bootcompleted=true,boostinprogress=false,waitmodeenable=false,mode=false,manual=38,auto=-1,adj=0.0userId=0
+03-17 16:16:05.768  1702 14640 D PowerManagerService: ready=true,policy=3,wakefulness=1,wksummary=0x0,uasummary=0x1,bootcompleted=true,boostinprogress=false,waitmodeenable=false,mode=false,manual=38,auto=-1,adj=0.0userId=0
+03-17 16:16:06.671  1702  2105 D PowerManagerService: ready=true,policy=3,wakefulness=1,wksummary=0x0,uasummary=0x1,bootcompleted=true,boostinprogress=false,waitmodeenable=false,mode=false,manual=38,auto=-1,adj=0.0userId=0
+03-17 16:16:06.809  1702  3137 D PowerManagerService: ready=true,policy=3,wakefulness=1,wksummary=0x1,uasummary=0x1,bootcompleted=true,boostinprogress=false,waitmodeenable=false,mode=false,manual=38,auto=-1,adj=0.0userId=0
+---
+len=68
+03-17 16:13:39.070  1702  1815 D WindowManager: startAnimation begin
+---
+len=556
+03-17 16:13:38.994  1702 27365 I WindowManager: Destroying surface Surface(name=SurfaceView - com.tencent.qt.qtl/com.tencent.video.player.activity.PlayerActivity) called by com.android.server.wm.WindowStateAnimator.destroyDeferredSurfaceLocked:942 com.android.server.wm.WindowManagerService.performDeferredDestroyWindow:3407 com.android.server.wm.Session.performDeferredDestroy:225 android.view.IWindowSession$Stub.onTransact:398 com.android.server.wm.Session.onTransact:136 android.os.Binder.execTransact:565 <bottom of call stack> <bottom of call stack> 
+---
+len=162
+03-17 16:13:39.010  1702  2639 D PowerManagerService: release:lock=62617001, flg=0x0, tag="WindowManager", name=android", ws=WorkSource{10113}, uid=1000, pid=1702
+---
+len=86
+03-17 16:15:26.698  2626  3848 I PhoneInterfaceManager: shouldBlockLocation  ret:false
+03-17 16:15:26.920  2626  2839 I PhoneInterfaceManager: shouldBlockLocation  ret:false
+03-17 16:15:27.175  2626  2809 I PhoneInterfaceManager: shouldBlockLocation  ret:false
+03-17 16:15:27.237  2626  2838 I PhoneInterfaceManager: shouldBlockLocation  ret:false
+03-17 16:15:27.284  2626  8682 I PhoneInterfaceManager: shouldBlockLocation  ret:false
+03-17 16:15:27.305  2626  2808 I PhoneInterfaceManager: shouldBlockLocation  ret:false
+03-17 16:15:28.100  2626  8682 I PhoneInterfaceManager: shouldBlockLocation  ret:false
+03-17 16:15:29.173  2626  2643 I PhoneInterfaceManager: shouldBlockLocation  ret:false
+---
+len=71
+03-17 16:13:38.861  2227  2227 D TextView: mVisiblity.getValue is false
+03-17 16:13:38.871  2227  2227 D TextView: mVisiblity.getValue is false
+03-17 16:13:38.877  2227  2227 D TextView: mVisiblity.getValue is false
+03-17 16:13:38.882  2227  2227 D TextView: mVisiblity.getValue is false
+03-17 16:13:38.888  2227  2227 D TextView: mVisiblity.getValue is false
+---
+len=161
+03-17 16:13:38.819  1702  8671 D PowerManagerService: acquire lock=233570404, flags=0x1, tag="View Lock", name=com.android.systemui, ws=null, uid=10037, pid=2227
+---
+len=655
+03-17 16:15:26.946  1702  2558 I WindowManager: Destroying surface Surface(name=com.tencent.mobileqq/com.tencent.mobileqq.activity.SplashActivity) called by com.android.server.wm.WindowStateAnimator.destroySurface:2060 com.android.server.wm.WindowStateAnimator.destroySurfaceLocked:913 com.android.server.wm.WindowState.destroyOrSaveSurface:2201 com.android.server.wm.AppWindowToken.destroySurfaces:374 com.android.server.wm.AppWindowToken.notifyAppStopped:400 com.android.server.wm.WindowManagerService.notifyAppStopped:4869 com.android.server.am.ActivityStack.activityStoppedLocked:1393 com.android.server.am.ActivityManagerService.activityStopped:7690 
+03-17 16:16:04.816  1702  8303 I WindowManager: Destroying surface Surface(name=com.tencent.mobileqq/com.tencent.mobileqq.activity.SplashActivity) called by com.android.server.wm.WindowStateAnimator.destroySurface:2060 com.android.server.wm.WindowStateAnimator.destroySurfaceLocked:913 com.android.server.wm.WindowState.destroyOrSaveSurface:2201 com.android.server.wm.AppWindowToken.destroySurfaces:374 com.android.server.wm.AppWindowToken.notifyAppStopped:400 com.android.server.wm.WindowManagerService.notifyAppStopped:4869 com.android.server.am.ActivityStack.activityStoppedLocked:1393 com.android.server.am.ActivityManagerService.activityStopped:7690 
+---
+len=64
+03-17 16:15:25.167  2227  2227 I PhoneStatusBar: suspendAutohide
+03-17 16:15:25.479  2227  2227 I PhoneStatusBar: suspendAutohide
+03-17 16:15:26.149  2227  2227 I PhoneStatusBar: suspendAutohide
+03-17 16:15:33.527  2227  2227 I PhoneStatusBar: suspendAutohide
+03-17 16:15:47.521  2227  2227 I PhoneStatusBar: suspendAutohide
+03-17 16:15:48.655  2227  2227 I PhoneStatusBar: suspendAutohide
+03-17 16:16:04.100  2227  2227 I PhoneStatusBar: suspendAutohide
+03-17 16:16:04.769  2227  2227 I PhoneStatusBar: suspendAutohide
+---
+len=61
+03-17 16:15:49.572  2227  2227 I PanelView: cancelPeek: false
+03-17 16:15:49.573  2227  2227 I PanelView: cancelPeek: false
+03-17 16:16:04.190  2227  2227 I PanelView: cancelPeek: false
+03-17 16:16:04.190  2227  2227 I PanelView: cancelPeek: false
+03-17 16:16:06.761  2227  2227 I PanelView: cancelPeek: false
+03-17 16:16:06.761  2227  2227 I PanelView: cancelPeek: false
+03-17 16:16:06.783  2227  2227 I PanelView: cancelPeek: false
+03-17 16:16:06.783  2227  2227 I PanelView: cancelPeek: false
+---
+len=158
+03-17 16:15:37.190  1702  8289 D PowerManagerService: release:lock=189667585, flg=0x0, tag="*launch*", name=android", ws=WorkSource{10020}, uid=1000, pid=1702
+03-17 16:15:48.241  1702  2556 D PowerManagerService: release:lock=189667585, flg=0x0, tag="*launch*", name=android", ws=WorkSource{10057}, uid=1000, pid=1702
+03-17 16:15:49.498  1702  2633 D ActivityManager: getRecentTasks: topActivity=ComponentInfo{com.tencent.mobileqq/com.tencent.mobileqq.activity.SplashActivity}
+03-17 16:15:49.508  1702 17621 D ActivityManager: getRecentTasks: topActivity=ComponentInfo{com.tencent.mobileqq/com.tencent.mobileqq.activity.SplashActivity}
+03-17 16:15:49.576  1702  2618 D PowerManagerService: release:lock=189667585, flg=0x0, tag="*launch*", name=android", ws=WorkSource{10111}, uid=1000, pid=1702
+03-17 16:16:04.460  1702  2633 D ActivityManager: getRecentTasks: topActivity=ComponentInfo{com.tencent.mobileqq/com.tencent.mobileqq.activity.SplashActivity}
+03-17 16:16:04.476  1702  3694 D ActivityManager: getRecentTasks: topActivity=ComponentInfo{com.tencent.mobileqq/com.tencent.mobileqq.activity.SplashActivity}
+03-17 16:16:04.597  1702  2633 D PowerManagerService: release:lock=189667585, flg=0x0, tag="*launch*", name=android", ws=WorkSource{10057}, uid=1000, pid=1702
+---
+len=57
+03-17 16:13:55.941 30852 30852 V AudioManager: getMode...
+---
+len=254
+03-17 16:13:45.405  2227  2227 I PhoneStatusBar: setSystemUiVisibility vis=508 mask=ffffffff oldVal=40000500 newVal=508 diff=40000008 fullscreenStackVis=0 dockedStackVis=0, fullscreenStackBounds=Rect(0, 0 - 720, 1280), dockedStackBounds=Rect(0, 0 - 0, 0)
+03-17 16:13:47.448  2227  2227 I PhoneStatusBar: setSystemUiVisibility vis=508 mask=ffffffff oldVal=40000500 newVal=508 diff=40000008 fullscreenStackVis=0 dockedStackVis=0, fullscreenStackBounds=Rect(0, 0 - 720, 1280), dockedStackBounds=Rect(0, 0 - 0, 0)
+03-17 16:15:26.466  2227  2227 I PhoneStatusBar: setSystemUiVisibility vis=708 mask=ffffffff oldVal=40000500 newVal=708 diff=40000208 fullscreenStackVis=0 dockedStackVis=0, fullscreenStackBounds=Rect(0, 0 - 720, 1280), dockedStackBounds=Rect(0, 0 - 0, 0)
+03-17 16:15:47.932  2227  2227 I PhoneStatusBar: setSystemUiVisibility vis=708 mask=ffffffff oldVal=40000600 newVal=708 diff=40000108 fullscreenStackVis=0 dockedStackVis=0, fullscreenStackBounds=Rect(0, 0 - 720, 1280), dockedStackBounds=Rect(0, 0 - 0, 0)
+03-17 16:16:04.408  2227  2227 I PhoneStatusBar: setSystemUiVisibility vis=708 mask=ffffffff oldVal=40000500 newVal=708 diff=40000208 fullscreenStackVis=0 dockedStackVis=0, fullscreenStackBounds=Rect(0, 0 - 720, 1280), dockedStackBounds=Rect(0, 0 - 0, 0)
+---
+len=157
+03-17 16:14:08.259  1702 17633 D PowerManagerService: release:lock=60373518, flg=0x0, tag="RILJ_ACK_WL", name=com.android.phone", ws=null, uid=1001, pid=2626
+03-17 16:15:25.265  1702  2107 D WindowManager: interceptKeyTq keycode=4 interactive=true keyguardActive=false policyFlags=2b000002 down false canceled false
+03-17 16:15:25.549  1702 27357 D WindowManager: interceptKeyTq keycode=4 interactive=true keyguardActive=false policyFlags=2b000002 down false canceled false
+03-17 16:15:26.252  1702  2618 D WindowManager: interceptKeyTq keycode=3 interactive=true keyguardActive=false policyFlags=2b000002 down false canceled false
+03-17 16:15:47.589  1702  3697 D WindowManager: interceptKeyTq keycode=3 interactive=true keyguardActive=false policyFlags=2b000002 down false canceled false
+03-17 16:15:48.694  1702  3693 D WindowManager: interceptKeyTq keycode=3 interactive=true keyguardActive=false policyFlags=2b000002 down false canceled false
+03-17 16:16:02.895  1702  1820 D PowerManagerService: updateIsPoweredLocked: wasPowered=false, mIsPowered=false, oldPlugType=0, mPlugType=0, mBatteryLevel=23
+03-17 16:16:04.165  1702 10454 D WindowManager: interceptKeyTq keycode=3 interactive=true keyguardActive=false policyFlags=2b000002 down false canceled false
+---
+len=110
+03-17 16:13:39.069  1702  1815 I WindowManager: orientation change is complete, call stopFreezingDisplayLocked
+03-17 16:13:45.408  2227  2227 I PhoneStatusBar: notifyUiVisibilityChanged:vis=0x508, SystemUiVisibility=0x508
+03-17 16:13:47.449  2227  2227 I PhoneStatusBar: notifyUiVisibilityChanged:vis=0x508, SystemUiVisibility=0x508
+03-17 16:15:26.467  2227  2227 I PhoneStatusBar: notifyUiVisibilityChanged:vis=0x708, SystemUiVisibility=0x708
+03-17 16:15:47.932  2227  2227 I PhoneStatusBar: notifyUiVisibilityChanged:vis=0x708, SystemUiVisibility=0x708
+03-17 16:16:04.409  2227  2227 I PhoneStatusBar: notifyUiVisibilityChanged:vis=0x708, SystemUiVisibility=0x708
+---
+len=160
+03-17 16:13:38.905  1702 10454 D PowerManagerService: release:lock=233570404, flg=0x0, tag="View Lock", name=com.android.systemui", ws=null, uid=10037, pid=2227
+---
+len=63
+03-17 16:15:48.612  7111  7111 V AudioManager: getRingerMode...
+03-17 16:15:49.465  2227  2227 I PhoneStatusBar: cancelAutohide
+03-17 16:15:49.539  2227  2227 I PhoneStatusBar: cancelAutohide
+03-17 16:15:50.121 23650 23685 V AudioManager: isMusicActive...
+03-17 16:15:55.823 23650 23689 V AudioManager: isMusicActive...
+03-17 16:16:04.409  2227  2227 I PhoneStatusBar: cancelAutohide
+03-17 16:16:04.541  2227  2227 I PhoneStatusBar: cancelAutohide
+03-17 16:16:04.583  7111  7111 V AudioManager: getRingerMode...
+---
+len=132
+03-17 16:15:54.640  1702 17622 W ActivityManager: getRunningAppProcesses: caller 10113 does not hold REAL_GET_TASKS; limiting output
+03-17 16:15:55.046  1702 17632 W ActivityManager: getRunningAppProcesses: caller 10111 does not hold REAL_GET_TASKS; limiting output
+03-17 16:16:03.671  1702 17621 W ActivityManager: getRunningAppProcesses: caller 10091 does not hold REAL_GET_TASKS; limiting output
+03-17 16:16:03.691  1702 10454 W ActivityManager: getRunningAppProcesses: caller 10091 does not hold REAL_GET_TASKS; limiting output
+03-17 16:16:04.242  1702  3697 W ActivityManager: getRunningAppProcesses: caller 10112 does not hold REAL_GET_TASKS; limiting output
+03-17 16:16:04.858  1702  1736 W ActivityManager: getRunningAppProcesses: caller 10111 does not hold REAL_GET_TASKS; limiting output
+03-17 16:16:05.443  1702  2556 W ActivityManager: getRunningAppProcesses: caller 10113 does not hold REAL_GET_TASKS; limiting output
+03-17 16:16:06.955  1702 10454 W ActivityManager: getRunningAppProcesses: caller 10113 does not hold REAL_GET_TASKS; limiting output
+---
+len=78
+03-17 16:16:06.734  1702  1820 I DisplayPowerController: HBM brightnessOut =38
+03-17 16:16:06.746  2227  2227 V AudioManager: playSoundEffect   effectType: 0
+03-17 16:16:07.635  1702  1820 I DisplayPowerController: HBM brightnessOut =38
+03-17 16:16:07.936  1702  1820 I DisplayPowerController: HBM brightnessOut =38
+03-17 16:16:08.237  1702  1820 I DisplayPowerController: HBM brightnessOut =38
+03-17 16:16:08.538  1702  1820 I DisplayPowerController: HBM brightnessOut =38
+03-17 16:16:08.840  1702  1820 I DisplayPowerController: HBM brightnessOut =38
+03-17 16:16:09.141  1702  1820 I DisplayPowerController: HBM brightnessOut =38
+---
+len=79
+03-17 16:13:38.881  2227  2227 D TextView: visible is system.message.count gt 0
+03-17 16:16:02.899  1702  2121 D WifiController: ApStaDisabledState what=155652
+03-17 16:16:02.899  1702  2121 D WifiController: battery changed pluggedType: 0
+---
+len=150
+03-17 16:13:39.080  1702  1815 D PowerManagerService: release:lock=226887582, flg=0x0, tag="SCREEN_FROZEN", name=android", ws=null, uid=1000, pid=1702
+03-17 16:16:06.772  1702  3137 I ActivityManager: START u0 {flg=0x24000000 cmp=com.tencent.mm/.ui.LauncherUI (has extras)} from uid 10112 on display 0
+---
+len=103
+03-17 16:16:00.031  2227  2227 I StackScrollAlgorithm: updateDimmedActivatedHideSensitive overlap:false
+03-17 16:16:00.049  2227  2227 I StackScrollAlgorithm: updateDimmedActivatedHideSensitive overlap:false
+03-17 16:16:04.420  2227  2227 I StackScrollAlgorithm: updateDimmedActivatedHideSensitive overlap:false
+03-17 16:16:04.850  2227  2227 I StackScrollAlgorithm: updateDimmedActivatedHideSensitive overlap:false
+03-17 16:16:04.950  2227  2227 I StackScrollAlgorithm: updateDimmedActivatedHideSensitive overlap:false
+03-17 16:16:05.591  2227  2227 I StackScrollAlgorithm: updateDimmedActivatedHideSensitive overlap:false
+03-17 16:16:06.689  2227  2227 I StackScrollAlgorithm: updateDimmedActivatedHideSensitive overlap:false
+03-17 16:16:07.188  2227  2227 I StackScrollAlgorithm: updateDimmedActivatedHideSensitive overlap:false
+---
+len=620
+03-17 16:13:39.006  1702  2639 I WindowManager: Destroying surface Surface(name=com.tencent.qt.qtl/com.tencent.video.player.activity.PlayerActivity) called by com.android.server.wm.WindowStateAnimator.destroySurface:2060 com.android.server.wm.WindowStateAnimator.destroySurfaceLocked:913 com.android.server.wm.WindowState.destroyOrSaveSurface:2201 com.android.server.wm.WindowManagerService.tryStartExitingAnimation:3299 com.android.server.wm.WindowManagerService.relayoutWindow:3179 com.android.server.wm.Session.relayout:215 android.view.IWindowSession$Stub.onTransact:286 com.android.server.wm.Session.onTransact:136 
+---
+len=163
+03-17 16:13:45.466  1702 17632 W ActivityManager: java.lang.ClassCastException: android.os.BinderProxy cannot be cast to com.android.server.am.ActivityRecord$Token
+---
+len=657
+03-17 16:13:48.032  1702  2639 I WindowManager: Destroying surface Surface(name=com.tencent.qt.qtl/com.tencent.qt.qtl.activity.main.MainTabActivity) called by com.android.server.wm.WindowStateAnimator.destroySurface:2060 com.android.server.wm.WindowStateAnimator.destroySurfaceLocked:913 com.android.server.wm.WindowState.destroyOrSaveSurface:2201 com.android.server.wm.AppWindowToken.destroySurfaces:374 com.android.server.wm.AppWindowToken.notifyAppStopped:400 com.android.server.wm.WindowManagerService.notifyAppStopped:4869 com.android.server.am.ActivityStack.activityStoppedLocked:1393 com.android.server.am.ActivityManagerService.activityStopped:7690 
+---
+len=66
+03-17 16:16:01.183  2227  2227 V PhoneStatusBar: setLightsOn(true)
+03-17 16:16:01.208  2227  2227 V PhoneStatusBar: setLightsOn(true)
+03-17 16:16:01.318  2227  2227 V PhoneStatusBar: setLightsOn(true)
+03-17 16:16:03.001  2227  2227 V PhoneStatusBar: setLightsOn(true)
+03-17 16:16:04.205  2227  2227 V PhoneStatusBar: setLightsOn(true)
+03-17 16:16:04.212  2227  2227 V PhoneStatusBar: setLightsOn(true)
+03-17 16:16:04.223  2227  2227 V PhoneStatusBar: setLightsOn(true)
+03-17 16:16:04.242  2227  2227 V PhoneStatusBar: setLightsOn(true)
+---
+len=119
+03-17 16:13:39.207  1702  1815 I WindowManager: rotationForOrientationLw(orient=1, last=0); user=0 USER_ROTATION_LOCKED
+03-17 16:15:47.746  1702 17621 I WindowManager: rotationForOrientationLw(orient=1, last=0); user=0 USER_ROTATION_LOCKED
+---
+len=169
+03-17 16:13:39.095  1702  8671 I AlarmManager: remove(PendingIntent{19abed0: PendingIntentRecord{a485420 com.tencent.qt.qtl broadcastIntent}}) changed bounds; rebatching
+---
+len=72
+03-17 16:15:25.547  2227  2227 I PhoneStatusBar: resumeSuspendedAutohide
+03-17 16:15:26.248  2227  2227 I PhoneStatusBar: resumeSuspendedAutohide
+03-17 16:15:39.600  2227  2227 I PhoneStatusBar: resumeSuspendedAutohide
+03-17 16:15:47.585  2227  2227 I PhoneStatusBar: resumeSuspendedAutohide
+03-17 16:15:48.689  2227  2227 I PhoneStatusBar: resumeSuspendedAutohide
+03-17 16:16:00.061  2227  2227 D KeyguardUpdateMonitor: handleTimeUpdate
+03-17 16:16:04.161  2227  2227 I PhoneStatusBar: resumeSuspendedAutohide
+03-17 16:16:06.785  2227  2227 I PhoneStatusBar: resumeSuspendedAutohide
+---
+len=120
+03-17 16:15:37.079  2227  2227 I PhoneStatusBar: notifyUiVisibilityChanged:vis=0x80000608, SystemUiVisibility=0x80000608
+03-17 16:15:37.178  2227  2227 I PhoneStatusBar: notifyUiVisibilityChanged:vis=0x40000600, SystemUiVisibility=0x40000600
+03-17 16:15:47.410  2227  2227 I PhoneStatusBar: notifyUiVisibilityChanged:vis=0x40000000, SystemUiVisibility=0x40000000
+03-17 16:15:47.425  2227  2227 I PhoneStatusBar: notifyUiVisibilityChanged:vis=0x40000600, SystemUiVisibility=0x40000600
+03-17 16:15:48.107  2227  2227 I PhoneStatusBar: notifyUiVisibilityChanged:vis=0xc0000700, SystemUiVisibility=0xc0000700
+03-17 16:15:49.465  2227  2227 I PhoneStatusBar: notifyUiVisibilityChanged:vis=0x80000508, SystemUiVisibility=0x80000508
+03-17 16:15:49.539  2227  2227 I PhoneStatusBar: notifyUiVisibilityChanged:vis=0x40000500, SystemUiVisibility=0x40000500
+03-17 16:16:04.541  2227  2227 I PhoneStatusBar: notifyUiVisibilityChanged:vis=0xc0000700, SystemUiVisibility=0xc0000700
+---
+len=171
+03-17 16:13:39.070  1702  1815 I WindowManager: Screen frozen for +1s0ms due to Window{ca98d5 u0 com.tencent.qt.qtl/com.tencent.qt.qtl.activity.info.NewsDetailXmlActivity}
+---
+len=74
+03-17 16:15:47.590  2227  2318 V AudioManager: querySoundEffectsEnabled...
+03-17 16:15:48.698  2227  2318 V AudioManager: querySoundEffectsEnabled...
+03-17 16:15:49.206  3714  3714 V AudioManager: querySoundEffectsEnabled...
+03-17 16:15:50.485 28601 28601 V AudioManager: querySoundEffectsEnabled...
+03-17 16:16:00.233 28601 28601 V AudioManager: querySoundEffectsEnabled...
+03-17 16:16:01.530 28601 28601 V AudioManager: querySoundEffectsEnabled...
+03-17 16:16:04.165  2227  2318 V AudioManager: querySoundEffectsEnabled...
+03-17 16:16:06.746  2227  2227 V AudioManager: querySoundEffectsEnabled...
+---
+len=75
+03-17 16:15:39.553  2227  2227 I PhoneStatusBar: removeNotificationChildren
+03-17 16:15:49.568  2227  2227 I PhoneStatusBar: removeNotificationChildren
+03-17 16:16:02.899  2227  2227 D KeyguardUpdateMonitor: handleBatteryUpdate
+03-17 16:16:04.772  2227  2227 I PhoneStatusBar: removeNotificationChildren
+03-17 16:16:04.774  2227  2227 I PhoneStatusBar: removeNotificationChildren
+03-17 16:16:06.756  2227  2227 I PhoneStatusBar: removeNotificationChildren
+03-17 16:16:06.762  2227  2227 I PhoneStatusBar: removeNotificationChildren
+03-17 16:16:06.783  2227  2227 I PhoneStatusBar: removeNotificationChildren
+---
+len=77
+03-17 16:16:03.707  1702  1820 I DisplayPowerController: HBM brightnessIn =38
+03-17 16:16:06.733  1702  1820 I DisplayPowerController: HBM brightnessIn =38
+03-17 16:16:07.635  1702  1820 I DisplayPowerController: HBM brightnessIn =38
+03-17 16:16:07.936  1702  1820 I DisplayPowerController: HBM brightnessIn =38
+03-17 16:16:08.237  1702  1820 I DisplayPowerController: HBM brightnessIn =38
+03-17 16:16:08.538  1702  1820 I DisplayPowerController: HBM brightnessIn =38
+03-17 16:16:08.840  1702  1820 I DisplayPowerController: HBM brightnessIn =38
+03-17 16:16:09.141  1702  1820 I DisplayPowerController: HBM brightnessIn =38
+---
+len=218
+03-17 16:13:38.839  1702  2113 V WindowManager: Skipping AppWindowToken{df0798e token=Token{78af589 ActivityRecord{3b04890 u0 com.tencent.qt.qtl/com.tencent.video.player.activity.PlayerActivity t761}}} -- going to hide
+03-17 16:13:38.915  1702  3693 V WindowManager: Skipping AppWindowToken{df0798e token=Token{78af589 ActivityRecord{3b04890 u0 com.tencent.qt.qtl/com.tencent.video.player.activity.PlayerActivity t761}}} -- going to hide
+---
+len=228
+03-17 16:13:47.450  2227  2227 I PhoneStatusBar: setSystemUiVisibility vis=0 mask=1 oldVal=508 newVal=508 diff=0 fullscreenStackVis=0 dockedStackVis=0, fullscreenStackBounds=Rect(0, 0 - 0, 0), dockedStackBounds=Rect(0, 0 - 0, 0)
+03-17 16:13:47.599  2227  2227 I PhoneStatusBar: setSystemUiVisibility vis=0 mask=1 oldVal=508 newVal=508 diff=0 fullscreenStackVis=0 dockedStackVis=0, fullscreenStackBounds=Rect(0, 0 - 0, 0), dockedStackBounds=Rect(0, 0 - 0, 0)
+---
+len=131
+03-17 16:16:01.469  1702  2105 D PowerManagerService: userActivityNoUpdateLocked: eventTime=261986105, event=2, flags=0x0, uid=1000
+03-17 16:16:02.240  1702  2105 D PowerManagerService: userActivityNoUpdateLocked: eventTime=261986874, event=2, flags=0x0, uid=1000
+03-17 16:16:02.756  1702  2105 D PowerManagerService: userActivityNoUpdateLocked: eventTime=261987391, event=2, flags=0x0, uid=1000
+03-17 16:16:04.094  1702  2105 D PowerManagerService: userActivityNoUpdateLocked: eventTime=261988728, event=2, flags=0x0, uid=1000
+03-17 16:16:04.106  1702  2105 D PowerManagerService: userActivityNoUpdateLocked: eventTime=261988739, event=1, flags=0x0, uid=1000
+03-17 16:16:04.162  1702 17621 D PowerManagerService: userActivityNoUpdateLocked: eventTime=261988799, event=0, flags=0x0, uid=1000
+03-17 16:16:04.185  1702  2105 D PowerManagerService: userActivityNoUpdateLocked: eventTime=261988822, event=0, flags=0x0, uid=1000
+03-17 16:16:06.670  1702  2105 D PowerManagerService: userActivityNoUpdateLocked: eventTime=261991304, event=2, flags=0x0, uid=1000
+---
+len=126
+03-17 16:15:33.554  2227  2227 I StackScrollAlgorithm: updateClipping isOverlap:false, getTopPadding=333.0, Translation=-429.0
+03-17 16:15:33.652  2227  2227 I StackScrollAlgorithm: updateClipping isOverlap:false, getTopPadding=333.0, Translation=-497.0
+03-17 16:15:34.294  2227  2227 I StackScrollAlgorithm: updateClipping isOverlap:false, getTopPadding=333.0, Translation=-497.0
+03-17 16:16:04.606  1702  1702 I NotificationManager: enqueueNotificationInternal: n.getKey = 0|com.tencent.mm|4097|null|10112
+03-17 16:16:04.850  2227  2227 I StackScrollAlgorithm: updateClipping isOverlap:false, getTopPadding=333.0, Translation=-429.0
+03-17 16:16:04.949  2227  2227 I StackScrollAlgorithm: updateClipping isOverlap:false, getTopPadding=333.0, Translation=-497.0
+03-17 16:16:05.590  2227  2227 I StackScrollAlgorithm: updateClipping isOverlap:false, getTopPadding=333.0, Translation=-497.0
+03-17 16:16:06.688  2227  2227 I StackScrollAlgorithm: updateClipping isOverlap:false, getTopPadding=333.0, Translation=-497.0
+---
+len=223
+03-17 16:13:38.820  1702  8671 D PowerManagerService: ready=true,policy=3,wakefulness=1,wksummary=0x23,uasummary=0x1,bootcompleted=true,boostinprogress=false,waitmodeenable=false,mode=false,manual=38,auto=-1,adj=0.0userId=0
+03-17 16:13:38.907  1702 10454 D PowerManagerService: ready=true,policy=3,wakefulness=1,wksummary=0x23,uasummary=0x1,bootcompleted=true,boostinprogress=false,waitmodeenable=false,mode=false,manual=38,auto=-1,adj=0.0userId=0
+03-17 16:13:38.938  1702 14638 D PowerManagerService: ready=true,policy=3,wakefulness=1,wksummary=0x23,uasummary=0x1,bootcompleted=true,boostinprogress=false,waitmodeenable=false,mode=false,manual=38,auto=-1,adj=0.0userId=0
+---
+len=76
+03-17 16:13:38.875  2227  2227 D TextView: visible is system.call.count gt 0
+03-17 16:13:46.146  2227  2227 I PanelView: onTouchEvent::0, x=271.0, y=14.0
+03-17 16:15:33.524  2227  2227 I PanelView: mHeadsUpExistenceChangedRunnable
+03-17 16:15:39.547  2227  2227 I PanelView: mHeadsUpExistenceChangedRunnable
+03-17 16:16:00.520  7111  7111 V AudioManager: getStreamVolume  treamType: 5
+03-17 16:16:04.765  2227  2227 I PanelView: mHeadsUpExistenceChangedRunnable
+03-17 16:16:07.144  2227  2227 I PanelView: mHeadsUpExistenceChangedRunnable
+---
+len=124
+03-17 16:13:46.601  2227  2227 I StackScrollAlgorithm: updateClipping isOverlap:false, getTopPadding=333.0, Translation=-6.0
+03-17 16:13:46.619  2227  2227 I StackScrollAlgorithm: updateClipping isOverlap:false, getTopPadding=333.0, Translation=-2.0
+03-17 16:13:46.635  2227  2227 I StackScrollAlgorithm: updateClipping isOverlap:false, getTopPadding=333.0, Translation=-1.0
+03-17 16:13:47.254  2227  2227 I StackScrollAlgorithm: updateClipping isOverlap:false, getTopPadding=333.0, Translation=-6.0
+03-17 16:15:51.200  2626  2643 D PhoneInterfaceManager: getCellLocation is blocked by permission manager uid:10111 pid:28601
+---
+len=318
+03-17 16:13:38.811  1702  2395 D WindowManager: printFreezingDisplayLogsopening app wtoken = AppWindowToken{9f4ef63 token=Token{a64f992 ActivityRecord{de9231d u0 com.tencent.qt.qtl/.activity.info.NewsDetailXmlActivity t761}}}, allDrawn= false, startingDisplayed =  false, startingMoved =  false, isRelaunching =  false
+---

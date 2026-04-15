@@ -1,0 +1,7 @@
+query_id,mode_name,aggregate_level,cell_count,median_wall_time_ms,median_cpu_time_ms,median_peak_rss_mb,median_match_count,median_tp,median_fp,median_fn,median_precision,median_recall,median_f1,all_cells_exact_set_match
+common,decompressed_text,query_level,2,0.8284369978355244,0.8264999999999973,26.484375,592.5,326.5,0.0,0.0,1.0,1.0,1.0,True
+common,full_decompression,query_level,2,41.21979150295374,40.753,26.7421875,592.5,326.5,0.0,0.0,1.0,1.0,1.0,True
+common,minor_optimization,query_level,2,30.82499949960038,30.4815,26.7265625,592.5,326.5,0.0,0.0,1.0,1.0,1.0,True
+phrase,decompressed_text,query_level,2,0.8061044973146636,0.8039999999999992,26.6015625,441.5,441.5,0.0,0.0,1.0,1.0,1.0,True
+phrase,full_decompression,query_level,2,41.647687499789754,41.184,26.7890625,441.5,441.5,0.0,0.0,1.0,1.0,1.0,True
+phrase,minor_optimization,query_level,2,27.716187501937384,27.457000000000008,26.71875,430.0,430.0,0.0,11.5,1.0,0.7553191489361701,0.8380281690140845,False

@@ -1,0 +1,42 @@
+{
+  "artifact_specs": {
+    "apache": {
+      "compressed_binary_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Apache_2k.log.lite.b",
+      "decompressed_text_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Apache_2k.log.lite.decom",
+      "raw_log_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/dataset/loghub/Apache/Apache_2k.log",
+      "window_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Apache_2k.window.txt"
+    },
+    "linux": {
+      "compressed_binary_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Linux_2k.log.lite.b",
+      "decompressed_text_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Linux_2k.log.lite.decom",
+      "raw_log_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/dataset/loghub/Linux/Linux_2k.log",
+      "window_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Linux_2k.window.txt"
+    }
+  },
+  "code_version": "04a21c013a0ae8453d8bba909cc81228a0c15bc3",
+  "created_at": "2026-04-15T02:12:41.778709",
+  "datasets": [
+    "linux",
+    "apache"
+  ],
+  "modes": [
+    "decompressed_text",
+    "full_decompression",
+    "minor_optimization"
+  ],
+  "platform": "macOS-15.2-arm64-arm-64bit",
+  "python_executable": "/opt/anaconda3/bin/python3",
+  "queries": [
+    "common",
+    "phrase"
+  ],
+  "run_config": {
+    "config_label": "smoke_suite",
+    "config_version": "part2.v1",
+    "profiling_enabled": true,
+    "repetitions": 1,
+    "sample_difference_limit": 10,
+    "strict_validation": true,
+    "warmups": 0
+  }
+}
