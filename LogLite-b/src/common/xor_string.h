@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <string>
-#include <immintrin.h>
 #include <stdexcept>
 #include <chrono>
 
@@ -11,7 +10,6 @@
 
 namespace XORC
 {
-
     std::string bitwiseXor(const std::string &a, const std::string &b);
     void bitwiseXor(const std::string &a, const std::string &b, std::string &result);
 }
