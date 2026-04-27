@@ -25,10 +25,10 @@ loglite_dir_B = "../LogLite-B"
 # Compile the project
 # Use generic g++ and AVX2 (no AVX-512 / -march=native) to avoid
 # illegal-instruction crashes on CPUs/VMs without AVX-512 support.
-compile_command = f"g++ -O3 -mavx2 -fdiagnostics-color=always -g {loglite_dir_b}/src/compress/*.cc {loglite_dir_b}/src/common/*.cc {loglite_dir_b}/src/tools/*.cc -I {loglite_dir_b}/src -o {loglite_dir_b}/src/tools/xorc-cli"
+compile_command = f"g++ -O3 -mavx2 -fdiagnostics-color=always -g {loglite_dir_b}/src_static/compress/*.cc {loglite_dir_b}/src_static/common/*.cc {loglite_dir_b}/src_static/tools/*.cc -I {loglite_dir_b}/src_static -o {loglite_dir_b}/src_static/tools/xorc-cli"
 run_command(compile_command, "Compiling the project LogLite-b")
 
-compile_command = f"g++ -O3 -mavx2 -fdiagnostics-color=always -g {loglite_dir_B}/src/compress/*.cc {loglite_dir_B}/src/common/*.cc {loglite_dir_B}/src/tools/*.cc -I {loglite_dir_B}/src -o {loglite_dir_B}/src/tools/xorc-cli"
+compile_command = f"g++ -O3 -mavx2 -fdiagnostics-color=always -g {loglite_dir_B}/src_static/compress/*.cc {loglite_dir_B}/src_static/common/*.cc {loglite_dir_B}/src_static/tools/*.cc -I {loglite_dir_B}/src_static -o {loglite_dir_B}/src_static/tools/xorc-cli"
 run_command(compile_command, "Compiling the project LogLite-B")
 
 

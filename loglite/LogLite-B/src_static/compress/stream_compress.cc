@@ -1,0 +1,476 @@
+#include "stream_compress.h"
+
+namespace XORC
+{
+    // Pre-built vectors of zero bytes used by the SIMD routines
+    // when counting matches or replacing '\0' bytes.
+    static __m256i zero_vec32 = _mm256_set1_epi8('\0');
+
+    static __m128i zero_vec16 = _mm_set1_epi8('\0');
+
+    // Helper: pack a vector<char> into a bitset (LSB-first per byte).
+    // This is only used by some experimental / unused paths and is
+    // not part of the main LogLite-B format.
+    static boost::dynamic_bitset<> vectorCharToBitset(const std::vector<char> &data)
+    {
+        boost::dynamic_bitset<> bitset(data.size() * 8);
+
+        for (size_t i = 0; i < data.size(); ++i)
+        {
+            for (size_t j = 0; j < 8; ++j)
+            {
+                if (data[i] & (1 << j))
+                {
+                    bitset[i * 8 + j] = 1;
+                }
+            }
+        }
+
+        return bitset;
+    }
+
+    // Helper: unpack a bitset (LSB-first per byte) back into chars.
+    // Again, this is not used by the production encoder/decoder.
+    static std::vector<char> bitsetToVectorChar(const boost::dynamic_bitset<> &bitset)
+    {
+
+        std::vector<char> data(bitset.size() / 8);
+
+        for (size_t i = 0; i < data.size(); ++i)
+        {
+            char c = 0;
+            for (size_t j = 0; j < 8; ++j)
+            {
+                if (bitset[i * 8 + j])
+                {
+                    c |= (1 << j);
+                }
+            }
+            data[i] = c;
+        }
+
+        return data;
+    }
+
+    // Write a fixed-width unsigned integer into the output bitset.
+    // Bits are stored LSB-first so that the decoder can reconstruct
+    // the value with the same convention.
+    static void integerToBitset(size_t value, boost::dynamic_bitset<> &output_data, uint64_t &len_output_data, size_t bit_count = STREAM_ENCODER_COUNT)
+    {
+        for (size_t i = 0; i < bit_count; ++i)
+        {
+            output_data[len_output_data++] = (value >> i) & 1;
+        }
+    }
+
+    // Compute how different `candidate` is from the best matching template
+    // currently stored in the L-window bucket. Lower values mean better matches.
+    static float bestTemplateMismatchRate(const std::string &candidate, const std::deque<std::string> &bucket)
+    {
+        if (bucket.empty())
+        {
+            return 1.0f;
+        }
+
+        std::string xor_result;
+        xor_result.resize(candidate.size());
+
+        float min_compress_rate = 3.0f;
+        int count = 0;
+        float tem_rate;
+
+        for (int j = static_cast<int>(bucket.size()) - 1; j >= 0; --j)
+        {
+            XORC::bitwiseXor(candidate, bucket[j], xor_result);
+
+            count = 0;
+
+            size_t i = 0;
+
+            for (; i + simd_width32 <= candidate.size(); i += simd_width32)
+            {
+                __m256i data = _mm256_loadu_si256(reinterpret_cast<const __m256i *>(xor_result.data() + i));
+                __m256i result = _mm256_cmpeq_epi8(data, zero_vec32);
+                count += _mm_popcnt_u32(_mm256_movemask_epi8(result));
+            }
+
+            for (; i < candidate.size(); ++i)
+            {
+                if (xor_result[i] == '\0')
+                {
+                    ++count;
+                }
+            }
+
+            tem_rate = 1.0f - static_cast<float>(count) / candidate.size();
+
+            if (tem_rate <= min_compress_rate)
+            {
+                min_compress_rate = tem_rate;
+
+                if (min_compress_rate <= Similarity_Threshold)
+                {
+                    break;
+                }
+            }
+        }
+
+        return min_compress_rate;
+    }
+
+    static bool should_admit_static_window(const std::string &candidate, const std::deque<std::string> &bucket)
+    {
+        return bucket.empty() || bestTemplateMismatchRate(candidate, bucket) <= STATIC_L_WINDOW_ADMISSION_THRESHOLD;
+    }
+
+    // Build a 64-bit word bitmap by hashing each alnum token in the log line
+    // to one of 64 bit positions.
+    // Deterministic rolling hash: h = h*33 ^ ord(c)  (same as Python version)
+    static uint64_t computeWordBitmap(const std::string &line)
+    {
+        uint64_t bitmap = 0;
+        std::string token;
+        token.reserve(32);
+
+        auto flushToken = [&]() {
+            if (!token.empty())
+            {
+                uint32_t h = 0;
+                for (char c : token)
+                {
+                    h = ((h << 5) + h) ^ static_cast<unsigned char>(c);  // h = h*33 ^ c
+                }
+                size_t idx = h & 63ULL;
+                bitmap |= (1ULL << idx);
+                token.clear();
+            }
+        };
+
+        for (unsigned char ch : line)
+        {
+            if (std::isalnum(ch))
+            {
+                token.push_back(static_cast<char>(ch));
+            }
+            else
+            {
+                flushToken();
+            }
+        }
+        flushToken();
+
+        return bitmap;
+    }
+
+    static void appendBitmapToBitset(uint64_t bitmap, boost::dynamic_bitset<> &output_data, uint64_t &len_output_data)
+    {
+        for (size_t i = 0; i < WORD_BITMAP_BITS; ++i)
+        {
+            output_data[len_output_data++] = (bitmap >> i) & 1ULL;
+        }
+    }
+
+
+    Stream_Compress::Stream_Compress() {}
+    Stream_Compress::~Stream_Compress() {}
+
+    void Stream_Compress::stream_compress(const std::string &single_data, boost::dynamic_bitset<> &output_data, uint64_t &len_output_data)
+    {
+        const size_t len_single_data = single_data.size();
+        uint64_t word_bitmap = computeWordBitmap(single_data);
+        
+        if (this->window.find(len_single_data) != this->window.end())
+        {
+            // We already have templates of this length in the window.
+            // Try each template (from newest to oldest), pick the one
+            // that gives the sparsest XOR mask, and then RLE-encode it.
+            std::string xor_result;
+            xor_result.resize(len_single_data);
+
+            float min_compress_rate = 3.0;
+            int min_index = -1;
+            std::string min_xor_result;
+            min_xor_result.reserve(len_single_data);
+
+            int count = 0;
+            float tem_rate;
+
+            for (int j = this->window[len_single_data].size() - 1; j >= 0; --j)
+            {// finding best match in a window
+
+                XORC::bitwiseXor(single_data, this->window[len_single_data][j], xor_result);
+
+                count = 0;
+
+                size_t i = 0;
+
+                // Count how many bytes in the XOR result are zero using
+                // SIMD equality comparisons and a popcount over the mask.
+                for (; i + simd_width32 <= len_single_data; i += simd_width32)
+                {
+
+                    __m256i data = _mm256_loadu_si256(reinterpret_cast<const __m256i *>(xor_result.data() + i));
+
+                    __m256i result = _mm256_cmpeq_epi8(data, zero_vec32);
+
+                    count += _mm_popcnt_u32(_mm256_movemask_epi8(result));
+                }
+
+                // Handle any remaining bytes that did not fit into SIMD.
+                for (; i < len_single_data; ++i)
+                {
+                    if (xor_result[i] == '\0')
+                    {
+                        ++count;
+                    }
+                }
+
+                tem_rate = 1.0f - static_cast<float>(count) / len_single_data;
+
+                if (tem_rate <= min_compress_rate)
+                {
+                    min_compress_rate = tem_rate;
+                    min_index = j;
+                    min_xor_result = xor_result;
+
+                    if (min_compress_rate <= Similarity_Threshold)
+                    {
+                        break;
+                    }
+                }
+            }
+
+            // Flag bit 1: this line is stored as (template index + RLE XOR).
+            output_data[len_output_data++] = 1;
+
+            // Per-record 64-bit word bitmap (metadata).
+            appendBitmapToBitset(word_bitmap, output_data, len_output_data);
+
+
+            integerToBitset(min_index, output_data, len_output_data, EACH_WINDOW_SIZE_COUNT);
+
+            // Reserve STREAM_ENCODER_COUNT bits for the length of the
+            // RLE-encoded XOR mask; we fill them after encoding.
+            size_t tem_index = len_output_data;
+            len_output_data += STREAM_ENCODER_COUNT;
+
+            size_t len_xor_rle_bitset = XORC::runLengthEncodeString(min_xor_result, output_data, len_output_data, single_data);
+
+            // Now backfill the length bits we reserved above.
+            for (size_t i = 0; i < STREAM_ENCODER_COUNT; ++i)
+            {
+                output_data[tem_index + i] = (len_xor_rle_bitset >> i) & 1;
+            }
+
+            // Update the L-window only when the new line is similar enough to
+            // the existing templates for this length.
+            std::deque<std::string> &bucket = this->window[len_single_data];
+            if (bucket.size() < EACH_WINDOW_SIZE && should_admit_static_window(single_data, bucket))
+            {
+                bucket.push_back(single_data);
+            }
+        }
+        else if (len_single_data >= MAX_LEN || len_single_data == 0)
+        {
+            // Very long or empty line: store it raw with flag bit 0.
+            output_data[len_output_data++] = 0;
+
+            // Per-record 64-bit word bitmap (metadata).
+            appendBitmapToBitset(word_bitmap, output_data, len_output_data);
+
+            integerToBitset(len_single_data, output_data, len_output_data, ORIGINAL_LENGTH_COUNT);
+
+            for (size_t i = 0; i < len_single_data; i++)
+            {
+                for (size_t j = 0; j < 8; ++j)
+                {
+                    output_data[len_output_data++] = (single_data[i] >> j) & 1;
+                }
+            }
+        }
+        else
+        {
+            // First time we see this length: initialise a new deque
+            // in the window and store the line raw.
+            std::deque<std::string> newDeque;
+            newDeque.push_back(single_data);
+            this->window[len_single_data] = newDeque;
+
+            output_data[len_output_data++] = 0;
+
+            // Per-record 64-bit word bitmap (metadata).
+            appendBitmapToBitset(word_bitmap, output_data, len_output_data);
+
+            integerToBitset(len_single_data, output_data, len_output_data, ORIGINAL_LENGTH_COUNT);
+
+            for (size_t i = 0; i < len_single_data; i++)
+            {
+                for (size_t j = 0; j < 8; ++j)
+                {
+                    output_data[len_output_data++] = (single_data[i] >> j) & 1;
+                }
+            }
+        }
+    }
+
+    // Decode a sequence of bits (LSB-first per byte) into a std::string.
+    // This is used when a line was stored "raw" in the bitstream.
+    static std::string bitsetToString(const boost::dynamic_bitset<> &bitset)
+    {
+
+        std::string data;
+        data.resize(bitset.size() / 8);
+        char c = 0;
+        for (size_t i = 0; i < data.size(); ++i)
+        {
+            c = 0;
+            for (size_t j = 0; j < 8; ++j)
+            {
+                if (bitset[i * 8 + j])
+                {
+                    c |= (1 << j);
+                }
+            }
+            data[i] = c;
+        }
+
+        return data;
+    }
+
+    // Given an XOR mask and its template pattern, fill in any '\0'
+    // bytes in xor_result with the corresponding bytes from pattern.
+    // After this pass, xor_result holds the reconstructed plaintext line.
+    static void simdReplaceNullCharacters(std::string &xor_result, const std::string &pattern)
+    {
+        size_t len = xor_result.size();
+
+        size_t i = 0;
+
+        const char *xor_data = xor_result.data();
+        const char *pattern_data = pattern.data();
+
+        for (; i + simd_width32 <= len; i += simd_width32)
+        {
+
+            __m256i xor_vec = _mm256_loadu_si256((__m256i *)(xor_data + i));
+            __m256i pattern_vec = _mm256_loadu_si256((const __m256i *)(pattern_data + i));
+
+            __m256i cmp_mask = _mm256_cmpeq_epi8(xor_vec, zero_vec32);
+
+            __m256i result_vec = _mm256_blendv_epi8(xor_vec, pattern_vec, cmp_mask);
+
+            _mm256_storeu_si256((__m256i *)(xor_data + i), result_vec);
+        }
+
+        if (i + simd_width16 <= len)
+        {
+
+            __m128i xor_vec = _mm_loadu_si128((__m128i *)(xor_data + i));
+            __m128i pattern_vec = _mm_loadu_si128((const __m128i *)(pattern_data + i));
+
+            __m128i cmp_mask = _mm_cmpeq_epi8(xor_vec, zero_vec16);
+
+            __m128i result_vec = _mm_blendv_epi8(xor_vec, pattern_vec, cmp_mask);
+
+            _mm_storeu_si128((__m128i *)(xor_data + i), result_vec);
+
+            i += simd_width16;
+        }
+
+        for (; i < len; ++i)
+        {
+            if (xor_result[i] == '\0')
+            {
+                xor_result[i] = pattern[i];
+            }
+        }
+    }
+
+    void Stream_Compress::stream_decompress(const boost::dynamic_bitset<> &single_data, const bool isRLE, const int original_length_or_window_id, std::string &output_data, std::string &xor_result)
+    {
+        xor_result.clear();
+        if (isRLE)
+        {
+            // Path for lines that were encoded as (template index + RLE XOR).
+            size_t len_single_data = single_data.size();
+            size_t i = 0;
+
+            int zero_count = 0;
+
+            unsigned char byte = 0;
+
+            // Walk over the RLE-coded XOR mask and rebuild the byte stream:
+            //   tag 1 -> read one literal byte
+            //   tag 0 -> read run length and append that many '\0' bytes
+            while (i < len_single_data)
+            {
+
+                if (single_data[i])
+                {
+                    i++;
+
+                    byte = 0;
+                    for (std::size_t j = 0; j < 8; ++j)
+                    {
+                        byte |= (single_data[i + j]) << j;
+                    }
+                    i += RLE_SKIM;
+
+                    xor_result.push_back(byte);
+                }
+                else
+                {
+                    i++;
+
+                    zero_count = 0;
+                    for (size_t j = 0; j < RLE_COUNT; ++j, ++i)
+                    {
+                        if (single_data[i])
+                        {
+                            zero_count |= (1 << j);
+                        }
+                    }
+
+                    xor_result.append(zero_count, '\0');
+                }
+            }
+
+            int len_xor_result = xor_result.size();
+            // Look up the template we referenced during compression.
+            std::string &pattern = this->window[len_xor_result][original_length_or_window_id];
+
+            simdReplaceNullCharacters(xor_result, pattern);
+
+            // Merge XOR mask and template to get the original line.
+            output_data += xor_result;
+            output_data += "\n";
+            // output_data += "\r\n";
+
+            // Update the L-window only when the reconstructed line is similar
+            // enough to the existing templates for this length.
+            std::deque<std::string> &bucket = this->window[len_xor_result];
+            if (bucket.size() < EACH_WINDOW_SIZE && should_admit_static_window(xor_result, bucket))
+            {
+                bucket.push_back(xor_result);
+            }
+        }
+        else
+        {
+            // Path for raw lines that were written without XOR/RLE.
+            std::string tem = bitsetToString(single_data);
+            output_data += tem;
+            output_data += "\n";
+            // output_data += "\r\n";
+
+            if (original_length_or_window_id < MAX_LEN)
+            {
+                std::deque<std::string> &bucket = this->window[original_length_or_window_id];
+                if (bucket.size() < EACH_WINDOW_SIZE && should_admit_static_window(tem, bucket))
+                {
+                    bucket.push_back(tem);
+                }
+            }
+        }
+    }
+
+}
