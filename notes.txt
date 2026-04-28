@@ -96,11 +96,10 @@ Additional ideas:
 1- Use a static L-window. this ensures that whenever we need to decompress a log we would decxompress it correctly. This would cause 
 optimailty of loglite to be dimished. we will need to see how much. (Partial decompression not full as was our goal)- This solves our 
 problem but loglite's gurantees are effected.
-
-2- Use a bloom filter. It gurantees that a log does not contaion a keyword if it does not (it tells either it has or mayby). 
+ Use a bloom filter. It gurantees that a log does not contaion a keyword if it does not (it tells either it has or mayby). 
 Problem here would be that maintainance of L-window is still a problem. Im leaning towards this due to its gurantees of no false negatives.
 
-3- chnage the L-window stricture itself
+2- chnage the L-window stricture itself
         a- keep a referance log :
                 if (ref log xor curr log ) sim > some threshold they similar we compress with the referance log
                 else we use the current log as the new referance log.
