@@ -1,5 +1,9 @@
 # README
 
+Project navigation: [Big Data LogLite Querying](../readme.md)
+
+The content below is the upstream LogLite reference README kept for compressor and baseline details. For this workspace's current compressed-query evaluation workflow, start with [Big Data LogLite Querying](../readme.md) and [Query Evaluation Subsystem](../query_eval/README.md).
+
 ## LogLite
 LogLite has been accepted by VLDB2025.
 

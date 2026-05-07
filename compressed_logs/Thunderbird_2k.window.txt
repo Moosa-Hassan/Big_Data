@@ -1,0 +1,513 @@
+len=156
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 xinetd[1798]: xinetd Version 2.3.13 started with libwrap loadavg options compiled in.
+---
+len=178
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 xinetd[1798]: Reading included configuration file: /etc/xinetd.d/ktalk [file=/etc/xinetd.d/ktalk] [line=13]
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 xinetd[1798]: Reading included configuration file: /etc/xinetd.d/rsync [file=/etc/xinetd.d/rsync] [line=12]
+---
+len=180
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 xinetd[1798]: Reading included configuration file: /etc/xinetd.d/gssftp [file=/etc/xinetd.d/gssftp] [line=13]
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 xinetd[1798]: Reading included configuration file: /etc/xinetd.d/klogin [file=/etc/xinetd.d/klogin] [line=14]
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 xinetd[1798]: Reading included configuration file: /etc/xinetd.d/kshell [file=/etc/xinetd.d/kshell] [line=13]
+---
+len=184
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 xinetd[1798]: Reading included configuration file: /etc/xinetd.d/cups-lpd [file=/etc/xinetd.d/cups-lpd] [line=17]
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 xinetd[1798]: Reading included configuration file: /etc/xinetd.d/echo-udp [file=/etc/xinetd.d/echo-udp] [line=14]
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 xinetd[1798]: Reading included configuration file: /etc/xinetd.d/time-udp [file=/etc/xinetd.d/time-udp] [line=17]
+---
+len=177
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 xinetd[1798]: Reading included configuration file: /etc/xinetd.d/chargen [file=/etc/xinetd.conf] [line=15]
+---
+len=90
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 solproxy: succeeded
+---
+len=139
+- 1131567057 2005.11.09 tbird-admin1 Nov 9 12:10:57 local@tbird-admin1 syslog-ng[1605]: Changing permissions on special file /dev/logsurfer
+---
+len=159
+- 1131567057 2005.11.09 tbird-admin1 Nov 9 12:10:57 local@tbird-admin1 syslog-ng[1605]: Cannot open file /dev/logsurfer for writing (No such file or directory)
+---
+len=149
+- 1131567053 2005.11.09 tbird-admin1 Nov 9 12:10:53 local@tbird-admin1 gmetad: Warning: we failed to resolve data source name dadmin2 dadmin3 dadmin4
+---
+len=840
+- 1131567053 2005.11.09 tbird-admin1 Nov 9 12:10:53 local@tbird-admin1 gmetad: Warning: we failed to resolve data source name an910 an911 an912 an913 an914 an915 an916 an917 an918 an919 an920 an921 an922 an923 an924 an925 an926 an927 an928 an929 an930 an931 an932 an933 an934 an935 an936 an937 an938 an939 an940 an941 an942 an943 an944 an945 an946 an947 an948 an949 an950 an951 an952 an953 an954 an955 an956 an957 an958 an959 an960 an961 an962 an963 an964 an965 an966 an967 an968 an969 an970 an971 an972 an973 an974 an975 an976 an977 an978 an979 an980 an981 an982 an983 an984 an985 an986 an987 an988 an989 an990 an991 an992 an993 an994 an995 an996 an997 an998 an999 an1000 an1001 an1002 an1003 an1004 an1005 an1006 an1007 an1008 an1009 an1010 an1011 an1012 an1013 an1014 an1015 an1016 an1017 an1018 an1019 an1020 an1021 an1022 an1023 an1024
+- 1131567054 2005.11.09 tbird-admin1 Nov 9 12:10:54 local@tbird-admin1 gmetad: Warning: we failed to resolve data source name bn910 bn911 bn912 bn913 bn914 bn915 bn916 bn917 bn918 bn919 bn920 bn921 bn922 bn923 bn924 bn925 bn926 bn927 bn928 bn929 bn930 bn931 bn932 bn933 bn934 bn935 bn936 bn937 bn938 bn939 bn940 bn941 bn942 bn943 bn944 bn945 bn946 bn947 bn948 bn949 bn950 bn951 bn952 bn953 bn954 bn955 bn956 bn957 bn958 bn959 bn960 bn961 bn962 bn963 bn964 bn965 bn966 bn967 bn968 bn969 bn970 bn971 bn972 bn973 bn974 bn975 bn976 bn977 bn978 bn979 bn980 bn981 bn982 bn983 bn984 bn985 bn986 bn987 bn988 bn989 bn990 bn991 bn992 bn993 bn994 bn995 bn996 bn997 bn998 bn999 bn1000 bn1001 bn1002 bn1003 bn1004 bn1005 bn1006 bn1007 bn1008 bn1009 bn1010 bn1011 bn1012 bn1013 bn1014 bn1015 bn1016 bn1017 bn1018 bn1019 bn1020 bn1021 bn1022 bn1023 bn1024
+- 1131567054 2005.11.09 tbird-admin1 Nov 9 12:10:54 local@tbird-admin1 gmetad: Warning: we failed to resolve data source name cn910 cn911 cn912 cn913 cn914 cn915 cn916 cn917 cn918 cn919 cn920 cn921 cn922 cn923 cn924 cn925 cn926 cn927 cn928 cn929 cn930 cn931 cn932 cn933 cn934 cn935 cn936 cn937 cn938 cn939 cn940 cn941 cn942 cn943 cn944 cn945 cn946 cn947 cn948 cn949 cn950 cn951 cn952 cn953 cn954 cn955 cn956 cn957 cn958 cn959 cn960 cn961 cn962 cn963 cn964 cn965 cn966 cn967 cn968 cn969 cn970 cn971 cn972 cn973 cn974 cn975 cn976 cn977 cn978 cn979 cn980 cn981 cn982 cn983 cn984 cn985 cn986 cn987 cn988 cn989 cn990 cn991 cn992 cn993 cn994 cn995 cn996 cn997 cn998 cn999 cn1000 cn1001 cn1002 cn1003 cn1004 cn1005 cn1006 cn1007 cn1008 cn1009 cn1010 cn1011 cn1012 cn1013 cn1014 cn1015 cn1016 cn1017 cn1018 cn1019 cn1020 cn1021 cn1022 cn1023 cn1024
+- 1131567054 2005.11.09 tbird-admin1 Nov 9 12:10:54 local@tbird-admin1 gmetad: Warning: we failed to resolve data source name dn910 dn911 dn912 dn913 dn914 dn915 dn916 dn917 dn918 dn919 dn920 dn921 dn922 dn923 dn924 dn925 dn926 dn927 dn928 dn929 dn930 dn931 dn932 dn933 dn934 dn935 dn936 dn937 dn938 dn939 dn940 dn941 dn942 dn943 dn944 dn945 dn946 dn947 dn948 dn949 dn950 dn951 dn952 dn953 dn954 dn955 dn956 dn957 dn958 dn959 dn960 dn961 dn962 dn963 dn964 dn965 dn966 dn967 dn968 dn969 dn970 dn971 dn972 dn973 dn974 dn975 dn976 dn977 dn978 dn979 dn980 dn981 dn982 dn983 dn984 dn985 dn986 dn987 dn988 dn989 dn990 dn991 dn992 dn993 dn994 dn995 dn996 dn997 dn998 dn999 dn1000 dn1001 dn1002 dn1003 dn1004 dn1005 dn1006 dn1007 dn1008 dn1009 dn1010 dn1011 dn1012 dn1013 dn1014 dn1015 dn1016 dn1017 dn1018 dn1019 dn1020 dn1021 dn1022 dn1023 dn1024
+---
+len=182
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 xinetd[1798]: Reading included configuration file: /etc/xinetd.d/daytime [file=/etc/xinetd.d/daytime] [line=11]
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 xinetd[1798]: Reading included configuration file: /etc/xinetd.d/eklogin [file=/etc/xinetd.d/eklogin] [line=15]
+---
+len=85
+- 1131567050 2005.11.09 #8# Nov 9 12:10:50 #8#/#8# sshd[2223]: connection from "#28#"
+- 1131567054 2005.11.09 #8# Nov 9 12:10:54 #8#/#8# sshd[2223]: connection from "#28#"
+---
+len=95
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 sda: sda1 sda2 sda3 sda4
+---
+len=729
+- 1131567053 2005.11.09 tbird-admin1 Nov 9 12:10:53 local@tbird-admin1 gmetad: Warning: we failed to resolve data source name an14 an15 an16 an17 an18 an19 an20 an21 an22 an23 an24 an25 an26 an27 an28 an29 an30 an31 an32 an33 an34 an35 an36 an37 an38 an39 an40 an41 an42 an43 an44 an45 an46 an47 an48 an49 an50 an51 an52 an53 an54 an55 an56 an57 an58 an59 an60 an61 an62 an63 an64 an65 an66 an67 an68 an69 an70 an71 an72 an73 an74 an75 an76 an77 an78 an79 an80 an81 an82 an83 an84 an85 an86 an87 an88 an89 an90 an91 an92 an93 an94 an95 an96 an97 an98 an99 an100 an101 an102 an103 an104 an105 an106 an107 an108 an109 an110 an111 an112 an113 an114 an115 an116 an117 an118 an119 an120 an121 an122 an123 an124 an125 an126 an127 an128
+- 1131567053 2005.11.09 tbird-admin1 Nov 9 12:10:53 local@tbird-admin1 gmetad: Warning: we failed to resolve data source name an14 an15 an16 an17 an18 an19 an20 an21 an22 an23 an24 an25 an26 an27 an28 an29 an30 an31 an32 an33 an34 an35 an36 an37 an38 an39 an40 an41 an42 an43 an44 an45 an46 an47 an48 an49 an50 an51 an52 an53 an54 an55 an56 an57 an58 an59 an60 an61 an62 an63 an64 an65 an66 an67 an68 an69 an70 an71 an72 an73 an74 an75 an76 an77 an78 an79 an80 an81 an82 an83 an84 an85 an86 an87 an88 an89 an90 an91 an92 an93 an94 an95 an96 an97 an98 an99 an100 an101 an102 an103 an104 an105 an106 an107 an108 an109 an110 an111 an112 an113 an114 an115 an116 an117 an118 an119 an120 an121 an122 an123 an124 an125 an126 an127 an128
+- 1131567053 2005.11.09 tbird-admin1 Nov 9 12:10:53 local@tbird-admin1 gmetad: Warning: we failed to resolve data source name bn14 bn15 bn16 bn17 bn18 bn19 bn20 bn21 bn22 bn23 bn24 bn25 bn26 bn27 bn28 bn29 bn30 bn31 bn32 bn33 bn34 bn35 bn36 bn37 bn38 bn39 bn40 bn41 bn42 bn43 bn44 bn45 bn46 bn47 bn48 bn49 bn50 bn51 bn52 bn53 bn54 bn55 bn56 bn57 bn58 bn59 bn60 bn61 bn62 bn63 bn64 bn65 bn66 bn67 bn68 bn69 bn70 bn71 bn72 bn73 bn74 bn75 bn76 bn77 bn78 bn79 bn80 bn81 bn82 bn83 bn84 bn85 bn86 bn87 bn88 bn89 bn90 bn91 bn92 bn93 bn94 bn95 bn96 bn97 bn98 bn99 bn100 bn101 bn102 bn103 bn104 bn105 bn106 bn107 bn108 bn109 bn110 bn111 bn112 bn113 bn114 bn115 bn116 bn117 bn118 bn119 bn120 bn121 bn122 bn123 bn124 bn125 bn126 bn127 bn128
+- 1131567054 2005.11.09 tbird-admin1 Nov 9 12:10:54 local@tbird-admin1 gmetad: Warning: we failed to resolve data source name cn14 cn15 cn16 cn17 cn18 cn19 cn20 cn21 cn22 cn23 cn24 cn25 cn26 cn27 cn28 cn29 cn30 cn31 cn32 cn33 cn34 cn35 cn36 cn37 cn38 cn39 cn40 cn41 cn42 cn43 cn44 cn45 cn46 cn47 cn48 cn49 cn50 cn51 cn52 cn53 cn54 cn55 cn56 cn57 cn58 cn59 cn60 cn61 cn62 cn63 cn64 cn65 cn66 cn67 cn68 cn69 cn70 cn71 cn72 cn73 cn74 cn75 cn76 cn77 cn78 cn79 cn80 cn81 cn82 cn83 cn84 cn85 cn86 cn87 cn88 cn89 cn90 cn91 cn92 cn93 cn94 cn95 cn96 cn97 cn98 cn99 cn100 cn101 cn102 cn103 cn104 cn105 cn106 cn107 cn108 cn109 cn110 cn111 cn112 cn113 cn114 cn115 cn116 cn117 cn118 cn119 cn120 cn121 cn122 cn123 cn124 cn125 cn126 cn127 cn128
+- 1131567054 2005.11.09 tbird-admin1 Nov 9 12:10:54 local@tbird-admin1 gmetad: Warning: we failed to resolve data source name dn14 dn15 dn16 dn17 dn18 dn19 dn20 dn21 dn22 dn23 dn24 dn25 dn26 dn27 dn28 dn29 dn30 dn31 dn32 dn33 dn34 dn35 dn36 dn37 dn38 dn39 dn40 dn41 dn42 dn43 dn44 dn45 dn46 dn47 dn48 dn49 dn50 dn51 dn52 dn53 dn54 dn55 dn56 dn57 dn58 dn59 dn60 dn61 dn62 dn63 dn64 dn65 dn66 dn67 dn68 dn69 dn70 dn71 dn72 dn73 dn74 dn75 dn76 dn77 dn78 dn79 dn80 dn81 dn82 dn83 dn84 dn85 dn86 dn87 dn88 dn89 dn90 dn91 dn92 dn93 dn94 dn95 dn96 dn97 dn98 dn99 dn100 dn101 dn102 dn103 dn104 dn105 dn106 dn107 dn108 dn109 dn110 dn111 dn112 dn113 dn114 dn115 dn116 dn117 dn118 dn119 dn120 dn121 dn122 dn123 dn124 dn125 dn126 dn127 dn128
+---
+len=147
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 megaraid: probe new device 0x1028:0x0013:0x1028:0x016c: bus 2:slot 14:func 0
+---
+len=123
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 md: md driver 0.90.0 MAX_MD_DEVS=256, MD_SB_DISKS=27
+---
+len=86
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 md: autorun ...
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 md: autorun ...
+- 1131567055 2005.11.09 tbird-admin1 Nov 9 12:10:55 local@tbird-admin1 sshd: succeeded
+---
+len=146
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ide: Assuming 33MHz system bus speed for PIO modes; override with idebus=xx
+---
+len=98
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 hw_random: RNG not detected
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 xinetd[1798]: removing echo
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 xinetd[1798]: removing echo
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 xinetd[1798]: removing time
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 xinetd[1798]: removing time
+---
+len=815
+- 1131567054 2005.11.09 tbird-admin1 Nov 9 12:10:54 local@tbird-admin1 gmetad: Warning: we failed to resolve data source name cn654 cn655 cn656 cn657 cn658 cn659 cn660 cn661 cn662 cn663 cn664 cn665 cn666 cn667 cn668 cn669 cn670 cn671 cn672 cn673 cn674 cn675 cn676 cn677 cn678 cn679 cn680 cn681 cn682 cn683 cn684 cn685 cn686 cn687 cn688 cn689 cn690 cn691 cn692 cn693 cn694 cn695 cn696 cn697 cn698 cn699 cn700 cn701 cn702 cn703 cn704 cn705 cn706 cn707 cn708 cn709 cn710 cn711 cn712 cn713 cn714 cn715 cn716 cn717 cn718 cn719 cn720 cn721 cn722 cn723 cn724 cn725 cn726 cn727 cn728 cn729 cn730 cn731 cn732 cn733 cn734 cn735 cn736 cn737 cn738 cn739 cn740 cn741 cn742 cn743 cn744 cn745 cn746 cn747 cn748 cn749 cn750 cn751 cn752 cn753 cn754 cn755 cn756 cn757 cn758 cn759 cn760 cn761 cn762 cn763 cn764 cn765 cn766 cn767 cn768
+- 1131567054 2005.11.09 tbird-admin1 Nov 9 12:10:54 local@tbird-admin1 gmetad: Warning: we failed to resolve data source name cn782 cn783 cn784 cn785 cn786 cn787 cn788 cn789 cn790 cn791 cn792 cn793 cn794 cn795 cn796 cn797 cn798 cn799 cn800 cn801 cn802 cn803 cn804 cn805 cn806 cn807 cn808 cn809 cn810 cn811 cn812 cn813 cn814 cn815 cn816 cn817 cn818 cn819 cn820 cn821 cn822 cn823 cn824 cn825 cn826 cn827 cn828 cn829 cn830 cn831 cn832 cn833 cn834 cn835 cn836 cn837 cn838 cn839 cn840 cn841 cn842 cn843 cn844 cn845 cn846 cn847 cn848 cn849 cn850 cn851 cn852 cn853 cn854 cn855 cn856 cn857 cn858 cn859 cn860 cn861 cn862 cn863 cn864 cn865 cn866 cn867 cn868 cn869 cn870 cn871 cn872 cn873 cn874 cn875 cn876 cn877 cn878 cn879 cn880 cn881 cn882 cn883 cn884 cn885 cn886 cn887 cn888 cn889 cn890 cn891 cn892 cn893 cn894 cn895 cn896
+- 1131567054 2005.11.09 tbird-admin1 Nov 9 12:10:54 local@tbird-admin1 gmetad: Warning: we failed to resolve data source name dn142 dn143 dn144 dn145 dn146 dn147 dn148 dn149 dn150 dn151 dn152 dn153 dn154 dn155 dn156 dn157 dn158 dn159 dn160 dn161 dn162 dn163 dn164 dn165 dn166 dn167 dn168 dn169 dn170 dn171 dn172 dn173 dn174 dn175 dn176 dn177 dn178 dn179 dn180 dn181 dn182 dn183 dn184 dn185 dn186 dn187 dn188 dn189 dn190 dn191 dn192 dn193 dn194 dn195 dn196 dn197 dn198 dn199 dn200 dn201 dn202 dn203 dn204 dn205 dn206 dn207 dn208 dn209 dn210 dn211 dn212 dn213 dn214 dn215 dn216 dn217 dn218 dn219 dn220 dn221 dn222 dn223 dn224 dn225 dn226 dn227 dn228 dn229 dn230 dn231 dn232 dn233 dn234 dn235 dn236 dn237 dn238 dn239 dn240 dn241 dn242 dn243 dn244 dn245 dn246 dn247 dn248 dn249 dn250 dn251 dn252 dn253 dn254 dn255 dn256
+- 1131567054 2005.11.09 tbird-admin1 Nov 9 12:10:54 local@tbird-admin1 gmetad: Warning: we failed to resolve data source name dn270 dn271 dn272 dn273 dn274 dn275 dn276 dn277 dn278 dn279 dn280 dn281 dn282 dn283 dn284 dn285 dn286 dn287 dn288 dn289 dn290 dn291 dn292 dn293 dn294 dn295 dn296 dn297 dn298 dn299 dn300 dn301 dn302 dn303 dn304 dn305 dn306 dn307 dn308 dn309 dn310 dn311 dn312 dn313 dn314 dn315 dn316 dn317 dn318 dn319 dn320 dn321 dn322 dn323 dn324 dn325 dn326 dn327 dn328 dn329 dn330 dn331 dn332 dn333 dn334 dn335 dn336 dn337 dn338 dn339 dn340 dn341 dn342 dn343 dn344 dn345 dn346 dn347 dn348 dn349 dn350 dn351 dn352 dn353 dn354 dn355 dn356 dn357 dn358 dn359 dn360 dn361 dn362 dn363 dn364 dn365 dn366 dn367 dn368 dn369 dn370 dn371 dn372 dn373 dn374 dn375 dn376 dn377 dn378 dn379 dn380 dn381 dn382 dn383 dn384
+- 1131567054 2005.11.09 tbird-admin1 Nov 9 12:10:54 local@tbird-admin1 gmetad: Warning: we failed to resolve data source name dn398 dn399 dn400 dn401 dn402 dn403 dn404 dn405 dn406 dn407 dn408 dn409 dn410 dn411 dn412 dn413 dn414 dn415 dn416 dn417 dn418 dn419 dn420 dn421 dn422 dn423 dn424 dn425 dn426 dn427 dn428 dn429 dn430 dn431 dn432 dn433 dn434 dn435 dn436 dn437 dn438 dn439 dn440 dn441 dn442 dn443 dn444 dn445 dn446 dn447 dn448 dn449 dn450 dn451 dn452 dn453 dn454 dn455 dn456 dn457 dn458 dn459 dn460 dn461 dn462 dn463 dn464 dn465 dn466 dn467 dn468 dn469 dn470 dn471 dn472 dn473 dn474 dn475 dn476 dn477 dn478 dn479 dn480 dn481 dn482 dn483 dn484 dn485 dn486 dn487 dn488 dn489 dn490 dn491 dn492 dn493 dn494 dn495 dn496 dn497 dn498 dn499 dn500 dn501 dn502 dn503 dn504 dn505 dn506 dn507 dn508 dn509 dn510 dn511 dn512
+- 1131567054 2005.11.09 tbird-admin1 Nov 9 12:10:54 local@tbird-admin1 gmetad: Warning: we failed to resolve data source name dn526 dn527 dn528 dn529 dn530 dn531 dn532 dn533 dn534 dn535 dn536 dn537 dn538 dn539 dn540 dn541 dn542 dn543 dn544 dn545 dn546 dn547 dn548 dn549 dn550 dn551 dn552 dn553 dn554 dn555 dn556 dn557 dn558 dn559 dn560 dn561 dn562 dn563 dn564 dn565 dn566 dn567 dn568 dn569 dn570 dn571 dn572 dn573 dn574 dn575 dn576 dn577 dn578 dn579 dn580 dn581 dn582 dn583 dn584 dn585 dn586 dn587 dn588 dn589 dn590 dn591 dn592 dn593 dn594 dn595 dn596 dn597 dn598 dn599 dn600 dn601 dn602 dn603 dn604 dn605 dn606 dn607 dn608 dn609 dn610 dn611 dn612 dn613 dn614 dn615 dn616 dn617 dn618 dn619 dn620 dn621 dn622 dn623 dn624 dn625 dn626 dn627 dn628 dn629 dn630 dn631 dn632 dn633 dn634 dn635 dn636 dn637 dn638 dn639 dn640
+- 1131567054 2005.11.09 tbird-admin1 Nov 9 12:10:54 local@tbird-admin1 gmetad: Warning: we failed to resolve data source name dn654 dn655 dn656 dn657 dn658 dn659 dn660 dn661 dn662 dn663 dn664 dn665 dn666 dn667 dn668 dn669 dn670 dn671 dn672 dn673 dn674 dn675 dn676 dn677 dn678 dn679 dn680 dn681 dn682 dn683 dn684 dn685 dn686 dn687 dn688 dn689 dn690 dn691 dn692 dn693 dn694 dn695 dn696 dn697 dn698 dn699 dn700 dn701 dn702 dn703 dn704 dn705 dn706 dn707 dn708 dn709 dn710 dn711 dn712 dn713 dn714 dn715 dn716 dn717 dn718 dn719 dn720 dn721 dn722 dn723 dn724 dn725 dn726 dn727 dn728 dn729 dn730 dn731 dn732 dn733 dn734 dn735 dn736 dn737 dn738 dn739 dn740 dn741 dn742 dn743 dn744 dn745 dn746 dn747 dn748 dn749 dn750 dn751 dn752 dn753 dn754 dn755 dn756 dn757 dn758 dn759 dn760 dn761 dn762 dn763 dn764 dn765 dn766 dn767 dn768
+- 1131567054 2005.11.09 tbird-admin1 Nov 9 12:10:54 local@tbird-admin1 gmetad: Warning: we failed to resolve data source name dn782 dn783 dn784 dn785 dn786 dn787 dn788 dn789 dn790 dn791 dn792 dn793 dn794 dn795 dn796 dn797 dn798 dn799 dn800 dn801 dn802 dn803 dn804 dn805 dn806 dn807 dn808 dn809 dn810 dn811 dn812 dn813 dn814 dn815 dn816 dn817 dn818 dn819 dn820 dn821 dn822 dn823 dn824 dn825 dn826 dn827 dn828 dn829 dn830 dn831 dn832 dn833 dn834 dn835 dn836 dn837 dn838 dn839 dn840 dn841 dn842 dn843 dn844 dn845 dn846 dn847 dn848 dn849 dn850 dn851 dn852 dn853 dn854 dn855 dn856 dn857 dn858 dn859 dn860 dn861 dn862 dn863 dn864 dn865 dn866 dn867 dn868 dn869 dn870 dn871 dn872 dn873 dn874 dn875 dn876 dn877 dn878 dn879 dn880 dn881 dn882 dn883 dn884 dn885 dn886 dn887 dn888 dn889 dn890 dn891 dn892 dn893 dn894 dn895 dn896
+---
+len=136
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 e1000: eth0: e1000_watchdog: NIC Link is Up 1000 Mbps Full Duplex
+---
+len=125
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 drivers/usb/input/hid-core.c: v2.0:USB HID core driver
+---
+len=131
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 divert: not allocating divert_blk for non-ethernet device lo
+---
+len=120
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 Vendor: MegaRAID Model: LD 0 RAID1 139G Rev: 516A
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 syslog-ng[1605]: syslog-ng version 1.6.7 starting
+---
+len=190
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 xinetd[1798]: Reading included configuration file: /etc/xinetd.d/chargen-udp [file=/etc/xinetd.d/chargen-udp] [line=18]
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 xinetd[1798]: Reading included configuration file: /etc/xinetd.d/daytime-udp [file=/etc/xinetd.d/daytime-udp] [line=15]
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 xinetd[1798]: Reading included configuration file: /etc/xinetd.d/krb5-telnet [file=/etc/xinetd.d/krb5-telnet] [line=13]
+---
+len=93
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 SELinux: Initializing.
+---
+len=176
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 xinetd[1798]: Reading included configuration file: /etc/xinetd.d/echo [file=/etc/xinetd.d/echo] [line=15]
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 xinetd[1798]: Reading included configuration file: /etc/xinetd.d/tftp [file=/etc/xinetd.d/tftp] [line=13]
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 xinetd[1798]: Reading included configuration file: /etc/xinetd.d/time [file=/etc/xinetd.d/time] [line=18]
+---
+len=273
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 Kernel command line: root=LABEL=/ initrd=/x86_64/initrd-2.6.9-5.0.5.EL-lustre-1.4.2-perfctr-admin console=tty0 console=ttyS0,19200 fastboot BOOT_IMAGE=/x86_64/vmlinuz-2.6.9-5.0.5.EL-lustre-1.4.2-perfctr
+---
+len=152
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 Intel E7520/7320/7525 detected.<6>pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ioctl32(fdisk:515): Unknown cmd fd(5) cmd(80081272){00} arg(ffffda44) on /dev/sda
+---
+len=128
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 IP: routing cache hash table of 65536 buckets, 1024Kbytes
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+---
+len=135
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 IOAPIC[2]: apic_id 10, version 32, address 0xfec83000, GSI 64-87
+---
+len=134
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 IOAPIC[1]: apic_id 9, version 32, address 0xfec80000, GSI 32-55
+---
+len=97
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 Console: colour VGA+ 80x25
+- 1131567052 2005.11.09 #8# Nov 9 12:10:52 #8#/#8# sshd2[4769]: Now running on #29#'s privileges.
+- 1131567055 2005.11.09 #8# Nov 9 12:10:55 #8#/#8# sshd2[4895]: Now running on #29#'s privileges.
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 xinetd[1798]: removing ftp
+---
+len=115
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: RSDP (v000 DELL ) @ 0x00000000000fd650
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ip_tables: (C) 2000-2002 Netfilter core team
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ip_tables: (C) 2000-2002 Netfilter core team
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ip_tables: (C) 2000-2002 Netfilter core team
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ip_tables: (C) 2000-2002 Netfilter core team
+---
+len=140
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: PCI interrupt 0000:00:06.0[A] -> GSI 16 (level, low) -> IRQ 169
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: PCI interrupt 0000:02:0e.0[A] -> GSI 46 (level, low) -> IRQ 177
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: PCI interrupt 0000:02:0e.0[A] -> GSI 46 (level, low) -> IRQ 177
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: PCI interrupt 0000:06:07.0[A] -> GSI 64 (level, low) -> IRQ 185
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: PCI interrupt 0000:06:07.0[A] -> GSI 64 (level, low) -> IRQ 185
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: PCI interrupt 0000:07:08.0[A] -> GSI 65 (level, low) -> IRQ 193
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: PCI interrupt 0000:07:08.0[A] -> GSI 65 (level, low) -> IRQ 193
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: PCI interrupt 0000:09:0d.0[A] -> GSI 18 (level, low) -> IRQ 201
+---
+len=129
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: PCI Interrupt Link [LNKB] (IRQs 3 4 5 6 7 10 *11 12)
+---
+len=132
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: PCI Interrupt Link [LNKA] (IRQs 3 4 5 6 7 10 11 12) *14
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: PCI Interrupt Link [LNKC] (IRQs 3 4 5 6 7 10 11 12) *15
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: PCI Interrupt Routing Table [\_SB_.PCI0.PALO.DOBA._PRT]
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: PCI Interrupt Routing Table [\_SB_.PCI0.PALO.DOBB._PRT]
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: PCI Interrupt Routing Table [\_SB_.PCI0.PBHI.PXB1._PRT]
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: PCI Interrupt Routing Table [\_SB_.PCI0.PBHI.PXB2._PRT]
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 scsi[0]: scanning scsi channel 0 [Phy 0] for non-raid devices
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 scsi[0]: scanning scsi channel 1 [virtual] for logical drives
+---
+len=99
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: IRQ0 used by override.
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: IRQ2 used by override.
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: IRQ9 used by override.
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 VFS: Disk quotas dquot_6.5.1
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 xinetd[1798]: removing ntalk
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 xinetd[1798]: removing rsync
+---
+len=126
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: IOAPIC (id[0x08] address[0xfec00000] gsi_base[0])
+---
+len=127
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: IOAPIC (id[0x09] address[0xfec80000] gsi_base[32])
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: IOAPIC (id[0x0a] address[0xfec83000] gsi_base[64])
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: PCI Interrupt Routing Table [\_SB_.PCI0.PALO._PRT]
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: PCI Interrupt Routing Table [\_SB_.PCI0.PBHI._PRT]
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: PCI Interrupt Routing Table [\_SB_.PCI0.PBLO._PRT]
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: PCI Interrupt Routing Table [\_SB_.PCI0.PICH._PRT]
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: PCI Interrupt Routing Table [\_SB_.PCI0.VPR0._PRT]
+---
+len=96
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: (supports S0 S4 S5)
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: Interpreter enabled
+---
+len=91
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 CPU: L2 cache: 2048K
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 CPU: L2 cache: 2048K
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 CPU: L2 cache: 2048K
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 CPU: L2 cache: 2048K
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 CPU: L2 cache: 2048K
+---
+len=138
+- 1131567032 2005.11.09 aadmin1 Nov 9 12:10:32 src@aadmin1 sendmail[19649]: My unqualified host name (aadmin1) unknown; sleeping for retry
+- 1131567032 2005.11.09 badmin1 Nov 9 12:10:32 src@badmin1 sendmail[14256]: My unqualified host name (badmin1) unknown; sleeping for retry
+- 1131567033 2005.11.09 cadmin1 Nov 9 12:10:33 src@cadmin1 sendmail[22479]: My unqualified host name (cadmin1) unknown; sleeping for retry
+- 1131567033 2005.11.09 dadmin1 Nov 9 12:10:33 src@dadmin1 sendmail[27337]: My unqualified host name (dadmin1) unknown; sleeping for retry
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 megaraid cmm: #38#-rh1 (Release Date: Fri Dec 10 19:02:14 EST 2004)
+---
+len=137
+- 1131567031 2005.11.09 eadmin1 Nov 9 12:10:31 src@eadmin1 sendmail[7417]: My unqualified host name (eadmin1) unknown; sleeping for retry
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 IA32 emulation $Id: sys_ia32.c,v 1.32 2002/03/24 13:02:28 ak Exp $
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 selinux_register_security: Registering secondary module capability
+---
+len=118
+- 1131567001 2005.11.09 eadmin1 Nov 9 12:10:01 src@eadmin1 crond[4310]: (root) CMD (/projects/tbird/temps/get_temps e)
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 CPU0: Intel(R) Xeon(TM) CPU 3.60GHz stepping 03
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 megaraid: fw version:[516A] bios version:[H418]
+---
+len=100
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 CPU: Physical Processor ID: 3
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 CPU: Physical Processor ID: 3
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 SELinux: Disabled at runtime.
+- 1131567052 2005.11.09 #8# Nov 9 12:10:52 #8#/#8# sshd[4718]: connection lost: 'Connection closed.'
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 xinetd[1798]: removing klogin
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 xinetd[1798]: removing kshell
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 xinetd[1798]: removing telnet
+- 1131567240 2005.11.09 #8# Nov 9 12:14:00 #8#/#8# sshd[4893]: connection lost: 'Connection closed.'
+---
+len=170
+- 1131566503 2005.11.09 aadmin3 Nov 9 12:01:43 src@aadmin3 dhcpd: DHCPREQUEST for 10.100.4.251 (10.100.0.250) from 00:11:43:e3:ba:c3 via eth1: unknown lease 10.100.4.251.
+- 1131566503 2005.11.09 aadmin4 Nov 9 12:01:43 src@aadmin4 dhcpd: DHCPREQUEST for 10.100.4.251 (10.100.0.250) from 00:11:43:e3:ba:c3 via eth1: unknown lease 10.100.4.251.
+- 1131566525 2005.11.09 aadmin2 Nov 9 12:02:05 src@aadmin2 dhcpd: DHCPREQUEST for 10.100.4.251 (10.100.0.250) from 00:11:43:e3:ba:c3 via eth1: unknown lease 10.100.4.251.
+- 1131566525 2005.11.09 aadmin3 Nov 9 12:02:05 src@aadmin3 dhcpd: DHCPREQUEST for 10.100.4.251 (10.100.0.250) from 00:11:43:e3:ba:c3 via eth1: unknown lease 10.100.4.251.
+- 1131566525 2005.11.09 aadmin4 Nov 9 12:02:05 src@aadmin4 dhcpd: DHCPREQUEST for 10.100.4.251 (10.100.0.250) from 00:11:43:e3:ba:c3 via eth1: unknown lease 10.100.4.251.
+- 1131566527 2005.11.09 aadmin2 Nov 9 12:02:07 src@aadmin2 dhcpd: DHCPREQUEST for 10.100.4.251 (10.100.0.250) from 00:11:43:e3:ba:c3 via eth1: unknown lease 10.100.4.251.
+- 1131566527 2005.11.09 aadmin3 Nov 9 12:02:07 src@aadmin3 dhcpd: DHCPREQUEST for 10.100.4.251 (10.100.0.250) from 00:11:43:e3:ba:c3 via eth1: unknown lease 10.100.4.251.
+- 1131566527 2005.11.09 aadmin4 Nov 9 12:02:07 src@aadmin4 dhcpd: DHCPREQUEST for 10.100.4.251 (10.100.0.250) from 00:11:43:e3:ba:c3 via eth1: unknown lease 10.100.4.251.
+---
+len=130
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 TCP: Hash tables configured (established 262144 bind 65536)
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 megaraid: #39# (Release Date: Mon Sep 27 22:15:07 EDT 2004)
+---
+len=271
+- 1131566494 2005.11.09 cadmin1 Nov 9 12:01:34 src@cadmin1 sendmail[19391]: jA9J1Wd7019391: to=root, ctladdr=root (0/0), delay=00:00:02, xdelay=00:00:00, mailer=relay, pri=1624553, relay=[127.0.0.1] [127.0.0.1], dsn=4.0.0, stat=Deferred: Connection refused by [127.0.0.1]
+- 1131566495 2005.11.09 badmin1 Nov 9 12:01:35 src@badmin1 sendmail[11176]: jA9J1WSU011176: to=root, ctladdr=root (0/0), delay=00:00:03, xdelay=00:00:00, mailer=relay, pri=1623894, relay=[127.0.0.1] [127.0.0.1], dsn=4.0.0, stat=Deferred: Connection refused by [127.0.0.1]
+- 1131566495 2005.11.09 dadmin1 Nov 9 12:01:35 src@dadmin1 sendmail[24258]: jA9J1WFE024258: to=root, ctladdr=root (0/0), delay=00:00:03, xdelay=00:00:00, mailer=relay, pri=1627080, relay=[127.0.0.1] [127.0.0.1], dsn=4.0.0, stat=Deferred: Connection refused by [127.0.0.1]
+- 1131566501 2005.11.09 aadmin1 Nov 9 12:01:41 src@aadmin1 sendmail[16560]: jA9J1dQ7016560: to=root, ctladdr=root (0/0), delay=00:00:02, xdelay=00:00:00, mailer=relay, pri=1625423, relay=[127.0.0.1] [127.0.0.1], dsn=4.0.0, stat=Deferred: Connection refused by [127.0.0.1]
+- 1131567094 2005.11.09 aadmin1 Nov 9 12:11:34 src@aadmin1 sendmail[19649]: jA9JBWxH019649: to=root, ctladdr=root (0/0), delay=00:00:02, xdelay=00:00:00, mailer=relay, pri=1626872, relay=[127.0.0.1] [127.0.0.1], dsn=4.0.0, stat=Deferred: Connection refused by [127.0.0.1]
+- 1131567094 2005.11.09 badmin1 Nov 9 12:11:34 src@badmin1 sendmail[14256]: jA9JBWEr014256: to=root, ctladdr=root (0/0), delay=00:00:02, xdelay=00:00:00, mailer=relay, pri=1623894, relay=[127.0.0.1] [127.0.0.1], dsn=4.0.0, stat=Deferred: Connection refused by [127.0.0.1]
+- 1131567095 2005.11.09 cadmin1 Nov 9 12:11:35 src@cadmin1 sendmail[22479]: jA9JBXgf022479: to=root, ctladdr=root (0/0), delay=00:00:02, xdelay=00:00:00, mailer=relay, pri=1624553, relay=[127.0.0.1] [127.0.0.1], dsn=4.0.0, stat=Deferred: Connection refused by [127.0.0.1]
+- 1131567095 2005.11.09 dadmin1 Nov 9 12:11:35 src@dadmin1 sendmail[27337]: jA9JBXVI027337: to=root, ctladdr=root (0/0), delay=00:00:02, xdelay=00:00:00, mailer=relay, pri=1627080, relay=[127.0.0.1] [127.0.0.1], dsn=4.0.0, stat=Deferred: Connection refused by [127.0.0.1]
+---
+len=269
+- 1131566491 2005.11.09 eadmin1 Nov 9 12:01:31 src@eadmin1 sendmail[4306]: jA9J1UvC004306: to=root, ctladdr=root (0/0), delay=00:00:01, xdelay=00:00:00, mailer=relay, pri=659060, relay=[127.0.0.1] [127.0.0.1], dsn=4.0.0, stat=Deferred: Connection refused by [127.0.0.1]
+- 1131567091 2005.11.09 eadmin1 Nov 9 12:11:31 src@eadmin1 sendmail[7417]: jA9JBVPb007417: to=root, ctladdr=root (0/0), delay=00:00:00, xdelay=00:00:00, mailer=relay, pri=659060, relay=[127.0.0.1] [127.0.0.1], dsn=4.0.0, stat=Deferred: Connection refused by [127.0.0.1]
+---
+len=141
+- 1131566527 2005.11.09 aadmin1 Nov 9 12:02:07 src@aadmin1 dhcpd: DHCPREQUEST for 10.100.4.251 (10.100.0.250) from 00:11:43:e3:ba:c3 via eth1
+- 1131566527 2005.11.09 aadmin2 Nov 9 12:02:07 src@aadmin2 dhcpd: DHCPDISCOVER from 00:11:43:e3:ba:c3 via eth1: network A_net: no free leases
+- 1131566527 2005.11.09 aadmin2 Nov 9 12:02:07 src@aadmin2 dhcpd: DHCPDISCOVER from 00:11:43:e3:ba:c3 via eth1: network A_net: no free leases
+- 1131566527 2005.11.09 aadmin3 Nov 9 12:02:07 src@aadmin3 dhcpd: DHCPDISCOVER from 00:11:43:e3:ba:c3 via eth1: network A_net: no free leases
+- 1131566527 2005.11.09 aadmin3 Nov 9 12:02:07 src@aadmin3 dhcpd: DHCPDISCOVER from 00:11:43:e3:ba:c3 via eth1: network A_net: no free leases
+- 1131566527 2005.11.09 aadmin4 Nov 9 12:02:07 src@aadmin4 dhcpd: DHCPDISCOVER from 00:11:43:e3:ba:c3 via eth1: network A_net: no free leases
+- 1131566527 2005.11.09 aadmin4 Nov 9 12:02:07 src@aadmin4 dhcpd: DHCPDISCOVER from 00:11:43:e3:ba:c3 via eth1: network A_net: no free leases
+- 1131567091 2005.11.09 eadmin1 Nov 9 12:11:31 src@eadmin1 sendmail[7417]: unable to qualify my own domain name (eadmin1) -- using short name
+---
+len=148
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: FADT (v001 DELL PE BKC 0x00000001 MSFT 0x0100000a) @ 0x00000000000fd6b0
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: HPET (v001 DELL PE BKC 0x00000001 MSFT 0x0100000a) @ 0x00000000000fd81c
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: MADT (v001 DELL PE BKC 0x00000001 MSFT 0x0100000a) @ 0x00000000000fd724
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: MCFG (v001 DELL PE BKC 0x00000001 MSFT 0x0100000a) @ 0x00000000000fd854
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: RSDT (v001 DELL PE BKC 0x00000001 MSFT 0x0100000a) @ 0x00000000000fd664
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: SPCR (v001 DELL PE BKC 0x00000001 MSFT 0x0100000a) @ 0x00000000000fd7cc
+- 1131567055 2005.11.09 tbird-admin1 Nov 9 12:10:55 local@tbird-admin1 sshd[1761]: error: Bind to port 22 on 0.0.0.0 failed: Address already in use.
+- 1131567306 2005.11.09 en14 Nov 9 12:15:06 en14/en14 smartd[1971]: Device: /dev/sda, Temperature changed -2 Celsius to 26 Celsius since last report
+---
+len=198
+- 1131566491 2005.11.09 eadmin1 Nov 9 12:01:31 src@eadmin1 sendmail[4306]: jA9J1UvC004306: from=root, size=629060, class=0, nrcpts=1, msgid=<200511091901.jA9J1UvC004306@eadmin1>, relay=#7#@localhost
+- 1131567091 2005.11.09 eadmin1 Nov 9 12:11:31 src@eadmin1 sendmail[7417]: jA9JBVPb007417: from=root, size=629060, class=0, nrcpts=1, msgid=<200511091911.jA9JBVPb007417@eadmin1>, relay=#7#@localhost
+---
+len=101
+- 1131567052 2005.11.09 #8# Nov 9 12:10:52 #8#/#8# sshd[4718]: Local disconnected: Connection closed.
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 xinetd[1798]: removing chargen
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 xinetd[1798]: removing chargen
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 xinetd[1798]: removing daytime
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 xinetd[1798]: removing daytime
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 xinetd[1798]: removing eklogin
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 xinetd[1798]: removing printer
+- 1131567240 2005.11.09 #8# Nov 9 12:14:00 #8#/#8# sshd[4893]: Local disconnected: Connection closed.
+---
+len=154
+- 1131567226 2005.11.09 tbird-sm1 Nov 9 12:13:46 src@tbird-sm1 ib_sm.x[24904]: [ib_sm_sweep.c:1831]: ********************** NEW SWEEP ********************
+- 1131567240 2005.11.09 tbird-sm1 Nov 9 12:14:00 src@tbird-sm1 ib_sm.x[24904]: [ib_sm_sweep.c:1831]: ********************** NEW SWEEP ********************
+- 1131567254 2005.11.09 tbird-sm1 Nov 9 12:14:14 src@tbird-sm1 ib_sm.x[24904]: [ib_sm_sweep.c:1831]: ********************** NEW SWEEP ********************
+- 1131567268 2005.11.09 tbird-sm1 Nov 9 12:14:28 src@tbird-sm1 ib_sm.x[24904]: [ib_sm_sweep.c:1831]: ********************** NEW SWEEP ********************
+- 1131567282 2005.11.09 tbird-sm1 Nov 9 12:14:42 src@tbird-sm1 ib_sm.x[24904]: [ib_sm_sweep.c:1831]: ********************** NEW SWEEP ********************
+- 1131567296 2005.11.09 tbird-sm1 Nov 9 12:14:56 src@tbird-sm1 ib_sm.x[24904]: [ib_sm_sweep.c:1831]: ********************** NEW SWEEP ********************
+- 1131567310 2005.11.09 tbird-sm1 Nov 9 12:15:10 src@tbird-sm1 ib_sm.x[24904]: [ib_sm_sweep.c:1831]: ********************** NEW SWEEP ********************
+- 1131567324 2005.11.09 tbird-sm1 Nov 9 12:15:24 src@tbird-sm1 ib_sm.x[24904]: [ib_sm_sweep.c:1831]: ********************** NEW SWEEP ********************
+---
+len=107
+- 1131567144 2005.11.09 cn11 Nov 9 12:12:24 cn11/cn11 ntpd[12749]: synchronized to 10.100.20.250, stratum 3
+- 1131567159 2005.11.09 bn10 Nov 9 12:12:39 bn10/bn10 ntpd[22328]: synchronized to 10.100.20.250, stratum 3
+- 1131567164 2005.11.09 cn26 Nov 9 12:12:44 cn26/cn26 ntpd[30974]: synchronized to 10.100.20.250, stratum 3
+- 1131567206 2005.11.09 bn51 Nov 9 12:13:26 bn51/bn51 ntpd[22922]: synchronized to 10.100.16.250, stratum 3
+- 1131567213 2005.11.09 dn38 Nov 9 12:13:33 dn38/dn38 ntpd[20634]: synchronized to 10.100.26.250, stratum 3
+- 1131567214 2005.11.09 cn91 Nov 9 12:13:34 cn91/cn91 ntpd[19566]: synchronized to 10.100.20.250, stratum 3
+- 1131567237 2005.11.09 cn25 Nov 9 12:13:57 cn25/cn25 ntpd[15539]: synchronized to 10.100.20.250, stratum 3
+- 1131567290 2005.11.09 cn32 Nov 9 12:14:50 cn32/cn32 ntpd[16725]: synchronized to 10.100.20.250, stratum 3
+---
+len=104
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 NET: Registered protocol family 1
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 NET: Registered protocol family 2
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ksign: Installing public key data
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 scsi0 : LSI Logic MegaRAID driver
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 sda: asking for cache data failed
+- 1131567098 2005.11.09 bn1 Nov 9 12:11:38 bn1/bn1 ntpd[23146]: synchronized to 10.100.20.250, stratum 3
+- 1131567132 2005.11.09 cn5 Nov 9 12:12:12 cn5/cn5 ntpd[14426]: synchronized to 10.100.20.250, stratum 3
+- 1131567331 2005.11.09 bn3 Nov 9 12:15:31 bn3/bn3 ntpd[22869]: synchronized to 10.100.16.250, stratum 3
+---
+len=114
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 - User ID: CentOS-4 (Kernel Module GPG key)
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 CPU: Trace cache: 12K uops, L1 D cache: 16K
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 CPU: Trace cache: 12K uops, L1 D cache: 16K
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 CPU: Trace cache: 12K uops, L1 D cache: 16K
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 CPU: Trace cache: 12K uops, L1 D cache: 16K
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 CPU: Trace cache: 12K uops, L1 D cache: 16K
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 mice: PS/2 mouse device common for all mice
+- 1131567055 2005.11.09 tbird-admin1 Nov 9 12:10:55 local@tbird-admin1 sshd[1761]: Server listening on :: port 22.
+---
+len=142
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: PCI Interrupt Link [LNKF] (IRQs 3 4 5 6 7 10 11 12) *0, disabled.
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: PCI Interrupt Link [LNKG] (IRQs 3 4 5 6 7 10 11 12) *0, disabled.
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: PCI Interrupt Link [LNKH] (IRQs 3 4 5 6 7 10 11 12) *0, disabled.
+- 1131567054 2005.11.09 tbird-admin1 Nov 9 12:10:54 local@tbird-admin1 gmetad: Warning: we failed to resolve trusted host name dadmin3 dadmin4
+- 1131567092 2005.11.09 aadmin1 Nov 9 12:11:32 src@aadmin1 sendmail[19649]: unable to qualify my own domain name (aadmin1) -- using short name
+- 1131567092 2005.11.09 badmin1 Nov 9 12:11:32 src@badmin1 sendmail[14256]: unable to qualify my own domain name (badmin1) -- using short name
+- 1131567093 2005.11.09 cadmin1 Nov 9 12:11:33 src@cadmin1 sendmail[22479]: unable to qualify my own domain name (cadmin1) -- using short name
+- 1131567093 2005.11.09 dadmin1 Nov 9 12:11:33 src@dadmin1 sendmail[27337]: unable to qualify my own domain name (dadmin1) -- using short name
+---
+len=92
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 md: ... autorun DONE.
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 md: ... autorun DONE.
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 mtrr: v2.0 (20020519)
+---
+len=189
+- 1131567323 2005.11.09 tbird-admin1 Nov 9 12:15:23 local@tbird-admin1 /apps/x86_64/system/ganglia-3.0.1/sbin/gmetad[1682]: data_thread() got not answer from any [Thunderbird_C4] datasource
+- 1131567324 2005.11.09 tbird-admin1 Nov 9 12:15:24 local@tbird-admin1 /apps/x86_64/system/ganglia-3.0.1/sbin/gmetad[1682]: data_thread() got not answer from any [Thunderbird_B1] datasource
+- 1131567325 2005.11.09 tbird-admin1 Nov 9 12:15:25 local@tbird-admin1 /apps/x86_64/system/ganglia-3.0.1/sbin/gmetad[1682]: data_thread() got not answer from any [Thunderbird_A3] datasource
+- 1131567325 2005.11.09 tbird-admin1 Nov 9 12:15:25 local@tbird-admin1 /apps/x86_64/system/ganglia-3.0.1/sbin/gmetad[1682]: data_thread() got not answer from any [Thunderbird_B5] datasource
+- 1131567327 2005.11.09 tbird-admin1 Nov 9 12:15:27 local@tbird-admin1 /apps/x86_64/system/ganglia-3.0.1/sbin/gmetad[1682]: data_thread() got not answer from any [Thunderbird_B2] datasource
+- 1131567327 2005.11.09 tbird-admin1 Nov 9 12:15:27 local@tbird-admin1 /apps/x86_64/system/ganglia-3.0.1/sbin/gmetad[1682]: data_thread() got not answer from any [Thunderbird_B6] datasource
+- 1131567328 2005.11.09 tbird-admin1 Nov 9 12:15:28 local@tbird-admin1 /apps/x86_64/system/ganglia-3.0.1/sbin/gmetad[1682]: data_thread() got not answer from any [Thunderbird_A8] datasource
+- 1131567330 2005.11.09 tbird-admin1 Nov 9 12:15:30 local@tbird-admin1 /apps/x86_64/system/ganglia-3.0.1/sbin/gmetad[1682]: data_thread() got not answer from any [Thunderbird_D7] datasource
+---
+len=112
+- 1131566461 2005.11.09 eadmin2 Nov 9 12:01:01 src@eadmin2 crond[12637]: (root) CMD (run-parts /etc/cron.hourly)
+- 1131566925 2005.11.09 tbird-admin1 Nov 9 12:08:45 local@tbird-admin1 ntpd[1815]: kernel time sync enabled 0001
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 Vendor: PE/PV Model: 1x2 SCSI BP Rev: 1.0
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 serio: i8042 AUX port at 0x60,0x64 irq 12
+- 1131567052 2005.11.09 tbird-admin1 Nov 9 12:10:52 local@tbird-admin1 netfs: Mounting other filesystems: failed
+---
+len=122
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: LAPIC_NMI (acpi_id[0x02] high edge lint[0x1])
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: LAPIC_NMI (acpi_id[0x03] high edge lint[0x1])
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: LAPIC_NMI (acpi_id[0x04] high edge lint[0x1])
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: PCI Interrupt Routing Table [\_SB_.PCI0._PRT]
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 EXT3-fs: mounted filesystem with ordered data mode.
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 EXT3-fs: mounted filesystem with ordered data mode.
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 EXT3-fs: mounted filesystem with ordered data mode.
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 checking TSC synchronization across 4 CPUs: passed.
+---
+len=111
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 serio: i8042 KBD port at 0x60,0x64 irq 1
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 time.c: Detected 3591.360 MHz processor.
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ts_fixup: Creating Topspin /dev entries:
+- 1131567094 2005.11.09 aadmin1 Nov 9 12:11:34 src@aadmin1 crond(pam_unix)[16570]: session closed for user root
+- 1131567094 2005.11.09 badmin1 Nov 9 12:11:34 src@badmin1 crond(pam_unix)[11179]: session closed for user root
+- 1131567095 2005.11.09 cadmin1 Nov 9 12:11:35 src@cadmin1 crond(pam_unix)[19394]: session closed for user root
+- 1131567095 2005.11.09 dadmin1 Nov 9 12:11:35 src@dadmin1 crond(pam_unix)[24261]: session closed for user root
+- 1131567278 2005.11.09 dn1012 Nov 9 12:14:38 dn1012/dn1012 ntpd[509]: synchronized to 10.100.26.250, stratum 3
+---
+len=121
+- 1131566527 2005.11.09 aadmin1 Nov 9 12:02:07 src@aadmin1 dhcpd: DHCPOFFER on 10.100.4.251 to 00:11:43:e3:ba:c3 via eth1
+- 1131566527 2005.11.09 aadmin1 Nov 9 12:02:07 src@aadmin1 dhcpd: DHCPOFFER on 10.100.4.251 to 00:11:43:e3:ba:c3 via eth1
+- 1131567001 2005.11.09 eadmin1 Nov 9 12:10:01 src@eadmin1 crond(pam_unix)[4309]: session opened for user root by (uid=0)
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: LAPIC (acpi_id[0x01] lapic_id[0x00] enabled)
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: LAPIC (acpi_id[0x02] lapic_id[0x06] enabled)
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: LAPIC (acpi_id[0x03] lapic_id[0x01] enabled)
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: LAPIC (acpi_id[0x04] lapic_id[0x07] enabled)
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 xinetd[1798]: Started working: 1 available service
+---
+len=133
+- 1131567230 2005.11.09 tbird-sm1 Nov 9 12:13:50 src@tbird-sm1 ib_sm.x[24904]: [ib_sm_sweep.c:1482]: No configuration change required
+- 1131567244 2005.11.09 tbird-sm1 Nov 9 12:14:04 src@tbird-sm1 ib_sm.x[24904]: [ib_sm_sweep.c:1482]: No configuration change required
+- 1131567258 2005.11.09 tbird-sm1 Nov 9 12:14:18 src@tbird-sm1 ib_sm.x[24904]: [ib_sm_sweep.c:1482]: No configuration change required
+- 1131567272 2005.11.09 tbird-sm1 Nov 9 12:14:32 src@tbird-sm1 ib_sm.x[24904]: [ib_sm_sweep.c:1482]: No configuration change required
+- 1131567286 2005.11.09 tbird-sm1 Nov 9 12:14:46 src@tbird-sm1 ib_sm.x[24904]: [ib_sm_sweep.c:1482]: No configuration change required
+- 1131567300 2005.11.09 tbird-sm1 Nov 9 12:15:00 src@tbird-sm1 ib_sm.x[24904]: [ib_sm_sweep.c:1482]: No configuration change required
+- 1131567314 2005.11.09 tbird-sm1 Nov 9 12:15:14 src@tbird-sm1 ib_sm.x[24904]: [ib_sm_sweep.c:1482]: No configuration change required
+- 1131567328 2005.11.09 tbird-sm1 Nov 9 12:15:28 src@tbird-sm1 ib_sm.x[24904]: [ib_sm_sweep.c:1482]: No configuration change required
+---
+len=304
+- 1131567054 2005.11.09 tbird-admin1 Nov 9 12:10:54 local@tbird-admin1 /apps/x86_64/system/ganglia-3.0.1/sbin/gmetad[1691]: RRD_update (/var/lib/ganglia/rrds/unspecified/badmin3/disk_total.rrd): illegal attempt to update using time 1131559854 when last update time is 1131559854 (minimum one second step)
+---
+len=110
+- 1131567324 2005.11.09 cn756 Nov 9 12:15:24 cn756/cn756 ntpd[28777]: synchronized to 10.100.20.250, stratum 3
+- 1131567327 2005.11.09 dn125 Nov 9 12:15:27 dn125/dn125 ntpd[31993]: synchronized to 10.100.24.250, stratum 3
+- 1131567329 2005.11.09 bn512 Nov 9 12:15:29 bn512/bn512 ntpd[28490]: synchronized to 10.100.12.250, stratum 3
+- 1131567329 2005.11.09 cn710 Nov 9 12:15:29 cn710/cn710 ntpd[19103]: synchronized to 10.100.20.250, stratum 3
+- 1131567330 2005.11.09 bn633 Nov 9 12:15:30 bn633/bn633 ntpd[23704]: synchronized to 10.100.16.250, stratum 3
+- 1131567330 2005.11.09 bn964 Nov 9 12:15:30 bn964/bn964 ntpd[15605]: synchronized to 10.100.22.250, stratum 3
+- 1131567331 2005.11.09 cn918 Nov 9 12:15:31 cn918/cn918 ntpd[29960]: synchronized to 10.100.22.250, stratum 3
+- 1131567332 2005.11.09 cn390 Nov 9 12:15:32 cn390/cn390 ntpd[10152]: synchronized to 10.100.20.250, stratum 3
+---
+len=103
+- 1131566461 2005.11.09 dn3 Nov 9 12:01:01 dn3/dn3 crond[2908]: (root) CMD (run-parts /etc/cron.hourly)
+- 1131566462 2005.11.09 #8# Nov 9 12:01:02 #8#/#8# crond(pam_unix)[23469]: session closed for user root
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 rc: Starting ts_fixup: succeeded
+- 1131567054 2005.11.09 tbird-admin1 Nov 9 12:10:54 local@tbird-admin1 gmetad: gmetad startup succeeded
+- 1131567060 2005.11.09 tbird-admin1 Nov 9 12:11:00 local@tbird-admin1 xinetd: xinetd startup succeeded
+---
+len=200
+- 1131566494 2005.11.09 cadmin1 Nov 9 12:01:34 src@cadmin1 sendmail[19391]: jA9J1Wd7019391: from=root, size=1594553, class=0, nrcpts=1, msgid=<200511091901.jA9J1Wd7019391@cadmin1>, relay=#7#@localhost
+- 1131566495 2005.11.09 badmin1 Nov 9 12:01:35 src@badmin1 sendmail[11176]: jA9J1WSU011176: from=root, size=1593894, class=0, nrcpts=1, msgid=<200511091901.jA9J1WSU011176@badmin1>, relay=#7#@localhost
+- 1131566495 2005.11.09 dadmin1 Nov 9 12:01:35 src@dadmin1 sendmail[24258]: jA9J1WFE024258: from=root, size=1597080, class=0, nrcpts=1, msgid=<200511091901.jA9J1WFE024258@dadmin1>, relay=#7#@localhost
+- 1131566501 2005.11.09 aadmin1 Nov 9 12:01:41 src@aadmin1 sendmail[16560]: jA9J1dQ7016560: from=root, size=1595423, class=0, nrcpts=1, msgid=<200511091901.jA9J1dQ7016560@aadmin1>, relay=#7#@localhost
+- 1131567094 2005.11.09 aadmin1 Nov 9 12:11:34 src@aadmin1 sendmail[19649]: jA9JBWxH019649: from=root, size=1596872, class=0, nrcpts=1, msgid=<200511091911.jA9JBWxH019649@aadmin1>, relay=#7#@localhost
+- 1131567094 2005.11.09 badmin1 Nov 9 12:11:34 src@badmin1 sendmail[14256]: jA9JBWEr014256: from=root, size=1593894, class=0, nrcpts=1, msgid=<200511091911.jA9JBWEr014256@badmin1>, relay=#7#@localhost
+- 1131567095 2005.11.09 cadmin1 Nov 9 12:11:35 src@cadmin1 sendmail[22479]: jA9JBXgf022479: from=root, size=1594553, class=0, nrcpts=1, msgid=<200511091911.jA9JBXgf022479@cadmin1>, relay=#7#@localhost
+- 1131567095 2005.11.09 dadmin1 Nov 9 12:11:35 src@dadmin1 sendmail[27337]: jA9JBXVI027337: from=root, size=1597080, class=0, nrcpts=1, msgid=<200511091911.jA9JBXVI027337@dadmin1>, relay=#7#@localhost
+---
+len=106
+- 1131566503 2005.11.09 dn77 Nov 9 12:01:43 dn77/dn77 ntpd[9978]: synchronized to 10.100.30.250, stratum 3
+- 1131567015 2005.11.09 bn37 Nov 9 12:10:15 bn37/bn37 ntpd[2259]: synchronized to 10.100.22.250, stratum 3
+- 1131567029 2005.11.09 dn82 Nov 9 12:10:29 dn82/dn82 ntpd[9313]: synchronized to 10.100.24.250, stratum 3
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ACPI: Local APIC address 0xfee00000
+- 1131567051 2005.11.09 #8# Nov 9 12:10:51 #8#/#8# sshd[4718]: User #29#, coming from #30#, authenticated.
+- 1131567055 2005.11.09 #8# Nov 9 12:10:55 #8#/#8# sshd[4893]: User #29#, coming from #30#, authenticated.
+- 1131567205 2005.11.09 dn82 Nov 9 12:13:25 dn82/dn82 ntpd[9313]: synchronized to 10.100.28.250, stratum 3
+- 1131567212 2005.11.09 dn89 Nov 9 12:13:32 dn89/dn89 ntpd[9741]: synchronized to 10.100.24.250, stratum 3
+---
+len=116
+- 1131566461 2005.11.09 dn73 Nov 9 12:01:01 dn73/dn73 crond(pam_unix)[2917]: session opened for user root by (uid=0)
+- 1131566461 2005.11.09 en74 Nov 9 12:01:01 en74/en74 crond(pam_unix)[3080]: session opened for user root by (uid=0)
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 audit: initializing netlink socket (disabled)
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 vesafb: probe of vesafb0 failed with error -6
+---
+len=105
+- 1131566461 2005.11.09 en74 Nov 9 12:01:01 en74/en74 crond(pam_unix)[3080]: session closed for user root
+- 1131566665 2005.11.09 tbird-admin1 Nov 9 12:04:25 local@tbird-admin1 ntpd[1815]: time reset +0.182379 s
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 NET: Registered protocol family 16
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 NET: Registered protocol family 17
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 PCI: Probing PCI hardware (bus 00)
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 portmap: portmap startup succeeded
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 usbcore: registered new driver hub
+- 1131567055 2005.11.09 tbird-admin1 Nov 9 12:10:55 local@tbird-admin1 NET: Registered protocol family 10
+---
+len=113
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ide4: Wait for ready failed before probe !
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 ide5: Wait for ready failed before probe !
+- 1131567051 2005.11.09 cn1011 Nov 9 12:10:51 cn1011/cn1011 ntpd[19603]: synchronized to 10.100.16.250, stratum 3
+- 1131567052 2005.11.09 tbird-admin1 Nov 9 12:10:52 local@tbird-admin1 netfs: Mounting NFS filesystems: succeeded
+- 1131567080 2005.11.09 cn1000 Nov 9 12:11:20 cn1000/cn1000 ntpd[19233]: synchronized to 10.100.18.250, stratum 3
+- 1131567119 2005.11.09 cn1014 Nov 9 12:11:59 cn1014/cn1014 ntpd[19389]: synchronized to 10.100.20.250, stratum 3
+- 1131567158 2005.11.09 bn1010 Nov 9 12:12:38 bn1010/bn1010 ntpd[15508]: synchronized to 10.100.16.250, stratum 3
+- 1131567212 2005.11.09 cn1007 Nov 9 12:13:32 cn1007/cn1007 ntpd[19131]: synchronized to 10.100.16.250, stratum 3
+---
+len=296
+- 1131566717 2005.11.09 tbird-admin1 Nov 9 12:05:17 local@tbird-admin1 /apps/x86_64/system/ganglia-3.0.1/sbin/gmetad[1682]: RRD_update (/var/lib/ganglia/rrds/D Nodes/dn731/pkts_out.rrd): illegal attempt to update using time 1131563117 when last update time is 1131563117 (minimum one second step)
+- 1131566749 2005.11.09 tbird-admin1 Nov 9 12:05:49 local@tbird-admin1 /apps/x86_64/system/ganglia-3.0.1/sbin/gmetad[1682]: RRD_update (/var/lib/ganglia/rrds/D Nodes/dn731/pkts_out.rrd): illegal attempt to update using time 1131563149 when last update time is 1131563149 (minimum one second step)
+- 1131566919 2005.11.09 tbird-admin1 Nov 9 12:08:39 local@tbird-admin1 /apps/x86_64/system/ganglia-3.0.1/sbin/gmetad[1682]: RRD_update (/var/lib/ganglia/rrds/D Nodes/dn731/pkts_out.rrd): illegal attempt to update using time 1131563319 when last update time is 1131563319 (minimum one second step)
+- 1131566949 2005.11.09 tbird-admin1 Nov 9 12:09:09 local@tbird-admin1 /apps/x86_64/system/ganglia-3.0.1/sbin/gmetad[1682]: RRD_update (/var/lib/ganglia/rrds/D Nodes/dn731/pkts_out.rrd): illegal attempt to update using time 1131563349 when last update time is 1131563349 (minimum one second step)
+- 1131567012 2005.11.09 tbird-admin1 Nov 9 12:10:12 local@tbird-admin1 /apps/x86_64/system/ganglia-3.0.1/sbin/gmetad[1682]: RRD_update (/var/lib/ganglia/rrds/D Nodes/dn731/pkts_out.rrd): illegal attempt to update using time 1131563412 when last update time is 1131563412 (minimum one second step)
+- 1131567054 2005.11.09 tbird-admin1 Nov 9 12:10:54 local@tbird-admin1 /apps/x86_64/system/ganglia-3.0.1/sbin/gmetad[1691]: RRD_update (/var/lib/ganglia/rrds/C Nodes/cn776/pkts_out.rrd): illegal attempt to update using time 1131559854 when last update time is 1131559854 (minimum one second step)
+- 1131567054 2005.11.09 tbird-admin1 Nov 9 12:10:54 local@tbird-admin1 /apps/x86_64/system/ganglia-3.0.1/sbin/gmetad[1691]: RRD_update (/var/lib/ganglia/rrds/D Nodes/dn731/pkts_out.rrd): illegal attempt to update using time 1131559854 when last update time is 1131559854 (minimum one second step)
+- 1131567073 2005.11.09 tbird-admin1 Nov 9 12:11:13 local@tbird-admin1 /apps/x86_64/system/ganglia-3.0.1/sbin/gmetad[1682]: RRD_update (/var/lib/ganglia/rrds/D Nodes/dn731/pkts_out.rrd): illegal attempt to update using time 1131563473 when last update time is 1131563473 (minimum one second step)
+---
+len=102
+- 1131566461 2005.11.09 dn3 Nov 9 12:01:01 dn3/dn3 crond(pam_unix)[2907]: session closed for user root
+- 1131566479 2005.11.09 #8# Nov 9 12:01:19 #8#/#8# sshd[19023]: Local disconnected: Connection closed.
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 PCI: Using ACPI for IRQ routing
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 PCI: Using MMCONFIG at e0000000
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 PCI: Using configuration type 1
+---
+len=109
+- 1131567185 2005.11.09 dn869 Nov 9 12:13:05 dn869/dn869 ntpd[3153]: synchronized to 10.100.30.250, stratum 3
+- 1131567194 2005.11.09 cn942 Nov 9 12:13:14 cn942/cn942 ntpd[1515]: synchronized to 10.100.16.250, stratum 3
+- 1131567214 2005.11.09 dn678 Nov 9 12:13:34 dn678/dn678 ntpd[1567]: synchronized to 10.100.26.250, stratum 3
+- 1131567226 2005.11.09 an895 Nov 9 12:13:46 an895/an895 ntpd[2066]: synchronized to 10.100.12.250, stratum 3
+- 1131567229 2005.11.09 dn692 Nov 9 12:13:49 dn692/dn692 ntpd[3916]: synchronized to 10.100.24.250, stratum 3
+- 1131567242 2005.11.09 dn116 Nov 9 12:14:02 dn116/dn116 ntpd[6949]: synchronized to 10.100.28.250, stratum 3
+- 1131567262 2005.11.09 dn846 Nov 9 12:14:22 dn846/dn846 ntpd[3473]: synchronized to 10.100.28.250, stratum 3
+- 1131567290 2005.11.09 dn880 Nov 9 12:14:50 dn880/dn880 ntpd[2075]: synchronized to 10.100.30.250, stratum 3
+---
+len=119
+- 1131567230 2005.11.09 tbird-sm1 Nov 9 12:13:50 src@tbird-sm1 ib_sm.x[24904]: [ib_sm_sweep.c:1455]: No topology change
+- 1131567244 2005.11.09 tbird-sm1 Nov 9 12:14:04 src@tbird-sm1 ib_sm.x[24904]: [ib_sm_sweep.c:1455]: No topology change
+- 1131567258 2005.11.09 tbird-sm1 Nov 9 12:14:18 src@tbird-sm1 ib_sm.x[24904]: [ib_sm_sweep.c:1455]: No topology change
+- 1131567272 2005.11.09 tbird-sm1 Nov 9 12:14:32 src@tbird-sm1 ib_sm.x[24904]: [ib_sm_sweep.c:1455]: No topology change
+- 1131567286 2005.11.09 tbird-sm1 Nov 9 12:14:46 src@tbird-sm1 ib_sm.x[24904]: [ib_sm_sweep.c:1455]: No topology change
+- 1131567300 2005.11.09 tbird-sm1 Nov 9 12:15:00 src@tbird-sm1 ib_sm.x[24904]: [ib_sm_sweep.c:1455]: No topology change
+- 1131567314 2005.11.09 tbird-sm1 Nov 9 12:15:14 src@tbird-sm1 ib_sm.x[24904]: [ib_sm_sweep.c:1455]: No topology change
+- 1131567328 2005.11.09 tbird-sm1 Nov 9 12:15:28 src@tbird-sm1 ib_sm.x[24904]: [ib_sm_sweep.c:1455]: No topology change
+---
+len=108
+- 1131566965 2005.11.09 dn275 Nov 9 12:09:25 dn275/dn275 ntpd[908]: synchronized to 10.100.28.250, stratum 3
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 time.c: Using HPET based timekeeping.
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 usbcore: registered new driver hiddev
+- 1131567043 2005.11.09 tbird-admin1 Nov 9 12:10:43 local@tbird-admin1 usbcore: registered new driver usbhid
+- 1131567104 2005.11.09 dn597 Nov 9 12:11:44 dn597/dn597 ntpd[335]: synchronized to 10.100.26.250, stratum 3
+- 1131567108 2005.11.09 dn639 Nov 9 12:11:48 dn639/dn639 ntpd[905]: synchronized to 10.100.28.250, stratum 3
+- 1131567131 2005.11.09 dn669 Nov 9 12:12:11 dn669/dn669 ntpd[504]: synchronized to 10.100.28.250, stratum 3
+- 1131567327 2005.11.09 dn639 Nov 9 12:15:27 dn639/dn639 ntpd[905]: synchronized to 10.100.30.250, stratum 3
+---

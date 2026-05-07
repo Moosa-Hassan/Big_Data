@@ -28,6 +28,7 @@ Source of truth:
 
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 from .specs import DatasetSpec, ModeName, QueryPayload, QuerySpec
@@ -36,16 +37,46 @@ MODE_NAMES: tuple[ModeName, ...] = (
     "decompressed_text",
     "full_decompression",
     "minor_optimization",
+    "static_bloom",
 )
 BASELINE_MODE_NAME: ModeName = "decompressed_text"
-QUERY_IDS: tuple[str, ...] = ("common", "phrase", "selective", "conjunctive")
-ACTIVE_TEXT_DATASET_SLUGS: tuple[str, ...] = (
+QUERY_IDS: tuple[str, ...] = (
+    "common_token",
+    "medium_token",
+    "rare_token",
+    "common_phrase",
+    "selective_phrase",
+    "numeric_identifier",
+    "conjunctive",
+    "bloom_stress_substring",
+)
+CANONICAL_TEXT_DATASET_SLUGS: tuple[str, ...] = (
     "linux",
     "apache",
     "hdfs",
     "openstack",
     "android",
 )
+COMPLETE_TEXT_DATASET_SLUGS: tuple[str, ...] = (
+    "linux",
+    "apache",
+    "hdfs",
+    "openstack",
+    "android",
+    "zookeeper",
+    "healthapp",
+    "hpc",
+    "hadoop",
+    "bgl",
+    "mac",
+    "proxifier",
+    "spark",
+    "openssh",
+    "thunderbird",
+    "windows",
+)
+ACTIVE_TEXT_DATASET_SLUGS: tuple[str, ...] = COMPLETE_TEXT_DATASET_SLUGS
+COMPLETE_SUITE_PROFILE_NAME = "complete_static_evaluation"
 LOGHUB_RAW_BASE_URL = "https://raw.githubusercontent.com/logpai/loghub/master"
 
 
@@ -271,67 +302,43 @@ def get_dataset_registry() -> dict[str, DatasetSpec]:
 
 
 def get_query_registry() -> dict[str, QuerySpec]:
-    """Return the part-2 query manifest.
+    """Return the locked complete-suite query manifest.
 
     Returns:
         An insertion-ordered mapping keyed by query id.
 
     Notes:
-        Only the active five datasets receive concrete payloads in part 2. The
-        registry-driven design still scales because query coverage is checked at
-        registration time rather than through copy-pasted scripts.
+        Payloads are loaded from `query_eval/locked_query_manifest.json`. The
+        curation utility may regenerate that file, but evaluation never invents
+        query payloads at runtime.
     """
 
-    return {
-        "common": QuerySpec(
-            query_id="common",
-            family="high_hit_single_keyword",
-            description="High-frequency keyword chosen to stress common template-heavy matches.",
-            dataset_payloads={
-                "linux": "kernel",
-                "apache": "workerEnv",
-                "hdfs": "PacketResponder",
-                "openstack": "status: 200",
-                "android": "PowerManagerService",
-            },
-        ),
-        "phrase": QuerySpec(
-            query_id="phrase",
-            family="medium_hit_phrase",
-            description="Medium-hit phrase chosen to stress stable repeated textual structures.",
-            dataset_payloads={
-                "linux": "failed",
-                "apache": "scoreboard slot",
-                "hdfs": "NameSystem.addStoredBlock",
-                "openstack": "GET /v2/",
-                "android": "WindowManager",
-            },
-        ),
-        "selective": QuerySpec(
-            query_id="selective",
-            family="low_hit_selective_keyword",
-            description="Low-hit token or phrase chosen to expose optimization misses clearly.",
-            dataset_payloads={
-                "linux": "28842",
-                "apache": "Directory index forbidden",
-                "hdfs": "replicate blk_",
-                "openstack": "Deleting instance files",
-                "android": "TextView",
-            },
-        ),
-        "conjunctive": QuerySpec(
-            query_id="conjunctive",
-            family="multi_keyword_conjunction",
-            description="Two-keyword conjunction used to evaluate stricter match semantics.",
-            dataset_payloads={
-                "linux": ("sshd", "failure"),
-                "apache": ("mod_jk", "error"),
-                "hdfs": ("PacketResponder", "terminating"),
-                "openstack": ("GET /v2/", "status: 200"),
-                "android": ("PowerManagerService", "acquire"),
-            },
-        ),
-    }
+    manifest_path = get_project_root() / "query_eval" / "locked_query_manifest.json"
+    if not manifest_path.exists():
+        raise FileNotFoundError(
+            f"Locked query manifest not found: {manifest_path}. "
+            "Run `python3 -m query_eval.query_curation --write` after staging datasets."
+        )
+    payload = json.loads(manifest_path.read_text(encoding="utf-8"))
+    query_specs: dict[str, QuerySpec] = {}
+    for query_id in QUERY_IDS:
+        query_payload = payload["queries"][query_id]
+        dataset_payloads: dict[str, QueryPayload] = {}
+        for dataset_slug, raw_value in query_payload["dataset_payloads"].items():
+            if isinstance(raw_value, list):
+                dataset_payloads[dataset_slug] = tuple(str(item) for item in raw_value)
+            else:
+                dataset_payloads[dataset_slug] = str(raw_value)
+        query_specs[query_id] = QuerySpec(
+            query_id=query_id,
+            family=query_payload["family"],
+            description=query_payload["description"],
+            dataset_payloads=dataset_payloads,
+            token_safe=bool(query_payload["token_safe"]),
+            is_stress_query=bool(query_payload["is_stress_query"]),
+            expected_selectivity_band=query_payload["expected_selectivity_band"],
+        )
+    return query_specs
 
 
 def get_dataset_spec(dataset_slug: str) -> DatasetSpec:
@@ -375,17 +382,27 @@ def iter_all_dataset_specs() -> list[DatasetSpec]:
 
 
 def iter_active_dataset_specs() -> list[DatasetSpec]:
-    """Return the active five part-2 datasets in deterministic order."""
+    """Return the complete active dataset set in deterministic order."""
 
     registry = get_dataset_registry()
     return [registry[slug] for slug in ACTIVE_TEXT_DATASET_SLUGS]
 
 
 def iter_active_query_specs() -> list[QuerySpec]:
-    """Return the active four query families in deterministic order."""
+    """Return the active complete-suite query families in deterministic order."""
 
     registry = get_query_registry()
     return [registry[query_id] for query_id in QUERY_IDS]
+
+
+def get_complete_suite_profile() -> dict[str, tuple[str, ...]]:
+    """Return the one official complete static-Bloom evaluation profile."""
+
+    return {
+        "datasets": COMPLETE_TEXT_DATASET_SLUGS,
+        "queries": QUERY_IDS,
+        "modes": MODE_NAMES,
+    }
 
 
 def validate_mode_name(mode_name: str) -> ModeName:

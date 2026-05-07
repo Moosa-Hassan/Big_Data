@@ -1,0 +1,655 @@
+len=188
+- 1135095320 2005.12.20 R45-M0-N4-I:J18-U01 2005-12-20-08.15.20.957109 R45-M0-N4-I:J18-U01 RAS KERNEL INFO ciod: generated 128 core files for program /g/g24/germann2/SPaSM_static/SPaSM_mpi
+---
+len=230
+- 1134599601 2005.12.14 R76-M1-N0-I:J18-U01 2005-12-14-14.33.21.188706 R76-M1-N0-I:J18-U01 RAS APP FATAL ciod: Error loading /g/g0/spelce1/Tuned/SPaSM-base/rundir/SPaSM.baseline: invalid or missing program image, Permission denied
+- 1135178837 2005.12.21 R62-M0-N4-I:J18-U01 2005-12-21-07.27.17.749308 R62-M0-N4-I:J18-U01 RAS APP FATAL ciod: Error loading /g/g24/buber/Yunsic/BlueGene/partad.develf/taddriver.32.exe: program image too big, 361544528 > 266076160
+---
+len=218
+- 1134160405 2005.12.09 R06-M0-N4-I:J18-U01 2005-12-09-12.33.25.851921 R06-M0-N4-I:J18-U01 RAS APP FATAL ciod: Error loading /bgl/apps/SWL/stability/NEWS05/news05_DD: invalid or missing program image, Permission denied
+---
+len=211
+- 1134159559 2005.12.09 R03-M0-N0-I:J18-U11 2005-12-09-12.19.19.226546 R03-M0-N0-I:J18-U11 RAS APP FATAL ciod: Error loading /p/gb1/stella/UMT2K/1372/umt2k_DD: invalid or missing program image, Permission denied
+- 1134160534 2005.12.09 R61-M1-N8-I:J18-U01 2005-12-09-12.35.34.641975 R61-M1-N8-I:J18-U01 RAS APP FATAL ciod: Error loading /p/gb1/stella/UMT2K/1325/umt2k_DD: invalid or missing program image, Permission denied
+- 1134160697 2005.12.09 R64-M0-N8-I:J18-U11 2005-12-09-12.38.17.827307 R64-M0-N8-I:J18-U11 RAS APP FATAL ciod: Error loading /p/gb1/stella/UMT2K/1369/umt2k_DD: invalid or missing program image, Permission denied
+---
+len=495
+- 1133925845 2005.12.06 R36-M0-N2-C:J05-U01 2005-12-06-19.24.05.504553 R36-M0-N2-C:J05-U01 RAS KERNEL INFO Kernel detected 3830884 integer alignment exceptions (3830877) iar 0x00544ea8, dear 0x01fc1ba0 (3830878) iar 0x00544eb8, dear 0x01fc1bc0 (3830879) iar 0x00544ea8, dear 0x01fc1be0 (3830880) iar 0x00544eb8, dear 0x01fc1c00 (3830881) iar 0x00544ee0, dear 0x01fc1c20 (3830882) iar 0x00544ef0, dear 0x01fc1c40 (3830883) iar 0x00544ee0, dear 0x01fc1c60 (3830884) iar 0x00544ef0, dear 0x01fc1c80
+- 1133926478 2005.12.06 R27-M0-NB-C:J08-U01 2005-12-06-19.34.38.822749 R27-M0-NB-C:J08-U01 RAS KERNEL INFO Kernel detected 3853444 integer alignment exceptions (3853437) iar 0x00544ea8, dear 0x01ef5e20 (3853438) iar 0x00544eb8, dear 0x01ef5e40 (3853439) iar 0x00544ea8, dear 0x01ef5e60 (3853440) iar 0x00544eb8, dear 0x01ef5e80 (3853441) iar 0x00544ee0, dear 0x01ef5ea0 (3853442) iar 0x00544ef0, dear 0x01ef5ec0 (3853443) iar 0x00544ee0, dear 0x01ef5ee0 (3853444) iar 0x00544ef0, dear 0x01ef5f00
+- 1133926732 2005.12.06 R27-M1-NF-C:J17-U01 2005-12-06-19.38.52.768522 R27-M1-NF-C:J17-U01 RAS KERNEL INFO Kernel detected 3747792 integer alignment exceptions (3747785) iar 0x00544ea8, dear 0x01fc9220 (3747786) iar 0x00544eb8, dear 0x01fc9240 (3747787) iar 0x00544ea8, dear 0x01fc9260 (3747788) iar 0x00544eb8, dear 0x01fc9280 (3747789) iar 0x00544ee0, dear 0x01fc92a0 (3747790) iar 0x00544ef0, dear 0x01fc92c0 (3747791) iar 0x00544ee0, dear 0x01fc92e0 (3747792) iar 0x00544ef0, dear 0x01fc9300
+- 1133928125 2005.12.06 R36-M0-N7-C:J09-U11 2005-12-06-20.02.05.596871 R36-M0-N7-C:J09-U11 RAS KERNEL INFO Kernel detected 3946290 integer alignment exceptions (3946283) iar 0x00544ea8, dear 0x01ef6080 (3946284) iar 0x00544eb8, dear 0x01ef60a0 (3946285) iar 0x00544ea8, dear 0x01ef60c0 (3946286) iar 0x00544eb8, dear 0x01ef60e0 (3946287) iar 0x00544ee0, dear 0x01ef6100 (3946288) iar 0x00544ef0, dear 0x01ef6120 (3946289) iar 0x00544ee0, dear 0x01ef6140 (3946290) iar 0x00544ef0, dear 0x01ef6160
+- 1133928278 2005.12.06 R26-M0-N9-C:J11-U01 2005-12-06-20.04.38.539848 R26-M0-N9-C:J11-U01 RAS KERNEL INFO Kernel detected 4909176 integer alignment exceptions (4909169) iar 0x00544ea8, dear 0x01fc8a40 (4909170) iar 0x00544eb8, dear 0x01fc8a60 (4909171) iar 0x00544ea8, dear 0x01fc8a80 (4909172) iar 0x00544eb8, dear 0x01fc8aa0 (4909173) iar 0x00544ee0, dear 0x01fc8ac0 (4909174) iar 0x00544ef0, dear 0x01fc8ae0 (4909175) iar 0x00544ee0, dear 0x01fc8b00 (4909176) iar 0x00544ef0, dear 0x01fc8b20
+- 1133928323 2005.12.06 R31-M0-NF-C:J07-U11 2005-12-06-20.05.23.094186 R31-M0-NF-C:J07-U11 RAS KERNEL INFO Kernel detected 4898338 integer alignment exceptions (4898331) iar 0x00544ea8, dear 0x049e75e0 (4898332) iar 0x00544eb8, dear 0x049e7600 (4898333) iar 0x00544ea8, dear 0x049e7620 (4898334) iar 0x00544eb8, dear 0x049e7640 (4898335) iar 0x00544ee0, dear 0x049e7660 (4898336) iar 0x00544ef0, dear 0x049e7680 (4898337) iar 0x00544ee0, dear 0x049e76a0 (4898338) iar 0x00544ef0, dear 0x049e76c0
+- 1133928447 2005.12.06 R37-M1-N1-C:J02-U01 2005-12-06-20.07.27.653573 R37-M1-N1-C:J02-U01 RAS KERNEL INFO Kernel detected 3945740 integer alignment exceptions (3945733) iar 0x00544ea8, dear 0x01ef7960 (3945734) iar 0x00544eb8, dear 0x01ef7980 (3945735) iar 0x00544ea8, dear 0x01ef79a0 (3945736) iar 0x00544eb8, dear 0x01ef79c0 (3945737) iar 0x00544ee0, dear 0x01ef79e0 (3945738) iar 0x00544ef0, dear 0x01ef7a00 (3945739) iar 0x00544ee0, dear 0x01ef7a20 (3945740) iar 0x00544ef0, dear 0x01ef7a40
+- 1133928743 2005.12.06 R36-M0-NE-C:J13-U01 2005-12-06-20.12.23.534341 R36-M0-NE-C:J13-U01 RAS KERNEL INFO Kernel detected 3486044 integer alignment exceptions (3486037) iar 0x00544ea8, dear 0x01ef7c60 (3486038) iar 0x00544eb8, dear 0x01ef7c80 (3486039) iar 0x00544ea8, dear 0x01ef7ca0 (3486040) iar 0x00544eb8, dear 0x01ef7cc0 (3486041) iar 0x00544ee0, dear 0x01ef7ce0 (3486042) iar 0x00544ef0, dear 0x01ef7d00 (3486043) iar 0x00544ee0, dear 0x01ef7d20 (3486044) iar 0x00544ef0, dear 0x01ef7d40
+---
+len=155
+- 1133919747 2005.12.06 R03-M0-N7-C:J07-U01 2005-12-06-17.42.27.383145 R03-M0-N7-C:J07-U01 RAS KERNEL FATAL size of scratchpad portion of L3.........0 (0M)
+---
+len=504
+- 1133638373 2005.12.03 R56-M0-NA-C:J15-U11 2005-12-03-11.32.53.165837 R56-M0-NA-C:J15-U11 RAS KERNEL INFO Kernel detected 35591540 integer alignment exceptions (35591533) iar 0x0023f108, dear 0x1feaa260 (35591534) iar 0x00265564, dear 0x1feaa1c0 (35591535) iar 0x00265574, dear 0x1feaa1e0 (35591536) iar 0x00265578, dear 0x1feaa200 (35591537) iar 0x00265588, dear 0x1feaa220 (35591538) iar 0x0026558c, dear 0x1feaa240 (35591539) iar 0x00265594, dear 0x1feaa260 (35591540) iar 0x00265598, dear 0x1feaa280
+---
+len=314
+- 1133630999 2005.12.03 R10-M1-N2 2005-12-03-09.29.59.645290 R10-M1-N2 NULL HARDWARE WARNING PrepareForService shutting down Node card(mLctn(R10-M1-N2), mCardSernum(203231503833343000000000594c31304b34323934303257), mLp(FF:F2:9F:16:E0:DA:00:0D:60:E9:1F:25), mIp(10.1.1.164), mType(4)) as part of Service Action 648
+---
+len=269
+- 1133458296 2005.12.01 R00-M0-NA-C:J14-U11 2005-12-01-09.31.36.346830 R00-M0-NA-C:J14-U11 RAS KERNEL INFO 720 total interrupts. 0 critical input interrupts. 0 microseconds total spent on critical input interrupts, 0 microseconds max time in a critical input interrupt.
+- 1133458363 2005.12.01 R00-M0-N8-C:J17-U01 2005-12-01-09.32.43.947020 R00-M0-N8-C:J17-U01 RAS KERNEL INFO 720 total interrupts. 0 critical input interrupts. 0 microseconds total spent on critical input interrupts, 0 microseconds max time in a critical input interrupt.
+---
+len=192
+- 1133280774 2005.11.29 R55-M0-N9-C:J06-U11 2005-11-29-08.12.54.614554 R55-M0-N9-C:J06-U11 RAS KERNEL INFO 13 tree receiver 1 in re-synch state event(s) (dcr 0x0185) detected over 4562 seconds
+---
+len=156
+- 1132841276 2005.11.24 R03-M1-NF-C:J07-U01 2005-11-24-06.07.56.407913 R03-M1-NF-C:J07-U01 RAS KERNEL FATAL dbcr0=0x00000000 dbsr=0x00000000 ccr0=0x40002000
+---
+len=168
+- 1132969138 2005.11.25 R76-M0-NC-I:J18-U11 2005-11-25-17.38.58.840897 R76-M0-NC-I:J18-U11 RAS KERNEL INFO ciod: Received signal 15, code=0, errno=0, address=0x000001f8
+- 1133011728 2005.11.26 R72-M1-NC-I:J18-U11 2005-11-26-05.28.48.120288 R72-M1-NC-I:J18-U11 RAS KERNEL INFO ciod: Received signal 15, code=0, errno=0, address=0x000001f5
+- 1133011767 2005.11.26 R01-M1-NC-I:J18-U11 2005-11-26-05.29.27.205468 R01-M1-NC-I:J18-U11 RAS KERNEL INFO ciod: Received signal 15, code=0, errno=0, address=0x000001f2
+- 1133052171 2005.11.26 R14-M1-NC-I:J18-U01 2005-11-26-16.42.51.171566 R14-M1-NC-I:J18-U01 RAS KERNEL INFO ciod: Received signal 15, code=0, errno=0, address=0x000001f2
+- 1133150722 2005.11.27 R15-M0-N0-I:J18-U11 2005-11-27-20.05.22.588765 R15-M0-N0-I:J18-U11 RAS KERNEL INFO ciod: Received signal 15, code=0, errno=0, address=0x000001f5
+- 1133306285 2005.11.29 R60-M0-N4-I:J18-U01 2005-11-29-15.18.05.050463 R60-M0-N4-I:J18-U01 RAS KERNEL INFO ciod: Received signal 15, code=0, errno=0, address=0x000001f2
+- 1133306326 2005.11.29 R21-M0-N8-I:J18-U01 2005-11-29-15.18.46.642475 R21-M0-N8-I:J18-U01 RAS KERNEL INFO ciod: Received signal 15, code=0, errno=0, address=0x000001f2
+- 1133317778 2005.11.29 R01-M1-NC-I:J18-U01 2005-11-29-18.29.38.531250 R01-M1-NC-I:J18-U01 RAS KERNEL INFO ciod: Received signal 15, code=0, errno=0, address=0x000001f5
+---
+len=196
+- 1132067079 2005.11.15 R17-M1-N0-I:J18-U01 2005-11-15-07.04.39.066903 R17-M1-N0-I:J18-U01 RAS KERNEL INFO ciod: generated 128 core files for program /bgl/apps/followup/SPaSM_static/SPaSM_mpi.rel2
+---
+len=162
+- 1131624435 2005.11.10 R22-M1-N1-C:J17-U11 2005-11-10-04.07.15.804295 R22-M1-N1-C:J17-U11 RAS KERNEL INFO 3 L3 EDRAM error(s) (dcr 0x0157) detected and corrected
+---
+len=184
+- 1131470027 2005.11.08 R27-M0-N0-I:J18-U11 2005-11-08-09.13.47.353261 R27-M0-N0-I:J18-U11 RAS KERNEL INFO ciod: generated 128 core files for program /g/g24/germann2/BGL-demo/SPaSM_mpi
+---
+len=294
+KERNREC 1130529611 2005.10.28 R63-M1-N5-C:J17-U01 2005-10-28-13.00.11.719498 R63-M1-N5-C:J17-U01 RAS KERNEL FATAL Error receiving packet on tree network, expecting type 57 instead of type 3 (softheader=0064588e 8aff0003 00000002 00000000) PSR0=00001f01 PSR1=00000000 PRXF=00000002 PIXF=00000007
+KERNREC 1131499523 2005.11.08 R62-M0-N2-C:J09-U11 2005-11-08-17.25.23.131318 R62-M0-N2-C:J09-U11 RAS KERNEL FATAL Error receiving packet on tree network, expecting type 57 instead of type 3 (softheader=00589370 90990003 00000002 00000000) PSR0=00001f01 PSR1=00000000 PRXF=00000002 PIXF=00000007
+KERNREC 1132021541 2005.11.14 R46-M1-NF-C:J11-U01 2005-11-14-18.25.41.161796 R46-M1-NF-C:J11-U01 RAS KERNEL FATAL Error receiving packet on tree network, expecting type 57 instead of type 3 (softheader=00ce22e8 e6200003 00000002 00000000) PSR0=00001f01 PSR1=00000000 PRXF=00000002 PIXF=00000007
+KERNREC 1132021542 2005.11.14 R46-M1-N1-C:J02-U01 2005-11-14-18.25.42.152117 R46-M1-N1-C:J02-U01 RAS KERNEL FATAL Error receiving packet on tree network, expecting type 57 instead of type 3 (softheader=00ce22e8 e6200003 00000002 00000000) PSR0=20021f01 PSR1=00000000 PRXF=00000002 PIXF=00000007
+KERNREC 1132111278 2005.11.15 R57-M0-N8-C:J12-U01 2005-11-15-19.21.18.471861 R57-M0-N8-C:J12-U01 RAS KERNEL FATAL Error receiving packet on tree network, expecting type 57 instead of type 3 (softheader=009756d5 8bfa0003 00000002 00000000) PSR0=20021f01 PSR1=00000000 PRXF=00000002 PIXF=00000007
+---
+len=271
+- 1133455494 2005.12.01 R44-M1-NC-C:J03-U01 2005-12-01-08.44.54.498009 R44-M1-NC-C:J03-U01 RAS KERNEL INFO 10714 total interrupts. 0 critical input interrupts. 0 microseconds total spent on critical input interrupts, 0 microseconds max time in a critical input interrupt.
+- 1133455498 2005.12.01 R45-M1-NC-C:J07-U01 2005-12-01-08.44.58.904349 R45-M1-NC-C:J07-U01 RAS KERNEL INFO 10712 total interrupts. 0 critical input interrupts. 0 microseconds total spent on critical input interrupts, 0 microseconds max time in a critical input interrupt.
+- 1133455517 2005.12.01 R43-M1-ND-C:J08-U01 2005-12-01-08.45.17.404927 R43-M1-ND-C:J08-U01 RAS KERNEL INFO 10636 total interrupts. 0 critical input interrupts. 0 microseconds total spent on critical input interrupts, 0 microseconds max time in a critical input interrupt.
+- 1133455621 2005.12.01 R26-M0-N9-C:J06-U01 2005-12-01-08.47.01.109678 R26-M0-N9-C:J06-U01 RAS KERNEL INFO 10664 total interrupts. 0 critical input interrupts. 0 microseconds total spent on critical input interrupts, 0 microseconds max time in a critical input interrupt.
+- 1133455631 2005.12.01 R24-M0-N5-C:J03-U11 2005-12-01-08.47.11.934066 R24-M0-N5-C:J03-U11 RAS KERNEL INFO 10730 total interrupts. 0 critical input interrupts. 0 microseconds total spent on critical input interrupts, 0 microseconds max time in a critical input interrupt.
+- 1133455641 2005.12.01 R27-M1-N6-C:J11-U11 2005-12-01-08.47.21.734190 R27-M1-N6-C:J11-U11 RAS KERNEL INFO 10722 total interrupts. 0 critical input interrupts. 0 microseconds total spent on critical input interrupts, 0 microseconds max time in a critical input interrupt.
+- 1133455641 2005.12.01 R23-M0-ND-C:J11-U11 2005-12-01-08.47.21.966726 R23-M0-ND-C:J11-U11 RAS KERNEL INFO 10722 total interrupts. 0 critical input interrupts. 0 microseconds total spent on critical input interrupts, 0 microseconds max time in a critical input interrupt.
+- 1133455648 2005.12.01 R23-M0-N2-C:J09-U11 2005-12-01-08.47.28.894064 R23-M0-N2-C:J09-U11 RAS KERNEL INFO 10736 total interrupts. 0 critical input interrupts. 0 microseconds total spent on critical input interrupts, 0 microseconds max time in a critical input interrupt.
+---
+len=174
+- 1130479310 2005.10.27 R55-M0-N9-C:J06-U11 2005-10-27-23.01.50.720520 R55-M0-N9-C:J06-U11 RAS KERNEL INFO 16 tree receiver 2 in re-synch state event(s) (dcr 0x019a) detected
+---
+len=208
+- 1130251536 2005.10.25 R46-M0-NC-I:J18-U11 2005-10-25-07.45.36.124897 R46-M0-NC-I:J18-U11 RAS APP FATAL ciod: Error loading allreduce_int_V1R1.rts: invalid or missing program image, No such file or directory
+- 1132234526 2005.11.17 R72-M1-NE-C:J04-U01 2005-11-17-05.35.26.782649 R72-M1-NE-C:J04-U01 RAS KERNEL INFO 18507114 torus sender z- retransmission error(s) (dcr 0x02f9) detected and corrected over 198 seconds
+- 1132236972 2005.11.17 R72-M1-N6-C:J04-U01 2005-11-17-06.16.12.504899 R72-M1-N6-C:J04-U01 RAS KERNEL INFO 26741629 torus sender z- retransmission error(s) (dcr 0x02f9) detected and corrected over 268 seconds
+APPTO 1132600084 2005.11.21 R14-M0-NC-I:J18-U11 2005-11-21-11.08.04.944948 R14-M0-NC-I:J18-U11 RAS APP FATAL ciod: Error reading message prefix on CioStream socket to 172.16.96.116:41554, Connection timed out
+APPTO 1132613223 2005.11.21 R16-M1-NC-I:J18-U11 2005-11-21-14.47.03.703578 R16-M1-NC-I:J18-U11 RAS APP FATAL ciod: Error reading message prefix on CioStream socket to 172.16.96.116:41060, Connection timed out
+---
+len=180
+- 1129864798 2005.10.20 R04-M0-NC-I:J18-U11 2005-10-20-20.19.58.037602 R04-M0-NC-I:J18-U11 RAS KERNEL INFO ciod: generated 64 core files for program /home/rfisher/sodscaling/flash2
+---
+len=220
+- 1129820589 2005.10.20 R62-M0-N8-I:J18-U01 2005-10-20-08.03.09.612112 R62-M0-N8-I:J18-U01 RAS APP FATAL ciod: Error loading /bgl/apps/followup/RAPTOR/new.raptor.trace: invalid or missing program image, Exec format error
+- 1129820611 2005.10.20 R01-M1-NC-I:J18-U01 2005-10-20-08.03.31.975086 R01-M1-NC-I:J18-U01 RAS APP FATAL ciod: Error loading /bgl/apps/followup/RAPTOR/new.raptor.trace: invalid or missing program image, Exec format error
+---
+len=169
+- 1129550547 2005.10.17 R02-M0-N4-C:J04-U11 2005-10-17-05.02.27.161242 R02-M0-N4-C:J04-U11 RAS KERNEL INFO data cache search parity error detected. attempting to correct
+- 1129550629 2005.10.17 R02-M0-N4-C:J04-U11 2005-10-17-05.03.49.800918 R02-M0-N4-C:J04-U11 RAS KERNEL INFO data cache search parity error detected. attempting to correct
+- 1129551549 2005.10.17 R02-M0-N4-C:J04-U11 2005-10-17-05.19.09.715915 R02-M0-N4-C:J04-U11 RAS KERNEL INFO data cache search parity error detected. attempting to correct
+- 1129551731 2005.10.17 R02-M0-N4-C:J04-U11 2005-10-17-05.22.11.645917 R02-M0-N4-C:J04-U11 RAS KERNEL INFO data cache search parity error detected. attempting to correct
+- 1129552305 2005.10.17 R02-M0-N4-C:J04-U11 2005-10-17-05.31.45.435674 R02-M0-N4-C:J04-U11 RAS KERNEL INFO data cache search parity error detected. attempting to correct
+- 1129552512 2005.10.17 R02-M0-N4-C:J04-U11 2005-10-17-05.35.12.825443 R02-M0-N4-C:J04-U11 RAS KERNEL INFO data cache search parity error detected. attempting to correct
+---
+len=200
+- 1129437983 2005.10.15 R25-M1-N0-I:J18-U01 2005-10-15-21.46.23.436761 R25-M1-N0-I:J18-U01 RAS KERNEL INFO ciod: generated 64 core files for program /home/spelce1/HPCC_IBM/Urgent/COP/64K/opt_co_dc.rts
+- 1129456912 2005.10.16 R24-M0-N4-I:J18-U01 2005-10-16-03.01.52.266920 R24-M0-N4-I:J18-U01 RAS KERNEL INFO ciod: generated 58 core files for program /home/spelce1/HPCC_IBM/Urgent/COP/64K/opt_co_dc.rts
+- 1131712792 2005.11.11 R31-M0-N8-I:J18-U01 2005-11-11-04.39.52.183132 R31-M0-N8-I:J18-U01 RAS KERNEL INFO ciod: generated 128 core files for program /bgl/apps/followup/SPaSM_static/SPaSM_mpi.new_comp
+- 1132549418 2005.11.20 R55-M1-N8-I:J18-U11 2005-11-20-21.03.38.769342 R55-M1-N8-I:J18-U11 RAS KERNEL INFO ciod: generated 128 core files for program /g/g90/glosli/src/ddcMD/ddcMD1.1.18a/bin/ddcMDbglV
+- 1132549487 2005.11.20 R06-M1-N8-I:J18-U01 2005-11-20-21.04.47.799840 R06-M1-N8-I:J18-U01 RAS KERNEL INFO ciod: generated 128 core files for program /g/g90/glosli/src/ddcMD/ddcMD1.1.18a/bin/ddcMDbglV
+---
+len=179
+- 1128027755 2005.09.29 R03-M1-ND-C:J14-U01 2005-09-29-14.02.35.872055 R03-M1-ND-C:J14-U01 RAS KERNEL INFO critical input interrupt (unit=0x0b bit=0x06): warning for torus y+ wire
+- 1130255740 2005.10.25 R11-M1-N2-C:J09-U11 2005-10-25-08.55.40.146416 R11-M1-N2-C:J09-U11 RAS KERNEL INFO critical input interrupt (unit=0x0b bit=0x0b): warning for torus z- wire
+- 1134929456 2005.12.18 R30-M1-N3-C:J13-U01 2005-12-18-10.10.56.366499 R30-M1-N3-C:J13-U01 RAS KERNEL INFO 2 L3 EDRAM error(s) (dcr 0x0157) detected and corrected over 282 seconds
+---
+len=190
+- 1127781971 2005.09.26 R34-M0-N8-I:J18-U11 2005-09-26-17.46.11.092617 R34-M0-N8-I:J18-U11 RAS KERNEL INFO ciod: generated 128 core files for program /bgl/apps/SWL/stability/DDCMD//ddcMDbglV
+- 1133646587 2005.12.03 R55-M0-N9-C:J06-U11 2005-12-03-13.49.47.382429 R55-M0-N9-C:J06-U11 RAS KERNEL INFO 1 tree receiver 1 in re-synch state event(s) (dcr 0x0185) detected over 244 seconds
+---
+len=213
+- 1127265535 2005.09.20 R23-M1-N8-I:J18-U11 2005-09-20-18.18.55.570301 R23-M1-N8-I:J18-U11 RAS APP FATAL ciod: LOGIN chdir(/bgl/apps/SWL/performance/MINIBEN///2005.09.20-18.06.05) failed: No such file or directory
+- 1127265666 2005.09.20 R54-M1-N4-I:J18-U11 2005-09-20-18.21.06.263282 R54-M1-N4-I:J18-U11 RAS APP FATAL ciod: LOGIN chdir(/bgl/apps/SWL/performance/MINIBEN///2005.09.20-18.06.01) failed: No such file or directory
+- 1127265731 2005.09.20 R16-M1-N4-I:J18-U11 2005-09-20-18.22.11.721083 R16-M1-N4-I:J18-U11 RAS APP FATAL ciod: LOGIN chdir(/bgl/apps/SWL/performance/MINIBEN///2005.09.20-18.06.08) failed: No such file or directory
+- 1127265777 2005.09.20 R62-M1-N8-I:J18-U01 2005-09-20-18.22.57.490109 R62-M1-N8-I:J18-U01 RAS APP FATAL ciod: LOGIN chdir(/bgl/apps/SWL/performance/MINIBEN///2005.09.20-18.06.01) failed: No such file or directory
+APPRES 1132609258 2005.11.21 R13-M1-N4-I:J18-U11 2005-11-21-13.40.58.052836 R13-M1-N4-I:J18-U11 RAS APP FATAL ciod: Error reading message prefix on CioStream socket to 172.16.96.116:52839, Connection reset by peer
+APPRES 1132609304 2005.11.21 R22-M0-N0-I:J18-U01 2005-11-21-13.41.44.752517 R22-M0-N0-I:J18-U01 RAS APP FATAL ciod: Error reading message prefix on CioStream socket to 172.16.96.116:52930, Connection reset by peer
+APPRES 1132609342 2005.11.21 R65-M1-NC-I:J18-U11 2005-11-21-13.42.22.905034 R65-M1-NC-I:J18-U11 RAS APP FATAL ciod: Error reading message prefix on CioStream socket to 172.16.96.116:53387, Connection reset by peer
+APPRES 1132613769 2005.11.21 R66-M1-N8-I:J18-U01 2005-11-21-14.56.09.042983 R66-M1-N8-I:J18-U01 RAS APP FATAL ciod: Error reading message prefix on CioStream socket to 172.16.96.116:41587, Connection reset by peer
+---
+len=176
+- 1132584089 2005.11.21 R26-M0-N0-I:J18-U11 2005-11-21-06.41.29.787206 R26-M0-N0-I:J18-U11 RAS KERNEL INFO MACHINE CHECK DCR read timeout (mc=e08x iar 0x00000000 lr 0xc00045a4)
+- 1132584495 2005.11.21 R26-M0-N0-I:J18-U11 2005-11-21-06.48.15.351050 R26-M0-N0-I:J18-U11 RAS KERNEL INFO MACHINE CHECK DCR read timeout (mc=e08x iar 0x00000000 lr 0xc00045a4)
+- 1132584963 2005.11.21 R26-M0-N0-I:J18-U11 2005-11-21-06.56.03.369673 R26-M0-N0-I:J18-U11 RAS KERNEL INFO MACHINE CHECK DCR read timeout (mc=e08x iar 0x00000000 lr 0xc00045a4)
+- 1132585070 2005.11.21 R26-M0-N0-I:J18-U11 2005-11-21-06.57.50.899596 R26-M0-N0-I:J18-U11 RAS KERNEL INFO MACHINE CHECK DCR read timeout (mc=e08x iar 0x00000000 lr 0xc00045a4)
+- 1132585230 2005.11.21 R26-M0-N0-I:J18-U11 2005-11-21-07.00.30.773283 R26-M0-N0-I:J18-U11 RAS KERNEL INFO MACHINE CHECK DCR read timeout (mc=e08x iar 0x00000000 lr 0xc00045a4)
+- 1132586440 2005.11.21 R26-M0-N0-I:J18-U11 2005-11-21-07.20.40.564558 R26-M0-N0-I:J18-U11 RAS KERNEL INFO MACHINE CHECK DCR read timeout (mc=e08x iar 0x00000000 lr 0xc00045a4)
+- 1132586451 2005.11.21 R26-M0-N0-I:J18-U11 2005-11-21-07.20.51.661738 R26-M0-N0-I:J18-U11 RAS KERNEL INFO MACHINE CHECK DCR read timeout (mc=e08x iar 0x00000000 lr 0xc00045a4)
+---
+len=273
+- 1127264516 2005.09.20 R05-M0-N1-C:J06-U11 2005-09-20-18.01.56.398119 R05-M0-N1-C:J06-U11 RAS KERNEL FATAL rts: bad message header: expecting type 57 instead of type 3 (softheader=00131db8 81aa0003 00000002 00000000) PSR0=00001f01 PSR1=00000000 PRXF=00000002 PIXF=00000007
+---
+len=216
+- 1127264333 2005.09.20 R45-M0-N0-I:J18-U01 2005-09-20-17.58.53.385609 R45-M0-N0-I:J18-U01 RAS APP FATAL ciod: Error loading /home/yates//torus-latency.rts: invalid or missing program image, No such file or directory
+- 1127264347 2005.09.20 R72-M0-N8-I:J18-U01 2005-09-20-17.59.07.131519 R72-M0-N8-I:J18-U01 RAS APP FATAL ciod: Error loading /home/yates//torus-latency.rts: invalid or missing program image, No such file or directory
+- 1127264397 2005.09.20 R34-M1-N8-I:J18-U01 2005-09-20-17.59.57.105133 R34-M1-N8-I:J18-U01 RAS APP FATAL ciod: Error loading /home/yates//torus-latency.rts: invalid or missing program image, No such file or directory
+- 1127960557 2005.09.28 R12-M1-N4-I:J18-U01 2005-09-28-19.22.37.311035 R12-M1-N4-I:J18-U01 RAS KERNEL INFO ciod: generated 64 core files for program /home/spelce1/HPCC_IBM/TomAndJeff/bin/tested_copro/tested_copro.rts
+---
+len=233
+- 1127163833 2005.09.19 R32-M1-N0-I:J18-U01 2005-09-19-14.03.53.806037 R32-M1-N0-I:J18-U01 RAS APP FATAL ciod: LOGIN chdir(/home/yates/SWL_tests/BGL64k_SWL_tests_develop/MPI-VAL/MPITs_v050902/rundir) failed: No such file or directory
+---
+len=252
+- 1126421175 2005.09.10 R16-M0-NC-I:J18-U01 2005-09-10-23.46.15.250215 R16-M0-NC-I:J18-U01 RAS APP FATAL ciod: Error loading /bgl/apps/swl-prep/rky-swl/MPI-PERF/IMB/perf_tests/IMB-MPI1.5124KB: invalid or missing program image, No such file or directory
+---
+len=172
+- 1126272208 2005.09.09 R50-M0-NF-C:J10-U01 2005-09-09-06.23.28.274924 R50-M0-NF-C:J10-U01 RAS KERNEL INFO 1 ddr errors(s) detected and corrected on rank 0, symbol 3, bit 6
+- 1131632923 2005.11.10 R34-M1-N4-C:J10-U01 2005-11-10-06.28.43.189795 R34-M1-N4-C:J10-U01 RAS KERNEL INFO 2 ddr errors(s) detected and corrected on rank 0, symbol 4, bit 4
+- 1131720323 2005.11.11 R02-M1-N4-C:J06-U01 2005-11-11-06.45.23.635450 R02-M1-N4-C:J06-U01 RAS KERNEL INFO 1 ddr errors(s) detected and corrected on rank 0, symbol 8, bit 7
+---
+len=164
+- 1126211891 2005.09.08 R63-M1-NC-I:J18-U11 2005-09-08-13.38.11.467298 R63-M1-NC-I:J18-U11 RAS KERNEL INFO ciod: pollControlDescriptors: Detected the debugger died.
+- 1134784680 2005.12.16 R66-M0-N8-I:J18-U01 2005-12-16-17.58.00.577715 R66-M0-N8-I:J18-U01 RAS KERNEL INFO ciod: pollControlDescriptors: Detected the debugger died.
+- 1135050698 2005.12.19 R77-M1-NC-I:J18-U01 2005-12-19-19.51.38.151363 R77-M1-NC-I:J18-U01 RAS KERNEL INFO ciod: pollControlDescriptors: Detected the debugger died.
+---
+len=175
+- 1125749350 2005.09.03 R62-M0-NC-I:J18-U11 2005-09-03-05.09.10.001351 R62-M0-NC-I:J18-U11 RAS APP FATAL ciod: LOGIN chdir(/LAPACK_440d/BLAS) failed: No such file or directory
+---
+len=159
+KERNMNTF 1125690043 2005.09.02 R02-M1-N8-I:J18-U01 2005-09-02-12.40.43.759217 R02-M1-N8-I:J18-U01 RAS KERNEL FATAL Lustre mount FAILED : bglio46 : point /p/gb1
+KERNMNTF 1125694345 2005.09.02 R04-M0-NC-I:J18-U11 2005-09-02-13.52.25.806989 R04-M0-NC-I:J18-U11 RAS KERNEL FATAL Lustre mount FAILED : bglio75 : point /p/gb1
+KERNMNTF 1126202752 2005.09.08 R01-M1-N4-I:J18-U11 2005-09-08-11.05.52.800796 R01-M1-N4-I:J18-U11 RAS KERNEL FATAL Lustre mount FAILED : bglio23 : point /p/gb1
+---
+len=166
+- 1125225361 2005.08.28 R05-M0-NC-I:J18-U11 2005-08-28-03.36.01.417658 R05-M0-NC-I:J18-U11 RAS KERNEL INFO NFS Mount failed on bglio91, slept 15 seconds, retrying (1)
+- 1125379628 2005.08.29 R26-M0-NC-I:J18-U01 2005-08-29-22.27.08.904529 R26-M0-NC-I:J18-U01 RAS KERNEL INFO ciod: generated 64 core files for program IMB-MPI1.2MB_perf
+KERNMNTF 1132575798 2005.11.21 R04-M1-N8-I:J18-U01 2005-11-21-04.23.18.419757 R04-M1-N8-I:J18-U01 RAS KERNEL FATAL Lustre mount FAILED : bglio78 : block_id : location
+---
+len=133
+- 1131582346 2005.11.09 R63-M0-N0-C:J03-U11 2005-11-09-16.25.46.239765 R63-M0-N0-C:J03-U11 RAS KERNEL INFO iar 00106448 dear 0246dbec
+- 1131583004 2005.11.09 R63-M0-NF-C:J05-U11 2005-11-09-16.36.44.235997 R63-M0-NF-C:J05-U11 RAS KERNEL INFO iar 00106288 dear 02f7a0fc
+- 1131590854 2005.11.09 R63-M0-N6-C:J13-U01 2005-11-09-18.47.34.555338 R63-M0-N6-C:J13-U01 RAS KERNEL INFO iar 00113890 dear 0fee9c3c
+- 1131590868 2005.11.09 R63-M0-N1-C:J07-U01 2005-11-09-18.47.48.543958 R63-M0-N1-C:J07-U01 RAS KERNEL INFO iar 00113898 dear 0fee9c4c
+- 1131590881 2005.11.09 R63-M0-N4-C:J05-U11 2005-11-09-18.48.01.657230 R63-M0-N4-C:J05-U11 RAS KERNEL INFO iar 00113898 dear 0fee9c4c
+- 1131692621 2005.11.10 R63-M0-NF-C:J06-U01 2005-11-10-23.03.41.120402 R63-M0-NF-C:J06-U01 RAS KERNEL INFO iar 00106274 dear 0246da8c
+- 1131692641 2005.11.10 R63-M0-N4-C:J04-U11 2005-11-10-23.04.01.480413 R63-M0-N4-C:J04-U11 RAS KERNEL INFO iar 00106448 dear 0246dacc
+- 1131692649 2005.11.10 R63-M0-N3-C:J14-U11 2005-11-10-23.04.09.760063 R63-M0-N3-C:J14-U11 RAS KERNEL INFO iar 00106298 dear 02f7a18c
+---
+len=181
+- 1124798068 2005.08.23 R50-M1-N0-I:J18-U11 2005-08-23-04.54.28.532357 R50-M1-N0-I:J18-U11 RAS APP FATAL ciod: LOGIN chdir(/home/germann2/BGL-demo) failed: No such file or directory
+- 1134117490 2005.12.09 R70-M0-N7-C:J15-U01 2005-12-09-00.38.10.632331 R70-M0-N7-C:J15-U01 RAS KERNEL INFO 1 ddr error(s) detected and corrected on rank 0, symbol 9 over 986 seconds
+APPOUT 1134357549 2005.12.11 R63-M1-N0-I:J18-U11 2005-12-11-19.19.09.737509 R63-M1-N0-I:J18-U11 RAS APP FATAL ciod: LOGIN chdir(/p/gb1/stella/RAPTOR/2183) failed: Input/output error
+---
+len=183
+- 1124741161 2005.08.22 R04-M1-N8-I:J18-U11 2005-08-22-13.06.01.351555 R04-M1-N8-I:J18-U11 RAS KERNEL INFO ciod: generated 128 core files for program /home/germann2/BGL-demo/SPaSM_mpi
+- 1124818171 2005.08.23 R14-M0-N0-I:J18-U11 2005-08-23-10.29.31.137434 R14-M0-N0-I:J18-U11 RAS KERNEL INFO ciod: generated 128 core files for program /home/germann2/BGL-demo/SPaSM_mpi
+- 1124818189 2005.08.23 R06-M0-N0-I:J18-U01 2005-08-23-10.29.49.877845 R06-M0-N0-I:J18-U01 RAS KERNEL INFO ciod: generated 128 core files for program /home/germann2/BGL-demo/SPaSM_mpi
+- 1133409475 2005.11.30 R15-M1-NC-I:J18-U01 2005-11-30-19.57.55.220367 R15-M1-NC-I:J18-U01 RAS APP FATAL ciod: LOGIN chdir(/g/g0/spelce1/Linpack_SWL) failed: No such file or directory
+- 1133409779 2005.11.30 R13-M1-NC-I:J18-U01 2005-11-30-20.02.59.033978 R13-M1-NC-I:J18-U01 RAS APP FATAL ciod: LOGIN chdir(/g/g0/spelce1/Linpack_SWL) failed: No such file or directory
+- 1134530536 2005.12.13 R74-M1-N0-C:J12-U01 2005-12-13-19.22.16.368819 R74-M1-N0-C:J12-U01 RAS KERNEL INFO 2 ddr error(s) detected and corrected on rank 0, symbol 28 over 3365 seconds
+- 1134623156 2005.12.14 R61-M0-N8-C:J17-U11 2005-12-14-21.05.56.145306 R61-M0-N8-C:J17-U11 RAS KERNEL INFO 2 ddr error(s) detected and corrected on rank 0, symbol 34 over 2738 seconds
+- 1134626183 2005.12.14 R74-M1-N0-C:J12-U01 2005-12-14-21.56.23.782819 R74-M1-N0-C:J12-U01 RAS KERNEL INFO 5 ddr error(s) detected and corrected on rank 0, symbol 28 over 2946 seconds
+---
+len=206
+- 1124394179 2005.08.18 R30-M0-N0-I:J18-U01 2005-08-18-12.42.59.378202 R30-M0-N0-I:J18-U01 RAS KERNEL INFO ciod: generated 64 core files for program /bgl/apps/swl-prep/ibm-swl/functional/sppm_chkpt/run/sppm
+- 1124394227 2005.08.18 R71-M1-N8-I:J18-U01 2005-08-18-12.43.47.536288 R71-M1-N8-I:J18-U01 RAS KERNEL INFO ciod: generated 64 core files for program /bgl/apps/swl-prep/ibm-swl/functional/sppm_chkpt/run/sppm
+- 1124394255 2005.08.18 R02-M0-N4-I:J18-U11 2005-08-18-12.44.15.155220 R02-M0-N4-I:J18-U11 RAS KERNEL INFO ciod: generated 64 core files for program /bgl/apps/swl-prep/ibm-swl/functional/sppm_chkpt/run/sppm
+- 1124547186 2005.08.20 R65-M0-NC-I:J18-U01 2005-08-20-07.13.06.997141 R65-M0-NC-I:J18-U01 RAS KERNEL INFO ciod: generated 64 core files for program /bgl/apps/swl-prep/ibm-swl/functional/sppm_chkpt/run/sppm
+---
+len=167
+- 1124306491 2005.08.17 R12-M0-N4-I:J18-U01 2005-08-17-12.21.31.579167 R12-M0-N4-I:J18-U01 RAS APP FATAL ciod: LOGIN chdir(/p/bg1/da) failed: No such file or directory
+- 1125225358 2005.08.28 R54-M0-NC-I:J18-U01 2005-08-28-03.35.58.673640 R54-M0-NC-I:J18-U01 RAS KERNEL INFO NFS Mount failed on bglio716, slept 15 seconds, retrying (1)
+- 1133051996 2005.11.26 R03-M1-NF-C:J07-U01 2005-11-26-16.39.56.330868 R03-M1-NF-C:J07-U01 RAS KERNEL FATAL r24=0x0ffea4c8 r25=0x00000003 r26=0x0000000f r27=0xffffd000
+KERNMNTF 1133726737 2005.12.04 R46-M0-N8-I:J18-U11 2005-12-04-12.05.37.993474 R46-M0-N8-I:J18-U11 RAS KERNEL FATAL Lustre mount FAILED : bglio617 : block_id : location
+---
+len=212
+- 1124131896 2005.08.15 R40-M1-N0-I:J18-U11 2005-08-15-11.51.36.375271 R40-M1-N0-I:J18-U11 RAS KERNEL INFO ciod: Missing or invalid fields on line 1 of node map file /home/auselton/bgl/mapfiles/bgl.128mps.f64.map
+- 1127147534 2005.09.19 R01-M0-NC-I:J18-U01 2005-09-19-09.32.14.136187 R01-M0-NC-I:J18-U01 RAS APP FATAL ciod: LOGIN chdir(/home/spelce1/UMT2K/umt2k/ckpt_umt2k_src/TEST/NEW_TEST) failed: No such file or directory
+- 1127147540 2005.09.19 R77-M0-NC-I:J18-U11 2005-09-19-09.32.20.314194 R77-M0-NC-I:J18-U11 RAS APP FATAL ciod: LOGIN chdir(/home/spelce1/UMT2K/umt2k/ckpt_umt2k_src/TEST/NEW_TEST) failed: No such file or directory
+- 1127264122 2005.09.20 R27-M0-N8-I:J18-U11 2005-09-20-17.55.22.058829 R27-M0-N8-I:J18-U11 RAS APP FATAL ciod: Error loading /home/yates//bandwidth.rts: invalid or missing program image, No such file or directory
+- 1127264475 2005.09.20 R44-M1-NC-I:J18-U01 2005-09-20-18.01.15.836848 R44-M1-NC-I:J18-U01 RAS APP FATAL ciod: Error loading /home/yates//broadcast.rts: invalid or missing program image, No such file or directory
+- 1129204934 2005.10.13 R62-M1-N4-I:J18-U11 2005-10-13-05.02.14.653341 R62-M1-N4-I:J18-U11 RAS APP FATAL ciod: Error loading /bgl/apps/followup/SPASM/spasm.254: invalid or missing program image, Permission denied
+- 1129204989 2005.10.13 R44-M0-N4-I:J18-U01 2005-10-13-05.03.09.377689 R44-M0-N4-I:J18-U01 RAS APP FATAL ciod: Error loading /bgl/apps/followup/SPASM/spasm.254: invalid or missing program image, Permission denied
+---
+len=161
+- 1123966456 2005.08.13 R27-M1-NC-I:J18-U11 2005-08-13-13.54.16.386775 R27-M1-NC-I:J18-U11 RAS APP FATAL ciod: LOGIN chdir(pwd) failed: No such file or directory
+- 1123966497 2005.08.13 R61-M1-NC-I:J18-U01 2005-08-13-13.54.57.564471 R61-M1-NC-I:J18-U01 RAS APP FATAL ciod: LOGIN chdir(pwd) failed: No such file or directory
+---
+len=195
+- 1123614572 2005.08.09 R00-M0-N6-C:J03-U11 2005-08-09-12.09.32.252222 R00-M0-N6-C:J03-U11 RAS KERNEL FATAL rts tree/torus link training failed: wanted: B C X+ X- Y+ Y- Z+ Z- got: B C X- Y- Z+ Z-
+- 1128382008 2005.10.03 R63-M0-N4-I:J18-U01 2005-10-03-16.26.48.791418 R63-M0-N4-I:J18-U01 RAS KERNEL INFO ciod: generated 108 core files for program /home/spelce1/HPCC_IBM/Urgent/VNM/32K/vnm.rts
+---
+len=312
+- 1123262593 2005.08.05 R25-M1-N2 2005-08-05-10.23.13.029850 R25-M1-N2 NULL HARDWARE WARNING PrepareForService shutting down NodeCard(mLctn(R25-M1-N2), mCardSernum(203231503833343000000000594c31304b34333431303158), mLp(FF:F2:9F:16:CF:0F:00:0D:60:E9:30:F0), mIp(10.2.2.80), mType(4)) as part of Service Action 310
+---
+len=226
+- 1123195083 2005.08.04 UNKNOWN_LOCATION 2005-08-04-15.38.03.475517 UNKNOWN_LOCATION NULL DISCOVERY INFO Ido chip status changed: FF:F2:9F:16:EB:27:00:0D:60:E9:14:D8 ip=10.0.2.192 v=13 t=4 status=M Thu Aug 04 15:29:45 PDT 2005
+- 1123195190 2005.08.04 UNKNOWN_LOCATION 2005-08-04-15.39.50.374720 UNKNOWN_LOCATION NULL DISCOVERY INFO Ido chip status changed: FF:F2:9F:15:7E:6E:00:0D:60:EA:81:91 ip=10.0.1.155 v=13 t=1 status=M Thu Aug 04 15:31:25 PDT 2005
+- 1123607801 2005.08.09 UNKNOWN_LOCATION 2005-08-09-10.16.41.431406 UNKNOWN_LOCATION NULL DISCOVERY INFO Ido chip status changed: FF:F2:9F:16:DC:81:00:0D:60:E9:23:7E ip=10.6.1.207 v=13 t=4 status=M Tue Aug 09 10:08:23 PDT 2005
+- 1125668117 2005.09.02 R72-M1-N4-I:J18-U01 2005-09-02-06.35.17.592760 R72-M1-N4-I:J18-U01 RAS APP FATAL ciod: LOGIN chdir(/bglscratch/bwallen/SWL/SYS-CALLS/testcases/kernel/syscalls/truncate) failed: No such file or directory
+- 1126969026 2005.09.17 UNKNOWN_LOCATION 2005-09-17-07.57.06.422022 UNKNOWN_LOCATION NULL DISCOVERY INFO Ido chip status changed: FF:F2:9F:15:7B:E0:00:0D:60:EA:84:1F ip=10.7.0.130 v=13 t=1 status=M Sat Sep 17 07:49:04 PDT 2005
+- 1134159495 2005.12.09 R27-M0-N4-I:J18-U11 2005-12-09-12.18.15.322330 R27-M0-N4-I:J18-U11 RAS APP FATAL ciod: Error loading /bgl/apps/SWL/stability/MDCASK/WORK/1383/inferno: invalid or missing program image, Permission denied
+---
+len=203
+- 1123025540 2005.08.02 UNKNOWN_LOCATION 2005-08-02-16.32.20.358039 UNKNOWN_LOCATION NULL DISCOVERY INFO New ido chip inserted into the database: FF:F2:9F:16:BF:6C:00:0D:60:E9:40:93 ip=10.5.0.46 v=13 t=4
+- 1123043313 2005.08.02 UNKNOWN_LOCATION 2005-08-02-21.28.33.869729 UNKNOWN_LOCATION NULL DISCOVERY INFO New ido chip inserted into the database: FF:F2:9F:16:C4:C2:00:0D:60:E9:3B:3D ip=10.2.1.37 v=13 t=4
+---
+len=241
+- 1119309833 2005.06.20 R14-M1-N0-I:J18-U01 2005-06-20-16.23.53.944371 R14-M1-N0-I:J18-U01 RAS APP FATAL ciod: Error loading /home/draeger/testQboxhang-nozerobytebug-nosleepyescomm: invalid or missing program image, No such file or directory
+- 1123976348 2005.08.13 R60-M1-NC-I:J18-U01 2005-08-13-16.39.08.734879 R60-M1-NC-I:J18-U01 RAS APP FATAL ciod: Error loading /bgl/apps/scaletest/stability/MDCASK/WORK/65576/inferno: invalid or missing program image, No such file or directory
+---
+len=144
+- 1122165876 2005.07.23 R10-M1-NE-C:J05-U01 2005-07-23-17.44.36.808433 R10-M1-NE-C:J05-U01 RAS KERNEL INFO 5 floating point alignment exceptions
+- 1122166057 2005.07.23 R16-M1-N0-C:J10-U01 2005-07-23-17.47.37.233460 R16-M1-N0-C:J10-U01 RAS KERNEL INFO 5 floating point alignment exceptions
+- 1122166538 2005.07.23 R15-M1-N3-C:J11-U11 2005-07-23-17.55.38.692000 R15-M1-N3-C:J11-U11 RAS KERNEL INFO 5 floating point alignment exceptions
+- 1122166574 2005.07.23 R14-M1-ND-C:J17-U01 2005-07-23-17.56.14.409667 R14-M1-ND-C:J17-U01 RAS KERNEL INFO 5 floating point alignment exceptions
+- 1122166579 2005.07.23 R14-M0-NF-C:J09-U01 2005-07-23-17.56.19.153654 R14-M0-NF-C:J09-U01 RAS KERNEL INFO 5 floating point alignment exceptions
+- 1122166602 2005.07.23 R16-M1-NE-C:J10-U11 2005-07-23-17.56.42.172094 R16-M1-NE-C:J10-U11 RAS KERNEL INFO 5 floating point alignment exceptions
+- 1122166655 2005.07.23 R13-M0-NB-C:J03-U11 2005-07-23-17.57.35.683632 R13-M0-NB-C:J03-U11 RAS KERNEL INFO 5 floating point alignment exceptions
+- 1122166749 2005.07.23 R13-M1-NC-C:J04-U01 2005-07-23-17.59.09.578130 R13-M1-NC-C:J04-U01 RAS KERNEL INFO 5 floating point alignment exceptions
+---
+len=154
+- 1122160898 2005.07.23 R04-M0-N1-C:J10-U01 2005-07-23-16.21.38.272915 R04-M0-N1-C:J10-U01 RAS KERNEL INFO total of 23 ddr error(s) detected and corrected
+- 1128832742 2005.10.08 R53-M1-NB-C:J13-U01 2005-10-08-21.39.02.618861 R53-M1-NB-C:J13-U01 RAS KERNEL INFO total of 12 ddr error(s) detected and corrected
+---
+len=151
+- 1125220268 2005.08.28 R75-M1-N8-C:J13-U11 2005-08-28-02.11.08.660202 R75-M1-N8-C:J13-U11 RAS KERNEL INFO 155918940 double-hummer alignment exceptions
+- 1131127543 2005.11.04 R62-M0-NC-C:J11-U01 2005-11-04-10.05.43.243815 R62-M0-NC-C:J11-U01 RAS KERNEL INFO 16604010 floating point alignment exceptions
+- 1131127543 2005.11.04 R62-M0-NC-C:J06-U11 2005-11-04-10.05.43.570607 R62-M0-NC-C:J06-U11 RAS KERNEL INFO 16469355 floating point alignment exceptions
+- 1131128050 2005.11.04 R62-M0-N4-C:J03-U01 2005-11-04-10.14.10.540522 R62-M0-N4-C:J03-U01 RAS KERNEL INFO 16736445 floating point alignment exceptions
+- 1131129646 2005.11.04 R62-M0-N6-C:J16-U11 2005-11-04-10.40.46.576314 R62-M0-N6-C:J16-U11 RAS KERNEL INFO 74350836 floating point alignment exceptions
+- 1131131501 2005.11.04 R63-M0-N8-C:J03-U11 2005-11-04-11.11.41.412257 R63-M0-N8-C:J03-U11 RAS KERNEL INFO 54004554 floating point alignment exceptions
+- 1131484346 2005.11.08 R63-M0-N6-C:J13-U01 2005-11-08-13.12.26.089394 R63-M0-N6-C:J13-U01 RAS KERNEL INFO 19220208 floating point alignment exceptions
+- 1135579635 2005.12.25 R62-M1-NA-C:J04-U01 2005-12-25-22.47.15.963417 R62-M1-NA-C:J04-U01 RAS KERNEL FATAL fpr29=0xffffffff ffffffff ffffffff ffffffff
+---
+len=248
+- 1121408299 2005.07.14 R23-M0-N0-I:J18-U01 2005-07-14-23.18.19.684786 R23-M0-N0-I:J18-U01 RAS KERNEL INFO ciod: Z coordinate 32 exceeds physical dimension 32 at line 33 of node map file /p/gb2/pakin1/contention-32768cpes-torus/xyzt-1x1x32768x1.map
+---
+len=137
+KERNSTOR 1118768044 2005.06.14 R05-M1-NB-C:J07-U11 2005-06-14-09.54.04.393973 R05-M1-NB-C:J07-U11 RAS KERNEL FATAL data storage interrupt
+KERNSTOR 1118768087 2005.06.14 R16-M0-N4-C:J02-U11 2005-06-14-09.54.47.139055 R16-M0-N4-C:J02-U11 RAS KERNEL FATAL data storage interrupt
+KERNSTOR 1118768121 2005.06.14 R03-M1-N8-C:J13-U11 2005-06-14-09.55.21.391576 R03-M1-N8-C:J13-U11 RAS KERNEL FATAL data storage interrupt
+KERNSTOR 1118768178 2005.06.14 R06-M1-NC-C:J11-U01 2005-06-14-09.56.18.293090 R06-M1-NC-C:J11-U01 RAS KERNEL FATAL data storage interrupt
+KERNSTOR 1118769323 2005.06.14 R20-M0-ND-C:J15-U11 2005-06-14-10.15.23.940275 R20-M0-ND-C:J15-U11 RAS KERNEL FATAL data storage interrupt
+KERNSTOR 1118769408 2005.06.14 R25-M1-NF-C:J16-U01 2005-06-14-10.16.48.088109 R25-M1-NF-C:J16-U01 RAS KERNEL FATAL data storage interrupt
+KERNSTOR 1118769443 2005.06.14 R21-M0-NC-C:J13-U11 2005-06-14-10.17.23.235674 R21-M0-NC-C:J13-U11 RAS KERNEL FATAL data storage interrupt
+KERNSTOR 1118769444 2005.06.14 R21-M0-N4-C:J05-U11 2005-06-14-10.17.24.504094 R21-M0-N4-C:J05-U11 RAS KERNEL FATAL data storage interrupt
+---
+len=234
+- 1121111691 2005.07.11 R22-M0-N0-I:J18-U11 2005-07-11-12.54.51.738880 R22-M0-N0-I:J18-U11 RAS APP FATAL ciod: Error loading /home/greeno/raptor.new.dev.3d.BGL.CXX_XL.MPI.ex: invalid or missing program image, No such file or directory
+- 1127264866 2005.09.20 R73-M1-NC-I:J18-U11 2005-09-20-18.07.46.603480 R73-M1-NC-I:J18-U11 RAS APP FATAL ciod: Error loading /bgl/apps/SWL/performance/MINIBEN//bandwidth.rts: invalid or missing program image, No such file or directory
+---
+len=160
+KERNMNTF 1125552593 2005.08.31 R42-M1-NC-I:J18-U11 2005-08-31-22.29.53.058583 R42-M1-NC-I:J18-U11 RAS KERNEL FATAL Lustre mount FAILED : bglio559 : point /p/gb1
+KERNMNTF 1125552643 2005.08.31 R25-M1-N4-I:J18-U01 2005-08-31-22.30.43.752965 R25-M1-N4-I:J18-U01 RAS KERNEL FATAL Lustre mount FAILED : bglio344 : point /p/gb1
+KERNMNTF 1125692642 2005.09.02 R10-M1-N4-I:J18-U01 2005-09-02-13.24.02.308650 R10-M1-N4-I:J18-U01 RAS KERNEL FATAL Lustre mount FAILED : bglio136 : point /p/gb1
+KERNMNTF 1125759503 2005.09.03 R55-M1-NC-I:J18-U01 2005-09-03-07.58.23.476703 R55-M1-NC-I:J18-U01 RAS KERNEL FATAL Lustre mount FAILED : bglio736 : point /p/gb1
+KERNMNTF 1125871271 2005.09.04 R24-M1-NC-I:J18-U01 2005-09-04-15.01.11.038078 R24-M1-NC-I:J18-U01 RAS KERNEL FATAL Lustre mount FAILED : bglio336 : point /p/gb1
+KERNMNTF 1126627325 2005.09.13 R30-M0-N4-I:J18-U01 2005-09-13-09.02.05.602211 R30-M0-N4-I:J18-U01 RAS KERNEL FATAL Lustre mount FAILED : bglio388 : point /p/gb1
+---
+len=257
+- 1120908821 2005.07.09 R20-M0-N8-I:J18-U01 2005-07-09-04.33.41.091472 R20-M0-N8-I:J18-U01 RAS KERNEL INFO ciod: duplicate canonical-rank 31 to logical-rank 0 mapping at line 3 of node map file /p/gb2/pakin1/sweep3d-5x5x400-10mk-3mmi-1024pes-sweep/sweep.map
+---
+len=132
+- 1118767015 2005.06.14 R24-M1-N3-C:J16-U01 2005-06-14-09.36.55.370589 R24-M1-N3-C:J16-U01 RAS KERNEL FATAL data address: 0x00000002
+- 1118767049 2005.06.14 R25-M1-N3-C:J16-U01 2005-06-14-09.37.29.304192 R25-M1-N3-C:J16-U01 RAS KERNEL FATAL data address: 0x00000002
+- 1118768111 2005.06.14 R20-M1-N7-C:J16-U01 2005-06-14-09.55.11.455484 R20-M1-N7-C:J16-U01 RAS KERNEL FATAL data address: 0x00000002
+- 1118768158 2005.06.14 R25-M0-NF-C:J05-U01 2005-06-14-09.55.58.097920 R25-M0-NF-C:J05-U01 RAS KERNEL FATAL data address: 0x00000002
+- 1118768162 2005.06.14 R25-M0-ND-C:J04-U01 2005-06-14-09.56.02.974678 R25-M0-ND-C:J04-U01 RAS KERNEL FATAL data address: 0x00000002
+- 1118768186 2005.06.14 R24-M1-N6-C:J11-U01 2005-06-14-09.56.26.940016 R24-M1-N6-C:J11-U01 RAS KERNEL FATAL data address: 0x00000002
+- 1118769450 2005.06.14 R26-M0-N9-C:J12-U01 2005-06-14-10.17.30.392758 R26-M0-N9-C:J12-U01 RAS KERNEL FATAL data address: 0x00000002
+- 1118769705 2005.06.14 R21-M1-N4-C:J10-U01 2005-06-14-10.21.45.802128 R21-M1-N4-C:J10-U01 RAS KERNEL FATAL data address: 0x00000002
+---
+len=229
+APPSEV 1126539103 2005.09.12 R41-M1-N4-I:J18-U11 2005-09-12-08.31.43.214677 R41-M1-N4-I:J18-U11 RAS APP FATAL ciod: Error reading message prefix after LOAD_MESSAGE on CioStream socket to 172.16.96.116:41304: Link has been severed
+APPSEV 1126539106 2005.09.12 R53-M1-N0-I:J18-U01 2005-09-12-08.31.46.757073 R53-M1-N0-I:J18-U01 RAS APP FATAL ciod: Error reading message prefix after LOAD_MESSAGE on CioStream socket to 172.16.96.116:41217: Link has been severed
+APPSEV 1126798111 2005.09.15 R72-M1-N0-I:J18-U01 2005-09-15-08.28.31.789429 R72-M1-N0-I:J18-U01 RAS APP FATAL ciod: Error reading message prefix after LOAD_MESSAGE on CioStream socket to 172.16.96.116:37916: Link has been severed
+APPSEV 1127780591 2005.09.26 R27-M0-NC-I:J18-U11 2005-09-26-17.23.11.155275 R27-M0-NC-I:J18-U11 RAS APP FATAL ciod: Error reading message prefix after LOAD_MESSAGE on CioStream socket to 172.16.96.116:34903: Link has been severed
+- 1128170317 2005.10.01 R73-M0-N4-I:J18-U11 2005-10-01-05.38.37.246285 R73-M0-N4-I:J18-U11 RAS APP FATAL ciod: Error loading /home/spelce1/HPCC_IBM/Urgent/Gunnels/VNM64/vnm.rts: invalid or missing program image, Permission denied
+APPSEV 1128597888 2005.10.06 R56-M0-N0-I:J18-U01 2005-10-06-04.24.48.021229 R56-M0-N0-I:J18-U01 RAS APP FATAL ciod: Error reading message prefix after LOAD_MESSAGE on CioStream socket to 172.16.96.116:53591: Link has been severed
+APPSEV 1128970806 2005.10.10 R05-M0-N8-I:J18-U11 2005-10-10-12.00.06.181123 R05-M0-N8-I:J18-U11 RAS APP FATAL ciod: Error reading message prefix after LOAD_MESSAGE on CioStream socket to 172.16.96.116:57673: Link has been severed
+APPSEV 1129501476 2005.10.16 R71-M1-N0-I:J18-U01 2005-10-16-15.24.36.889002 R71-M1-N0-I:J18-U01 RAS APP FATAL ciod: Error reading message prefix after LOAD_MESSAGE on CioStream socket to 172.16.96.116:47696: Link has been severed
+---
+len=182
+- 1120658382 2005.07.06 R27-M1-N1-C:J02-U11 2005-07-06-06.59.42.777345 R27-M1-N1-C:J02-U11 RAS KERNEL INFO 1 torus receiver z+ input pipe error(s) (dcr 0x02f0) detected and corrected
+- 1125730913 2005.09.03 R06-M1-N6-C:J15-U01 2005-09-03-00.01.53.125988 R06-M1-N6-C:J15-U01 RAS KERNEL INFO 1 torus receiver x+ input pipe error(s) (dcr 0x02ec) detected and corrected
+- 1126267442 2005.09.09 R13-M0-N2-C:J09-U01 2005-09-09-05.04.02.346866 R13-M0-N2-C:J09-U01 RAS KERNEL INFO 1 torus receiver y+ input pipe error(s) (dcr 0x02ee) detected and corrected
+- 1131601567 2005.11.09 R51-M1-N4-C:J07-U01 2005-11-09-21.46.07.597381 R51-M1-N4-C:J07-U01 RAS KERNEL INFO 5 torus receiver z+ input pipe error(s) (dcr 0x02f0) detected and corrected
+- 1133625592 2005.12.03 R06-M1-NF-C:J12-U01 2005-12-03-07.59.52.640827 R06-M1-NF-C:J12-U01 RAS KERNEL INFO 1 ddr error(s) detected and corrected on rank 0, symbol 24 over 335 seconds
+---
+len=209
+- 1120591331 2005.07.05 R32-M0-N4-I:J18-U01 2005-07-05-12.22.11.843446 R32-M0-N4-I:J18-U01 RAS KERNEL INFO ciod: Missing or invalid fields on line 1 of node map file /home/auselton/bgl/64mps.sequential.mapfile
+- 1134159256 2005.12.09 R20-M1-N4-I:J18-U01 2005-12-09-12.14.16.349690 R20-M1-N4-I:J18-U01 RAS APP FATAL ciod: Error loading /p/gb1/stella/SPPM/1322/sppm_DD: invalid or missing program image, Permission denied
+---
+len=128
+- 1122431319 2005.07.26 R16-M0-ND-C:J13-U01 2005-07-26-19.28.39.863604 R16-M0-ND-C:J13-U01 RAS KERNEL INFO generating core.59977
+- 1122431408 2005.07.26 R11-M0-N5-C:J14-U01 2005-07-26-19.30.08.728161 R11-M0-N5-C:J14-U01 RAS KERNEL INFO generating core.19592
+- 1122431485 2005.07.26 R03-M1-N6-C:J08-U11 2005-07-26-19.31.25.816198 R03-M1-N6-C:J08-U11 RAS KERNEL INFO generating core.50086
+- 1122431514 2005.07.26 R03-M1-N2-C:J11-U01 2005-07-26-19.31.54.482487 R03-M1-N2-C:J11-U01 RAS KERNEL INFO generating core.22469
+- 1122431540 2005.07.26 R14-M0-N9-C:J04-U11 2005-07-26-19.32.20.863604 R14-M0-N9-C:J04-U11 RAS KERNEL INFO generating core.63787
+- 1122431669 2005.07.26 R07-M1-N6-C:J14-U11 2005-07-26-19.34.29.061235 R07-M1-N6-C:J14-U11 RAS KERNEL INFO generating core.18084
+- 1122431732 2005.07.26 R05-M1-N9-C:J11-U01 2005-07-26-19.35.32.608060 R05-M1-N9-C:J11-U01 RAS KERNEL INFO generating core.23873
+- 1122574113 2005.07.28 R31-M1-N1-C:J08-U11 2005-07-28-11.08.33.510063 R31-M1-N1-C:J08-U11 RAS KERNEL INFO generating core.11346
+---
+len=225
+- 1120231520 2005.07.01 UNKNOWN_LOCATION 2005-07-01-08.25.20.466953 UNKNOWN_LOCATION NULL DISCOVERY INFO Ido chip status changed: FF:F2:9F:16:E2:23:00:0D:60:E9:1D:DC ip=10.0.0.151 v=9 t=4 status=M Fri Jul 01 08:16:53 PDT 2005
+---
+len=243
+- 1123914754 2005.08.12 R31-M1-N4-I:J18-U11 2005-08-12-23.32.34.800803 R31-M1-N4-I:J18-U11 RAS APP FATAL ciod: Error loading /bgl/apps/scaletest/performance/MINIBEN/mb_243_0810/allreduce.rts: invalid or missing program image, Exec format error
+- 1123914842 2005.08.12 R66-M0-N8-I:J18-U01 2005-08-12-23.34.02.183112 R66-M0-N8-I:J18-U01 RAS APP FATAL ciod: Error loading /bgl/apps/scaletest/performance/MINIBEN/mb_243_0810/allreduce.rts: invalid or missing program image, Exec format error
+- 1123914894 2005.08.12 R15-M0-NC-I:J18-U11 2005-08-12-23.34.54.272486 R15-M0-NC-I:J18-U11 RAS APP FATAL ciod: Error loading /bgl/apps/scaletest/performance/MINIBEN/mb_243_0810/allreduce.rts: invalid or missing program image, Exec format error
+- 1123914895 2005.08.12 R16-M1-N0-I:J18-U11 2005-08-12-23.34.55.201666 R16-M1-N0-I:J18-U11 RAS APP FATAL ciod: Error loading /bgl/apps/scaletest/performance/MINIBEN/mb_243_0810/allreduce.rts: invalid or missing program image, Exec format error
+- 1123915332 2005.08.12 R01-M0-NC-I:J18-U11 2005-08-12-23.42.12.603889 R01-M0-NC-I:J18-U11 RAS APP FATAL ciod: Error loading /bgl/apps/scaletest/performance/MINIBEN/mb_243_0810/allreduce.rts: invalid or missing program image, Exec format error
+- 1123915673 2005.08.12 R66-M1-N4-I:J18-U01 2005-08-12-23.47.53.914235 R66-M1-N4-I:J18-U01 RAS APP FATAL ciod: Error loading /bgl/apps/scaletest/performance/MINIBEN/mb_243_0810/allreduce.rts: invalid or missing program image, Exec format error
+- 1123915807 2005.08.12 R74-M1-N8-I:J18-U01 2005-08-12-23.50.07.561913 R74-M1-N8-I:J18-U01 RAS APP FATAL ciod: Error loading /bgl/apps/scaletest/performance/MINIBEN/mb_243_0810/allreduce.rts: invalid or missing program image, Exec format error
+- 1123915920 2005.08.12 R73-M0-N4-I:J18-U11 2005-08-12-23.52.00.785387 R73-M0-N4-I:J18-U11 RAS APP FATAL ciod: Error loading /bgl/apps/scaletest/performance/MINIBEN/mb_243_0810/allreduce.rts: invalid or missing program image, Exec format error
+---
+len=146
+- 1119807051 2005.06.26 R05-M0-N6-C:J06-U11 2005-06-26-10.30.51.645473 R05-M0-N6-C:J06-U11 RAS KERNEL INFO exception syndrome register: 0x08000000
+KERNRTSP 1121115817 2005.07.11 R01-M0-N1-C:J09-U11 2005-07-11-14.03.37.675251 R01-M0-N1-C:J09-U11 RAS KERNEL FATAL rts panic! - stopping execution
+KERNRTSP 1121115819 2005.07.11 R04-M0-N1-C:J02-U01 2005-07-11-14.03.39.101778 R04-M0-N1-C:J02-U01 RAS KERNEL FATAL rts panic! - stopping execution
+- 1122167255 2005.07.23 R16-M1-NB-C:J06-U01 2005-07-23-18.07.35.329193 R16-M1-NB-C:J06-U01 RAS KERNEL INFO 685 floating point alignment exceptions
+- 1122167266 2005.07.23 R17-M0-NF-C:J09-U01 2005-07-23-18.07.46.273016 R17-M0-NF-C:J09-U01 RAS KERNEL INFO 685 floating point alignment exceptions
+- 1122167432 2005.07.23 R11-M1-N9-C:J07-U11 2005-07-23-18.10.32.223048 R11-M1-N9-C:J07-U11 RAS KERNEL INFO 685 floating point alignment exceptions
+- 1122167438 2005.07.23 R11-M1-N5-C:J14-U11 2005-07-23-18.10.38.305020 R11-M1-N5-C:J14-U11 RAS KERNEL INFO 685 floating point alignment exceptions
+---
+len=249
+- 1133455483 2005.12.01 R43-M0-N2-C:J09-U01 2005-12-01-08.44.43.581956 R43-M0-N2-C:J09-U01 RAS KERNEL INFO 0 microseconds spent in the rbs signal handler during 0 calls. 0 microseconds was the maximum time for a single instance of a correctable ddr.
+- 1133455488 2005.12.01 R25-M0-N7-C:J07-U01 2005-12-01-08.44.48.531704 R25-M0-N7-C:J07-U01 RAS KERNEL INFO 0 microseconds spent in the rbs signal handler during 0 calls. 0 microseconds was the maximum time for a single instance of a correctable ddr.
+- 1133455511 2005.12.01 R25-M1-ND-C:J08-U01 2005-12-01-08.45.11.599274 R25-M1-ND-C:J08-U01 RAS KERNEL INFO 0 microseconds spent in the rbs signal handler during 0 calls. 0 microseconds was the maximum time for a single instance of a correctable ddr.
+- 1133455642 2005.12.01 R23-M0-ND-C:J08-U11 2005-12-01-08.47.22.963148 R23-M0-ND-C:J08-U11 RAS KERNEL INFO 0 microseconds spent in the rbs signal handler during 0 calls. 0 microseconds was the maximum time for a single instance of a correctable ddr.
+- 1133455643 2005.12.01 R22-M0-N5-C:J06-U11 2005-12-01-08.47.23.541583 R22-M0-N5-C:J06-U11 RAS KERNEL INFO 0 microseconds spent in the rbs signal handler during 0 calls. 0 microseconds was the maximum time for a single instance of a correctable ddr.
+- 1133455649 2005.12.01 R23-M1-N5-C:J07-U11 2005-12-01-08.47.29.441454 R23-M1-N5-C:J07-U11 RAS KERNEL INFO 0 microseconds spent in the rbs signal handler during 0 calls. 0 microseconds was the maximum time for a single instance of a correctable ddr.
+- 1133455654 2005.12.01 R24-M0-N6-C:J05-U11 2005-12-01-08.47.34.385432 R24-M0-N6-C:J05-U11 RAS KERNEL INFO 0 microseconds spent in the rbs signal handler during 0 calls. 0 microseconds was the maximum time for a single instance of a correctable ddr.
+- 1133455660 2005.12.01 R24-M0-N9-C:J10-U11 2005-12-01-08.47.40.003136 R24-M0-N9-C:J10-U11 RAS KERNEL INFO 0 microseconds spent in the rbs signal handler during 0 calls. 0 microseconds was the maximum time for a single instance of a correctable ddr.
+---
+len=152
+- 1119807165 2005.06.26 R00-M0-N4-C:J02-U01 2005-06-26-10.32.45.810547 R00-M0-N4-C:J02-U01 RAS KERNEL INFO program interrupt: illegal instruction......1
+- 1119807218 2005.06.26 R35-M1-NF-C:J15-U01 2005-06-26-10.33.38.646025 R35-M1-NF-C:J15-U01 RAS KERNEL INFO program interrupt: privileged instruction...0
+- 1119807482 2005.06.26 R05-M0-N5-C:J09-U11 2005-06-26-10.38.02.680379 R05-M0-N5-C:J09-U11 RAS KERNEL INFO data store interrupt caused by dcbf.........0
+- 1119807491 2005.06.26 R02-M0-N9-C:J06-U01 2005-06-26-10.38.11.390037 R02-M0-N9-C:J06-U01 RAS KERNEL INFO data store interrupt caused by dcbf.........0
+- 1119807588 2005.06.26 R33-M1-N3-C:J16-U11 2005-06-26-10.39.48.944209 R33-M1-N3-C:J16-U11 RAS KERNEL INFO auxiliary processor.........................0
+- 1120967799 2005.07.09 R17-M0-NF-C:J13-U11 2005-07-09-20.56.39.594043 R17-M0-NF-C:J13-U11 RAS KERNEL INFO 1365301360 double-hummer alignment exceptions
+- 1120967919 2005.07.09 R14-M0-NB-C:J13-U11 2005-07-09-20.58.39.414224 R14-M0-NB-C:J13-U11 RAS KERNEL INFO 1315337824 double-hummer alignment exceptions
+- 1120967922 2005.07.09 R14-M0-N9-C:J14-U01 2005-07-09-20.58.42.972274 R14-M0-N9-C:J14-U01 RAS KERNEL INFO 1401390016 double-hummer alignment exceptions
+---
+len=246
+- 1130688037 2005.10.30 R26-M0-N4-I:J18-U11 2005-10-30-08.00.37.655705 R26-M0-N4-I:J18-U11 RAS APP FATAL ciod: Error loading /home/spelce1/HPCC_IBM/Urgent/COP/64K/hpcc-1.0.0.102905_opt_essl_cpm: invalid or missing program image, Permission denied
+---
+len=149
+- 1131059158 2005.11.03 R67-M0-N8-C:J02-U01 2005-11-03-15.05.58.736742 R67-M0-N8-C:J02-U01 RAS KERNEL INFO 640404 floating point alignment exceptions
+- 1131059209 2005.11.03 R66-M0-N5-C:J12-U11 2005-11-03-15.06.49.830610 R66-M0-N5-C:J12-U11 RAS KERNEL INFO 640404 floating point alignment exceptions
+- 1131060130 2005.11.03 R67-M1-NF-C:J10-U01 2005-11-03-15.22.10.405323 R67-M1-NF-C:J10-U01 RAS KERNEL INFO 487476 floating point alignment exceptions
+- 1131060157 2005.11.03 R66-M1-NB-C:J17-U01 2005-11-03-15.22.37.393511 R66-M1-NB-C:J17-U01 RAS KERNEL INFO 487476 floating point alignment exceptions
+- 1131148249 2005.11.04 R63-M0-N0-C:J03-U01 2005-11-04-15.50.49.414886 R63-M0-N0-C:J03-U01 RAS KERNEL INFO 407736 floating point alignment exceptions
+- 1131148435 2005.11.04 R63-M0-N7-C:J09-U01 2005-11-04-15.53.55.739224 R63-M0-N7-C:J09-U01 RAS KERNEL INFO 428412 floating point alignment exceptions
+- 1131148446 2005.11.04 R63-M0-N4-C:J02-U01 2005-11-04-15.54.06.214936 R63-M0-N4-C:J02-U01 RAS KERNEL INFO 441348 floating point alignment exceptions
+- 1131693152 2005.11.10 R63-M0-N5-C:J12-U01 2005-11-10-23.12.32.269153 R63-M0-N5-C:J12-U01 RAS KERNEL INFO 488205 floating point alignment exceptions
+---
+len=186
+- 1131142179 2005.11.04 R60-M1-N0-I:J18-U01 2005-11-04-14.09.39.179254 R60-M1-N0-I:J18-U01 RAS KERNEL INFO ciod: generated 128 core files for program /g/g20/valone1/SPaSM-shock/SPaSM_mpi
+---
+len=477
+- 1123176466 2005.08.04 R71-M0-NC 2005-08-04-10.27.46.284345 R71-M0-NC NULL DISCOVERY ERROR Node card status: no ALERTs are active. Clock Mode is Low. Clock Select is Midplane. Phy JTAG Reset is asserted. ASIC JTAG Reset is asserted. Temperature Mask is not active. No temperature error. Temperature Limit Error Latch is clear. PGOOD IS NOT ASSERTED. PGOOD ERROR LATCH IS ACTIVE. MPGOOD IS NOT OK. MPGOOD ERROR LATCH IS ACTIVE. The 2.5 volt rail is OK. The 1.5 volt rail is OK.
+- 1123183618 2005.08.04 R76-M1-N4 2005-08-04-12.26.58.275812 R76-M1-N4 NULL DISCOVERY ERROR Node card status: no ALERTs are active. Clock Mode is Low. Clock Select is Midplane. Phy JTAG Reset is asserted. ASIC JTAG Reset is asserted. Temperature Mask is not active. No temperature error. Temperature Limit Error Latch is clear. PGOOD IS NOT ASSERTED. PGOOD ERROR LATCH IS ACTIVE. MPGOOD IS NOT OK. MPGOOD ERROR LATCH IS ACTIVE. The 2.5 volt rail is OK. The 1.5 volt rail is OK.
+- 1123610468 2005.08.09 R26-M0-N7 2005-08-09-11.01.08.922516 R26-M0-N7 NULL DISCOVERY ERROR Node card status: no ALERTs are active. Clock Mode is Low. Clock Select is Midplane. Phy JTAG Reset is asserted. ASIC JTAG Reset is asserted. Temperature Mask is not active. No temperature error. Temperature Limit Error Latch is clear. PGOOD IS NOT ASSERTED. PGOOD ERROR LATCH IS ACTIVE. MPGOOD IS NOT OK. MPGOOD ERROR LATCH IS ACTIVE. The 2.5 volt rail is OK. The 1.5 volt rail is OK.
+- 1125193792 2005.08.27 R11-M1-N7 2005-08-27-18.49.52.912954 R11-M1-N7 NULL DISCOVERY ERROR Node card status: no ALERTs are active. Clock Mode is Low. Clock Select is Midplane. Phy JTAG Reset is asserted. ASIC JTAG Reset is asserted. Temperature Mask is not active. No temperature error. Temperature Limit Error Latch is clear. PGOOD IS NOT ASSERTED. PGOOD ERROR LATCH IS ACTIVE. MPGOOD IS NOT OK. MPGOOD ERROR LATCH IS ACTIVE. The 2.5 volt rail is OK. The 1.5 volt rail is OK.
+- 1126979315 2005.09.17 R76-M1-N8 2005-09-17-10.48.35.944995 R76-M1-N8 NULL DISCOVERY ERROR Node card status: no ALERTs are active. Clock Mode is Low. Clock Select is Midplane. Phy JTAG Reset is asserted. ASIC JTAG Reset is asserted. Temperature Mask is not active. No temperature error. Temperature Limit Error Latch is clear. PGOOD IS NOT ASSERTED. PGOOD ERROR LATCH IS ACTIVE. MPGOOD IS NOT OK. MPGOOD ERROR LATCH IS ACTIVE. The 2.5 volt rail is OK. The 1.5 volt rail is OK.
+---
+len=148
+- 1120265591 2005.07.01 R30-M1-NB-C:J17-U11 2005-07-01-17.53.11.746402 R30-M1-NB-C:J17-U11 RAS KERNEL INFO 458720 double-hummer alignment exceptions
+- 1120265616 2005.07.01 R35-M1-N1-C:J09-U01 2005-07-01-17.53.36.360670 R35-M1-N1-C:J09-U01 RAS KERNEL INFO 458720 double-hummer alignment exceptions
+- 1120265656 2005.07.01 R23-M0-N6-C:J11-U01 2005-07-01-17.54.16.064998 R23-M0-N6-C:J11-U01 RAS KERNEL INFO 458720 double-hummer alignment exceptions
+- 1125084124 2005.08.26 R76-M0-N1-C:J02-U11 2005-08-26-12.22.04.891042 R76-M0-N1-C:J02-U11 RAS KERNEL INFO 773760 double-hummer alignment exceptions
+- 1131066692 2005.11.03 R36-M1-NB-C:J09-U01 2005-11-03-17.11.32.221132 R36-M1-NB-C:J09-U01 RAS KERNEL INFO 62500 floating point alignment exceptions
+- 1131066789 2005.11.03 R24-M1-ND-C:J12-U11 2005-11-03-17.13.09.263119 R24-M1-ND-C:J12-U11 RAS KERNEL INFO 62500 floating point alignment exceptions
+- 1131067982 2005.11.03 R35-M1-NF-C:J13-U01 2005-11-03-17.33.02.056235 R35-M1-NF-C:J13-U01 RAS KERNEL INFO 62500 floating point alignment exceptions
+- 1131127186 2005.11.04 R62-M0-N9-C:J08-U11 2005-11-04-09.59.46.036595 R62-M0-N9-C:J08-U11 RAS KERNEL INFO 45684 floating point alignment exceptions
+---
+len=202
+- 1119402454 2005.06.21 R22-M0-N4-I:J18-U11 2005-06-21-18.07.34.337232 R22-M0-N4-I:J18-U11 RAS APP FATAL ciod: Error loading ./runtime_malloc: invalid or missing program image, No such file or directory
+- 1123021638 2005.08.02 UNKNOWN_LOCATION 2005-08-02-15.27.18.161989 UNKNOWN_LOCATION NULL DISCOVERY INFO New ido chip inserted into the database: FF:F2:9F:15:1F:72:00:0D:60:EA:E0:8D ip=10.7.0.13 v=9 t=2
+---
+len=157
+- 1118772877 2005.06.14 R27-M1-N3-C:J04-U11 2005-06-14-11.14.37.821210 R27-M1-N3-C:J04-U11 RAS KERNEL FATAL lr:00004ed0 cr:28244842 xer:20000002 ctr:00086000
+---
+len=231
+- 1119736307 2005.06.25 R01-M1-N8-I:J18-U11 2005-06-25-14.51.47.575572 R01-M1-N8-I:J18-U11 RAS APP FATAL ciod: Error loading /home/glosli/src/ddcMD/ddcMD/1.1.13/ddcMDbglV: invalid or missing program image, No such file or directory
+- 1131366730 2005.11.07 R50-M0-N4-I:J18-U01 2005-11-07-04.32.10.481855 R50-M0-N4-I:J18-U01 RAS APP FATAL ciod: Error loading /bgl/apps/followup/RAPTOR/pre-study/raptor.newcomp.r1: invalid or missing program image, Permission denied
+- 1131366881 2005.11.07 R60-M0-N0-I:J18-U01 2005-11-07-04.34.41.779706 R60-M0-N0-I:J18-U01 RAS APP FATAL ciod: Error loading /bgl/apps/followup/RAPTOR/pre-study/raptor.newcomp.r1: invalid or missing program image, Permission denied
+- 1134161333 2005.12.09 R61-M0-N0-I:J18-U11 2005-12-09-12.48.53.105166 R61-M0-N0-I:J18-U11 RAS APP FATAL ciod: Error loading /bgl/apps/SWL/stability/HPL/WORK/1498./hpl_DD: invalid or missing program image, No such file or directory
+- 1134161388 2005.12.09 R07-M0-N8-I:J18-U11 2005-12-09-12.49.48.361835 R07-M0-N8-I:J18-U11 RAS APP FATAL ciod: Error loading /bgl/apps/SWL/stability/HPL/WORK/1501./hpl_DD: invalid or missing program image, No such file or directory
+---
+len=134
+- 1118772810 2005.06.14 R27-M0-N9-C:J12-U01 2005-06-14-11.13.30.870052 R27-M0-N9-C:J12-U01 RAS KERNEL FATAL special purpose registers:
+---
+len=240
+- 1131036466 2005.11.03 R15-M0-NC-I:J18-U11 2005-11-03-08.47.46.669663 R15-M0-NC-I:J18-U11 RAS APP FATAL ciod: Error loading /home.old/glosli/src/ddcMD/ddcMD1.1.18a/bin/ddcMDGbglV: invalid or missing program image, No such file or directory
+---
+len=143
+- 1118773049 2005.06.14 R20-M1-NF-C:J14-U11 2005-06-14-11.17.29.948847 R20-M1-NF-C:J14-U11 RAS KERNEL FATAL floating pt ex mode 0 enable......0
+- 1118773252 2005.06.14 R20-M1-N0-C:J10-U01 2005-06-14-11.20.52.106874 R20-M1-N0-C:J10-U01 RAS KERNEL FATAL debug wait enable.................0
+- 1118773424 2005.06.14 R25-M0-N2-C:J04-U11 2005-06-14-11.23.44.638394 R25-M0-N2-C:J04-U11 RAS KERNEL FATAL floating pt ex mode 1 enable......0
+- 1118773618 2005.06.14 R25-M1-N7-C:J09-U11 2005-06-14-11.26.58.490506 R25-M1-N7-C:J09-U11 RAS KERNEL FATAL instruction address space.........0
+- 1118773741 2005.06.14 R21-M0-N9-C:J08-U01 2005-06-14-11.29.01.258503 R21-M0-N9-C:J08-U01 RAS KERNEL FATAL data address space................0
+- 1118773750 2005.06.14 R25-M1-NF-C:J16-U11 2005-06-14-11.29.10.800711 R25-M1-NF-C:J16-U11 RAS KERNEL FATAL data address space................0
+- 1118773772 2005.06.14 R24-M1-N0-C:J04-U11 2005-06-14-11.29.32.480633 R24-M1-N0-C:J04-U11 RAS KERNEL FATAL data address space................0
+- 1121727746 2005.07.18 R00-M1-N5-C:J03-U11 2005-07-18-16.02.26.154455 R00-M1-N5-C:J03-U11 RAS KERNEL FATAL debug wait enable.................0
+---
+len=125
+- 1118783531 2005.06.14 R22-M0-N7-C:J08-U11 2005-06-14-14.12.11.357904 R22-M0-N7-C:J08-U11 RAS KERNEL INFO generating core.42
+- 1118846432 2005.06.15 R22-M0-NE-C:J04-U11 2005-06-15-07.40.32.710710 R22-M0-NE-C:J04-U11 RAS KERNEL INFO generating core.15
+- 1118915888 2005.06.16 R20-M1-N7-C:J08-U11 2005-06-16-02.58.08.116468 R20-M1-N7-C:J08-U11 RAS KERNEL INFO generating core.42
+- 1118915889 2005.06.16 R24-M1-NE-C:J13-U11 2005-06-16-02.58.09.310238 R24-M1-NE-C:J13-U11 RAS KERNEL INFO generating core.93
+- 1121442124 2005.07.15 R04-M0-NE-C:J17-U01 2005-07-15-08.42.04.042901 R04-M0-NE-C:J17-U01 RAS KERNEL INFO generating core.84
+- 1122334241 2005.07.25 R00-M0-N7-C:J09-U01 2005-07-25-16.30.41.390181 R00-M0-N7-C:J09-U01 RAS KERNEL INFO generating core.50
+---
+len=222
+APPCHILD 1119319455 2005.06.20 R12-M1-NC-I:J18-U11 2005-06-20-19.04.15.002425 R12-M1-NC-I:J18-U11 RAS APP FATAL ciod: Error creating node map from file /p/gb2/cabot/miranda/newmaps/8k_128x64x1_8x4x4.map: No child processes
+---
+len=150
+- 1131064315 2005.11.03 R27-M1-N2-C:J10-U01 2005-11-03-16.31.55.074652 R27-M1-N2-C:J10-U01 RAS KERNEL INFO 2354412 floating point alignment exceptions
+- 1131064518 2005.11.03 R06-M1-N0-C:J12-U01 2005-11-03-16.35.18.503121 R06-M1-N0-C:J12-U01 RAS KERNEL INFO 2354412 floating point alignment exceptions
+- 1131065141 2005.11.03 R36-M1-N2-C:J08-U11 2005-11-03-16.45.41.838424 R36-M1-N2-C:J08-U11 RAS KERNEL INFO 2354412 floating point alignment exceptions
+- 1131065341 2005.11.03 R25-M1-N5-C:J16-U01 2005-11-03-16.49.01.163874 R25-M1-N5-C:J16-U01 RAS KERNEL INFO 2354412 floating point alignment exceptions
+- 1131147217 2005.11.04 R63-M0-NF-C:J05-U01 2005-11-04-15.33.37.855786 R63-M0-NF-C:J05-U01 RAS KERNEL INFO 2667384 floating point alignment exceptions
+- 1131582295 2005.11.09 R63-M0-NA-C:J09-U01 2005-11-09-16.24.55.322546 R63-M0-NA-C:J09-U01 RAS KERNEL INFO 5302707 floating point alignment exceptions
+- 1133721087 2005.12.04 R71-M0-N4-C:J14-U01 2005-12-04-10.31.27.742650 R71-M0-N4-C:J14-U01 RAS KERNEL FATAL minus normalized number..................0
+- 1133835041 2005.12.05 R52-M1-NA-C:J03-U01 2005-12-05-18.10.41.610617 R52-M1-NA-C:J03-U01 RAS KERNEL FATAL fraction rounded.........................0
+---
+len=247
+- 1127243510 2005.09.20 NULL 2005-09-20-12.11.50.889778 NULL RAS MMCS ERROR idoproxydb hit ASSERT condition: ASSERT expression=0 Source file=idotransportmgr.cpp Source line=1043 Function=int IdoTransportMgr::SendPacket(IdoUdpMgr*, BglCtlPavTrace*)
+- 1127243514 2005.09.20 NULL 2005-09-20-12.11.54.288690 NULL RAS MMCS ERROR idoproxydb hit ASSERT condition: ASSERT expression=0 Source file=idotransportmgr.cpp Source line=1043 Function=int IdoTransportMgr::SendPacket(IdoUdpMgr*, BglCtlPavTrace*)
+- 1127243528 2005.09.20 NULL 2005-09-20-12.12.08.547906 NULL RAS MMCS ERROR idoproxydb hit ASSERT condition: ASSERT expression=0 Source file=idotransportmgr.cpp Source line=1043 Function=int IdoTransportMgr::SendPacket(IdoUdpMgr*, BglCtlPavTrace*)
+- 1127243531 2005.09.20 NULL 2005-09-20-12.12.11.388103 NULL RAS MMCS ERROR idoproxydb hit ASSERT condition: ASSERT expression=0 Source file=idotransportmgr.cpp Source line=1043 Function=int IdoTransportMgr::SendPacket(IdoUdpMgr*, BglCtlPavTrace*)
+- 1127243536 2005.09.20 NULL 2005-09-20-12.12.16.117396 NULL RAS MMCS ERROR idoproxydb hit ASSERT condition: ASSERT expression=0 Source file=idotransportmgr.cpp Source line=1043 Function=int IdoTransportMgr::SendPacket(IdoUdpMgr*, BglCtlPavTrace*)
+- 1127243560 2005.09.20 NULL 2005-09-20-12.12.40.943077 NULL RAS MMCS ERROR idoproxydb hit ASSERT condition: ASSERT expression=0 Source file=idotransportmgr.cpp Source line=1043 Function=int IdoTransportMgr::SendPacket(IdoUdpMgr*, BglCtlPavTrace*)
+- 1127248868 2005.09.20 NULL 2005-09-20-13.41.08.107703 NULL RAS MMCS ERROR idoproxydb hit ASSERT condition: ASSERT expression=0 Source file=idotransportmgr.cpp Source line=1043 Function=int IdoTransportMgr::SendPacket(IdoUdpMgr*, BglCtlPavTrace*)
+- 1127248870 2005.09.20 NULL 2005-09-20-13.41.10.218619 NULL RAS MMCS ERROR idoproxydb hit ASSERT condition: ASSERT expression=0 Source file=idotransportmgr.cpp Source line=1043 Function=int IdoTransportMgr::SendPacket(IdoUdpMgr*, BglCtlPavTrace*)
+---
+len=153
+- 1127464998 2005.09.23 R10-M0-N0-C:J06-U01 2005-09-23-01.43.18.801088 R10-M0-N0-C:J06-U01 RAS KERNEL INFO total of 4 ddr error(s) detected and corrected
+- 1128719294 2005.10.07 R60-M1-N5-C:J09-U11 2005-10-07-14.08.14.709280 R60-M1-N5-C:J09-U11 RAS KERNEL INFO total of 2 ddr error(s) detected and corrected
+- 1129897177 2005.10.21 R07-M1-N0-C:J17-U01 2005-10-21-05.19.37.093437 R07-M1-N0-C:J17-U01 RAS KERNEL INFO total of 1 ddr error(s) detected and corrected
+KERNTERM 1130529580 2005.10.28 R63-M1-NF-C:J15-U11 2005-10-28-12.59.40.203147 R63-M1-NF-C:J15-U11 RAS KERNEL FATAL rts: kernel terminated for reason 1004
+- 1131525612 2005.11.09 R62-M0-N4-C:J13-U01 2005-11-09-00.40.12.350846 R62-M0-N4-C:J13-U01 RAS KERNEL FATAL program interrupt: privileged instruction...0
+KERNTERM 1131680322 2005.11.10 R63-M0-N6-C:J12-U11 2005-11-10-19.38.42.369022 R63-M0-N6-C:J12-U11 RAS KERNEL FATAL rts: kernel terminated for reason 1004
+KERNTERM 1132021523 2005.11.14 R46-M1-NE-C:J14-U11 2005-11-14-18.25.23.269634 R46-M1-NE-C:J14-U11 RAS KERNEL FATAL rts: kernel terminated for reason 1004
+KERNTERM 1132111168 2005.11.15 R57-M0-NA-C:J13-U11 2005-11-15-19.19.28.379713 R57-M0-NA-C:J13-U11 RAS KERNEL FATAL rts: kernel terminated for reason 1004
+---
+len=224
+- 1132062083 2005.11.15 R05-M0-NC-C:J04-U11 2005-11-15-05.41.23.201247 R05-M0-NC-C:J04-U11 RAS KERNEL INFO critical input interrupt (unit=0x0b bit=0x0a): warning for torus z+ wire, suppressing further interrupts of same type
+- 1132232535 2005.11.17 R64-M1-N4-I:J18-U01 2005-11-17-05.02.15.807696 R64-M1-N4-I:J18-U01 RAS APP FATAL ciod: Error loading /bgl/apps/followup/SPaSM_static/SPaSM.460-1115: invalid or missing program image, Permission denied
+- 1134601394 2005.12.14 R42-M1-N2-C:J03-U11 2005-12-14-15.03.14.212440 R42-M1-N2-C:J03-U11 RAS KERNEL INFO critical input interrupt (unit=0x0b bit=0x0a): warning for torus z+ wire, suppressing further interrupts of same type
+---
+len=127
+- 1122431105 2005.07.26 R13-M1-NE-C:J10-U01 2005-07-26-19.25.05.763740 R13-M1-NE-C:J10-U01 RAS KERNEL INFO generating core.9997
+- 1122431396 2005.07.26 R07-M0-N6-C:J07-U11 2005-07-26-19.29.56.539285 R07-M0-N6-C:J07-U11 RAS KERNEL INFO generating core.9958
+- 1122492300 2005.07.27 R36-M0-N7-C:J13-U11 2005-07-27-12.25.00.990788 R36-M0-N7-C:J13-U11 RAS KERNEL INFO generating core.2105
+- 1122574115 2005.07.28 R31-M0-NB-C:J12-U11 2005-07-28-11.08.35.403371 R31-M0-NB-C:J12-U11 RAS KERNEL INFO generating core.6161
+- 1123178302 2005.08.04 R06-M1-ND 2005-08-04-10.58.22.010246 R06-M1-ND NULL DISCOVERY WARNING Node card is not fully functional
+- 1123609246 2005.08.09 R51-M1-ND 2005-08-09-10.40.46.749252 R51-M1-ND NULL DISCOVERY WARNING Node card is not fully functional
+- 1123609997 2005.08.09 R74-M0-N1 2005-08-09-10.53.17.485009 R74-M0-N1 NULL DISCOVERY WARNING Node card is not fully functional
+- 1133892304 2005.12.06 R12-M0-NC 2005-12-06-10.05.04.300635 R12-M0-NC NULL DISCOVERY WARNING Node card is not fully functional
+---
+len=223
+- 1128510395 2005.10.05 R62-M1-N8-I:J18-U01 2005-10-05-04.06.35.463665 R62-M1-N8-I:J18-U01 RAS APP FATAL ciod: Error loading /home/spelce1/HPCC_IBM/Urgent/VNM/64K/vnm.rts: invalid or missing program image, Permission denied
+- 1129166647 2005.10.12 R34-M1-N8-I:J18-U01 2005-10-12-18.24.07.100662 R34-M1-N8-I:J18-U01 RAS APP FATAL ciod: Error loading /home/spelce1/HPCC_IBM/Urgent/COP/64K/vnm.rts: invalid or missing program image, Permission denied
+- 1129166670 2005.10.12 R73-M1-NC-I:J18-U01 2005-10-12-18.24.30.314474 R73-M1-NC-I:J18-U01 RAS APP FATAL ciod: Error loading /home/spelce1/HPCC_IBM/Urgent/COP/64K/vnm.rts: invalid or missing program image, Permission denied
+- 1129166708 2005.10.12 R17-M1-N0-I:J18-U11 2005-10-12-18.25.08.543706 R17-M1-N0-I:J18-U11 RAS APP FATAL ciod: Error loading /home/spelce1/HPCC_IBM/Urgent/COP/64K/vnm.rts: invalid or missing program image, Permission denied
+- 1133913870 2005.12.06 R01-M0-N0-C:J04-U01 2005-12-06-16.04.30.188673 R01-M0-N0-C:J04-U01 RAS KERNEL INFO critical input interrupt (unit=0x0b bit=0x17): warning for tree C1 wire, suppressing further interrupts of same type
+---
+len=126
+- 1121495594 2005.07.15 R34-M0-N7-C:J13-U01 2005-07-15-23.33.14.550781 R34-M0-N7-C:J13-U01 RAS KERNEL INFO generating core.465
+- 1121598678 2005.07.17 R10-M1-N6-C:J13-U11 2005-07-17-04.11.18.510363 R10-M1-N6-C:J13-U11 RAS KERNEL INFO generating core.237
+- 1121736053 2005.07.18 R02-M1-N5-C:J17-U01 2005-07-18-18.20.53.293303 R02-M1-N5-C:J17-U01 RAS KERNEL INFO generating core.176
+- 1122400971 2005.07.26 R06-M0-N7-C:J07-U01 2005-07-26-11.02.51.140194 R06-M0-N7-C:J07-U01 RAS KERNEL INFO generating core.114
+- 1122403352 2005.07.26 R06-M0-N5-C:J15-U11 2005-07-26-11.42.32.680498 R06-M0-N5-C:J15-U11 RAS KERNEL INFO generating core.248
+- 1122405365 2005.07.26 R04-M0-N6-C:J09-U01 2005-07-26-12.16.05.063905 R04-M0-N6-C:J09-U01 RAS KERNEL INFO generating core.118
+- 1122405838 2005.07.26 R06-M0-N8-C:J11-U01 2005-07-26-12.23.58.178894 R06-M0-N8-C:J11-U01 RAS KERNEL INFO generating core.469
+- 1122492307 2005.07.27 R36-M0-N3-C:J09-U01 2005-07-27-12.25.07.297896 R36-M0-N3-C:J09-U01 RAS KERNEL INFO generating core.306
+---
+len=270
+- 1133449350 2005.12.01 R20-M1-N5-C:J04-U01 2005-12-01-07.02.30.989473 R20-M1-N5-C:J04-U01 RAS KERNEL INFO 1966 total interrupts. 0 critical input interrupts. 0 microseconds total spent on critical input interrupts, 0 microseconds max time in a critical input interrupt.
+---
+len=173
+- 1127456570 2005.09.22 R57-M0-NB-C:J07-U11 2005-09-22-23.22.50.037439 R57-M0-NB-C:J07-U11 RAS KERNEL INFO 1 ddr errors(s) detected and corrected on rank 0, symbol 35, bit 1
+- 1128844166 2005.10.09 R43-M0-N9-C:J08-U11 2005-10-09-00.49.26.875181 R43-M0-N9-C:J08-U11 RAS KERNEL INFO 1 ddr errors(s) detected and corrected on rank 0, symbol 28, bit 0
+- 1129273479 2005.10.14 R07-M1-NA-C:J09-U01 2005-10-14-00.04.39.329001 R07-M1-NA-C:J09-U01 RAS KERNEL INFO 4 ddr errors(s) detected and corrected on rank 0, symbol 13, bit 5
+- 1129273482 2005.10.14 R53-M1-N0-C:J04-U11 2005-10-14-00.04.42.389631 R53-M1-N0-C:J04-U11 RAS KERNEL INFO 4 tree receiver 2 in re-synch state event(s) (dcr 0x019a) detected
+- 1130123101 2005.10.23 R21-M1-N0-C:J10-U11 2005-10-23-20.05.01.813190 R21-M1-N0-C:J10-U11 RAS KERNEL INFO 1 ddr errors(s) detected and corrected on rank 0, symbol 17, bit 7
+- 1130770293 2005.10.31 R74-M1-NC-C:J15-U11 2005-10-31-06.51.33.260350 R74-M1-NC-C:J15-U11 RAS KERNEL INFO 4 ddr errors(s) detected and corrected on rank 0, symbol 24, bit 1
+- 1131218683 2005.11.05 R11-M1-N4-C:J03-U01 2005-11-05-11.24.43.382408 R11-M1-N4-C:J03-U01 RAS KERNEL INFO 2 ddr errors(s) detected and corrected on rank 0, symbol 18, bit 6
+- 1134748483 2005.12.16 R60-M1-N7-C:J17-U01 2005-12-16-07.54.43.245870 R60-M1-N7-C:J17-U01 RAS KERNEL INFO total of 20 ddr error(s) detected and corrected over 22070 seconds
+---
+len=244
+- 1129208349 2005.10.13 R73-M0-NC-I:J18-U11 2005-10-13-05.59.09.874956 R73-M0-NC-I:J18-U11 RAS APP FATAL ciod: Error loading /bgl/apps/followup/MINIBEN/MB_254_051007/torus-latency.rts: invalid or missing program image, No such file or directory
+---
+len=147
+- 1135643288 2005.12.26 R37-M1-NC-C:J02-U11 2005-12-26-16.28.08.716176 R37-M1-NC-C:J02-U11 RAS KERNEL INFO instruction cache parity error corrected
+- 1135651811 2005.12.26 R37-M1-NC-C:J02-U11 2005-12-26-18.50.11.312622 R37-M1-NC-C:J02-U11 RAS KERNEL INFO instruction cache parity error corrected
+- 1135653442 2005.12.26 R37-M1-NC-C:J02-U11 2005-12-26-19.17.22.803508 R37-M1-NC-C:J02-U11 RAS KERNEL INFO instruction cache parity error corrected
+- 1135661328 2005.12.26 R37-M1-NC-C:J02-U11 2005-12-26-21.28.48.643483 R37-M1-NC-C:J02-U11 RAS KERNEL INFO instruction cache parity error corrected
+- 1135665476 2005.12.26 R37-M1-NC-C:J02-U11 2005-12-26-22.37.56.529871 R37-M1-NC-C:J02-U11 RAS KERNEL INFO instruction cache parity error corrected
+- 1135669430 2005.12.26 R37-M1-NC-C:J02-U11 2005-12-26-23.43.50.733716 R37-M1-NC-C:J02-U11 RAS KERNEL INFO instruction cache parity error corrected
+- 1135669517 2005.12.26 R37-M1-NC-C:J02-U11 2005-12-26-23.45.17.825965 R37-M1-NC-C:J02-U11 RAS KERNEL INFO instruction cache parity error corrected
+- 1135675498 2005.12.27 R37-M1-NC-C:J02-U11 2005-12-27-01.24.58.711345 R37-M1-NC-C:J02-U11 RAS KERNEL INFO instruction cache parity error corrected
+---
+len=210
+APPSEV 1132853885 2005.11.24 R14-M0-N8-I:J18-U01 2005-11-24-09.38.05.459006 R14-M0-N8-I:J18-U01 RAS APP FATAL ciod: Error reading message prefix on CioStream socket to 172.16.96.116:41534, Link has been severed
+APPSEV 1132912103 2005.11.25 R45-M1-N0-I:J18-U01 2005-11-25-01.48.23.054823 R45-M1-N0-I:J18-U01 RAS APP FATAL ciod: Error reading message prefix on CioStream socket to 172.16.96.116:54780, Link has been severed
+APPSEV 1133009333 2005.11.26 R54-M0-N0-I:J18-U01 2005-11-26-04.48.53.869394 R54-M0-N0-I:J18-U01 RAS APP FATAL ciod: Error reading message prefix on CioStream socket to 172.16.96.116:60243, Link has been severed
+APPSEV 1133044906 2005.11.26 R33-M1-N4-I:J18-U11 2005-11-26-14.41.46.876542 R33-M1-N4-I:J18-U11 RAS APP FATAL ciod: Error reading message prefix on CioStream socket to 172.16.96.116:47189, Link has been severed
+APPSEV 1134496355 2005.12.13 R74-M1-N8-I:J18-U11 2005-12-13-09.52.35.527182 R74-M1-N8-I:J18-U11 RAS APP FATAL ciod: Error reading message prefix on CioStream socket to 172.16.96.116:55929, Link has been severed
+APPSEV 1134496398 2005.12.13 R44-M0-N4-I:J18-U01 2005-12-13-09.53.18.260783 R44-M0-N4-I:J18-U01 RAS APP FATAL ciod: Error reading message prefix on CioStream socket to 172.16.96.116:56170, Link has been severed
+APPSEV 1134630981 2005.12.14 R37-M1-N8-I:J18-U11 2005-12-14-23.16.21.740107 R37-M1-N8-I:J18-U11 RAS APP FATAL ciod: Error reading message prefix on CioStream socket to 172.16.96.116:49934, Link has been severed
+APPSEV 1134631019 2005.12.14 R32-M0-NC-I:J18-U01 2005-12-14-23.16.59.947676 R32-M0-NC-I:J18-U01 RAS APP FATAL ciod: Error reading message prefix on CioStream socket to 172.16.96.116:50288, Link has been severed
+---
+len=501
+- 1123030687 2005.08.02 R00-M0-N2 2005-08-02-17.58.07.084868 R00-M0-N2 NULL DISCOVERY ERROR Node card status: ALERT 0, ALERT 1, ALERT 2, ALERT 3 is (are) active. Clock Mode is Low. Clock Select is Midplane. Phy JTAG Reset is asserted. ASIC JTAG Reset is not asserted. Temperature Mask is not active. No temperature error. Temperature Limit Error Latch is clear. PGOOD is asserted. PGOOD error latch is clear. MPGOOD is OK. MPGOOD error latch is clear. The 2.5 volt rail is OK. The 1.5 volt rail is OK.
+---
+len=219
+- 1121383222 2005.07.14 R01-M0-N0-I:J18-U11 2005-07-14-16.20.22.672549 R01-M0-N0-I:J18-U11 RAS APP FATAL ciod: Error creating node map from file /home/pakin1/sweep3d-2.2b/results/random1-8x32x32x2.map: Permission denied
+---
+len=124
+- 1119802781 2005.06.26 R07-M1-N0-C:J15-U11 2005-06-26-09.19.41.368208 R07-M1-N0-C:J15-U11 RAS KERNEL INFO program interrupt
+- 1119806939 2005.06.26 R05-M0-N7-C:J13-U01 2005-06-26-10.28.59.279042 R05-M0-N7-C:J13-U01 RAS KERNEL INFO program interrupt
+- 1119806955 2005.06.26 R03-M1-NC-C:J05-U11 2005-06-26-10.29.15.890436 R03-M1-NC-C:J05-U11 RAS KERNEL INFO program interrupt
+- 1123025954 2005.08.02 R23-M0-N7 2005-08-02-16.39.14.159918 R23-M0-N7 NULL HARDWARE SEVERE NodeCard is not fully functional
+- 1129734520 2005.10.19 R17-M0-N0-I:J18-U01 2005-10-19-08.08.40.058960 R17-M0-N0-I:J18-U01 RAS KERNEL INFO shutdown complete
+---
+len=171
+- 1118112700 2005.06.06 R23-M0-N0-I:J18-U01 2005-06-06-19.51.40.376079 R23-M0-N0-I:J18-U01 RAS KERNEL INFO ciod: cpu 0 at treeaddr 438 sent unrecognized message 0xffffffff
+- 1133715868 2005.12.04 R06-M1-N6-C:J08-U01 2005-12-04-09.04.28.582086 R06-M1-N6-C:J08-U01 RAS KERNEL INFO total of 1 ddr error(s) detected and corrected over 2487 seconds
+- 1134130421 2005.12.09 R34-M1-NB-C:J17-U11 2005-12-09-04.13.41.810977 R34-M1-NB-C:J17-U11 RAS KERNEL INFO total of 5 ddr error(s) detected and corrected over 9108 seconds
+- 1134954903 2005.12.18 R13-M1-N1-C:J03-U01 2005-12-18-17.15.03.147145 R13-M1-N1-C:J03-U01 RAS KERNEL INFO total of 3 ddr error(s) detected and corrected over 8732 seconds
+---
+len=236
+- 1131030168 2005.11.03 R54-M1-N8-I:J18-U01 2005-11-03-07.02.48.152436 R54-M1-N8-I:J18-U01 RAS APP FATAL ciod: Error loading /g/g0/spelce1/HPCC_IBM/Urgent/COP/64K/RandomAccess.64R.rts: invalid or missing program image, Permission denied
+---
+len=139
+- 1118766935 2005.06.14 R20-M1-NC-C:J05-U01 2005-06-14-09.35.35.569986 R20-M1-NC-C:J05-U01 RAS KERNEL FATAL instruction address: 0x00004ed8
+- 1118768017 2005.06.14 R21-M1-NB-C:J12-U01 2005-06-14-09.53.37.560823 R21-M1-NB-C:J12-U01 RAS KERNEL FATAL instruction address: 0x00004ed8
+- 1118768070 2005.06.14 R24-M1-N7-C:J08-U01 2005-06-14-09.54.30.228119 R24-M1-N7-C:J08-U01 RAS KERNEL FATAL instruction address: 0x00004ed8
+- 1118769489 2005.06.14 R20-M0-N3-C:J06-U01 2005-06-14-10.18.09.061481 R20-M0-N3-C:J06-U01 RAS KERNEL FATAL instruction address: 0x00004ed8
+- 1120241131 2005.07.01 R37-M1-N4 2005-07-01-11.05.31.120732 R37-M1-N4 NULL DISCOVERY SEVERE Can not get assembly information for node card
+- 1123608612 2005.08.09 R40-M1-N5 2005-08-09-10.30.12.637004 R40-M1-N5 NULL DISCOVERY SEVERE Can not get assembly information for node card
+- 1123608679 2005.08.09 R70-M0-N0 2005-08-09-10.31.19.671420 R70-M0-N0 NULL DISCOVERY SEVERE Can not get assembly information for node card
+- 1123609672 2005.08.09 R44-M0-N3 2005-08-09-10.47.52.703182 R44-M0-N3 NULL DISCOVERY SEVERE Can not get assembly information for node card
+---
+len=235
+- 1127242650 2005.09.20 R05-M0-NA 2005-09-20-11.57.30.636832 R05-M0-NA NULL DISCOVERY INFO Node card VPD check: U01 node in processor card slot J15 do not match. VPD ecid 04DE7DB80D7BFFFF04051B70D8D9, found 04DE7DF2D37BFFFF09081B6088D9
+- 1127244289 2005.09.20 R05-M0-N6 2005-09-20-12.24.49.324668 R05-M0-N6 NULL DISCOVERY INFO Node card VPD check: U11 node in processor card slot J17 do not match. VPD ecid 04D97DB7937BFFFF05071B7054DA, found 04D081A3892FFFFF0D0B1C505AF3
+- 1127245515 2005.09.20 R26-M0-N7 2005-09-20-12.45.15.754325 R26-M0-N7 NULL DISCOVERY INFO Node card VPD check: U01 node in processor card slot J08 do not match. VPD ecid 075F04E8A27BFFFF07021C3096ED, found 04D78137922FFFFF040E1C3052ED
+- 1132076597 2005.11.15 R23-M0-N7 2005-11-15-09.43.17.181620 R23-M0-N7 NULL DISCOVERY INFO Node card VPD check: U11 node in processor card slot J04 do not match. VPD ecid 04D58088CB2FFFFF08031C104CE9, found 04CA80D8012FFFFF08061A8094CB
+- 1132076952 2005.11.15 R67-M1-NA 2005-11-15-09.49.12.022636 R67-M1-NA NULL DISCOVERY INFO Node card VPD check: U11 node in processor card slot J10 do not match. VPD ecid 07570DD8002FFFFF09031B7090E2, found 04D480D8482FFFFF0A071BA052DE
+- 1133310116 2005.11.29 R67-M1-N7 2005-11-29-16.21.56.855025 R67-M1-N7 NULL DISCOVERY INFO Node card VPD check: U01 node in processor card slot J05 do not match. VPD ecid 04D37DF2DE7BFFFF0D081AF0DAD2, found 04DD80740E2FFFFF0A0C19D0CEBD
+- 1134109056 2005.12.08 R64-M1-NC-I:J18-U01 2005-12-08-22.17.36.597185 R64-M1-NC-I:J18-U01 RAS APP FATAL ciod: Error loading /g/g90/glosli/src/ddcMD/ddcMD1.1.17/bin/ddcMDbglV: invalid or missing program image, No such file or directory
+- 1134109138 2005.12.08 R20-M1-N0-I:J18-U11 2005-12-08-22.18.58.098120 R20-M1-N0-I:J18-U11 RAS APP FATAL ciod: Error loading /g/g90/glosli/src/ddcMD/ddcMD1.1.17/bin/ddcMDbglV: invalid or missing program image, No such file or directory
+---
+len=138
+- 1119806971 2005.06.26 R05-M1-N8-C:J15-U11 2005-06-26-10.29.31.819506 R05-M1-N8-C:J15-U11 RAS KERNEL INFO instruction address: 0x0062fe04
+---
+len=185
+- 1118193358 2005.06.07 R11-M0-NC-I:J18-U01 2005-06-07-18.15.58.583443 R11-M0-NC-I:J18-U01 RAS APP FATAL ciod: LOGIN chdir(/p/gb2/glosli/8M_5000K/t800) failed: No such file or directory
+- 1124722015 2005.08.22 R24-M1-N4-I:J18-U11 2005-08-22-07.46.55.044922 R24-M1-N4-I:J18-U11 RAS APP FATAL ciod: LOGIN chdir(/home/germann2/SPaSM_static) failed: No such file or directory
+- 1132069983 2005.11.15 R34-M1-N4-I:J18-U01 2005-11-15-07.53.03.697929 R34-M1-N4-I:J18-U01 RAS KERNEL INFO ciod: generated 64 core files for program /bgl/apps/followup/hellow/a.out.1111
+- 1132070039 2005.11.15 R15-M0-NC-I:J18-U11 2005-11-15-07.53.59.004294 R15-M0-NC-I:J18-U11 RAS KERNEL INFO ciod: generated 64 core files for program /bgl/apps/followup/hellow/a.out.1111
+- 1133715641 2005.12.04 R23-M0-NC-C:J05-U01 2005-12-04-09.00.41.190112 R23-M0-NC-C:J05-U01 RAS KERNEL INFO 159 ddr error(s) detected and corrected on rank 0, symbol 29 over 2486 seconds
+- 1134259774 2005.12.10 R15-M1-NE-C:J06-U01 2005-12-10-16.09.34.106950 R15-M1-NE-C:J06-U01 RAS KERNEL INFO 28 ddr error(s) detected and corrected on rank 0, symbol 21 over 11562 seconds
+- 1136301189 2006.01.03 R07-M0-N0-I:J18-U11 2006-01-03-07.13.09.127918 R07-M0-N0-I:J18-U11 RAS KERNEL INFO ciod: generated 128 core files for program /g/g24/germann2/SPaSM_mini/MEAM/r13
+---
+len=238
+- 1127265034 2005.09.20 R26-M1-N8-I:J18-U01 2005-09-20-18.10.34.811726 R26-M1-N8-I:J18-U01 RAS APP FATAL ciod: Error loading /bgl/apps/SWL/performance/MINIBEN//torus-latency.rts: invalid or missing program image, No such file or directory
+---
+len=141
+- 1128457224 2005.10.04 R53-M1-ND-C:J09-U11 2005-10-04-13.20.24.392522 R53-M1-ND-C:J09-U11 RAS KERNEL INFO CE sym 9, at 0x11f82720, mask 0x02
+- 1128458085 2005.10.04 R23-M0-N8-C:J15-U11 2005-10-04-13.34.45.062257 R23-M0-N8-C:J15-U11 RAS KERNEL INFO CE sym 6, at 0x0148b640, mask 0x10
+- 1129158022 2005.10.12 R23-M0-N8-C:J15-U11 2005-10-12-16.00.22.364012 R23-M0-N8-C:J15-U11 RAS KERNEL INFO CE sym 5, at 0x13253280, mask 0x04
+- 1131601592 2005.11.09 R45-M1-NA-C:J10-U01 2005-11-09-21.46.32.491859 R45-M1-NA-C:J10-U01 RAS KERNEL INFO CE sym 9, at 0x12870760, mask 0x40
+- 1131624438 2005.11.10 R65-M0-N2-C:J05-U11 2005-11-10-04.07.18.981015 R65-M0-N2-C:J05-U11 RAS KERNEL INFO CE sym 6, at 0x00e462c0, mask 0x02
+- 1133367847 2005.11.30 R74-M1-NB-C:J02-U11 2005-11-30-08.24.07.024349 R74-M1-NB-C:J02-U11 RAS KERNEL INFO CE sym 1, at 0x01d7eaa0, mask 0x02
+- 1133455125 2005.12.01 R71-M0-NF-C:J11-U11 2005-12-01-08.38.45.935400 R71-M0-NF-C:J11-U11 RAS KERNEL INFO CE sym 4, at 0x0589f8e0, mask 0x10
+- 1133475318 2005.12.01 R20-M1-NB-C:J09-U01 2005-12-01-14.15.18.446368 R20-M1-NB-C:J09-U01 RAS KERNEL INFO CE sym 9, at 0x0021d9c0, mask 0x20
+---
+len=205
+APPREAD 1117869872 2005.06.04 R04-M1-N4-I:J18-U11 2005-06-04-00.24.32.432192 R04-M1-N4-I:J18-U11 RAS APP FATAL ciod: failed to read message prefix on control stream (CioStream socket to 172.16.96.116:33569
+APPREAD 1117869876 2005.06.04 R27-M1-N4-I:J18-U01 2005-06-04-00.24.36.222560 R27-M1-N4-I:J18-U01 RAS APP FATAL ciod: failed to read message prefix on control stream (CioStream socket to 172.16.96.116:33370
+APPREAD 1118958902 2005.06.16 R32-M1-N8-I:J18-U01 2005-06-16-14.55.02.074340 R32-M1-N8-I:J18-U01 RAS APP FATAL ciod: failed to read message prefix on control stream (CioStream socket to 172.16.96.116:51706
+- 1120173883 2005.06.30 R36-M1-N4-I:J18-U01 2005-06-30-16.24.43.164196 R36-M1-N4-I:J18-U01 RAS APP FATAL ciod: Error creating node map from file /p/gb2/welcome3/32k_128x256x1_8x4x4.map: Bad file descriptor
+- 1124546691 2005.08.20 R44-M1-N4-I:J18-U11 2005-08-20-07.04.51.651202 R44-M1-N4-I:J18-U11 RAS KERNEL INFO ciod: generated 1 core files for program /bgl/apps/swl-prep/ibm-swl/functional/sppm_chkpt/run/sppm
+---
+len=145
+- 1122164887 2005.07.23 R17-M1-N9-C:J05-U01 2005-07-23-17.28.07.326889 R17-M1-N9-C:J05-U01 RAS KERNEL INFO 15 floating point alignment exceptions
+- 1122164950 2005.07.23 R11-M0-N9-C:J17-U01 2005-07-23-17.29.10.970499 R11-M0-N9-C:J17-U01 RAS KERNEL INFO 15 floating point alignment exceptions
+- 1122164957 2005.07.23 R15-M0-N6-C:J12-U01 2005-07-23-17.29.17.315417 R15-M0-N6-C:J12-U01 RAS KERNEL INFO 15 floating point alignment exceptions
+- 1122164972 2005.07.23 R13-M1-N2-C:J06-U11 2005-07-23-17.29.32.058080 R13-M1-N2-C:J06-U11 RAS KERNEL INFO 15 floating point alignment exceptions
+- 1122165031 2005.07.23 R14-M1-N4-C:J04-U01 2005-07-23-17.30.31.565397 R14-M1-N4-C:J04-U01 RAS KERNEL INFO 15 floating point alignment exceptions
+- 1122165037 2005.07.23 R12-M0-N0-C:J12-U11 2005-07-23-17.30.37.160243 R12-M0-N0-C:J12-U11 RAS KERNEL INFO 15 floating point alignment exceptions
+- 1122165073 2005.07.23 R13-M1-N4-C:J04-U11 2005-07-23-17.31.13.824418 R13-M1-N4-C:J04-U11 RAS KERNEL INFO 15 floating point alignment exceptions
+- 1122165076 2005.07.23 R13-M0-N0-C:J15-U11 2005-07-23-17.31.16.270211 R13-M0-N0-C:J15-U11 RAS KERNEL INFO 15 floating point alignment exceptions
+---
+len=239
+- 1131036240 2005.11.03 R06-M0-NC-I:J18-U11 2005-11-03-08.44.00.733074 R06-M0-NC-I:J18-U11 RAS APP FATAL ciod: Error loading /home.old/glosli/src/ddcMD/ddcMD1.1.17/bin/ddcMDGbglV: invalid or missing program image, No such file or directory
+---
+len=142
+- 1133691676 2005.12.04 R65-M1-NA-C:J14-U01 2005-12-04-02.21.16.848710 R65-M1-NA-C:J14-U01 RAS KERNEL INFO CE sym 27, at 0x1b70b860, mask 0x80
+- 1133700378 2005.12.04 R60-M0-N2-C:J12-U11 2005-12-04-04.46.18.276872 R60-M0-N2-C:J12-U11 RAS KERNEL INFO CE sym 33, at 0x1ff2fc60, mask 0x04
+- 1133700386 2005.12.04 R21-M1-N4-C:J10-U01 2005-12-04-04.46.26.869771 R21-M1-N4-C:J10-U01 RAS KERNEL INFO CE sym 12, at 0x18e33e80, mask 0x04
+- 1133706305 2005.12.04 R74-M0-N1-C:J05-U01 2005-12-04-06.25.05.145493 R74-M0-N1-C:J05-U01 RAS KERNEL INFO CE sym 30, at 0x042358a0, mask 0x20
+- 1133707549 2005.12.04 R60-M0-ND-C:J07-U11 2005-12-04-06.45.49.687761 R60-M0-ND-C:J07-U11 RAS KERNEL INFO CE sym 11, at 0x06366640, mask 0x04
+- 1133709964 2005.12.04 R35-M1-N9-C:J14-U01 2005-12-04-07.26.04.629795 R35-M1-N9-C:J14-U01 RAS KERNEL INFO CE sym 19, at 0x057c7e00, mask 0x20
+- 1133715641 2005.12.04 R23-M0-NC-C:J05-U01 2005-12-04-09.00.41.990496 R23-M0-NC-C:J05-U01 RAS KERNEL INFO CE sym 29, at 0x0ea9fd60, mask 0x40
+- 1135602839 2005.12.26 R61-M0-N3-C:J11-U11 2005-12-26-05.13.59.265193 R61-M0-N3-C:J11-U11 RAS KERNEL FATAL Machine State Register: 0x0002f900
+---

@@ -1,158 +1,84 @@
-LogLite-Based Compressed Log Querying
-=====================================
+# LogLite-Based Compressed Log Querying
 
-This project is a course/research prototype that builds a **query engine over LogLite-compressed logs**. Instead of always fully decompressing logs back to plain text, we explore when and how we can answer queries directly from the compressed representation (or with very limited reconstruction) while keeping correctness identical to raw-text search.
+This project studies query execution over LogLite-compressed logs. Instead of always decompressing logs back to plain text before searching, it compares when a query can run directly on the compressed representation or with limited reconstruction while preserving correctness.
 
-High-Level Goals
-----------------
+## Start Here
 
-- Use the LogLite compressor (template + XOR + RLE with an L-window) on real system logs from the Loghub benchmark suite.
-- Implement query operators in Python/Jupyter that operate on the **binary `.lite`/`.lite.b` files** produced by LogLite.
-- Compare correctness and performance of compressed-domain execution against baseline text search.
+- [Query Evaluation README](./query_eval/README.md): canonical execution, measurement, and analysis workflow.
+- [Original LogLite README](./loglite/readme.md): upstream LogLite build and compressor reference.
+- `part3_starter.ipynb`: analysis notebook that reads generated CSV outputs.
+- `main.ipynb`: historical prototype notebook. Use it for context only; do not add new experiment logic there.
 
-Top-Level Layout
-----------------
+## Research Goal
 
-At the root of this repository you will find:
+The project asks:
 
-- `query_eval/`
-	The research-grade evaluation subsystem for part 2 and onward. This is the
-	current authoritative execution and reporting layer for multi-dataset query
-	evaluation.
-	- Start here for the modern workflow:
-		- `query_eval/README.md` – detailed handoff guide for humans and LLMs
-		- `query_eval/cli.py` – reproducible CLI entrypoints
-		- `query_eval/queries.py` – note-compatible `(mode_chosen, dataset)` query API
+> If logs are compressed using LogLite-B, how well can simple search queries be answered by different execution strategies, and what are the time, CPU, memory, and correctness tradeoffs?
 
-- `part3_starter.ipynb`
-	A lightweight analysis notebook for the part-3 teammate. It reads the
-	generated `evaluation_results/query_eval/...` CSV outputs and produces
-	first-pass tables and plots without re-implementing the execution pipeline.
+The modern evaluation layer compares three modes:
 
-- `main.ipynb`  
-	The main experimentation notebook. It:
-	- Locates a target log file in `dataset/loghub` (e.g., `Linux_2k.log`).
-	- Invokes LogLite (via the C++ CLI in `loglite/LogLite-B`) to compress the log.
-	- Copies compressed outputs into `compressed_logs/`.
-	- Parses the **L-window** templates dumped by LogLite.
-	- Runs a set of baseline text queries and their compressed-domain counterparts.
+- `decompressed_text`: scan decompressed text and treat it as the correctness baseline.
+- `full_decompression`: read the `.lite.b` bitstream and reconstruct lines while preserving LogLite window state.
+- `minor_optimization`: use L-window hints to skip candidate lines and measure the correctness/performance tradeoff honestly.
 
-- `compressed_logs/`  
-	Storage for artifacts produced by running the LogLite pipeline:
-	- `*.lite` / `*.lite.b` – LogLite binary compressed files (bitstream written by `write_bitset_to_file`).
-	- `*.window.txt` – Text dump of the L-window (for each line length, the list of recent templates).
-	These files are **generated**, not hand-edited.
+## Recommended Workflow
 
-- `dataset/`  
-	External datasets used for experiments.
-	- `dataset/loghub/` – Clone or copy of the [Loghub](https://github.com/logpai/loghub-dataset) benchmark logs.  
-		Typical usage in this project:
-		- `dataset/loghub/Linux/Linux_2k.log` – Small Linux log sample used for correctness-focused experiments.
-		- (Larger logs can also be used once the pipeline is validated.)
+Run commands from `Big_Data/`:
 
-- `loglite/`  
-	Vendor directory containing the original LogLite implementation and related baselines. This code is C++-centric and comes largely as-is from the LogLite authors, with very light modifications for portability and observability.
+```bash
+python3 -m unittest -v tests/test_query_eval.py
+python3 -m query_eval.cli stage-datasets --datasets linux apache hdfs openstack android
+python3 -m query_eval.cli ensure-artifacts --datasets linux apache hdfs openstack android
+python3 -m query_eval.cli run-suite \
+  --datasets linux apache hdfs openstack android \
+  --queries common phrase selective conjunctive \
+  --modes decompressed_text full_decompression minor_optimization \
+  --repetitions 10 \
+  --warmups 1 \
+  --config-label part2_research_eval
+```
 
-- `notes.txt`  
-	Scratch notes and TODOs related to experiments, observations, and future ideas. Not required for running the pipeline.
+Results are written under `evaluation_results/query_eval/<run_dir>/`. Use the raw JSONL and aggregate CSVs for part-3 analysis.
 
-Recommended Modern Workflow
----------------------------
+## Project Layout
 
-If you are continuing the project after the original notebook prototype, prefer
-the `query_eval/` subsystem rather than adding new execution logic to
-`main.ipynb`.
+| Path | Purpose |
+| --- | --- |
+| [`query_eval/`](./query_eval/README.md) | Canonical research-grade evaluation subsystem. |
+| `tests/test_query_eval.py` | Test coverage for registry, artifacts, metrics, and mode behavior. |
+| `part3_starter.ipynb` | Notebook for reading aggregate outputs and building first-pass tables or plots. |
+| `main.ipynb` | Historical prototype notebook. |
+| `compressed_logs/` | Generated `.lite.b`, decompressed text, and L-window artifacts. |
+| `dataset/loghub/` | Local LogHub dataset samples. |
+| [`loglite/`](./loglite/readme.md) | Vendor LogLite implementation and baseline compressors. |
+| `notes.txt` | Scratch notes, not a documentation source of truth. |
 
-- For detailed project and handoff documentation:
-	- `query_eval/README.md`
-- For reproducible suite execution:
-	- `python3 -m query_eval.cli run-suite ...`
-- For part-3 analysis and first-pass plotting:
-	- `part3_starter.ipynb`
+## LogLite Reference Map
 
-LogLite Subtree
-----------------
+Useful LogLite-B source files:
 
-Inside `loglite/`:
+- `loglite/LogLite-B/src/common/constants.h`: format constants such as window size, stream encoder count, max length, and RLE count.
+- `loglite/LogLite-B/src/compress/stream_compress.h` and `.cc`: streaming compression and decompression logic.
+- `loglite/LogLite-B/src/common/file.cc`: binary I/O helpers for `.lite` and `.lite.b`.
+- `loglite/LogLite-B/src/tools/xorc-cli.cc`: CLI used to compress, decompress, test, and dump L-window snapshots.
 
-- `loglite/readme.md`  
-	Original README for the LogLite project (authored by the LogLite maintainers). It describes their algorithms, command-line usage, and published results.
+The `loglite/baselines/` subtree contains third-party reference compressors from the original LogLite evaluation. They are kept for completeness and extended experiments, but they are not the source of truth for this project’s compressed-query evaluation.
 
-- `loglite/LogLite-B/`  
-	Main C++ implementation of the LogLite **compressor/decompressor** used by this project.
+## Documentation Ownership
 
-	Key locations:
-	- `loglite/LogLite-B/src/common/constants.h` – Global constants controlling the format:
-		- `EACH_WINDOW_SIZE_COUNT`, `STREAM_ENCODER_COUNT`, `ORIGINAL_LENGTH_COUNT`, `MAX_LEN`, `RLE_COUNT`, etc.
-	- `loglite/LogLite-B/src/compress/stream_compress.h` / `.cc` – Core streaming compression logic:
-		- `Stream_Compress::stream_compress(...)` – Encodes each log line into a bitstream using an L-window of templates, XOR, and RLE.
-		- `Stream_Compress::stream_decompress(...)` – Reconstructs original lines from the bitstream.
-		- `get_window()` – Exposes the internal L-window (added in this project for analysis).
-	- `loglite/LogLite-B/src/common/file.cc` – Binary I/O helpers:
-		- `write_bitset_to_file` / `read_bitset_from_file` – Define the on-disk layout of `.lite`/`.lite.b` compressed files.
-	- `loglite/LogLite-B/src/tools/xorc-cli.cc` – Command-line tool used by the Python notebook:
-		- `--compress` / `--decompress` / `--test` – Modes for streaming compression and decompression.
-		- `--file-path` – Input raw log file.
-		- `--com-output-path` – Destination for the compressed binary file.
-		- `--decom-output-path` – Destination for decompressed text.
-		- `--window-output-path` – (Project extension) emits the L-window snapshot used by the notebook.
+- This README explains the Big Data project at a high level.
+- [Query Evaluation README](./query_eval/README.md) owns all reproducible experiment workflow details.
+- [Original LogLite README](./loglite/readme.md) owns upstream LogLite build and compressor usage notes.
+- Notebooks should present, inspect, and plot results. They should not duplicate the execution pipeline.
 
-- `loglite/baselines/`  
-	Third-party or reference baseline compressors and tools used in the original LogLite evaluation. These are *not* central to the compressed-query work, but are included for completeness:
-	- `loglite/baselines/fsst/` – FSST string compressor.
-	- `loglite/baselines/loggrep-L/` and `loglite/baselines/loggrep-Z/` – LogGrep-related code and experiments.
-	- `loglite/baselines/logreducer/` – LogReducer implementation.
-	- `loglite/baselines/logshrink/` – LogShrink implementation.
-	- `loglite/baselines/lzbench/` – LZBench framework with many classic compressors.
-	- `loglite/baselines/pbc/` – PBC compression baseline.
-	The Python integration in `main.ipynb` primarily uses **LogLite-B**; baselines are there to support extended experiments if desired.
+## Complete Evaluation Handoff
 
-- `loglite/appendix/`  
-	Supplemental material shipped with the original LogLite project (plots, tables, extra scripts, etc.). Not directly used by the notebook pipeline.
+The complete static-Bloom evaluation is implemented in `query_eval`. Start with:
 
-- `loglite/scripts/`  
-	Helper Python scripts and the build/benchmark harness for LogLite and baselines.
+`query_eval/COMPLETE_EVALUATION.md`
 
-	Important scripts:
-	- `loglite/scripts/compile.py` – Builds C++ binaries (LogLite-B and baselines). This script has been lightly modified to be more portable (e.g., using `g++` with AVX2 instead of AVX-512-only flags).
-	- `loglite/scripts/loglite.py` – Convenience wrapper that:
-		- Accepts a dataset name (e.g., `Linux_2k.log`).
-		- Invokes the `xorc-cli` compressor with appropriate paths.
-		- Manages output directories (`com_output/`, `decom_output/`, etc.).
-	- `loglite/scripts/*.py` – Additional wrappers for other baselines (FSST, LogReducer, LogShrink, LZBench, PBC).
+The latest complete result bundle is:
 
-	Directories under `loglite/scripts/`:
-	- `loglite/scripts/com_output/` – Default location where compressed outputs (e.g., `.lite` files) are written by the scripts.
-	- `loglite/scripts/decom_output/` – Decompressed text outputs (used mainly for sanity-checking correctness).
-	- `loglite/scripts/datasets/` – Working copy of input logs; the notebook typically copies logs here from `dataset/loghub/` before compression.
-	- `loglite/scripts/results/` – Benchmark summaries and metrics produced by running the original LogLite experiments.
+`evaluation_results/query_eval/20260507_155729_complete_static_evaluation`
 
-How the Pieces Fit Together
----------------------------
-
-1. **Prepare dataset**  
-	 Place or verify `dataset/loghub/...` (e.g., `dataset/loghub/Linux/Linux_2k.log`).
-
-2. **Build LogLite-B**  
-	 From `loglite/scripts/` (typically under Linux/WSL), run:
-
-	 ```bash
-	 python compile.py
-	 ```
-
-	 This compiles `loglite/LogLite-B/src/tools/xorc-cli` and other baselines.
-
-3. **Run compression from the notebook**  
-	 In `main.ipynb`:
-	 - Copy the chosen log from `dataset/loghub/...` into `loglite/scripts/datasets/` (automated by the notebook).
-	 - Invoke `loglite/scripts/loglite.py` for that dataset.
-	 - The script runs `xorc-cli` and writes compressed files into `loglite/scripts/com_output/`.
-	 - The notebook then copies those files into `compressed_logs/` for easier access from Python.
-
-4. **Inspect templates (L-window)**  
-	 - When `xorc-cli` is run with `--window-output-path`, it writes a `*.window.txt` file capturing the internal L-window (per-length template lists).
-	 - `main.ipynb` parses this file into a Python dictionary: `{length: [templates...]}`.
-
-5. **Run queries**  
-	 - Baseline (uncompressed) queries: run directly over the raw `.log` file using pure Python string search, storing counts and sample lines.
-	 - Compressed-domain queries: operate on the binary `.lite`/`.lite.b` file and/or the window templates to evaluate how much work can be done without fully materializing all logs.
+Notebook users should load that directory in `Visualization.ipynb`; they should not reimplement evaluation logic in the notebook.

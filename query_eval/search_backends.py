@@ -34,6 +34,7 @@ import struct
 from collections import deque
 from pathlib import Path
 
+from .specs import ModeRunResult
 from .window_loader import ParsedWindow
 
 
@@ -432,3 +433,188 @@ def keyword_search_loglite_binary_minor_optimization(
             pass
 
     return matches
+
+
+def keyword_search_loglite_static_bloom(
+    bin_path: Path,
+    parsed_l_window: ParsedWindow,
+    query_keywords: str | tuple[str, ...] | list[str],
+) -> ModeRunResult:
+    """Search a static-window LogLite bitstream using bitmap pre-filtering.
+
+    Purpose:
+        Validate the static L-window + Bloom-filter direction. Each record has a
+        64-bit alphanumeric-token bitmap. A missing query bit lets us skip that
+        record; a candidate record is still reconstructed and exact-checked.
+    """
+
+    each_window_size_count = 5
+    stream_encoder_count = 13
+    original_length_count = 15
+    word_bitmap_bits = 64
+    rle_count = 8
+
+    keywords = _normalize_query_keywords(query_keywords)
+    keyword_bytes = [keyword.encode("utf-8") for keyword in keywords]
+    matches: list[str] = []
+    decoded_records = 0
+    decoded_bytes = 0
+    skipped_records = 0
+    skipped_bytes = 0
+    bloom_rejected_records = 0
+    bloom_candidate_records = 0
+    total_records = 0
+
+    def build_result() -> ModeRunResult:
+        return ModeRunResult(
+            matches=matches,
+            decoded_records=decoded_records,
+            decoded_bytes=decoded_bytes,
+            skipped_records=skipped_records,
+            skipped_bytes=skipped_bytes,
+            fallback_count=0,
+            bloom_rejected_records=bloom_rejected_records,
+            bloom_candidate_records=bloom_candidate_records,
+            total_records=total_records,
+        )
+
+    if not bin_path.exists():
+        return build_result()
+
+    data = bin_path.read_bytes()
+    if len(data) < 16:
+        return build_result()
+
+    file_size = len(data)
+    last_block_bits = struct.unpack("<Q", data[file_size - 8 :])[0]
+    blocks_bytes = data[: file_size - 8]
+    if len(blocks_bytes) % 8 != 0:
+        return build_result()
+
+    num_blocks = len(blocks_bytes) // 8
+    blocks = struct.unpack("<" + "Q" * num_blocks, blocks_bytes)
+    total_bits = (num_blocks - 1) * 64 + (last_block_bits or 64)
+    position = 0
+
+    def compute_word_bitmap(text: str) -> int:
+        """Mirror `computeWordBitmap` in `src_static/compress/stream_compress.cc`."""
+
+        bitmap = 0
+        token: list[str] = []
+
+        def flush_token() -> None:
+            nonlocal bitmap, token
+            if not token:
+                return
+            token_hash = 0
+            for character in token:
+                token_hash = ((token_hash << 5) + token_hash) ^ ord(character)
+            bitmap |= 1 << (token_hash & 63)
+            token = []
+
+        for character in text:
+            if character.isalnum():
+                token.append(character)
+            else:
+                flush_token()
+        flush_token()
+        return bitmap
+
+    query_bitmap = 0
+    for keyword in keywords:
+        query_bitmap |= compute_word_bitmap(keyword)
+
+    def read_bit() -> int | None:
+        nonlocal position
+        if position >= total_bits:
+            return None
+        bit = (blocks[position // 64] >> (position % 64)) & 1
+        position += 1
+        return bit
+
+    def read_int(bit_count: int) -> int:
+        value = 0
+        for bit_index in range(bit_count):
+            bit = read_bit()
+            if bit is not None and bit:
+                value |= 1 << bit_index
+        return value
+
+    def skip_bits(bit_count: int) -> None:
+        nonlocal position
+        position = min(position + bit_count, total_bits)
+
+    while True:
+        flag = read_bit()
+        if flag is None:
+            break
+        total_records += 1
+
+        # Static streams store a 64-bit token bitmap immediately after the flag.
+        # This is the whole compressed-domain filter: reject quickly if any
+        # required query token bit is absent, otherwise reconstruct and verify.
+        record_bitmap = read_int(word_bitmap_bits)
+        if (record_bitmap & query_bitmap) != query_bitmap:
+            skipped_records += 1
+            bloom_rejected_records += 1
+            if flag == 0:
+                line_length = read_int(original_length_count)
+                skipped_bytes += line_length
+                skip_bits(line_length * 8)
+            else:
+                _window_id = read_int(each_window_size_count)
+                encoded_payload_bit_length = read_int(stream_encoder_count)
+                skip_bits(encoded_payload_bit_length)
+            continue
+
+        bloom_candidate_records += 1
+        decoded_records += 1
+
+        if flag == 0:
+            line_length = read_int(original_length_count)
+            line_bytes = bytearray(line_length)
+            for byte_index in range(line_length):
+                line_bytes[byte_index] = read_int(8)
+            final_bytes = bytes(line_bytes)
+            decoded_bytes += len(final_bytes)
+            if all(keyword in final_bytes for keyword in keyword_bytes):
+                matches.append(_decode_bytes_to_text(final_bytes))
+            continue
+
+        window_id = read_int(each_window_size_count)
+        encoded_payload_bit_length = read_int(stream_encoder_count)
+        xor_delta = bytearray()
+        bits_consumed = 0
+        while bits_consumed < encoded_payload_bit_length:
+            tag_bit = read_bit()
+            if tag_bit is None:
+                break
+            bits_consumed += 1
+            if tag_bit == 1:
+                xor_delta.append(read_int(8))
+                bits_consumed += 8
+            else:
+                zero_count = read_int(rle_count)
+                bits_consumed += rle_count
+                xor_delta.extend(b"\x00" * zero_count)
+
+        line_length = len(xor_delta)
+        templates = parsed_l_window.get(line_length)
+        if not templates or window_id >= len(templates):
+            continue
+
+        template_bytes = templates[window_id].encode("utf-8", "ignore")
+        if len(template_bytes) < line_length:
+            template_bytes = template_bytes.ljust(line_length, b"\0")
+
+        reconstructed = bytearray(xor_delta)
+        for index in range(line_length):
+            if reconstructed[index] == 0:
+                reconstructed[index] = template_bytes[index]
+
+        final_bytes = bytes(reconstructed)
+        decoded_bytes += len(final_bytes)
+        if all(keyword in final_bytes for keyword in keyword_bytes):
+            matches.append(_decode_bytes_to_text(final_bytes))
+
+    return build_result()

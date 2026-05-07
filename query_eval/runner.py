@@ -31,7 +31,7 @@ from typing import Any
 
 from .artifacts import ensure_artifacts_for_datasets
 from .metrics import compute_correctness_measurement, sample_difference_lines
-from .modes import run_mode_query
+from .modes import run_mode_query, run_mode_query_result
 from .persistence import append_run_record_jsonl, write_json
 from .profiling import measure_callable
 from .registry import (
@@ -39,6 +39,7 @@ from .registry import (
     BASELINE_MODE_NAME,
     MODE_NAMES,
     QUERY_IDS,
+    get_complete_suite_profile,
     get_dataset_spec,
     get_project_root,
     get_query_payload,
@@ -70,18 +71,19 @@ def execute_cell_run(cell_run_spec: CellRunSpec, run_config: RunConfig, code_ver
     artifact_spec = ensure_artifacts_for_datasets([dataset_spec])[dataset_spec.slug]
     query_payload = get_query_payload(dataset_spec.slug, cell_run_spec.query_id)
 
-    candidate_callable = lambda: run_mode_query(
+    candidate_callable = lambda: run_mode_query_result(
         cell_run_spec.mode_name,
         artifact_spec,
         query_payload,
     )
 
     if run_config.profiling_enabled:
-        candidate_matches, timing, memory = measure_callable(candidate_callable)
+        candidate_result, timing, memory = measure_callable(candidate_callable)
     else:
-        candidate_matches = candidate_callable()
+        candidate_result = candidate_callable()
         timing = TimingMeasurement(wall_time_ms=0.0, cpu_time_ms=0.0)
         memory = MemoryMeasurement(peak_rss_mb=0.0)
+    candidate_matches = candidate_result.matches
 
     if cell_run_spec.mode_name == BASELINE_MODE_NAME:
         baseline_matches = candidate_matches
@@ -122,6 +124,14 @@ def execute_cell_run(cell_run_spec: CellRunSpec, run_config: RunConfig, code_ver
         correctness=correctness,
         sampled_false_positives=sampled_false_positives,
         sampled_false_negatives=sampled_false_negatives,
+        decoded_records=candidate_result.decoded_records,
+        decoded_bytes=candidate_result.decoded_bytes,
+        skipped_records=candidate_result.skipped_records,
+        skipped_bytes=candidate_result.skipped_bytes,
+        fallback_count=candidate_result.fallback_count,
+        bloom_rejected_records=candidate_result.bloom_rejected_records,
+        bloom_candidate_records=candidate_result.bloom_candidate_records,
+        total_records=candidate_result.total_records,
     )
 
 
@@ -142,9 +152,11 @@ def run_suite(
     """
 
     effective_run_config = run_config or RunConfig()
-    dataset_slugs = dataset_slugs or list(ACTIVE_TEXT_DATASET_SLUGS)
-    query_ids = query_ids or list(QUERY_IDS)
-    mode_names = mode_names or list(MODE_NAMES)
+    if dataset_slugs is None or query_ids is None or mode_names is None:
+        profile = get_complete_suite_profile()
+        dataset_slugs = dataset_slugs or list(profile["datasets"])
+        query_ids = query_ids or list(profile["queries"])
+        mode_names = mode_names or list(profile["modes"])
     code_version = get_code_version()
 
     dataset_specs = [get_dataset_spec(dataset_slug) for dataset_slug in dataset_slugs]
@@ -172,6 +184,7 @@ def run_suite(
             "datasets": [dataset_spec.slug for dataset_spec in dataset_specs],
             "queries": query_ids,
             "modes": mode_names,
+            "suite_profile": "complete_static_evaluation",
             "artifact_specs": {
                 dataset_slug: artifact_spec.to_json_dict()
                 for dataset_slug, artifact_spec in artifact_specs.items()

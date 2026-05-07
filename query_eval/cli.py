@@ -20,7 +20,14 @@ import json
 from pathlib import Path
 
 from .artifacts import ensure_artifacts_for_datasets, stage_active_datasets
-from .registry import ACTIVE_TEXT_DATASET_SLUGS, MODE_NAMES, QUERY_IDS, get_dataset_spec
+from .registry import (
+    ACTIVE_TEXT_DATASET_SLUGS,
+    COMPLETE_SUITE_PROFILE_NAME,
+    MODE_NAMES,
+    QUERY_IDS,
+    get_complete_suite_profile,
+    get_dataset_spec,
+)
 from .reports import build_reports_from_raw_jsonl
 from .runner import execute_cell_run, run_suite
 from .specs import CellRunSpec, RunConfig
@@ -90,9 +97,9 @@ def main(argv: list[str] | None = None) -> int:
             sample_difference_limit=args.sample_difference_limit,
         )
         results_directory = run_suite(
-            dataset_slugs=args.datasets or list(ACTIVE_TEXT_DATASET_SLUGS),
-            query_ids=args.queries or list(QUERY_IDS),
-            mode_names=args.modes or list(MODE_NAMES),
+            dataset_slugs=args.datasets or list(get_complete_suite_profile()["datasets"]),
+            query_ids=args.queries or list(get_complete_suite_profile()["queries"]),
+            mode_names=args.modes or list(get_complete_suite_profile()["modes"]),
             run_config=run_config,
         )
         print(json.dumps({"results_directory": str(results_directory)}, sort_keys=True))
@@ -136,6 +143,7 @@ def _build_argument_parser() -> argparse.ArgumentParser:
     cell_parser.add_argument("--strict-validation", default="true")
 
     suite_parser = subparsers.add_parser("run-suite")
+    suite_parser.add_argument("--profile", default=COMPLETE_SUITE_PROFILE_NAME, choices=[COMPLETE_SUITE_PROFILE_NAME])
     suite_parser.add_argument("--datasets", nargs="*", default=None)
     suite_parser.add_argument("--queries", nargs="*", default=None)
     suite_parser.add_argument("--modes", nargs="*", default=None)
@@ -143,8 +151,8 @@ def _build_argument_parser() -> argparse.ArgumentParser:
     suite_parser.add_argument("--warmups", type=int, default=1)
     suite_parser.add_argument("--disable-profiling", action="store_true")
     suite_parser.add_argument("--disable-strict-validation", action="store_true")
-    suite_parser.add_argument("--config-label", default="part2_research_eval")
-    suite_parser.add_argument("--config-version", default="part2.v1")
+    suite_parser.add_argument("--config-label", default=COMPLETE_SUITE_PROFILE_NAME)
+    suite_parser.add_argument("--config-version", default="complete_static.v1")
     suite_parser.add_argument("--sample-difference-limit", type=int, default=10)
 
     reports_parser = subparsers.add_parser("build-reports")

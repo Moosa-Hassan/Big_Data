@@ -1,0 +1,495 @@
+len=78
+20171224-0:32:28:800|HiH_HiSyncControl|30002312|stepSyncOrNot appSynTimes is 0
+---
+len=149
+20171224-0:32:28:799|HiH_HiSyncControl|30002312|checkCurrentDay a new day comes , reset basicSyncCondition, currentDay is 20171224 oldDay is 20171223
+---
+len=73
+20171224-0:32:28:791|HiH_HiSyncControl|30002312|startTimer start autoSync
+20171224-0:32:28:806|HiH_HiBroadcastUtil|30002312|sendSyncFailedBroadcast
+---
+len=115
+20171224-0:10:42:438|Step_SPUtils|30002312|setTodayTotalDetailSteps=1514045340000##0##549659##8661##16256##34086757
+20171224-0:10:43:441|Step_SPUtils|30002312|setTodayTotalDetailSteps=1514045340000##0##549659##8661##16256##34087759
+20171224-0:11:56:446|Step_SPUtils|30002312|setTodayTotalDetailSteps=1514045400000##0##549659##8661##16256##34160765
+20171224-0:11:57:443|Step_SPUtils|30002312|setTodayTotalDetailSteps=1514045400000##0##549659##8661##16256##34161762
+20171224-0:15:53:286|Step_SPUtils|30002312|setTodayTotalDetailSteps=1514045640000##0##549659##8661##16256##34397604
+20171224-0:25:16:439|Step_SPUtils|30002312|setTodayTotalDetailSteps=1514046240000##0##549659##8661##16256##34960758
+20171224-0:25:17:438|Step_SPUtils|30002312|setTodayTotalDetailSteps=1514046240000##0##549659##8661##16256##34961757
+20171224-0:28:25:454|Step_SPUtils|30002312|setTodayTotalDetailSteps=1514046420000##0##549659##8661##16256##35149773
+---
+len=58
+20171224-0:0:0:240|Step_HGNH|30002312|closeNotification...
+---
+len=82
+20171224-0:7:2:445|Step_ExtSDM|30002312|calculateCaloriesWithCache totalCalories=0
+20171224-0:7:2:445|Step_ExtSDM|30002312|calculateAltitudeWithCache totalAltitude=0
+20171224-0:7:4:447|Step_ExtSDM|30002312|calculateCaloriesWithCache totalCalories=0
+20171224-0:7:4:447|Step_ExtSDM|30002312|calculateAltitudeWithCache totalAltitude=0
+20171224-0:9:4:460|Step_ExtSDM|30002312|calculateCaloriesWithCache totalCalories=0
+20171224-0:9:4:460|Step_ExtSDM|30002312|calculateAltitudeWithCache totalAltitude=0
+20171224-0:9:6:450|Step_ExtSDM|30002312|calculateCaloriesWithCache totalCalories=0
+20171224-0:9:6:450|Step_ExtSDM|30002312|calculateAltitudeWithCache totalAltitude=0
+---
+len=100
+20171224-0:0:0:229|Step_SPUtils|30002312|setBasicStandardSteps basicStandardStep=3786 restartSteps=0
+---
+len=50
+20171224-0:0:0:227|Step_DataCache|30002312|clear()
+---
+len=66
+20171223-23:7:6:232|Step_LSC|30002312|onExtend:1514041627000 0 0 5
+20171224-0:5:22:478|Step_LSC|30002312|onExtend:1514045123000 0 0 0
+20171224-0:6:16:574|Step_LSC|30002312|onExtend:1514045177000 0 0 0
+20171224-0:7:20:149|Step_LSC|30002312|onExtend:1514045240000 0 0 5
+20171224-0:7:21:149|Step_LSC|30002312|onExtend:1514045241000 0 0 0
+20171224-0:9:34:153|Step_LSC|30002312|onExtend:1514045374000 0 0 5
+20171224-0:9:35:148|Step_LSC|30002312|onExtend:1514045375000 0 0 0
+20171224-0:10:9:143|Step_LSC|30002312|onExtend:1514045409000 0 0 5
+---
+len=83
+20171224-0:7:21:447|Step_ExtSDM|30002312|calculateAltitudeWithCache totalAltitude=0
+20171224-0:9:34:446|Step_ExtSDM|30002312|calculateCaloriesWithCache totalCalories=0
+20171224-0:9:34:446|Step_ExtSDM|30002312|calculateAltitudeWithCache totalAltitude=0
+20171224-0:9:35:448|Step_ExtSDM|30002312|calculateCaloriesWithCache totalCalories=0
+20171224-0:9:35:448|Step_ExtSDM|30002312|calculateAltitudeWithCache totalAltitude=0
+20171224-0:10:9:443|Step_ExtSDM|30002312|calculateCaloriesWithCache totalCalories=0
+20171224-0:10:9:443|Step_ExtSDM|30002312|calculateAltitudeWithCache totalAltitude=0
+20171224-0:32:28:803|HiH_HiSyncControl|30002312|needAutoSync autoSyncSwitch is open
+---
+len=88
+20171223-23:7:6:137|Step_ExtSDM|30002312|calculateCaloriesWithCache totalCalories=130673
+20171223-23:7:6:453|Step_ExtSDM|30002312|calculateCaloriesWithCache totalCalories=130673
+20171223-23:7:7:391|Step_ExtSDM|30002312|calculateCaloriesWithCache totalCalories=130673
+20171223-23:8:9:248|Step_ExtSDM|30002312|calculateCaloriesWithCache totalCalories=130673
+20171223-23:17:41:3|Step_ExtSDM|30002312|calculateCaloriesWithCache totalCalories=131208
+20171223-23:17:42:1|Step_ExtSDM|30002312|calculateCaloriesWithCache totalCalories=131208
+---
+len=117
+20171224-0:5:22:774|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514044740000##0##549659##8661##16256##33450764
+20171224-0:6:16:863|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514045040000##0##549659##8661##16256##33767093
+20171224-0:7:20:438|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514045160000##0##549659##8661##16256##33868758
+20171224-0:7:21:439|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514045160000##0##549659##8661##16256##33884757
+20171224-0:9:34:439|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514045280000##0##549659##8661##16256##33990761
+20171224-0:9:35:440|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514045280000##0##549659##8661##16256##34018758
+20171224-0:10:9:438|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514045280000##0##549659##8661##16256##34019759
+20171224-0:32:28:805|HiH_HiSyncControl|30002312|initUserPrivacy the userPrivacy switch is open, start push user data!
+---
+len=103
+20171223-23:7:6:124|Step_StandReportReceiver|30002312|onReceive action: android.intent.action.SCREEN_ON
+---
+len=60
+20171224-0:0:0:232|Step_SPUtils|30002312|setDiffTotalSteps=0
+20171224-0:0:0:323|Step_LSC|30002312|onStandStepChanged 3786
+20171224-0:0:5:137|Step_LSC|30002312|onStandStepChanged 3786
+20171224-0:0:6:144|Step_LSC|30002312|onStandStepChanged 3786
+20171224-0:7:2:137|Step_LSC|30002312|onStandStepChanged 3786
+20171224-0:7:4:137|Step_LSC|30002312|onStandStepChanged 3786
+20171224-0:9:4:137|Step_LSC|30002312|onStandStepChanged 3786
+20171224-0:9:6:137|Step_LSC|30002312|onStandStepChanged 3786
+---
+len=65
+20171223-23:7:7:71|Step_LSC|30002312|onExtend:1514041627000 0 0 0
+20171224-0:0:0:329|Step_LSC|30002312|onExtend:1514044801000 0 0 0
+20171224-0:0:5:152|Step_LSC|30002312|onExtend:1514044805000 0 0 5
+20171224-0:0:6:149|Step_LSC|30002312|onExtend:1514044806000 0 0 0
+20171224-0:7:2:150|Step_LSC|30002312|onExtend:1514045222000 0 0 5
+20171224-0:7:4:153|Step_LSC|30002312|onExtend:1514045224000 0 0 0
+20171224-0:9:4:148|Step_LSC|30002312|onExtend:1514045344000 0 0 5
+20171224-0:9:6:148|Step_LSC|30002312|onExtend:1514045346000 0 0 0
+---
+len=79
+20171223-22:32:28:796|HiH_HiSyncControl|30002312|stepSyncOrNot appSynTimes is 0
+20171223-23:32:28:794|HiH_HiSyncControl|30002312|stepSyncOrNot appSynTimes is 0
+20171224-0:32:28:806|HiH_HiSyncControl|30002312|ifCanSync not! no cloud version
+---
+len=76
+20171223-22:19:58:508|Step_SPUtils|30002312|setWriteDBLastDataMinute success
+20171224-0:0:0:234|Step_StandStepDataManager|30002312|reload : 3786 restar 0
+---
+len=101
+20171223-22:19:58:495|HiH_DataStatManager|30002312|new date =20171223, type=40024,79200.0,old=79200.0
+---
+len=114
+20171223-22:19:58:482|HiH_DataStatManager|30002312|new date =20171223, type=40021,135245.88,old=131454.53999999995
+20171224-0:5:22:774|Step_SPUtils|30002312|setTodayTotalDetailSteps=1514045040000##0##549659##8661##16256##33767093
+20171224-0:6:16:864|Step_SPUtils|30002312|setTodayTotalDetailSteps=1514045100000##0##549659##8661##16256##33821183
+20171224-0:7:20:439|Step_SPUtils|30002312|setTodayTotalDetailSteps=1514045160000##0##549659##8661##16256##33884757
+20171224-0:7:21:440|Step_SPUtils|30002312|setTodayTotalDetailSteps=1514045160000##0##549659##8661##16256##33885759
+20171224-0:9:34:440|Step_SPUtils|30002312|setTodayTotalDetailSteps=1514045280000##0##549659##8661##16256##34018758
+20171224-0:9:35:441|Step_SPUtils|30002312|setTodayTotalDetailSteps=1514045280000##0##549659##8661##16256##34019759
+20171224-0:10:9:438|Step_SPUtils|30002312|setTodayTotalDetailSteps=1514045340000##0##549659##8661##16256##34053757
+---
+len=123
+20171223-22:19:58:469|HiH_DataStatManager|30002312|new date =20171223, type=40003,214445.88000000006,old=210654.54000000004
+20171223-22:19:58:495|HiH_DataStatManager|30002312|new date =20171223, type=40034,292.73999999999995,old=292.73999999999995
+---
+len=80
+20171223-22:19:58:428|HiH_HiSyncControl|30002312|ifCanSync not! no cloud version
+20171223-22:19:58:518|HiH_HiSyncControl|30002312|ifCanSync not! no cloud version
+20171223-22:32:28:801|HiH_HiSyncControl|30002312|ifCanSync not! no cloud version
+20171223-23:32:28:796|HiH_HiSyncControl|30002312|ifCanSync not! no cloud version
+---
+len=120
+20171223-22:19:58:424|HiH_HiSyncControl|30002312|initDataPrivacy the dataPrivacy switch is open, start push health data!
+20171223-22:19:58:518|HiH_HiSyncControl|30002312|initDataPrivacy the dataPrivacy switch is open, start push health data!
+20171223-22:32:28:800|HiH_HiSyncControl|30002312|initDataPrivacy the dataPrivacy switch is open, start push health data!
+20171223-23:7:6:126|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514040840000##7189##549659##8661##16256##29600372
+20171223-23:7:6:445|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514041560000##7189##549659##8661##16256##30270445
+20171223-23:7:7:373|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514041560000##7189##549659##8661##16256##30270764
+20171223-23:8:9:235|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514041560000##7189##549659##8661##16256##30315546
+20171223-23:32:28:795|HiH_HiSyncControl|30002312|initDataPrivacy the dataPrivacy switch is open, start push health data!
+---
+len=102
+20171223-22:19:58:417|HiH_HiSyncControl|30002312|startInsertSportSync first 500 steps sync,do all sync
+20171223-22:19:58:515|HiH_HiSyncControl|30002312|startInsertSportSync first 500 steps sync,do all sync
+20171224-0:0:0:234|Step_StandStepDataManager|30002312|tryToReloadTodayBasicSteps1514044800223|3786|0|0
+---
+len=94
+20171223-22:19:58:416|HiH_HiSyncControl|30002312|startInsertSportSync start auto sync,app is 1
+20171223-22:19:58:514|HiH_HiSyncControl|30002312|startInsertSportSync start auto sync,app is 1
+---
+len=98
+20171223-22:19:58:413|HiH_HiSyncControl|30002312|checkInsertStatus stepSum or calorieSum is enough
+20171223-22:19:58:512|HiH_HiSyncControl|30002312|checkInsertStatus stepSum or calorieSum is enough
+---
+len=148
+20171223-22:19:58:411|HiH_HiHealthBinder|30002312|insertHiHealthData() bulkSaveDetailHiHealthData fail errorCode = 4,errorMessage = ERR_DATA_INSERT 
+---
+len=111
+20171223-22:19:58:406|HiH_HiHealthDataInsertStore|30002312|bulkSaveDetailHiHealthData() size = 4,totalTime = 30
+---
+len=146
+20171223-22:19:58:380|HiH_HiHealthDataInsertStore|30002312|saveHealthDetailData() saveOneDetailData fail hiHealthData = 1513958400000,type = 40003
+20171223-22:19:58:381|HiH_HiHealthDataInsertStore|30002312|saveHealthDetailData() saveOneDetailData fail hiHealthData = 1513958400000,type = 40005
+---
+len=99
+20171223-22:19:58:378|HiH_DataStatManager|30002312|new date =20171223, type=40002,7163.0,old=6983.0
+20171223-22:19:58:382|HiH_DataStatManager|30002312|new date =20171223, type=40004,5112.0,old=4985.0
+20171223-22:19:58:416|HiH_HiSyncControl|30002312|stepSyncOrNot appSynTimes is 0, statsyncTimes is 0
+20171223-22:19:58:466|HiH_DataStatManager|30002312|new date =20171223, type=40002,6724.0,old=7163.0
+20171223-22:19:58:480|HiH_DataStatManager|30002312|new date =20171223, type=40011,6314.0,old=6137.0
+20171223-22:19:58:499|HiH_DataStatManager|30002312|new date =20171223, type=40041,6720.0,old=6480.0
+20171223-22:19:58:501|HiH_DataStatManager|30002312|new date =20171223, type=40006,7140.0,old=6900.0
+20171223-22:19:58:514|HiH_HiSyncControl|30002312|stepSyncOrNot appSynTimes is 0, statsyncTimes is 0
+---
+len=130
+20171223-22:19:58:378|HiH_HiHealthDataInsertStore|30002312|saveStatData() type =40002,time = 1513958400000,statClient = 2,who is 1
+20171223-22:19:58:379|HiH_HiHealthDataInsertStore|30002312|saveStatData() type =40003,time = 1513958400000,statClient = 2,who is 1
+20171223-22:19:58:380|HiH_HiHealthDataInsertStore|30002312|saveStatData() type =40005,time = 1513958400000,statClient = 2,who is 1
+20171223-22:19:58:381|HiH_HiHealthDataInsertStore|30002312|saveStatData() type =40004,time = 1513958400000,statClient = 2,who is 1
+---
+len=190
+20171223-22:19:58:419|HiH_HiSyncControl|30002312|startSync hiSyncOption = HiSyncOption{syncAction=2, syncMethod=2, syncScope=0, syncDataType=20000, syncModel=2, pushAction=0},app = 1 who = 1
+20171223-22:19:58:516|HiH_HiSyncControl|30002312|startSync hiSyncOption = HiSyncOption{syncAction=2, syncMethod=2, syncScope=0, syncDataType=20000, syncModel=2, pushAction=0},app = 1 who = 1
+20171223-22:32:28:796|HiH_HiSyncControl|30002312|startSync hiSyncOption = HiSyncOption{syncAction=1, syncMethod=2, syncScope=0, syncDataType=20000, syncModel=2, pushAction=0},app = 1 who = 1
+20171223-23:32:28:794|HiH_HiSyncControl|30002312|startSync hiSyncOption = HiSyncOption{syncAction=1, syncMethod=2, syncScope=0, syncDataType=20000, syncModel=2, pushAction=0},app = 1 who = 1
+---
+len=96
+20171223-22:19:58:375|HiH_HiHealthBinder|30002312|insertHiHealthData() checkAppType  0 appID = 1
+20171223-22:19:58:419|HiH_HiHealthBinder|30002312|insertHiHealthData() checkAppType  0 appID = 1
+---
+len=77
+20171223-22:19:58:411|Step_LSC|30002312|uploadStaticsToDB failed message=true
+20171223-22:19:58:505|Step_SPUtils|30002312|setWriteDBLastDataMinute=25233979
+20171224-0:0:0:226|Step_StandStepCounter|30002312|registersensorsuccess: true
+20171224-0:0:0:229|Step_SPUtils|30002312| getDiffTotalSteps= 1513958400215##0
+20171224-0:0:0:233|Step_SPUtils|30002312| getDiffTotalSteps= 1514044800231##0
+20171224-0:0:0:240|Step_NotificationUtil|30002312|deleteHealthNotification() 
+---
+len=124
+20171223-22:19:58:371|HiH_HiHealthBinder|30002312|getAppContext() isAppValid health or wear, packageName = com.huawei.health
+20171223-22:19:58:415|HiH_HiHealthBinder|30002312|getAppContext() isAppValid health or wear, packageName = com.huawei.health
+---
+len=97
+20171223-22:19:58:381|HiH_DataStatManager|30002312|new date =20171223, type=40005,240.0,old=330.0
+20171223-22:19:58:413|HiH_HiAppUtil|30002312|getBinderPackageName packageName = com.huawei.health
+20171223-22:19:58:415|HiH_HiAppUtil|30002312|getBinderPackageName packageName = com.huawei.health
+20171223-22:19:58:417|HiH_HiAppUtil|30002312|getBinderPackageName packageName = com.huawei.health
+20171223-22:19:58:419|HiH_HiAppUtil|30002312|getBinderPackageName packageName = com.huawei.health
+20171223-22:19:58:471|HiH_DataStatManager|30002312|new date =20171223, type=40005,330.0,old=330.0
+20171223-22:19:58:494|HiH_DataStatManager|30002312|new date =20171223, type=40013,410.0,old=410.0
+20171223-22:19:58:501|HiH_DataStatManager|30002312|new date =20171223, type=40044,420.0,old=420.0
+---
+len=62
+20171224-0:10:42:137|Step_LSC|30002312|onStandStepChanged 3786
+20171224-0:10:43:138|Step_LSC|30002312|onStandStepChanged 3786
+20171224-0:11:56:143|Step_LSC|30002312|onStandStepChanged 3786
+20171224-0:11:57:141|Step_LSC|30002312|onStandStepChanged 3786
+20171224-0:15:52:983|Step_LSC|30002312|onStandStepChanged 3786
+20171224-0:25:16:137|Step_LSC|30002312|onStandStepChanged 3786
+20171224-0:25:17:137|Step_LSC|30002312|onStandStepChanged 3786
+20171224-0:28:25:151|Step_LSC|30002312|onStandStepChanged 3786
+---
+len=159
+20171223-22:19:58:376|HiH_HiHealthBinder|30002312|insertHiHealthData() size = 4,app = 1,One Data Type = 40002,packageName = com.huawei.health,writeStatType = 0
+---
+len=112
+20171223-22:19:58:366|Step_FlushableStepDataCache|30002312|upLoadOneMinuteDataToEngine time=25233976,0,1,0,20002
+20171223-22:19:58:366|Step_FlushableStepDataCache|30002312|upLoadOneMinuteDataToEngine time=25233978,0,5,0,20002
+20171223-22:19:58:417|HiH_HiSyncUtil|30002312|checkFirstSyncByType no such data in db ,type is 1 deviceCode is 0
+20171223-22:19:58:453|HiH_HiHealthDataInsertStore|30002312|bulkSaveDetailHiHealthData() size = 20,totalTime = 34
+20171223-22:19:58:481|HiH_DataStatManager|30002312|new date =20171223, type=40031,4508.196000000001,old=4381.818
+20171223-22:19:58:502|HiH_HiHealthDataInsertStore|30002312|saveRealTimeHealthDatasStat() size = 1,totalTime = 48
+20171223-22:19:58:515|HiH_HiSyncUtil|30002312|checkFirstSyncByType no such data in db ,type is 1 deviceCode is 0
+---
+len=113
+20171224-0:0:0:234|Step_SPUtils|30002312|setTodayTotalDetailSteps=1514044740000##0##549659##8661##16256##33444553
+20171224-0:0:0:624|Step_SPUtils|30002312|setTodayTotalDetailSteps=1514044740000##0##549659##8661##16256##33444943
+20171224-0:0:5:438|Step_SPUtils|30002312|setTodayTotalDetailSteps=1514044740000##0##549659##8661##16256##33449757
+20171224-0:0:6:445|Step_SPUtils|30002312|setTodayTotalDetailSteps=1514044740000##0##549659##8661##16256##33450764
+20171224-0:7:2:440|Step_SPUtils|30002312|setTodayTotalDetailSteps=1514045160000##0##549659##8661##16256##33866758
+20171224-0:7:4:439|Step_SPUtils|30002312|setTodayTotalDetailSteps=1514045160000##0##549659##8661##16256##33868758
+20171224-0:9:4:441|Step_SPUtils|30002312|setTodayTotalDetailSteps=1514045280000##0##549659##8661##16256##33988760
+20171224-0:9:6:442|Step_SPUtils|30002312|setTodayTotalDetailSteps=1514045280000##0##549659##8661##16256##33990761
+---
+len=81
+20171223-22:19:58:366|Step_FlushableStepDataCache|30002312|writeDataToDB size 327
+20171224-0:0:0:216|Step_StandStepDataManager|30002312|theDayChanged 1514044800216
+---
+len=104
+20171224-0:5:0:128|Step_LSC|30002312|processHandleBroadcastAction action:android.intent.action.TIME_TICK
+20171224-0:6:0:153|Step_LSC|30002312|processHandleBroadcastAction action:android.intent.action.TIME_TICK
+20171224-0:7:0:125|Step_LSC|30002312|processHandleBroadcastAction action:android.intent.action.TIME_TICK
+20171224-0:8:0:141|Step_LSC|30002312|processHandleBroadcastAction action:android.intent.action.TIME_TICK
+20171224-0:9:0:135|Step_LSC|30002312|processHandleBroadcastAction action:android.intent.action.TIME_TICK
+20171224-0:28:0:83|Step_LSC|30002312|processHandleBroadcastAction action:android.intent.action.TIME_TICK
+20171224-1:0:0:794|Step_LSC|30002312|processHandleBroadcastAction action:android.intent.action.TIME_TICK
+20171224-1:1:0:935|Step_LSC|30002312|processHandleBroadcastAction action:android.intent.action.TIME_TICK
+---
+len=89
+20171223-22:55:56:62|Step_ExtSDM|30002312|calculateCaloriesWithCache totalCalories=130673
+20171223-23:7:50:274|Step_ExtSDM|30002312|calculateCaloriesWithCache totalCalories=130673
+20171223-23:7:51:235|Step_ExtSDM|30002312|calculateCaloriesWithCache totalCalories=130673
+20171223-23:8:19:419|Step_ExtSDM|30002312|calculateCaloriesWithCache totalCalories=130673
+20171223-23:29:4:456|Step_ExtSDM|30002312|calculateCaloriesWithCache totalCalories=131208
+20171223-23:29:5:448|Step_ExtSDM|30002312|calculateCaloriesWithCache totalCalories=131208
+20171223-23:46:7:464|Step_ExtSDM|30002312|calculateCaloriesWithCache totalCalories=131208
+20171223-23:53:0:450|Step_ExtSDM|30002312|calculateCaloriesWithCache totalCalories=131208
+---
+len=118
+20171224-0:10:42:438|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514045340000##0##549659##8661##16256##34054759
+20171224-0:10:43:440|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514045340000##0##549659##8661##16256##34086757
+20171224-0:11:56:445|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514045340000##0##549659##8661##16256##34087759
+20171224-0:11:57:442|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514045400000##0##549659##8661##16256##34160765
+20171224-0:15:53:285|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514045400000##0##549659##8661##16256##34161762
+20171224-0:25:16:438|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514045640000##0##549659##8661##16256##34397604
+20171224-0:25:17:438|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514046240000##0##549659##8661##16256##34960758
+20171224-0:28:25:453|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514046240000##0##549659##8661##16256##34961757
+---
+len=74
+20171223-22:19:58:428|HiH_HiBroadcastUtil|30002312|sendSyncFailedBroadcast
+20171223-22:19:58:518|HiH_HiBroadcastUtil|30002312|sendSyncFailedBroadcast
+20171223-22:32:28:791|HiH_HiSyncControl|30002312|startTimer start autoSync
+20171223-22:32:28:801|HiH_HiBroadcastUtil|30002312|sendSyncFailedBroadcast
+20171223-23:32:28:792|HiH_HiSyncControl|30002312|startTimer start autoSync
+20171223-23:32:28:796|HiH_HiBroadcastUtil|30002312|sendSyncFailedBroadcast
+20171224-0:32:28:804|HiH_|30002312|initDataPrivacy the dataPrivacy is true
+20171224-0:32:28:806|HiH_|30002312|initUserPrivacy the userPrivacy is true
+---
+len=121
+20171223-22:55:56:53|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514040840000##7189##549659##8661##16256##29600053
+20171223-23:7:50:266|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514041560000##7189##549659##8661##16256##30271693
+20171223-23:7:51:225|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514041560000##7189##549659##8661##16256##30314585
+20171223-23:8:19:403|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514041620000##7189##549659##8661##16256##30333554
+20171223-23:29:4:438|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514042520000##7214##549659##8661##16256##31243766
+20171223-23:29:5:438|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514042880000##7214##549659##8661##16256##31588757
+20171223-23:46:7:444|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514043660000##7214##549659##8661##16256##32403526
+20171223-23:53:0:441|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514044260000##7214##549659##8661##16256##33021763
+---
+len=106
+20171224-0:39:14:288|Step_LSC|30002312|processHandleBroadcastAction action:android.intent.action.TIME_TICK
+20171224-0:42:46:681|Step_LSC|30002312|processHandleBroadcastAction action:android.intent.action.TIME_TICK
+20171224-0:45:47:485|Step_LSC|30002312|processHandleBroadcastAction action:android.intent.action.TIME_TICK
+20171224-0:48:29:111|Step_LSC|30002312|processHandleBroadcastAction action:android.intent.action.TIME_TICK
+20171224-0:49:29:380|Step_LSC|30002312|processHandleBroadcastAction action:android.intent.action.TIME_TICK
+20171224-0:52:20:752|Step_LSC|30002312|processHandleBroadcastAction action:android.intent.action.TIME_TICK
+20171224-0:53:59:235|Step_LSC|30002312|processHandleBroadcastAction action:android.intent.action.TIME_TICK
+20171224-0:58:53:985|Step_LSC|30002312|processHandleBroadcastAction action:android.intent.action.TIME_TICK
+---
+len=87
+20171223-23:55:24:472|Step_ExtSDM|30002312|calculateAltitudeWithCache totalAltitude=240
+20171223-23:55:25:460|Step_ExtSDM|30002312|calculateAltitudeWithCache totalAltitude=240
+20171223-23:56:12:474|Step_ExtSDM|30002312|calculateAltitudeWithCache totalAltitude=240
+20171223-23:56:13:457|Step_ExtSDM|30002312|calculateAltitudeWithCache totalAltitude=240
+20171223-23:56:28:464|Step_ExtSDM|30002312|calculateAltitudeWithCache totalAltitude=240
+20171223-23:56:35:467|Step_ExtSDM|30002312|calculateAltitudeWithCache totalAltitude=240
+20171223-23:57:34:464|Step_ExtSDM|30002312|calculateAltitudeWithCache totalAltitude=240
+20171223-23:57:42:470|Step_ExtSDM|30002312|calculateAltitudeWithCache totalAltitude=240
+---
+len=68
+20171223-23:56:13:150|Step_LSC|30002312|onExtend:1514044573000 0 0 0
+20171223-23:56:28:145|Step_LSC|30002312|onExtend:1514044588000 0 0 5
+20171223-23:56:35:152|Step_LSC|30002312|onExtend:1514044595000 0 0 0
+20171223-23:57:34:156|Step_LSC|30002312|onExtend:1514044654000 0 0 5
+20171223-23:57:42:147|Step_LSC|30002312|onExtend:1514044662000 0 0 0
+20171224-0:0:0:218|Step_SPUtils|30002312| getStepCounterStatus= true
+20171224-0:0:0:218|Step_StandStepCounter|30002312|reStartStepCounter
+20171224-0:0:0:237|Step_HGNH|30002312|next day:steps0mLastReport7214
+---
+len=67
+20171224-0:10:42:149|Step_LSC|30002312|onExtend:1514045442000 0 0 5
+20171224-0:10:43:153|Step_LSC|30002312|onExtend:1514045443000 0 0 0
+20171224-0:11:56:151|Step_LSC|30002312|onExtend:1514045516000 0 0 5
+20171224-0:11:57:149|Step_LSC|30002312|onExtend:1514045517000 0 0 0
+20171224-0:15:52:990|Step_LSC|30002312|onExtend:1514045753000 0 0 0
+20171224-0:25:16:146|Step_LSC|30002312|onExtend:1514046316000 0 0 5
+20171224-0:25:17:149|Step_LSC|30002312|onExtend:1514046317000 0 0 0
+20171224-0:28:25:159|Step_LSC|30002312|onExtend:1514046505000 0 0 5
+---
+len=90
+20171223-23:55:24:467|Step_ExtSDM|30002312|calculateCaloriesWithCache totalCalories=131208
+20171223-23:55:25:456|Step_ExtSDM|30002312|calculateCaloriesWithCache totalCalories=131208
+20171223-23:56:12:465|Step_ExtSDM|30002312|calculateCaloriesWithCache totalCalories=131208
+20171223-23:56:13:454|Step_ExtSDM|30002312|calculateCaloriesWithCache totalCalories=131208
+20171223-23:56:28:460|Step_ExtSDM|30002312|calculateCaloriesWithCache totalCalories=131208
+20171223-23:56:35:460|Step_ExtSDM|30002312|calculateCaloriesWithCache totalCalories=131208
+20171223-23:57:34:457|Step_ExtSDM|30002312|calculateCaloriesWithCache totalCalories=131208
+20171223-23:57:42:464|Step_ExtSDM|30002312|calculateCaloriesWithCache totalCalories=131208
+---
+len=119
+20171223-23:56:13:445|Step_SPUtils|30002312|setTodayTotalDetailSteps=1514044500000##7214##549659##8661##16256##33217764
+20171223-23:56:28:444|Step_SPUtils|30002312|setTodayTotalDetailSteps=1514044500000##7214##549659##8661##16256##33232763
+20171223-23:56:35:440|Step_SPUtils|30002312|setTodayTotalDetailSteps=1514044500000##7214##549659##8661##16256##33239758
+20171223-23:57:34:440|Step_SPUtils|30002312|setTodayTotalDetailSteps=1514044560000##7214##549659##8661##16256##33298759
+20171223-23:57:42:444|Step_SPUtils|30002312|setTodayTotalDetailSteps=1514044560000##7214##549659##8661##16256##33306763
+20171224-0:0:0:233|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514044560000##7214##549659##8661##16256##33306763
+20171224-0:0:0:234|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514044560000##7214##549659##8661##16256##33306763
+20171224-0:32:28:804|HiH_HiSyncControl|30002312|initDataPrivacy the dataPrivacy switch is open, start push health data!
+---
+len=75
+20171223-22:19:58:424|HiH_|30002312|initDataPrivacy the dataPrivacy is true
+20171223-22:19:58:428|HiH_|30002312|initUserPrivacy the userPrivacy is true
+20171223-22:19:58:518|HiH_|30002312|initDataPrivacy the dataPrivacy is true
+20171223-22:19:58:518|HiH_|30002312|initUserPrivacy the userPrivacy is true
+20171223-22:32:28:800|HiH_|30002312|initDataPrivacy the dataPrivacy is true
+20171223-22:32:28:801|HiH_|30002312|initUserPrivacy the userPrivacy is true
+20171223-23:32:28:796|HiH_|30002312|initDataPrivacy the dataPrivacy is true
+20171223-23:32:28:796|HiH_|30002312|initUserPrivacy the userPrivacy is true
+---
+len=122
+20171223-23:55:24:442|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514044380000##7214##549659##8661##16256##33140770
+20171223-23:55:25:441|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514044440000##7214##549659##8661##16256##33168762
+20171223-23:56:12:448|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514044440000##7214##549659##8661##16256##33169760
+20171223-23:56:13:445|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514044500000##7214##549659##8661##16256##33216767
+20171223-23:56:28:443|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514044500000##7214##549659##8661##16256##33217764
+20171223-23:56:35:439|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514044500000##7214##549659##8661##16256##33232763
+20171223-23:57:34:439|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514044500000##7214##549659##8661##16256##33239758
+20171223-23:57:42:443|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514044560000##7214##549659##8661##16256##33298759
+---
+len=156
+20171223-22:19:58:419|HiH_HiHealthBinder|30002312|insertHiHealthData() size = 20,app = 1,One Data Type = 2,packageName = com.huawei.health,writeStatType = 0
+---
+len=85
+20171223-23:14:46:445|Step_StandReportReceiver|30002312|REPORT : 7205 5144 154331 240
+20171223-23:14:46:933|Step_StandReportReceiver|30002312|REPORT : 7208 5146 154395 240
+20171223-23:14:47:441|Step_StandReportReceiver|30002312|REPORT : 7211 5148 154459 240
+20171223-23:14:48:422|Step_StandReportReceiver|30002312|REPORT : 7212 5149 154481 240
+20171223-23:14:48:937|Step_StandReportReceiver|30002312|REPORT : 7214 5150 154523 240
+20171223-23:17:41:4|Step_ExtSDM|30002312|calculateAltitudeWithCache totalAltitude=240
+20171223-23:17:42:4|Step_ExtSDM|30002312|calculateAltitudeWithCache totalAltitude=240
+20171224-0:0:0:237|Step_SPUtils|30002312|setGoalNotifiShownRecord 1514044800237 false
+---
+len=86
+20171223-22:55:56:64|Step_ExtSDM|30002312|calculateAltitudeWithCache totalAltitude=240
+20171223-23:7:50:279|Step_ExtSDM|30002312|calculateAltitudeWithCache totalAltitude=240
+20171223-23:7:51:238|Step_ExtSDM|30002312|calculateAltitudeWithCache totalAltitude=240
+20171223-23:8:19:432|Step_ExtSDM|30002312|calculateAltitudeWithCache totalAltitude=240
+20171223-23:29:4:459|Step_ExtSDM|30002312|calculateAltitudeWithCache totalAltitude=240
+20171223-23:29:5:452|Step_ExtSDM|30002312|calculateAltitudeWithCache totalAltitude=240
+20171223-23:46:7:467|Step_ExtSDM|30002312|calculateAltitudeWithCache totalAltitude=240
+20171223-23:53:0:453|Step_ExtSDM|30002312|calculateAltitudeWithCache totalAltitude=240
+---
+len=110
+20171223-22:19:58:377|HiH_HiHealthDataInsertStore|30002312|saveHealthDetailData() deviceID = 2,clientID=1,id=1
+20171223-22:19:58:423|HiH_HiHealthDataInsertStore|30002312|saveHealthDetailData() deviceID = 2,clientID=1,id=1
+20171223-22:19:58:468|HiH_DataStatManager|30002312|new date =20171223, type=40004,4800.935999999999,old=5112.0
+---
+len=63
+20171223-23:55:24:138|Step_LSC|30002312|onStandStepChanged 3786
+20171223-23:55:25:137|Step_LSC|30002312|onStandStepChanged 3786
+20171223-23:56:12:138|Step_LSC|30002312|onStandStepChanged 3786
+20171223-23:56:13:144|Step_LSC|30002312|onStandStepChanged 3786
+20171223-23:56:28:137|Step_LSC|30002312|onStandStepChanged 3786
+20171223-23:56:35:137|Step_LSC|30002312|onStandStepChanged 3786
+20171223-23:57:34:138|Step_LSC|30002312|onStandStepChanged 3786
+20171223-23:57:42:138|Step_LSC|30002312|onStandStepChanged 3786
+---
+len=84
+20171224-0:15:53:292|Step_ExtSDM|30002312|calculateCaloriesWithCache totalCalories=0
+20171224-0:15:53:292|Step_ExtSDM|30002312|calculateAltitudeWithCache totalAltitude=0
+20171224-0:25:16:445|Step_ExtSDM|30002312|calculateCaloriesWithCache totalCalories=0
+20171224-0:25:16:445|Step_ExtSDM|30002312|calculateAltitudeWithCache totalAltitude=0
+20171224-0:25:17:445|Step_ExtSDM|30002312|calculateCaloriesWithCache totalCalories=0
+20171224-0:25:17:445|Step_ExtSDM|30002312|calculateAltitudeWithCache totalAltitude=0
+20171224-0:28:25:461|Step_ExtSDM|30002312|calculateCaloriesWithCache totalCalories=0
+20171224-0:28:25:461|Step_ExtSDM|30002312|calculateAltitudeWithCache totalAltitude=0
+---
+len=61
+20171224-0:0:0:218|Step_SPUtils|30002312|getStepCounterStatus
+20171224-0:5:22:473|Step_LSC|30002312|onStandStepChanged 3786
+20171224-0:6:16:562|Step_LSC|30002312|onStandStepChanged 3786
+20171224-0:7:20:137|Step_LSC|30002312|onStandStepChanged 3786
+20171224-0:7:21:138|Step_LSC|30002312|onStandStepChanged 3786
+20171224-0:9:34:137|Step_LSC|30002312|onStandStepChanged 3786
+20171224-0:9:35:137|Step_LSC|30002312|onStandStepChanged 3786
+20171224-0:10:9:136|Step_LSC|30002312|onStandStepChanged 3786
+---
+len=107
+20171223-22:59:36:579|Step_LSC|30002312|processHandleBroadcastAction action:android.intent.action.TIME_TICK
+20171223-23:10:37:857|Step_LSC|30002312|processHandleBroadcastAction action:android.intent.action.TIME_TICK
+20171223-23:12:28:131|Step_LSC|30002312|processHandleBroadcastAction action:android.intent.action.TIME_TICK
+20171223-23:14:24:390|Step_LSC|30002312|processHandleBroadcastAction action:android.intent.action.SCREEN_ON
+20171223-23:17:40:995|Step_LSC|30002312|processHandleBroadcastAction action:android.intent.action.SCREEN_ON
+20171223-23:17:41:344|Step_LSC|30002312|processHandleBroadcastAction action:android.intent.action.TIME_TICK
+20171223-23:17:41:989|Step_LSC|30002312|processHandleBroadcastAction action:android.intent.action.SCREEN_ON
+20171223-23:23:50:452|Step_LSC|30002312|processHandleBroadcastAction action:android.intent.action.TIME_TICK
+---
+len=69
+20171223-22:15:29:615|Step_LSC|30002312|onExtend:1514038530000 14 0 4
+20171223-22:15:35:97|Step_StandStepCounter|30002312|flush sensor data
+20171223-22:19:14:363|Step_LSC|30002312|onExtend:1514038755000 14 0 4
+20171223-22:30:24:27|Step_StandStepCounter|30002312|flush sensor data
+20171223-22:53:1:213|Step_StandStepCounter|30002312|flush sensor data
+20171224-0:0:0:218|Step_StandStepDataManager|30002312|initEnviroument
+20171224-0:0:0:236|Step_StandReportReceiver|30002312|REPORT : 0 0 0 0
+---
+len=116
+20171223-22:19:58:366|Step_LSC|30002312|Alarm uploadStaticsToDB totalSteps=7163Calories:153367Floor:240Distance:5112
+20171224-0:0:0:624|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514044740000##0##549659##8661##16256##33444553
+20171224-0:0:5:438|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514044740000##0##549659##8661##16256##33444943
+20171224-0:0:6:445|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514044740000##0##549659##8661##16256##33449757
+20171224-0:7:2:439|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514045100000##0##549659##8661##16256##33821183
+20171224-0:7:4:439|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514045160000##0##549659##8661##16256##33866758
+20171224-0:9:4:440|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514045160000##0##549659##8661##16256##33885759
+20171224-0:9:6:442|Step_SPUtils|30002312| getTodayTotalDetailSteps = 1514045280000##0##549659##8661##16256##33988760
+---
+len=70
+20171223-22:39:25:301|Step_StandStepCounter|30002312|flush sensor data
+20171223-22:51:37:292|Step_StandStepCounter|30002312|flush sensor data
+20171223-22:52:45:486|Step_StandStepCounter|30002312|flush sensor data
+20171223-22:53:12:716|Step_StandStepCounter|30002312|flush sensor data
+20171223-22:55:55:733|Step_StandStepCounter|30002312|flush sensor data
+20171223-23:14:24:390|Step_StandStepCounter|30002312|flush sensor data
+20171223-23:17:40:995|Step_StandStepCounter|30002312|flush sensor data
+20171223-23:17:41:989|Step_StandStepCounter|30002312|flush sensor data
+---
+len=105
+20171224-0:26:0:114|Step_LSC|30002312|processHandleBroadcastAction action:android.intent.action.TIME_TICK
+20171224-0:27:0:140|Step_LSC|30002312|processHandleBroadcastAction action:android.intent.action.TIME_TICK
+20171224-0:28:48:963|Step_StandReportReceiver|30002312|onReceive action: android.intent.action.SCREEN_OFF
+20171224-0:37:23:74|Step_LSC|30002312|processHandleBroadcastAction action:android.intent.action.TIME_TICK
+20171224-0:51:1:747|Step_LSC|30002312|processHandleBroadcastAction action:android.intent.action.TIME_TICK
+20171224-0:55:32:22|Step_LSC|30002312|processHandleBroadcastAction action:android.intent.action.TIME_TICK
+20171224-0:59:7:581|Step_LSC|30002312|processHandleBroadcastAction action:android.intent.action.TIME_TICK
+20171224-1:2:35:789|Step_LSC|30002312|processHandleBroadcastAction action:android.intent.action.TIME_TICK
+---
+len=189
+20171224-0:32:28:797|HiH_HiSyncControl|30002312|startSync hiSyncOption = HiSyncOption{syncAction=1, syncMethod=2, syncScope=0, syncDataType=20000, syncModel=2, pushAction=0},app = 1 who = 1
+---
+len=92
+20171223-22:15:35:23|Step_StandReportReceiver|30002312|screen status unknown,think screen on
+20171224-0:0:0:228|Step_SPUtils|30002312| getTodayBasicStandardSteps= 1514018661124##0##3428
+20171224-0:0:0:229|Step_StandStepDataManager|30002312|tryToRecordAsBasicStepData bWrite true
+20171224-0:0:0:233|Step_SPUtils|30002312| getTodayBasicStandardSteps= 1514044800223##3786##0
+---

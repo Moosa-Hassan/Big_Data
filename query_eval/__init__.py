@@ -18,7 +18,17 @@ cells. The current codec source of truth remains the C++ implementation under
 research evaluation surface that mirrors the current notebook implementation.
 """
 
-from .queries import query_common, query_conjunctive, query_phrase, query_selective, run_query
+from .queries import (
+    query_bloom_stress_substring,
+    query_common,
+    query_conjunctive,
+    query_medium_token,
+    query_numeric_identifier,
+    query_phrase,
+    query_rare_token,
+    query_selective,
+    run_query,
+)
 from .registry import ACTIVE_TEXT_DATASET_SLUGS, MODE_NAMES, QUERY_IDS
 
 __all__ = [
@@ -27,6 +37,10 @@ __all__ = [
     "QUERY_IDS",
     "query_common",
     "query_conjunctive",
+    "query_medium_token",
+    "query_rare_token",
+    "query_numeric_identifier",
+    "query_bloom_stress_substring",
     "query_phrase",
     "query_selective",
     "run_query",

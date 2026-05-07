@@ -10,13 +10,30 @@ from __future__ import annotations
 import unittest
 from pathlib import Path
 
-from query_eval.artifacts import build_artifact_spec, ensure_artifacts_for_datasets, validate_artifact_spec
+from query_eval.artifacts import (
+    build_artifact_spec,
+    ensure_artifacts_for_datasets,
+    validate_artifact_spec,
+    validate_static_artifact_spec,
+)
 from query_eval.metrics import compute_correctness_measurement, sample_difference_lines
-from query_eval.queries import query_common, query_conjunctive, query_phrase, query_selective
+from query_eval.queries import (
+    query_bloom_stress_substring,
+    query_common,
+    query_conjunctive,
+    query_medium_token,
+    query_numeric_identifier,
+    query_phrase,
+    query_rare_token,
+    query_selective,
+    run_query,
+)
 from query_eval.registry import (
     ACTIVE_TEXT_DATASET_SLUGS,
+    COMPLETE_SUITE_PROFILE_NAME,
     MODE_NAMES,
     QUERY_IDS,
+    get_complete_suite_profile,
     get_artifact_root,
     get_dataset_registry,
     get_dataset_spec,
@@ -24,12 +41,18 @@ from query_eval.registry import (
 )
 from query_eval.runner import execute_cell_run
 from query_eval.specs import ArtifactSpec, CellRunSpec, RunConfig
+from query_eval.search_backends import keyword_search_loglite_static_bloom
+from query_eval.window_loader import load_l_window_from_txt
 
 QUERY_FUNCTIONS = {
-    "common": query_common,
-    "phrase": query_phrase,
-    "selective": query_selective,
+    "common_token": query_common,
+    "medium_token": query_medium_token,
+    "rare_token": query_rare_token,
+    "common_phrase": query_phrase,
+    "selective_phrase": query_selective,
+    "numeric_identifier": query_numeric_identifier,
     "conjunctive": query_conjunctive,
+    "bloom_stress_substring": query_bloom_stress_substring,
 }
 
 
@@ -39,11 +62,8 @@ class RegistryTests(unittest.TestCase):
     def test_registered_text_dataset_count_is_sixteen(self) -> None:
         self.assertEqual(len(get_dataset_registry()), 16)
 
-    def test_active_dataset_set_matches_part2_plan(self) -> None:
-        self.assertEqual(
-            ACTIVE_TEXT_DATASET_SLUGS,
-            ("linux", "apache", "hdfs", "openstack", "android"),
-        )
+    def test_active_dataset_set_matches_complete_suite_plan(self) -> None:
+        self.assertEqual(len(ACTIVE_TEXT_DATASET_SLUGS), 16)
 
     def test_query_manifest_covers_every_active_dataset(self) -> None:
         query_registry = get_query_registry()
@@ -55,8 +75,31 @@ class RegistryTests(unittest.TestCase):
     def test_mode_names_match_execution_contract(self) -> None:
         self.assertEqual(
             MODE_NAMES,
-            ("decompressed_text", "full_decompression", "minor_optimization"),
+            ("decompressed_text", "full_decompression", "minor_optimization", "static_bloom"),
         )
+
+    def test_complete_suite_profile_resolves_full_matrix(self) -> None:
+        profile = get_complete_suite_profile()
+        self.assertEqual(COMPLETE_SUITE_PROFILE_NAME, "complete_static_evaluation")
+        self.assertEqual(len(profile["datasets"]), 16)
+        self.assertEqual(len(profile["queries"]), 8)
+        self.assertEqual(len(profile["modes"]), 4)
+
+    def test_query_metadata_is_complete(self) -> None:
+        for query_id, query_spec in get_query_registry().items():
+            self.assertIn(query_id, QUERY_IDS)
+            self.assertIn(query_spec.expected_selectivity_band, {
+                "high",
+                "medium",
+                "low",
+                "medium_high",
+                "low_medium",
+                "stress",
+            })
+            self.assertIsInstance(query_spec.token_safe, bool)
+            self.assertIsInstance(query_spec.is_stress_query, bool)
+            if query_spec.is_stress_query:
+                self.assertFalse(query_spec.token_safe)
 
 
 class ArtifactAndMetricsUnitTests(unittest.TestCase):
@@ -78,6 +121,18 @@ class ArtifactAndMetricsUnitTests(unittest.TestCase):
         self.assertEqual(
             artifact_spec.window_path,
             artifact_root / "Linux_2k.window.txt",
+        )
+        self.assertEqual(
+            artifact_spec.static_compressed_binary_path,
+            artifact_root / "Linux_2k.log.lite.static.b",
+        )
+        self.assertEqual(
+            artifact_spec.static_decompressed_text_path,
+            artifact_root / "Linux_2k.log.lite.static.decom",
+        )
+        self.assertEqual(
+            artifact_spec.static_window_path,
+            artifact_root / "Linux_2k.window.static.txt",
         )
 
     def test_missing_artifact_validation_raises(self) -> None:
@@ -149,6 +204,11 @@ class IntegrationTests(unittest.TestCase):
             self.assertIsInstance(matches, list)
             self.assertGreater(len(matches), 0)
 
+    def test_static_artifacts_exist_for_all_active_datasets(self) -> None:
+        for dataset_slug in ACTIVE_TEXT_DATASET_SLUGS:
+            with self.subTest(dataset=dataset_slug):
+                validate_static_artifact_spec(self.artifact_specs[dataset_slug])
+
     def test_all_active_dataset_query_pairs_match_for_full_decompression(self) -> None:
         for dataset_slug in ACTIVE_TEXT_DATASET_SLUGS:
             for query_id, query_function in QUERY_FUNCTIONS.items():
@@ -164,10 +224,46 @@ class IntegrationTests(unittest.TestCase):
                     optimization_matches = query_function("minor_optimization", dataset_slug)
                     self.assertIsInstance(optimization_matches, list)
 
+    def test_static_bloom_runs_for_all_active_dataset_query_pairs(self) -> None:
+        for dataset_slug in ACTIVE_TEXT_DATASET_SLUGS:
+            for query_id in QUERY_IDS:
+                with self.subTest(dataset=dataset_slug, query=query_id):
+                    static_matches = run_query("static_bloom", dataset_slug, query_id)
+                    self.assertIsInstance(static_matches, list)
+
+    def test_static_bloom_linux_notebook_regression_queries_are_exact(self) -> None:
+        linux_static_queries = (
+            "kernel",
+            "28842",
+            "Jul  2",
+            "failed",
+            ("sshd", "failure"),
+        )
+        artifact_spec = self.artifact_specs["linux"]
+        self.assertIsNotNone(artifact_spec.static_compressed_binary_path)
+        self.assertIsNotNone(artifact_spec.static_window_path)
+        parsed_static_window = load_l_window_from_txt(artifact_spec.static_window_path)
+
+        from query_eval.search_backends import keyword_search_plaintext_file
+
+        for query_payload in linux_static_queries:
+            with self.subTest(query=query_payload):
+                baseline_matches = keyword_search_plaintext_file(
+                    artifact_spec.decompressed_text_path,
+                    query_payload,
+                )
+                static_result = keyword_search_loglite_static_bloom(
+                    artifact_spec.static_compressed_binary_path,
+                    parsed_static_window,
+                    query_payload,
+                )
+                self.assertEqual(set(baseline_matches), set(static_result.matches))
+                self.assertIsNotNone(static_result.bloom_rejected_records)
+
     def test_correctness_outputs_are_stable_across_repeated_runs(self) -> None:
         cell_run_spec = CellRunSpec(
             dataset_slug="linux",
-            query_id="common",
+            query_id="common_token",
             mode_name="full_decompression",
             repetition_index=0,
             is_warmup=False,
@@ -177,6 +273,21 @@ class IntegrationTests(unittest.TestCase):
 
         self.assertEqual(first_record.result_lines, second_record.result_lines)
         self.assertEqual(first_record.correctness, second_record.correctness)
+
+    def test_static_bloom_correctness_outputs_are_stable_across_repeated_runs(self) -> None:
+        cell_run_spec = CellRunSpec(
+            dataset_slug="linux",
+            query_id="common_token",
+            mode_name="static_bloom",
+            repetition_index=0,
+            is_warmup=False,
+        )
+        first_record = execute_cell_run(cell_run_spec, self.no_profile_run_config, code_version="test")
+        second_record = execute_cell_run(cell_run_spec, self.no_profile_run_config, code_version="test")
+
+        self.assertEqual(first_record.result_lines, second_record.result_lines)
+        self.assertEqual(first_record.correctness, second_record.correctness)
+        self.assertEqual(first_record.bloom_rejected_records, second_record.bloom_rejected_records)
 
 
 if __name__ == "__main__":

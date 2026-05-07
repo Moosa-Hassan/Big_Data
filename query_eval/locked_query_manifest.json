@@ -1,0 +1,370 @@
+{
+  "dataset_coverage": [
+    {
+      "dataset_slug": "linux",
+      "distinct_phrases": 3910,
+      "distinct_tokens": 2098,
+      "line_count": 2000
+    },
+    {
+      "dataset_slug": "apache",
+      "distinct_phrases": 920,
+      "distinct_tokens": 917,
+      "line_count": 2000
+    },
+    {
+      "dataset_slug": "hdfs",
+      "distinct_phrases": 7638,
+      "distinct_tokens": 5907,
+      "line_count": 2000
+    },
+    {
+      "dataset_slug": "openstack",
+      "distinct_phrases": 7757,
+      "distinct_tokens": 6823,
+      "line_count": 2000
+    },
+    {
+      "dataset_slug": "android",
+      "distinct_phrases": 2296,
+      "distinct_tokens": 1569,
+      "line_count": 2000
+    },
+    {
+      "dataset_slug": "zookeeper",
+      "distinct_phrases": 641,
+      "distinct_tokens": 1804,
+      "line_count": 2000
+    },
+    {
+      "dataset_slug": "healthapp",
+      "distinct_phrases": 2551,
+      "distinct_tokens": 1989,
+      "line_count": 2000
+    },
+    {
+      "dataset_slug": "hpc",
+      "distinct_phrases": 4201,
+      "distinct_tokens": 4450,
+      "line_count": 2000
+    },
+    {
+      "dataset_slug": "hadoop",
+      "distinct_phrases": 880,
+      "distinct_tokens": 1152,
+      "line_count": 2000
+    },
+    {
+      "dataset_slug": "bgl",
+      "distinct_phrases": 6466,
+      "distinct_tokens": 6019,
+      "line_count": 2000
+    },
+    {
+      "dataset_slug": "mac",
+      "distinct_phrases": 4584,
+      "distinct_tokens": 3178,
+      "line_count": 2000
+    },
+    {
+      "dataset_slug": "proxifier",
+      "distinct_phrases": 2738,
+      "distinct_tokens": 1513,
+      "line_count": 2000
+    },
+    {
+      "dataset_slug": "spark",
+      "distinct_phrases": 1735,
+      "distinct_tokens": 806,
+      "line_count": 2000
+    },
+    {
+      "dataset_slug": "openssh",
+      "distinct_phrases": 3571,
+      "distinct_tokens": 1216,
+      "line_count": 2000
+    },
+    {
+      "dataset_slug": "thunderbird",
+      "distinct_phrases": 7728,
+      "distinct_tokens": 5592,
+      "line_count": 2000
+    },
+    {
+      "dataset_slug": "windows",
+      "distinct_phrases": 1868,
+      "distinct_tokens": 1176,
+      "line_count": 2000
+    }
+  ],
+  "datasets": [
+    "linux",
+    "apache",
+    "hdfs",
+    "openstack",
+    "android",
+    "zookeeper",
+    "healthapp",
+    "hpc",
+    "hadoop",
+    "bgl",
+    "mac",
+    "proxifier",
+    "spark",
+    "openssh",
+    "thunderbird",
+    "windows"
+  ],
+  "queries": {
+    "bloom_stress_substring": {
+      "dataset_payloads": {
+        "android": "22",
+        "apache": "Mo",
+        "bgl": "U1",
+        "hadoop": "ip",
+        "hdfs": "811",
+        "healthapp": "LS",
+        "hpc": "no",
+        "linux": "20",
+        "mac": "ern",
+        "openssh": "18",
+        "openstack": "GE",
+        "proxifier": "yte",
+        "spark": "xec",
+        "thunderbird": "met",
+        "windows": "nit",
+        "zookeeper": "end"
+      },
+      "description": "Substring or punctuation-bearing query that intentionally probes Bloom-token assumptions.",
+      "expected_selectivity_band": "stress",
+      "family": "substring_stress",
+      "is_stress_query": true,
+      "token_safe": false
+    },
+    "common_phrase": {
+      "dataset_payloads": {
+        "android": "dockedStackBounds=Rect",
+        "apache": "child workerEnv",
+        "bgl": "alignment exceptions",
+        "hadoop": "170:8030",
+        "hdfs": "delete: blk",
+        "healthapp": "android.intent",
+        "hpc": "gige7 gige",
+        "linux": "session closed",
+        "mac": "Pro kernel",
+        "openssh": "invalid user",
+        "openstack": "metadata.wsgi",
+        "proxifier": "google.com",
+        "spark": "storage.MemoryStore",
+        "thunderbird": "sm1 Nov",
+        "windows": "attribute name",
+        "zookeeper": "NIOServerCxn.Factory"
+      },
+      "description": "Repeated two-token phrase query used to validate phrase matching.",
+      "expected_selectivity_band": "medium_high",
+      "family": "common_phrase",
+      "is_stress_query": false,
+      "token_safe": true
+    },
+    "common_token": {
+      "dataset_payloads": {
+        "android": "2227",
+        "apache": "Mon",
+        "bgl": "U11",
+        "hadoop": "ipc",
+        "hdfs": "081111",
+        "healthapp": "LSC",
+        "hpc": "node",
+        "linux": "2005",
+        "mac": "kernel",
+        "openssh": "183",
+        "openstack": "GET",
+        "proxifier": "bytes",
+        "spark": "executor",
+        "thunderbird": "gmetad",
+        "windows": "initialized",
+        "zookeeper": "SendWorker"
+      },
+      "description": "High-hit alphanumeric token query used to measure common keyword behavior.",
+      "expected_selectivity_band": "high",
+      "family": "high_hit_token",
+      "is_stress_query": false,
+      "token_safe": true
+    },
+    "conjunctive": {
+      "dataset_payloads": {
+        "android": [
+          "dockedStackBounds",
+          "Rect"
+        ],
+        "apache": [
+          "child",
+          "workerEnv"
+        ],
+        "bgl": [
+          "alignment",
+          "exceptions"
+        ],
+        "hadoop": [
+          "170",
+          "8030"
+        ],
+        "hdfs": [
+          "delete",
+          "blk"
+        ],
+        "healthapp": [
+          "android",
+          "intent"
+        ],
+        "hpc": [
+          "gige7",
+          "gige"
+        ],
+        "linux": [
+          "session",
+          "closed"
+        ],
+        "mac": [
+          "Pro",
+          "kernel"
+        ],
+        "openssh": [
+          "invalid",
+          "user"
+        ],
+        "openstack": [
+          "metadata",
+          "wsgi"
+        ],
+        "proxifier": [
+          "google",
+          "com"
+        ],
+        "spark": [
+          "storage",
+          "MemoryStore"
+        ],
+        "thunderbird": [
+          "sm1",
+          "Nov"
+        ],
+        "windows": [
+          "attribute",
+          "name"
+        ],
+        "zookeeper": [
+          "NIOServerCxn",
+          "Factory"
+        ]
+      },
+      "description": "Two-keyword conjunction requiring both payload tokens to appear in the same line.",
+      "expected_selectivity_band": "medium",
+      "family": "multi_keyword_conjunction",
+      "is_stress_query": false,
+      "token_safe": true
+    },
+    "medium_token": {
+      "dataset_payloads": {
+        "android": "ActivityManager",
+        "apache": "state",
+        "bgl": "alignment",
+        "hadoop": "Progress",
+        "hdfs": "delete",
+        "healthapp": "calculateAltitudeWithCache",
+        "hpc": "normal",
+        "linux": "session",
+        "mac": "ARPT",
+        "openssh": "103",
+        "openstack": "manager",
+        "proxifier": "sec",
+        "spark": "locally",
+        "thunderbird": "src",
+        "windows": "Failed",
+        "zookeeper": "Factory"
+      },
+      "description": "Moderate-hit alphanumeric token query used to avoid only testing dominant words.",
+      "expected_selectivity_band": "medium",
+      "family": "medium_hit_token",
+      "is_stress_query": false,
+      "token_safe": true
+    },
+    "numeric_identifier": {
+      "dataset_payloads": {
+        "android": "28601",
+        "apache": "218",
+        "bgl": "R00",
+        "hadoop": "000005",
+        "hdfs": "123",
+        "healthapp": "149",
+        "hpc": "0N03",
+        "linux": "107",
+        "mac": "195",
+        "openssh": "151",
+        "openstack": "1759",
+        "proxifier": "clients6",
+        "spark": "piece0",
+        "thunderbird": "1131567060",
+        "windows": "30546173",
+        "zookeeper": "774"
+      },
+      "description": "Digit-containing token query covering PIDs, IDs, block IDs, addresses, and similar values.",
+      "expected_selectivity_band": "low_medium",
+      "family": "numeric_identifier",
+      "is_stress_query": false,
+      "token_safe": true
+    },
+    "rare_token": {
+      "dataset_payloads": {
+        "android": "10113",
+        "apache": "client",
+        "bgl": "files",
+        "hadoop": "000008",
+        "hdfs": "179",
+        "healthapp": "Type",
+        "hpc": "0N01",
+        "linux": "136",
+        "mac": "161",
+        "openssh": "207",
+        "openstack": "1583",
+        "proxifier": "SGTool",
+        "spark": "2364",
+        "thunderbird": "closed",
+        "windows": "Windows",
+        "zookeeper": "001"
+      },
+      "description": "Low-hit alphanumeric token query used to expose rare-match behavior.",
+      "expected_selectivity_band": "low",
+      "family": "low_hit_token",
+      "is_stress_query": false,
+      "token_safe": true
+    },
+    "selective_phrase": {
+      "dataset_payloads": {
+        "android": "10111,tag",
+        "apache": "child init",
+        "bgl": "address: 0x00004ed8",
+        "hadoop": "jvm_1445144423722",
+        "hdfs": "251.125",
+        "healthapp": "650|Step",
+        "hpc": "boot_cmd",
+        "linux": "116  user",
+        "mac": "10018]: button",
+        "openssh": "123.235",
+        "openstack": "176 time",
+        "proxifier": "5070 - Could",
+        "spark": "2128 bytes",
+        "thunderbird": "dhcpd: DHCPDISCOVER",
+        "windows": "Session: 30546173",
+        "zookeeper": "575] - ******* GOODBYE"
+      },
+      "description": "Low-hit two-token phrase query used to stress selective phrase retrieval.",
+      "expected_selectivity_band": "low",
+      "family": "selective_phrase",
+      "is_stress_query": false,
+      "token_safe": true
+    }
+  },
+  "source": "deterministic query_eval.query_curation over staged LogHub 2k samples",
+  "version": "complete_static.v1"
+}

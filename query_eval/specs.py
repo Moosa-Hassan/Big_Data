@@ -26,7 +26,7 @@ from dataclasses import asdict, dataclass, is_dataclass
 from pathlib import Path
 from typing import Any, Literal
 
-ModeName = Literal["decompressed_text", "full_decompression", "minor_optimization"]
+ModeName = Literal["decompressed_text", "full_decompression", "minor_optimization", "static_bloom"]
 QueryPayload = str | tuple[str, ...]
 
 
@@ -89,6 +89,11 @@ class ArtifactSpec:
         compressed_binary_path: LogLite-B `.lite.b` bitstream path.
         decompressed_text_path: Full decompression text output path.
         window_path: L-window dump path produced by the extended `xorc-cli`.
+        static_compressed_binary_path: Static-window bitstream path produced by
+            `LogLite-B/src_static/tools/xorc-cli.cc`.
+        static_decompressed_text_path: Full decompression output for the static
+            bitstream.
+        static_window_path: Static L-window dump consumed by `static_bloom`.
 
     Returns:
         Not applicable. This is a value object.
@@ -101,8 +106,11 @@ class ArtifactSpec:
     compressed_binary_path: Path
     decompressed_text_path: Path
     window_path: Path
+    static_compressed_binary_path: Path | None = None
+    static_decompressed_text_path: Path | None = None
+    static_window_path: Path | None = None
 
-    def to_json_dict(self) -> dict[str, str]:
+    def to_json_dict(self) -> dict[str, str | None]:
         """Return a JSON-safe mapping of artifact paths.
 
         Purpose:
@@ -118,6 +126,13 @@ class ArtifactSpec:
             "compressed_binary_path": str(self.compressed_binary_path),
             "decompressed_text_path": str(self.decompressed_text_path),
             "window_path": str(self.window_path),
+            "static_compressed_binary_path": (
+                str(self.static_compressed_binary_path) if self.static_compressed_binary_path else None
+            ),
+            "static_decompressed_text_path": (
+                str(self.static_decompressed_text_path) if self.static_decompressed_text_path else None
+            ),
+            "static_window_path": str(self.static_window_path) if self.static_window_path else None,
         }
 
 
@@ -137,12 +152,20 @@ class QuerySpec:
             intended to stress.
         dataset_payloads: Mapping from dataset slug to the concrete keyword,
             phrase, or conjunction payload used for that dataset.
+        token_safe: Whether the payloads are expected to align with the static
+            Bloom tokenizer's alphanumeric-token hash semantics.
+        is_stress_query: Whether this family intentionally probes edge cases.
+        expected_selectivity_band: Human-readable selectivity category used in
+            report interpretation and query-manifest audits.
     """
 
     query_id: str
     family: str
     description: str
     dataset_payloads: dict[str, QueryPayload]
+    token_safe: bool = True
+    is_stress_query: bool = False
+    expected_selectivity_band: str = "unspecified"
 
     def get_payload(self, dataset_slug: str) -> QueryPayload:
         """Return the registered payload for a dataset.
@@ -240,6 +263,26 @@ class CorrectnessMeasurement:
 
 
 @dataclass(frozen=True)
+class ModeRunResult:
+    """Matched lines plus optional backend instrumentation.
+
+    Purpose:
+        Keep notebook-compatible query wrappers simple while allowing the runner
+        to persist static-Bloom skip/decode counters in raw JSONL records.
+    """
+
+    matches: list[str]
+    decoded_records: int | None = None
+    decoded_bytes: int | None = None
+    skipped_records: int | None = None
+    skipped_bytes: int | None = None
+    fallback_count: int | None = None
+    bloom_rejected_records: int | None = None
+    bloom_candidate_records: int | None = None
+    total_records: int | None = None
+
+
+@dataclass(frozen=True)
 class RunRecord:
     """One raw machine-readable execution record.
 
@@ -269,6 +312,9 @@ class RunRecord:
         decoded_records / decoded_bytes / skipped_records / skipped_bytes /
             fallback_count: Future-facing fields reserved for later
             instrumentation work.
+        bloom_rejected_records / bloom_candidate_records / total_records:
+            Static-Bloom counters. They remain `None` for modes that do not use
+            bitmap pre-filtering.
     """
 
     dataset_slug: str
@@ -293,6 +339,9 @@ class RunRecord:
     skipped_records: int | None = None
     skipped_bytes: int | None = None
     fallback_count: int | None = None
+    bloom_rejected_records: int | None = None
+    bloom_candidate_records: int | None = None
+    total_records: int | None = None
 
     def to_json_dict(self) -> dict[str, Any]:
         """Return a JSON-safe representation of the run record.

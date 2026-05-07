@@ -55,24 +55,48 @@ def run_query(mode_chosen: str, dataset: str, query_id: str) -> list[str]:
 
 
 def query_common(mode_chosen: str, dataset: str) -> list[str]:
-    """Run the registered `common` query for a dataset."""
+    """Run the high-hit `common_token` query for a dataset."""
 
-    return run_query(mode_chosen, dataset, "common")
+    return run_query(mode_chosen, dataset, "common_token")
 
 
 def query_phrase(mode_chosen: str, dataset: str) -> list[str]:
-    """Run the registered `phrase` query for a dataset."""
+    """Run the repeated `common_phrase` query for a dataset."""
 
-    return run_query(mode_chosen, dataset, "phrase")
+    return run_query(mode_chosen, dataset, "common_phrase")
 
 
 def query_selective(mode_chosen: str, dataset: str) -> list[str]:
-    """Run the registered `selective` query for a dataset."""
+    """Run the low-hit `selective_phrase` query for a dataset."""
 
-    return run_query(mode_chosen, dataset, "selective")
+    return run_query(mode_chosen, dataset, "selective_phrase")
 
 
 def query_conjunctive(mode_chosen: str, dataset: str) -> list[str]:
     """Run the registered `conjunctive` query for a dataset."""
 
     return run_query(mode_chosen, dataset, "conjunctive")
+
+
+def query_medium_token(mode_chosen: str, dataset: str) -> list[str]:
+    """Run the registered `medium_token` query for a dataset."""
+
+    return run_query(mode_chosen, dataset, "medium_token")
+
+
+def query_rare_token(mode_chosen: str, dataset: str) -> list[str]:
+    """Run the registered `rare_token` query for a dataset."""
+
+    return run_query(mode_chosen, dataset, "rare_token")
+
+
+def query_numeric_identifier(mode_chosen: str, dataset: str) -> list[str]:
+    """Run the registered `numeric_identifier` query for a dataset."""
+
+    return run_query(mode_chosen, dataset, "numeric_identifier")
+
+
+def query_bloom_stress_substring(mode_chosen: str, dataset: str) -> list[str]:
+    """Run the registered Bloom-token stress query for a dataset."""
+
+    return run_query(mode_chosen, dataset, "bloom_stress_substring")
