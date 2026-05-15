@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img"><rect width="100%" height="100%" fill="#ffffff" />
+<text x="480.0" y="28" text-anchor="middle" font-size="18" font-weight="700">Minor Optimization: Speedup vs Recall</text>
+<line x1="80" y1="54" x2="80" y2="456" stroke="#333" />
+<line x1="80" y1="456" x2="740" y2="456" stroke="#333" />
+<line x1="349.6" y1="54" x2="349.6" y2="456" stroke="#222" stroke-dasharray="4 4" />
+<line x1="80" y1="54" x2="740" y2="54" stroke="#222" stroke-dasharray="4 4" />
+<circle cx="604.6" cy="73.1" r="6" fill="#54A24B" opacity="0.86" />
+<text x="612.6" y="77.1" font-size="10">android / Common Phrase</text>
+<circle cx="502.5" cy="80.6" r="6" fill="#54A24B" opacity="0.86" />
+<text x="510.5" y="84.6" font-size="10">android / Common Token</text>
+<circle cx="602.2" cy="73.1" r="6" fill="#54A24B" opacity="0.86" />
+<text x="610.2" y="77.1" font-size="10">android / Conjunctive</text>
+<circle cx="669.3" cy="73.1" r="6" fill="#54A24B" opacity="0.86" />
+<text x="677.3" y="77.1" font-size="10">android / Selective Phrase</text>
+<circle cx="458.2" cy="73.1" r="6" fill="#54A24B" opacity="0.86" />
+<text x="466.2" y="77.1" font-size="10">apache / Common Phrase</text>
+<circle cx="362.6" cy="73.1" r="6" fill="#54A24B" opacity="0.86" />
+<text x="370.6" y="77.1" font-size="10">apache / Common Token</text>
+<circle cx="455.9" cy="73.1" r="6" fill="#54A24B" opacity="0.86" />
+<text x="463.9" y="77.1" font-size="10">apache / Conjunctive</text>
+<circle cx="486.3" cy="73.1" r="6" fill="#54A24B" opacity="0.86" />
+<text x="494.3" y="77.1" font-size="10">apache / Selective Phrase</text>
+<circle cx="418.8" cy="73.1" r="6" fill="#54A24B" opacity="0.86" />
+<text x="426.8" y="77.1" font-size="10">hdfs / Common Phrase</text>
+<circle cx="375.4" cy="73.1" r="6" fill="#54A24B" opacity="0.86" />
+<text x="383.4" y="77.1" font-size="10">hdfs / Common Token</text>
+<circle cx="403.1" cy="73.1" r="6" fill="#54A24B" opacity="0.86" />
+<text x="411.1" y="77.1" font-size="10">hdfs / Conjunctive</text>
+<circle cx="428.7" cy="245.4" r="6" fill="#54A24B" opacity="0.86" />
+<text x="436.7" y="249.4" font-size="10">hdfs / Selective Phrase</text>
+<circle cx="522.4" cy="73.1" r="6" fill="#54A24B" opacity="0.86" />
+<text x="530.4" y="77.1" font-size="10">linux / Common Phrase</text>
+<circle cx="463.0" cy="101.8" r="6" fill="#54A24B" opacity="0.86" />
+<text x="471.0" y="105.8" font-size="10">linux / Common Token</text>
+<circle cx="511.4" cy="73.1" r="6" fill="#54A24B" opacity="0.86" />
+<text x="519.4" y="77.1" font-size="10">linux / Conjunctive</text>
+<circle cx="535.9" cy="456.0" r="6" fill="#54A24B" opacity="0.86" />
+<text x="543.9" y="460.0" font-size="10">linux / Selective Phrase</text>
+<circle cx="440.6" cy="73.1" r="6" fill="#54A24B" opacity="0.86" />
+<text x="448.6" y="77.1" font-size="10">openstack / Common Phrase</text>
+<circle cx="413.9" cy="73.1" r="6" fill="#54A24B" opacity="0.86" />
+<text x="421.9" y="77.1" font-size="10">openstack / Common Token</text>
+<circle cx="434.0" cy="73.1" r="6" fill="#54A24B" opacity="0.86" />
+<text x="442.0" y="77.1" font-size="10">openstack / Conjunctive</text>
+<circle cx="468.9" cy="73.1" r="6" fill="#54A24B" opacity="0.86" />
+<text x="476.9" y="77.1" font-size="10">openstack / Selective Phrase</text>
+<text x="410.0" y="502" text-anchor="middle" font-size="13">Speedup vs Full Decompression (x)</text>
+<text x="18" y="255.0" text-anchor="middle" font-size="13" transform="rotate(-90 18 255.0)">Recall</text>
+</svg>

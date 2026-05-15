@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Complete 16-Dataset Static-Bloom Evaluation</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 32px; color: #1f2933; }
+    h1 { margin-bottom: 0.2rem; }
+    .meta { color: #52606d; margin-top: 0; }
+    section { margin: 32px 0; }
+    img { max-width: 100%; border: 1px solid #d9e2ec; border-radius: 8px; background: white; }
+    table { border-collapse: collapse; width: 100%; margin-top: 12px; font-size: 14px; }
+    th, td { border: 1px solid #d9e2ec; padding: 8px 10px; text-align: left; }
+    th { background: #f0f4f8; }
+    code { background: #f0f4f8; padding: 2px 5px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <h1>Complete 16-Dataset Static-Bloom Evaluation</h1>
+  <p class="meta">Created from <code>evaluation_results/query_eval/20260516_012703_complete_static_evaluation</code></p>
+  <section>
+    <h2>Run Metadata</h2>
+    <p>Created at: <strong>2026-05-16T01:27:03.974748</strong></p>
+    <p>Datasets: linux, apache, hdfs, openstack, android, zookeeper, healthapp, hpc, hadoop, bgl, mac, proxifier, spark, openssh, thunderbird, windows</p>
+    <p>Queries: common_token, medium_token, rare_token, common_phrase, selective_phrase, numeric_identifier, conjunctive, bloom_stress_substring</p>
+    <p>Modes: decompressed_text, full_decompression, minor_optimization, static_bloom</p>
+    <p>Raw run records: <strong>5632</strong>; cell rows: <strong>512</strong>.</p>
+  </section>
+  <section><h2>Suite Summary</h2><table><thead><tr><th>Mode</th><th>Cells</th><th>Median Wall (ms)</th><th>Median CPU (ms)</th><th>Median RSS (MB)</th><th>Median Recall</th><th>Median F1</th><th>All Exact</th></tr></thead><tbody><tr><td>Decompressed Text</td><td>128</td><td>0.664</td><td>0.661</td><td>24.66</td><td>1.000</td><td>1.000</td><td>True</td></tr><tr><td>Full Decompression</td><td>128</td><td>78.219</td><td>78.197</td><td>25.16</td><td>1.000</td><td>1.000</td><td>True</td></tr><tr><td>Minor Optimization</td><td>128</td><td>44.398</td><td>44.308</td><td>25.09</td><td>0.992</td><td>0.996</td><td>False</td></tr><tr><td>Static Bloom</td><td>128</td><td>47.312</td><td>47.278</td><td>25.59</td><td>1.000</td><td>1.000</td><td>False</td></tr></tbody></table></section>
+  <section><h2>Correctness Summary</h2><table><thead><tr><th>Mode</th><th>Exact Cells</th><th>Median FN Sum</th><th>Median FP Sum</th></tr></thead><tbody><tr><td>Decompressed Text</td><td>128/128</td><td>0</td><td>0</td></tr><tr><td>Full Decompression</td><td>128/128</td><td>0</td><td>0</td></tr><tr><td>Minor Optimization</td><td>59/128</td><td>1554</td><td>0</td></tr><tr><td>Static Bloom</td><td>96/128</td><td>11975</td><td>0</td></tr></tbody></table></section>
+  <section><h2>Static Bloom Group Summary</h2><table><thead><tr><th>Query Group</th><th>Exact Cells</th><th>False Positives</th><th>False Negatives</th><th>Median Skip Rate</th><th>Median Speedup</th></tr></thead><tbody><tr><td>token_safe</td><td>95/112</td><td>0</td><td>858</td><td>82.10%</td><td>1.59x</td></tr><tr><td>stress</td><td>1/16</td><td>0</td><td>11117</td><td>78.92%</td><td>1.68x</td></tr></tbody></table></section>
+  <section><h2>Suite Wall Time</h2><img src="journal_figures/suite_wall_time.svg" alt="suite_wall_time" /></section>
+<section><h2>Speedup Vs Full</h2><img src="journal_figures/speedup_vs_full.svg" alt="speedup_vs_full" /></section>
+<section><h2>Exact Cells</h2><img src="journal_figures/exact_cells.svg" alt="exact_cells" /></section>
+<section><h2>Minor Recall Heatmap</h2><img src="journal_figures/minor_recall_heatmap.svg" alt="minor_recall_heatmap" /></section>
+<section><h2>Minor Speedup Recall</h2><img src="journal_figures/minor_speedup_recall.svg" alt="minor_speedup_recall" /></section>
+<section><h2>Static Skip Rate</h2><img src="journal_figures/static_skip_rate.svg" alt="static_skip_rate" /></section>
+<section><h2>Static Speedup</h2><img src="journal_figures/static_speedup.svg" alt="static_speedup" /></section>
+</body>
+</html>

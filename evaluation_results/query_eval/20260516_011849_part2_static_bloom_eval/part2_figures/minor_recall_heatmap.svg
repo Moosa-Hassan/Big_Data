@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="452" height="492" viewBox="0 0 452 492" role="img"><rect width="100%" height="100%" fill="#ffffff" />
+<text x="226.0" y="28" text-anchor="middle" font-size="18" font-weight="700">Minor Optimization Recall</text>
+<text x="164.0" y="68" font-size="11" text-anchor="middle" transform="rotate(-28 164.0 68)">Common Phrase</text>
+<text x="236.0" y="68" font-size="11" text-anchor="middle" transform="rotate(-28 236.0 68)">Common Token</text>
+<text x="308.0" y="68" font-size="11" text-anchor="middle" transform="rotate(-28 308.0 68)">Conjunctive</text>
+<text x="380.0" y="68" font-size="11" text-anchor="middle" transform="rotate(-28 380.0 68)">Selective Phrase</text>
+<text x="118" y="128" font-size="12" text-anchor="end">android</text>
+<rect x="128" y="86" width="69" height="69" fill="rgb(108,187,131)" rx="4" />
+<text x="164.0" y="126" text-anchor="middle" font-size="13" fill="#111">1.00</text>
+<rect x="200" y="86" width="69" height="69" fill="rgb(110,185,130)" rx="4" />
+<text x="236.0" y="126" text-anchor="middle" font-size="13" fill="#111">0.98</text>
+<rect x="272" y="86" width="69" height="69" fill="rgb(108,187,131)" rx="4" />
+<text x="308.0" y="126" text-anchor="middle" font-size="13" fill="#111">1.00</text>
+<rect x="344" y="86" width="69" height="69" fill="rgb(108,187,131)" rx="4" />
+<text x="380.0" y="126" text-anchor="middle" font-size="13" fill="#111">1.00</text>
+<text x="118" y="200" font-size="12" text-anchor="end">apache</text>
+<rect x="128" y="158" width="69" height="69" fill="rgb(108,187,131)" rx="4" />
+<text x="164.0" y="198" text-anchor="middle" font-size="13" fill="#111">1.00</text>
+<rect x="200" y="158" width="69" height="69" fill="rgb(108,187,131)" rx="4" />
+<text x="236.0" y="198" text-anchor="middle" font-size="13" fill="#111">1.00</text>
+<rect x="272" y="158" width="69" height="69" fill="rgb(108,187,131)" rx="4" />
+<text x="308.0" y="198" text-anchor="middle" font-size="13" fill="#111">1.00</text>
+<rect x="344" y="158" width="69" height="69" fill="rgb(108,187,131)" rx="4" />
+<text x="380.0" y="198" text-anchor="middle" font-size="13" fill="#111">1.00</text>
+<text x="118" y="272" font-size="12" text-anchor="end">hdfs</text>
+<rect x="128" y="230" width="69" height="69" fill="rgb(108,187,131)" rx="4" />
+<text x="164.0" y="270" text-anchor="middle" font-size="13" fill="#111">1.00</text>
+<rect x="200" y="230" width="69" height="69" fill="rgb(108,187,131)" rx="4" />
+<text x="236.0" y="270" text-anchor="middle" font-size="13" fill="#111">1.00</text>
+<rect x="272" y="230" width="69" height="69" fill="rgb(108,187,131)" rx="4" />
+<text x="308.0" y="270" text-anchor="middle" font-size="13" fill="#111">1.00</text>
+<rect x="344" y="230" width="69" height="69" fill="rgb(161,144,111)" rx="4" />
+<text x="380.0" y="270" text-anchor="middle" font-size="13" fill="#111">0.55</text>
+<text x="118" y="344" font-size="12" text-anchor="end">linux</text>
+<rect x="128" y="302" width="69" height="69" fill="rgb(108,187,131)" rx="4" />
+<text x="164.0" y="342" text-anchor="middle" font-size="13" fill="#111">1.00</text>
+<rect x="200" y="302" width="69" height="69" fill="rgb(116,179,127)" rx="4" />
+<text x="236.0" y="342" text-anchor="middle" font-size="13" fill="#111">0.93</text>
+<rect x="272" y="302" width="69" height="69" fill="rgb(108,187,131)" rx="4" />
+<text x="308.0" y="342" text-anchor="middle" font-size="13" fill="#111">1.00</text>
+<rect x="344" y="302" width="69" height="69" fill="rgb(226,92,87)" rx="4" />
+<text x="380.0" y="342" text-anchor="middle" font-size="13" fill="#111">0.00</text>
+<text x="118" y="416" font-size="12" text-anchor="end">openstack</text>
+<rect x="128" y="374" width="69" height="69" fill="rgb(108,187,131)" rx="4" />
+<text x="164.0" y="414" text-anchor="middle" font-size="13" fill="#111">1.00</text>
+<rect x="200" y="374" width="69" height="69" fill="rgb(108,187,131)" rx="4" />
+<text x="236.0" y="414" text-anchor="middle" font-size="13" fill="#111">1.00</text>
+<rect x="272" y="374" width="69" height="69" fill="rgb(108,187,131)" rx="4" />
+<text x="308.0" y="414" text-anchor="middle" font-size="13" fill="#111">1.00</text>
+<rect x="344" y="374" width="69" height="69" fill="rgb(108,187,131)" rx="4" />
+<text x="380.0" y="414" text-anchor="middle" font-size="13" fill="#111">1.00</text>
+</svg>

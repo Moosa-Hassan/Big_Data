@@ -1,0 +1,17 @@
+dataset_slug,display_name,system_type,average_length,number_of_different_lengths,sample_log_filename
+linux,Linux,operating systems,91,208,Linux_2k.log
+apache,Apache,server applications,90,69,Apache_2k.log
+hdfs,HDFS,distributed systems,140,135,HDFS_2k.log
+openstack,OpenStack,distributed systems,295,131,OpenStack_2k.log
+android,Android,mobile systems,123,720,Android_2k.log
+zookeeper,Zookeeper,distributed systems,139,88,Zookeeper_2k.log
+healthapp,HealthApp,mobile systems,92,132,HealthApp_2k.log
+hpc,HPC,supercomputers,76,272,HPC_2k.log
+hadoop,Hadoop,distributed systems,122,327,Hadoop_2k.log
+bgl,BGL,supercomputers,156,235,BGL_2k.log
+mac,Mac,operating systems,143,490,Mac_2k.log
+proxifier,Proxifier,standalone software,118,104,Proxifier_2k.log
+spark,Spark,distributed systems,87,284,Spark_2k.log
+openssh,OpenSSH,server applications,111,122,OpenSSH_2k.log
+thunderbird,Thunderbird,supercomputers,153,413,Thunderbird_2k.log
+windows,Windows,operating systems,243,654,Windows_2k.log
