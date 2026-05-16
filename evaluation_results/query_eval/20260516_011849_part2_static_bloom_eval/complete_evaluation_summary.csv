@@ -1,0 +1,9 @@
+mode_name,query_group,cell_count,exact_cell_count,median_wall_time_ms,median_recall,median_f1,median_bloom_skip_rate
+decompressed_text,all_queries,20,20,0.6729272572556511,1.0,1.0,
+decompressed_text,token_safe_queries,20,20,0.6729272572556511,1.0,1.0,
+full_decompression,all_queries,20,20,84.65295849600807,1.0,1.0,
+full_decompression,token_safe_queries,20,20,84.65295849600807,1.0,1.0,
+minor_optimization,all_queries,20,16,43.42274974624161,1.0,1.0,
+minor_optimization,token_safe_queries,20,16,43.42274974624161,1.0,1.0,
+static_bloom,all_queries,20,20,56.23638548422605,1.0,1.0,0.8165
+static_bloom,token_safe_queries,20,20,56.23638548422605,1.0,1.0,0.8165

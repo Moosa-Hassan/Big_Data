@@ -1,0 +1,13 @@
+query_id,mode_name,aggregate_level,cell_count,median_wall_time_ms,median_cpu_time_ms,median_peak_rss_mb,median_match_count,median_tp,median_fp,median_fn,median_precision,median_recall,median_f1,median_decoded_records,median_decoded_bytes,median_skipped_records,median_skipped_bytes,median_fallback_count,median_bloom_rejected_records,median_bloom_candidate_records,median_total_records,median_bloom_skip_rate,all_cells_exact_set_match
+common_phrase,decompressed_text,query_level,5,0.6430619978345931,0.6405000000000022,25.3671875,208.0,208.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,True
+common_phrase,full_decompression,query_level,5,83.9560414897278,83.952,25.59375,208.0,208.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,True
+common_phrase,minor_optimization,query_level,5,43.9922499936074,43.99,25.4921875,208.0,208.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,True
+common_token,decompressed_text,query_level,5,0.678999989759177,0.677999999999998,25.4765625,910.0,885.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,True
+common_token,full_decompression,query_level,5,92.62789599597454,92.005,26.6640625,910.0,885.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,True
+common_token,minor_optimization,query_level,5,57.10831249598414,56.95349999999999,26.0234375,885.0,842.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,False
+conjunctive,decompressed_text,query_level,5,0.693895504809916,0.6924999999999987,25.5234375,208.0,208.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,True
+conjunctive,full_decompression,query_level,5,85.51858301507309,85.39750000000001,25.875,208.0,208.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,True
+conjunctive,minor_optimization,query_level,5,43.138041510246694,43.13250000000001,25.6484375,208.0,208.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,True
+selective_phrase,decompressed_text,query_level,5,0.6500624876935035,0.6494999999999973,25.34375,20.0,20.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,True
+selective_phrase,full_decompression,query_level,5,86.63320852792822,86.5755,25.890625,20.0,20.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,True
+selective_phrase,minor_optimization,query_level,5,40.89352101436816,40.89,25.71875,12.0,11.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,False

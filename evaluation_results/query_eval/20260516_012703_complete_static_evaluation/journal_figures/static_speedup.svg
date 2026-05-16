@@ -1,0 +1,283 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="692" height="1198" viewBox="0 0 692 1198" role="img"><rect width="100%" height="100%" fill="#ffffff" />
+<text x="346.0" y="28" text-anchor="middle" font-size="18" font-weight="700">Static Bloom Speedup vs Full Decompression</text>
+<text x="161.0" y="74" font-size="10" text-anchor="middle" transform="rotate(-30 161.0 74)">Stress Substring</text>
+<text x="227.0" y="74" font-size="10" text-anchor="middle" transform="rotate(-30 227.0 74)">Common Phrase</text>
+<text x="293.0" y="74" font-size="10" text-anchor="middle" transform="rotate(-30 293.0 74)">Common Token</text>
+<text x="359.0" y="74" font-size="10" text-anchor="middle" transform="rotate(-30 359.0 74)">Conjunctive</text>
+<text x="425.0" y="74" font-size="10" text-anchor="middle" transform="rotate(-30 425.0 74)">Medium Token</text>
+<text x="491.0" y="74" font-size="10" text-anchor="middle" transform="rotate(-30 491.0 74)">Numeric ID</text>
+<text x="557.0" y="74" font-size="10" text-anchor="middle" transform="rotate(-30 557.0 74)">Rare Token</text>
+<text x="623.0" y="74" font-size="10" text-anchor="middle" transform="rotate(-30 623.0 74)">Selective Phrase</text>
+<text x="118" y="132" font-size="11" text-anchor="end">android</text>
+<rect x="128" y="94" width="63" height="63" fill="rgb(182,126,103)" rx="4" />
+<text x="161.0" y="131" text-anchor="middle" font-size="11" fill="#111">1.57</text>
+<rect x="194" y="94" width="63" height="63" fill="rgb(172,134,106)" rx="4" />
+<text x="227.0" y="131" text-anchor="middle" font-size="11" fill="#111">1.94</text>
+<rect x="260" y="94" width="63" height="63" fill="rgb(189,121,100)" rx="4" />
+<text x="293.0" y="131" text-anchor="middle" font-size="11" fill="#111">1.33</text>
+<rect x="326" y="94" width="63" height="63" fill="rgb(173,134,106)" rx="4" />
+<text x="359.0" y="131" text-anchor="middle" font-size="11" fill="#111">1.92</text>
+<rect x="392" y="94" width="63" height="63" fill="rgb(177,130,104)" rx="4" />
+<text x="425.0" y="131" text-anchor="middle" font-size="11" fill="#111">1.76</text>
+<rect x="458" y="94" width="63" height="63" fill="rgb(184,125,102)" rx="4" />
+<text x="491.0" y="131" text-anchor="middle" font-size="11" fill="#111">1.53</text>
+<rect x="524" y="94" width="63" height="63" fill="rgb(167,139,108)" rx="4" />
+<text x="557.0" y="131" text-anchor="middle" font-size="11" fill="#111">2.15</text>
+<rect x="590" y="94" width="63" height="63" fill="rgb(150,152,115)" rx="4" />
+<text x="623.0" y="131" text-anchor="middle" font-size="11" fill="#111">2.76</text>
+<text x="118" y="198" font-size="11" text-anchor="end">apache</text>
+<rect x="128" y="160" width="63" height="63" fill="rgb(200,112,96)" rx="4" />
+<text x="161.0" y="197" text-anchor="middle" font-size="11" fill="#111">0.92</text>
+<rect x="194" y="160" width="63" height="63" fill="rgb(203,110,95)" rx="4" />
+<text x="227.0" y="197" text-anchor="middle" font-size="11" fill="#111">0.83</text>
+<rect x="260" y="160" width="63" height="63" fill="rgb(211,103,92)" rx="4" />
+<text x="293.0" y="197" text-anchor="middle" font-size="11" fill="#111">0.53</text>
+<rect x="326" y="160" width="63" height="63" fill="rgb(204,109,95)" rx="4" />
+<text x="359.0" y="197" text-anchor="middle" font-size="11" fill="#111">0.80</text>
+<rect x="392" y="160" width="63" height="63" fill="rgb(210,104,92)" rx="4" />
+<text x="425.0" y="197" text-anchor="middle" font-size="11" fill="#111">0.58</text>
+<rect x="458" y="160" width="63" height="63" fill="rgb(195,116,98)" rx="4" />
+<text x="491.0" y="197" text-anchor="middle" font-size="11" fill="#111">1.10</text>
+<rect x="524" y="160" width="63" height="63" fill="rgb(196,115,97)" rx="4" />
+<text x="557.0" y="197" text-anchor="middle" font-size="11" fill="#111">1.07</text>
+<rect x="590" y="160" width="63" height="63" fill="rgb(208,106,93)" rx="4" />
+<text x="623.0" y="197" text-anchor="middle" font-size="11" fill="#111">0.65</text>
+<text x="118" y="264" font-size="11" text-anchor="end">bgl</text>
+<rect x="128" y="226" width="63" height="63" fill="rgb(173,134,106)" rx="4" />
+<text x="161.0" y="263" text-anchor="middle" font-size="11" fill="#111">1.93</text>
+<rect x="194" y="226" width="63" height="63" fill="rgb(135,165,120)" rx="4" />
+<text x="227.0" y="263" text-anchor="middle" font-size="11" fill="#111">3.32</text>
+<rect x="260" y="226" width="63" height="63" fill="rgb(194,117,98)" rx="4" />
+<text x="293.0" y="263" text-anchor="middle" font-size="11" fill="#111">1.14</text>
+<rect x="326" y="226" width="63" height="63" fill="rgb(135,164,120)" rx="4" />
+<text x="359.0" y="263" text-anchor="middle" font-size="11" fill="#111">3.31</text>
+<rect x="392" y="226" width="63" height="63" fill="rgb(149,153,115)" rx="4" />
+<text x="425.0" y="263" text-anchor="middle" font-size="11" fill="#111">2.80</text>
+<rect x="458" y="226" width="63" height="63" fill="rgb(147,155,116)" rx="4" />
+<text x="491.0" y="263" text-anchor="middle" font-size="11" fill="#111">2.86</text>
+<rect x="524" y="226" width="63" height="63" fill="rgb(194,116,98)" rx="4" />
+<text x="557.0" y="263" text-anchor="middle" font-size="11" fill="#111">1.13</text>
+<rect x="590" y="226" width="63" height="63" fill="rgb(117,179,127)" rx="4" />
+<text x="623.0" y="263" text-anchor="middle" font-size="11" fill="#111">3.97</text>
+<text x="118" y="330" font-size="11" text-anchor="end">hadoop</text>
+<rect x="128" y="292" width="63" height="63" fill="rgb(208,105,93)" rx="4" />
+<text x="161.0" y="329" text-anchor="middle" font-size="11" fill="#111">0.62</text>
+<rect x="194" y="292" width="63" height="63" fill="rgb(169,137,107)" rx="4" />
+<text x="227.0" y="329" text-anchor="middle" font-size="11" fill="#111">2.05</text>
+<rect x="260" y="292" width="63" height="63" fill="rgb(217,98,90)" rx="4" />
+<text x="293.0" y="329" text-anchor="middle" font-size="11" fill="#111">0.31</text>
+<rect x="326" y="292" width="63" height="63" fill="rgb(170,136,107)" rx="4" />
+<text x="359.0" y="329" text-anchor="middle" font-size="11" fill="#111">2.02</text>
+<rect x="392" y="292" width="63" height="63" fill="rgb(217,98,90)" rx="4" />
+<text x="425.0" y="329" text-anchor="middle" font-size="11" fill="#111">0.31</text>
+<rect x="458" y="292" width="63" height="63" fill="rgb(212,102,92)" rx="4" />
+<text x="491.0" y="329" text-anchor="middle" font-size="11" fill="#111">0.50</text>
+<rect x="524" y="292" width="63" height="63" fill="rgb(199,113,97)" rx="4" />
+<text x="557.0" y="329" text-anchor="middle" font-size="11" fill="#111">0.98</text>
+<rect x="590" y="292" width="63" height="63" fill="rgb(172,135,107)" rx="4" />
+<text x="623.0" y="329" text-anchor="middle" font-size="11" fill="#111">1.97</text>
+<text x="118" y="396" font-size="11" text-anchor="end">hdfs</text>
+<rect x="128" y="358" width="63" height="63" fill="rgb(124,173,124)" rx="4" />
+<text x="161.0" y="395" text-anchor="middle" font-size="11" fill="#111">3.70</text>
+<rect x="194" y="358" width="63" height="63" fill="rgb(154,149,113)" rx="4" />
+<text x="227.0" y="395" text-anchor="middle" font-size="11" fill="#111">2.61</text>
+<rect x="260" y="358" width="63" height="63" fill="rgb(189,121,100)" rx="4" />
+<text x="293.0" y="395" text-anchor="middle" font-size="11" fill="#111">1.33</text>
+<rect x="326" y="358" width="63" height="63" fill="rgb(155,148,113)" rx="4" />
+<text x="359.0" y="395" text-anchor="middle" font-size="11" fill="#111">2.58</text>
+<rect x="392" y="358" width="63" height="63" fill="rgb(157,147,112)" rx="4" />
+<text x="425.0" y="395" text-anchor="middle" font-size="11" fill="#111">2.52</text>
+<rect x="458" y="358" width="63" height="63" fill="rgb(160,144,111)" rx="4" />
+<text x="491.0" y="395" text-anchor="middle" font-size="11" fill="#111">2.39</text>
+<rect x="524" y="358" width="63" height="63" fill="rgb(135,165,120)" rx="4" />
+<text x="557.0" y="395" text-anchor="middle" font-size="11" fill="#111">3.32</text>
+<rect x="590" y="358" width="63" height="63" fill="rgb(155,148,113)" rx="4" />
+<text x="623.0" y="395" text-anchor="middle" font-size="11" fill="#111">2.57</text>
+<text x="118" y="462" font-size="11" text-anchor="end">healthapp</text>
+<rect x="128" y="424" width="63" height="63" fill="rgb(166,139,109)" rx="4" />
+<text x="161.0" y="461" text-anchor="middle" font-size="11" fill="#111">2.16</text>
+<rect x="194" y="424" width="63" height="63" fill="rgb(186,123,101)" rx="4" />
+<text x="227.0" y="461" text-anchor="middle" font-size="11" fill="#111">1.44</text>
+<rect x="260" y="424" width="63" height="63" fill="rgb(196,115,97)" rx="4" />
+<text x="293.0" y="461" text-anchor="middle" font-size="11" fill="#111">1.07</text>
+<rect x="326" y="424" width="63" height="63" fill="rgb(186,123,101)" rx="4" />
+<text x="359.0" y="461" text-anchor="middle" font-size="11" fill="#111">1.43</text>
+<rect x="392" y="424" width="63" height="63" fill="rgb(177,130,104)" rx="4" />
+<text x="425.0" y="461" text-anchor="middle" font-size="11" fill="#111">1.76</text>
+<rect x="458" y="424" width="63" height="63" fill="rgb(196,115,97)" rx="4" />
+<text x="491.0" y="461" text-anchor="middle" font-size="11" fill="#111">1.06</text>
+<rect x="524" y="424" width="63" height="63" fill="rgb(170,136,107)" rx="4" />
+<text x="557.0" y="461" text-anchor="middle" font-size="11" fill="#111">2.04</text>
+<rect x="590" y="424" width="63" height="63" fill="rgb(171,135,107)" rx="4" />
+<text x="623.0" y="461" text-anchor="middle" font-size="11" fill="#111">2.00</text>
+<text x="118" y="528" font-size="11" text-anchor="end">hpc</text>
+<rect x="128" y="490" width="63" height="63" fill="rgb(179,129,104)" rx="4" />
+<text x="161.0" y="527" text-anchor="middle" font-size="11" fill="#111">1.69</text>
+<rect x="194" y="490" width="63" height="63" fill="rgb(169,137,107)" rx="4" />
+<text x="227.0" y="527" text-anchor="middle" font-size="11" fill="#111">2.05</text>
+<rect x="260" y="490" width="63" height="63" fill="rgb(202,110,95)" rx="4" />
+<text x="293.0" y="527" text-anchor="middle" font-size="11" fill="#111">0.85</text>
+<rect x="326" y="490" width="63" height="63" fill="rgb(169,137,107)" rx="4" />
+<text x="359.0" y="527" text-anchor="middle" font-size="11" fill="#111">2.05</text>
+<rect x="392" y="490" width="63" height="63" fill="rgb(181,127,103)" rx="4" />
+<text x="425.0" y="527" text-anchor="middle" font-size="11" fill="#111">1.62</text>
+<rect x="458" y="490" width="63" height="63" fill="rgb(166,139,109)" rx="4" />
+<text x="491.0" y="527" text-anchor="middle" font-size="11" fill="#111">2.18</text>
+<rect x="524" y="490" width="63" height="63" fill="rgb(162,143,110)" rx="4" />
+<text x="557.0" y="527" text-anchor="middle" font-size="11" fill="#111">2.32</text>
+<rect x="590" y="490" width="63" height="63" fill="rgb(175,133,105)" rx="4" />
+<text x="623.0" y="527" text-anchor="middle" font-size="11" fill="#111">1.86</text>
+<text x="118" y="594" font-size="11" text-anchor="end">linux</text>
+<rect x="128" y="556" width="63" height="63" fill="rgb(196,115,98)" rx="4" />
+<text x="161.0" y="593" text-anchor="middle" font-size="11" fill="#111">1.09</text>
+<rect x="194" y="556" width="63" height="63" fill="rgb(183,126,102)" rx="4" />
+<text x="227.0" y="593" text-anchor="middle" font-size="11" fill="#111">1.55</text>
+<rect x="260" y="556" width="63" height="63" fill="rgb(209,105,93)" rx="4" />
+<text x="293.0" y="593" text-anchor="middle" font-size="11" fill="#111">0.61</text>
+<rect x="326" y="556" width="63" height="63" fill="rgb(181,127,103)" rx="4" />
+<text x="359.0" y="593" text-anchor="middle" font-size="11" fill="#111">1.61</text>
+<rect x="392" y="556" width="63" height="63" fill="rgb(200,112,96)" rx="4" />
+<text x="425.0" y="593" text-anchor="middle" font-size="11" fill="#111">0.94</text>
+<rect x="458" y="556" width="63" height="63" fill="rgb(209,105,93)" rx="4" />
+<text x="491.0" y="593" text-anchor="middle" font-size="11" fill="#111">0.60</text>
+<rect x="524" y="556" width="63" height="63" fill="rgb(192,119,99)" rx="4" />
+<text x="557.0" y="593" text-anchor="middle" font-size="11" fill="#111">1.23</text>
+<rect x="590" y="556" width="63" height="63" fill="rgb(173,134,106)" rx="4" />
+<text x="623.0" y="593" text-anchor="middle" font-size="11" fill="#111">1.92</text>
+<text x="118" y="660" font-size="11" text-anchor="end">mac</text>
+<rect x="128" y="622" width="63" height="63" fill="rgb(158,146,112)" rx="4" />
+<text x="161.0" y="659" text-anchor="middle" font-size="11" fill="#111">2.47</text>
+<rect x="194" y="622" width="63" height="63" fill="rgb(175,132,105)" rx="4" />
+<text x="227.0" y="659" text-anchor="middle" font-size="11" fill="#111">1.83</text>
+<rect x="260" y="622" width="63" height="63" fill="rgb(197,114,97)" rx="4" />
+<text x="293.0" y="659" text-anchor="middle" font-size="11" fill="#111">1.03</text>
+<rect x="326" y="622" width="63" height="63" fill="rgb(176,132,105)" rx="4" />
+<text x="359.0" y="659" text-anchor="middle" font-size="11" fill="#111">1.82</text>
+<rect x="392" y="622" width="63" height="63" fill="rgb(187,123,101)" rx="4" />
+<text x="425.0" y="659" text-anchor="middle" font-size="11" fill="#111">1.42</text>
+<rect x="458" y="622" width="63" height="63" fill="rgb(164,141,109)" rx="4" />
+<text x="491.0" y="659" text-anchor="middle" font-size="11" fill="#111">2.23</text>
+<rect x="524" y="622" width="63" height="63" fill="rgb(171,135,107)" rx="4" />
+<text x="557.0" y="659" text-anchor="middle" font-size="11" fill="#111">1.98</text>
+<rect x="590" y="622" width="63" height="63" fill="rgb(108,187,131)" rx="4" />
+<text x="623.0" y="659" text-anchor="middle" font-size="11" fill="#111">4.31</text>
+<text x="118" y="726" font-size="11" text-anchor="end">openssh</text>
+<rect x="128" y="688" width="63" height="63" fill="rgb(174,133,106)" rx="4" />
+<text x="161.0" y="725" text-anchor="middle" font-size="11" fill="#111">1.90</text>
+<rect x="194" y="688" width="63" height="63" fill="rgb(189,121,100)" rx="4" />
+<text x="227.0" y="725" text-anchor="middle" font-size="11" fill="#111">1.35</text>
+<rect x="260" y="688" width="63" height="63" fill="rgb(202,110,95)" rx="4" />
+<text x="293.0" y="725" text-anchor="middle" font-size="11" fill="#111">0.86</text>
+<rect x="326" y="688" width="63" height="63" fill="rgb(189,121,100)" rx="4" />
+<text x="359.0" y="725" text-anchor="middle" font-size="11" fill="#111">1.33</text>
+<rect x="392" y="688" width="63" height="63" fill="rgb(185,124,101)" rx="4" />
+<text x="425.0" y="725" text-anchor="middle" font-size="11" fill="#111">1.47</text>
+<rect x="458" y="688" width="63" height="63" fill="rgb(178,130,104)" rx="4" />
+<text x="491.0" y="725" text-anchor="middle" font-size="11" fill="#111">1.75</text>
+<rect x="524" y="688" width="63" height="63" fill="rgb(203,110,95)" rx="4" />
+<text x="557.0" y="725" text-anchor="middle" font-size="11" fill="#111">0.83</text>
+<rect x="590" y="688" width="63" height="63" fill="rgb(183,126,102)" rx="4" />
+<text x="623.0" y="725" text-anchor="middle" font-size="11" fill="#111">1.55</text>
+<text x="118" y="792" font-size="11" text-anchor="end">openstack</text>
+<rect x="128" y="754" width="63" height="63" fill="rgb(201,111,95)" rx="4" />
+<text x="161.0" y="791" text-anchor="middle" font-size="11" fill="#111">0.88</text>
+<rect x="194" y="754" width="63" height="63" fill="rgb(144,157,117)" rx="4" />
+<text x="227.0" y="791" text-anchor="middle" font-size="11" fill="#111">2.99</text>
+<rect x="260" y="754" width="63" height="63" fill="rgb(188,122,101)" rx="4" />
+<text x="293.0" y="791" text-anchor="middle" font-size="11" fill="#111">1.38</text>
+<rect x="326" y="754" width="63" height="63" fill="rgb(144,157,117)" rx="4" />
+<text x="359.0" y="791" text-anchor="middle" font-size="11" fill="#111">2.97</text>
+<rect x="392" y="754" width="63" height="63" fill="rgb(161,143,110)" rx="4" />
+<text x="425.0" y="791" text-anchor="middle" font-size="11" fill="#111">2.34</text>
+<rect x="458" y="754" width="63" height="63" fill="rgb(190,120,100)" rx="4" />
+<text x="491.0" y="791" text-anchor="middle" font-size="11" fill="#111">1.31</text>
+<rect x="524" y="754" width="63" height="63" fill="rgb(122,175,125)" rx="4" />
+<text x="557.0" y="791" text-anchor="middle" font-size="11" fill="#111">3.78</text>
+<rect x="590" y="754" width="63" height="63" fill="rgb(145,156,116)" rx="4" />
+<text x="623.0" y="791" text-anchor="middle" font-size="11" fill="#111">2.93</text>
+<text x="118" y="858" font-size="11" text-anchor="end">proxifier</text>
+<rect x="128" y="820" width="63" height="63" fill="rgb(161,143,110)" rx="4" />
+<text x="161.0" y="857" text-anchor="middle" font-size="11" fill="#111">2.34</text>
+<rect x="194" y="820" width="63" height="63" fill="rgb(181,127,103)" rx="4" />
+<text x="227.0" y="857" text-anchor="middle" font-size="11" fill="#111">1.62</text>
+<rect x="260" y="820" width="63" height="63" fill="rgb(199,113,96)" rx="4" />
+<text x="293.0" y="857" text-anchor="middle" font-size="11" fill="#111">0.96</text>
+<rect x="326" y="820" width="63" height="63" fill="rgb(183,126,102)" rx="4" />
+<text x="359.0" y="857" text-anchor="middle" font-size="11" fill="#111">1.56</text>
+<rect x="392" y="820" width="63" height="63" fill="rgb(203,109,95)" rx="4" />
+<text x="425.0" y="857" text-anchor="middle" font-size="11" fill="#111">0.81</text>
+<rect x="458" y="820" width="63" height="63" fill="rgb(165,140,109)" rx="4" />
+<text x="491.0" y="857" text-anchor="middle" font-size="11" fill="#111">2.21</text>
+<rect x="524" y="820" width="63" height="63" fill="rgb(209,105,93)" rx="4" />
+<text x="557.0" y="857" text-anchor="middle" font-size="11" fill="#111">0.61</text>
+<rect x="590" y="820" width="63" height="63" fill="rgb(178,130,104)" rx="4" />
+<text x="623.0" y="857" text-anchor="middle" font-size="11" fill="#111">1.74</text>
+<text x="118" y="924" font-size="11" text-anchor="end">spark</text>
+<rect x="128" y="886" width="63" height="63" fill="rgb(194,117,98)" rx="4" />
+<text x="161.0" y="923" text-anchor="middle" font-size="11" fill="#111">1.17</text>
+<rect x="194" y="886" width="63" height="63" fill="rgb(187,122,101)" rx="4" />
+<text x="227.0" y="923" text-anchor="middle" font-size="11" fill="#111">1.39</text>
+<rect x="260" y="886" width="63" height="63" fill="rgb(202,111,95)" rx="4" />
+<text x="293.0" y="923" text-anchor="middle" font-size="11" fill="#111">0.87</text>
+<rect x="326" y="886" width="63" height="63" fill="rgb(188,122,101)" rx="4" />
+<text x="359.0" y="923" text-anchor="middle" font-size="11" fill="#111">1.39</text>
+<rect x="392" y="886" width="63" height="63" fill="rgb(189,121,100)" rx="4" />
+<text x="425.0" y="923" text-anchor="middle" font-size="11" fill="#111">1.34</text>
+<rect x="458" y="886" width="63" height="63" fill="rgb(187,123,101)" rx="4" />
+<text x="491.0" y="923" text-anchor="middle" font-size="11" fill="#111">1.41</text>
+<rect x="524" y="886" width="63" height="63" fill="rgb(186,123,101)" rx="4" />
+<text x="557.0" y="923" text-anchor="middle" font-size="11" fill="#111">1.43</text>
+<rect x="590" y="886" width="63" height="63" fill="rgb(200,112,96)" rx="4" />
+<text x="623.0" y="923" text-anchor="middle" font-size="11" fill="#111">0.92</text>
+<text x="118" y="990" font-size="11" text-anchor="end">thunderbird</text>
+<rect x="128" y="952" width="63" height="63" fill="rgb(189,121,100)" rx="4" />
+<text x="161.0" y="989" text-anchor="middle" font-size="11" fill="#111">1.34</text>
+<rect x="194" y="952" width="63" height="63" fill="rgb(160,144,111)" rx="4" />
+<text x="227.0" y="989" text-anchor="middle" font-size="11" fill="#111">2.38</text>
+<rect x="260" y="952" width="63" height="63" fill="rgb(190,120,100)" rx="4" />
+<text x="293.0" y="989" text-anchor="middle" font-size="11" fill="#111">1.28</text>
+<rect x="326" y="952" width="63" height="63" fill="rgb(161,143,111)" rx="4" />
+<text x="359.0" y="989" text-anchor="middle" font-size="11" fill="#111">2.35</text>
+<rect x="392" y="952" width="63" height="63" fill="rgb(173,134,106)" rx="4" />
+<text x="425.0" y="989" text-anchor="middle" font-size="11" fill="#111">1.91</text>
+<rect x="458" y="952" width="63" height="63" fill="rgb(169,137,107)" rx="4" />
+<text x="491.0" y="989" text-anchor="middle" font-size="11" fill="#111">2.06</text>
+<rect x="524" y="952" width="63" height="63" fill="rgb(192,119,99)" rx="4" />
+<text x="557.0" y="989" text-anchor="middle" font-size="11" fill="#111">1.24</text>
+<rect x="590" y="952" width="63" height="63" fill="rgb(146,156,116)" rx="4" />
+<text x="623.0" y="989" text-anchor="middle" font-size="11" fill="#111">2.92</text>
+<text x="118" y="1056" font-size="11" text-anchor="end">windows</text>
+<rect x="128" y="1018" width="63" height="63" fill="rgb(180,128,104)" rx="4" />
+<text x="161.0" y="1055" text-anchor="middle" font-size="11" fill="#111">1.67</text>
+<rect x="194" y="1018" width="63" height="63" fill="rgb(178,130,104)" rx="4" />
+<text x="227.0" y="1055" text-anchor="middle" font-size="11" fill="#111">1.73</text>
+<rect x="260" y="1018" width="63" height="63" fill="rgb(195,116,98)" rx="4" />
+<text x="293.0" y="1055" text-anchor="middle" font-size="11" fill="#111">1.11</text>
+<rect x="326" y="1018" width="63" height="63" fill="rgb(178,130,104)" rx="4" />
+<text x="359.0" y="1055" text-anchor="middle" font-size="11" fill="#111">1.75</text>
+<rect x="392" y="1018" width="63" height="63" fill="rgb(199,113,97)" rx="4" />
+<text x="425.0" y="1055" text-anchor="middle" font-size="11" fill="#111">0.98</text>
+<rect x="458" y="1018" width="63" height="63" fill="rgb(192,118,99)" rx="4" />
+<text x="491.0" y="1055" text-anchor="middle" font-size="11" fill="#111">1.22</text>
+<rect x="524" y="1018" width="63" height="63" fill="rgb(184,125,102)" rx="4" />
+<text x="557.0" y="1055" text-anchor="middle" font-size="11" fill="#111">1.52</text>
+<rect x="590" y="1018" width="63" height="63" fill="rgb(172,134,106)" rx="4" />
+<text x="623.0" y="1055" text-anchor="middle" font-size="11" fill="#111">1.94</text>
+<text x="118" y="1122" font-size="11" text-anchor="end">zookeeper</text>
+<rect x="128" y="1084" width="63" height="63" fill="rgb(171,135,107)" rx="4" />
+<text x="161.0" y="1121" text-anchor="middle" font-size="11" fill="#111">1.99</text>
+<rect x="194" y="1084" width="63" height="63" fill="rgb(179,129,104)" rx="4" />
+<text x="227.0" y="1121" text-anchor="middle" font-size="11" fill="#111">1.68</text>
+<rect x="260" y="1084" width="63" height="63" fill="rgb(199,113,96)" rx="4" />
+<text x="293.0" y="1121" text-anchor="middle" font-size="11" fill="#111">0.98</text>
+<rect x="326" y="1084" width="63" height="63" fill="rgb(177,131,105)" rx="4" />
+<text x="359.0" y="1121" text-anchor="middle" font-size="11" fill="#111">1.77</text>
+<rect x="392" y="1084" width="63" height="63" fill="rgb(193,118,99)" rx="4" />
+<text x="425.0" y="1121" text-anchor="middle" font-size="11" fill="#111">1.20</text>
+<rect x="458" y="1084" width="63" height="63" fill="rgb(179,129,104)" rx="4" />
+<text x="491.0" y="1121" text-anchor="middle" font-size="11" fill="#111">1.72</text>
+<rect x="524" y="1084" width="63" height="63" fill="rgb(192,118,99)" rx="4" />
+<text x="557.0" y="1121" text-anchor="middle" font-size="11" fill="#111">1.22</text>
+<rect x="590" y="1084" width="63" height="63" fill="rgb(163,142,110)" rx="4" />
+<text x="623.0" y="1121" text-anchor="middle" font-size="11" fill="#111">2.28</text>
+</svg>

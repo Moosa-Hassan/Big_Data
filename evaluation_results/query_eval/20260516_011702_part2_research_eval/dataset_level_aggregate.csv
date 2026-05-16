@@ -1,0 +1,16 @@
+dataset_slug,mode_name,aggregate_level,cell_count,median_wall_time_ms,median_cpu_time_ms,median_peak_rss_mb,median_match_count,median_tp,median_fp,median_fn,median_precision,median_recall,median_f1,median_decoded_records,median_decoded_bytes,median_skipped_records,median_skipped_bytes,median_fallback_count,median_bloom_rejected_records,median_bloom_candidate_records,median_total_records,median_bloom_skip_rate,all_cells_exact_set_match
+android,decompressed_text,dataset_level,4,0.6926460046088323,0.6915000000000011,25.4765625,200.0,200.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,True
+android,full_decompression,dataset_level,4,86.07589577150065,85.9865,25.3203125,200.0,200.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,True
+android,minor_optimization,dataset_level,4,43.56514575192705,43.56125,25.38671875,200.0,200.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,False
+apache,decompressed_text,dataset_level,4,0.5920729890931398,0.590249999999997,25.5234375,539.0,329.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,True
+apache,full_decompression,dataset_level,4,30.949593739933334,30.8755,25.5078125,539.0,329.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,True
+apache,minor_optimization,dataset_level,4,22.870781234814785,22.79475,25.546875,539.0,329.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,True
+hdfs,decompressed_text,dataset_level,4,0.6795727531425655,0.677999999999998,25.41015625,226.5,226.5,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,True
+hdfs,full_decompression,dataset_level,4,160.6045102380449,160.18025,26.77734375,226.5,226.5,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,True
+hdfs,minor_optimization,dataset_level,4,132.49804149381816,132.156,26.7109375,226.5,226.5,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,False
+linux,decompressed_text,dataset_level,4,0.5958227557130158,0.593999999999999,25.42578125,123.0,123.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,True
+linux,full_decompression,dataset_level,4,50.62239576363936,50.5285,25.61328125,123.0,123.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,True
+linux,minor_optimization,dataset_level,4,31.135281242313795,31.0465,25.61328125,123.0,123.0,0.0,10.0,1.0,0.9626373626373627,0.980593607305936,,,,,,,,,,False
+openstack,decompressed_text,dataset_level,4,0.957156516960822,0.9557499999999983,25.43359375,208.0,208.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,True
+openstack,full_decompression,dataset_level,4,189.35273999522906,188.86575000000002,27.21484375,208.0,208.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,True
+openstack,minor_optimization,dataset_level,4,144.33882299636025,144.00400000000002,27.078125,208.0,208.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,True

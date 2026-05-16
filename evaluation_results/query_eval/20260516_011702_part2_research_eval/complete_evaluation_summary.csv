@@ -1,0 +1,7 @@
+mode_name,query_group,cell_count,exact_cell_count,median_wall_time_ms,median_recall,median_f1,median_bloom_skip_rate
+decompressed_text,all_queries,20,20,0.6648125126957893,1.0,1.0,
+decompressed_text,token_safe_queries,20,20,0.6648125126957893,1.0,1.0,
+full_decompression,all_queries,20,20,86.07589577150065,1.0,1.0,
+full_decompression,token_safe_queries,20,20,86.07589577150065,1.0,1.0,
+minor_optimization,all_queries,20,16,43.56514575192705,1.0,1.0,
+minor_optimization,token_safe_queries,20,16,43.56514575192705,1.0,1.0,
