@@ -1,0 +1,13 @@
+query_id,mode_name,aggregate_level,cell_count,median_wall_time_ms,median_cpu_time_ms,median_peak_rss_mb,median_match_count,median_tp,median_fp,median_fn,median_precision,median_recall,median_f1,median_decoded_records,median_decoded_bytes,median_skipped_records,median_skipped_bytes,median_fallback_count,median_bloom_rejected_records,median_bloom_candidate_records,median_total_records,median_bloom_skip_rate,all_cells_exact_set_match
+common_phrase,decompressed_text,query_level,3,50.635454500024935,8.910149999999978,26.55078125,224.0,224.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,True
+common_phrase,full_decompression,query_level,3,162.47790699981124,147.62990000000002,26.55078125,224.0,224.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,True
+common_phrase,static_bloom,query_level,3,169.2748025000128,122.31015000000001,26.767578125,224.0,224.0,0.0,0.0,1.0,1.0,1.0,358.0,44974.0,1642.0,5806.0,0.0,1642.0,358.0,2000.0,0.821,True
+common_token,decompressed_text,query_level,3,49.46870199978548,9.757650000000005,26.55078125,910.0,885.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,True
+common_token,full_decompression,query_level,3,176.98945200004346,155.7939,26.55078125,910.0,885.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,True
+common_token,static_bloom,query_level,3,282.92661350019443,229.3086,26.81640625,910.0,885.0,0.0,0.0,1.0,1.0,1.0,990.0,116272.0,1010.0,5127.0,0.0,1010.0,990.0,2000.0,0.505,True
+conjunctive,decompressed_text,query_level,3,41.004723999776616,8.45855000000001,26.55078125,229.0,229.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,True
+conjunctive,full_decompression,query_level,3,172.3982344997239,153.10225000000003,26.55078125,229.0,229.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,True
+conjunctive,static_bloom,query_level,3,172.13310299985096,129.3734,26.71484375,229.0,229.0,0.0,0.0,1.0,1.0,1.0,358.0,44974.0,1642.0,5806.0,0.0,1642.0,358.0,2000.0,0.821,True
+selective_phrase,decompressed_text,query_level,3,48.181416000034005,8.842550000000005,26.55078125,20.0,20.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,True
+selective_phrase,full_decompression,query_level,3,178.07775299979767,157.47925000000004,26.55078125,20.0,20.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,True
+selective_phrase,static_bloom,query_level,3,189.01171400011663,148.05775,26.8125,20.0,20.0,0.0,0.0,1.0,1.0,1.0,387.0,54931.0,1613.0,6885.0,0.0,1613.0,387.0,2000.0,0.8065,True

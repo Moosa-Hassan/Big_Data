@@ -1,0 +1,61 @@
+{
+  "artifact_specs": {
+    "apache": {
+      "compressed_binary_path": "/mnt/c/Users/HOME/Big_Data/compressed_logs/Apache_2k.log.lite.b",
+      "decompressed_text_path": "/mnt/c/Users/HOME/Big_Data/compressed_logs/Apache_2k.log.lite.decom",
+      "raw_log_path": "/mnt/c/Users/HOME/Big_Data/dataset/loghub/Apache/Apache_2k.log",
+      "static_compressed_binary_path": "/mnt/c/Users/HOME/Big_Data/compressed_logs/Apache_2k.log.lite.static.b",
+      "static_decompressed_text_path": "/mnt/c/Users/HOME/Big_Data/compressed_logs/Apache_2k.log.lite.static.decom",
+      "static_window_path": "/mnt/c/Users/HOME/Big_Data/compressed_logs/Apache_2k.window.static.txt",
+      "window_path": "/mnt/c/Users/HOME/Big_Data/compressed_logs/Apache_2k.window.txt"
+    },
+    "hdfs": {
+      "compressed_binary_path": "/mnt/c/Users/HOME/Big_Data/compressed_logs/HDFS_2k.log.lite.b",
+      "decompressed_text_path": "/mnt/c/Users/HOME/Big_Data/compressed_logs/HDFS_2k.log.lite.decom",
+      "raw_log_path": "/mnt/c/Users/HOME/Big_Data/dataset/loghub/HDFS/HDFS_2k.log",
+      "static_compressed_binary_path": "/mnt/c/Users/HOME/Big_Data/compressed_logs/HDFS_2k.log.lite.static.b",
+      "static_decompressed_text_path": "/mnt/c/Users/HOME/Big_Data/compressed_logs/HDFS_2k.log.lite.static.decom",
+      "static_window_path": "/mnt/c/Users/HOME/Big_Data/compressed_logs/HDFS_2k.window.static.txt",
+      "window_path": "/mnt/c/Users/HOME/Big_Data/compressed_logs/HDFS_2k.window.txt"
+    },
+    "linux": {
+      "compressed_binary_path": "/mnt/c/Users/HOME/Big_Data/compressed_logs/Linux_2k.log.lite.b",
+      "decompressed_text_path": "/mnt/c/Users/HOME/Big_Data/compressed_logs/Linux_2k.log.lite.decom",
+      "raw_log_path": "/mnt/c/Users/HOME/Big_Data/dataset/loghub/Linux/Linux_2k.log",
+      "static_compressed_binary_path": "/mnt/c/Users/HOME/Big_Data/compressed_logs/Linux_2k.log.lite.static.b",
+      "static_decompressed_text_path": "/mnt/c/Users/HOME/Big_Data/compressed_logs/Linux_2k.log.lite.static.decom",
+      "static_window_path": "/mnt/c/Users/HOME/Big_Data/compressed_logs/Linux_2k.window.static.txt",
+      "window_path": "/mnt/c/Users/HOME/Big_Data/compressed_logs/Linux_2k.window.txt"
+    }
+  },
+  "code_version": "unknown",
+  "created_at": "2026-05-12T16:34:43.987232",
+  "datasets": [
+    "linux",
+    "apache",
+    "hdfs"
+  ],
+  "modes": [
+    "decompressed_text",
+    "full_decompression",
+    "static_bloom"
+  ],
+  "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+  "python_executable": "/usr/bin/python3",
+  "queries": [
+    "common_token",
+    "common_phrase",
+    "selective_phrase",
+    "conjunctive"
+  ],
+  "run_config": {
+    "config_label": "static_bloom_eval",
+    "config_version": "complete_static.v1",
+    "profiling_enabled": true,
+    "repetitions": 10,
+    "sample_difference_limit": 10,
+    "strict_validation": true,
+    "warmups": 1
+  },
+  "suite_profile": "complete_static_evaluation"
+}

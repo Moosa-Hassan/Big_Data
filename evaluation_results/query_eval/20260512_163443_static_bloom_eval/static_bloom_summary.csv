@@ -1,0 +1,13 @@
+dataset_slug,query_id,token_safe,is_stress_query,expected_selectivity_band,baseline_match_count,static_bloom_match_count,false_positives,false_negatives,precision,recall,f1,median_wall_time_ms,speedup_vs_full_decompression,bloom_skip_rate,bloom_rejected_records,bloom_candidate_records,total_records,exact_set_match
+apache,common_phrase,True,False,medium_high,539.0,539.0,0.0,0.0,1.0,1.0,1.0,155.71315649958706,0.8066203288363925,0.701,1402.0,598.0,2000.0,True
+apache,common_token,True,False,high,949.0,949.0,0.0,0.0,1.0,1.0,1.0,196.4646124997671,0.6224345262167789,0.505,1010.0,990.0,2000.0,True
+apache,conjunctive,True,False,medium,539.0,539.0,0.0,0.0,1.0,1.0,1.0,172.13310299985096,0.784851296148155,0.701,1402.0,598.0,2000.0,True
+apache,selective_phrase,True,False,low,12.0,12.0,0.0,0.0,1.0,1.0,1.0,189.01171400011663,0.6907633195688744,0.5625,1125.0,875.0,2000.0,True
+hdfs,common_phrase,True,False,medium_high,224.0,224.0,0.0,0.0,1.0,1.0,1.0,242.07061049992262,1.6938609096457493,0.821,1642.0,358.0,2000.0,True
+hdfs,common_token,True,False,high,885.0,885.0,0.0,0.0,1.0,1.0,1.0,370.095579000008,1.107195129450509,0.529,1058.0,942.0,2000.0,True
+hdfs,conjunctive,True,False,medium,229.0,229.0,0.0,0.0,1.0,1.0,1.0,235.70004350040108,1.7490154896777939,0.821,1642.0,358.0,2000.0,True
+hdfs,selective_phrase,True,False,low,20.0,20.0,0.0,0.0,1.0,1.0,1.0,243.19170250009847,1.659850000432143,0.8065,1613.0,387.0,2000.0,True
+linux,common_phrase,True,False,medium_high,123.0,123.0,0.0,0.0,1.0,1.0,1.0,169.2748025000128,0.9598469742701307,0.8955,1791.0,209.0,2000.0,True
+linux,common_token,True,False,high,910.0,910.0,0.0,0.0,1.0,1.0,1.0,282.92661350019443,0.6255666436269058,0.453,906.0,1094.0,2000.0,True
+linux,conjunctive,True,False,medium,123.0,123.0,0.0,0.0,1.0,1.0,1.0,170.50807499981602,1.0110854544566874,0.8955,1791.0,209.0,2000.0,True
+linux,selective_phrase,True,False,low,20.0,20.0,0.0,0.0,1.0,1.0,1.0,159.73259100019277,1.1148492107010444,0.9655,1931.0,69.0,2000.0,True

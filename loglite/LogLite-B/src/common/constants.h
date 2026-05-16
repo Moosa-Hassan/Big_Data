@@ -54,7 +54,7 @@ constexpr int MAX_LEN = 10000;
 // the original implementation assume is available for buffers.
 // Adjusting this changes how aggressively memory is reserved but does
 // not affect the on-disk format.
-constexpr double Reserved_Memory = 33;
+constexpr double Reserved_Memory = 2;
 
 
 

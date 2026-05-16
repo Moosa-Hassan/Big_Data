@@ -1,0 +1,7 @@
+version,dataset,raw_KB,comp_KB,ratio,comp_speed_MBs,decomp_speed_MBs
+src,Apache,167.2,16.6,0.0813133,133.498,135.616
+src_static,Apache,167.2,50.1,0.283983,31.3945,107.862
+src,Linux,211.4,29.9,0.127325,68.3881,76.9104
+src_static,Linux,211.4,84.1,0.386399,34.0972,64.8372
+src,HDFS,281.1,107.8,0.374579,63.3967,59.7447
+src_static,HDFS,281.1,166.0,0.583153,23.7855,41.0368

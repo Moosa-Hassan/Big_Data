@@ -416,7 +416,7 @@ int main(int argc, const char *argv[])
         }
 
         std::string all_data;
-        all_data.reserve(static_cast<size_t>(1024) * 1024 * 1024 * 33);
+        all_data.reserve(static_cast<size_t>(1024) * 1024 * 64);
 
         XORC::Stream_Compress *sc = new XORC::Stream_Compress();
 
