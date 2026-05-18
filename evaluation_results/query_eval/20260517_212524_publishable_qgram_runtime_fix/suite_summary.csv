@@ -1,0 +1,7 @@
+mode_name,aggregate_level,cell_count,median_wall_time_ms,median_cpu_time_ms,median_peak_rss_mb,median_match_count,median_tp,median_fp,median_fn,median_precision,median_recall,median_f1,median_decoded_records,median_decoded_bytes,median_skipped_records,median_skipped_bytes,median_fallback_count,median_bloom_rejected_records,median_bloom_candidate_records,median_total_records,median_bloom_skip_rate,all_cells_exact_set_match
+decompressed_text,suite_summary,128,0.691041728714481,0.6894999999999957,49.33203125,203.0,197.5,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,True
+full_decompression,suite_summary,128,92.64947898918763,92.64775,49.421875,203.0,197.5,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,True
+minor_optimization,suite_summary,128,60.104916483396664,60.1,49.46875,195.0,186.0,0.0,1.5,1.0,0.9915492957746479,0.9957567185289957,,,,,,,,,,False
+static_bloom,suite_summary,128,51.553302007960156,51.548,49.48828125,185.0,148.5,0.0,0.0,1.0,1.0,1.0,363.5,54221.0,1636.5,6527.5,0.0,1636.5,363.5,2000.0,0.8182499999999999,False
+static_qgram_index,suite_summary,128,63.3638437720947,63.33449999999999,54.515625,203.0,197.5,0.0,0.0,1.0,1.0,1.0,203.0,24520.0,1793.0,,0.0,,,2000.0,,True
+static_qgram_index_mmap,suite_summary,128,4.006999719422311,0.7342500000000023,49.265625,203.0,197.5,0.0,0.0,1.0,1.0,1.0,203.0,24520.0,1793.0,,0.0,,,2000.0,,True

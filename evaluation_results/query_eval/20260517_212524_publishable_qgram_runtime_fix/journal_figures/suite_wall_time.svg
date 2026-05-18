@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="430" viewBox="0 0 940 430" role="img"><rect width="100%" height="100%" fill="#ffffff" />
+<text x="470.0" y="28" text-anchor="middle" font-size="18" font-weight="700">Median Wall Time by Mode</text>
+<line x1="210" y1="52" x2="210" y2="392" stroke="#333" />
+<line x1="210" y1="392" x2="898" y2="392" stroke="#333" />
+<text x="202" y="77.8" text-anchor="end" font-size="12">Decompressed Text</text>
+<rect x="210" y="52.0" width="4.6" height="38.0" fill="#4C78A8" rx="3" />
+<text x="220.6" y="77.8" font-size="12">0.69 ms</text>
+<text x="202" y="125.8" text-anchor="end" font-size="12">Full Decompression</text>
+<rect x="210" y="100.0" width="614.3" height="38.0" fill="#F58518" rx="3" />
+<text x="830.3" y="125.8" font-size="12">92.65 ms</text>
+<text x="202" y="173.8" text-anchor="end" font-size="12">Minor Optimization</text>
+<rect x="210" y="148.0" width="398.5" height="38.0" fill="#54A24B" rx="3" />
+<text x="614.5" y="173.8" font-size="12">60.10 ms</text>
+<text x="202" y="221.8" text-anchor="end" font-size="12">Static Bloom</text>
+<rect x="210" y="196.0" width="341.8" height="38.0" fill="#B279A2" rx="3" />
+<text x="557.8" y="221.8" font-size="12">51.55 ms</text>
+<text x="202" y="269.8" text-anchor="end" font-size="12">Static Q-Gram JSON</text>
+<rect x="210" y="244.0" width="420.1" height="38.0" fill="#E45756" rx="3" />
+<text x="636.1" y="269.8" font-size="12">63.36 ms</text>
+<text x="202" y="317.8" text-anchor="end" font-size="12">Static Q-Gram mmap</text>
+<rect x="210" y="292.0" width="26.6" height="38.0" fill="#72B7B2" rx="3" />
+<text x="242.6" y="317.8" font-size="12">4.01 ms</text>
+</svg>

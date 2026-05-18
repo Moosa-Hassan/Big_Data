@@ -1,0 +1,213 @@
+{
+  "artifact_specs": {
+    "android": {
+      "compressed_binary_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Android_2k.log.lite.b",
+      "decompressed_text_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Android_2k.log.lite.decom",
+      "raw_log_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/dataset/loghub/Android/Android_2k.log",
+      "static_compressed_binary_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Android_2k.log.lite.static.b",
+      "static_decompressed_text_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Android_2k.log.lite.static.decom",
+      "static_qgram_index_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Android_2k.log.lite.static.qidx.json",
+      "static_window_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Android_2k.window.static.txt",
+      "window_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Android_2k.window.txt"
+    },
+    "apache": {
+      "compressed_binary_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Apache_2k.log.lite.b",
+      "decompressed_text_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Apache_2k.log.lite.decom",
+      "raw_log_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/dataset/loghub/Apache/Apache_2k.log",
+      "static_compressed_binary_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Apache_2k.log.lite.static.b",
+      "static_decompressed_text_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Apache_2k.log.lite.static.decom",
+      "static_qgram_index_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Apache_2k.log.lite.static.qidx.json",
+      "static_window_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Apache_2k.window.static.txt",
+      "window_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Apache_2k.window.txt"
+    },
+    "bgl": {
+      "compressed_binary_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/BGL_2k.log.lite.b",
+      "decompressed_text_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/BGL_2k.log.lite.decom",
+      "raw_log_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/dataset/loghub/BGL/BGL_2k.log",
+      "static_compressed_binary_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/BGL_2k.log.lite.static.b",
+      "static_decompressed_text_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/BGL_2k.log.lite.static.decom",
+      "static_qgram_index_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/BGL_2k.log.lite.static.qidx.json",
+      "static_window_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/BGL_2k.window.static.txt",
+      "window_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/BGL_2k.window.txt"
+    },
+    "hadoop": {
+      "compressed_binary_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Hadoop_2k.log.lite.b",
+      "decompressed_text_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Hadoop_2k.log.lite.decom",
+      "raw_log_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/dataset/loghub/Hadoop/Hadoop_2k.log",
+      "static_compressed_binary_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Hadoop_2k.log.lite.static.b",
+      "static_decompressed_text_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Hadoop_2k.log.lite.static.decom",
+      "static_qgram_index_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Hadoop_2k.log.lite.static.qidx.json",
+      "static_window_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Hadoop_2k.window.static.txt",
+      "window_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Hadoop_2k.window.txt"
+    },
+    "hdfs": {
+      "compressed_binary_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/HDFS_2k.log.lite.b",
+      "decompressed_text_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/HDFS_2k.log.lite.decom",
+      "raw_log_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/dataset/loghub/HDFS/HDFS_2k.log",
+      "static_compressed_binary_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/HDFS_2k.log.lite.static.b",
+      "static_decompressed_text_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/HDFS_2k.log.lite.static.decom",
+      "static_qgram_index_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/HDFS_2k.log.lite.static.qidx.json",
+      "static_window_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/HDFS_2k.window.static.txt",
+      "window_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/HDFS_2k.window.txt"
+    },
+    "healthapp": {
+      "compressed_binary_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/HealthApp_2k.log.lite.b",
+      "decompressed_text_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/HealthApp_2k.log.lite.decom",
+      "raw_log_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/dataset/loghub/HealthApp/HealthApp_2k.log",
+      "static_compressed_binary_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/HealthApp_2k.log.lite.static.b",
+      "static_decompressed_text_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/HealthApp_2k.log.lite.static.decom",
+      "static_qgram_index_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/HealthApp_2k.log.lite.static.qidx.json",
+      "static_window_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/HealthApp_2k.window.static.txt",
+      "window_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/HealthApp_2k.window.txt"
+    },
+    "hpc": {
+      "compressed_binary_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/HPC_2k.log.lite.b",
+      "decompressed_text_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/HPC_2k.log.lite.decom",
+      "raw_log_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/dataset/loghub/HPC/HPC_2k.log",
+      "static_compressed_binary_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/HPC_2k.log.lite.static.b",
+      "static_decompressed_text_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/HPC_2k.log.lite.static.decom",
+      "static_qgram_index_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/HPC_2k.log.lite.static.qidx.json",
+      "static_window_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/HPC_2k.window.static.txt",
+      "window_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/HPC_2k.window.txt"
+    },
+    "linux": {
+      "compressed_binary_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Linux_2k.log.lite.b",
+      "decompressed_text_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Linux_2k.log.lite.decom",
+      "raw_log_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/dataset/loghub/Linux/Linux_2k.log",
+      "static_compressed_binary_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Linux_2k.log.lite.static.b",
+      "static_decompressed_text_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Linux_2k.log.lite.static.decom",
+      "static_qgram_index_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Linux_2k.log.lite.static.qidx.json",
+      "static_window_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Linux_2k.window.static.txt",
+      "window_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Linux_2k.window.txt"
+    },
+    "mac": {
+      "compressed_binary_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Mac_2k.log.lite.b",
+      "decompressed_text_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Mac_2k.log.lite.decom",
+      "raw_log_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/dataset/loghub/Mac/Mac_2k.log",
+      "static_compressed_binary_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Mac_2k.log.lite.static.b",
+      "static_decompressed_text_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Mac_2k.log.lite.static.decom",
+      "static_qgram_index_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Mac_2k.log.lite.static.qidx.json",
+      "static_window_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Mac_2k.window.static.txt",
+      "window_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Mac_2k.window.txt"
+    },
+    "openssh": {
+      "compressed_binary_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/OpenSSH_2k.log.lite.b",
+      "decompressed_text_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/OpenSSH_2k.log.lite.decom",
+      "raw_log_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/dataset/loghub/OpenSSH/OpenSSH_2k.log",
+      "static_compressed_binary_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/OpenSSH_2k.log.lite.static.b",
+      "static_decompressed_text_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/OpenSSH_2k.log.lite.static.decom",
+      "static_qgram_index_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/OpenSSH_2k.log.lite.static.qidx.json",
+      "static_window_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/OpenSSH_2k.window.static.txt",
+      "window_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/OpenSSH_2k.window.txt"
+    },
+    "openstack": {
+      "compressed_binary_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/OpenStack_2k.log.lite.b",
+      "decompressed_text_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/OpenStack_2k.log.lite.decom",
+      "raw_log_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/dataset/loghub/OpenStack/OpenStack_2k.log",
+      "static_compressed_binary_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/OpenStack_2k.log.lite.static.b",
+      "static_decompressed_text_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/OpenStack_2k.log.lite.static.decom",
+      "static_qgram_index_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/OpenStack_2k.log.lite.static.qidx.json",
+      "static_window_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/OpenStack_2k.window.static.txt",
+      "window_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/OpenStack_2k.window.txt"
+    },
+    "proxifier": {
+      "compressed_binary_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Proxifier_2k.log.lite.b",
+      "decompressed_text_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Proxifier_2k.log.lite.decom",
+      "raw_log_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/dataset/loghub/Proxifier/Proxifier_2k.log",
+      "static_compressed_binary_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Proxifier_2k.log.lite.static.b",
+      "static_decompressed_text_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Proxifier_2k.log.lite.static.decom",
+      "static_qgram_index_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Proxifier_2k.log.lite.static.qidx.json",
+      "static_window_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Proxifier_2k.window.static.txt",
+      "window_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Proxifier_2k.window.txt"
+    },
+    "spark": {
+      "compressed_binary_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Spark_2k.log.lite.b",
+      "decompressed_text_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Spark_2k.log.lite.decom",
+      "raw_log_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/dataset/loghub/Spark/Spark_2k.log",
+      "static_compressed_binary_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Spark_2k.log.lite.static.b",
+      "static_decompressed_text_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Spark_2k.log.lite.static.decom",
+      "static_qgram_index_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Spark_2k.log.lite.static.qidx.json",
+      "static_window_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Spark_2k.window.static.txt",
+      "window_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Spark_2k.window.txt"
+    },
+    "thunderbird": {
+      "compressed_binary_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Thunderbird_2k.log.lite.b",
+      "decompressed_text_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Thunderbird_2k.log.lite.decom",
+      "raw_log_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/dataset/loghub/Thunderbird/Thunderbird_2k.log",
+      "static_compressed_binary_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Thunderbird_2k.log.lite.static.b",
+      "static_decompressed_text_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Thunderbird_2k.log.lite.static.decom",
+      "static_qgram_index_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Thunderbird_2k.log.lite.static.qidx.json",
+      "static_window_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Thunderbird_2k.window.static.txt",
+      "window_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Thunderbird_2k.window.txt"
+    },
+    "windows": {
+      "compressed_binary_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Windows_2k.log.lite.b",
+      "decompressed_text_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Windows_2k.log.lite.decom",
+      "raw_log_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/dataset/loghub/Windows/Windows_2k.log",
+      "static_compressed_binary_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Windows_2k.log.lite.static.b",
+      "static_decompressed_text_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Windows_2k.log.lite.static.decom",
+      "static_qgram_index_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Windows_2k.log.lite.static.qidx.json",
+      "static_window_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Windows_2k.window.static.txt",
+      "window_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Windows_2k.window.txt"
+    },
+    "zookeeper": {
+      "compressed_binary_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Zookeeper_2k.log.lite.b",
+      "decompressed_text_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Zookeeper_2k.log.lite.decom",
+      "raw_log_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/dataset/loghub/Zookeeper/Zookeeper_2k.log",
+      "static_compressed_binary_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Zookeeper_2k.log.lite.static.b",
+      "static_decompressed_text_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Zookeeper_2k.log.lite.static.decom",
+      "static_qgram_index_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Zookeeper_2k.log.lite.static.qidx.json",
+      "static_window_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Zookeeper_2k.window.static.txt",
+      "window_path": "/Users/hp/Desktop/Big Data Analytics/project/project repo/Big_Data/compressed_logs/Zookeeper_2k.window.txt"
+    }
+  },
+  "code_version": "61c82425c405256cef852a850543bf2b8b823c2e",
+  "created_at": "2026-05-16T16:14:20.471207",
+  "datasets": [
+    "linux",
+    "apache",
+    "hdfs",
+    "openstack",
+    "android",
+    "zookeeper",
+    "healthapp",
+    "hpc",
+    "hadoop",
+    "bgl",
+    "mac",
+    "proxifier",
+    "spark",
+    "openssh",
+    "thunderbird",
+    "windows"
+  ],
+  "modes": [
+    "decompressed_text",
+    "full_decompression",
+    "minor_optimization",
+    "static_bloom",
+    "static_qgram_index"
+  ],
+  "platform": "macOS-15.2-arm64-arm-64bit-Mach-O",
+  "python_executable": "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+  "queries": [
+    "common_token",
+    "medium_token",
+    "rare_token",
+    "common_phrase",
+    "selective_phrase",
+    "numeric_identifier",
+    "conjunctive",
+    "bloom_stress_substring"
+  ],
+  "run_config": {
+    "config_label": "complete_qgram_evaluation",
+    "config_version": "complete_qgram.v1",
+    "profiling_enabled": true,
+    "repetitions": 10,
+    "sample_difference_limit": 10,
+    "strict_validation": true,
+    "warmups": 1
+  },
+  "suite_profile": "complete_qgram_evaluation"
+}

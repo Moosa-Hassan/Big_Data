@@ -35,15 +35,13 @@ from .modes import run_mode_query, run_mode_query_result
 from .persistence import append_run_record_jsonl, write_json
 from .profiling import measure_callable
 from .registry import (
-    ACTIVE_TEXT_DATASET_SLUGS,
     BASELINE_MODE_NAME,
-    MODE_NAMES,
-    QUERY_IDS,
-    get_complete_suite_profile,
+    COMPLETE_SUITE_PROFILE_NAME,
     get_dataset_spec,
     get_project_root,
     get_query_payload,
     get_results_root,
+    get_suite_profile,
 )
 from .reports import build_reports_from_raw_jsonl
 from .specs import CellRunSpec, MemoryMeasurement, RunConfig, RunRecord, TimingMeasurement
@@ -140,6 +138,7 @@ def run_suite(
     query_ids: list[str] | None = None,
     mode_names: list[str] | None = None,
     run_config: RunConfig | None = None,
+    suite_profile: str = COMPLETE_SUITE_PROFILE_NAME,
 ) -> Path:
     """Run the full or filtered evaluation suite in fresh subprocesses.
 
@@ -153,7 +152,7 @@ def run_suite(
 
     effective_run_config = run_config or RunConfig()
     if dataset_slugs is None or query_ids is None or mode_names is None:
-        profile = get_complete_suite_profile()
+        profile = get_suite_profile(suite_profile)
         dataset_slugs = dataset_slugs or list(profile["datasets"])
         query_ids = query_ids or list(profile["queries"])
         mode_names = mode_names or list(profile["modes"])
@@ -184,7 +183,7 @@ def run_suite(
             "datasets": [dataset_spec.slug for dataset_spec in dataset_specs],
             "queries": query_ids,
             "modes": mode_names,
-            "suite_profile": "complete_static_evaluation",
+            "suite_profile": suite_profile,
             "artifact_specs": {
                 dataset_slug: artifact_spec.to_json_dict()
                 for dataset_slug, artifact_spec in artifact_specs.items()

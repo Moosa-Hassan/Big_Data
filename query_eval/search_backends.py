@@ -35,6 +35,10 @@ from collections import deque
 from pathlib import Path
 
 from .specs import ModeRunResult
+from .static_qgram_index import (
+    keyword_search_loglite_static_qgram_index,
+    keyword_search_loglite_static_qgram_index_mmap,
+)
 from .window_loader import ParsedWindow
 
 

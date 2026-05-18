@@ -28,6 +28,10 @@ from .search_backends import (
     keyword_search_plaintext_file,
 )
 from .specs import ArtifactSpec, ModeRunResult, QueryPayload
+from .static_qgram_index import (
+    keyword_search_loglite_static_qgram_index,
+    keyword_search_loglite_static_qgram_index_mmap,
+)
 from .window_loader import load_l_window_from_txt
 
 
@@ -72,7 +76,11 @@ def run_mode_query_result(
         return _run_full_decompression_mode(artifact_spec, query_payload)
     if validated_mode == "minor_optimization":
         return _run_minor_optimization_mode(artifact_spec, query_payload)
-    return _run_static_bloom_mode(artifact_spec, query_payload)
+    if validated_mode == "static_bloom":
+        return _run_static_bloom_mode(artifact_spec, query_payload)
+    if validated_mode == "static_qgram_index":
+        return _run_static_qgram_index_mode(artifact_spec, query_payload)
+    return _run_static_qgram_index_mmap_mode(artifact_spec, query_payload)
 
 
 def _run_decompressed_text_mode(artifact_spec: ArtifactSpec, query_payload: QueryPayload) -> ModeRunResult:
@@ -121,5 +129,35 @@ def _run_static_bloom_mode(artifact_spec: ArtifactSpec, query_payload: QueryPayl
     return keyword_search_loglite_static_bloom(
         artifact_spec.static_compressed_binary_path,
         parsed_static_l_window,
+        query_payload,
+    )
+
+
+def _run_static_qgram_index_mode(artifact_spec: ArtifactSpec, query_payload: QueryPayload) -> ModeRunResult:
+    """Execute exact indexed static search over the q-gram sidecar."""
+
+    if (
+        artifact_spec.static_compressed_binary_path is None
+        or artifact_spec.static_window_path is None
+        or artifact_spec.static_qgram_index_path is None
+    ):
+        raise FileNotFoundError("ArtifactSpec does not include static q-gram artifact paths.")
+
+    return keyword_search_loglite_static_qgram_index(
+        artifact_spec.static_compressed_binary_path,
+        artifact_spec.static_window_path,
+        artifact_spec.static_qgram_index_path,
+        query_payload,
+    )
+
+
+def _run_static_qgram_index_mmap_mode(artifact_spec: ArtifactSpec, query_payload: QueryPayload) -> ModeRunResult:
+    """Execute exact indexed static search over the binary mmap q-gram sidecar."""
+
+    if artifact_spec.static_qgram_mmap_index_path is None:
+        raise FileNotFoundError("ArtifactSpec does not include static q-gram mmap artifact paths.")
+
+    return keyword_search_loglite_static_qgram_index_mmap(
+        artifact_spec.static_qgram_mmap_index_path,
         query_payload,
     )

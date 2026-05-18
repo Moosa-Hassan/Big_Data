@@ -70,6 +70,8 @@ def build_artifact_spec(dataset_spec: DatasetSpec) -> ArtifactSpec:
         static_compressed_binary_path=artifact_root / f"{dataset_spec.sample_log_filename}.lite.static.b",
         static_decompressed_text_path=artifact_root / f"{dataset_spec.sample_log_filename}.lite.static.decom",
         static_window_path=artifact_root / f"{sample_stem}.window.static.txt",
+        static_qgram_index_path=artifact_root / f"{dataset_spec.sample_log_filename}.lite.static.qidx.json",
+        static_qgram_mmap_index_path=artifact_root / f"{dataset_spec.sample_log_filename}.lite.static.qidx2",
     )
 
 
@@ -108,6 +110,22 @@ def validate_static_artifact_spec(artifact_spec: ArtifactSpec) -> None:
     if missing_paths:
         raise FileNotFoundError(
             "Missing required static artifacts: " + ", ".join(str(path) for path in missing_paths)
+        )
+
+
+def validate_static_qgram_index_artifact_spec(artifact_spec: ArtifactSpec) -> None:
+    """Validate that the static q-gram sidecar index exists for a dataset."""
+
+    if artifact_spec.static_qgram_index_path is None or not artifact_spec.static_qgram_index_path.exists():
+        raise FileNotFoundError(f"Missing required static q-gram index: {artifact_spec.static_qgram_index_path}")
+
+
+def validate_static_qgram_mmap_index_artifact_spec(artifact_spec: ArtifactSpec) -> None:
+    """Validate that the static q-gram mmap sidecar index exists for a dataset."""
+
+    if artifact_spec.static_qgram_mmap_index_path is None or not artifact_spec.static_qgram_mmap_index_path.exists():
+        raise FileNotFoundError(
+            f"Missing required static q-gram mmap index: {artifact_spec.static_qgram_mmap_index_path}"
         )
 
 
@@ -288,6 +306,10 @@ def ensure_artifacts_for_dataset(
                 )
 
     validate_static_artifact_spec(artifact_spec)
+    from .static_qgram_index import ensure_static_qgram_index, ensure_static_qgram_mmap_index
+
+    ensure_static_qgram_index(artifact_spec, force_rebuild=force_rebuild)
+    ensure_static_qgram_mmap_index(artifact_spec, force_rebuild=force_rebuild)
     return artifact_spec
 
 

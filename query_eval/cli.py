@@ -22,11 +22,14 @@ from pathlib import Path
 from .artifacts import ensure_artifacts_for_datasets, stage_active_datasets
 from .registry import (
     ACTIVE_TEXT_DATASET_SLUGS,
+    COMPLETE_QGRAM_MMAP_SUITE_PROFILE_NAME,
+    COMPLETE_QGRAM_SUITE_PROFILE_NAME,
     COMPLETE_SUITE_PROFILE_NAME,
     MODE_NAMES,
     QUERY_IDS,
-    get_complete_suite_profile,
+    SUITE_PROFILE_NAMES,
     get_dataset_spec,
+    get_suite_profile,
 )
 from .reports import build_reports_from_raw_jsonl
 from .runner import execute_cell_run, run_suite
@@ -87,20 +90,31 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     if args.command == "run-suite":
+        suite_profile = get_suite_profile(args.profile)
+        config_label = args.config_label or args.profile
+        if args.config_version is not None:
+            config_version = args.config_version
+        elif args.profile == COMPLETE_QGRAM_MMAP_SUITE_PROFILE_NAME:
+            config_version = "complete_qgram.v2"
+        elif args.profile == COMPLETE_QGRAM_SUITE_PROFILE_NAME:
+            config_version = "complete_qgram.v1"
+        else:
+            config_version = "complete_static.v1"
         run_config = RunConfig(
             repetitions=args.repetitions,
             warmups=args.warmups,
             profiling_enabled=not args.disable_profiling,
             strict_validation=not args.disable_strict_validation,
-            config_label=args.config_label,
-            config_version=args.config_version,
+            config_label=config_label,
+            config_version=config_version,
             sample_difference_limit=args.sample_difference_limit,
         )
         results_directory = run_suite(
-            dataset_slugs=args.datasets or list(get_complete_suite_profile()["datasets"]),
-            query_ids=args.queries or list(get_complete_suite_profile()["queries"]),
-            mode_names=args.modes or list(get_complete_suite_profile()["modes"]),
+            dataset_slugs=args.datasets or list(suite_profile["datasets"]),
+            query_ids=args.queries or list(suite_profile["queries"]),
+            mode_names=args.modes or list(suite_profile["modes"]),
             run_config=run_config,
+            suite_profile=args.profile,
         )
         print(json.dumps({"results_directory": str(results_directory)}, sort_keys=True))
         return 0
@@ -143,7 +157,7 @@ def _build_argument_parser() -> argparse.ArgumentParser:
     cell_parser.add_argument("--strict-validation", default="true")
 
     suite_parser = subparsers.add_parser("run-suite")
-    suite_parser.add_argument("--profile", default=COMPLETE_SUITE_PROFILE_NAME, choices=[COMPLETE_SUITE_PROFILE_NAME])
+    suite_parser.add_argument("--profile", default=COMPLETE_SUITE_PROFILE_NAME, choices=SUITE_PROFILE_NAMES)
     suite_parser.add_argument("--datasets", nargs="*", default=None)
     suite_parser.add_argument("--queries", nargs="*", default=None)
     suite_parser.add_argument("--modes", nargs="*", default=None)
@@ -151,8 +165,8 @@ def _build_argument_parser() -> argparse.ArgumentParser:
     suite_parser.add_argument("--warmups", type=int, default=1)
     suite_parser.add_argument("--disable-profiling", action="store_true")
     suite_parser.add_argument("--disable-strict-validation", action="store_true")
-    suite_parser.add_argument("--config-label", default=COMPLETE_SUITE_PROFILE_NAME)
-    suite_parser.add_argument("--config-version", default="complete_static.v1")
+    suite_parser.add_argument("--config-label", default=None)
+    suite_parser.add_argument("--config-version", default=None)
     suite_parser.add_argument("--sample-difference-limit", type=int, default=10)
 
     reports_parser = subparsers.add_parser("build-reports")

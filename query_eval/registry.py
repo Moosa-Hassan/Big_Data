@@ -38,6 +38,29 @@ MODE_NAMES: tuple[ModeName, ...] = (
     "full_decompression",
     "minor_optimization",
     "static_bloom",
+    "static_qgram_index",
+    "static_qgram_index_mmap",
+)
+STATIC_SUITE_MODE_NAMES: tuple[ModeName, ...] = (
+    "decompressed_text",
+    "full_decompression",
+    "minor_optimization",
+    "static_bloom",
+)
+QGRAM_SUITE_MODE_NAMES: tuple[ModeName, ...] = (
+    "decompressed_text",
+    "full_decompression",
+    "minor_optimization",
+    "static_bloom",
+    "static_qgram_index",
+)
+QGRAM_MMAP_SUITE_MODE_NAMES: tuple[ModeName, ...] = (
+    "decompressed_text",
+    "full_decompression",
+    "minor_optimization",
+    "static_bloom",
+    "static_qgram_index",
+    "static_qgram_index_mmap",
 )
 BASELINE_MODE_NAME: ModeName = "decompressed_text"
 QUERY_IDS: tuple[str, ...] = (
@@ -77,6 +100,13 @@ COMPLETE_TEXT_DATASET_SLUGS: tuple[str, ...] = (
 )
 ACTIVE_TEXT_DATASET_SLUGS: tuple[str, ...] = COMPLETE_TEXT_DATASET_SLUGS
 COMPLETE_SUITE_PROFILE_NAME = "complete_static_evaluation"
+COMPLETE_QGRAM_SUITE_PROFILE_NAME = "complete_qgram_evaluation"
+COMPLETE_QGRAM_MMAP_SUITE_PROFILE_NAME = "complete_qgram_mmap_evaluation"
+SUITE_PROFILE_NAMES = (
+    COMPLETE_SUITE_PROFILE_NAME,
+    COMPLETE_QGRAM_SUITE_PROFILE_NAME,
+    COMPLETE_QGRAM_MMAP_SUITE_PROFILE_NAME,
+)
 LOGHUB_RAW_BASE_URL = "https://raw.githubusercontent.com/logpai/loghub/master"
 
 
@@ -401,8 +431,40 @@ def get_complete_suite_profile() -> dict[str, tuple[str, ...]]:
     return {
         "datasets": COMPLETE_TEXT_DATASET_SLUGS,
         "queries": QUERY_IDS,
-        "modes": MODE_NAMES,
+        "modes": STATIC_SUITE_MODE_NAMES,
     }
+
+
+def get_qgram_suite_profile() -> dict[str, tuple[str, ...]]:
+    """Return the complete profile that adds exact static q-gram indexing."""
+
+    return {
+        "datasets": COMPLETE_TEXT_DATASET_SLUGS,
+        "queries": QUERY_IDS,
+        "modes": QGRAM_SUITE_MODE_NAMES,
+    }
+
+
+def get_qgram_mmap_suite_profile() -> dict[str, tuple[str, ...]]:
+    """Return the complete profile that adds binary mmap q-gram indexing."""
+
+    return {
+        "datasets": COMPLETE_TEXT_DATASET_SLUGS,
+        "queries": QUERY_IDS,
+        "modes": QGRAM_MMAP_SUITE_MODE_NAMES,
+    }
+
+
+def get_suite_profile(profile_name: str) -> dict[str, tuple[str, ...]]:
+    """Return a named suite profile."""
+
+    if profile_name == COMPLETE_SUITE_PROFILE_NAME:
+        return get_complete_suite_profile()
+    if profile_name == COMPLETE_QGRAM_SUITE_PROFILE_NAME:
+        return get_qgram_suite_profile()
+    if profile_name == COMPLETE_QGRAM_MMAP_SUITE_PROFILE_NAME:
+        return get_qgram_mmap_suite_profile()
+    raise ValueError(f"Unsupported suite profile '{profile_name}'. Expected one of {SUITE_PROFILE_NAMES}.")
 
 
 def validate_mode_name(mode_name: str) -> ModeName:

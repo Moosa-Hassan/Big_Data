@@ -15,6 +15,8 @@ from query_eval.artifacts import (
     ensure_artifacts_for_datasets,
     validate_artifact_spec,
     validate_static_artifact_spec,
+    validate_static_qgram_index_artifact_spec,
+    validate_static_qgram_mmap_index_artifact_spec,
 )
 from query_eval.metrics import compute_correctness_measurement, sample_difference_lines
 from query_eval.queries import (
@@ -30,6 +32,8 @@ from query_eval.queries import (
 )
 from query_eval.registry import (
     ACTIVE_TEXT_DATASET_SLUGS,
+    COMPLETE_QGRAM_MMAP_SUITE_PROFILE_NAME,
+    COMPLETE_QGRAM_SUITE_PROFILE_NAME,
     COMPLETE_SUITE_PROFILE_NAME,
     MODE_NAMES,
     QUERY_IDS,
@@ -37,11 +41,30 @@ from query_eval.registry import (
     get_artifact_root,
     get_dataset_registry,
     get_dataset_spec,
+    get_qgram_mmap_suite_profile,
+    get_qgram_suite_profile,
     get_query_registry,
+    get_suite_profile,
 )
 from query_eval.runner import execute_cell_run
 from query_eval.specs import ArtifactSpec, CellRunSpec, RunConfig
-from query_eval.search_backends import keyword_search_loglite_static_bloom
+from query_eval.search_backends import (
+    keyword_search_loglite_static_bloom,
+    keyword_search_loglite_static_qgram_index,
+    keyword_search_loglite_static_qgram_index_mmap,
+    keyword_search_plaintext_file,
+)
+from query_eval.static_qgram_index import (
+    decode_static_record_from_paths,
+    intersect_sorted_postings,
+    load_static_qgram_mmap_index_header,
+    load_static_qgram_index,
+    open_static_qgram_mmap_index,
+    qgrams_for_bytes,
+    qgrams_for_query_term,
+    qgram_values_for_bytes,
+    qgram_values_for_query_term,
+)
 from query_eval.window_loader import load_l_window_from_txt
 
 QUERY_FUNCTIONS = {
@@ -75,7 +98,14 @@ class RegistryTests(unittest.TestCase):
     def test_mode_names_match_execution_contract(self) -> None:
         self.assertEqual(
             MODE_NAMES,
-            ("decompressed_text", "full_decompression", "minor_optimization", "static_bloom"),
+            (
+                "decompressed_text",
+                "full_decompression",
+                "minor_optimization",
+                "static_bloom",
+                "static_qgram_index",
+                "static_qgram_index_mmap",
+            ),
         )
 
     def test_complete_suite_profile_resolves_full_matrix(self) -> None:
@@ -84,6 +114,24 @@ class RegistryTests(unittest.TestCase):
         self.assertEqual(len(profile["datasets"]), 16)
         self.assertEqual(len(profile["queries"]), 8)
         self.assertEqual(len(profile["modes"]), 4)
+
+    def test_qgram_suite_profile_resolves_full_matrix(self) -> None:
+        profile = get_qgram_suite_profile()
+        self.assertEqual(COMPLETE_QGRAM_SUITE_PROFILE_NAME, "complete_qgram_evaluation")
+        self.assertEqual(profile, get_suite_profile(COMPLETE_QGRAM_SUITE_PROFILE_NAME))
+        self.assertEqual(len(profile["datasets"]), 16)
+        self.assertEqual(len(profile["queries"]), 8)
+        self.assertEqual(len(profile["modes"]), 5)
+        self.assertIn("static_qgram_index", profile["modes"])
+
+    def test_qgram_mmap_suite_profile_resolves_full_matrix(self) -> None:
+        profile = get_qgram_mmap_suite_profile()
+        self.assertEqual(COMPLETE_QGRAM_MMAP_SUITE_PROFILE_NAME, "complete_qgram_mmap_evaluation")
+        self.assertEqual(profile, get_suite_profile(COMPLETE_QGRAM_MMAP_SUITE_PROFILE_NAME))
+        self.assertEqual(len(profile["datasets"]), 16)
+        self.assertEqual(len(profile["queries"]), 8)
+        self.assertEqual(len(profile["modes"]), 6)
+        self.assertIn("static_qgram_index_mmap", profile["modes"])
 
     def test_query_metadata_is_complete(self) -> None:
         for query_id, query_spec in get_query_registry().items():
@@ -134,6 +182,14 @@ class ArtifactAndMetricsUnitTests(unittest.TestCase):
             artifact_spec.static_window_path,
             artifact_root / "Linux_2k.window.static.txt",
         )
+        self.assertEqual(
+            artifact_spec.static_qgram_index_path,
+            artifact_root / "Linux_2k.log.lite.static.qidx.json",
+        )
+        self.assertEqual(
+            artifact_spec.static_qgram_mmap_index_path,
+            artifact_root / "Linux_2k.log.lite.static.qidx2",
+        )
 
     def test_missing_artifact_validation_raises(self) -> None:
         missing_root = Path("/tmp/query_eval_missing_artifacts")
@@ -176,6 +232,35 @@ class ArtifactAndMetricsUnitTests(unittest.TestCase):
         self.assertEqual(false_negatives, ["line1", "line3"])
 
 
+class StaticQGramIndexUnitTests(unittest.TestCase):
+    """Fast unit checks for q-gram indexing primitives."""
+
+    def test_qgram_generation_for_short_and_long_terms(self) -> None:
+        self.assertEqual(qgrams_for_query_term("a"), (1, {"61"}))
+        self.assertEqual(qgrams_for_query_term("ab"), (2, {"6162"}))
+        self.assertEqual(qgrams_for_query_term("abcd"), (3, {"616263", "626364"}))
+        self.assertEqual(qgrams_for_query_term(""), (0, set()))
+
+    def test_qgram_value_generation_for_mmap_index(self) -> None:
+        self.assertEqual(qgram_values_for_query_term("a"), (1, {0x61}))
+        self.assertEqual(qgram_values_for_query_term("ab"), (2, {0x6162}))
+        self.assertEqual(qgram_values_for_query_term("abcd"), (3, {0x616263, 0x626364}))
+        self.assertEqual(qgram_values_for_query_term(""), (0, set()))
+
+    def test_qgrams_for_bytes_uses_unique_sliding_windows(self) -> None:
+        self.assertEqual(qgrams_for_bytes(b"ababa", 2), {"6162", "6261"})
+        self.assertEqual(qgrams_for_bytes(b"ab", 3), set())
+
+    def test_qgram_values_for_bytes_uses_unique_sliding_windows(self) -> None:
+        self.assertEqual(qgram_values_for_bytes(b"ababa", 2), {0x6162, 0x6261})
+        self.assertEqual(qgram_values_for_bytes(b"ab", 3), set())
+
+    def test_postings_intersection_returns_sorted_candidates(self) -> None:
+        postings = [[1, 2, 4, 7], [2, 3, 4, 9], [0, 2, 4]]
+        self.assertEqual(intersect_sorted_postings(postings), [2, 4])
+        self.assertEqual(intersect_sorted_postings([[1, 3], [2, 4]]), [])
+
+
 class IntegrationTests(unittest.TestCase):
     """Integration and regression checks against the real artifact pipeline."""
 
@@ -209,6 +294,16 @@ class IntegrationTests(unittest.TestCase):
             with self.subTest(dataset=dataset_slug):
                 validate_static_artifact_spec(self.artifact_specs[dataset_slug])
 
+    def test_static_qgram_indexes_exist_for_all_active_datasets(self) -> None:
+        for dataset_slug in ACTIVE_TEXT_DATASET_SLUGS:
+            with self.subTest(dataset=dataset_slug):
+                validate_static_qgram_index_artifact_spec(self.artifact_specs[dataset_slug])
+
+    def test_static_qgram_mmap_indexes_exist_for_all_active_datasets(self) -> None:
+        for dataset_slug in ACTIVE_TEXT_DATASET_SLUGS:
+            with self.subTest(dataset=dataset_slug):
+                validate_static_qgram_mmap_index_artifact_spec(self.artifact_specs[dataset_slug])
+
     def test_all_active_dataset_query_pairs_match_for_full_decompression(self) -> None:
         for dataset_slug in ACTIVE_TEXT_DATASET_SLUGS:
             for query_id, query_function in QUERY_FUNCTIONS.items():
@@ -231,6 +326,64 @@ class IntegrationTests(unittest.TestCase):
                     static_matches = run_query("static_bloom", dataset_slug, query_id)
                     self.assertIsInstance(static_matches, list)
 
+    def test_static_qgram_index_runs_for_all_active_dataset_query_pairs(self) -> None:
+        for dataset_slug in ACTIVE_TEXT_DATASET_SLUGS:
+            for query_id in QUERY_IDS:
+                with self.subTest(dataset=dataset_slug, query=query_id):
+                    static_matches = run_query("static_qgram_index", dataset_slug, query_id)
+                    self.assertIsInstance(static_matches, list)
+
+    def test_static_qgram_mmap_index_runs_for_all_active_dataset_query_pairs(self) -> None:
+        for dataset_slug in ACTIVE_TEXT_DATASET_SLUGS:
+            for query_id in QUERY_IDS:
+                with self.subTest(dataset=dataset_slug, query=query_id):
+                    static_matches = run_query("static_qgram_index_mmap", dataset_slug, query_id)
+                    self.assertIsInstance(static_matches, list)
+
+    def test_static_qgram_index_matches_all_active_dataset_query_pairs(self) -> None:
+        for dataset_slug in ACTIVE_TEXT_DATASET_SLUGS:
+            for query_id, query_function in QUERY_FUNCTIONS.items():
+                with self.subTest(dataset=dataset_slug, query=query_id):
+                    baseline_matches = query_function("decompressed_text", dataset_slug)
+                    qgram_matches = query_function("static_qgram_index", dataset_slug)
+                    self.assertEqual(set(baseline_matches), set(qgram_matches))
+
+    def test_static_qgram_mmap_index_matches_all_active_dataset_query_pairs(self) -> None:
+        for dataset_slug in ACTIVE_TEXT_DATASET_SLUGS:
+            for query_id, query_function in QUERY_FUNCTIONS.items():
+                with self.subTest(dataset=dataset_slug, query=query_id):
+                    baseline_matches = query_function("decompressed_text", dataset_slug)
+                    qgram_matches = query_function("static_qgram_index_mmap", dataset_slug)
+                    self.assertEqual(set(baseline_matches), set(qgram_matches))
+
+    def test_static_qgram_mmap_matches_json_qgram_for_all_active_dataset_query_pairs(self) -> None:
+        for dataset_slug in ACTIVE_TEXT_DATASET_SLUGS:
+            for query_id, query_function in QUERY_FUNCTIONS.items():
+                with self.subTest(dataset=dataset_slug, query=query_id):
+                    json_qgram_matches = query_function("static_qgram_index", dataset_slug)
+                    mmap_qgram_matches = query_function("static_qgram_index_mmap", dataset_slug)
+                    self.assertEqual(set(json_qgram_matches), set(mmap_qgram_matches))
+
+    def test_static_qgram_index_fixes_bloom_stress_substring_for_all_datasets(self) -> None:
+        exact_dataset_count = 0
+        for dataset_slug in ACTIVE_TEXT_DATASET_SLUGS:
+            with self.subTest(dataset=dataset_slug):
+                baseline_matches = run_query("decompressed_text", dataset_slug, "bloom_stress_substring")
+                qgram_matches = run_query("static_qgram_index", dataset_slug, "bloom_stress_substring")
+                self.assertEqual(set(baseline_matches), set(qgram_matches))
+                exact_dataset_count += 1
+        self.assertEqual(exact_dataset_count, 16)
+
+    def test_static_qgram_mmap_fixes_bloom_stress_substring_for_all_datasets(self) -> None:
+        exact_dataset_count = 0
+        for dataset_slug in ACTIVE_TEXT_DATASET_SLUGS:
+            with self.subTest(dataset=dataset_slug):
+                baseline_matches = run_query("decompressed_text", dataset_slug, "bloom_stress_substring")
+                qgram_matches = run_query("static_qgram_index_mmap", dataset_slug, "bloom_stress_substring")
+                self.assertEqual(set(baseline_matches), set(qgram_matches))
+                exact_dataset_count += 1
+        self.assertEqual(exact_dataset_count, 16)
+
     def test_static_bloom_linux_notebook_regression_queries_are_exact(self) -> None:
         linux_static_queries = (
             "kernel",
@@ -243,8 +396,6 @@ class IntegrationTests(unittest.TestCase):
         self.assertIsNotNone(artifact_spec.static_compressed_binary_path)
         self.assertIsNotNone(artifact_spec.static_window_path)
         parsed_static_window = load_l_window_from_txt(artifact_spec.static_window_path)
-
-        from query_eval.search_backends import keyword_search_plaintext_file
 
         for query_payload in linux_static_queries:
             with self.subTest(query=query_payload):
@@ -259,6 +410,179 @@ class IntegrationTests(unittest.TestCase):
                 )
                 self.assertEqual(set(baseline_matches), set(static_result.matches))
                 self.assertIsNotNone(static_result.bloom_rejected_records)
+
+    def test_static_qgram_index_linux_notebook_regression_queries_are_exact(self) -> None:
+        linux_static_queries = (
+            "kernel",
+            "28842",
+            "Jul  2",
+            "failed",
+            ("sshd", "failure"),
+        )
+        artifact_spec = self.artifact_specs["linux"]
+        self.assertIsNotNone(artifact_spec.static_compressed_binary_path)
+        self.assertIsNotNone(artifact_spec.static_window_path)
+        self.assertIsNotNone(artifact_spec.static_qgram_index_path)
+
+        for query_payload in linux_static_queries:
+            with self.subTest(query=query_payload):
+                baseline_matches = keyword_search_plaintext_file(
+                    artifact_spec.decompressed_text_path,
+                    query_payload,
+                )
+                qgram_result = keyword_search_loglite_static_qgram_index(
+                    artifact_spec.static_compressed_binary_path,
+                    artifact_spec.static_window_path,
+                    artifact_spec.static_qgram_index_path,
+                    query_payload,
+                )
+                self.assertEqual(set(baseline_matches), set(qgram_result.matches))
+                self.assertLessEqual(qgram_result.decoded_records or 0, qgram_result.total_records or 0)
+
+    def test_static_qgram_mmap_linux_notebook_regression_queries_are_exact(self) -> None:
+        linux_static_queries = (
+            "kernel",
+            "28842",
+            "Jul  2",
+            "failed",
+            ("sshd", "failure"),
+        )
+        artifact_spec = self.artifact_specs["linux"]
+        self.assertIsNotNone(artifact_spec.static_qgram_mmap_index_path)
+
+        for query_payload in linux_static_queries:
+            with self.subTest(query=query_payload):
+                baseline_matches = keyword_search_plaintext_file(
+                    artifact_spec.decompressed_text_path,
+                    query_payload,
+                )
+                qgram_result = keyword_search_loglite_static_qgram_index_mmap(
+                    artifact_spec.static_qgram_mmap_index_path,
+                    query_payload,
+                )
+                self.assertEqual(set(baseline_matches), set(qgram_result.matches))
+                self.assertLessEqual(qgram_result.decoded_records or 0, qgram_result.total_records or 0)
+
+    def test_static_qgram_mmap_header_and_lookup_for_linux(self) -> None:
+        artifact_spec = self.artifact_specs["linux"]
+        self.assertIsNotNone(artifact_spec.static_qgram_mmap_index_path)
+        header = load_static_qgram_mmap_index_header(artifact_spec.static_qgram_mmap_index_path)
+        self.assertEqual(header.version, 2)
+        self.assertGreater(header.record_count, 0)
+        self.assertEqual(header.q1_count, 256)
+        self.assertEqual(header.q2_count, 65536)
+        self.assertGreater(header.q3_count, 0)
+
+        handle, mmap_buffer, view = open_static_qgram_mmap_index(artifact_spec.static_qgram_mmap_index_path)
+        try:
+            self.assertGreater(len(view.get_postings(1, ord("k"))), 0)
+            self.assertGreater(len(view.get_postings(2, int.from_bytes(b"ke", "big"))), 0)
+            self.assertGreater(len(view.get_postings(3, int.from_bytes(b"ker", "big"))), 0)
+        finally:
+            mmap_buffer.close()
+            handle.close()
+
+    def test_static_qgram_mmap_line_slab_matches_static_decompression(self) -> None:
+        artifact_spec = self.artifact_specs["linux"]
+        self.assertIsNotNone(artifact_spec.static_qgram_mmap_index_path)
+        self.assertIsNotNone(artifact_spec.static_decompressed_text_path)
+        decompressed_lines = artifact_spec.static_decompressed_text_path.read_text(
+            encoding="utf-8",
+            errors="ignore",
+        ).splitlines()
+
+        handle, mmap_buffer, view = open_static_qgram_mmap_index(artifact_spec.static_qgram_mmap_index_path)
+        try:
+            sample_ids = {0, 1, view.record_count // 2, view.record_count - 1}
+            for record_id in sample_ids:
+                with self.subTest(record_id=record_id):
+                    self.assertEqual(decompressed_lines[record_id], view.line_bytes(record_id).decode("utf-8", "ignore"))
+        finally:
+            mmap_buffer.close()
+            handle.close()
+
+    def test_static_qgram_random_access_reconstruction_matches_static_decompression(self) -> None:
+        artifact_spec = self.artifact_specs["linux"]
+        self.assertIsNotNone(artifact_spec.static_compressed_binary_path)
+        self.assertIsNotNone(artifact_spec.static_window_path)
+        self.assertIsNotNone(artifact_spec.static_qgram_index_path)
+        self.assertIsNotNone(artifact_spec.static_decompressed_text_path)
+
+        parsed_static_window = load_l_window_from_txt(artifact_spec.static_window_path)
+        loaded_index = load_static_qgram_index(artifact_spec.static_qgram_index_path)
+        decompressed_lines = artifact_spec.static_decompressed_text_path.read_text(
+            encoding="utf-8",
+            errors="ignore",
+        ).splitlines()
+        sample_ids = {0, 1, len(loaded_index.record_directory) // 2, len(loaded_index.record_directory) - 1}
+
+        for record_id in sample_ids:
+            with self.subTest(record_id=record_id):
+                entry = loaded_index.record_directory[record_id]
+                reconstructed = decode_static_record_from_paths(
+                    artifact_spec.static_compressed_binary_path,
+                    parsed_static_window,
+                    entry,
+                )
+                self.assertEqual(decompressed_lines[record_id], reconstructed)
+
+    def test_static_qgram_sampled_substrings_are_never_missed(self) -> None:
+        for dataset_slug in ("linux", "apache", "android", "windows"):
+            artifact_spec = self.artifact_specs[dataset_slug]
+            self.assertIsNotNone(artifact_spec.static_compressed_binary_path)
+            self.assertIsNotNone(artifact_spec.static_window_path)
+            self.assertIsNotNone(artifact_spec.static_qgram_index_path)
+            lines = [
+                line
+                for line in artifact_spec.decompressed_text_path.read_text(
+                    encoding="utf-8",
+                    errors="ignore",
+                ).splitlines()
+                if len(line) >= 8
+            ][:3]
+
+            for line in lines:
+                for substring_length in (1, 2, 3, 5):
+                    substring = line[:substring_length]
+                    with self.subTest(dataset=dataset_slug, substring=substring):
+                        baseline_matches = keyword_search_plaintext_file(
+                            artifact_spec.decompressed_text_path,
+                            substring,
+                        )
+                        qgram_result = keyword_search_loglite_static_qgram_index(
+                            artifact_spec.static_compressed_binary_path,
+                            artifact_spec.static_window_path,
+                            artifact_spec.static_qgram_index_path,
+                            substring,
+                        )
+                        self.assertEqual(set(baseline_matches), set(qgram_result.matches))
+
+    def test_static_qgram_mmap_sampled_substrings_are_never_missed(self) -> None:
+        for dataset_slug in ("linux", "apache", "android", "windows"):
+            artifact_spec = self.artifact_specs[dataset_slug]
+            self.assertIsNotNone(artifact_spec.static_qgram_mmap_index_path)
+            lines = [
+                line
+                for line in artifact_spec.decompressed_text_path.read_text(
+                    encoding="utf-8",
+                    errors="ignore",
+                ).splitlines()
+                if len(line) >= 8
+            ][:3]
+
+            for line in lines:
+                for substring_length in (1, 2, 3, 5):
+                    substring = line[:substring_length]
+                    with self.subTest(dataset=dataset_slug, substring=substring):
+                        baseline_matches = keyword_search_plaintext_file(
+                            artifact_spec.decompressed_text_path,
+                            substring,
+                        )
+                        qgram_result = keyword_search_loglite_static_qgram_index_mmap(
+                            artifact_spec.static_qgram_mmap_index_path,
+                            substring,
+                        )
+                        self.assertEqual(set(baseline_matches), set(qgram_result.matches))
 
     def test_correctness_outputs_are_stable_across_repeated_runs(self) -> None:
         cell_run_spec = CellRunSpec(
@@ -288,6 +612,38 @@ class IntegrationTests(unittest.TestCase):
         self.assertEqual(first_record.result_lines, second_record.result_lines)
         self.assertEqual(first_record.correctness, second_record.correctness)
         self.assertEqual(first_record.bloom_rejected_records, second_record.bloom_rejected_records)
+
+    def test_static_qgram_correctness_outputs_are_stable_across_repeated_runs(self) -> None:
+        cell_run_spec = CellRunSpec(
+            dataset_slug="linux",
+            query_id="common_token",
+            mode_name="static_qgram_index",
+            repetition_index=0,
+            is_warmup=False,
+        )
+        first_record = execute_cell_run(cell_run_spec, self.no_profile_run_config, code_version="test")
+        second_record = execute_cell_run(cell_run_spec, self.no_profile_run_config, code_version="test")
+
+        self.assertEqual(first_record.result_lines, second_record.result_lines)
+        self.assertEqual(first_record.correctness, second_record.correctness)
+        self.assertEqual(first_record.decoded_records, second_record.decoded_records)
+        self.assertEqual(first_record.total_records, second_record.total_records)
+
+    def test_static_qgram_mmap_correctness_outputs_are_stable_across_repeated_runs(self) -> None:
+        cell_run_spec = CellRunSpec(
+            dataset_slug="linux",
+            query_id="common_token",
+            mode_name="static_qgram_index_mmap",
+            repetition_index=0,
+            is_warmup=False,
+        )
+        first_record = execute_cell_run(cell_run_spec, self.no_profile_run_config, code_version="test")
+        second_record = execute_cell_run(cell_run_spec, self.no_profile_run_config, code_version="test")
+
+        self.assertEqual(first_record.result_lines, second_record.result_lines)
+        self.assertEqual(first_record.correctness, second_record.correctness)
+        self.assertEqual(first_record.decoded_records, second_record.decoded_records)
+        self.assertEqual(first_record.total_records, second_record.total_records)
 
 
 if __name__ == "__main__":

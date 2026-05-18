@@ -26,7 +26,14 @@ from dataclasses import asdict, dataclass, is_dataclass
 from pathlib import Path
 from typing import Any, Literal
 
-ModeName = Literal["decompressed_text", "full_decompression", "minor_optimization", "static_bloom"]
+ModeName = Literal[
+    "decompressed_text",
+    "full_decompression",
+    "minor_optimization",
+    "static_bloom",
+    "static_qgram_index",
+    "static_qgram_index_mmap",
+]
 QueryPayload = str | tuple[str, ...]
 
 
@@ -94,6 +101,10 @@ class ArtifactSpec:
         static_decompressed_text_path: Full decompression output for the static
             bitstream.
         static_window_path: Static L-window dump consumed by `static_bloom`.
+        static_qgram_index_path: Sidecar exact q-gram index for the static
+            bitstream.
+        static_qgram_mmap_index_path: Binary mmap sidecar exact q-gram index
+            for the static bitstream.
 
     Returns:
         Not applicable. This is a value object.
@@ -109,6 +120,8 @@ class ArtifactSpec:
     static_compressed_binary_path: Path | None = None
     static_decompressed_text_path: Path | None = None
     static_window_path: Path | None = None
+    static_qgram_index_path: Path | None = None
+    static_qgram_mmap_index_path: Path | None = None
 
     def to_json_dict(self) -> dict[str, str | None]:
         """Return a JSON-safe mapping of artifact paths.
@@ -133,6 +146,12 @@ class ArtifactSpec:
                 str(self.static_decompressed_text_path) if self.static_decompressed_text_path else None
             ),
             "static_window_path": str(self.static_window_path) if self.static_window_path else None,
+            "static_qgram_index_path": (
+                str(self.static_qgram_index_path) if self.static_qgram_index_path else None
+            ),
+            "static_qgram_mmap_index_path": (
+                str(self.static_qgram_mmap_index_path) if self.static_qgram_mmap_index_path else None
+            ),
         }
 
 

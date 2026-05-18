@@ -1,0 +1,16 @@
+mode_name,query_group,cell_count,exact_cell_count,median_wall_time_ms,median_recall,median_f1,median_bloom_skip_rate
+decompressed_text,all_queries,128,128,0.6891250377520919,1.0,1.0,
+decompressed_text,token_safe_queries,112,112,0.6848437333246693,1.0,1.0,
+decompressed_text,stress_queries,16,16,0.77020849857945,1.0,1.0,
+full_decompression,all_queries,128,128,83.34749977802858,1.0,1.0,
+full_decompression,token_safe_queries,112,112,83.34749977802858,1.0,1.0,
+full_decompression,stress_queries,16,16,80.77673950174358,1.0,1.0,
+minor_optimization,all_queries,128,59,45.184989750850946,0.9915492957746479,0.9957567185289957,
+minor_optimization,token_safe_queries,112,52,43.792062264401466,0.9924413145539905,0.9962061184618223,
+minor_optimization,stress_queries,16,7,57.34633299289271,0.990042725488735,0.9949958758942096,
+static_bloom,all_queries,128,96,47.638375239330344,1.0,1.0,0.8182499999999999
+static_bloom,token_safe_queries,112,95,48.1520314788213,1.0,1.0,0.821
+static_bloom,stress_queries,16,1,43.0553542682901,0.13737025876500694,0.24148003894839337,0.78925
+static_qgram_index,all_queries,128,128,58.61182324588299,1.0,1.0,
+static_qgram_index,token_safe_queries,112,112,54.12761449406389,1.0,1.0,
+static_qgram_index,stress_queries,16,16,96.18121874518692,1.0,1.0,

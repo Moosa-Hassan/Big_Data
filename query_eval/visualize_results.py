@@ -14,18 +14,29 @@ import json
 from pathlib import Path
 from typing import Any
 
-MODE_ORDER = ["decompressed_text", "full_decompression", "minor_optimization", "static_bloom"]
+MODE_ORDER = [
+    "decompressed_text",
+    "full_decompression",
+    "minor_optimization",
+    "static_bloom",
+    "static_qgram_index",
+    "static_qgram_index_mmap",
+]
 MODE_LABELS = {
     "decompressed_text": "Decompressed Text",
     "full_decompression": "Full Decompression",
     "minor_optimization": "Minor Optimization",
     "static_bloom": "Static Bloom",
+    "static_qgram_index": "Static Q-Gram JSON",
+    "static_qgram_index_mmap": "Static Q-Gram mmap",
 }
 MODE_COLORS = {
     "decompressed_text": "#4C78A8",
     "full_decompression": "#F58518",
     "minor_optimization": "#54A24B",
     "static_bloom": "#B279A2",
+    "static_qgram_index": "#E45756",
+    "static_qgram_index_mmap": "#72B7B2",
 }
 QUERY_LABELS = {
     "common_token": "Common Token",
