@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from pathlib import Path
 
 from .artifacts import ensure_artifacts_for_datasets, stage_active_datasets
@@ -26,6 +27,7 @@ from .registry import (
     COMPLETE_QGRAM_SUITE_PROFILE_NAME,
     COMPLETE_SUITE_PROFILE_NAME,
     MODE_NAMES,
+    PUBLISHABILITY_QGRAM_COMPACT_PROFILE_NAME,
     QUERY_IDS,
     SUITE_PROFILE_NAMES,
     get_dataset_spec,
@@ -44,8 +46,18 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.command == "stage-datasets":
         dataset_specs = _resolve_dataset_specs(args.datasets)
-        stage_active_datasets(dataset_specs, refresh=args.refresh)
-        print(json.dumps({"staged_datasets": [dataset.slug for dataset in dataset_specs]}, sort_keys=True))
+        stage_active_datasets(
+            dataset_specs,
+            refresh=args.refresh,
+            scale=args.scale,
+            source_root=args.source_root,
+        )
+        print(
+            json.dumps(
+                {"staged_datasets": [dataset.slug for dataset in dataset_specs], "scale": args.scale},
+                sort_keys=True,
+            )
+        )
         return 0
 
     if args.command == "ensure-artifacts":
@@ -54,6 +66,9 @@ def main(argv: list[str] | None = None) -> int:
             dataset_specs,
             force_rebuild=args.force_rebuild,
             refresh_dataset=args.refresh_dataset,
+            scale=args.scale,
+            source_root=args.source_root,
+            record_build_metrics=args.record_build_metrics,
         )
         print(
             json.dumps(
@@ -77,6 +92,8 @@ def main(argv: list[str] | None = None) -> int:
             config_label=args.config_label,
             config_version=args.config_version,
             sample_difference_limit=args.sample_difference_limit,
+            scale=args.scale,
+            source_root=args.source_root,
         )
         cell_run_spec = CellRunSpec(
             dataset_slug=args.dataset,
@@ -94,6 +111,8 @@ def main(argv: list[str] | None = None) -> int:
         config_label = args.config_label or args.profile
         if args.config_version is not None:
             config_version = args.config_version
+        elif args.profile == PUBLISHABILITY_QGRAM_COMPACT_PROFILE_NAME:
+            config_version = "publishability.v1"
         elif args.profile == COMPLETE_QGRAM_MMAP_SUITE_PROFILE_NAME:
             config_version = "complete_qgram.v2"
         elif args.profile == COMPLETE_QGRAM_SUITE_PROFILE_NAME:
@@ -108,6 +127,9 @@ def main(argv: list[str] | None = None) -> int:
             config_label=config_label,
             config_version=config_version,
             sample_difference_limit=args.sample_difference_limit,
+            scale=args.scale,
+            source_root=args.source_root,
+            record_build_metrics=args.record_build_metrics,
         )
         results_directory = run_suite(
             dataset_slugs=args.datasets or list(suite_profile["datasets"]),
@@ -137,11 +159,16 @@ def _build_argument_parser() -> argparse.ArgumentParser:
     stage_parser = subparsers.add_parser("stage-datasets")
     stage_parser.add_argument("--datasets", nargs="*", default=None)
     stage_parser.add_argument("--refresh", action="store_true")
+    stage_parser.add_argument("--scale", choices=("2k", "10k", "100k", "full"), default="2k")
+    stage_parser.add_argument("--source-root", default=None)
 
     artifact_parser = subparsers.add_parser("ensure-artifacts")
     artifact_parser.add_argument("--datasets", nargs="*", default=None)
     artifact_parser.add_argument("--refresh-dataset", action="store_true")
     artifact_parser.add_argument("--force-rebuild", action="store_true")
+    artifact_parser.add_argument("--scale", choices=("2k", "10k", "100k", "full"), default="2k")
+    artifact_parser.add_argument("--source-root", default=None)
+    artifact_parser.add_argument("--record-build-metrics", action="store_true")
 
     cell_parser = subparsers.add_parser("run-cell")
     cell_parser.add_argument("--dataset", required=True)
@@ -155,6 +182,8 @@ def _build_argument_parser() -> argparse.ArgumentParser:
     cell_parser.add_argument("--code-version", default="unknown")
     cell_parser.add_argument("--profiling-enabled", default="true")
     cell_parser.add_argument("--strict-validation", default="true")
+    cell_parser.add_argument("--scale", choices=("2k", "10k", "100k", "full"), default="2k")
+    cell_parser.add_argument("--source-root", default=None)
 
     suite_parser = subparsers.add_parser("run-suite")
     suite_parser.add_argument("--profile", default=COMPLETE_SUITE_PROFILE_NAME, choices=SUITE_PROFILE_NAMES)
@@ -168,6 +197,9 @@ def _build_argument_parser() -> argparse.ArgumentParser:
     suite_parser.add_argument("--config-label", default=None)
     suite_parser.add_argument("--config-version", default=None)
     suite_parser.add_argument("--sample-difference-limit", type=int, default=10)
+    suite_parser.add_argument("--scale", choices=("2k", "10k", "100k", "full"), default="2k")
+    suite_parser.add_argument("--source-root", default=None)
+    suite_parser.add_argument("--record-build-metrics", action="store_true")
 
     reports_parser = subparsers.add_parser("build-reports")
     reports_parser.add_argument("--results-directory", required=True)
@@ -194,4 +226,8 @@ def _parse_bool(raw_value: str) -> bool:
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    try:
+        raise SystemExit(main())
+    except (FileNotFoundError, RuntimeError, ValueError) as error:
+        print(f"error: {error}", file=sys.stderr)
+        raise SystemExit(1)

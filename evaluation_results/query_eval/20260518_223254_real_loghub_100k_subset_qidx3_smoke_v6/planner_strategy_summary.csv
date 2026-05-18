@@ -1,0 +1,11 @@
+mode_name,query_group,planner_strategy,cell_count,exact_cell_count,median_wall_time_ms,median_verified_records,median_postings_ids_read
+static_qgram_index_mmap_compact,all_queries,line_slab_scan,2,2,38.50562497973442,56482.0,0.0
+static_qgram_index_mmap_compact,all_queries,postings_intersection,14,14,9.939062467310578,1917.0,15904.5
+static_qgram_index_mmap_compact,stress_queries,postings_intersection,2,2,11.397770547773689,8823.5,8823.5
+static_qgram_index_mmap_compact,token_safe_queries,line_slab_scan,2,2,38.50562497973442,56482.0,0.0
+static_qgram_index_mmap_compact,token_safe_queries,postings_intersection,12,12,9.09847900038585,1190.5,23361.5
+static_qgram_index_mmap_cpp,all_queries,cpp_line_slab_scan,2,2,7.441041991114616,56482.0,0.0
+static_qgram_index_mmap_cpp,all_queries,cpp_postings_intersection,14,14,3.3890834893099964,1917.0,15904.5
+static_qgram_index_mmap_cpp,stress_queries,cpp_postings_intersection,2,2,4.615291545633227,8823.5,8823.5
+static_qgram_index_mmap_cpp,token_safe_queries,cpp_line_slab_scan,2,2,7.441041991114616,56482.0,0.0
+static_qgram_index_mmap_cpp,token_safe_queries,cpp_postings_intersection,12,12,3.1653749174438417,1190.5,23361.5

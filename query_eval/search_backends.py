@@ -30,7 +30,9 @@ Source of truth:
 
 from __future__ import annotations
 
+import shutil
 import struct
+import subprocess
 from collections import deque
 from pathlib import Path
 
@@ -99,6 +101,101 @@ def keyword_search_plaintext_file(
                 matches.append(line)
 
     return matches
+
+
+def keyword_search_grep_plaintext_file(
+    text_path: Path,
+    query_keywords: str | tuple[str, ...] | list[str],
+) -> ModeRunResult:
+    """Run grep over plaintext, then exact-postfilter conjunctive payloads."""
+
+    return _keyword_search_external_plaintext_file(
+        text_path=text_path,
+        query_keywords=query_keywords,
+        executable="grep",
+        command_builder=lambda executable, term, path: [executable, "-F", "--", term, str(path)],
+        planner_strategy="grep_fixed_first_term",
+    )
+
+
+def keyword_search_ripgrep_plaintext_file(
+    text_path: Path,
+    query_keywords: str | tuple[str, ...] | list[str],
+) -> ModeRunResult:
+    """Run ripgrep over plaintext, then exact-postfilter conjunctive payloads."""
+
+    return _keyword_search_external_plaintext_file(
+        text_path=text_path,
+        query_keywords=query_keywords,
+        executable="rg",
+        command_builder=lambda executable, term, path: [
+            executable,
+            "--fixed-strings",
+            "--no-heading",
+            "--color",
+            "never",
+            "--",
+            term,
+            str(path),
+        ],
+        planner_strategy="ripgrep_fixed_first_term",
+    )
+
+
+def _keyword_search_external_plaintext_file(
+    text_path: Path,
+    query_keywords: str | tuple[str, ...] | list[str],
+    executable: str,
+    command_builder,
+    planner_strategy: str,
+) -> ModeRunResult:
+    """Run one external fixed-string baseline and preserve exact query semantics."""
+
+    if not text_path.exists():
+        raise FileNotFoundError(f"Plaintext artifact not found: {text_path}")
+    executable_path = shutil.which(executable)
+    if executable_path is None:
+        raise RuntimeError(f"The {executable!r} baseline requires {executable} on PATH.")
+
+    keywords = _normalize_query_keywords(query_keywords)
+    first_non_empty_term = next((keyword for keyword in keywords if keyword), None)
+    if first_non_empty_term is None:
+        matches = keyword_search_plaintext_file(text_path, keywords)
+        return ModeRunResult(
+            matches=matches,
+            verified_records=len(matches),
+            planner_strategy=f"{planner_strategy}_empty_query",
+        )
+
+    command = command_builder(executable_path, first_non_empty_term, text_path)
+    completed_process = subprocess.run(command, capture_output=True, text=True)
+    if completed_process.returncode not in (0, 1):
+        raise RuntimeError(
+            f"{executable} baseline failed.\n"
+            f"command: {' '.join(command)}\n"
+            f"stdout:\n{completed_process.stdout}\n"
+            f"stderr:\n{completed_process.stderr}"
+        )
+
+    if completed_process.returncode == 0:
+        candidate_lines = completed_process.stdout.split("\n")
+        if candidate_lines and candidate_lines[-1] == "":
+            candidate_lines.pop()
+    else:
+        candidate_lines = []
+    matches = [line for line in candidate_lines if all(keyword in line for keyword in keywords)]
+    return ModeRunResult(
+        matches=matches,
+        decoded_records=len(candidate_lines),
+        decoded_bytes=sum(len(line.encode("utf-8")) for line in candidate_lines),
+        skipped_records=None,
+        skipped_bytes=None,
+        fallback_count=0,
+        total_records=None,
+        planner_strategy=planner_strategy if len(keywords) == 1 else f"{planner_strategy}_hybrid_postfilter",
+        verified_records=len(candidate_lines),
+        verified_bytes=sum(len(line.encode("utf-8")) for line in candidate_lines),
+    )
 
 
 def keyword_search_loglite_binary_full_decompression(

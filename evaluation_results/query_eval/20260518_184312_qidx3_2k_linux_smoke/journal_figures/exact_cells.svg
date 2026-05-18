@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="430" viewBox="0 0 940 430" role="img"><rect width="100%" height="100%" fill="#ffffff" />
+<text x="470.0" y="28" text-anchor="middle" font-size="18" font-weight="700">Exact Cells by Mode</text>
+<line x1="210" y1="52" x2="210" y2="392" stroke="#333" />
+<line x1="210" y1="392" x2="898" y2="392" stroke="#333" />
+<text x="202" y="77.8" text-anchor="end" font-size="12">Decompressed Text (8/8)</text>
+<rect x="210" y="52.0" width="614.3" height="38.0" fill="#4C78A8" rx="3" />
+<text x="830.3" y="77.8" font-size="12">8.00 cells</text>
+<text x="202" y="125.8" text-anchor="end" font-size="12">Full Decompression (8/8)</text>
+<rect x="210" y="100.0" width="614.3" height="38.0" fill="#F58518" rx="3" />
+<text x="830.3" y="125.8" font-size="12">8.00 cells</text>
+<text x="202" y="173.8" text-anchor="end" font-size="12">Static Bloom (5/8)</text>
+<rect x="210" y="148.0" width="383.9" height="38.0" fill="#B279A2" rx="3" />
+<text x="599.9" y="173.8" font-size="12">5.00 cells</text>
+<text x="202" y="221.8" text-anchor="end" font-size="12">grep Plaintext (8/8)</text>
+<rect x="210" y="196.0" width="614.3" height="38.0" fill="#9D755D" rx="3" />
+<text x="830.3" y="221.8" font-size="12">8.00 cells</text>
+<text x="202" y="269.8" text-anchor="end" font-size="12">ripgrep Plaintext (8/8)</text>
+<rect x="210" y="244.0" width="614.3" height="38.0" fill="#BAB0AC" rx="3" />
+<text x="830.3" y="269.8" font-size="12">8.00 cells</text>
+<text x="202" y="317.8" text-anchor="end" font-size="12">Static Q-Gram qidx3 (8/8)</text>
+<rect x="210" y="292.0" width="614.3" height="38.0" fill="#EECA3B" rx="3" />
+<text x="830.3" y="317.8" font-size="12">8.00 cells</text>
+<text x="202" y="365.8" text-anchor="end" font-size="12">Static Q-Gram qidx3 C++ (8/8)</text>
+<rect x="210" y="340.0" width="614.3" height="38.0" fill="#FF9DA6" rx="3" />
+<text x="830.3" y="365.8" font-size="12">8.00 cells</text>
+</svg>

@@ -4,11 +4,25 @@ This package is the canonical execution and reporting layer for the LogLite comp
 
 The older `main.ipynb` notebook is historical context. New experiment execution should live here so results are reproducible, inspectable, and easy to rerun.
 
+## Current Status
+
+The package has grown beyond the original part-2 prototype. It now supports the
+full 16-dataset 2k suite, static Bloom, exact q-gram sidecars, qidx2 mmap, and
+the publishability qidx3 path for scaled real-LogHub evaluation.
+
+The most current publishability handoff is:
+
+```text
+query_eval/PUBLISHABILITY_QIDX3.md
+```
+
+Use that document for 10k/100k/full-scale qidx3 runs.
+
 ## Research Question
 
 The project asks whether simple search queries over LogLite-compressed logs can be answered directly from compressed artifacts, or with limited reconstruction, while measuring the correctness and performance tradeoffs against a decompressed-text baseline.
 
-The part-2 evaluation matrix is:
+The original part-2 evaluation matrix was:
 
 - 5 active datasets
 - 4 query families
@@ -25,6 +39,13 @@ The part-2 evaluation matrix is:
 | `decompressed_text` | Baseline that scans decompressed text generated from the `.lite.b` file. | Source of truth. |
 | `full_decompression` | Reads the `.lite.b` bitstream and reconstructs lines while preserving LogLite window state. | Should match baseline exactly. |
 | `minor_optimization` | Uses final L-window hints to skip many lines and reconstruct only likely candidates. | Experimental; may lose recall. |
+| `static_bloom` | Static L-window plus per-record token bitmap filtering. | Exact for many token-safe cells, but not arbitrary substrings. |
+| `static_qgram_index` | JSON sidecar q-gram index. | Exact, but JSON loading is slow. |
+| `static_qgram_index_mmap` | qidx2 binary mmap sidecar for 2k datasets. | Exact on the 16-dataset 2k suite. |
+| `static_qgram_index_mmap_compact` | qidx3 compact binary mmap sidecar with planner, delta-varint postings, and a baseline-normalized decoded line slab. | Exact scaled reference mode. |
+| `static_qgram_index_mmap_cpp` | Native C++ qidx3 mmap postings search with the same planner and slab verification. | Exact native comparator. |
+| `grep_plaintext` | External grep baseline over decompressed text, with Python post-filter for conjunctive queries. | Exact external comparator. |
+| `ripgrep_plaintext` | External ripgrep baseline over decompressed text, with Python post-filter for conjunctive queries. | Exact external comparator. |
 
 `minor_optimization` is allowed to be imperfect. False negatives in this mode are research findings, not automatically bugs.
 
@@ -38,12 +59,17 @@ The part-2 evaluation matrix is:
 | `openstack` | OpenStack | 295 | 131 |
 | `android` | Android | 123 | 720 |
 
-The registered query families are:
+The complete 16-dataset suite is registered in `query_eval.registry`. The
+current locked query families are:
 
-- `common`
-- `phrase`
-- `selective`
+- `common_token`
+- `medium_token`
+- `rare_token`
+- `common_phrase`
+- `selective_phrase`
+- `numeric_identifier`
 - `conjunctive`
+- `bloom_stress_substring`
 
 Public query functions are available in `query_eval.queries`:
 
@@ -104,6 +130,33 @@ python3 -m query_eval.cli run-suite \
   --config-label part2_research_eval
 ```
 
+Run the qidx3 publishability profile on real 100k samples after placing full
+LogHub source files under `dataset/loghub_full/<Dataset>/<Dataset>.log`:
+
+```bash
+python3 -m query_eval.cli stage-datasets \
+  --scale 100k \
+  --source-root dataset/loghub_full
+```
+
+```bash
+python3 -m query_eval.cli ensure-artifacts \
+  --scale 100k \
+  --source-root dataset/loghub_full \
+  --record-build-metrics
+```
+
+```bash
+python3 -m query_eval.cli run-suite \
+  --profile publishability_qgram_compact_evaluation \
+  --scale 100k \
+  --source-root dataset/loghub_full \
+  --repetitions 10 \
+  --warmups 2 \
+  --config-label publishability_100k_qgram_compact \
+  --config-version publishability.v1
+```
+
 Rebuild reports from an existing raw ledger:
 
 ```bash
@@ -152,6 +205,11 @@ Each suite run writes to `evaluation_results/query_eval/<run_dir>/`.
 | `query_level_aggregate.csv` | Summaries by query family and mode. |
 | `dataset_level_aggregate.csv` | Summaries by dataset and mode. |
 | `suite_summary.csv` | Top-level mode comparison. |
+| `external_baseline_summary.csv` | grep/ripgrep comparison rows for publishability runs. |
+| `planner_strategy_summary.csv` | qidx3 planner strategy and verification-work summary. |
+| `qidx_size_summary.csv` | qidx3/raw/static-compressed/qidx2 size ratios. |
+| `amortization_summary.csv` | Break-even query count estimates when build metrics are recorded. |
+| `adversarial_publishability_report.md` | Explicit overclaim and risk audit. |
 
 Raw records include timing, CPU, peak RSS, match count, result lines, exact-set match, TP/FP/FN, precision, recall, F1, sampled false positives, sampled false negatives, artifact paths, config labels, and placeholders for future instrumentation.
 
@@ -202,6 +260,7 @@ Do not rebuild the query engine in a notebook. The package is the source of trut
 
 - [Big Data Project README](../readme.md)
 - [Original LogLite README](../loglite/readme.md)
+- [qidx3 Publishability Pack](PUBLISHABILITY_QIDX3.md)
 
 ## Complete Static-Bloom Evaluation
 

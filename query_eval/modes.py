@@ -22,15 +22,19 @@ from __future__ import annotations
 
 from .registry import validate_mode_name
 from .search_backends import (
+    keyword_search_grep_plaintext_file,
     keyword_search_loglite_binary_full_decompression,
     keyword_search_loglite_binary_minor_optimization,
     keyword_search_loglite_static_bloom,
     keyword_search_plaintext_file,
+    keyword_search_ripgrep_plaintext_file,
 )
 from .specs import ArtifactSpec, ModeRunResult, QueryPayload
 from .static_qgram_index import (
     keyword_search_loglite_static_qgram_index,
     keyword_search_loglite_static_qgram_index_mmap,
+    keyword_search_loglite_static_qgram_index_mmap_compact,
+    keyword_search_loglite_static_qgram_index_mmap_cpp,
 )
 from .window_loader import load_l_window_from_txt
 
@@ -80,7 +84,17 @@ def run_mode_query_result(
         return _run_static_bloom_mode(artifact_spec, query_payload)
     if validated_mode == "static_qgram_index":
         return _run_static_qgram_index_mode(artifact_spec, query_payload)
-    return _run_static_qgram_index_mmap_mode(artifact_spec, query_payload)
+    if validated_mode == "static_qgram_index_mmap":
+        return _run_static_qgram_index_mmap_mode(artifact_spec, query_payload)
+    if validated_mode == "static_qgram_index_mmap_compact":
+        return _run_static_qgram_index_mmap_compact_mode(artifact_spec, query_payload)
+    if validated_mode == "static_qgram_index_mmap_cpp":
+        return _run_static_qgram_index_mmap_cpp_mode(artifact_spec, query_payload)
+    if validated_mode == "grep_plaintext":
+        return _run_grep_plaintext_mode(artifact_spec, query_payload)
+    if validated_mode == "ripgrep_plaintext":
+        return _run_ripgrep_plaintext_mode(artifact_spec, query_payload)
+    raise ValueError(f"Unsupported mode '{validated_mode}'.")
 
 
 def _run_decompressed_text_mode(artifact_spec: ArtifactSpec, query_payload: QueryPayload) -> ModeRunResult:
@@ -161,3 +175,45 @@ def _run_static_qgram_index_mmap_mode(artifact_spec: ArtifactSpec, query_payload
         artifact_spec.static_qgram_mmap_index_path,
         query_payload,
     )
+
+
+def _run_static_qgram_index_mmap_compact_mode(
+    artifact_spec: ArtifactSpec,
+    query_payload: QueryPayload,
+) -> ModeRunResult:
+    """Execute exact indexed static search over the compact qidx3 sidecar."""
+
+    if artifact_spec.static_qgram_compact_index_path is None:
+        raise FileNotFoundError("ArtifactSpec does not include static compact q-gram artifact paths.")
+
+    return keyword_search_loglite_static_qgram_index_mmap_compact(
+        artifact_spec.static_qgram_compact_index_path,
+        query_payload,
+    )
+
+
+def _run_static_qgram_index_mmap_cpp_mode(
+    artifact_spec: ArtifactSpec,
+    query_payload: QueryPayload,
+) -> ModeRunResult:
+    """Execute exact native mmap search over the compact qidx3 sidecar."""
+
+    if artifact_spec.static_qgram_compact_index_path is None:
+        raise FileNotFoundError("ArtifactSpec does not include static compact q-gram artifact paths.")
+
+    return keyword_search_loglite_static_qgram_index_mmap_cpp(
+        artifact_spec.static_qgram_compact_index_path,
+        query_payload,
+    )
+
+
+def _run_grep_plaintext_mode(artifact_spec: ArtifactSpec, query_payload: QueryPayload) -> ModeRunResult:
+    """Execute the grep plaintext external baseline."""
+
+    return keyword_search_grep_plaintext_file(artifact_spec.decompressed_text_path, query_payload)
+
+
+def _run_ripgrep_plaintext_mode(artifact_spec: ArtifactSpec, query_payload: QueryPayload) -> ModeRunResult:
+    """Execute the ripgrep plaintext external baseline."""
+
+    return keyword_search_ripgrep_plaintext_file(artifact_spec.decompressed_text_path, query_payload)

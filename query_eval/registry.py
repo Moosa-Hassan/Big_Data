@@ -40,6 +40,10 @@ MODE_NAMES: tuple[ModeName, ...] = (
     "static_bloom",
     "static_qgram_index",
     "static_qgram_index_mmap",
+    "static_qgram_index_mmap_compact",
+    "static_qgram_index_mmap_cpp",
+    "grep_plaintext",
+    "ripgrep_plaintext",
 )
 STATIC_SUITE_MODE_NAMES: tuple[ModeName, ...] = (
     "decompressed_text",
@@ -61,6 +65,15 @@ QGRAM_MMAP_SUITE_MODE_NAMES: tuple[ModeName, ...] = (
     "static_bloom",
     "static_qgram_index",
     "static_qgram_index_mmap",
+)
+PUBLISHABILITY_QGRAM_COMPACT_MODE_NAMES: tuple[ModeName, ...] = (
+    "decompressed_text",
+    "full_decompression",
+    "static_bloom",
+    "grep_plaintext",
+    "ripgrep_plaintext",
+    "static_qgram_index_mmap_compact",
+    "static_qgram_index_mmap_cpp",
 )
 BASELINE_MODE_NAME: ModeName = "decompressed_text"
 QUERY_IDS: tuple[str, ...] = (
@@ -102,10 +115,12 @@ ACTIVE_TEXT_DATASET_SLUGS: tuple[str, ...] = COMPLETE_TEXT_DATASET_SLUGS
 COMPLETE_SUITE_PROFILE_NAME = "complete_static_evaluation"
 COMPLETE_QGRAM_SUITE_PROFILE_NAME = "complete_qgram_evaluation"
 COMPLETE_QGRAM_MMAP_SUITE_PROFILE_NAME = "complete_qgram_mmap_evaluation"
+PUBLISHABILITY_QGRAM_COMPACT_PROFILE_NAME = "publishability_qgram_compact_evaluation"
 SUITE_PROFILE_NAMES = (
     COMPLETE_SUITE_PROFILE_NAME,
     COMPLETE_QGRAM_SUITE_PROFILE_NAME,
     COMPLETE_QGRAM_MMAP_SUITE_PROFILE_NAME,
+    PUBLISHABILITY_QGRAM_COMPACT_PROFILE_NAME,
 )
 LOGHUB_RAW_BASE_URL = "https://raw.githubusercontent.com/logpai/loghub/master"
 
@@ -455,6 +470,16 @@ def get_qgram_mmap_suite_profile() -> dict[str, tuple[str, ...]]:
     }
 
 
+def get_publishability_qgram_compact_profile() -> dict[str, tuple[str, ...]]:
+    """Return the publishability profile for compact qidx3 evaluation."""
+
+    return {
+        "datasets": COMPLETE_TEXT_DATASET_SLUGS,
+        "queries": QUERY_IDS,
+        "modes": PUBLISHABILITY_QGRAM_COMPACT_MODE_NAMES,
+    }
+
+
 def get_suite_profile(profile_name: str) -> dict[str, tuple[str, ...]]:
     """Return a named suite profile."""
 
@@ -464,6 +489,8 @@ def get_suite_profile(profile_name: str) -> dict[str, tuple[str, ...]]:
         return get_qgram_suite_profile()
     if profile_name == COMPLETE_QGRAM_MMAP_SUITE_PROFILE_NAME:
         return get_qgram_mmap_suite_profile()
+    if profile_name == PUBLISHABILITY_QGRAM_COMPACT_PROFILE_NAME:
+        return get_publishability_qgram_compact_profile()
     raise ValueError(f"Unsupported suite profile '{profile_name}'. Expected one of {SUITE_PROFILE_NAMES}.")
 
 

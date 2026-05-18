@@ -1,0 +1,129 @@
+dataset_slug,query_id,family,payload,token_safe,is_stress_query,expected_selectivity_band
+android,common_token,high_hit_token,2227,True,False,high
+apache,common_token,high_hit_token,Mon,True,False,high
+bgl,common_token,high_hit_token,U11,True,False,high
+hadoop,common_token,high_hit_token,ipc,True,False,high
+hdfs,common_token,high_hit_token,081111,True,False,high
+healthapp,common_token,high_hit_token,LSC,True,False,high
+hpc,common_token,high_hit_token,node,True,False,high
+linux,common_token,high_hit_token,2005,True,False,high
+mac,common_token,high_hit_token,kernel,True,False,high
+openssh,common_token,high_hit_token,183,True,False,high
+openstack,common_token,high_hit_token,GET,True,False,high
+proxifier,common_token,high_hit_token,bytes,True,False,high
+spark,common_token,high_hit_token,executor,True,False,high
+thunderbird,common_token,high_hit_token,gmetad,True,False,high
+windows,common_token,high_hit_token,initialized,True,False,high
+zookeeper,common_token,high_hit_token,SendWorker,True,False,high
+android,medium_token,medium_hit_token,ActivityManager,True,False,medium
+apache,medium_token,medium_hit_token,state,True,False,medium
+bgl,medium_token,medium_hit_token,alignment,True,False,medium
+hadoop,medium_token,medium_hit_token,Progress,True,False,medium
+hdfs,medium_token,medium_hit_token,delete,True,False,medium
+healthapp,medium_token,medium_hit_token,calculateAltitudeWithCache,True,False,medium
+hpc,medium_token,medium_hit_token,normal,True,False,medium
+linux,medium_token,medium_hit_token,session,True,False,medium
+mac,medium_token,medium_hit_token,ARPT,True,False,medium
+openssh,medium_token,medium_hit_token,103,True,False,medium
+openstack,medium_token,medium_hit_token,manager,True,False,medium
+proxifier,medium_token,medium_hit_token,sec,True,False,medium
+spark,medium_token,medium_hit_token,locally,True,False,medium
+thunderbird,medium_token,medium_hit_token,src,True,False,medium
+windows,medium_token,medium_hit_token,Failed,True,False,medium
+zookeeper,medium_token,medium_hit_token,Factory,True,False,medium
+android,rare_token,low_hit_token,10113,True,False,low
+apache,rare_token,low_hit_token,client,True,False,low
+bgl,rare_token,low_hit_token,files,True,False,low
+hadoop,rare_token,low_hit_token,000008,True,False,low
+hdfs,rare_token,low_hit_token,179,True,False,low
+healthapp,rare_token,low_hit_token,Type,True,False,low
+hpc,rare_token,low_hit_token,0N01,True,False,low
+linux,rare_token,low_hit_token,136,True,False,low
+mac,rare_token,low_hit_token,161,True,False,low
+openssh,rare_token,low_hit_token,207,True,False,low
+openstack,rare_token,low_hit_token,1583,True,False,low
+proxifier,rare_token,low_hit_token,SGTool,True,False,low
+spark,rare_token,low_hit_token,2364,True,False,low
+thunderbird,rare_token,low_hit_token,closed,True,False,low
+windows,rare_token,low_hit_token,Windows,True,False,low
+zookeeper,rare_token,low_hit_token,001,True,False,low
+android,common_phrase,common_phrase,dockedStackBounds=Rect,True,False,medium_high
+apache,common_phrase,common_phrase,child workerEnv,True,False,medium_high
+bgl,common_phrase,common_phrase,alignment exceptions,True,False,medium_high
+hadoop,common_phrase,common_phrase,170:8030,True,False,medium_high
+hdfs,common_phrase,common_phrase,delete: blk,True,False,medium_high
+healthapp,common_phrase,common_phrase,android.intent,True,False,medium_high
+hpc,common_phrase,common_phrase,gige7 gige,True,False,medium_high
+linux,common_phrase,common_phrase,session closed,True,False,medium_high
+mac,common_phrase,common_phrase,Pro kernel,True,False,medium_high
+openssh,common_phrase,common_phrase,invalid user,True,False,medium_high
+openstack,common_phrase,common_phrase,metadata.wsgi,True,False,medium_high
+proxifier,common_phrase,common_phrase,google.com,True,False,medium_high
+spark,common_phrase,common_phrase,storage.MemoryStore,True,False,medium_high
+thunderbird,common_phrase,common_phrase,sm1 Nov,True,False,medium_high
+windows,common_phrase,common_phrase,attribute name,True,False,medium_high
+zookeeper,common_phrase,common_phrase,NIOServerCxn.Factory,True,False,medium_high
+android,selective_phrase,selective_phrase,"10111,tag",True,False,low
+apache,selective_phrase,selective_phrase,child init,True,False,low
+bgl,selective_phrase,selective_phrase,address: 0x00004ed8,True,False,low
+hadoop,selective_phrase,selective_phrase,jvm_1445144423722,True,False,low
+hdfs,selective_phrase,selective_phrase,251.125,True,False,low
+healthapp,selective_phrase,selective_phrase,650|Step,True,False,low
+hpc,selective_phrase,selective_phrase,boot_cmd,True,False,low
+linux,selective_phrase,selective_phrase,116  user,True,False,low
+mac,selective_phrase,selective_phrase,10018]: button,True,False,low
+openssh,selective_phrase,selective_phrase,123.235,True,False,low
+openstack,selective_phrase,selective_phrase,176 time,True,False,low
+proxifier,selective_phrase,selective_phrase,5070 - Could,True,False,low
+spark,selective_phrase,selective_phrase,2128 bytes,True,False,low
+thunderbird,selective_phrase,selective_phrase,dhcpd: DHCPDISCOVER,True,False,low
+windows,selective_phrase,selective_phrase,Session: 30546173,True,False,low
+zookeeper,selective_phrase,selective_phrase,575] - ******* GOODBYE,True,False,low
+android,numeric_identifier,numeric_identifier,28601,True,False,low_medium
+apache,numeric_identifier,numeric_identifier,218,True,False,low_medium
+bgl,numeric_identifier,numeric_identifier,R00,True,False,low_medium
+hadoop,numeric_identifier,numeric_identifier,000005,True,False,low_medium
+hdfs,numeric_identifier,numeric_identifier,123,True,False,low_medium
+healthapp,numeric_identifier,numeric_identifier,149,True,False,low_medium
+hpc,numeric_identifier,numeric_identifier,0N03,True,False,low_medium
+linux,numeric_identifier,numeric_identifier,107,True,False,low_medium
+mac,numeric_identifier,numeric_identifier,195,True,False,low_medium
+openssh,numeric_identifier,numeric_identifier,151,True,False,low_medium
+openstack,numeric_identifier,numeric_identifier,1759,True,False,low_medium
+proxifier,numeric_identifier,numeric_identifier,clients6,True,False,low_medium
+spark,numeric_identifier,numeric_identifier,piece0,True,False,low_medium
+thunderbird,numeric_identifier,numeric_identifier,1131567060,True,False,low_medium
+windows,numeric_identifier,numeric_identifier,30546173,True,False,low_medium
+zookeeper,numeric_identifier,numeric_identifier,774,True,False,low_medium
+android,conjunctive,multi_keyword_conjunction,dockedStackBounds && Rect,True,False,medium
+apache,conjunctive,multi_keyword_conjunction,child && workerEnv,True,False,medium
+bgl,conjunctive,multi_keyword_conjunction,alignment && exceptions,True,False,medium
+hadoop,conjunctive,multi_keyword_conjunction,170 && 8030,True,False,medium
+hdfs,conjunctive,multi_keyword_conjunction,delete && blk,True,False,medium
+healthapp,conjunctive,multi_keyword_conjunction,android && intent,True,False,medium
+hpc,conjunctive,multi_keyword_conjunction,gige7 && gige,True,False,medium
+linux,conjunctive,multi_keyword_conjunction,session && closed,True,False,medium
+mac,conjunctive,multi_keyword_conjunction,Pro && kernel,True,False,medium
+openssh,conjunctive,multi_keyword_conjunction,invalid && user,True,False,medium
+openstack,conjunctive,multi_keyword_conjunction,metadata && wsgi,True,False,medium
+proxifier,conjunctive,multi_keyword_conjunction,google && com,True,False,medium
+spark,conjunctive,multi_keyword_conjunction,storage && MemoryStore,True,False,medium
+thunderbird,conjunctive,multi_keyword_conjunction,sm1 && Nov,True,False,medium
+windows,conjunctive,multi_keyword_conjunction,attribute && name,True,False,medium
+zookeeper,conjunctive,multi_keyword_conjunction,NIOServerCxn && Factory,True,False,medium
+android,bloom_stress_substring,substring_stress,22,False,True,stress
+apache,bloom_stress_substring,substring_stress,Mo,False,True,stress
+bgl,bloom_stress_substring,substring_stress,U1,False,True,stress
+hadoop,bloom_stress_substring,substring_stress,ip,False,True,stress
+hdfs,bloom_stress_substring,substring_stress,811,False,True,stress
+healthapp,bloom_stress_substring,substring_stress,LS,False,True,stress
+hpc,bloom_stress_substring,substring_stress,no,False,True,stress
+linux,bloom_stress_substring,substring_stress,20,False,True,stress
+mac,bloom_stress_substring,substring_stress,ern,False,True,stress
+openssh,bloom_stress_substring,substring_stress,18,False,True,stress
+openstack,bloom_stress_substring,substring_stress,GE,False,True,stress
+proxifier,bloom_stress_substring,substring_stress,yte,False,True,stress
+spark,bloom_stress_substring,substring_stress,xec,False,True,stress
+thunderbird,bloom_stress_substring,substring_stress,met,False,True,stress
+windows,bloom_stress_substring,substring_stress,nit,False,True,stress
+zookeeper,bloom_stress_substring,substring_stress,end,False,True,stress

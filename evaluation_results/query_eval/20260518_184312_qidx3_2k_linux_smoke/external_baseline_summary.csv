@@ -1,0 +1,17 @@
+dataset_slug,query_id,mode_name,token_safe,is_stress_query,median_wall_time_ms,exact_set_match,speedup_vs_qidx3_python,speedup_vs_qidx3_cpp,baseline_label
+linux,bloom_stress_substring,grep_plaintext,False,True,5.563416983932257,True,0.8503241765724223,0.5569868356548111,external_single_term_or_phrase
+linux,bloom_stress_substring,ripgrep_plaintext,False,True,4.706916050054133,True,1.0050546717817113,0.6583397681955732,external_single_term_or_phrase
+linux,common_phrase,grep_plaintext,True,False,3.519000019878149,True,1.608281036311391,0.7709337838651474,external_single_term_or_phrase
+linux,common_phrase,ripgrep_plaintext,True,False,3.807583008892834,True,1.4863867670202446,0.7125034423176109,external_single_term_or_phrase
+linux,common_token,grep_plaintext,True,False,6.882124929688871,True,1.071265503767165,0.7999648426020514,external_single_term_or_phrase
+linux,common_token,ripgrep_plaintext,True,False,33.22112490423024,True,0.22192454503107206,0.1657216003978592,external_single_term_or_phrase
+linux,conjunctive,grep_plaintext,True,False,3.620041999965906,True,1.1994565268425534,0.9448785635056222,hybrid_external_postfilter
+linux,conjunctive,ripgrep_plaintext,True,False,4.015750018879771,True,1.0812632718394506,0.8517711681943747,hybrid_external_postfilter
+linux,medium_token,grep_plaintext,True,False,3.5576659720391035,True,1.3103394103386643,2.9728527553460364,external_single_term_or_phrase
+linux,medium_token,ripgrep_plaintext,True,False,4.107499960809946,True,1.1349360867831664,2.574903758609349,external_single_term_or_phrase
+linux,numeric_identifier,grep_plaintext,True,False,4.133624956011772,True,0.8991805070964026,4.125071872002048,external_single_term_or_phrase
+linux,numeric_identifier,ripgrep_plaintext,True,False,4.119875025935471,True,0.9021814886846102,4.138839146359324,external_single_term_or_phrase
+linux,rare_token,grep_plaintext,True,False,4.090042086318135,True,0.9734924470573327,0.7896109303355682,external_single_term_or_phrase
+linux,rare_token,ripgrep_plaintext,True,False,4.17879200540483,True,0.9528172433630353,0.7728410346129255,external_single_term_or_phrase
+linux,selective_phrase,grep_plaintext,True,False,4.06700000166893,True,1.5413491651301103,0.6778133693221841,external_single_term_or_phrase
+linux,selective_phrase,ripgrep_plaintext,True,False,9.3867500545457,True,0.6678208134583118,0.29367640111281973,external_single_term_or_phrase

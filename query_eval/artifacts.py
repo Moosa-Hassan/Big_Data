@@ -32,6 +32,7 @@ import platform
 import shutil
 import stat
 import subprocess
+import time
 import urllib.error
 import urllib.request
 from pathlib import Path
@@ -44,10 +45,21 @@ from .registry import (
     get_project_root,
     get_runtime_root,
 )
-from .specs import ArtifactSpec, DatasetSpec
+from .specs import ArtifactSpec, DatasetSpec, ScaleName
+
+SCALE_LINE_LIMITS: dict[ScaleName, int | None] = {
+    "2k": 2000,
+    "10k": 10000,
+    "100k": 100000,
+    "full": None,
+}
 
 
-def build_artifact_spec(dataset_spec: DatasetSpec) -> ArtifactSpec:
+def build_artifact_spec(
+    dataset_spec: DatasetSpec,
+    scale: ScaleName = "2k",
+    source_root: Path | str | None = None,
+) -> ArtifactSpec:
     """Construct canonical artifact paths for one dataset.
 
     Purpose:
@@ -60,18 +72,25 @@ def build_artifact_spec(dataset_spec: DatasetSpec) -> ArtifactSpec:
         repository.
     """
 
-    artifact_root = get_artifact_root()
-    sample_stem = Path(dataset_spec.sample_log_filename).stem
+    artifact_root = _artifact_root_for_scale(scale)
+    raw_log_path = _raw_log_path_for_scale(dataset_spec, scale)
+    source_raw_log_path = _source_raw_log_path(dataset_spec, source_root) if scale != "2k" else None
+    sample_filename = _sample_filename_for_scale(dataset_spec, scale)
+    sample_stem = Path(sample_filename).stem
     return ArtifactSpec(
-        raw_log_path=get_dataset_raw_path(dataset_spec),
-        compressed_binary_path=artifact_root / f"{dataset_spec.sample_log_filename}.lite.b",
-        decompressed_text_path=artifact_root / f"{dataset_spec.sample_log_filename}.lite.decom",
+        raw_log_path=raw_log_path,
+        scale=scale,
+        effective_line_count=_count_lines(raw_log_path) if raw_log_path.exists() else None,
+        source_raw_log_path=source_raw_log_path,
+        compressed_binary_path=artifact_root / f"{sample_filename}.lite.b",
+        decompressed_text_path=artifact_root / f"{sample_filename}.lite.decom",
         window_path=artifact_root / f"{sample_stem}.window.txt",
-        static_compressed_binary_path=artifact_root / f"{dataset_spec.sample_log_filename}.lite.static.b",
-        static_decompressed_text_path=artifact_root / f"{dataset_spec.sample_log_filename}.lite.static.decom",
+        static_compressed_binary_path=artifact_root / f"{sample_filename}.lite.static.b",
+        static_decompressed_text_path=artifact_root / f"{sample_filename}.lite.static.decom",
         static_window_path=artifact_root / f"{sample_stem}.window.static.txt",
-        static_qgram_index_path=artifact_root / f"{dataset_spec.sample_log_filename}.lite.static.qidx.json",
-        static_qgram_mmap_index_path=artifact_root / f"{dataset_spec.sample_log_filename}.lite.static.qidx2",
+        static_qgram_index_path=artifact_root / f"{sample_filename}.lite.static.qidx.json",
+        static_qgram_mmap_index_path=artifact_root / f"{sample_filename}.lite.static.qidx2",
+        static_qgram_compact_index_path=artifact_root / f"{sample_filename}.lite.static.qidx3",
     )
 
 
@@ -129,7 +148,24 @@ def validate_static_qgram_mmap_index_artifact_spec(artifact_spec: ArtifactSpec) 
         )
 
 
-def ensure_dataset_staged(dataset_spec: DatasetSpec, refresh: bool = False) -> None:
+def validate_static_qgram_compact_index_artifact_spec(artifact_spec: ArtifactSpec) -> None:
+    """Validate that the compact qidx3 sidecar index exists for a dataset."""
+
+    if (
+        artifact_spec.static_qgram_compact_index_path is None
+        or not artifact_spec.static_qgram_compact_index_path.exists()
+    ):
+        raise FileNotFoundError(
+            f"Missing required static q-gram compact index: {artifact_spec.static_qgram_compact_index_path}"
+        )
+
+
+def ensure_dataset_staged(
+    dataset_spec: DatasetSpec,
+    refresh: bool = False,
+    scale: ScaleName = "2k",
+    source_root: Path | str | None = None,
+) -> None:
     """Ensure the raw log and template CSV are staged locally.
 
     Purpose:
@@ -148,6 +184,10 @@ def ensure_dataset_staged(dataset_spec: DatasetSpec, refresh: bool = False) -> N
         contain the required dataset samples.
     """
 
+    if scale != "2k":
+        _stage_scaled_dataset(dataset_spec, scale, source_root, refresh=refresh)
+        return
+
     raw_log_path = get_dataset_raw_path(dataset_spec)
     template_csv_path = get_dataset_template_csv_path(dataset_spec)
     raw_log_path.parent.mkdir(parents=True, exist_ok=True)
@@ -164,17 +204,25 @@ def ensure_dataset_staged(dataset_spec: DatasetSpec, refresh: bool = False) -> N
     )
 
 
-def stage_active_datasets(dataset_specs: list[DatasetSpec], refresh: bool = False) -> None:
+def stage_active_datasets(
+    dataset_specs: list[DatasetSpec],
+    refresh: bool = False,
+    scale: ScaleName = "2k",
+    source_root: Path | str | None = None,
+) -> None:
     """Stage a list of datasets deterministically."""
 
     for dataset_spec in dataset_specs:
-        ensure_dataset_staged(dataset_spec, refresh=refresh)
+        ensure_dataset_staged(dataset_spec, refresh=refresh, scale=scale, source_root=source_root)
 
 
 def ensure_artifacts_for_dataset(
     dataset_spec: DatasetSpec,
     force_rebuild: bool = False,
     refresh_dataset: bool = False,
+    scale: ScaleName = "2k",
+    source_root: Path | str | None = None,
+    record_build_metrics: bool = False,
 ) -> ArtifactSpec:
     """Ensure all required artifacts exist for one dataset.
 
@@ -195,10 +243,15 @@ def ensure_artifacts_for_dataset(
         FileNotFoundError: If required artifacts are still missing after the run.
     """
 
-    ensure_dataset_staged(dataset_spec, refresh=refresh_dataset)
-    artifact_spec = build_artifact_spec(dataset_spec)
+    timings: dict[str, float] = {}
+    sizes: dict[str, int | None] = {}
 
-    artifact_root = get_artifact_root()
+    stage_start = time.perf_counter()
+    ensure_dataset_staged(dataset_spec, refresh=refresh_dataset, scale=scale, source_root=source_root)
+    timings["stage_dataset_ms"] = _elapsed_ms(stage_start)
+    artifact_spec = build_artifact_spec(dataset_spec, scale=scale, source_root=source_root)
+
+    artifact_root = _artifact_root_for_scale(scale)
     artifact_root.mkdir(parents=True, exist_ok=True)
 
     if (
@@ -206,9 +259,14 @@ def ensure_artifacts_for_dataset(
         and artifact_spec.compressed_binary_path.exists()
         and artifact_spec.window_path.exists()
     ):
+        materialize_start = time.perf_counter()
         _materialize_original_decompression_with_python(artifact_spec)
+        timings["decompression_materialization_ms"] = _elapsed_ms(materialize_start)
+    else:
+        timings["decompression_materialization_ms"] = 0.0
 
     if force_rebuild or not _artifact_bundle_exists(artifact_spec):
+        build_start = time.perf_counter()
         invocation = resolve_xorc_cli_invocation(force_rebuild=False)
         command = invocation + [
             "--test",
@@ -228,7 +286,7 @@ def ensure_artifacts_for_dataset(
                 cwd=get_project_root(),
                 capture_output=True,
                 text=True,
-                timeout=120,
+                timeout=_artifact_command_timeout_seconds(scale),
             )
             command_failed = completed_process.returncode != 0
             stdout = completed_process.stdout
@@ -247,6 +305,9 @@ def ensure_artifacts_for_dataset(
                     f"stdout:\n{stdout}\n"
                     f"stderr:\n{stderr}"
                 )
+        timings["original_artifacts_ms"] = _elapsed_ms(build_start)
+    else:
+        timings["original_artifacts_ms"] = 0.0
 
     validate_artifact_spec(artifact_spec)
     if (
@@ -257,7 +318,11 @@ def ensure_artifacts_for_dataset(
         and artifact_spec.static_window_path is not None
         and artifact_spec.static_window_path.exists()
     ):
+        static_materialize_start = time.perf_counter()
         _materialize_static_decompression_with_python(artifact_spec)
+        timings["static_decompression_materialization_ms"] = _elapsed_ms(static_materialize_start)
+    else:
+        timings["static_decompression_materialization_ms"] = 0.0
     if force_rebuild or not _static_artifact_bundle_exists(artifact_spec):
         if (
             artifact_spec.static_compressed_binary_path is None
@@ -266,6 +331,7 @@ def ensure_artifacts_for_dataset(
         ):
             raise RuntimeError("Static artifact paths were not populated.")
 
+        static_start = time.perf_counter()
         invocation = resolve_static_xorc_cli_invocation(force_rebuild=False)
         command = invocation + [
             "--test",
@@ -285,7 +351,7 @@ def ensure_artifacts_for_dataset(
                 cwd=get_project_root(),
                 capture_output=True,
                 text=True,
-                timeout=120,
+                timeout=_artifact_command_timeout_seconds(scale),
             )
             command_failed = completed_process.returncode != 0
             stdout = completed_process.stdout
@@ -304,12 +370,36 @@ def ensure_artifacts_for_dataset(
                     f"stdout:\n{stdout}\n"
                     f"stderr:\n{stderr}"
                 )
+        timings["static_artifacts_ms"] = _elapsed_ms(static_start)
+    else:
+        timings["static_artifacts_ms"] = 0.0
 
     validate_static_artifact_spec(artifact_spec)
-    from .static_qgram_index import ensure_static_qgram_index, ensure_static_qgram_mmap_index
+    from .static_qgram_index import (
+        ensure_static_qgram_compact_index,
+        ensure_static_qgram_index,
+        ensure_static_qgram_mmap_index,
+    )
 
-    ensure_static_qgram_index(artifact_spec, force_rebuild=force_rebuild)
-    ensure_static_qgram_mmap_index(artifact_spec, force_rebuild=force_rebuild)
+    if scale == "2k":
+        qidx_json_start = time.perf_counter()
+        ensure_static_qgram_index(artifact_spec, force_rebuild=force_rebuild)
+        timings["qidx_json_build_ms"] = _elapsed_ms(qidx_json_start)
+    else:
+        timings["qidx_json_build_ms"] = 0.0
+    if scale == "2k":
+        qidx2_start = time.perf_counter()
+        ensure_static_qgram_mmap_index(artifact_spec, force_rebuild=force_rebuild)
+        timings["qidx2_build_ms"] = _elapsed_ms(qidx2_start)
+    else:
+        timings["qidx2_build_ms"] = 0.0
+    qidx3_start = time.perf_counter()
+    ensure_static_qgram_compact_index(artifact_spec, force_rebuild=force_rebuild)
+    timings["qidx3_build_ms"] = _elapsed_ms(qidx3_start)
+
+    if record_build_metrics:
+        sizes = _artifact_sizes(artifact_spec)
+        _append_artifact_build_metrics(dataset_spec, artifact_spec, timings, sizes)
     return artifact_spec
 
 
@@ -317,6 +407,9 @@ def ensure_artifacts_for_datasets(
     dataset_specs: list[DatasetSpec],
     force_rebuild: bool = False,
     refresh_dataset: bool = False,
+    scale: ScaleName = "2k",
+    source_root: Path | str | None = None,
+    record_build_metrics: bool = False,
 ) -> dict[str, ArtifactSpec]:
     """Ensure artifacts for multiple datasets and return them by slug."""
 
@@ -326,6 +419,9 @@ def ensure_artifacts_for_datasets(
             dataset_spec,
             force_rebuild=force_rebuild,
             refresh_dataset=refresh_dataset,
+            scale=scale,
+            source_root=source_root,
+            record_build_metrics=record_build_metrics,
         )
     return artifact_specs
 
@@ -577,6 +673,178 @@ def _static_artifact_bundle_exists(artifact_spec: ArtifactSpec) -> bool:
             artifact_spec.static_window_path,
         )
     )
+
+
+def _artifact_root_for_scale(scale: ScaleName) -> Path:
+    """Return the artifact root for a dataset scale."""
+
+    if scale == "2k":
+        return get_artifact_root()
+    return get_artifact_root() / scale
+
+
+def _raw_log_path_for_scale(dataset_spec: DatasetSpec, scale: ScaleName) -> Path:
+    """Return the staged raw sample path for a scale."""
+
+    if scale == "2k":
+        return get_dataset_raw_path(dataset_spec)
+    return (
+        get_project_root()
+        / "dataset"
+        / "loghub_scaled"
+        / scale
+        / dataset_spec.loghub_directory_name
+        / _sample_filename_for_scale(dataset_spec, scale)
+    )
+
+
+def _sample_filename_for_scale(dataset_spec: DatasetSpec, scale: ScaleName) -> str:
+    """Return a deterministic sample filename for a scale."""
+
+    if scale == "2k":
+        return dataset_spec.sample_log_filename
+    base_name = dataset_spec.sample_log_filename.replace("_2k.log", "")
+    return f"{base_name}_{scale}.log"
+
+
+def _source_raw_log_path(dataset_spec: DatasetSpec, source_root: Path | str | None) -> Path:
+    """Return the full LogHub source file path for scaled staging."""
+
+    if source_root is None:
+        root = get_project_root() / "dataset" / "loghub_full"
+    else:
+        root = Path(source_root)
+        if not root.is_absolute():
+            root = get_project_root() / root
+    return root / dataset_spec.loghub_directory_name / f"{dataset_spec.loghub_directory_name}.log"
+
+
+def _stage_scaled_dataset(
+    dataset_spec: DatasetSpec,
+    scale: ScaleName,
+    source_root: Path | str | None,
+    refresh: bool,
+) -> None:
+    """Create a first-N-line scaled sample from a local full LogHub source."""
+
+    raw_log_path = _raw_log_path_for_scale(dataset_spec, scale)
+    source_path = _source_raw_log_path(dataset_spec, source_root)
+    if not source_path.exists():
+        raise FileNotFoundError(
+            "Scaled evaluation requires a real local full LogHub source file: "
+            f"{source_path}. No synthetic repeated samples are allowed."
+        )
+    if raw_log_path.exists() and not refresh and _scaled_sample_matches_source_prefix(raw_log_path, source_path, scale):
+        return
+
+    raw_log_path.parent.mkdir(parents=True, exist_ok=True)
+    line_limit = SCALE_LINE_LIMITS[scale]
+    lines_written = 0
+    with source_path.open("r", encoding="utf-8", errors="ignore") as source, raw_log_path.open(
+        "w",
+        encoding="utf-8",
+    ) as target:
+        for line in source:
+            if line_limit is not None and lines_written >= line_limit:
+                break
+            target.write(line.rstrip("\n").rstrip("\r") + "\n")
+            lines_written += 1
+
+    if lines_written == 0:
+        raise RuntimeError(f"Scaled source file contains no usable log lines: {source_path}")
+
+
+def _scaled_sample_matches_source_prefix(raw_log_path: Path, source_path: Path, scale: ScaleName) -> bool:
+    """Return whether a staged scaled sample is exactly the first real source lines."""
+
+    line_limit = SCALE_LINE_LIMITS[scale]
+    with source_path.open("r", encoding="utf-8", errors="ignore") as source, raw_log_path.open(
+        "r",
+        encoding="utf-8",
+        errors="ignore",
+    ) as staged:
+        staged_count = 0
+        for source_count, source_line in enumerate(source, start=1):
+            if line_limit is not None and source_count > line_limit:
+                return staged.readline() == ""
+            staged_line = staged.readline()
+            if staged_line == "":
+                return False
+            expected_line = source_line.rstrip("\n").rstrip("\r") + "\n"
+            if staged_line != expected_line:
+                return False
+            staged_count += 1
+        return staged.readline() == "" and staged_count > 0
+
+
+def _count_lines(path: Path) -> int:
+    """Count newline-delimited records in a staged sample."""
+
+    with path.open("rb") as handle:
+        return sum(1 for _ in handle)
+
+
+def _elapsed_ms(start_time: float) -> float:
+    """Return elapsed wall time in milliseconds."""
+
+    return (time.perf_counter() - start_time) * 1000.0
+
+
+def _artifact_command_timeout_seconds(scale: ScaleName) -> int:
+    """Return a conservative codec command timeout for the selected scale."""
+
+    if scale == "2k":
+        return 120
+    if scale == "10k":
+        return 300
+    if scale == "100k":
+        return 1800
+    return 3600
+
+
+def _artifact_sizes(artifact_spec: ArtifactSpec) -> dict[str, int | None]:
+    """Return artifact sizes used by build and overhead reports."""
+
+    paths = {
+        "raw_bytes": artifact_spec.raw_log_path,
+        "compressed_bytes": artifact_spec.compressed_binary_path,
+        "decompressed_bytes": artifact_spec.decompressed_text_path,
+        "static_compressed_bytes": artifact_spec.static_compressed_binary_path,
+        "static_decompressed_bytes": artifact_spec.static_decompressed_text_path,
+        "qidx_json_bytes": artifact_spec.static_qgram_index_path,
+        "qidx2_bytes": artifact_spec.static_qgram_mmap_index_path,
+        "qidx3_bytes": artifact_spec.static_qgram_compact_index_path,
+    }
+    return {key: path.stat().st_size if path is not None and path.exists() else None for key, path in paths.items()}
+
+
+def _append_artifact_build_metrics(
+    dataset_spec: DatasetSpec,
+    artifact_spec: ArtifactSpec,
+    timings: dict[str, float],
+    sizes: dict[str, int | None],
+) -> None:
+    """Append one dataset's build metrics to a scale-local CSV."""
+
+    metrics_path = _artifact_root_for_scale(artifact_spec.scale) / "artifact_build_metrics.csv"
+    metrics_path.parent.mkdir(parents=True, exist_ok=True)
+    row = {
+        "dataset_slug": dataset_spec.slug,
+        "scale": artifact_spec.scale,
+        "effective_line_count": artifact_spec.effective_line_count,
+        **{key: f"{value:.6f}" for key, value in sorted(timings.items())},
+        "total_preprocessing_ms": f"{sum(timings.values()):.6f}",
+        **sizes,
+    }
+    fieldnames = list(row.keys())
+    needs_header = not metrics_path.exists()
+    import csv
+
+    with metrics_path.open("a", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=fieldnames)
+        if needs_header:
+            writer.writeheader()
+        writer.writerow(row)
 
 
 def _local_xorc_binary_path() -> Path:

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Real LogHub 100k Subset qidx3 Smoke v6</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 32px; color: #1f2933; }
+    h1 { margin-bottom: 0.2rem; }
+    .meta { color: #52606d; margin-top: 0; }
+    section { margin: 32px 0; }
+    img { max-width: 100%; border: 1px solid #d9e2ec; border-radius: 8px; background: white; }
+    table { border-collapse: collapse; width: 100%; margin-top: 12px; font-size: 14px; }
+    th, td { border: 1px solid #d9e2ec; padding: 8px 10px; text-align: left; }
+    th { background: #f0f4f8; }
+    code { background: #f0f4f8; padding: 2px 5px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <h1>Real LogHub 100k Subset qidx3 Smoke v6</h1>
+  <p class="meta">Created from <code>evaluation_results/query_eval/20260518_223254_real_loghub_100k_subset_qidx3_smoke_v6</code></p>
+  <section>
+    <h2>Run Metadata</h2>
+    <p>Created at: <strong>2026-05-18T22:32:54.170634</strong></p>
+    <p>Datasets: linux, apache</p>
+    <p>Queries: common_token, medium_token, rare_token, common_phrase, selective_phrase, numeric_identifier, conjunctive, bloom_stress_substring</p>
+    <p>Modes: decompressed_text, full_decompression, static_bloom, grep_plaintext, ripgrep_plaintext, static_qgram_index_mmap_compact, static_qgram_index_mmap_cpp</p>
+    <p>Raw run records: <strong>448</strong>; cell rows: <strong>112</strong>.</p>
+  </section>
+  <section><h2>Suite Summary</h2><table><thead><tr><th>Mode</th><th>Cells</th><th>Median Wall (ms)</th><th>Median CPU (ms)</th><th>Median RSS (MB)</th><th>Median Recall</th><th>Median F1</th><th>All Exact</th></tr></thead><tbody><tr><td>Decompressed Text</td><td>16</td><td>11.514</td><td>11.457</td><td>25.66</td><td>1.000</td><td>1.000</td><td>True</td></tr><tr><td>Full Decompression</td><td>16</td><td>824.144</td><td>821.173</td><td>32.40</td><td>1.000</td><td>1.000</td><td>True</td></tr><tr><td>Static Bloom</td><td>16</td><td>884.553</td><td>884.370</td><td>54.05</td><td>1.000</td><td>1.000</td><td>False</td></tr><tr><td>grep Plaintext</td><td>16</td><td>21.401</td><td>2.680</td><td>26.56</td><td>1.000</td><td>1.000</td><td>True</td></tr><tr><td>ripgrep Plaintext</td><td>16</td><td>5.696</td><td>2.697</td><td>26.45</td><td>1.000</td><td>1.000</td><td>True</td></tr><tr><td>Static Q-Gram qidx3</td><td>16</td><td>10.865</td><td>7.200</td><td>28.77</td><td>1.000</td><td>1.000</td><td>True</td></tr><tr><td>Static Q-Gram qidx3 C++</td><td>16</td><td>3.604</td><td>1.614</td><td>26.53</td><td>1.000</td><td>1.000</td><td>True</td></tr></tbody></table></section>
+  <section><h2>Correctness Summary</h2><table><thead><tr><th>Mode</th><th>Exact Cells</th><th>Median FN Sum</th><th>Median FP Sum</th></tr></thead><tbody><tr><td>Decompressed Text</td><td>16/16</td><td>0</td><td>0</td></tr><tr><td>Full Decompression</td><td>16/16</td><td>0</td><td>0</td></tr><tr><td>Static Bloom</td><td>10/16</td><td>8107</td><td>0</td></tr><tr><td>grep Plaintext</td><td>16/16</td><td>0</td><td>0</td></tr><tr><td>ripgrep Plaintext</td><td>16/16</td><td>0</td><td>0</td></tr><tr><td>Static Q-Gram qidx3</td><td>16/16</td><td>0</td><td>0</td></tr><tr><td>Static Q-Gram qidx3 C++</td><td>16/16</td><td>0</td><td>0</td></tr></tbody></table></section>
+  <section><h2>Static Bloom Group Summary</h2><table><thead><tr><th>Query Group</th><th>Exact Cells</th><th>False Positives</th><th>False Negatives</th><th>Median Skip Rate</th><th>Median Speedup</th></tr></thead><tbody><tr><td>token_safe</td><td>10/14</td><td>0</td><td>198</td><td>81.15%</td><td>0.93x</td></tr><tr><td>stress</td><td>0/2</td><td>0</td><td>7909</td><td>72.67%</td><td>0.68x</td></tr></tbody></table></section>
+  <section><h2>Suite Wall Time</h2><img src="journal_figures/suite_wall_time.svg" alt="suite_wall_time" /></section>
+<section><h2>Speedup Vs Full</h2><img src="journal_figures/speedup_vs_full.svg" alt="speedup_vs_full" /></section>
+<section><h2>Exact Cells</h2><img src="journal_figures/exact_cells.svg" alt="exact_cells" /></section>
+<section><h2>All Queries Wall Time</h2><img src="journal_figures/all_queries_wall_time.svg" alt="all_queries_wall_time" /></section>
+<section><h2>Token Safe Queries Wall Time</h2><img src="journal_figures/token_safe_queries_wall_time.svg" alt="token_safe_queries_wall_time" /></section>
+<section><h2>Stress Queries Wall Time</h2><img src="journal_figures/stress_queries_wall_time.svg" alt="stress_queries_wall_time" /></section>
+<section><h2>Static Skip Rate</h2><img src="journal_figures/static_skip_rate.svg" alt="static_skip_rate" /></section>
+<section><h2>Static Speedup</h2><img src="journal_figures/static_speedup.svg" alt="static_speedup" /></section>
+</body>
+</html>

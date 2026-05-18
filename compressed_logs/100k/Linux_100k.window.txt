@@ -1,0 +1,1687 @@
+len=178
+Feb 19 02:34:59 combo sshd(pam_unix)[5341]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=200-103-106-42.pvoce700-nrp1.e.brasiltelecom.net.br  user=root
+Feb 19 02:34:59 combo sshd(pam_unix)[5335]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=200-103-106-42.pvoce700-nrp1.e.brasiltelecom.net.br  user=root
+Feb 19 02:34:59 combo sshd(pam_unix)[5339]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=200-103-106-42.pvoce700-nrp1.e.brasiltelecom.net.br  user=root
+Feb 19 02:34:59 combo sshd(pam_unix)[5336]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=200-103-106-42.pvoce700-nrp1.e.brasiltelecom.net.br  user=root
+Feb 19 02:34:59 combo sshd(pam_unix)[5338]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=200-103-106-42.pvoce700-nrp1.e.brasiltelecom.net.br  user=root
+Feb 19 02:34:59 combo sshd(pam_unix)[5349]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=200-103-106-42.pvoce700-nrp1.e.brasiltelecom.net.br  user=root
+Feb 19 02:35:03 combo sshd(pam_unix)[5351]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=200-103-106-42.pvoce700-nrp1.e.brasiltelecom.net.br  user=root
+Feb 19 02:35:03 combo sshd(pam_unix)[5352]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=200-103-106-42.pvoce700-nrp1.e.brasiltelecom.net.br  user=root
+---
+len=167
+Feb 17 12:08:58 combo sshd(pam_unix)[5204]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=68.red-217-126-158.staticip.rima-tde.net  user=root
+Feb 17 12:08:58 combo sshd(pam_unix)[5201]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=68.red-217-126-158.staticip.rima-tde.net  user=root
+Feb 17 12:08:58 combo sshd(pam_unix)[5205]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=68.red-217-126-158.staticip.rima-tde.net  user=root
+Feb 17 12:08:58 combo sshd(pam_unix)[5211]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=68.red-217-126-158.staticip.rima-tde.net  user=root
+Feb 17 12:08:59 combo sshd(pam_unix)[5213]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=68.red-217-126-158.staticip.rima-tde.net  user=root
+Feb 17 12:08:59 combo sshd(pam_unix)[5214]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=68.red-217-126-158.staticip.rima-tde.net  user=root
+Feb 17 12:08:59 combo sshd(pam_unix)[5216]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=68.red-217-126-158.staticip.rima-tde.net  user=root
+Feb 17 12:08:59 combo sshd(pam_unix)[5219]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=68.red-217-126-158.staticip.rima-tde.net  user=root
+---
+len=221
+Jan 26 12:55:50 combo kernel: audit(1138298150.141:1454728): avc:  denied  { setattr } for  pid=3128 exe=/usr/sbin/sshd name=1 dev= ino=3 scontext=system_u:system_r:kernel_t tcontext=root:object_r:devpts_t tclass=chr_file
+---
+len=101
+Jan 26 12:53:13 combo kernel: audit(1138297993.375:1376285): item=0 name=/dev/pts/1 inode=3 dev=88:01
+Jan 26 12:53:13 combo kernel: audit(1138297993.475:1376452): item=0 name=/dev/pts/1 inode=3 dev=88:01
+Jan 26 12:55:50 combo kernel: audit(1138298150.141:1454728): item=0 name=/dev/pts/1 inode=3 dev=88:01
+---
+len=191
+Jan 26 12:24:00 combo kernel: audit(1138296225.596:965626): syscall=14 exit=0 a0=9e9f968 a1=11b0 a2=0 a3=0 items=1 pid=2417 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+---
+len=214
+Jan 26 12:22:44 combo kernel: audit(1138296160.393:589484): avc:  denied  { name_bind } for  pid=2013 exe=/usr/sbin/xinetd scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:ftp_port_t tclass=tcp_socket
+Jan 26 12:22:44 combo kernel: audit(1138296160.393:589522): avc:  denied  { name_bind } for  pid=2013 exe=/usr/sbin/xinetd scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:rsh_port_t tclass=tcp_socket
+Jan 26 12:23:04 combo kernel: audit(1138296184.714:671733): avc:  denied  { name_bind } for  pid=2261 exe=/usr/sbin/httpd scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:http_port_t tclass=tcp_socket
+Jan 26 12:23:22 combo kernel: audit(1138296202.196:708129): avc:  denied  { name_bind } for  pid=2300 exe=/usr/sbin/snmpd scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:snmp_port_t tclass=tcp_socket
+Jan 26 12:23:24 combo kernel: audit(1138296202.198:708174): avc:  denied  { name_bind } for  pid=2300 exe=/usr/sbin/snmpd scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:snmp_port_t tclass=udp_socket
+---
+len=218
+Jan 26 12:22:44 combo kernel: audit(1138296160.392:589444): avc:  denied  { name_bind } for  pid=2013 exe=/usr/sbin/xinetd scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:printer_port_t tclass=tcp_socket
+Jan 26 12:22:44 combo kernel: audit(1138296160.393:589479): avc:  denied  { name_bind } for  pid=2013 exe=/usr/sbin/xinetd scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:fingerd_port_t tclass=tcp_socket
+---
+len=217
+Jan 26 12:22:44 combo kernel: audit(1138296160.391:589416): avc:  denied  { name_bind } for  pid=2013 exe=/usr/sbin/xinetd scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:amanda_port_t tclass=udp_socket
+Jan 26 12:22:44 combo kernel: audit(1138296160.393:589494): avc:  denied  { name_bind } for  pid=2013 exe=/usr/sbin/xinetd scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:telnet_port_t tclass=tcp_socket
+Jan 26 12:22:44 combo kernel: audit(1138296160.393:589517): avc:  denied  { name_bind } for  pid=2013 exe=/usr/sbin/xinetd scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:rlogin_port_t tclass=tcp_socket
+Jan 26 12:22:45 combo kernel: audit(1138296165.211:606989): syscall=11 exit=0 a0=fef9be88 a1=862c0b0 a2=862d358 a3=0 items=2 pid=2090 loginuid=-1 uid=100 gid=101 euid=100 suid=100 fsuid=100 egid=101 sgid=101 fsgid=101
+Jan 26 12:53:13 combo kernel: audit(1138297993.374:1376277): avc:  denied  { compute_relabel } for  pid=3128 exe=/usr/sbin/sshd scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:security_t tclass=security
+---
+len=226
+Jan 26 12:22:44 combo kernel: audit(1138296150.551:567947): avc:  denied  { name_bind } for  pid=2032 exe=/usr/sbin/sendmail.sendmail scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:smtp_port_t tclass=tcp_socket
+Jan 26 12:23:14 combo kernel: audit(1138296194.864:693295): avc:  denied  { read } for  pid=2285 exe=/sbin/killall5 name=stat dev= ino=137035789 scontext=system_u:system_r:kernel_t tcontext=user_u:sysadm_r:sysadm_t tclass=file
+---
+len=213
+Jan 26 12:22:44 combo kernel: audit(1138296147.476:547632): avc:  denied  { name_bind } for  pid=1803 exe=/usr/sbin/cupsd scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:ipp_port_t tclass=tcp_socket
+Jan 26 12:22:44 combo kernel: audit(1138296147.477:547636): avc:  denied  { name_bind } for  pid=1803 exe=/usr/sbin/cupsd scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:ipp_port_t tclass=udp_socket
+Jan 26 12:22:44 combo kernel: audit(1138296162.246:590992): avc:  denied  { name_bind } for  pid=2052 exe=/usr/bin/perl scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:spamd_port_t tclass=tcp_socket
+Jan 26 12:23:18 combo kernel: audit(1138296198.308:701025): avc:  denied  { name_bind } for  pid=2289 exe=/usr/sbin/named scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:dns_port_t tclass=udp_socket
+Jan 26 12:23:19 combo kernel: audit(1138296198.308:701032): avc:  denied  { name_bind } for  pid=2289 exe=/usr/sbin/named scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:dns_port_t tclass=tcp_socket
+---
+len=288
+Jan 26 12:22:44 combo kernel: audit(1138296142.670:537277): avc:  denied  { getattr } for  pid=1966 exe=/usr/lib/cups/backend/parallel path=/proc/sys/dev/parport/parport0/autoprobe dev= ino=-268434775 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:sysctl_dev_t tclass=file
+---
+len=228
+Jan 26 12:22:43 combo kernel: audit(1138296128.157:454451): avc:  denied  { read } for  pid=1642 exe=/usr/sbin/rpc.idmapd name=nfs dev= ino=4 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:rpc_pipefs_t tclass=dir
+Jan 26 12:23:11 combo kernel: audit(1138296191.846:687489): avc:  denied  { getattr } for  pid=2275 exe=/usr/sbin/squid path=/initrd dev= ino=1021 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:ramfs_t tclass=dir
+Jan 26 12:53:13 combo kernel: audit(1138297993.475:1376441): avc:  denied  { ioctl } for  pid=3130 exe=/usr/sbin/sshd path=/dev/pts/1 dev= ino=3 scontext=system_u:system_r:kernel_t tcontext=root:object_r:devpts_t tclass=chr_file
+---
+len=1018
+Jan 19 08:57:16 combo rpc.statd[1608]: gethostbyname error for ^X^X^Z^Z%8x%8x%8x%8x%8x%8x%8x%8x%8x%62716x%hn%51859x%hn\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220
+Jan 19 08:57:22 combo rpc.statd[1608]: gethostbyname error for ^X^X^Z^Z%8x%8x%8x%8x%8x%8x%8x%8x%8x%62716x%hn%51859x%hn\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220
+Jan 19 08:57:25 combo rpc.statd[1608]: gethostbyname error for ^X^X^Z^Z%8x%8x%8x%8x%8x%8x%8x%8x%8x%62716x%hn%51859x%hn\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220
+Jan 24 10:09:30 combo rpc.statd[1608]: gethostbyname error for ^X^X^Z^Z%8x%8x%8x%8x%8x%8x%8x%8x%8x%62716x%hn%51859x%hn\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220
+Jan 24 10:09:30 combo rpc.statd[1608]: gethostbyname error for ^X^X^Z^Z%8x%8x%8x%8x%8x%8x%8x%8x%8x%62716x%hn%51859x%hn\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220
+Jan 24 10:09:31 combo rpc.statd[1608]: gethostbyname error for ^X^X^Z^Z%8x%8x%8x%8x%8x%8x%8x%8x%8x%62716x%hn%51859x%hn\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220
+Jan 24 10:09:34 combo rpc.statd[1608]: gethostbyname error for ^X^X^Z^Z%8x%8x%8x%8x%8x%8x%8x%8x%8x%62716x%hn%51859x%hn\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220
+Jan 24 10:09:46 combo rpc.statd[1608]: gethostbyname error for ^X^X^Z^Z%8x%8x%8x%8x%8x%8x%8x%8x%8x%62716x%hn%51859x%hn\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220\220
+---
+len=224
+Jan 26 12:22:43 combo kernel: audit(1138296128.157:454451): avc:  denied  { search } for  pid=1642 exe=/usr/sbin/rpc.idmapd dev= ino=2569 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:rpc_pipefs_t tclass=dir
+Jan 26 12:53:13 combo kernel: audit(1138297993.475:1376452): avc:  denied  { read write } for  pid=3130 exe=/usr/sbin/sshd name=1 dev= ino=3 scontext=system_u:system_r:kernel_t tcontext=root:object_r:devpts_t tclass=chr_file
+---
+len=198
+Jan 26 12:22:43 combo kernel: audit(1138296126.645:429627): syscall=5 exit=0 a0=762615 a1=0 a2=fefa8650 a3=762615 items=1 pid=1574 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:45 combo kernel: audit(1138296165.180:606909): syscall=5 exit=3 a0=dd7080 a1=2 a2=fff a3=862785d items=1 pid=2089 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=100 egid=0 sgid=0 fsgid=101
+Jan 26 12:22:45 combo kernel: audit(1138296165.182:606936): avc:  denied  { setexec } for  pid=2089 exe=/bin/su scontext=system_u:system_r:kernel_t tcontext=system_u:system_r:kernel_t tclass=process
+---
+len=190
+Jan 26 12:22:38 combo kernel: audit(1138296120.101:365320): syscall=5 exit=11 a0=806a2d5 a1=0 a2=100 a3=0 items=1 pid=1263 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:41 combo kernel: audit(1138296123.500:397288): syscall=102 exit=3 a0=1 a1=fef5c7e0 a2=0 a3=a items=0 pid=1445 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+---
+len=188
+Jan 26 12:22:34 combo kernel: audit(1138296118.152:350122): syscall=5 exit=7 a0=fef1b880 a1=0 a2=4 a3=0 items=1 pid=1263 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+---
+len=195
+Jan 26 12:22:32 combo kernel: audit(1138296118.152:350119): syscall=197 exit=0 a0=6 a1=fef1b7cc a2=68cffc a3=6 items=0 pid=1263 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:43 combo kernel: audit(1138296127.049:438389): syscall=102 exit=0 a0=2 a1=fef3cbb0 a2=aea13c a3=3 items=0 pid=1595 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:43 combo kernel: audit(1138296127.050:438399): syscall=102 exit=0 a0=2 a1=fef3cbb0 a2=aea13c a3=4 items=0 pid=1595 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:43 combo kernel: audit(1138296128.157:454455): syscall=197 exit=0 a0=5 a1=fef87cec a2=68cffc a3=5 items=0 pid=1642 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:53:13 combo kernel: audit(1138297993.374:1376277): syscall=4 exit=52 a0=8 a1=9245bf8 a2=34 a3=38b272 items=0 pid=3128 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+---
+len=204
+Jan 26 12:22:28 combo kernel: audit(1138296110.949:306401): avc:  denied  { syslog_read } for  pid=1178 exe=/bin/dmesg scontext=system_u:system_r:kernel_t tcontext=system_u:system_r:kernel_t tclass=system
+Jan 26 12:22:43 combo kernel: audit(1138296126.645:429627): avc:  denied  { syslog_mod } for  pid=1574 exe=/sbin/klogd scontext=system_u:system_r:kernel_t tcontext=system_u:system_r:kernel_t tclass=system
+Jan 26 12:22:44 combo kernel: audit(1138296164.920:606586): avc:  denied  { compute_av } for  pid=2089 exe=/bin/su scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:security_t tclass=security
+---
+len=234
+Jan 26 12:22:26 combo kernel: audit(1138296107.529:261678): avc:  denied  { relabelfrom } for  pid=729 exe=/sbin/restorecon name=mtab dev=hda2 ino=82456 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:file_t tclass=file
+Jan 26 12:22:28 combo kernel: audit(1138296109.324:295942): avc:  denied  { unlink } for  pid=1123 exe=/sbin/minilogd name=log dev=hda2 ino=1031636 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:file_t tclass=sock_file
+Jan 26 12:22:29 combo kernel: audit(1138296117.905:349720): avc:  denied  { read } for  pid=1263 exe=/usr/sbin/kudzu name=0000:01:0c.0 dev= ino=159 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:sysfs_t tclass=lnk_file
+Jan 26 12:22:30 combo kernel: audit(1138296118.152:350118): avc:  denied  { search } for  pid=1263 exe=/usr/sbin/kudzu name=dev dev= ino=-268435240 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:sysctl_dev_t tclass=dir
+Jan 26 12:22:43 combo kernel: audit(1138296126.464:427092): avc:  denied  { setattr } for  pid=1570 exe=/sbin/syslogd name=log dev=hda2 ino=1031637 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:file_t tclass=sock_file
+Jan 26 12:23:32 combo kernel: audit(1138296212.406:734909): avc:  denied  { unlink } for  pid=511 exe=/usr/bin/rhgb name=rhgb-socket dev= ino=1026 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:ramfs_t tclass=sock_file
+---
+len=201
+Jan 26 12:22:26 combo kernel: audit(1138296107.529:261678): syscall=227 exit=0 a0=feff3e98 a1=dd6c6b a2=a03fe28 a3=20 items=1 pid=729 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:26 combo kernel: audit(1138296107.747:266162): syscall=227 exit=0 a0=fef5fe91 a1=dd6c6b a2=947d6d8 a3=20 items=1 pid=730 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:43 combo kernel: audit(1138296129.057:468261): syscall=54 exit=0 a0=4 a1=800448d2 a2=88f8298 a3=88f8298 items=0 pid=1687 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:44 combo kernel: audit(1138296142.670:537277): syscall=197 exit=0 a0=0 a1=fef15090 a2=227ffc a3=a043008 items=0 pid=1966 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:44 combo kernel: audit(1138296147.476:547632): syscall=102 exit=0 a0=2 a1=feeb3730 a2=84251c a3=91c7330 items=0 pid=1803 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:45 combo kernel: audit(1138296165.211:606989): avc:  denied  { noatsecure } for  pid=2090 exe=/bin/bash scontext=system_u:system_r:kernel_t tcontext=user_u:sysadm_r:sysadm_t tclass=process
+Jan 26 12:23:04 combo kernel: audit(1138296184.714:671733): syscall=102 exit=0 a0=2 a1=fef1dec0 a2=1fa990 a3=891ed18 items=0 pid=2261 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:23:14 combo kernel: audit(1138296194.865:693309): syscall=197 exit=0 a0=4 a1=feeb7270 a2=68cffc a3=9d49368 items=0 pid=2285 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+---
+len=194
+Jan 26 12:22:23 combo kernel: audit(1138296104.780:225409): syscall=4 exit=28 a0=4 a1=95a8180 a2=1c a3=95a9188 items=0 pid=720 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:41 combo kernel: audit(1138296123.351:395836): syscall=5 exit=4 a0=8051591 a1=0 a2=fee75ba4 a3=0 items=1 pid=1437 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:53:13 combo kernel: audit(1138297993.475:1376452): syscall=5 exit=6 a0=808dd54 a1=8002 a2=0 a3=8002 items=1 pid=3130 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+---
+len=215
+Jan 26 12:22:23 combo kernel: audit(1138296104.780:225409): avc:  denied  { check_context } for  pid=720 exe=/sbin/restorecon scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:security_t tclass=security
+Jan 26 12:22:43 combo kernel: audit(1138296127.049:438389): avc:  denied  { name_bind } for  pid=1595 exe=/sbin/portmap scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:portmap_port_t tclass=udp_socket
+Jan 26 12:22:43 combo kernel: audit(1138296127.050:438399): avc:  denied  { name_bind } for  pid=1595 exe=/sbin/portmap scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:portmap_port_t tclass=tcp_socket
+Jan 26 12:22:44 combo kernel: audit(1138296160.392:589440): avc:  denied  { name_bind } for  pid=2013 exe=/usr/sbin/xinetd scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:biff_port_t tclass=udp_socket
+Jan 26 12:22:44 combo kernel: audit(1138296161.396:590201): avc:  denied  { name_bind } for  pid=2013 exe=/usr/sbin/xinetd scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:biff_port_t tclass=tcp_socket
+Jan 26 12:22:44 combo kernel: audit(1138296161.881:590520): avc:  denied  { name_bind } for  pid=2013 exe=/usr/sbin/xinetd scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:tftp_port_t tclass=udp_socket
+---
+len=202
+Jan 26 12:22:43 combo kernel: audit(1138296128.156:454449): syscall=5 exit=4294967294 a0=80504c6 a1=2 a2=0 a3=80504a0 items=1 pid=1642 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:43 combo kernel: audit(1138296132.911:505629): syscall=227 exit=0 a0=fefbae57 a1=dd6c6b a2=8d4f3f0 a3=1c items=1 pid=1788 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:43 combo kernel: audit(1138296133.544:515571): syscall=227 exit=0 a0=fefece60 a1=dd6c6b a2=92e47c8 a3=18 items=1 pid=1792 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:44 combo kernel: audit(1138296162.246:590992): syscall=102 exit=0 a0=2 a1=feebb070 a2=7055668 a3=83d49b8 items=0 pid=2052 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:23:23 combo kernel: audit(1138296202.196:708129): syscall=102 exit=0 a0=2 a1=feee9ba0 a2=1877bc a3=feee9bdc items=0 pid=2300 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:23:25 combo kernel: audit(1138296202.198:708174): syscall=102 exit=0 a0=2 a1=feee9aa0 a2=9682e4 a3=feee9b60 items=0 pid=2300 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:23:26 combo kernel: audit(1138296206.190:718151): syscall=102 exit=0 a0=2 a1=fee78e80 a2=29e60c a3=fee78eac items=0 pid=2309 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:53:13 combo kernel: audit(1138297993.375:1376285): syscall=226 exit=0 a0=923ca78 a1=dd7095 a2=9234650 a3=17 items=1 pid=3128 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+---
+len=203
+Jan 26 12:22:22 combo kernel: audit(1138296104.542:222681): syscall=102 exit=4294967205 a0=3 a1=feee0794 a2=68cffc a3=2 items=1 pid=310 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:44 combo kernel: audit(1138296150.551:567947): syscall=102 exit=0 a0=2 a1=feecd9b0 a2=25f104 a3=2668e0 items=0 pid=2032 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=51 sgid=51 fsgid=51
+Jan 26 12:23:44 combo kernel: audit(1138296216.366:837154): syscall=230 exit=31 a0=fef68ed5 a1=dd6c52 a2=894de50 a3=ff items=1 pid=2686 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+---
+len=231
+Jan 26 12:22:22 combo kernel: audit(1138296104.542:222681): avc:  denied  { write } for  pid=310 exe=/sbin/initlog name=log dev=hda2 ino=1031636 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:file_t tclass=sock_file
+Jan 26 12:23:32 combo kernel: audit(1138296212.406:734910): avc:  denied  { unlink } for  pid=511 exe=/usr/bin/rhgb name=XFree86.0.log dev= ino=1027 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:ramfs_t tclass=file
+---
+len=207
+Jan 26 12:22:22 combo kernel: audit(1138296104.541:222667): syscall=195 exit=0 a0=80490b4 a1=fef4d22c a2=68cffc a3=fef4d22c items=1 pid=708 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:45 combo kernel: audit(1138296165.146:606873): syscall=4 exit=4294967274 a0=3 a1=862d3c0 a2=1e a3=862785d items=0 pid=2089 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=100 egid=0 sgid=0 fsgid=101
+Jan 26 12:23:32 combo kernel: audit(1138296212.406:734909): syscall=10 exit=0 a0=805cd2b a1=805cd26 a2=feee2bd0 a3=feee2bd5 items=1 pid=511 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:23:32 combo kernel: audit(1138296212.406:734910): syscall=10 exit=0 a0=805cd3f a1=805cd26 a2=feee2bd0 a3=feee2bd5 items=1 pid=511 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+---
+len=212
+Jan 26 12:22:22 combo kernel: audit(1138296104.506:222519): avc:  denied  { create } for  pid=705 exe=/sbin/minilogd name=log scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:file_t tclass=sock_file
+Jan 26 12:22:44 combo kernel: audit(1138296148.005:552035): avc:  denied  { name_bind } for  pid=1998 exe=/usr/sbin/sshd scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:ssh_port_t tclass=tcp_socket
+Jan 26 12:23:26 combo kernel: audit(1138296206.190:718151): avc:  denied  { name_bind } for  pid=2309 exe=/usr/sbin/ntpd scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:ntp_port_t tclass=udp_socket
+---
+len=222
+Jan 26 12:22:21 combo kernel: audit(1138296102.679:186228): avc:  denied  { read } for  pid=658 exe=/bin/grep name=devices dev= ino=1268 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:usbdevfs_t tclass=file
+Jan 26 12:22:45 combo kernel: audit(1138296165.180:606909): avc:  denied  { write } for  pid=2089 exe=/bin/su name=exec dev= ino=136904725 scontext=system_u:system_r:kernel_t tcontext=system_u:system_r:kernel_t tclass=file
+---
+len=233
+Jan 26 12:22:19 combo kernel: audit(1138296102.645:185219): avc:  denied  { mounton } for  pid=655 exe=/bin/mount path=/proc/bus/usb dev= ino=-268435218 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:proc_t tclass=dir
+Jan 26 12:23:32 combo kernel: audit(1138296212.406:734909): avc:  denied  { remove_name } for  pid=511 exe=/usr/bin/rhgb name=rhgb-socket dev= ino=1026 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:ramfs_t tclass=dir
+---
+len=229
+Jan 26 12:22:18 combo kernel: audit(1138296102.620:183525): avc:  denied  { read } for  pid=651 exe=/bin/cat name=bNumConfigurations dev= ino=1290 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:sysfs_t tclass=file
+Jan 26 12:22:22 combo kernel: audit(1138296104.661:225142): avc:  denied  { unlink } for  pid=717 exe=/bin/rm name=control dev=hda2 ino=1154199 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:file_t tclass=chr_file
+Jan 26 12:22:43 combo kernel: audit(1138296126.645:429627): avc:  denied  { read } for  pid=1574 exe=/sbin/klogd name=kmsg dev= ino=-268435446 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:proc_kmsg_t tclass=file
+Jan 26 12:23:14 combo kernel: audit(1138296194.865:693325): avc:  denied  { read } for  pid=2285 exe=/sbin/killall5 name=exe dev= ino=137035784 scontext=system_u:system_r:kernel_t tcontext=user_u:sysadm_r:sysadm_t tclass=lnk_file
+Jan 26 12:53:13 combo kernel: audit(1138297993.375:1376285): avc:  denied  { relabelfrom } for  pid=3128 exe=/usr/sbin/sshd name=1 dev= ino=3 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:devpts_t tclass=chr_file
+---
+len=200
+Jan 26 12:22:16 combo kernel: audit(1138278102.349:166029): syscall=102 exit=0 a0=3 a1=feea18b0 a2=68cffc a3=9bc9858 items=1 pid=596 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:17 combo kernel: audit(1138278102.405:167250): syscall=197 exit=0 a0=4 a1=fef0c808 a2=68cffc a3=87171c0 items=0 pid=598 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:27 combo kernel: audit(1138296107.872:267385): syscall=197 exit=0 a0=3 a1=fee9c408 a2=68cffc a3=89c4050 items=0 pid=739 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:44 combo kernel: audit(1138296147.477:547636): syscall=102 exit=0 a0=2 a1=feeb3710 a2=84251c a3=842bb8 items=0 pid=1803 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:45 combo kernel: audit(1138296165.211:606989): avc:  denied  { rlimitinh } for  pid=2090 exe=/bin/bash scontext=system_u:system_r:kernel_t tcontext=user_u:sysadm_r:sysadm_t tclass=process
+Jan 26 12:53:14 combo kernel: audit(1138297993.581:1376686): avc:  denied  { noatsecure } for  pid=3130 exe=/bin/bash scontext=system_u:system_r:kernel_t tcontext=root:sysadm_r:sysadm_t tclass=process
+---
+len=240
+Jan 26 12:22:16 combo kernel: audit(1138278102.349:166029): avc:  denied  { write } for  pid=596 exe=/usr/bin/rhgb-client name=rhgb-socket dev= ino=1026 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:ramfs_t tclass=sock_file
+Jan 26 12:22:27 combo kernel: audit(1138296107.869:267298): avc:  denied  { write } for  pid=738 exe=/sbin/sysctl name=modprobe dev= ino=-268435402 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:sysctl_modprobe_t tclass=file
+Jan 26 12:22:42 combo kernel: audit(1138296123.500:397293): avc:  denied  { ioctl } for  pid=1445 exe=/sbin/arping path=socket:[2243] dev= ino=2243 scontext=system_u:system_r:kernel_t tcontext=system_u:system_r:kernel_t tclass=packet_socket
+Jan 26 12:23:14 combo kernel: audit(1138296194.865:693309): avc:  denied  { getattr } for  pid=2285 exe=/sbin/killall5 path=/proc/2091/stat dev= ino=137035789 scontext=system_u:system_r:kernel_t tcontext=user_u:sysadm_r:sysadm_t tclass=file
+---
+len=185
+Jan 26 12:22:16 combo kernel: audit(1138278101.766:164029): syscall=207 exit=0 a0=4 a1=0 a2=5 a3=0 items=0 pid=594 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=22 sgid=22 fsgid=22
+---
+len=193
+Jan 26 12:22:15 combo kernel: audit(1138278101.749:164013): syscall=5 exit=4 a0=fef6d1cc a1=102 a2=1000 a3=0 items=1 pid=594 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=22 fsgid=0
+Jan 26 12:22:19 combo kernel: audit(1138296102.620:183525): syscall=5 exit=3 a0=fef6de9a a1=8000 a2=0 a3=8000 items=1 pid=651 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:22 combo kernel: audit(1138296102.679:186228): syscall=5 exit=3 a0=fef14e91 a1=8000 a2=0 a3=8000 items=1 pid=658 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:24 combo kernel: audit(1138296104.852:227147): syscall=15 exit=0 a0=fef96e54 a1=2180 a2=0 a3=a3f items=1 pid=716 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:43 combo kernel: audit(1138296128.157:454451): syscall=5 exit=3 a0=804f480 a1=0 a2=804df6f a3=1 items=1 pid=1642 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:53:13 combo kernel: audit(1138297993.475:1376441): syscall=54 exit=0 a0=7 a1=540e a2=0 a3=fef0c768 items=0 pid=3130 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+---
+len=241
+Jan 26 12:22:14 combo kernel: audit(1138278101.749:164013): avc:  denied  { read write } for  pid=594 exe=/usr/lib/vte/gnome-pty-helper name=0 dev= ino=2 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:devpts_t tclass=chr_file
+Jan 26 12:22:37 combo kernel: audit(1138296120.101:365320): avc:  denied  { read } for  pid=1263 exe=/usr/sbin/kudzu name=hotplug dev= ino=-268435401 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:sysctl_hotplug_t tclass=file
+Jan 26 12:22:43 combo kernel: audit(1138296132.911:505629): avc:  denied  { relabelfrom } for  pid=1788 exe=/sbin/restorecon name=ptal-mlcd dev=hda2 ino=1502894 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:file_t tclass=dir
+Jan 26 12:53:13 combo kernel: audit(1138297993.581:1376686): avc:  denied  { transition } for  pid=3130 exe=/usr/sbin/sshd path=/bin/bash dev=hda2 ino=1044632 scontext=system_u:system_r:kernel_t tcontext=root:sysadm_r:sysadm_t tclass=process
+---
+len=209
+Jan 26 12:22:14 combo kernel: audit(1138278101.749:164007): syscall=195 exit=0 a0=fef6c158 a1=fef6c0ac a2=68cffc a3=fef6c09f items=1 pid=594 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=22 fsgid=0
+Jan 26 12:22:29 combo kernel: audit(1138296111.616:324631): syscall=10 exit=0 a0=fef124d0 a1=8f30a88 a2=fef124d0 a3=fef125e8 items=1 pid=1205 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:23:14 combo kernel: audit(1138296194.865:693325): syscall=195 exit=0 a0=feeb7580 a1=feeb7354 a2=68cffc a3=feeb7354 items=1 pid=2285 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:23:18 combo kernel: audit(1138296198.308:701025): syscall=102 exit=0 a0=2 a1=f704b4f0 a2=7ee138 a3=9142ac0 items=0 pid=2289 loginuid=-1 uid=25 gid=25 euid=25 suid=25 fsuid=25 egid=25 sgid=25 fsgid=25
+Jan 26 12:23:20 combo kernel: audit(1138296198.308:701032): syscall=102 exit=0 a0=2 a1=f704b5c0 a2=7ee138 a3=916c4b8 items=0 pid=2289 loginuid=-1 uid=25 gid=25 euid=25 suid=25 fsuid=25 egid=25 sgid=25 fsgid=25
+---
+len=186
+Jan 26 12:22:14 combo kernel: audit(1138278101.742:164003): syscall=5 exit=3 a0=682cc3 a1=2 a2=0 a3=0 items=1 pid=594 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=22 fsgid=0
+---
+len=225
+Jan 26 12:22:14 combo kernel: audit(1138278101.742:164003): avc:  denied  { search } for  pid=594 exe=/usr/lib/vte/gnome-pty-helper dev= ino=1 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:devpts_t tclass=dir
+Jan 26 12:22:22 combo kernel: audit(1138296104.703:225182): avc:  denied  { read } for  pid=716 exe=/sbin/udev name=device-mapper dev= ino=1424 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:sysfs_t tclass=dir
+---
+len=196
+Jan 26 12:22:22 combo kernel: audit(1138296104.506:222519): syscall=102 exit=0 a0=2 a1=fef4d420 a2=fef4d440 a3=1 items=1 pid=705 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:22 combo kernel: audit(1138296104.703:225182): syscall=5 exit=5 a0=9d3274a a1=18800 a2=0 a3=9d325a0 items=1 pid=716 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:25 combo kernel: audit(1138296106.081:244398): syscall=5 exit=3 a0=82e3fa0 a1=18800 a2=0 a3=82e3fa0 items=1 pid=725 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:30 combo kernel: audit(1138296118.152:350118): syscall=5 exit=6 a0=806aca9 a1=18800 a2=5fbe83 a3=0 items=1 pid=1263 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:43 combo kernel: audit(1138296126.464:427092): syscall=15 exit=0 a0=1fdf0f a1=1b6 a2=1ff130 a3=1b6 items=1 pid=1570 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:44 combo kernel: audit(1138296164.920:606586): syscall=4 exit=58 a0=3 a1=8629f78 a2=3a a3=ffffffff items=0 pid=2089 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:53:13 combo kernel: audit(1138297993.581:1376686): avc:  denied  { siginh } for  pid=3130 exe=/bin/bash scontext=system_u:system_r:kernel_t tcontext=root:sysadm_r:sysadm_t tclass=process
+Jan 26 12:55:50 combo kernel: audit(1138298150.141:1454728): syscall=212 exit=0 a0=808dd54 a1=0 a2=0 a3=808dd54 items=1 pid=3128 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+---
+len=187
+Jan 26 12:22:13 combo kernel: audit(1138278093.540:118407): syscall=4 exit=11 a0=0 a1=81f6f20 a2=b a3=b items=0 pid=513 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:13 combo kernel: audit(1138278093.880:123407): syscall=5 exit=6 a0=fee652b0 a1=2 a2=0 a3=0 items=1 pid=513 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+---
+len=199
+Jan 26 12:22:13 combo kernel: audit(1138278093.406:116163): syscall=102 exit=0 a0=2 a1=fee65200 a2=1770 a3=fee65260 items=0 pid=513 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:15 combo kernel: audit(1138278101.749:164014): syscall=54 exit=0 a0=4 a1=5404 a2=fef6d168 a3=fef6d168 items=0 pid=594 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=22 fsgid=0
+Jan 26 12:22:22 combo kernel: audit(1138296102.679:186229): syscall=197 exit=0 a0=3 a1=805a2e4 a2=68cffc a3=88237c8 items=0 pid=658 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:45 combo kernel: audit(1138296165.182:606936): syscall=4 exit=25 a0=3 a1=862a098 a2=19 a3=862785d items=0 pid=2089 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=100 egid=0 sgid=0 fsgid=101
+Jan 26 12:24:01 combo kernel: audit(1138296225.596:965628): syscall=15 exit=0 a0=9e9f968 a1=1b0 a2=f70ad980 a3=1b0 items=1 pid=2417 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:53:14 combo kernel: audit(1138297993.581:1376686): avc:  denied  { rlimitinh } for  pid=3130 exe=/bin/bash scontext=system_u:system_r:kernel_t tcontext=root:sysadm_r:sysadm_t tclass=process
+---
+len=192
+Jan 26 12:22:13 combo kernel: audit(1138278092.998:114103): syscall=5 exit=0 a0=8fea430 a1=241 a2=1b6 a3=1b6 items=1 pid=513 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:16 combo kernel: audit(1138278102.405:167249): syscall=5 exit=4 a0=8717180 a1=241 a2=1b6 a3=1b6 items=1 pid=598 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:23 combo kernel: audit(1138296104.727:225279): syscall=14 exit=0 a0=804fffa a1=2180 a2=a3f a3=0 items=1 pid=719 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:27 combo kernel: audit(1138296107.869:267298): syscall=5 exit=3 a0=8aac018 a1=241 a2=1b6 a3=1b6 items=1 pid=738 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:27 combo kernel: audit(1138296107.872:267384): syscall=5 exit=3 a0=89c4018 a1=241 a2=1b6 a3=1b6 items=1 pid=739 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:30 combo kernel: audit(1138296117.905:349720): syscall=5 exit=4 a0=fef1ae20 a1=0 a2=1b6 a3=1b6 items=1 pid=1263 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:42 combo kernel: audit(1138296123.500:397293): syscall=54 exit=0 a0=3 a1=8933 a2=fef5d950 a3=0 items=0 pid=1445 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:23:14 combo kernel: audit(1138296194.864:693295): syscall=5 exit=4 a0=feeb7580 a1=0 a2=1b6 a3=1b6 items=1 pid=2285 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+---
+len=223
+Jan 26 12:22:13 combo kernel: audit(1138278092.998:114103): avc:  denied  { create } for  pid=513 exe=/usr/X11R6/bin/Xorg name=XFree86.0.log scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:ramfs_t tclass=file
+Jan 26 12:22:20 combo kernel: audit(1138296102.652:185394): avc:  denied  { getattr } for  pid=647 exe=/usr/bin/readlink path=/sys dev= ino=1 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:sysfs_t tclass=dir
+Jan 26 12:24:00 combo kernel: audit(1138296225.596:965626): avc:  denied  { create } for  pid=2417 exe=/usr/bin/gdm-binary name=.gdmfifo scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:file_t tclass=fifo_file
+Jan 26 12:53:13 combo kernel: audit(1138297993.375:1376285): avc:  denied  { relabelto } for  pid=3128 exe=/usr/sbin/sshd name=1 dev= ino=3 scontext=system_u:system_r:kernel_t tcontext=root:object_r:devpts_t tclass=chr_file
+---
+len=189
+Jan 26 12:22:13 combo kernel: audit(1138278092.594:113949): syscall=102 exit=0 a0=2 a1=feee2dd0 a2=2 a3=1 items=1 pid=511 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:13 combo kernel: audit(1138278092.594:113951): syscall=15 exit=0 a0=805cd2b a1=1c0 a2=2 a3=1 items=1 pid=511 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+---
+len=220
+Jan 26 12:22:13 combo kernel: audit(1138278092.594:113949): avc:  denied  { create } for  pid=511 exe=/usr/bin/rhgb name=rhgb-socket scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:ramfs_t tclass=sock_file
+Jan 26 12:22:13 combo kernel: audit(1138278093.406:116163): avc:  denied  { name_bind } for  pid=513 exe=/usr/X11R6/bin/Xorg scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:xserver_port_t tclass=tcp_socket
+Jan 26 12:22:44 combo kernel: audit(1138296160.391:589420): avc:  denied  { name_bind } for  pid=2013 exe=/usr/sbin/xinetd scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:amandaidx_port_t tclass=tcp_socket
+Jan 26 12:22:44 combo kernel: audit(1138296160.391:589425): avc:  denied  { name_bind } for  pid=2013 exe=/usr/sbin/xinetd scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:amidxtape_port_t tclass=tcp_socket
+---
+len=216
+Jan 26 12:22:13 combo kernel: audit(1138278092.594:113949): avc:  denied  { add_name } for  pid=511 exe=/usr/bin/rhgb name=rhgb-socket scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:ramfs_t tclass=dir
+Jan 26 12:22:44 combo kernel: audit(1138296160.392:589430): avc:  denied  { name_bind } for  pid=2013 exe=/usr/sbin/xinetd scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:inetd_port_t tclass=tcp_socket
+Jan 26 12:22:44 combo kernel: audit(1138296160.392:589436): avc:  denied  { name_bind } for  pid=2013 exe=/usr/sbin/xinetd scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:inetd_port_t tclass=udp_socket
+Jan 26 12:23:11 combo kernel: audit(1138296191.846:687489): syscall=195 exit=0 a0=fee8cefe a1=fee8ce90 a2=501ffc a3=fee8cf06 items=1 pid=2275 loginuid=-1 uid=23 gid=23 euid=23 suid=0 fsuid=23 egid=23 sgid=23 fsgid=23
+---
+len=210
+Jan 26 12:22:13 combo kernel: audit(1138278092.594:113949): avc:  denied  { write } for  pid=511 exe=/usr/bin/rhgb dev= ino=1021 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:ramfs_t tclass=dir
+Jan 26 12:22:25 combo kernel: audit(1138296106.081:244398): avc:  denied  { read } for  pid=725 exe=/sbin/lvm.static dev= ino=1 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:devpts_t tclass=dir
+---
+len=211
+Jan 26 12:22:13 combo kernel: audit(1138278092.594:113949): avc:  denied  { search } for  pid=511 exe=/usr/bin/rhgb dev= ino=1021 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:ramfs_t tclass=dir
+Jan 26 12:22:23 combo kernel: audit(1138296104.727:225279): avc:  denied  { create } for  pid=719 exe=/sbin/nash name=control scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:file_t tclass=chr_file
+---
+len=208
+Jan 26 12:22:13 combo kernel: audit(1138278092.509:112888): syscall=33 exit=4294967294 a0=8051f0f a1=4 a2=80545a0 a3=8054460 items=1 pid=512 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:41 combo kernel: audit(1138296123.500:397288): avc:  denied  { create } for  pid=1445 exe=/sbin/arping scontext=system_u:system_r:kernel_t tcontext=system_u:system_r:kernel_t tclass=packet_socket
+Jan 26 12:53:14 combo kernel: audit(1138297993.581:1376686): syscall=11 exit=0 a0=9234400 a1=fef0c700 a2=9231e40 a3=9234400 items=2 pid=3130 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+---
+len=197
+Jan 26 12:22:44 combo kernel: audit(1138296160.393:589484): syscall=102 exit=0 a0=2 a1=fef535e0 a2=70aa2c a3=202 items=0 pid=2013 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:44 combo kernel: audit(1138296160.393:589494): syscall=102 exit=0 a0=2 a1=fef535e0 a2=70aa2c a3=202 items=0 pid=2013 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:44 combo kernel: audit(1138296160.393:589517): syscall=102 exit=0 a0=2 a1=fef535e0 a2=70aa2c a3=200 items=0 pid=2013 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:44 combo kernel: audit(1138296160.393:589522): syscall=102 exit=0 a0=2 a1=fef535e0 a2=70aa2c a3=200 items=0 pid=2013 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:44 combo kernel: audit(1138296161.396:590201): syscall=102 exit=0 a0=2 a1=fef535e0 a2=70aa2c a3=200 items=0 pid=2013 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:44 combo kernel: audit(1138296161.881:590520): syscall=102 exit=0 a0=2 a1=fef535e0 a2=70aa2c a3=200 items=0 pid=2013 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:45 combo kernel: audit(1138296165.211:606989): avc:  denied  { siginh } for  pid=2090 exe=/bin/bash scontext=system_u:system_r:kernel_t tcontext=user_u:sysadm_r:sysadm_t tclass=process
+Jan 26 12:23:58 combo kernel: audit(1138296225.426:965370): syscall=10 exit=0 a0=9e9f968 a1=0 a2=f70ad980 a3=1b0 items=1 pid=2417 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+---
+len=219
+Jan 26 12:22:13 combo kernel: audit(1138278092.486:112647): avc:  denied  { setattr } for  pid=509 exe=/usr/bin/rhgb name=/ dev= ino=1021 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:ramfs_t tclass=dir
+Jan 26 12:22:13 combo kernel: audit(1138278094.933:149104): avc:  denied  { execute } for  pid=513 path=/dev/mem dev=hda2 ino=1024150 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:file_t tclass=chr_file
+---
+len=182
+Jan 26 12:22:13 combo kernel: audit(1138278091.510:111925): syscall=103 exit=0 a0=8 a1=0 a2=3 a3=3 items=0 pid=506 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+---
+len=206
+Jan 26 12:22:13 combo kernel: audit(1138278091.510:111925): avc:  denied  { syslog_console } for  pid=506 exe=/bin/dmesg scontext=system_u:system_r:kernel_t tcontext=system_u:system_r:kernel_t tclass=system
+Jan 26 12:22:18 combo kernel: audit(1138296102.617:183467): syscall=195 exit=0 a0=80d028c a1=fefff650 a2=68cffc a3=80d028c items=1 pid=635 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:19 combo kernel: audit(1138296102.645:185219): syscall=21 exit=0 a0=87a8a18 a1=87a8a28 a2=87a8a40 a3=c0ed0000 items=1 pid=655 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:20 combo kernel: audit(1138296102.652:185394): syscall=196 exit=0 a0=87ee038 a1=fef69978 a2=68cffc a3=87ee038 items=1 pid=647 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:25 combo kernel: audit(1138296105.200:235352): syscall=195 exit=0 a0=80cfbcc a1=fefff8d0 a2=68cffc a3=80cfbcc items=1 pid=309 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:26 combo kernel: audit(1138296107.867:267232): syscall=195 exit=0 a0=80cfbcc a1=fefffa10 a2=68cffc a3=80cfbcc items=1 pid=309 loginuid=-1 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0
+Jan 26 12:22:45 combo kernel: audit(1138296165.146:606873): avc:  denied  { compute_user } for  pid=2089 exe=/bin/su scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:security_t tclass=security
+---
+len=232
+Jan 26 12:22:13 combo kernel: audit(1138278089.855:0): avc:  denied  { getattr } for  pid=1 exe=/sbin/init path=/dev/initctl dev=hda2 ino=1031635 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:file_t tclass=fifo_file
+Jan 26 12:22:13 combo kernel: audit(1138278092.509:112888): avc:  denied  { search } for  pid=512 exe=/sbin/ifconfig name=net dev= ino=-268435354 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:sysctl_net_t tclass=dir
+Jan 26 12:22:13 combo kernel: audit(1138278093.880:123407): avc:  denied  { write } for  pid=513 exe=/usr/X11R6/bin/Xorg name=00.0 dev= ino=-268435176 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:proc_t tclass=file
+Jan 26 12:22:43 combo kernel: audit(1138296133.544:515571): avc:  denied  { relabelto } for  pid=1792 exe=/sbin/restorecon name=ptal dev=hda2 ino=309507 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:etc_t tclass=dir
+---
+len=99
+Jan 26 12:22:12 combo kernel: SELinux: initialized (dev , type mqueue), not configured for labeling
+---
+len=166
+Jan 19 19:50:13 combo sshd(pam_unix)[13656]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=dsl-kk-151.195.95.61.touchtelindia.net  user=root
+Jan 19 19:50:16 combo sshd(pam_unix)[13658]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=dsl-kk-151.195.95.61.touchtelindia.net  user=root
+Jan 20 01:35:37 combo sshd(pam_unix)[14128]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=dsl-kk-151.195.95.61.touchtelindia.net  user=root
+Jan 20 01:35:37 combo sshd(pam_unix)[14129]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=dsl-kk-151.195.95.61.touchtelindia.net  user=root
+Jan 20 01:35:47 combo sshd(pam_unix)[14133]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=dsl-kk-151.195.95.61.touchtelindia.net  user=root
+Jan 20 01:35:47 combo sshd(pam_unix)[14132]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=dsl-kk-151.195.95.61.touchtelindia.net  user=root
+Jan 20 01:35:56 combo sshd(pam_unix)[14136]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=dsl-kk-151.195.95.61.touchtelindia.net  user=root
+Feb 18 04:45:02 combo sshd(pam_unix)[5288]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=66-169-125-252.dhcp.ftwo.tx.charter.com  user=root
+---
+len=120
+Jan 23 10:06:36 combo ftpd[29095]: connection from 200.113.123.186 (113-123-186.ded.tie.cl) at Mon Jan 23 10:06:36 2006 
+Jan 23 10:06:36 combo ftpd[29097]: connection from 200.113.123.186 (113-123-186.ded.tie.cl) at Mon Jan 23 10:06:36 2006 
+Jan 23 10:06:36 combo ftpd[29107]: connection from 200.113.123.186 (113-123-186.ded.tie.cl) at Mon Jan 23 10:06:36 2006 
+Jan 23 10:06:36 combo ftpd[29098]: connection from 200.113.123.186 (113-123-186.ded.tie.cl) at Mon Jan 23 10:06:36 2006 
+Jan 23 10:06:36 combo ftpd[29108]: connection from 200.113.123.186 (113-123-186.ded.tie.cl) at Mon Jan 23 10:06:36 2006 
+Jan 23 10:06:36 combo ftpd[29109]: connection from 200.113.123.186 (113-123-186.ded.tie.cl) at Mon Jan 23 10:06:36 2006 
+Jan 26 12:22:13 combo kernel: audit(1138278093.880:123407): item=0 name=/proc/bus/pci/00/00.0 inode=4026532120 dev=00:00
+Jan 26 12:22:31 combo kernel: audit(1138296118.152:350118): item=0 name=/proc/sys/dev/parport inode=4026532411 dev=00:00
+---
+len=170
+Feb  9 17:15:08 combo sshd(pam_unix)[4431]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=adsl-68-120-97-218.dsl.sntc01.sbcglobal.net  user=test
+Feb  9 17:15:08 combo sshd(pam_unix)[4433]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=adsl-68-120-97-218.dsl.sntc01.sbcglobal.net  user=test
+Feb  9 17:15:08 combo sshd(pam_unix)[4430]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=adsl-68-120-97-218.dsl.sntc01.sbcglobal.net  user=test
+Feb  9 17:15:08 combo sshd(pam_unix)[4434]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=adsl-68-120-97-218.dsl.sntc01.sbcglobal.net  user=test
+Feb  9 17:15:08 combo sshd(pam_unix)[4432]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=adsl-68-120-97-218.dsl.sntc01.sbcglobal.net  user=test
+Feb  9 17:15:08 combo sshd(pam_unix)[4427]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=adsl-68-120-97-218.dsl.sntc01.sbcglobal.net  user=test
+Feb  9 17:15:08 combo sshd(pam_unix)[4429]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=adsl-68-120-97-218.dsl.sntc01.sbcglobal.net  user=test
+Feb  9 17:15:08 combo sshd(pam_unix)[4428]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=adsl-68-120-97-218.dsl.sntc01.sbcglobal.net  user=test
+---
+len=163
+Feb 18 05:44:28 combo sshd(pam_unix)[5294]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=dialup-mum-203.94.231.54.mtnl.net.in  user=test
+Feb 18 05:44:28 combo sshd(pam_unix)[5298]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=dialup-mum-203.94.231.54.mtnl.net.in  user=test
+Feb 18 05:44:28 combo sshd(pam_unix)[5299]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=dialup-mum-203.94.231.54.mtnl.net.in  user=test
+Feb 18 05:44:28 combo sshd(pam_unix)[5300]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=dialup-mum-203.94.231.54.mtnl.net.in  user=test
+Feb 18 05:44:28 combo sshd(pam_unix)[5301]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=dialup-mum-203.94.231.54.mtnl.net.in  user=test
+Feb 18 05:44:29 combo sshd(pam_unix)[5306]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=dialup-mum-203.94.231.54.mtnl.net.in  user=test
+Feb 18 05:44:29 combo sshd(pam_unix)[5308]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=dialup-mum-203.94.231.54.mtnl.net.in  user=test
+Feb 18 05:44:29 combo sshd(pam_unix)[5307]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=dialup-mum-203.94.231.54.mtnl.net.in  user=test
+---
+len=111
+Jan  8 16:24:13 combo ftpd[2840]: connection from 66.98.170.19 (www.zajelgate.net) at Sun Jan  8 16:24:13 2006 
+Jan  8 16:24:13 combo ftpd[2819]: connection from 66.98.170.19 (www.zajelgate.net) at Sun Jan  8 16:24:13 2006 
+Jan  8 16:24:13 combo ftpd[2829]: connection from 66.98.170.19 (www.zajelgate.net) at Sun Jan  8 16:24:13 2006 
+Feb 24 09:13:32 combo ftpd[6204]: connection from 89.52.108.44 (P6c2c.p.pppool.de) at Fri Feb 24 09:13:32 2006 
+Feb 24 11:57:02 combo ftpd[6265]: connection from 89.52.108.44 (P6c2c.p.pppool.de) at Fri Feb 24 11:57:02 2006 
+Feb 24 11:57:07 combo ftpd[6266]: connection from 89.52.108.44 (P6c2c.p.pppool.de) at Fri Feb 24 11:57:07 2006 
+Feb 24 22:28:18 combo ftpd[6366]: connection from 89.52.86.249 (P56f9.p.pppool.de) at Fri Feb 24 22:28:18 2006 
+Feb 24 22:32:29 combo ftpd[6367]: connection from 89.52.86.249 (P56f9.p.pppool.de) at Fri Feb 24 22:32:29 2006 
+---
+len=161
+Feb 28 01:49:00 combo sshd(pam_unix)[6726]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=www.buller.hoover.fresno.k12.ca.us  user=root
+Feb 28 01:49:00 combo sshd(pam_unix)[6724]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=www.buller.hoover.fresno.k12.ca.us  user=root
+Feb 28 01:49:00 combo sshd(pam_unix)[6723]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=www.buller.hoover.fresno.k12.ca.us  user=root
+Feb 28 01:49:00 combo sshd(pam_unix)[6727]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=www.buller.hoover.fresno.k12.ca.us  user=root
+Feb 28 01:49:00 combo sshd(pam_unix)[6725]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=www.buller.hoover.fresno.k12.ca.us  user=root
+Feb 28 01:49:02 combo sshd(pam_unix)[6735]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=www.buller.hoover.fresno.k12.ca.us  user=root
+Feb 28 01:49:02 combo sshd(pam_unix)[6736]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=www.buller.hoover.fresno.k12.ca.us  user=root
+Feb 28 01:49:02 combo sshd(pam_unix)[6737]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=www.buller.hoover.fresno.k12.ca.us  user=root
+---
+len=162
+Jan 12 22:37:31 combo sshd(pam_unix)[19728]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=ip67-90-201-250.z201-90-67.customer.algx.net 
+Jan 12 22:37:31 combo sshd(pam_unix)[19730]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=ip67-90-201-250.z201-90-67.customer.algx.net 
+Jan 12 22:37:31 combo sshd(pam_unix)[19732]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=ip67-90-201-250.z201-90-67.customer.algx.net 
+Jan 12 22:37:31 combo sshd(pam_unix)[19734]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=ip67-90-201-250.z201-90-67.customer.algx.net 
+Jan 15 16:52:59 combo sshd(pam_unix)[32765]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=212-41-230-229.hebragasse.xdsl-line.inode.at 
+Jan 15 16:53:00 combo sshd(pam_unix)[32767]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=212-41-230-229.hebragasse.xdsl-line.inode.at 
+Jan 15 16:53:01 combo sshd(pam_unix)[32766]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=212-41-230-229.hebragasse.xdsl-line.inode.at 
+Feb 18 04:29:58 combo sshd(pam_unix)[5286]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=c-66-176-150-53.hsd1.fl.comcast.net  user=root
+---
+len=117
+Feb 11 20:37:20 combo ftpd[4694]: connection from 204.92.104.1 (dco001.actionhosting.ca) at Sat Feb 11 20:37:20 2006 
+Feb 11 20:37:20 combo ftpd[4696]: connection from 204.92.104.1 (dco001.actionhosting.ca) at Sat Feb 11 20:37:20 2006 
+Feb 11 20:37:20 combo ftpd[4693]: connection from 204.92.104.1 (dco001.actionhosting.ca) at Sat Feb 11 20:37:20 2006 
+Feb 11 20:37:20 combo ftpd[4698]: connection from 204.92.104.1 (dco001.actionhosting.ca) at Sat Feb 11 20:37:20 2006 
+Feb 11 20:37:20 combo ftpd[4697]: connection from 204.92.104.1 (dco001.actionhosting.ca) at Sat Feb 11 20:37:20 2006 
+Feb 11 20:37:22 combo ftpd[4699]: connection from 204.92.104.1 (dco001.actionhosting.ca) at Sat Feb 11 20:37:22 2006 
+Feb 11 20:37:22 combo ftpd[4700]: connection from 204.92.104.1 (dco001.actionhosting.ca) at Sat Feb 11 20:37:22 2006 
+Feb 11 20:37:22 combo ftpd[4701]: connection from 204.92.104.1 (dco001.actionhosting.ca) at Sat Feb 11 20:37:22 2006 
+---
+len=123
+Feb 10 21:56:06 combo ftpd[4612]: connection from 85.219.160.32 (host-32-160.users.bzimage.us) at Fri Feb 10 21:56:06 2006 
+Feb 10 21:56:11 combo ftpd[4613]: connection from 85.219.160.32 (host-32-160.users.bzimage.us) at Fri Feb 10 21:56:11 2006 
+Feb 10 21:56:16 combo ftpd[4614]: connection from 85.219.160.32 (host-32-160.users.bzimage.us) at Fri Feb 10 21:56:16 2006 
+Feb 10 21:56:21 combo ftpd[4615]: connection from 85.219.160.32 (host-32-160.users.bzimage.us) at Fri Feb 10 21:56:21 2006 
+Feb 10 21:56:26 combo ftpd[4616]: connection from 85.219.160.32 (host-32-160.users.bzimage.us) at Fri Feb 10 21:56:26 2006 
+Feb 10 21:56:32 combo ftpd[4617]: connection from 85.219.160.32 (host-32-160.users.bzimage.us) at Fri Feb 10 21:56:32 2006 
+Feb 10 21:56:37 combo ftpd[4618]: connection from 85.219.160.32 (host-32-160.users.bzimage.us) at Fri Feb 10 21:56:37 2006 
+Feb 10 21:56:42 combo ftpd[4619]: connection from 85.219.160.32 (host-32-160.users.bzimage.us) at Fri Feb 10 21:56:42 2006 
+---
+len=164
+Oct 24 06:06:50 combo sshd(pam_unix)[24728]: 1 more authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=88-213-181-81-cable.canals.ro  user=root
+---
+len=113
+Oct 13 13:44:08 combo ftpd[980]: connection from 210.21.220.88 (sym.gdsz.cncnet.net) at Thu Oct 13 13:44:08 2005 
+Oct 13 13:44:08 combo ftpd[984]: connection from 210.21.220.88 (sym.gdsz.cncnet.net) at Thu Oct 13 13:44:08 2005 
+Oct 13 13:44:08 combo ftpd[978]: connection from 210.21.220.88 (sym.gdsz.cncnet.net) at Thu Oct 13 13:44:08 2005 
+Oct 13 13:44:08 combo ftpd[977]: connection from 210.21.220.88 (sym.gdsz.cncnet.net) at Thu Oct 13 13:44:08 2005 
+Jan 26 12:23:14 combo kernel: audit(1138296194.864:693295): item=0 name=/proc/2091/stat inode=137035789 dev=00:00
+Jan 26 12:23:59 combo kernel: audit(1138296225.426:965370): item=0 name=/var/gdm/.gdmfifo inode=1190404 dev=00:00
+Jan 26 12:24:01 combo kernel: audit(1138296225.596:965626): item=0 name=/var/gdm/.gdmfifo inode=1190404 dev=00:00
+Feb 24 01:20:21 combo ftpd[6148]: ANONYMOUS FTP LOGIN FROM 84.102.20.91, 91.20.102-84.rev.gaoland.net (anonymous)
+---
+len=148
+Jan 20 11:27:10 combo sshd(pam_unix)[15779]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=61-222-8-50.hinet-ip.hinet.net 
+Jan 20 11:27:10 combo sshd(pam_unix)[15777]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=61-222-8-50.hinet-ip.hinet.net 
+Jan 20 11:27:10 combo sshd(pam_unix)[15776]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=61-222-8-50.hinet-ip.hinet.net 
+Jan 20 11:27:10 combo sshd(pam_unix)[15778]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=61-222-8-50.hinet-ip.hinet.net 
+Jan 20 11:27:10 combo sshd(pam_unix)[15780]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=61-222-8-50.hinet-ip.hinet.net 
+Jan 20 11:27:10 combo sshd(pam_unix)[15789]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=61-222-8-50.hinet-ip.hinet.net 
+Jan 20 11:27:10 combo sshd(pam_unix)[15791]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=61-222-8-50.hinet-ip.hinet.net 
+Jan 20 11:27:10 combo sshd(pam_unix)[15792]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=61-222-8-50.hinet-ip.hinet.net 
+---
+len=145
+Feb 16 16:43:15 combo sshd(pam_unix)[5097]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=wef.hebiace.edu.cn  user=test
+Feb 16 16:43:15 combo sshd(pam_unix)[5111]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=wef.hebiace.edu.cn  user=test
+Feb 16 16:43:15 combo sshd(pam_unix)[5113]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=wef.hebiace.edu.cn  user=test
+Feb 16 16:43:23 combo sshd(pam_unix)[5100]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=wef.hebiace.edu.cn  user=test
+Feb 16 16:43:23 combo sshd(pam_unix)[5101]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=wef.hebiace.edu.cn  user=test
+Feb 16 16:43:23 combo sshd(pam_unix)[5099]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=wef.hebiace.edu.cn  user=test
+Feb 16 16:43:23 combo sshd(pam_unix)[5098]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=wef.hebiace.edu.cn  user=test
+Feb 16 16:43:24 combo sshd(pam_unix)[5108]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=wef.hebiace.edu.cn  user=test
+---
+len=165
+Nov 28 13:30:55 combo sshd(pam_unix)[30953]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=ip-68-178-149-108.ip.secureserver.net  user=root
+Nov 28 13:30:55 combo sshd(pam_unix)[30950]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=ip-68-178-149-108.ip.secureserver.net  user=root
+Nov 28 13:30:55 combo sshd(pam_unix)[30951]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=ip-68-178-149-108.ip.secureserver.net  user=root
+Feb 23 12:02:26 combo sshd(pam_unix)[6070]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=175.red-80-34-110.staticip.rima-tde.net  user=fax
+Feb 23 12:02:26 combo sshd(pam_unix)[6072]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=175.red-80-34-110.staticip.rima-tde.net  user=fax
+Feb 23 12:02:26 combo sshd(pam_unix)[6066]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=175.red-80-34-110.staticip.rima-tde.net  user=fax
+Feb 23 12:02:26 combo sshd(pam_unix)[6067]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=175.red-80-34-110.staticip.rima-tde.net  user=fax
+Feb 23 12:02:26 combo sshd(pam_unix)[6073]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=175.red-80-34-110.staticip.rima-tde.net  user=fax
+---
+len=29
+Sep 28 09:08:56 combo squid: 
+Oct 25 10:06:54 combo squid: 
+Dec  6 12:20:45 combo squid: 
+Jan 26 12:20:17 combo squid: 
+---
+len=227
+Jan 26 12:22:25 combo kernel: audit(1138296106.081:244396): avc:  denied  { getattr } for  pid=725 exe=/sbin/lvm.static path=/dev/pts dev= ino=1 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:devpts_t tclass=dir
+Jan 26 12:23:14 combo kernel: audit(1138296194.864:693295): avc:  denied  { search } for  pid=2285 exe=/sbin/killall5 name=2091 dev= ino=137035778 scontext=system_u:system_r:kernel_t tcontext=user_u:sysadm_r:sysadm_t tclass=dir
+---
+len=30
+Dec  6 00:27:23 combo kernel: 
+Dec  6 00:27:30 combo kernel: 
+Dec  6 00:27:35 combo kernel: 
+Dec  6 00:27:39 combo kernel: 
+Dec  6 05:01:31 combo kernel: 
+Dec  6 12:20:43 combo squid: .
+Dec  6 12:20:45 combo squid: .
+Jan 26 12:20:17 combo squid: .
+---
+len=157
+Feb 14 01:42:18 combo sshd(pam_unix)[4890]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=debsnet1.americannetlink.propagation.net 
+Feb 26 09:02:54 combo sshd(pam_unix)[6556]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=202-63-163-84.static.exatt.net  user=root
+Feb 26 09:02:54 combo sshd(pam_unix)[6557]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=202-63-163-84.static.exatt.net  user=root
+Feb 26 09:02:54 combo sshd(pam_unix)[6548]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=202-63-163-84.static.exatt.net  user=root
+Feb 26 09:02:54 combo sshd(pam_unix)[6559]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=202-63-163-84.static.exatt.net  user=root
+Feb 26 09:02:54 combo sshd(pam_unix)[6558]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=202-63-163-84.static.exatt.net  user=root
+Feb 26 09:02:54 combo sshd(pam_unix)[6547]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=202-63-163-84.static.exatt.net  user=root
+Feb 26 09:02:54 combo sshd(pam_unix)[6562]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=202-63-163-84.static.exatt.net  user=root
+---
+len=124
+Feb 22 23:41:37 combo ftpd[6056]: connection from 24.229.9.65 (24.229.9.65.res-cmts.sm.ptd.net) at Wed Feb 22 23:41:37 2006 
+Feb 22 23:41:37 combo ftpd[6057]: connection from 24.229.9.65 (24.229.9.65.res-cmts.sm.ptd.net) at Wed Feb 22 23:41:37 2006 
+Feb 22 23:41:37 combo ftpd[6058]: connection from 24.229.9.65 (24.229.9.65.res-cmts.sm.ptd.net) at Wed Feb 22 23:41:37 2006 
+Feb 22 23:41:37 combo ftpd[6059]: connection from 24.229.9.65 (24.229.9.65.res-cmts.sm.ptd.net) at Wed Feb 22 23:41:37 2006 
+Feb 22 23:41:37 combo ftpd[6060]: connection from 24.229.9.65 (24.229.9.65.res-cmts.sm.ptd.net) at Wed Feb 22 23:41:37 2006 
+Feb 22 23:41:38 combo ftpd[6061]: connection from 24.229.9.65 (24.229.9.65.res-cmts.sm.ptd.net) at Wed Feb 22 23:41:38 2006 
+Feb 22 23:41:38 combo ftpd[6062]: connection from 24.229.9.65 (24.229.9.65.res-cmts.sm.ptd.net) at Wed Feb 22 23:41:38 2006 
+Feb 22 23:41:38 combo ftpd[6063]: connection from 24.229.9.65 (24.229.9.65.res-cmts.sm.ptd.net) at Wed Feb 22 23:41:38 2006 
+---
+len=172
+Jan 15 16:47:38 combo sshd(pam_unix)[32742]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=212-41-230-229.hebragasse.xdsl-line.inode.at  user=root
+Jan 15 16:47:38 combo sshd(pam_unix)[32743]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=212-41-230-229.hebragasse.xdsl-line.inode.at  user=root
+Jan 15 16:47:39 combo sshd(pam_unix)[32744]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=212-41-230-229.hebragasse.xdsl-line.inode.at  user=root
+Jan 15 16:47:39 combo sshd(pam_unix)[32749]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=212-41-230-229.hebragasse.xdsl-line.inode.at  user=root
+Jan 15 16:47:39 combo sshd(pam_unix)[32745]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=212-41-230-229.hebragasse.xdsl-line.inode.at  user=root
+Jan 15 16:47:39 combo sshd(pam_unix)[32752]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=212-41-230-229.hebragasse.xdsl-line.inode.at  user=root
+Jan 15 16:47:39 combo sshd(pam_unix)[32754]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=212-41-230-229.hebragasse.xdsl-line.inode.at  user=root
+Jan 15 16:47:40 combo sshd(pam_unix)[32753]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=212-41-230-229.hebragasse.xdsl-line.inode.at  user=root
+---
+len=150
+Jan 17 10:46:55 combo sshd(pam_unix)[6380]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=pppzss.shenzhen.gd.cn  user=nobody
+Jan 18 04:28:28 combo sshd(pam_unix)[8678]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=wsip-24-120-168-221.lv.lv.cox.net 
+Jan 18 04:28:32 combo sshd(pam_unix)[8680]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=wsip-24-120-168-221.lv.lv.cox.net 
+Feb 12 06:21:47 combo sshd(pam_unix)[4702]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=66-195-16-3.dimenoc.com  user=root
+Feb 12 06:21:47 combo sshd(pam_unix)[4704]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=66-195-16-3.dimenoc.com  user=root
+Feb 12 06:21:47 combo sshd(pam_unix)[4703]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=66-195-16-3.dimenoc.com  user=root
+Feb 12 06:22:54 combo sshd(pam_unix)[4710]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=66-195-16-3.dimenoc.com  user=root
+Feb 12 06:22:54 combo sshd(pam_unix)[4711]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=66-195-16-3.dimenoc.com  user=root
+---
+len=126
+Jan  6 15:53:55 combo ftpd[25644]: connection from 84.139.180.196 (p548BB4C4.dip0.t-ipconnect.de) at Fri Jan  6 15:53:55 2006 
+Jan  6 15:53:55 combo ftpd[25654]: connection from 84.139.180.196 (p548BB4C4.dip0.t-ipconnect.de) at Fri Jan  6 15:53:55 2006 
+Jan  6 15:53:55 combo ftpd[25653]: connection from 84.139.180.196 (p548BB4C4.dip0.t-ipconnect.de) at Fri Jan  6 15:53:55 2006 
+Jan  6 15:54:04 combo ftpd[25660]: connection from 84.139.180.196 (p548BB4C4.dip0.t-ipconnect.de) at Fri Jan  6 15:54:04 2006 
+Jan  6 15:54:04 combo ftpd[25661]: connection from 84.139.180.196 (p548BB4C4.dip0.t-ipconnect.de) at Fri Jan  6 15:54:04 2006 
+Jan  6 15:54:04 combo ftpd[25662]: connection from 84.139.180.196 (p548BB4C4.dip0.t-ipconnect.de) at Fri Jan  6 15:54:04 2006 
+Jan  6 15:54:04 combo ftpd[25663]: connection from 84.139.180.196 (p548BB4C4.dip0.t-ipconnect.de) at Fri Jan  6 15:54:04 2006 
+Jan  6 15:54:04 combo ftpd[25664]: connection from 84.139.180.196 (p548BB4C4.dip0.t-ipconnect.de) at Fri Jan  6 15:54:04 2006 
+---
+len=159
+Jan 24 01:08:17 combo sshd(pam_unix)[30505]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=host-213.50.3.6.addr.tdcsong.se  user=root
+Jan 24 01:08:17 combo sshd(pam_unix)[30499]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=host-213.50.3.6.addr.tdcsong.se  user=root
+Jan 24 01:08:17 combo sshd(pam_unix)[30501]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=host-213.50.3.6.addr.tdcsong.se  user=root
+Jan 24 01:08:17 combo sshd(pam_unix)[30502]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=host-213.50.3.6.addr.tdcsong.se  user=root
+Jan 24 01:08:17 combo sshd(pam_unix)[30500]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=host-213.50.3.6.addr.tdcsong.se  user=root
+Jan 24 01:08:17 combo sshd(pam_unix)[30511]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=host-213.50.3.6.addr.tdcsong.se  user=root
+Jan 24 01:08:17 combo sshd(pam_unix)[30512]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=host-213.50.3.6.addr.tdcsong.se  user=root
+Jan 24 01:08:17 combo sshd(pam_unix)[30497]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=host-213.50.3.6.addr.tdcsong.se  user=root
+---
+len=116
+Sep  6 12:45:46 combo ftpd[2150]: connection from 213.169.189.194 (ip-189-194.evhr.net) at Tue Sep  6 12:45:46 2005 
+Sep  6 12:45:46 combo ftpd[2151]: connection from 213.169.189.194 (ip-189-194.evhr.net) at Tue Sep  6 12:45:46 2005 
+---
+len=168
+Jan 30 07:49:00 combo sshd(pam_unix)[3474]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=adsl-67-124-23-108.dsl.lsan03.pacbell.net  user=test
+Jan 30 07:49:00 combo sshd(pam_unix)[3483]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=adsl-67-124-23-108.dsl.lsan03.pacbell.net  user=test
+Jan 30 07:49:00 combo sshd(pam_unix)[3481]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=adsl-67-124-23-108.dsl.lsan03.pacbell.net  user=test
+Jan 30 07:49:00 combo sshd(pam_unix)[3480]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=adsl-67-124-23-108.dsl.lsan03.pacbell.net  user=test
+Jan 30 07:49:00 combo sshd(pam_unix)[3484]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=adsl-67-124-23-108.dsl.lsan03.pacbell.net  user=test
+Jan 30 07:49:00 combo sshd(pam_unix)[3482]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=adsl-67-124-23-108.dsl.lsan03.pacbell.net  user=test
+Jan 30 07:49:00 combo sshd(pam_unix)[3476]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=adsl-67-124-23-108.dsl.lsan03.pacbell.net  user=test
+Jan 30 07:49:00 combo sshd(pam_unix)[3490]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=adsl-67-124-23-108.dsl.lsan03.pacbell.net  user=test
+---
+len=118
+Jan 25 01:48:27 combo ftpd[934]: connection from 216.19.205.44 (216-19-205-44.getnet.net) at Wed Jan 25 01:48:27 2006 
+Jan 25 01:48:27 combo ftpd[929]: connection from 216.19.205.44 (216-19-205-44.getnet.net) at Wed Jan 25 01:48:27 2006 
+Jan 25 01:48:27 combo ftpd[925]: connection from 216.19.205.44 (216-19-205-44.getnet.net) at Wed Jan 25 01:48:27 2006 
+Jan 25 01:48:27 combo ftpd[937]: connection from 216.19.205.44 (216-19-205-44.getnet.net) at Wed Jan 25 01:48:27 2006 
+Jan 25 01:48:27 combo ftpd[933]: connection from 216.19.205.44 (216-19-205-44.getnet.net) at Wed Jan 25 01:48:27 2006 
+Jan 25 01:48:31 combo ftpd[946]: connection from 216.19.205.44 (216-19-205-44.getnet.net) at Wed Jan 25 01:48:31 2006 
+Jan 25 01:48:31 combo ftpd[947]: connection from 216.19.205.44 (216-19-205-44.getnet.net) at Wed Jan 25 01:48:31 2006 
+Jan 26 12:22:45 combo kernel: audit(1138296165.180:606909): item=0 name=/proc/self/attr/exec inode=136904725 dev=00:00
+---
+len=134
+Feb 13 17:58:11 combo ftpd[4837]: connection from 202.147.190.179 (host202-147-190-179.khi.dancom.net.pk) at Mon Feb 13 17:58:11 2006 
+Feb 13 17:58:11 combo ftpd[4843]: connection from 202.147.190.179 (host202-147-190-179.khi.dancom.net.pk) at Mon Feb 13 17:58:11 2006 
+Feb 13 17:58:11 combo ftpd[4838]: connection from 202.147.190.179 (host202-147-190-179.khi.dancom.net.pk) at Mon Feb 13 17:58:11 2006 
+Feb 13 17:58:11 combo ftpd[4840]: connection from 202.147.190.179 (host202-147-190-179.khi.dancom.net.pk) at Mon Feb 13 17:58:11 2006 
+Feb 13 17:58:11 combo ftpd[4842]: connection from 202.147.190.179 (host202-147-190-179.khi.dancom.net.pk) at Mon Feb 13 17:58:11 2006 
+Feb 13 17:58:11 combo ftpd[4856]: connection from 202.147.190.179 (host202-147-190-179.khi.dancom.net.pk) at Mon Feb 13 17:58:11 2006 
+Feb 13 17:58:11 combo ftpd[4847]: connection from 202.147.190.179 (host202-147-190-179.khi.dancom.net.pk) at Mon Feb 13 17:58:11 2006 
+Feb 13 17:58:11 combo ftpd[4841]: connection from 202.147.190.179 (host202-147-190-179.khi.dancom.net.pk) at Mon Feb 13 17:58:11 2006 
+---
+len=121
+Nov  8 10:56:36 combo ftpd[25176]: connection from 84.154.98.89 (p549A6259.dip.t-dialin.net) at Tue Nov  8 10:56:36 2005 
+Nov  8 10:56:36 combo ftpd[25174]: connection from 84.154.98.89 (p549A6259.dip.t-dialin.net) at Tue Nov  8 10:56:36 2005 
+Nov  8 10:56:36 combo ftpd[25175]: connection from 84.154.98.89 (p549A6259.dip.t-dialin.net) at Tue Nov  8 10:56:36 2005 
+Nov  8 10:56:36 combo ftpd[25169]: connection from 84.154.98.89 (p549A6259.dip.t-dialin.net) at Tue Nov  8 10:56:36 2005 
+Nov  8 10:56:39 combo ftpd[25188]: connection from 84.154.98.89 (p549A6259.dip.t-dialin.net) at Tue Nov  8 10:56:39 2005 
+Nov  8 10:56:39 combo ftpd[25189]: connection from 84.154.98.89 (p549A6259.dip.t-dialin.net) at Tue Nov  8 10:56:39 2005 
+Feb 26 01:43:35 combo ftpd[6530]: connection from 83.27.214.35 (bby35.neoplus.adsl.tpnet.pl) at Sun Feb 26 01:43:35 2006 
+Feb 26 01:43:53 combo ftpd[6533]: connection from 83.27.214.35 (bby35.neoplus.adsl.tpnet.pl) at Sun Feb 26 01:43:53 2006 
+---
+len=114
+Jan 26 12:22:13 combo kernel: audit(1138278092.998:114103): item=0 name=/initrd/XFree86.0.log inode=1021 dev=00:00
+Jan 26 12:22:22 combo kernel: audit(1138296102.679:186228): item=0 name=/proc/bus/usb/devices inode=1268 dev=00:00
+Jan 26 12:22:24 combo kernel: audit(1138296104.852:227147): item=0 name=/udev/device-mapper inode=283649 dev=0a:3f
+Jan 26 12:22:24 combo kernel: audit(1138296105.194:235300): item=0 name=/udev/device-mapper inode=283649 dev=0a:3f
+Jan 26 12:22:43 combo kernel: audit(1138296132.911:505629): item=0 name=/var/run/ptal-mlcd inode=1502894 dev=00:00
+Jan 26 12:23:32 combo kernel: audit(1138296212.406:734910): item=0 name=/initrd/XFree86.0.log inode=1021 dev=00:00
+Feb 26 17:21:22 combo ftpd[6664]: connection from 148.223.155.2 (alpu2nts.alpura.com) at Sun Feb 26 17:21:22 2006 
+Feb 26 17:21:22 combo ftpd[6665]: connection from 148.223.155.2 (alpu2nts.alpura.com) at Sun Feb 26 17:21:22 2006 
+---
+len=93
+Feb  6 12:09:00 combo ftpd[4181]: connection from 84.5.218.32 () at Mon Feb  6 12:09:00 2006 
+Feb  6 12:09:00 combo ftpd[4178]: connection from 84.5.218.32 () at Mon Feb  6 12:09:00 2006 
+Feb  6 12:09:00 combo ftpd[4188]: connection from 84.5.218.32 () at Mon Feb  6 12:09:00 2006 
+Feb  6 12:09:00 combo ftpd[4184]: connection from 84.5.218.32 () at Mon Feb  6 12:09:00 2006 
+Feb  6 12:09:00 combo ftpd[4185]: connection from 84.5.218.32 () at Mon Feb  6 12:09:00 2006 
+Feb  6 12:09:00 combo ftpd[4183]: connection from 84.5.218.32 () at Mon Feb  6 12:09:00 2006 
+Feb  6 12:09:00 combo ftpd[4187]: connection from 84.5.218.32 () at Mon Feb  6 12:09:00 2006 
+Feb  6 12:09:00 combo ftpd[4186]: connection from 84.5.218.32 () at Mon Feb  6 12:09:00 2006 
+---
+len=137
+Nov 19 14:15:50 combo ftpd[14313]: connection from 217.46.152.45 (host217-46-152-45.in-addr.btopenworld.com) at Sat Nov 19 14:15:50 2005 
+Nov 19 14:15:50 combo ftpd[14315]: connection from 217.46.152.45 (host217-46-152-45.in-addr.btopenworld.com) at Sat Nov 19 14:15:50 2005 
+Nov 19 14:15:50 combo ftpd[14316]: connection from 217.46.152.45 (host217-46-152-45.in-addr.btopenworld.com) at Sat Nov 19 14:15:50 2005 
+Nov 19 14:15:50 combo ftpd[14314]: connection from 217.46.152.45 (host217-46-152-45.in-addr.btopenworld.com) at Sat Nov 19 14:15:50 2005 
+Nov 19 14:15:51 combo ftpd[14317]: connection from 217.46.152.45 (host217-46-152-45.in-addr.btopenworld.com) at Sat Nov 19 14:15:51 2005 
+Nov 19 14:15:51 combo ftpd[14319]: connection from 217.46.152.45 (host217-46-152-45.in-addr.btopenworld.com) at Sat Nov 19 14:15:51 2005 
+Nov 19 14:15:51 combo ftpd[14318]: connection from 217.46.152.45 (host217-46-152-45.in-addr.btopenworld.com) at Sat Nov 19 14:15:51 2005 
+Nov 19 14:15:51 combo ftpd[14320]: connection from 217.46.152.45 (host217-46-152-45.in-addr.btopenworld.com) at Sat Nov 19 14:15:51 2005 
+---
+len=119
+Jan 26 16:30:12 combo ftpd[3246]: connection from 216.19.205.44 (216-19-205-44.getnet.net) at Thu Jan 26 16:30:12 2006 
+Jan 26 16:30:12 combo ftpd[3237]: connection from 216.19.205.44 (216-19-205-44.getnet.net) at Thu Jan 26 16:30:12 2006 
+Jan 26 16:30:12 combo ftpd[3232]: connection from 216.19.205.44 (216-19-205-44.getnet.net) at Thu Jan 26 16:30:12 2006 
+Jan 26 16:30:12 combo ftpd[3236]: connection from 216.19.205.44 (216-19-205-44.getnet.net) at Thu Jan 26 16:30:12 2006 
+Jan 26 16:30:15 combo ftpd[3247]: connection from 216.19.205.44 (216-19-205-44.getnet.net) at Thu Jan 26 16:30:15 2006 
+Jan 26 16:30:15 combo ftpd[3250]: connection from 216.19.205.44 (216-19-205-44.getnet.net) at Thu Jan 26 16:30:15 2006 
+Jan 26 16:30:15 combo ftpd[3249]: connection from 216.19.205.44 (216-19-205-44.getnet.net) at Thu Jan 26 16:30:15 2006 
+Jan 26 16:30:15 combo ftpd[3248]: connection from 216.19.205.44 (216-19-205-44.getnet.net) at Thu Jan 26 16:30:15 2006 
+---
+len=151
+Feb 22 11:46:38 combo sshd(pam_unix)[5991]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=203186089173.ctinets.com  user=root
+Feb 22 11:46:38 combo sshd(pam_unix)[5995]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=203186089173.ctinets.com  user=root
+Feb 22 11:46:38 combo sshd(pam_unix)[5996]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=203186089173.ctinets.com  user=root
+Feb 22 11:46:39 combo sshd(pam_unix)[6001]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=203186089173.ctinets.com  user=root
+Feb 22 11:46:39 combo sshd(pam_unix)[5997]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=203186089173.ctinets.com  user=root
+Feb 22 11:46:41 combo sshd(pam_unix)[6005]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=203186089173.ctinets.com  user=root
+Feb 22 11:46:41 combo sshd(pam_unix)[6004]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=203186089173.ctinets.com  user=root
+Feb 22 11:46:42 combo sshd(pam_unix)[6003]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=203186089173.ctinets.com  user=root
+---
+len=147
+Nov  7 07:54:25 combo ftpd[21221]: connection from 82.121.128.139 (ASte-Genev-Bois-151-1-2-139.w82-121.abo.wanadoo.fr) at Mon Nov  7 07:54:25 2005 
+Nov  7 07:54:27 combo ftpd[21241]: connection from 82.121.128.139 (ASte-Genev-Bois-151-1-2-139.w82-121.abo.wanadoo.fr) at Mon Nov  7 07:54:27 2005 
+Nov  7 07:54:27 combo ftpd[21242]: connection from 82.121.128.139 (ASte-Genev-Bois-151-1-2-139.w82-121.abo.wanadoo.fr) at Mon Nov  7 07:54:27 2005 
+Nov 26 16:31:06 combo sshd(pam_unix)[19947]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=84.233.148.165  user=webmaster
+Nov 26 16:31:06 combo sshd(pam_unix)[19948]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=84.233.148.165  user=webmaster
+Jan 31 07:09:50 combo sshd(pam_unix)[3717]: 1 more authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=80.96.171.182  user=test
+Feb 17 15:03:33 combo sshd(pam_unix)[5226]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=data.nhwsh.tp.edu.tw  user=root
+Feb 18 16:57:55 combo sshd(pam_unix)[5333]: 1 more authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=80.96.171.181  user=test
+---
+len=237
+Jan 26 12:22:16 combo kernel: audit(1138278102.405:167249): avc:  denied  { write } for  pid=598 exe=/sbin/sysctl name=ip_forward dev= ino=-268435331 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:sysctl_net_t tclass=file
+---
+len=40
+Aug  2 08:03:37 combo gpm[2076]: Closing
+Sep 28 09:09:15 combo dd: 1+0 records in
+Oct 25 10:07:09 combo dd: 1+0 records in
+Dec  6 12:21:21 combo dd: 1+0 records in
+Jan 26 12:20:30 combo dd: 1+0 records in
+---
+len=112
+Jan 26 12:22:20 combo kernel: audit(1138296102.645:185219): item=0 name=/proc/bus/usb inode=4026532078 dev=00:00
+Jan 26 12:23:32 combo kernel: audit(1138296212.406:734909): item=0 name=/initrd/rhgb-socket inode=1021 dev=00:00
+Jan 26 12:24:01 combo kernel: audit(1138296225.596:965628): item=0 name=/var/gdm/.gdmfifo inode=943272 dev=00:00
+Jan 26 12:55:50 combo sshd[3128]: Warning!  Could not relabel  with system_u:object_r:devpts_t, not relabeling. 
+Feb 23 20:41:54 combo ftpd[6137]: connection from 89.52.108.101 (P6c65.p.pppool.de) at Thu Feb 23 20:41:54 2006 
+Feb 23 22:52:04 combo ftpd[6138]: connection from 89.52.108.101 (P6c65.p.pppool.de) at Thu Feb 23 22:52:04 2006 
+Feb 24 00:39:00 combo ftpd[6139]: connection from 89.52.108.101 (P6c65.p.pppool.de) at Fri Feb 24 00:39:00 2006 
+Feb 24 00:39:12 combo ftpd[6140]: connection from 89.52.108.101 (P6c65.p.pppool.de) at Fri Feb 24 00:39:12 2006 
+---
+len=125
+Feb  1 09:47:41 combo ftpd[3916]: connection from 81.240.142.171 (171-142.240.81.adsl.skynet.be) at Wed Feb  1 09:47:41 2006 
+Feb  1 09:47:41 combo ftpd[3915]: connection from 81.240.142.171 (171-142.240.81.adsl.skynet.be) at Wed Feb  1 09:47:41 2006 
+Feb  1 09:47:41 combo ftpd[3909]: connection from 81.240.142.171 (171-142.240.81.adsl.skynet.be) at Wed Feb  1 09:47:41 2006 
+Feb  1 09:47:41 combo ftpd[3913]: connection from 81.240.142.171 (171-142.240.81.adsl.skynet.be) at Wed Feb  1 09:47:41 2006 
+Feb  1 09:47:41 combo ftpd[3912]: connection from 81.240.142.171 (171-142.240.81.adsl.skynet.be) at Wed Feb  1 09:47:41 2006 
+Feb  1 09:47:41 combo ftpd[3911]: connection from 81.240.142.171 (171-142.240.81.adsl.skynet.be) at Wed Feb  1 09:47:41 2006 
+Feb  1 09:47:41 combo ftpd[3910]: connection from 81.240.142.171 (171-142.240.81.adsl.skynet.be) at Wed Feb  1 09:47:41 2006 
+Feb  1 09:47:41 combo ftpd[3914]: connection from 81.240.142.171 (171-142.240.81.adsl.skynet.be) at Wed Feb  1 09:47:41 2006 
+---
+len=110
+Jul 11 11:33:13 combo gdm(pam_unix)[2803]: authentication failure; logname= uid=0 euid=0 tty=:0 ruser= rhost= 
+Jan 26 12:22:26 combo kernel: audit(1138296107.747:266162): item=0 name=/etc/ld.so.cache inode=85502 dev=00:00
+Jan 26 12:23:14 combo kernel: audit(1138296194.865:693325): item=0 name=/proc/2091/exe inode=1078904 dev=00:00
+---
+len=130
+Feb 19 11:29:53 combo sshd(pam_unix)[5372]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=222.168.14.22 
+Feb 19 11:29:53 combo sshd(pam_unix)[5378]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=222.168.14.22 
+Feb 19 11:29:53 combo sshd(pam_unix)[5381]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=222.168.14.22 
+Feb 19 11:29:54 combo sshd(pam_unix)[5376]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=222.168.14.22 
+Feb 19 11:29:54 combo sshd(pam_unix)[5380]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=222.168.14.22 
+Feb 19 11:29:54 combo sshd(pam_unix)[5387]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=222.168.14.22 
+Feb 19 11:29:55 combo sshd(pam_unix)[5388]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=222.168.14.22 
+Feb 19 11:29:58 combo sshd(pam_unix)[5386]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=222.168.14.22 
+---
+len=94
+Feb 26 01:43:46 combo ftpd[6517]: connection from 83.27.214.35 () at Sun Feb 26 01:43:46 2006 
+Feb 26 01:43:46 combo ftpd[6519]: connection from 83.27.214.35 () at Sun Feb 26 01:43:46 2006 
+Feb 26 01:43:46 combo ftpd[6521]: connection from 83.27.214.35 () at Sun Feb 26 01:43:46 2006 
+Feb 26 01:43:47 combo ftpd[6529]: connection from 83.27.214.35 () at Sun Feb 26 01:43:47 2006 
+Feb 26 01:43:51 combo ftpd[6523]: connection from 83.27.214.35 () at Sun Feb 26 01:43:51 2006 
+Feb 26 01:43:51 combo ftpd[6524]: connection from 83.27.214.35 () at Sun Feb 26 01:43:51 2006 
+Feb 26 01:43:51 combo ftpd[6525]: connection from 83.27.214.35 () at Sun Feb 26 01:43:51 2006 
+Feb 26 01:43:55 combo ftpd[6532]: connection from 83.27.214.35 () at Sun Feb 26 01:43:55 2006 
+---
+len=132
+Jan 23 06:57:21 combo sshd(pam_unix)[28741]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=202.127.25.130 
+Jan 23 06:57:21 combo sshd(pam_unix)[28737]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=202.127.25.130 
+Jan 23 06:57:21 combo sshd(pam_unix)[28739]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=202.127.25.130 
+Jan 23 06:57:21 combo sshd(pam_unix)[28730]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=202.127.25.130 
+Jan 23 06:57:21 combo sshd(pam_unix)[28733]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=202.127.25.130 
+Jan 23 06:57:21 combo sshd(pam_unix)[28729]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=202.127.25.130 
+Jan 23 06:57:21 combo sshd(pam_unix)[28734]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=202.127.25.130 
+Jan 23 06:57:29 combo sshd(pam_unix)[28747]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=202.127.25.130 
+---
+len=128
+Feb 10 07:43:21 combo sshd(pam_unix)[4552]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=210.0.200.7 
+Feb 10 07:43:21 combo sshd(pam_unix)[4554]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=210.0.200.7 
+Feb 10 07:43:21 combo sshd(pam_unix)[4553]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=210.0.200.7 
+Feb 10 07:43:21 combo sshd(pam_unix)[4555]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=210.0.200.7 
+Feb 10 07:43:21 combo sshd(pam_unix)[4549]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=210.0.200.7 
+Feb 10 07:43:21 combo sshd(pam_unix)[4548]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=210.0.200.7 
+Feb 10 07:43:21 combo sshd(pam_unix)[4550]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=210.0.200.7 
+Feb 10 07:43:21 combo sshd(pam_unix)[4551]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=210.0.200.7 
+---
+len=141
+Feb 24 11:16:38 combo sshd(pam_unix)[6251]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=83.228.113.166  user=root
+Feb 24 11:16:38 combo sshd(pam_unix)[6253]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=83.228.113.166  user=root
+Feb 24 11:16:38 combo sshd(pam_unix)[6256]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=83.228.113.166  user=root
+Feb 24 11:16:38 combo sshd(pam_unix)[6258]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=83.228.113.166  user=root
+Feb 24 11:16:38 combo sshd(pam_unix)[6252]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=83.228.113.166  user=root
+Feb 24 11:16:38 combo sshd(pam_unix)[6259]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=83.228.113.166  user=root
+Feb 24 11:16:38 combo sshd(pam_unix)[6246]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=83.228.113.166  user=root
+Feb 24 11:16:38 combo sshd(pam_unix)[6245]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=83.228.113.166  user=root
+---
+len=104
+Aug 27 18:30:18 combo ftpd[24350]: User unknown timed out after 900 seconds at Sat Aug 27 18:30:18 2005 
+Aug 27 18:30:18 combo ftpd[24355]: User unknown timed out after 900 seconds at Sat Aug 27 18:30:18 2005 
+Sep 14 22:05:47 combo ftpd[32284]: User unknown timed out after 900 seconds at Wed Sep 14 22:05:47 2005 
+Jan 26 12:22:22 combo kernel: audit(1138296104.541:222667): item=0 name=/dev/log inode=1031636 dev=00:00
+Jan 26 12:22:28 combo kernel: audit(1138296109.324:295942): item=0 name=/dev/log inode=1024129 dev=00:00
+Jan 26 12:22:40 combo kernel: audit(1138296120.316:368744): item=0 name=/udev/fd0 inode=283651 dev=02:00
+Jan 26 12:22:43 combo kernel: audit(1138296126.464:427092): item=0 name=/dev/log inode=1031637 dev=00:00
+Jan 26 12:22:43 combo kernel: audit(1138296133.544:515571): item=0 name=/etc/ptal inode=309507 dev=00:00
+---
+len=140
+Feb 26 11:48:19 combo sshd(pam_unix)[6596]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=63.116.211.67  user=root
+Feb 26 11:48:19 combo sshd(pam_unix)[6598]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=63.116.211.67  user=root
+Feb 26 11:48:19 combo sshd(pam_unix)[6590]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=63.116.211.67  user=root
+Feb 26 11:48:19 combo sshd(pam_unix)[6593]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=63.116.211.67  user=root
+Feb 26 11:48:19 combo sshd(pam_unix)[6592]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=63.116.211.67  user=root
+Feb 26 11:48:19 combo sshd(pam_unix)[6597]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=63.116.211.67  user=root
+Feb 27 06:45:42 combo sshd(pam_unix)[6666]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=81.137.10.194  user=test
+Feb 27 06:45:48 combo sshd(pam_unix)[6668]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=81.137.10.194  user=test
+---
+len=129
+Feb  7 19:55:54 combo sshd(pam_unix)[4278]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=61.162.81.22 
+Feb  7 19:55:55 combo sshd(pam_unix)[4281]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=61.162.81.22 
+Feb  7 19:55:59 combo sshd(pam_unix)[4285]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=61.162.81.22 
+Feb 18 06:10:07 combo sshd(pam_unix)[5312]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=211.75.28.12 
+Feb 23 13:54:46 combo sshd(pam_unix)[6076]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=66.50.123.66 
+Feb 25 12:44:54 combo sshd(pam_unix)[6473]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=64.178.48.29 
+Feb 25 12:44:54 combo sshd(pam_unix)[6472]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=64.178.48.29 
+Feb 25 12:44:54 combo sshd(pam_unix)[6471]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=64.178.48.29 
+---
+len=127
+Dec  1 16:39:31 combo ftpd[17196]: connection from 69.66.196.20 (mnpl-00-1044.dsl.iowatelecom.net) at Thu Dec  1 16:39:31 2005 
+Dec  1 16:39:31 combo ftpd[17197]: connection from 69.66.196.20 (mnpl-00-1044.dsl.iowatelecom.net) at Thu Dec  1 16:39:31 2005 
+Dec  1 16:39:31 combo ftpd[17199]: connection from 69.66.196.20 (mnpl-00-1044.dsl.iowatelecom.net) at Thu Dec  1 16:39:31 2005 
+Dec  1 16:39:31 combo ftpd[17198]: connection from 69.66.196.20 (mnpl-00-1044.dsl.iowatelecom.net) at Thu Dec  1 16:39:31 2005 
+Dec  1 16:39:31 combo ftpd[17200]: connection from 69.66.196.20 (mnpl-00-1044.dsl.iowatelecom.net) at Thu Dec  1 16:39:31 2005 
+Dec  1 16:39:31 combo ftpd[17201]: connection from 69.66.196.20 (mnpl-00-1044.dsl.iowatelecom.net) at Thu Dec  1 16:39:31 2005 
+Dec  1 16:39:31 combo ftpd[17202]: connection from 69.66.196.20 (mnpl-00-1044.dsl.iowatelecom.net) at Thu Dec  1 16:39:31 2005 
+Dec  1 16:39:31 combo ftpd[17203]: connection from 69.66.196.20 (mnpl-00-1044.dsl.iowatelecom.net) at Thu Dec  1 16:39:31 2005 
+---
+len=115
+Jun 13 02:01:28 combo ftpd[14129]: connection from 61.218.67.60 (mail.net-star.com.tw) at Mon Jun 13 02:01:28 2005 
+Jun 13 02:01:28 combo ftpd[14128]: connection from 61.218.67.60 (mail.net-star.com.tw) at Mon Jun 13 02:01:28 2005 
+Jun 13 02:01:28 combo ftpd[14131]: connection from 61.218.67.60 (mail.net-star.com.tw) at Mon Jun 13 02:01:28 2005 
+Jun 13 02:01:28 combo ftpd[14130]: connection from 61.218.67.60 (mail.net-star.com.tw) at Mon Jun 13 02:01:28 2005 
+Jan 26 12:22:22 combo kernel: audit(1138296104.661:225142): item=0 name=/dev/mapper/control inode=1154181 dev=00:00
+Jan 26 12:22:23 combo kernel: audit(1138296104.727:225279): item=0 name=/dev/mapper/control inode=1154181 dev=00:00
+Jan 26 12:22:24 combo kernel: audit(1138296105.156:234587): item=0 name=/dev/mapper/control inode=1154199 dev=0a:3f
+Jan 26 12:22:25 combo kernel: audit(1138296105.200:235352): item=0 name=/dev/mapper/control inode=1154199 dev=0a:3f
+---
+len=131
+Jan 30 11:30:55 combo sshd(pam_unix)[3538]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=219.135.191.21 
+Jan 30 11:30:55 combo sshd(pam_unix)[3549]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=219.135.191.21 
+Jan 30 11:30:55 combo sshd(pam_unix)[3547]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=219.135.191.21 
+Jan 30 11:30:56 combo sshd(pam_unix)[3543]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=219.135.191.21 
+Jan 30 11:30:56 combo sshd(pam_unix)[3550]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=219.135.191.21 
+Jan 30 11:30:57 combo sshd(pam_unix)[3553]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=219.135.191.21 
+Jan 30 11:30:57 combo sshd(pam_unix)[3542]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=219.135.191.21 
+Jan 30 11:30:57 combo sshd(pam_unix)[3544]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=219.135.191.21 
+---
+len=95
+Feb 26 17:21:22 combo ftpd[6655]: connection from 148.223.155.2 () at Sun Feb 26 17:21:22 2006 
+Feb 26 17:21:22 combo ftpd[6658]: connection from 148.223.155.2 () at Sun Feb 26 17:21:22 2006 
+Feb 26 17:21:22 combo ftpd[6659]: connection from 148.223.155.2 () at Sun Feb 26 17:21:22 2006 
+Feb 26 17:21:22 combo ftpd[6663]: connection from 148.223.155.2 () at Sun Feb 26 17:21:22 2006 
+Feb 26 17:21:22 combo ftpd[6657]: connection from 148.223.155.2 () at Sun Feb 26 17:21:22 2006 
+Feb 26 17:21:22 combo ftpd[6661]: connection from 148.223.155.2 () at Sun Feb 26 17:21:22 2006 
+Feb 26 17:21:22 combo ftpd[6660]: connection from 148.223.155.2 () at Sun Feb 26 17:21:22 2006 
+Feb 26 17:21:22 combo ftpd[6662]: connection from 148.223.155.2 () at Sun Feb 26 17:21:22 2006 
+---
+len=138
+Feb 23 18:10:47 combo sshd(pam_unix)[6110]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=66-50-123-66.prtc.net 
+Feb 23 18:10:48 combo sshd(pam_unix)[6112]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=66-50-123-66.prtc.net 
+Feb 23 18:10:48 combo sshd(pam_unix)[6114]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=66-50-123-66.prtc.net 
+Feb 23 18:10:48 combo sshd(pam_unix)[6117]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=66-50-123-66.prtc.net 
+Feb 23 18:10:48 combo sshd(pam_unix)[6119]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=66-50-123-66.prtc.net 
+Feb 23 18:10:48 combo sshd(pam_unix)[6121]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=66-50-123-66.prtc.net 
+Feb 23 18:10:48 combo sshd(pam_unix)[6106]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=66-50-123-66.prtc.net 
+Feb 23 18:10:48 combo sshd(pam_unix)[6124]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=66-50-123-66.prtc.net 
+---
+len=238
+Jan 26 12:22:15 combo kernel: audit(1138278101.766:164029): avc:  denied  { setattr } for  pid=594 exe=/usr/lib/vte/gnome-pty-helper name=0 dev= ino=2 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:devpts_t tclass=chr_file
+Jan 26 12:22:24 combo kernel: audit(1138296104.852:227147): avc:  denied  { setattr } for  pid=716 exe=/sbin/udev name=device-mapper dev=hda2 ino=283649 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:file_t tclass=chr_file
+Jan 26 12:22:27 combo kernel: audit(1138296107.872:267384): avc:  denied  { write } for  pid=739 exe=/sbin/sysctl name=hotplug dev= ino=-268435401 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:sysctl_hotplug_t tclass=file
+---
+len=41
+Dec  6 00:27:36 combo kernel: Call Trace:
+Dec  6 05:01:26 combo kernel: Call Trace:
+Dec  6 12:21:17 combo apmd[1717]: Exiting
+Dec  6 12:21:21 combo dd: 1+0 records out
+Dec  6 12:24:35 combo mdmpd: mdmpd failed
+Jan 26 12:20:28 combo apmd[1720]: Exiting
+Jan 26 12:20:30 combo dd: 1+0 records out
+Jan 26 12:23:31 combo mdmpd: mdmpd failed
+---
+len=139
+Feb 20 07:24:30 combo sshd(pam_unix)[5614]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=210.14.28.60  user=root
+Feb 20 07:24:30 combo sshd(pam_unix)[5618]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=210.14.28.60  user=root
+Feb 20 07:24:30 combo sshd(pam_unix)[5616]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=210.14.28.60  user=root
+Feb 20 07:24:30 combo sshd(pam_unix)[5625]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=210.14.28.60  user=root
+Feb 20 07:24:30 combo sshd(pam_unix)[5627]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=210.14.28.60  user=root
+Feb 20 07:24:30 combo sshd(pam_unix)[5615]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=210.14.28.60  user=root
+Feb 23 12:02:26 combo sshd(pam_unix)[6064]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=80.34.110.175  user=fax
+Feb 25 14:15:17 combo sshd(pam_unix)[6486]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=59.124.26.22  user=root
+---
+len=239
+Jan 26 12:22:22 combo kernel: audit(1138296102.679:186229): avc:  denied  { getattr } for  pid=658 exe=/bin/grep path=/proc/bus/usb/devices dev= ino=1268 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:usbdevfs_t tclass=file
+Jan 26 12:22:22 combo kernel: audit(1138296104.541:222667): avc:  denied  { getattr } for  pid=708 exe=/sbin/minilogd path=/dev/log dev=hda2 ino=1031636 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:file_t tclass=sock_file
+Jan 26 12:22:26 combo kernel: audit(1138296107.529:261678): avc:  denied  { relabelto } for  pid=729 exe=/sbin/restorecon name=mtab dev=hda2 ino=82456 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:etc_runtime_t tclass=file
+Jan 26 12:22:32 combo kernel: audit(1138296118.152:350122): avc:  denied  { read } for  pid=1263 exe=/usr/sbin/kudzu name=autoprobe dev= ino=-268434873 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:sysctl_dev_t tclass=file
+Jan 26 12:22:40 combo kernel: audit(1138296120.316:368744): avc:  denied  { relabelfrom } for  pid=1353 exe=/sbin/restorecon name=fd0 dev=hda2 ino=283651 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:file_t tclass=blk_file
+Jan 26 12:22:43 combo kernel: audit(1138296128.156:454449): avc:  denied  { search } for  pid=1642 exe=/usr/sbin/rpc.idmapd name=rpc dev= ino=-268434800 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:sysctl_rpc_t tclass=dir
+---
+len=42
+Oct 25 14:07:03 combo named[2281]: exiting
+Oct 25 10:07:15 combo exiting on signal 15
+Oct 25 14:09:57 combo named[2275]: running
+Dec  6 12:21:26 combo exiting on signal 15
+Dec  6 17:24:34 combo named[2298]: running
+Dec  9 09:43:13 combo exiting on signal 15
+Jan 26 12:20:32 combo exiting on signal 15
+Jan 26 17:23:30 combo named[2288]: running
+---
+len=136
+Jan 22 05:23:19 combo sshd(pam_unix)[24892]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=server3.sugolan.hu 
+Jan 22 05:23:20 combo sshd(pam_unix)[24894]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=server3.sugolan.hu 
+Jan 22 05:23:20 combo sshd(pam_unix)[24896]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=server3.sugolan.hu 
+Jan 22 05:23:20 combo sshd(pam_unix)[24895]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=server3.sugolan.hu 
+Jan 22 05:51:09 combo sshd(pam_unix)[24935]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=server3.sugolan.hu 
+Jan 22 05:51:10 combo sshd(pam_unix)[24937]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=server3.sugolan.hu 
+Jan 22 06:08:26 combo sshd(pam_unix)[24968]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=server3.sugolan.hu 
+Feb 15 17:50:33 combo sshd(pam_unix)[5024]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=net2.program.com.tw 
+---
+len=236
+Jan 26 12:22:28 combo kernel: audit(1138296111.616:324631): avc:  denied  { unlink } for  pid=1205 exe=/sbin/udev name=vcsa1 dev=hda2 ino=861587 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:tty_device_t tclass=chr_file
+Jan 26 12:22:30 combo kernel: audit(1138296118.152:350118): avc:  denied  { read } for  pid=1263 exe=/usr/sbin/kudzu name=parport dev= ino=-268434885 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:sysctl_dev_t tclass=dir
+---
+len=39
+Jun  9 06:06:49 combo canna:  succeeded
+Jun 10 11:32:10 combo canna:  succeeded
+Jul 27 14:42:23 combo canna:  succeeded
+Sep 19 05:58:03 combo canna:  succeeded
+Sep 28 09:11:25 combo canna:  succeeded
+Oct 25 10:09:21 combo canna:  succeeded
+Dec  6 12:23:35 combo canna:  succeeded
+Jan 26 12:22:48 combo canna:  succeeded
+---
+len=122
+Feb 24 01:20:17 combo ftpd[6141]: connection from 84.102.20.91 (91.20.102-84.rev.gaoland.net) at Fri Feb 24 01:20:17 2006 
+Feb 24 01:20:17 combo ftpd[6144]: connection from 84.102.20.91 (91.20.102-84.rev.gaoland.net) at Fri Feb 24 01:20:17 2006 
+Feb 24 01:20:17 combo ftpd[6143]: connection from 84.102.20.91 (91.20.102-84.rev.gaoland.net) at Fri Feb 24 01:20:17 2006 
+Feb 24 01:20:17 combo ftpd[6145]: connection from 84.102.20.91 (91.20.102-84.rev.gaoland.net) at Fri Feb 24 01:20:17 2006 
+Feb 24 01:20:17 combo ftpd[6146]: connection from 84.102.20.91 (91.20.102-84.rev.gaoland.net) at Fri Feb 24 01:20:17 2006 
+Feb 24 01:20:17 combo ftpd[6147]: connection from 84.102.20.91 (91.20.102-84.rev.gaoland.net) at Fri Feb 24 01:20:17 2006 
+Feb 24 01:20:20 combo ftpd[6148]: connection from 84.102.20.91 (91.20.102-84.rev.gaoland.net) at Fri Feb 24 01:20:20 2006 
+Feb 24 01:20:20 combo ftpd[6149]: connection from 84.102.20.91 (91.20.102-84.rev.gaoland.net) at Fri Feb 24 01:20:20 2006 
+---
+len=107
+Dec  9 09:59:21 combo telnetd[16153]: ttloop:  peer died: Invalid or incomplete multibyte or wide character
+Dec  9 10:01:33 combo telnetd[16176]: ttloop:  peer died: Invalid or incomplete multibyte or wide character
+Dec  9 10:03:10 combo telnetd[16178]: ttloop:  peer died: Invalid or incomplete multibyte or wide character
+Dec  9 10:03:13 combo telnetd[16180]: ttloop:  peer died: Invalid or incomplete multibyte or wide character
+Dec  9 10:08:36 combo telnetd[16201]: ttloop:  peer died: Invalid or incomplete multibyte or wide character
+Dec  9 10:09:57 combo telnetd[16203]: ttloop:  peer died: Invalid or incomplete multibyte or wide character
+Jan 26 12:22:41 combo xinetd[2013]: xinetd Version 2.3.13 started with libwrap loadavg options compiled in.
+Jan 26 12:22:43 combo kernel: audit(1138296128.156:454449): item=0 name=/proc/net/rpc/nfs4.idtoname/channel
+---
+len=103
+Feb  6 12:24:00 combo ftpd[4181]: User unknown timed out after 900 seconds at Mon Feb  6 12:24:00 2006 
+Feb  6 12:24:00 combo ftpd[4178]: User unknown timed out after 900 seconds at Mon Feb  6 12:24:00 2006 
+Feb  6 12:24:00 combo ftpd[4188]: User unknown timed out after 900 seconds at Mon Feb  6 12:24:00 2006 
+Feb  6 12:24:00 combo ftpd[4184]: User unknown timed out after 900 seconds at Mon Feb  6 12:24:00 2006 
+Feb  6 12:24:00 combo ftpd[4185]: User unknown timed out after 900 seconds at Mon Feb  6 12:24:00 2006 
+Feb  6 12:24:00 combo ftpd[4183]: User unknown timed out after 900 seconds at Mon Feb  6 12:24:00 2006 
+Feb  6 12:24:00 combo ftpd[4187]: User unknown timed out after 900 seconds at Mon Feb  6 12:24:00 2006 
+Feb  6 12:24:00 combo ftpd[4186]: User unknown timed out after 900 seconds at Mon Feb  6 12:24:00 2006 
+---
+len=135
+Nov 14 20:33:48 combo sshd(pam_unix)[28800]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=mail.ntsec.gov.tw 
+Nov 14 20:33:48 combo sshd(pam_unix)[28807]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=mail.ntsec.gov.tw 
+Nov 14 20:33:48 combo sshd(pam_unix)[28805]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=mail.ntsec.gov.tw 
+Nov 14 20:33:48 combo sshd(pam_unix)[28809]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=mail.ntsec.gov.tw 
+Nov 14 20:33:48 combo sshd(pam_unix)[28798]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=mail.ntsec.gov.tw 
+Nov 14 20:33:48 combo sshd(pam_unix)[28801]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=mail.ntsec.gov.tw 
+Dec  2 06:04:45 combo ftpd[19730]: connection from 81.53.90.34 (ARennes-352-1-67-34.w81-53.abo.wanadoo.fr) at Fri Dec  2 06:04:45 2005 
+Dec  2 06:04:45 combo ftpd[19731]: connection from 81.53.90.34 (ARennes-352-1-67-34.w81-53.abo.wanadoo.fr) at Fri Dec  2 06:04:45 2005 
+---
+len=235
+Jan 26 12:22:13 combo kernel: audit(1138278092.594:113951): avc:  denied  { setattr } for  pid=511 exe=/usr/bin/rhgb name=rhgb-socket dev= ino=1026 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:ramfs_t tclass=sock_file
+Jan 26 12:22:43 combo kernel: audit(1138296129.057:468261): avc:  denied  { ioctl } for  pid=1687 exe=/usr/sbin/hcid path=socket:[2645] dev= ino=2645 scontext=system_u:system_r:kernel_t tcontext=system_u:system_r:kernel_t tclass=socket
+Jan 26 12:22:45 combo kernel: audit(1138296165.211:606989): avc:  denied  { transition } for  pid=2090 exe=/bin/su path=/bin/bash dev=hda2 ino=1044632 scontext=system_u:system_r:kernel_t tcontext=user_u:sysadm_r:sysadm_t tclass=process
+---
+len=38
+Jun  9 06:06:38 combo sshd:  succeeded
+Jun 10 11:32:00 combo sshd:  succeeded
+Jul 27 14:42:13 combo sshd:  succeeded
+Sep 19 05:57:53 combo sshd:  succeeded
+Sep 28 09:11:06 combo sshd:  succeeded
+Oct 25 10:09:06 combo sshd:  succeeded
+Dec  6 12:23:16 combo sshd:  succeeded
+Jan 26 12:22:28 combo sshd:  succeeded
+---
+len=81
+Jan 16 04:12:53 combo su(pam_unix)[1999]: session opened for user news by (uid=0)
+Jan 17 04:13:44 combo su(pam_unix)[5733]: session opened for user news by (uid=0)
+Jan 18 04:15:33 combo su(pam_unix)[8568]: session opened for user news by (uid=0)
+Jan 25 04:17:22 combo su(pam_unix)[2749]: session opened for user news by (uid=0)
+Jan 26 04:12:13 combo su(pam_unix)[9726]: session opened for user news by (uid=0)
+Jan 26 12:22:12 combo kernel: EXT3-fs: mounted filesystem with ordered data mode.
+Jan 26 12:22:17 combo kernel: USB Universal Host Controller Interface driver v2.2
+Jan 26 12:22:27 combo kernel: EXT3-fs: mounted filesystem with ordered data mode.
+---
+len=68
+Jan 26 12:23:45 combo udev[2805]: creating device node '/udev/vcsa4'
+Jan 26 12:23:46 combo udev[2823]: creating device node '/udev/vcsa6'
+Jan 26 12:23:46 combo udev[2825]: creating device node '/udev/vcsa1'
+Jan 26 12:23:46 combo udev[2826]: creating device node '/udev/vcsa3'
+Jan 26 12:23:47 combo udev[2828]: creating device node '/udev/vcsa2'
+Jan 26 12:23:47 combo udev[2821]: creating device node '/udev/vcsa7'
+Jan 26 12:23:57 combo udev[2914]: removing device node '/udev/vcsa7'
+Jan 26 12:23:59 combo udev[2921]: creating device node '/udev/vcsa7'
+---
+len=109
+Feb 10 15:07:35 combo ftpd[4599]: connection from 208.34.235.251 (mail.nrms.org) at Fri Feb 10 15:07:35 2006 
+Feb 24 23:59:53 combo ftpd[6380]: connection from 200.61.161.145 (mx.dyn.com.ar) at Fri Feb 24 23:59:53 2006 
+Feb 24 23:59:53 combo ftpd[6379]: connection from 200.61.161.145 (mx.dyn.com.ar) at Fri Feb 24 23:59:53 2006 
+Feb 24 23:59:53 combo ftpd[6378]: connection from 200.61.161.145 (mx.dyn.com.ar) at Fri Feb 24 23:59:53 2006 
+Feb 25 00:04:45 combo ftpd[6381]: connection from 200.61.161.145 (mx.dyn.com.ar) at Sat Feb 25 00:04:45 2006 
+Feb 25 00:04:46 combo ftpd[6382]: connection from 200.61.161.145 (mx.dyn.com.ar) at Sat Feb 25 00:04:46 2006 
+Feb 25 00:04:48 combo ftpd[6383]: connection from 200.61.161.145 (mx.dyn.com.ar) at Sat Feb 25 00:04:48 2006 
+Feb 25 00:04:50 combo ftpd[6384]: connection from 200.61.161.145 (mx.dyn.com.ar) at Sat Feb 25 00:04:50 2006 
+---
+len=87
+Jan 26 12:22:29 combo kernel: IA-32 Microcode Update Driver: v1.13 <tigran@veritas.com>
+Jan 26 17:23:21 combo named[2288]: listening on IPv4 interface eth0:10, 63.126.79.83#53
+Jan 26 17:23:21 combo named[2288]: listening on IPv4 interface eth0:11, 63.126.79.84#53
+Jan 26 17:23:22 combo named[2288]: listening on IPv4 interface eth0:12, 63.126.79.85#53
+Jan 26 17:23:22 combo named[2288]: listening on IPv4 interface eth0:13, 63.126.79.87#53
+Jan 26 17:23:24 combo named[2288]: listening on IPv4 interface eth0:14, 63.126.79.89#53
+Jan 26 17:23:25 combo named[2288]: listening on IPv4 interface eth0:15, 63.126.79.90#53
+Jan 26 17:23:26 combo named[2288]: listening on IPv4 interface eth0:16, 63.126.79.95#53
+---
+len=84
+Jan 26 11:46:22 combo sshd(pam_unix)[10375]: session opened for user root by (uid=0)
+Jan 26 12:20:30 combo rpc.statd[1608]: Caught signal 15, un-registering and exiting.
+Jan 26 12:22:10 combo kernel: drivers/usb/input/hid-core.c: v2.0:USB HID core driver
+Jan 26 12:22:12 combo kernel: SELinux: initialized (dev hda2, type ext3), uses xattr
+Jan 26 12:22:12 combo kernel: SELinux: initialized (dev ram0, type ext2), uses xattr
+Jan 26 12:22:27 combo kernel: SELinux: initialized (dev hda1, type ext3), uses xattr
+Jan 26 17:23:17 combo named[2288]: starting BIND 9.2.3 -u named -t /var/named/chroot
+Jan 26 17:23:18 combo named[2288]: listening on IPv4 interface eth0, 63.126.79.67#53
+---
+len=251
+Jan 26 12:22:24 combo kernel: audit(1138296105.200:235352): avc:  denied  { getattr } for  pid=309 exe=/bin/bash path=/dev/mapper/control dev=hda2 ino=1154199 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:lvm_control_t tclass=chr_file
+---
+len=54
+Dec  6 12:23:16 combo xinetd: xinetd startup succeeded
+Dec  9 09:43:13 combo syslog: klogd shutdown succeeded
+Jan 26 12:20:32 combo syslog: klogd shutdown succeeded
+Jan 26 12:22:10 combo smartd: smartd startup succeeded
+Jan 26 12:22:28 combo xinetd: xinetd startup succeeded
+Jan 26 12:22:30 combo kernel: parport0: irq 7 detected
+Jan 26 12:22:43 combo kernel: Bluetooth: L2CAP ver 2.1
+Jan 26 12:22:44 combo kernel: parport0: irq 7 detected
+---
+len=98
+Oct 25 10:08:50 combo smartd[1755]: Device: /dev/hda, is SMART capable. Adding to "monitor" list. 
+Oct 25 10:08:57 combo kernel: uhci_hcd 0000:00:1f.2: new USB bus registered, assigned bus number 1
+Dec  6 12:23:01 combo smartd[1758]: Device: /dev/hda, is SMART capable. Adding to "monitor" list. 
+Dec  6 12:23:06 combo kernel: uhci_hcd 0000:00:1f.2: new USB bus registered, assigned bus number 1
+Jan 26 12:22:10 combo smartd[1765]: Device: /dev/hda, is SMART capable. Adding to "monitor" list. 
+Jan 26 12:22:18 combo kernel: uhci_hcd 0000:00:1f.2: new USB bus registered, assigned bus number 1
+Jan 26 12:22:25 combo kernel: audit(1138296106.081:244396): item=0 name=/dev/pts inode=1 dev=00:00
+Jan 26 12:22:25 combo kernel: audit(1138296106.081:244398): item=0 name=/dev/pts inode=1 dev=00:00
+---
+len=156
+Jan 31 03:22:41 combo sshd(pam_unix)[3607]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=alf-146.210.71.217.zonepro-serveurs.net 
+Jan 31 03:22:42 combo sshd(pam_unix)[3609]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=alf-146.210.71.217.zonepro-serveurs.net 
+Jan 31 03:22:42 combo sshd(pam_unix)[3611]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=alf-146.210.71.217.zonepro-serveurs.net 
+Jan 31 03:22:43 combo sshd(pam_unix)[3613]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=alf-146.210.71.217.zonepro-serveurs.net 
+Jan 31 03:22:44 combo sshd(pam_unix)[3615]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=alf-146.210.71.217.zonepro-serveurs.net 
+Jan 31 03:22:44 combo sshd(pam_unix)[3617]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=alf-146.210.71.217.zonepro-serveurs.net 
+Jan 31 03:22:45 combo sshd(pam_unix)[3619]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=alf-146.210.71.217.zonepro-serveurs.net 
+Feb 18 04:03:23 combo sshd(pam_unix)[5282]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=61-31-236-3.static.tfn.net.tw  user=root
+---
+len=256
+Jan 26 12:22:26 combo kernel: audit(1138296107.867:267232): avc:  denied  { getattr } for  pid=309 exe=/bin/bash path=/proc/sys/kernel/modprobe dev= ino=-268435402 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:sysctl_modprobe_t tclass=file
+---
+len=59
+Jan 26 12:22:09 combo kernel: hda: max request size: 128KiB
+Jan 26 12:22:09 combo kernel: ide-floppy driver 0.99.newide
+Jan 26 12:22:19 combo kernel: hub 1-0:1.0: 2 ports detected
+Jan 26 12:22:30 combo sendmail: sm-client startup succeeded
+Jan 26 12:22:36 combo kernel: Floppy drive(s): fd0 is 1.44M
+Jan 26 12:22:42 combo spamassassin: spamd startup succeeded
+Jan 26 12:22:44 combo gpm[2080]: *** info [startup.c(95)]: 
+Jan 26 12:55:20 combo sendmail: sendmail shutdown succeeded
+---
+len=91
+Sep 28 09:10:51 combo kernel: hdc: Disabling (U)DMA for SAMSUNG CD-ROM SN-124 (blacklisted)
+Oct 25 10:08:50 combo kernel: hdc: Disabling (U)DMA for SAMSUNG CD-ROM SN-124 (blacklisted)
+Dec  6 12:23:00 combo kernel: hdc: Disabling (U)DMA for SAMSUNG CD-ROM SN-124 (blacklisted)
+Jan 26 12:22:09 combo kernel: hdc: Disabling (U)DMA for SAMSUNG CD-ROM SN-124 (blacklisted)
+Jan 26 12:22:13 combo kernel: SELinux: initialized (dev , type tmpfs), uses transition SIDs
+Jan 26 12:22:13 combo kernel: SELinux: initialized (dev , type rootfs), uses genfs_contexts
+Jan 26 12:22:27 combo kernel: SELinux: initialized (dev , type tmpfs), uses transition SIDs
+Jan 26 12:53:14 combo kernel: audit(1138297993.581:1376686): item=1 inode=1170434 dev=00:00
+---
+len=80
+Dec  6 12:23:01 combo smartd[1758]: Device: /dev/hda, found in smartd database. 
+Dec  6 12:23:05 combo kernel: Disabled Privacy Extensions on device 022db720(lo)
+Dec  6 12:23:30 combo su(pam_unix)[2081]: session opened for user htt by (uid=0)
+Jan 26 12:22:09 combo kernel: hdc: SAMSUNG CD-ROM SN-124, ATAPI CD/DVD-ROM drive
+Jan 26 12:22:10 combo smartd[1765]: Configuration file /etc/smartd.conf parsed. 
+Jan 26 12:22:10 combo smartd[1765]: Device: /dev/hda, found in smartd database. 
+Jan 26 12:22:13 combo kernel: Disabled Privacy Extensions on device 022db720(lo)
+Jan 26 12:22:45 combo su(pam_unix)[2089]: session opened for user htt by (uid=0)
+---
+len=89
+Feb 12 13:11:15 combo ftpd[4746]: getpeername (ftpd): Transport endpoint is not connected
+Feb 12 13:11:15 combo ftpd[4747]: getpeername (ftpd): Transport endpoint is not connected
+Feb 12 13:11:15 combo ftpd[4748]: getpeername (ftpd): Transport endpoint is not connected
+Feb 12 13:11:15 combo ftpd[4749]: getpeername (ftpd): Transport endpoint is not connected
+Feb 12 13:11:15 combo ftpd[4751]: getpeername (ftpd): Transport endpoint is not connected
+Feb 12 13:11:15 combo ftpd[4755]: getpeername (ftpd): Transport endpoint is not connected
+Feb 12 13:11:15 combo ftpd[4752]: getpeername (ftpd): Transport endpoint is not connected
+Feb 12 13:11:15 combo ftpd[4762]: getpeername (ftpd): Transport endpoint is not connected
+---
+len=71
+Jan 25 04:11:14 combo su(pam_unix)[1489]: session closed for user cyrus
+Jan 26 04:04:29 combo su(pam_unix)[5074]: session closed for user cyrus
+Jan 26 12:22:08 combo kernel: agpgart: AGP aperture is 64M @ 0xf4000000
+Jan 26 12:22:10 combo kernel: serio: i8042 AUX port at 0x60,0x64 irq 12
+Jan 26 12:22:17 combo kernel: PCI: Found IRQ 11 for device 0000:00:1f.2
+Jan 26 12:22:37 combo kernel: FDC 0 is a National Semiconductor PC87306
+Jan 26 12:22:43 combo kernel: Bluetooth: L2CAP socket layer initialized
+Jan 26 12:22:44 combo gpm[2080]: imps2: Auto-detected intellimouse PS/2
+---
+len=85
+Nov 29 04:43:10 combo kernel:  [<0212cfe2>] generic_file_aio_write_nolock+0x302/0x84e
+Dec  6 12:21:12 combo snmpd[2287]: Received TERM or STOP signal...  shutting down... 
+Dec  6 12:22:59 combo kernel: agpgart: Maximum main memory to use for agp memory: 93M
+Dec  6 12:23:38 combo xinetd[2006]: file descriptor of service comsat has been closed
+Jan 26 12:20:23 combo snmpd[2310]: Received TERM or STOP signal...  shutting down... 
+Jan 26 12:22:06 combo kernel: Kernel command line: ro root=LABEL=/ rhgb quiet audit=1
+Jan 26 12:22:08 combo kernel: agpgart: Maximum main memory to use for agp memory: 93M
+Jan 26 12:23:50 combo xinetd[2013]: file descriptor of service comsat has been closed
+---
+len=257
+Jan 26 12:22:27 combo kernel: audit(1138296107.872:267385): avc:  denied  { getattr } for  pid=739 exe=/sbin/sysctl path=/proc/sys/kernel/hotplug dev= ino=-268435401 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:sysctl_hotplug_t tclass=file
+---
+len=60
+Jan 26 12:20:30 combo random: Saving random seed:  succeeded
+Jan 26 12:20:31 combo kernel: Kernel logging (proc) stopped.
+Jan 26 12:20:31 combo kernel: Kernel log daemon terminating.
+Jan 26 12:22:08 combo kernel: Initializing Cryptographic API
+Jan 26 12:22:08 combo hcid[1687]: HCI daemon ver 2.4 started
+Jan 26 12:22:11 combo kernel: md: Autodetecting RAID arrays.
+Jan 26 12:22:44 combo kernel: lp0: using parport0 (polling).
+Jan 26 12:55:20 combo sendmail: sm-client shutdown succeeded
+---
+len=69
+Jan 26 12:20:11 combo udev[10872]: removing device node '/udev/vcsa4'
+Jan 26 12:20:21 combo udev[10926]: removing device node '/udev/vcsa4'
+Jan 26 12:20:31 combo udev[11080]: removing device node '/udev/vcsa4'
+Jan 26 12:22:08 combo kernel: PCI: Invalid ACPI-PCI IRQ routing table
+Jan 26 12:22:36 combo kernel: inserting floppy driver for 2.6.5-1.358
+Jan 26 12:22:43 combo kernel: Bluetooth: HCI socket layer initialized
+Jan 26 12:22:43 combo kernel: Bluetooth: RFCOMM TTY layer initialized
+Jan 26 12:22:45 combo su(pam_unix)[2089]: session closed for user htt
+---
+len=82
+Jan 24 04:15:16 combo su(pam_unix)[31469]: session opened for user news by (uid=0)
+Jan 25 04:11:13 combo su(pam_unix)[1489]: session opened for user cyrus by (uid=0)
+Jan 26 04:04:29 combo su(pam_unix)[5074]: session opened for user cyrus by (uid=0)
+Jan 26 12:22:08 combo kernel: ACPI: ACPI tables contain no PCI IRQ routing entries
+Jan 26 12:22:10 combo kernel: input: ImPS/2 Logitech Wheel Mouse on isa0060/serio1
+Jan 26 12:22:10 combo kernel: md: md driver 0.90.0 MAX_MD_DEVS=256, MD_SB_DISKS=27
+Jan 26 12:22:10 combo kernel: IP: routing cache hash table of 512 buckets, 4Kbytes
+Jan 26 17:23:29 combo named[2288]: couldn't add command channel ::1#953: not found
+---
+len=64
+Jan 26 12:22:08 combo kernel: usbcore: registered new driver hub
+Jan 26 12:22:08 combo kernel: PCI: Probing PCI hardware (bus 00)
+Jan 26 12:22:10 combo kernel: usbcore: registered new driver hid
+Jan 26 12:22:11 combo kernel: NET: Registered protocol family 17
+Jan 26 12:22:13 combo kernel: NET: Registered protocol family 10
+Jan 26 12:22:43 combo kernel: NET: Registered protocol family 31
+Jan 26 12:22:51 combo readahead: Starting background readahead: 
+Jan 26 12:26:42 combo ntpd[2309]: kernel time sync disabled 0041
+---
+len=65
+Feb 25 12:44:54 combo unix_chkpwd[6482]: check pass; user unknown
+Feb 25 12:44:54 combo unix_chkpwd[6483]: check pass; user unknown
+Feb 25 12:44:54 combo unix_chkpwd[6484]: check pass; user unknown
+Feb 25 12:44:54 combo unix_chkpwd[6485]: check pass; user unknown
+Feb 27 06:47:17 combo unix_chkpwd[6678]: check pass; user unknown
+Feb 27 06:47:17 combo unix_chkpwd[6679]: check pass; user unknown
+Feb 27 06:47:22 combo unix_chkpwd[6680]: check pass; user unknown
+Feb 27 06:47:22 combo unix_chkpwd[6681]: check pass; user unknown
+---
+len=83
+Jan 23 04:04:10 combo su(pam_unix)[27145]: session opened for user cyrus by (uid=0)
+Jan 24 04:09:16 combo su(pam_unix)[31091]: session opened for user cyrus by (uid=0)
+Jan 26 12:22:08 combo kernel: Enabling unmasked SIMD FPU exception support... done.
+Jan 26 12:22:09 combo apmd[1727]: Version 3.0.2 (APM BIOS 1.2, Linux driver 1.16ac)
+Jan 26 12:22:10 combo kernel: input: AT Translated Set 2 keyboard on isa0060/serio0
+Jan 26 12:22:29 combo kernel: microcode: CPU0 already at revision 0x8 (current=0x8)
+Jan 26 12:53:13 combo sshd(pam_unix)[3128]: session opened for user root by (uid=0)
+Feb 28 04:48:54 combo sshd(pam_unix)[6741]: session opened for user root by (uid=0)
+---
+len=73
+Dec  9 12:14:27 combo telnetd[16181]: ttloop:  read: Connection timed out
+Dec  9 12:19:57 combo telnetd[16202]: ttloop:  read: Connection timed out
+Dec  9 12:21:11 combo telnetd[16204]: ttloop:  read: Connection timed out
+Jan 26 12:20:00 combo sshd(pam_unix)[10375]: session closed for user root
+Jan 26 12:22:07 combo kernel: Intel machine check architecture supported.
+Jan 26 12:22:08 combo kernel: Enabling fast FPU save and restore... done.
+Jan 26 12:22:10 combo kernel: mice: PS/2 mouse device common for all mice
+Jan 26 12:22:17 combo kernel: uhci_hcd 0000:00:1f.2: UHCI Host Controller
+---
+len=96
+Feb 24 23:59:53 combo ftpd[6369]: connection from 200.61.161.145 () at Fri Feb 24 23:59:53 2006 
+Feb 24 23:59:53 combo ftpd[6372]: connection from 200.61.161.145 () at Fri Feb 24 23:59:53 2006 
+Feb 24 23:59:53 combo ftpd[6373]: connection from 200.61.161.145 () at Fri Feb 24 23:59:53 2006 
+Feb 24 23:59:53 combo ftpd[6371]: connection from 200.61.161.145 () at Fri Feb 24 23:59:53 2006 
+Feb 24 23:59:53 combo ftpd[6376]: connection from 200.61.161.145 () at Fri Feb 24 23:59:53 2006 
+Feb 24 23:59:53 combo ftpd[6375]: connection from 200.61.161.145 () at Fri Feb 24 23:59:53 2006 
+Feb 24 23:59:53 combo ftpd[6374]: connection from 200.61.161.145 () at Fri Feb 24 23:59:53 2006 
+Feb 24 23:59:53 combo ftpd[6377]: connection from 200.61.161.145 () at Fri Feb 24 23:59:53 2006 
+---
+len=146
+Dec  9 10:14:08 combo sshd(pam_unix)[16222]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=host-xe04.kiosk.ws  user=root
+Dec  9 10:14:08 combo sshd(pam_unix)[16224]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=host-xe04.kiosk.ws  user=root
+Dec  9 10:14:08 combo sshd(pam_unix)[16226]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=host-xe04.kiosk.ws  user=root
+Dec  9 10:14:08 combo sshd(pam_unix)[16213]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=host-xe04.kiosk.ws  user=root
+Dec  9 10:14:08 combo sshd(pam_unix)[16215]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=host-xe04.kiosk.ws  user=root
+Dec  9 10:14:08 combo sshd(pam_unix)[16219]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=host-xe04.kiosk.ws  user=root
+Dec  9 10:14:08 combo sshd(pam_unix)[16212]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=host-xe04.kiosk.ws  user=root
+Dec  9 10:14:08 combo sshd(pam_unix)[16217]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=host-xe04.kiosk.ws  user=root
+---
+len=246
+Jan 26 12:22:26 combo kernel: audit(1138296107.747:266162): avc:  denied  { relabelto } for  pid=730 exe=/sbin/restorecon name=ld.so.cache dev=hda2 ino=85502 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:ld_so_cache_t tclass=file
+---
+len=49
+Dec  6 12:23:07 combo kernel: cdrom: open failed.
+Dec  6 12:23:30 combo IIim: htt startup succeeded
+Jan 26 12:20:05 combo atd: atd shutdown succeeded
+Jan 26 12:20:07 combo xfs: xfs shutdown succeeded
+Jan 26 12:20:09 combo gpm: gpm shutdown succeeded
+Jan 26 12:22:07 combo kernel: CPU: L2 cache: 256K
+Jan 26 12:22:25 combo kernel: cdrom: open failed.
+Jan 26 12:22:45 combo IIim: htt startup succeeded
+---
+len=105
+Oct 25 10:08:50 combo kernel: hda: 29336832 sectors (15020 MB) w/1916KiB Cache, CHS=29104/16/63, UDMA(66)
+Dec  6 12:23:00 combo kernel: ide: Assuming 33MHz system bus speed for PIO modes; override with idebus=xx
+Dec  6 12:23:00 combo kernel: hda: 29336832 sectors (15020 MB) w/1916KiB Cache, CHS=29104/16/63, UDMA(66)
+Jan 26 12:22:09 combo kernel: ide: Assuming 33MHz system bus speed for PIO modes; override with idebus=xx
+Jan 26 12:22:09 combo kernel: hda: 29336832 sectors (15020 MB) w/1916KiB Cache, CHS=29104/16/63, UDMA(66)
+Jan 26 12:22:14 combo kernel: audit(1138278101.742:164003): item=0 name=/dev/ptmx inode=1025790 dev=05:02
+Jan 26 12:22:28 combo kernel: audit(1138296111.560:323542): item=0 name=/udev/vcs1 inode=861585 dev=07:01
+Jan 26 12:22:45 combo kernel: audit(1138296165.211:606989): item=0 name=/bin/bash inode=1044632 dev=00:00
+---
+len=155
+Jun 29 12:12:05 combo sshd(pam_unix)[15712]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=h64-187-1-131.gtconnect.net  user=root
+Jun 29 12:12:06 combo sshd(pam_unix)[15714]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=h64-187-1-131.gtconnect.net  user=root
+Jun 29 12:12:10 combo sshd(pam_unix)[15716]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=h64-187-1-131.gtconnect.net  user=root
+Jan 28 05:01:16 combo sshd(pam_unix)[3363]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=h8441253073.dsl.speedlinq.nl  user=root
+Jan 28 05:01:16 combo sshd(pam_unix)[3365]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=h8441253073.dsl.speedlinq.nl  user=root
+Jan 28 05:01:16 combo sshd(pam_unix)[3367]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=h8441253073.dsl.speedlinq.nl  user=root
+Jan 28 05:01:21 combo sshd(pam_unix)[3369]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=h8441253073.dsl.speedlinq.nl  user=root
+Jan 29 09:27:47 combo sshd(pam_unix)[3394]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=rrcs-24-123-152-137.central.biz.rr.com 
+---
+len=255
+Jan 26 12:22:43 combo kernel: audit(1138296128.157:454455): avc:  denied  { getattr } for  pid=1642 exe=/usr/sbin/rpc.idmapd path=/var/lib/nfs/rpc_pipefs/nfs dev= ino=4 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:rpc_pipefs_t tclass=dir
+---
+len=58
+Dec  6 12:24:24 combo snmpd[2310]: NET-SNMP version 5.1.1 
+Dec  9 09:40:11 combo gpm[2072]: *** info [mice.c(1766)]: 
+Jan 26 12:22:07 combo nfslock: rpc.statd startup succeeded
+Jan 26 12:22:08 combo kernel: VFS: Disk quotas dquot_6.5.1
+Jan 26 12:22:08 combo kernel: Real Time Clock Driver v1.12
+Jan 26 12:22:30 combo sendmail: sendmail startup succeeded
+Jan 26 12:22:44 combo gpm[2080]: *** info [mice.c(1766)]: 
+Jan 26 12:23:22 combo snmpd[2300]: NET-SNMP version 5.1.1 
+---
+len=90
+Jan 12 02:01:15 combo ftpd[17166]: getpeername (ftpd): Transport endpoint is not connected
+Jan 26 12:22:07 combo kernel: Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+Jan 26 12:22:13 combo kernel: SELinux: initialized (dev , type sysfs), uses genfs_contexts
+Jan 26 12:22:13 combo kernel: SELinux: initialized (dev , type ramfs), uses genfs_contexts
+Jan 26 12:22:18 combo kernel: SELinux: initialized (dev , type usbfs), uses genfs_contexts
+Jan 26 12:22:22 combo kernel: audit(1138296104.506:222519): item=0 inode=1024129 dev=00:00
+Jan 26 12:22:22 combo kernel: audit(1138296104.542:222681): item=0 inode=1031636 dev=00:00
+Jan 26 12:22:45 combo kernel: audit(1138296165.211:606989): item=1 inode=1170434 dev=00:00
+---
+len=247
+Jan 26 12:22:14 combo kernel: audit(1138278101.749:164007): avc:  denied  { getattr } for  pid=594 exe=/usr/lib/vte/gnome-pty-helper path=/dev/pts/0 dev= ino=2 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:devpts_t tclass=chr_file
+---
+len=50
+Dec  6 12:21:10 combo named: named shutdown failed
+Dec  6 12:23:00 combo apmd: apmd startup succeeded
+Dec  6 12:23:00 combo kernel:  hda: hda1 hda2 hda3
+Dec  6 12:24:23 combo ntpd: ntpd startup succeeded
+Jan 26 12:20:22 combo named: named shutdown failed
+Jan 26 12:22:09 combo apmd: apmd startup succeeded
+Jan 26 12:22:09 combo kernel:  hda: hda1 hda2 hda3
+Jan 26 12:23:22 combo ntpd: ntpd startup succeeded
+---
+len=97
+Feb 22 01:55:44 combo ftpd[5761]: connection from 210.212.240.242 () at Wed Feb 22 01:55:44 2006 
+Feb 22 01:55:44 combo ftpd[5771]: connection from 210.212.240.242 () at Wed Feb 22 01:55:44 2006 
+Feb 22 01:55:44 combo ftpd[5768]: connection from 210.212.240.242 () at Wed Feb 22 01:55:44 2006 
+Feb 22 01:55:44 combo ftpd[5759]: connection from 210.212.240.242 () at Wed Feb 22 01:55:44 2006 
+Feb 22 01:55:44 combo ftpd[5769]: connection from 210.212.240.242 () at Wed Feb 22 01:55:44 2006 
+Feb 22 01:55:44 combo ftpd[5763]: connection from 210.212.240.242 () at Wed Feb 22 01:55:44 2006 
+Feb 22 01:55:44 combo ftpd[5780]: connection from 210.212.240.242 () at Wed Feb 22 01:55:44 2006 
+Feb 22 01:55:44 combo ftpd[5781]: connection from 210.212.240.242 () at Wed Feb 22 01:55:44 2006 
+---
+len=275
+Jan 26 12:22:18 combo kernel: audit(1138296102.617:183467): avc:  denied  { getattr } for  pid=635 exe=/bin/bash path=/sys/devices/pci0000:00/0000:00:1f.2/usb1/bNumConfigurations dev= ino=1290 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:sysfs_t tclass=file
+---
+len=78
+Jan 26 12:22:12 combo kernel: security:  5 users, 7 roles, 1244 types, 1 bools
+Feb  1 17:02:24 combo snmpd[2300]: Received SNMP packet(s) from 208.53.158.10 
+Feb 12 13:11:15 combo ftpd[4763]: setsockopt (IP_TOS): Operation not supported
+Feb 12 13:11:15 combo ftpd[4764]: setsockopt (IP_TOS): Operation not supported
+Feb 12 13:11:15 combo ftpd[4765]: setsockopt (IP_TOS): Operation not supported
+Feb 12 13:11:15 combo ftpd[4766]: setsockopt (IP_TOS): Operation not supported
+Feb 12 13:11:15 combo ftpd[4767]: setsockopt (IP_TOS): Operation not supported
+Feb 12 13:11:15 combo ftpd[4768]: setsockopt (IP_TOS): Operation not supported
+---
+len=106
+Oct 20 05:19:32 combo telnetd[8116]: ttloop:  peer died: Invalid or incomplete multibyte or wide character
+Oct 25 10:08:47 combo kernel: There is already a security framework initialized, register_security failed.
+Dec  6 12:22:58 combo kernel: There is already a security framework initialized, register_security failed.
+Jan 26 12:22:07 combo kernel: There is already a security framework initialized, register_security failed.
+Jan 26 12:22:29 combo kernel: audit(1138296111.616:324631): item=0 name=/udev/vcsa1 inode=276355 dev=00:00
+Jan 26 12:23:49 combo kernel: audit(1138296216.366:837154): item=0 name=/udev/vcsa5 inode=283654 dev=07:85
+Jan 26 12:53:14 combo kernel: audit(1138297993.581:1376686): item=0 name=/bin/bash inode=1044632 dev=00:00
+Feb 25 04:02:59 combo telnetd[6464]: ttloop:  peer died: Invalid or incomplete multibyte or wide character
+---
+len=72
+Jan 26 12:22:08 combo kernel: agpgart: Detected an Intel i810 E Chipset.
+Jan 26 12:22:08 combo kernel: agpgart: detected 4MB dedicated video ram.
+Jan 26 12:22:10 combo smartd[1765]: Monitoring 1 ATA and 0 SCSI devices 
+Jan 26 12:22:12 combo kernel: RAMDISK: Compressed image found at block 0
+Jan 26 12:22:12 combo kernel: SELinux:  Setting up existing superblocks.
+Jan 26 12:22:43 combo kernel: Bluetooth: RFCOMM socket layer initialized
+Jan 26 12:55:50 combo sshd(pam_unix)[3128]: session closed for user root
+Feb 25 06:14:13 combo telnetd[6465]: ttloop:  read: Connection timed out
+---
+len=76
+Dec  6 10:16:43 combo kernel: Out of Memory: Killed process 9286 (sendmail).
+Dec  6 11:11:52 combo kernel: Out of Memory: Killed process 9393 (sendmail).
+Dec  6 12:02:32 combo kernel: Out of Memory: Killed process 9544 (sendmail).
+Dec  6 12:02:40 combo kernel: Out of Memory: Killed process 9715 (sendmail).
+Dec  6 12:23:03 combo kernel: kjournald starting.  Commit interval 5 seconds
+Dec  6 12:23:07 combo kernel: kjournald starting.  Commit interval 5 seconds
+Jan 26 12:22:12 combo kernel: kjournald starting.  Commit interval 5 seconds
+Jan 26 12:22:27 combo kernel: kjournald starting.  Commit interval 5 seconds
+---
+len=173
+Jun 10 11:31:44 combo kernel: Linux version 2.6.5-1.358 (bhcompile@bugs.build.redhat.com) (gcc version 3.3.3 20040412 (Red Hat Linux 3.3.3-7)) #1 Sat May 8 09:04:50 EDT 2004
+Jul 27 14:41:57 combo kernel: Linux version 2.6.5-1.358 (bhcompile@bugs.build.redhat.com) (gcc version 3.3.3 20040412 (Red Hat Linux 3.3.3-7)) #1 Sat May 8 09:04:50 EDT 2004
+Sep 14 15:45:29 combo sshd(pam_unix)[31752]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=lneuilly-152-22-93-12.w193-251.abo.wanadoo.fr  user=root
+Sep 19 05:57:37 combo kernel: Linux version 2.6.5-1.358 (bhcompile@bugs.build.redhat.com) (gcc version 3.3.3 20040412 (Red Hat Linux 3.3.3-7)) #1 Sat May 8 09:04:50 EDT 2004
+Sep 28 09:10:49 combo kernel: Linux version 2.6.5-1.358 (bhcompile@bugs.build.redhat.com) (gcc version 3.3.3 20040412 (Red Hat Linux 3.3.3-7)) #1 Sat May 8 09:04:50 EDT 2004
+Oct 25 10:08:46 combo kernel: Linux version 2.6.5-1.358 (bhcompile@bugs.build.redhat.com) (gcc version 3.3.3 20040412 (Red Hat Linux 3.3.3-7)) #1 Sat May 8 09:04:50 EDT 2004
+Dec  6 12:22:57 combo kernel: Linux version 2.6.5-1.358 (bhcompile@bugs.build.redhat.com) (gcc version 3.3.3 20040412 (Red Hat Linux 3.3.3-7)) #1 Sat May 8 09:04:50 EDT 2004
+Jan 26 12:22:06 combo kernel: Linux version 2.6.5-1.358 (bhcompile@bugs.build.redhat.com) (gcc version 3.3.3 20040412 (Red Hat Linux 3.3.3-7)) #1 Sat May 8 09:04:50 EDT 2004
+---
+len=79
+Dec  6 17:24:20 combo named[2298]: loading configuration from '/etc/named.conf'
+Dec  6 17:24:20 combo named[2298]: listening on IPv4 interface lo, 127.0.0.1#53
+Jan 26 12:22:07 combo kernel: PID hash table entries: 512 (order 9: 4096 bytes)
+Jan 26 12:22:09 combo kernel: ICH: not 100%% native mode: will probe irqs later
+Jan 26 12:22:10 combo smartd[1765]: Opened configuration file /etc/smartd.conf 
+Jan 26 12:22:44 combo gpm[2080]: Started gpm successfully. Entered daemon mode.
+Jan 26 17:23:18 combo named[2288]: loading configuration from '/etc/named.conf'
+Jan 26 17:23:18 combo named[2288]: listening on IPv4 interface lo, 127.0.0.1#53
+---
+len=153
+Feb  9 00:57:41 combo sshd(pam_unix)[4400]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=202-145-62-59.adsl.ttn.net  user=test
+Feb  9 00:57:41 combo sshd(pam_unix)[4401]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=202-145-62-59.adsl.ttn.net  user=test
+Feb  9 00:57:41 combo sshd(pam_unix)[4399]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=202-145-62-59.adsl.ttn.net  user=test
+Feb  9 00:57:41 combo sshd(pam_unix)[4403]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=202-145-62-59.adsl.ttn.net  user=test
+Feb  9 00:57:41 combo sshd(pam_unix)[4407]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=202-145-62-59.adsl.ttn.net  user=test
+Feb  9 00:57:44 combo sshd(pam_unix)[4402]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=202-145-62-59.adsl.ttn.net  user=test
+Feb 13 03:57:50 combo sshd(pam_unix)[4792]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=208-151-246-182.dq1sn.easystreet.com 
+Feb 18 04:26:34 combo sshd(pam_unix)[5284]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=adsl-126.47.82.info.com.ph  user=root
+---
+len=253
+Jan 26 12:22:31 combo kernel: audit(1138296118.152:350119): avc:  denied  { getattr } for  pid=1263 exe=/usr/sbin/kudzu path=/proc/sys/dev/parport dev= ino=-268434885 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:sysctl_dev_t tclass=dir
+---
+len=56
+Jan 26 12:22:07 combo kernel: Capability LSM initialized
+Jan 26 12:22:19 combo kernel: hub 1-0:1.0: USB hub found
+Jan 26 12:22:35 combo kernel: SCSI subsystem initialized
+Jan 26 12:22:43 combo privoxy: privoxy startup succeeded
+Jan 26 12:22:50 combo anacron: anacron startup succeeded
+Jan 26 12:22:51 combo rc: Starting readahead:  succeeded
+Jan 26 12:23:25 combo ntpd[2309]: precision = 2.000 usec
+Jan 26 12:23:28 combo mysqld: Starting MySQL:  succeeded
+---
+len=230
+Jan 26 12:22:13 combo kernel: audit(1138278089.855:0): avc:  denied  { read write } for  pid=1 exe=/sbin/init name=initctl dev=hda2 ino=1031635 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:file_t tclass=fifo_file
+---
+len=245
+Jan 26 12:22:15 combo kernel: audit(1138278101.749:164014): avc:  denied  { ioctl } for  pid=594 exe=/usr/lib/vte/gnome-pty-helper path=/dev/pts/0 dev= ino=2 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:devpts_t tclass=chr_file
+---
+len=48
+Jan 26 12:20:17 combo sshd: sshd -TERM succeeded
+Jan 26 12:22:07 combo kernel: Initializing CPU#0
+Jan 26 12:22:44 combo kernel: lp0: console ready
+Jan 26 12:22:44 combo gpm: gpm startup succeeded
+Jan 26 12:22:47 combo htt_server[2092]: started.
+Jan 26 12:22:50 combo xfs: xfs startup succeeded
+Jan 26 12:22:51 combo atd: atd startup succeeded
+Jan 26 12:23:30 combo mdmonitor: mdadm succeeded
+---
+len=77
+Dec  9 09:51:31 combo telnetd[15862]: ttloop:  read: Connection reset by peer
+Dec  9 10:12:28 combo telnetd[15526]: ttloop:  read: Connection reset by peer
+Dec  9 10:12:28 combo telnetd[15638]: ttloop:  read: Connection reset by peer
+Dec  9 10:12:28 combo telnetd[16146]: ttloop:  read: Connection reset by peer
+Jan 26 12:22:07 combo kernel: Intel machine check reporting enabled on CPU#0.
+Jan 26 12:22:08 combo kernel: CPU: Intel Pentium III (Coppermine) stepping 06
+Jan 26 12:22:08 combo kernel: pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+Jan 26 12:22:17 combo kernel: uhci_hcd 0000:00:1f.2: irq 11, io base 0000ff80
+---
+len=62
+Dec  4 03:49:21 combo kernel:  [<0210737b>] do_IRQ+0x15d/0x169
+Dec  6 05:01:26 combo kernel:  [<0210737b>] do_IRQ+0x15d/0x169
+Dec  6 12:22:57 combo irqbalance: irqbalance startup succeeded
+Dec  6 12:23:47 combo messagebus: messagebus startup succeeded
+Dec  6 12:24:28 combo ntpd[2319]: kernel time sync status 0040
+Jan 26 12:22:06 combo irqbalance: irqbalance startup succeeded
+Jan 26 12:22:52 combo messagebus: messagebus startup succeeded
+Jan 26 12:23:26 combo ntpd[2309]: kernel time sync status 0040
+---
+len=143
+Jan 31 16:43:42 combo sshd(pam_unix)[3767]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=61.189.192.156  user=nobody
+Jan 31 16:43:42 combo sshd(pam_unix)[3763]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=61.189.192.156  user=nobody
+Jan 31 16:43:43 combo sshd(pam_unix)[3768]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=61.189.192.156  user=nobody
+Jan 31 16:43:43 combo sshd(pam_unix)[3771]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=61.189.192.156  user=nobody
+Jan 31 16:43:44 combo sshd(pam_unix)[3773]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=61.189.192.156  user=nobody
+Jan 31 16:43:44 combo sshd(pam_unix)[3759]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=61.189.192.156  user=nobody
+Jan 31 16:43:47 combo sshd(pam_unix)[3764]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=61.189.192.156  user=nobody
+Jan 31 16:43:58 combo sshd(pam_unix)[3774]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=61.189.192.156  user=nobody
+---
+len=243
+Jan 26 12:22:24 combo kernel: audit(1138296105.156:234587): avc:  denied  { relabelfrom } for  pid=720 exe=/sbin/restorecon name=control dev=hda2 ino=1154199 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:file_t tclass=chr_file
+Jan 26 12:23:36 combo kernel: audit(1138296216.366:837154): avc:  denied  { getattr } for  pid=2686 exe=/sbin/restorecon name=vcsa5 dev=hda2 ino=283654 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:tty_device_t tclass=chr_file
+Jan 26 12:23:57 combo kernel: audit(1138296225.426:965370): avc:  denied  { unlink } for  pid=2417 exe=/usr/bin/gdm-binary name=.gdmfifo dev=hda2 ino=943272 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:file_t tclass=fifo_file
+---
+len=46
+Oct 25 14:09:46 combo named[2275]: using 1 CPU
+Dec  6 12:20:29 combo xfs: xfs shutdown failed
+Dec  6 12:21:15 combo xinetd[2003]: Exiting...
+Dec  6 12:22:57 combo kernel: DMI 2.3 present.
+Dec  6 17:24:19 combo named[2298]: using 1 CPU
+Jan 26 12:20:27 combo xinetd[2006]: Exiting...
+Jan 26 12:22:06 combo kernel: DMI 2.3 present.
+Jan 26 17:23:17 combo named[2288]: using 1 CPU
+---
+len=67
+Jan 26 12:23:45 combo udev[2802]: creating device node '/udev/vcs4'
+Jan 26 12:23:45 combo udev[2804]: creating device node '/udev/vcs3'
+Jan 26 12:23:46 combo udev[2807]: creating device node '/udev/vcs6'
+Jan 26 12:23:46 combo udev[2824]: creating device node '/udev/vcs1'
+Jan 26 12:23:47 combo udev[2827]: creating device node '/udev/vcs2'
+Jan 26 12:23:47 combo udev[2814]: creating device node '/udev/vcs7'
+Jan 26 12:23:57 combo udev[2905]: removing device node '/udev/vcs7'
+Jan 26 12:23:59 combo udev[2920]: creating device node '/udev/vcs7'
+---
+len=144
+Feb 26 13:43:58 combo sshd(pam_unix)[6615]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=221.230.128.214  user=nobody
+Feb 26 13:43:59 combo sshd(pam_unix)[6617]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=221.230.128.214  user=nobody
+Feb 26 13:44:03 combo sshd(pam_unix)[6630]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=221.230.128.214  user=nobody
+Feb 26 13:44:06 combo sshd(pam_unix)[6632]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=221.230.128.214  user=nobody
+Feb 26 13:44:07 combo sshd(pam_unix)[6636]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=221.230.128.214  user=nobody
+Feb 26 13:44:07 combo sshd(pam_unix)[6637]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=221.230.128.214  user=nobody
+Feb 26 13:44:08 combo sshd(pam_unix)[6634]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=221.230.128.214  user=nobody
+Feb 26 13:44:14 combo sshd(pam_unix)[6641]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=221.230.128.214  user=nobody
+---
+len=244
+Jan 26 12:22:13 combo kernel: audit(1138278093.540:118407): avc:  denied  { write } for  pid=513 exe=/usr/X11R6/bin/Xorg path=/initrd/XFree86.0.log dev= ino=1027 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:ramfs_t tclass=file
+Jan 26 12:22:28 combo kernel: audit(1138296111.560:323542): avc:  denied  { relabelto } for  pid=1198 exe=/sbin/restorecon name=vcs1 dev=hda2 ino=861585 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:tty_device_t tclass=chr_file
+Jan 26 12:24:01 combo kernel: audit(1138296225.596:965628): avc:  denied  { setattr } for  pid=2417 exe=/usr/bin/gdm-binary name=.gdmfifo dev=hda2 ino=943272 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:file_t tclass=fifo_file
+---
+len=47
+Jul 27 14:41:57 combo kernel: Built 1 zonelists
+Sep 19 05:57:37 combo kernel: Built 1 zonelists
+Sep 28 09:10:49 combo kernel: Built 1 zonelists
+Oct 25 10:08:47 combo kernel: Built 1 zonelists
+Oct 25 10:08:43 combo sysctl: kernel.sysrq = 0 
+Dec  6 12:22:57 combo kernel: Built 1 zonelists
+Dec  6 12:22:54 combo sysctl: kernel.sysrq = 0 
+Jan 26 12:22:06 combo kernel: Built 1 zonelists
+---
+len=70
+Jan 26 12:22:09 combo kernel: ttyS0 at I/O 0x3f8 (irq = 4) is a 16550A
+Jan 26 12:22:09 combo kernel: ttyS1 at I/O 0x2f8 (irq = 3) is a 16550A
+Jan 26 12:22:09 combo kernel: hdc: ATAPI 24X CD-ROM drive, 128kB Cache
+Jan 26 12:22:10 combo kernel: serio: i8042 KBD port at 0x60,0x64 irq 1
+Jan 26 12:22:12 combo kernel: Freeing unused kernel memory: 144k freed
+Jan 26 12:22:38 combo kernel: PCI: Found IRQ 5 for device 0000:01:0c.0
+Jan 26 12:22:42 combo kernel: PCI: Found IRQ 5 for device 0000:01:0c.0
+Jan 26 12:26:42 combo ntpd[2309]: synchronized to LOCAL(0), stratum=10
+---
+len=66
+Jan 26 12:22:07 combo kernel: Security Scaffold v1.0.0 initialized
+Jan 26 12:22:08 combo kernel: usbcore: registered new driver usbfs
+Jan 26 12:22:08 combo kernel: audit(1138278081.612:0): initialized
+Jan 26 12:22:09 combo kernel: hda: IBM-DTLA-307015, ATA DISK drive
+Jan 26 12:22:09 combo kernel: Uniform CD-ROM driver Revision: 3.20
+Jan 26 12:22:12 combo kernel: VFS: Mounted root (ext2 filesystem).
+Jan 26 12:22:12 combo kernel: SELinux:  Completing initialization.
+Jan 26 12:22:32 combo udev[2053]: creating device node '/udev/lp0'
+---
+len=154
+Jan 31 05:01:01 combo sshd(pam_unix)[3689]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=dsl092-052-016.phl1.dsl.speakeasy.net 
+Jan 31 05:01:01 combo sshd(pam_unix)[3691]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=dsl092-052-016.phl1.dsl.speakeasy.net 
+Jan 31 05:01:01 combo sshd(pam_unix)[3693]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=dsl092-052-016.phl1.dsl.speakeasy.net 
+Jan 31 05:01:01 combo sshd(pam_unix)[3690]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=dsl092-052-016.phl1.dsl.speakeasy.net 
+Jan 31 05:01:01 combo sshd(pam_unix)[3688]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=dsl092-052-016.phl1.dsl.speakeasy.net 
+Jan 31 05:01:01 combo sshd(pam_unix)[3687]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=dsl092-052-016.phl1.dsl.speakeasy.net 
+Jan 31 05:01:01 combo sshd(pam_unix)[3703]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=dsl092-052-016.phl1.dsl.speakeasy.net 
+Jan 31 05:01:02 combo sshd(pam_unix)[3705]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=dsl092-052-016.phl1.dsl.speakeasy.net 
+---
+len=57
+Dec  9 09:43:21 combo syslog: syslogd shutdown succeeded 
+Jan 26 11:53:06 combo sendmail: sm-client shutdown failed
+Jan 26 12:20:06 combo privoxy: privoxy shutdown succeeded
+Jan 26 12:20:08 combo FreeWnn: jserver shutdown succeeded
+Jan 26 12:20:31 combo portmap: portmap shutdown succeeded
+Jan 26 12:22:06 combo kernel: On node 0 totalpages: 32430
+Jan 26 12:22:08 combo kernel: ACPI: Interpreter disabled.
+Jan 26 12:22:10 combo autofs: automount startup succeeded
+---
+len=74
+Jan 26 12:20:22 combo smartd[1760]: smartd received signal 15: Terminated 
+Jan 26 12:22:07 combo kernel: CPU 0 irqstacks, hard=02345000 soft=02344000
+Jan 26 12:22:03 combo network: Bringing up loopback interface:  succeeded 
+Jan 26 12:22:08 combo kernel: audit: initializing netlink socket (enabled)
+Jan 26 12:22:09 combo kernel: ICH: IDE controller at PCI slot 0000:00:1f.1
+Jan 26 12:22:41 combo kernel: ip_tables: (C) 2000-2002 Netfilter core team
+Jan 26 12:22:42 combo xinetd[2013]: Started working: 30 available services
+Jan 26 12:22:43 combo kernel: ip_tables: (C) 2000-2002 Netfilter core team
+---
+len=248
+Jan 26 12:22:24 combo kernel: audit(1138296105.156:234587): avc:  denied  { relabelto } for  pid=720 exe=/sbin/restorecon name=control dev=hda2 ino=1154199 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:lvm_control_t tclass=chr_file
+Jan 26 12:22:24 combo kernel: audit(1138296105.194:235300): avc:  denied  { relabelto } for  pid=724 exe=/sbin/restorecon name=device-mapper dev=hda2 ino=283649 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:device_t tclass=chr_file
+---
+len=51
+Jan 22 04:10:55 combo cups: cupsd startup succeeded
+Jan 26 12:20:29 combo apmd: apmd shutdown succeeded
+Jan 26 12:20:30 combo ntpd: ntpd shutdown succeeded
+Jan 26 12:22:06 combo kernel: zapping low mappings.
+Jan 26 12:22:08 combo kernel: mtrr: v2.0 (20020519)
+Jan 26 12:22:12 combo kernel: md: ... autorun DONE.
+Jan 26 12:22:13 combo rc: Starting hpoj:  succeeded
+Jan 26 12:22:27 combo cups: cupsd startup succeeded
+---
+len=158
+Feb 24 15:43:45 combo sshd(pam_unix)[6303]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=adsl-69-230-112-80.dsl.scrm01.pacbell.net 
+Feb 24 15:43:45 combo sshd(pam_unix)[6295]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=adsl-69-230-112-80.dsl.scrm01.pacbell.net 
+Feb 24 15:43:45 combo sshd(pam_unix)[6307]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=adsl-69-230-112-80.dsl.scrm01.pacbell.net 
+Feb 24 15:43:45 combo sshd(pam_unix)[6306]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=adsl-69-230-112-80.dsl.scrm01.pacbell.net 
+Feb 27 06:47:17 combo sshd(pam_unix)[6670]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=host81-137-10-194.in-addr.btopenworld.com 
+Feb 27 06:47:17 combo sshd(pam_unix)[6671]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=host81-137-10-194.in-addr.btopenworld.com 
+Feb 27 06:47:22 combo sshd(pam_unix)[6675]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=host81-137-10-194.in-addr.btopenworld.com 
+Feb 27 06:47:22 combo sshd(pam_unix)[6674]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=host81-137-10-194.in-addr.btopenworld.com 
+---
+len=258
+Jan 26 12:22:17 combo kernel: audit(1138278102.405:167250): avc:  denied  { getattr } for  pid=598 exe=/sbin/sysctl path=/proc/sys/net/ipv4/ip_forward dev= ino=-268435331 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:sysctl_net_t tclass=file
+---
+len=61
+Jan 26 12:22:06 combo kernel: BIOS-provided physical RAM map:
+Jan 26 12:22:07 combo kernel: Detected 731.214 MHz processor.
+Jan 26 12:22:07 combo rpc.statd[1615]: Version 1.0.6 Starting
+Jan 26 12:22:08 combo rpcidmapd: rpc.idmapd startup succeeded
+Jan 26 12:22:08 combo kernel: PCI: Using configuration type 1
+Jan 26 12:22:10 combo smartd[1765]: Device: /dev/hda, opened 
+Jan 26 12:22:10 combo apmd[1727]: Charge: * * * (-1% unknown)
+Jan 26 12:22:13 combo kernel: IPv6 over IPv4 tunneling driver
+---
+len=75
+Dec  8 20:30:29 combo kernel: Out of Memory: Killed process 12470 (mysqld).
+Dec  8 20:35:38 combo kernel: Out of Memory: Killed process 12498 (mysqld).
+Dec  8 20:40:42 combo kernel: Out of Memory: Killed process 12525 (mysqld).
+Dec  9 09:43:25 combo kernel: klogd 1.4.1, log source = /proc/kmsg started.
+Jan  7 04:55:29 combo snmpd[2310]: Received SNMP packet(s) from 62.193.6.2 
+Jan 26 12:22:06 combo kernel: klogd 1.4.1, log source = /proc/kmsg started.
+Jan 26 12:22:08 combo kernel: Linux agpgart interface v0.100 (c) Dave Jones
+Jan 26 12:23:10 combo squid[2273]: Squid Parent: child process 2275 started
+---
+len=149
+Jan 23 08:33:01 combo sshd(pam_unix)[28904]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=ztc2-f.nas.tiscali.de  user=root
+Jan 23 08:33:01 combo sshd(pam_unix)[28905]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=ztc2-f.nas.tiscali.de  user=root
+Jan 23 08:33:01 combo sshd(pam_unix)[28906]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=ztc2-f.nas.tiscali.de  user=root
+Jan 23 08:33:01 combo sshd(pam_unix)[28908]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=ztc2-f.nas.tiscali.de  user=root
+Jan 23 08:33:01 combo sshd(pam_unix)[28912]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=ztc2-f.nas.tiscali.de  user=root
+Jan 23 08:33:01 combo sshd(pam_unix)[28914]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=ztc2-f.nas.tiscali.de  user=root
+Jan 23 08:33:01 combo sshd(pam_unix)[28915]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=ztc2-f.nas.tiscali.de  user=root
+Jan 23 08:33:01 combo sshd(pam_unix)[28916]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=ztc2-f.nas.tiscali.de  user=root
+---
+len=249
+Jan 26 12:22:40 combo kernel: audit(1138296120.316:368744): avc:  denied  { relabelto } for  pid=1353 exe=/sbin/restorecon name=fd0 dev=hda2 ino=283651 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:removable_device_t tclass=blk_file
+---
+len=52
+Jan 26 12:20:17 combo rc: Stopping squid:  succeeded
+Jan 26 12:22:06 combo kernel: 0MB HIGHMEM available.
+Jan 26 12:22:09 combo sdpd[1693]: sdpd v1.5 started 
+Jan 26 12:22:09 combo kernel: Using cfq io scheduler
+Jan 26 12:22:48 combo crond: crond startup succeeded
+Jan 26 12:23:07 combo httpd: httpd startup succeeded
+Jan 26 12:23:17 combo named: named startup succeeded
+Jan 26 12:23:20 combo snmpd: snmpd startup succeeded
+---
+len=160
+Feb 18 14:02:57 combo sshd(pam_unix)[5321]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=c-24-7-117-28.hsd1.ca.comcast.net  user=root
+Feb 18 14:02:57 combo sshd(pam_unix)[5322]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=c-24-7-117-28.hsd1.ca.comcast.net  user=root
+Feb 18 14:02:57 combo sshd(pam_unix)[5324]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=c-24-7-117-28.hsd1.ca.comcast.net  user=root
+Feb 18 14:02:57 combo sshd(pam_unix)[5318]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=c-24-7-117-28.hsd1.ca.comcast.net  user=root
+Feb 18 14:02:57 combo sshd(pam_unix)[5317]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=c-24-7-117-28.hsd1.ca.comcast.net  user=root
+Feb 18 14:02:57 combo sshd(pam_unix)[5316]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=c-24-7-117-28.hsd1.ca.comcast.net  user=root
+Feb 25 12:44:54 combo sshd(pam_unix)[6475]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=ip64-178-48-29.z48-178-64.customer.algx.net 
+Feb 25 12:44:54 combo sshd(pam_unix)[6474]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=ip64-178-48-29.z48-178-64.customer.algx.net 
+---
+len=63
+Jan 26 12:22:08 combo kernel: isapnp: Scanning for PnP cards...
+Jan 26 12:22:10 combo kernel: NET: Registered protocol family 2
+Jan 26 12:22:11 combo kernel: Initializing IPsec netlink socket
+Jan 26 12:22:11 combo kernel: NET: Registered protocol family 1
+Jan 26 12:22:11 combo kernel: Freeing initrd memory: 186k freed
+Jan 26 12:22:22 combo kernel: EXT3 FS on hda2, internal journal
+Jan 26 12:22:27 combo kernel: EXT3 FS on hda1, internal journal
+Jan 26 12:27:48 combo ntpd[2309]: kernel time sync enabled 0001
+---
+len=133
+Aug 23 08:28:11 combo ftpd[18684]: connection from 82.55.115.181 (host181-115.pool8255.interbusiness.it) at Tue Aug 23 08:28:11 2005 
+Sep 19 05:57:37 combo kernel: Memory: 125312k/129720k available (1540k kernel code, 3860k reserved, 599k data, 144k init, 0k highmem)
+Sep 28 09:10:49 combo kernel: Memory: 125312k/129720k available (1540k kernel code, 3860k reserved, 599k data, 144k init, 0k highmem)
+Oct  3 12:13:08 combo sshd(pam_unix)[28071]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=www.shatura.com 
+Oct  3 12:13:08 combo sshd(pam_unix)[28070]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=www.shatura.com 
+Oct 25 10:08:47 combo kernel: Memory: 125312k/129720k available (1540k kernel code, 3860k reserved, 599k data, 144k init, 0k highmem)
+Dec  6 12:22:58 combo kernel: Memory: 125312k/129720k available (1540k kernel code, 3860k reserved, 599k data, 144k init, 0k highmem)
+Jan 26 12:22:07 combo kernel: Memory: 125312k/129720k available (1540k kernel code, 3860k reserved, 599k data, 144k init, 0k highmem)
+---
+len=86
+Jan 26 17:23:18 combo named[2288]: listening on IPv4 interface eth0:3, 63.126.79.71#53
+Jan 26 17:23:18 combo named[2288]: listening on IPv4 interface eth0:4, 63.126.79.72#53
+Jan 26 17:23:18 combo named[2288]: listening on IPv4 interface eth0:5, 63.126.79.73#53
+Jan 26 17:23:18 combo named[2288]: listening on IPv4 interface eth0:6, 63.126.79.75#53
+Jan 26 17:23:18 combo named[2288]: listening on IPv4 interface eth0:7, 63.126.79.80#53
+Jan 26 17:23:19 combo named[2288]: listening on IPv4 interface eth0:8, 63.126.79.81#53
+Jan 26 17:23:20 combo named[2288]: listening on IPv4 interface eth0:9, 63.126.79.82#53
+Jan 26 12:23:22 combo ntpd[2309]: ntpd 4.2.0@1.1161-r Thu Mar 11 11:46:39 EST 2004 (1)
+---
+len=100
+Dec  6 12:23:00 combo kernel: RAMDISK driver initialized: 16 RAM disks of 16384K size 1024 blocksize
+Dec  6 12:23:07 combo kernel: device-mapper: 4.1.0-ioctl (2003-12-10) initialised: dm@uk.sistina.com
+Jan 26 12:22:09 combo kernel: RAMDISK driver initialized: 16 RAM disks of 16384K size 1024 blocksize
+Jan 26 12:22:13 combo kernel: audit(1138278092.486:112647): item=0 name=/initrd inode=1021 dev=00:00
+Jan 26 12:22:14 combo kernel: audit(1138278101.749:164007): item=0 name=/dev/pts/0 inode=2 dev=88:00
+Jan 26 12:22:15 combo kernel: audit(1138278101.749:164013): item=0 name=/dev/pts/0 inode=2 dev=88:00
+Jan 26 12:22:22 combo kernel: device-mapper: 4.1.0-ioctl (2003-12-10) initialised: dm@uk.sistina.com
+Jan 26 12:23:11 combo kernel: audit(1138296191.846:687489): item=0 name=/initrd inode=1021 dev=00:00
+---
+len=53
+Jan 26 12:20:27 combo snmpd: snmpd shutdown succeeded
+Jan 26 12:20:28 combo crond: crond shutdown succeeded
+Jan 26 12:22:06 combo kernel: 126MB LOWMEM available.
+Jan 26 12:22:06 combo syslog: klogd startup succeeded
+Jan 26 12:22:07 combo kernel: SELinux:  Initializing.
+Jan 26 12:22:08 combo rc: Starting pcmcia:  succeeded
+Jan 26 12:22:09 combo kernel: ICH: chipset revision 2
+Jan 26 12:22:43 combo kernel: Bluetooth: Core ver 2.4
+---
+len=88
+Jan 26 12:22:10 combo smartd[1765]: Home page is http://smartmontools.sourceforge.net/  
+Jan 26 17:23:26 combo named[2288]: listening on IPv4 interface eth0:17, 63.126.79.100#53
+Jan 26 17:23:27 combo named[2288]: listening on IPv4 interface eth0:18, 63.126.79.105#53
+Jan 26 17:23:27 combo named[2288]: listening on IPv4 interface eth0:19, 63.126.79.110#53
+Jan 26 17:23:28 combo named[2288]: listening on IPv4 interface eth0:20, 63.126.79.115#53
+Jan 26 17:23:28 combo named[2288]: listening on IPv4 interface eth0:21, 63.126.79.120#53
+Jan 26 17:23:28 combo named[2288]: listening on IPv4 interface eth0:22, 63.126.79.125#53
+Jan 26 17:23:29 combo named[2288]: couldn't add command channel 127.0.0.1#953: not found
+---
+len=102
+Jun 10 11:31:46 combo kernel: Serial: 8250/16550 driver $Revision: 1.90 $ 8 ports, IRQ sharing enabled
+Jul 27 14:42:00 combo kernel: Serial: 8250/16550 driver $Revision: 1.90 $ 8 ports, IRQ sharing enabled
+Sep 19 05:57:38 combo kernel: Serial: 8250/16550 driver $Revision: 1.90 $ 8 ports, IRQ sharing enabled
+Sep 28 09:10:50 combo kernel: Serial: 8250/16550 driver $Revision: 1.90 $ 8 ports, IRQ sharing enabled
+Oct 25 10:08:49 combo kernel: Serial: 8250/16550 driver $Revision: 1.90 $ 8 ports, IRQ sharing enabled
+Dec  6 12:23:00 combo kernel: Serial: 8250/16550 driver $Revision: 1.90 $ 8 ports, IRQ sharing enabled
+Jan 26 12:22:09 combo kernel: Serial: 8250/16550 driver $Revision: 1.90 $ 8 ports, IRQ sharing enabled
+Jan 26 12:22:12 combo kernel: SELinux: initialized (dev , type hugetlbfs), not configured for labeling
+---
+len=152
+Oct  7 18:55:01 combo sshd(pam_unix)[3280]: 1 more authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=bozesan.teleson.ro  user=test
+Jan 30 11:25:55 combo sshd(pam_unix)[3522]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=mail.fullerproperties.com  user=root
+Jan 30 11:25:55 combo sshd(pam_unix)[3517]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=mail.fullerproperties.com  user=root
+Jan 30 11:25:55 combo sshd(pam_unix)[3527]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=mail.fullerproperties.com  user=root
+Jan 30 11:25:55 combo sshd(pam_unix)[3523]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=mail.fullerproperties.com  user=root
+Jan 30 11:25:55 combo sshd(pam_unix)[3528]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=mail.fullerproperties.com  user=root
+Jan 30 11:25:57 combo sshd(pam_unix)[3533]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=mail.fullerproperties.com  user=root
+Jan 30 11:25:57 combo sshd(pam_unix)[3534]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=mail.fullerproperties.com  user=root
+---
+len=55
+Dec  9 09:43:25 combo syslog: syslogd startup succeeded
+Jan 26 12:20:22 combo smartd: smartd shutdown succeeded
+Jan 26 12:20:28 combo xinetd: xinetd shutdown succeeded
+Jan 26 12:22:06 combo syslog: syslogd startup succeeded
+Jan 26 12:22:08 combo kernel: PCI: Probing PCI hardware
+Jan 26 12:22:08 combo bluetooth: hcid startup succeeded
+Jan 26 12:22:09 combo bluetooth: sdpd startup succeeded
+Jan 26 12:22:43 combo kernel: Bluetooth: RFCOMM ver 1.2
+---
+len=92
+Dec  6 12:23:11 combo kernel: 0000:01:0c.0: 3Com PCI 3c905C Tornado at 0xec80. Vers LK1.1.19
+Jan 26 12:22:07 combo kernel: Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+Jan 26 12:22:10 combo smartd[1767]: smartd has fork()ed into background mode. New PID=1767. 
+Jan 26 12:22:12 combo kernel: SELinux: initialized (dev , type devpts), uses transition SIDs
+Jan 26 12:22:13 combo kernel: SELinux: initialized (dev , type futexfs), uses genfs_contexts
+Jan 26 12:22:13 combo kernel: audit(1138278092.509:112888): item=0 name=/proc/sys/net/econet
+Jan 26 12:22:39 combo kernel: 0000:01:0c.0: 3Com PCI 3c905C Tornado at 0xec80. Vers LK1.1.19
+Jan 26 12:22:43 combo kernel: 0000:01:0c.0: 3Com PCI 3c905C Tornado at 0xec80. Vers LK1.1.19
+---
+len=142
+Feb  5 18:17:50 combo sshd(pam_unix)[4093]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=211.154.205.252  user=root
+Feb  5 18:17:56 combo sshd(pam_unix)[4095]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=211.154.205.252  user=root
+Feb  5 18:17:56 combo sshd(pam_unix)[4097]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=211.154.205.252  user=root
+Feb  5 18:17:56 combo sshd(pam_unix)[4098]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=211.154.205.252  user=root
+Feb  5 18:17:57 combo sshd(pam_unix)[4101]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=211.154.205.252  user=root
+Feb  5 18:17:59 combo sshd(pam_unix)[4103]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=211.154.205.252  user=root
+Feb  5 18:17:59 combo sshd(pam_unix)[4104]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=211.154.205.252  user=root
+Feb  6 23:01:50 combo sshd(pam_unix)[4189]: authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=210.228.173.152  user=root
+---
+len=242
+Jan 26 12:22:40 combo kernel: audit(1138296123.351:395836): avc:  denied  { read } for  pid=1437 exe=/sbin/iptables name=modprobe dev= ino=-268435402 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:sysctl_modprobe_t tclass=file
+Jan 26 12:22:43 combo kernel: audit(1138296132.911:505629): avc:  denied  { relabelto } for  pid=1788 exe=/sbin/restorecon name=ptal-mlcd dev=hda2 ino=1502894 scontext=system_u:system_r:kernel_t tcontext=system_u:object_r:var_run_t tclass=dir
+---
+len=45
+Jan  1 04:02:17 combo syslogd 1.4.1: restart.
+Jan  8 04:05:57 combo syslogd 1.4.1: restart.
+Jan 15 04:11:26 combo syslogd 1.4.1: restart.
+Jan 22 04:11:04 combo syslogd 1.4.1: restart.
+Jan 26 12:20:06 combo xfs[2168]: terminating 
+Jan 26 12:20:15 combo squid: Stopping squid: 
+Jan 26 12:22:06 combo syslogd 1.4.1: restart.
+Jan 26 12:22:12 combo kernel: md: autorun ...
+---

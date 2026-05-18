@@ -21,6 +21,10 @@ MODE_ORDER = [
     "static_bloom",
     "static_qgram_index",
     "static_qgram_index_mmap",
+    "grep_plaintext",
+    "ripgrep_plaintext",
+    "static_qgram_index_mmap_compact",
+    "static_qgram_index_mmap_cpp",
 ]
 MODE_LABELS = {
     "decompressed_text": "Decompressed Text",
@@ -29,6 +33,10 @@ MODE_LABELS = {
     "static_bloom": "Static Bloom",
     "static_qgram_index": "Static Q-Gram JSON",
     "static_qgram_index_mmap": "Static Q-Gram mmap",
+    "grep_plaintext": "grep Plaintext",
+    "ripgrep_plaintext": "ripgrep Plaintext",
+    "static_qgram_index_mmap_compact": "Static Q-Gram qidx3",
+    "static_qgram_index_mmap_cpp": "Static Q-Gram qidx3 C++",
 }
 MODE_COLORS = {
     "decompressed_text": "#4C78A8",
@@ -37,6 +45,10 @@ MODE_COLORS = {
     "static_bloom": "#B279A2",
     "static_qgram_index": "#E45756",
     "static_qgram_index_mmap": "#72B7B2",
+    "grep_plaintext": "#9D755D",
+    "ripgrep_plaintext": "#BAB0AC",
+    "static_qgram_index_mmap_compact": "#EECA3B",
+    "static_qgram_index_mmap_cpp": "#FF9DA6",
 }
 QUERY_LABELS = {
     "common_token": "Common Token",
@@ -70,6 +82,7 @@ def build_visualization_report(results_directory: Path, title: str) -> dict[str,
     suite_rows = _read_csv(results_directory / "suite_summary.csv")
     cell_rows = _read_csv(results_directory / "cell_level_aggregate.csv")
     static_rows = _read_csv(results_directory / "static_bloom_summary.csv")
+    complete_summary_rows = _read_csv(results_directory / "complete_evaluation_summary.csv")
 
     figure_directory = results_directory / "journal_figures"
     figure_directory.mkdir(parents=True, exist_ok=True)
@@ -107,6 +120,26 @@ def build_visualization_report(results_directory: Path, title: str) -> dict[str,
             value_label="cells",
         ),
     )
+    if complete_summary_rows:
+        for query_group in ("all_queries", "token_safe_queries", "stress_queries"):
+            group_rows = [row for row in complete_summary_rows if row.get("query_group") == query_group]
+            if not group_rows:
+                continue
+            figures[f"{query_group}_wall_time"] = _write(
+                figure_directory / f"{query_group}_wall_time.svg",
+                _bar_chart(
+                    title=f"Median Wall Time: {query_group.replace('_', ' ').title()}",
+                    rows=[
+                        {
+                            "label": _mode_label(row["mode_name"]),
+                            "value": _to_float(row["median_wall_time_ms"]),
+                            "color": MODE_COLORS.get(row["mode_name"], "#777777"),
+                        }
+                        for row in _ordered_mode_rows(group_rows)
+                    ],
+                    value_label="ms",
+                ),
+            )
 
     minor_rows = [row for row in cell_rows if row["mode_name"] == "minor_optimization"]
     if minor_rows:

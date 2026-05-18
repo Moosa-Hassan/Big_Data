@@ -21,22 +21,31 @@ Correctness sketch:
 from __future__ import annotations
 
 import json
+import io
 import mmap
+import platform
+import shutil
 import struct
+import subprocess
 from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any
 
+from .registry import get_project_root, get_runtime_root
 from .specs import ArtifactSpec, ModeRunResult
 from .window_loader import ParsedWindow, load_l_window_from_txt
 
 STATIC_QGRAM_INDEX_VERSION = "static_qgram_index.v1"
 STATIC_QGRAM_MMAP_INDEX_VERSION = 2
 STATIC_QGRAM_MMAP_MAGIC = b"QIDX2MM\0"
+STATIC_QGRAM_COMPACT_INDEX_VERSION = 5
+STATIC_QGRAM_COMPACT_MAGIC = b"QIDX3MM\0"
 
 _MMAP_HEADER_STRUCT = struct.Struct("<8sII19Q")
+_COMPACT_HEADER_STRUCT = struct.Struct("<8sII17Q")
 _POSTING_TABLE_ENTRY_STRUCT = struct.Struct("<IH")
 _Q3_DICTIONARY_ENTRY_STRUCT = struct.Struct("<IIH")
+_COMPACT_DICTIONARY_ENTRY_STRUCT = struct.Struct("<IIII")
 _RECORD_DIRECTORY_STRUCT = struct.Struct("<QQIIIHBBQ")
 _LINE_DIRECTORY_STRUCT = struct.Struct("<QI")
 
@@ -59,6 +68,24 @@ _HEADER_LINE_DIRECTORY_OFFSET = 15
 _HEADER_LINE_DIRECTORY_SIZE = 16
 _HEADER_LINE_SLAB_OFFSET = 17
 _HEADER_LINE_SLAB_SIZE = 18
+
+_COMPACT_HEADER_SOURCE_SIZE = 0
+_COMPACT_HEADER_SOURCE_MTIME_NS = 1
+_COMPACT_HEADER_WINDOW_SIZE = 2
+_COMPACT_HEADER_WINDOW_MTIME_NS = 3
+_COMPACT_HEADER_RECORD_COUNT = 4
+_COMPACT_HEADER_Q1_OFFSET = 5
+_COMPACT_HEADER_Q1_COUNT = 6
+_COMPACT_HEADER_Q2_OFFSET = 7
+_COMPACT_HEADER_Q2_COUNT = 8
+_COMPACT_HEADER_Q3_OFFSET = 9
+_COMPACT_HEADER_Q3_COUNT = 10
+_COMPACT_HEADER_POSTINGS_OFFSET = 11
+_COMPACT_HEADER_POSTINGS_SIZE = 12
+_COMPACT_HEADER_LINE_DIRECTORY_OFFSET = 13
+_COMPACT_HEADER_LINE_DIRECTORY_SIZE = 14
+_COMPACT_HEADER_LINE_SLAB_OFFSET = 15
+_COMPACT_HEADER_LINE_SLAB_SIZE = 16
 
 EACH_WINDOW_SIZE_COUNT = 5
 STREAM_ENCODER_COUNT = 13
@@ -120,6 +147,31 @@ class StaticQGramMMapHeader:
     postings_size: int
     record_directory_offset: int
     record_directory_size: int
+    line_directory_offset: int
+    line_directory_size: int
+    line_slab_offset: int
+    line_slab_size: int
+
+
+@dataclass(frozen=True)
+class StaticQGramCompactHeader:
+    """Parsed fixed header for a compact binary q-gram sidecar."""
+
+    version: int
+    header_size: int
+    source_size: int
+    source_mtime_ns: int
+    window_size: int
+    window_mtime_ns: int
+    record_count: int
+    q1_offset: int
+    q1_count: int
+    q2_offset: int
+    q2_count: int
+    q3_offset: int
+    q3_count: int
+    postings_offset: int
+    postings_size: int
     line_directory_offset: int
     line_directory_size: int
     line_slab_offset: int
@@ -214,6 +266,94 @@ class StaticQGramMMapView:
         return list(struct.unpack("<" + "H" * count, postings_bytes))
 
 
+class StaticQGramCompactMMapView:
+    """Lightweight mmap view over a compact qidx3 sidecar."""
+
+    def __init__(self, mmap_buffer: mmap.mmap) -> None:
+        self._mmap = mmap_buffer
+        self.header = _parse_compact_header(mmap_buffer)
+
+    @property
+    def record_count(self) -> int:
+        """Return the number of records represented in the sidecar."""
+
+        return self.header.record_count
+
+    def get_postings_meta(self, gram_size: int, gram_value: int) -> tuple[int, int, int] | None:
+        """Return postings blob offset, byte length, and count for one q-gram."""
+
+        section = self._section_for_gram_size(gram_size)
+        if section is None:
+            return None
+        section_offset, section_count = section
+        low = 0
+        high = section_count
+        while low < high:
+            middle = (low + high) // 2
+            entry_offset = section_offset + middle * _COMPACT_DICTIONARY_ENTRY_STRUCT.size
+            current_gram, postings_offset, postings_byte_length, count = _COMPACT_DICTIONARY_ENTRY_STRUCT.unpack_from(
+                self._mmap,
+                entry_offset,
+            )
+            if current_gram == gram_value:
+                return postings_offset, postings_byte_length, count
+            if current_gram < gram_value:
+                low = middle + 1
+            else:
+                high = middle
+        return None
+
+    def get_postings_count(self, gram_size: int, gram_value: int) -> int:
+        """Return the posting-list cardinality for one q-gram without decoding it."""
+
+        meta = self.get_postings_meta(gram_size, gram_value)
+        return 0 if meta is None else meta[2]
+
+    def get_postings(self, gram_size: int, gram_value: int) -> list[int]:
+        """Return sorted record IDs for one q-gram."""
+
+        meta = self.get_postings_meta(gram_size, gram_value)
+        if meta is None:
+            return []
+        postings_relative_offset, postings_byte_length, count = meta
+        if count == 0:
+            return []
+        start = self.header.postings_offset + postings_relative_offset
+        return decode_delta_varint_postings(self._mmap, start, postings_byte_length, expected_count=count)
+
+    def line_bytes(self, record_id: int) -> bytes:
+        """Return normalized decoded bytes for one record."""
+
+        offset, length = self.line_location(record_id)
+        start = self.header.line_slab_offset + offset
+        return bytes(self._mmap[start : start + length])
+
+    def line_location(self, record_id: int) -> tuple[int, int]:
+        """Return the line-slab offset and byte length for one record."""
+
+        if record_id < 0 or record_id >= self.header.record_count:
+            raise IndexError(f"Record id out of range: {record_id}")
+        entry_offset = self.header.line_directory_offset + record_id * _LINE_DIRECTORY_STRUCT.size
+        return _LINE_DIRECTORY_STRUCT.unpack_from(self._mmap, entry_offset)
+
+    def line_contains_all(self, record_id: int, keyword_bytes: list[bytes]) -> bool:
+        """Return whether one normalized line contains all query byte terms."""
+
+        offset, length = self.line_location(record_id)
+        start = self.header.line_slab_offset + offset
+        line_view = self._mmap[start : start + length]
+        return all(keyword in line_view for keyword in keyword_bytes)
+
+    def _section_for_gram_size(self, gram_size: int) -> tuple[int, int] | None:
+        if gram_size == 1:
+            return self.header.q1_offset, self.header.q1_count
+        if gram_size == 2:
+            return self.header.q2_offset, self.header.q2_count
+        if gram_size == 3:
+            return self.header.q3_offset, self.header.q3_count
+        return None
+
+
 class _StaticBitReader:
     """LSB-first bit reader for LogLite dynamic-bitset files."""
 
@@ -298,6 +438,69 @@ def qgram_values_for_query_term(term: str) -> tuple[int, set[int]]:
     return gram_size, qgram_values_for_bytes(term_bytes, gram_size)
 
 
+def encode_unsigned_varint(value: int) -> bytes:
+    """Encode one non-negative integer using unsigned LEB128 varints."""
+
+    if value < 0:
+        raise ValueError("Varint values must be non-negative.")
+    buffer = bytearray()
+    while value >= 0x80:
+        buffer.append((value & 0x7F) | 0x80)
+        value >>= 7
+    buffer.append(value & 0x7F)
+    return bytes(buffer)
+
+
+def encode_delta_varint_postings(record_ids: list[int] | tuple[int, ...]) -> bytes:
+    """Encode sorted record IDs as delta-varint postings."""
+
+    encoded = bytearray()
+    previous_record_id = 0
+    for index, record_id in enumerate(record_ids):
+        if record_id < 0:
+            raise ValueError("Record IDs must be non-negative.")
+        if index > 0 and record_id <= previous_record_id:
+            raise ValueError("Record IDs must be strictly increasing.")
+        delta = record_id if index == 0 else record_id - previous_record_id
+        encoded.extend(encode_unsigned_varint(delta))
+        previous_record_id = record_id
+    return bytes(encoded)
+
+
+def decode_delta_varint_postings(
+    buffer: bytes | bytearray | mmap.mmap,
+    offset: int,
+    byte_length: int,
+    expected_count: int | None = None,
+) -> list[int]:
+    """Decode delta-varint postings from a byte buffer or mmap."""
+
+    postings: list[int] = []
+    end_offset = offset + byte_length
+    cursor = offset
+    previous_record_id = 0
+    while cursor < end_offset:
+        shift = 0
+        value = 0
+        while True:
+            if cursor >= end_offset:
+                raise ValueError("Truncated varint posting list.")
+            byte_value = buffer[cursor]
+            cursor += 1
+            value |= (byte_value & 0x7F) << shift
+            if (byte_value & 0x80) == 0:
+                break
+            shift += 7
+            if shift > 63:
+                raise ValueError("Varint posting value is too large.")
+        record_id = value if not postings else previous_record_id + value
+        postings.append(record_id)
+        previous_record_id = record_id
+    if expected_count is not None and len(postings) != expected_count:
+        raise ValueError(f"Decoded {len(postings)} postings; expected {expected_count}.")
+    return postings
+
+
 def intersect_sorted_postings(posting_lists: list[list[int]]) -> list[int]:
     """Intersect sorted record-ID postings lists."""
 
@@ -356,6 +559,32 @@ def ensure_static_qgram_mmap_index(artifact_spec: ArtifactSpec, force_rebuild: b
             artifact_spec.static_qgram_mmap_index_path,
         )
     return artifact_spec.static_qgram_mmap_index_path
+
+
+def ensure_static_qgram_compact_index(artifact_spec: ArtifactSpec, force_rebuild: bool = False) -> Path:
+    """Ensure the compact qidx3 sidecar exists and is current."""
+
+    if (
+        artifact_spec.static_compressed_binary_path is None
+        or artifact_spec.static_window_path is None
+        or artifact_spec.static_qgram_compact_index_path is None
+        or artifact_spec.decompressed_text_path is None
+    ):
+        raise RuntimeError("ArtifactSpec does not include static compact q-gram artifact paths.")
+
+    if force_rebuild or _compact_index_needs_rebuild(
+        artifact_spec.static_qgram_compact_index_path,
+        artifact_spec.static_compressed_binary_path,
+        artifact_spec.static_window_path,
+        artifact_spec.decompressed_text_path,
+    ):
+        build_static_qgram_compact_index(
+            artifact_spec.static_compressed_binary_path,
+            artifact_spec.static_window_path,
+            artifact_spec.static_qgram_compact_index_path,
+            artifact_spec.decompressed_text_path,
+        )
+    return artifact_spec.static_qgram_compact_index_path
 
 
 def build_static_qgram_index(
@@ -539,6 +768,118 @@ def build_static_qgram_mmap_index(
     return load_static_qgram_mmap_index_header(index_path)
 
 
+def build_static_qgram_compact_index(
+    compressed_binary_path: Path,
+    static_window_path: Path,
+    index_path: Path,
+    baseline_text_path: Path | None = None,
+) -> StaticQGramCompactHeader:
+    """Build and persist a compact qidx3 mmap index for a static artifact."""
+
+    postings_sets: dict[int, dict[int, set[int]]] = {1: {}, 2: {}, 3: {}}
+    line_directory_buffer = bytearray()
+    line_slab_buffer = bytearray()
+
+    logical_line_id = 0
+    if baseline_text_path is None:
+        parsed_window = load_l_window_from_txt(static_window_path)
+        blocks, total_bits = _load_static_blocks(compressed_binary_path)
+        record_directory = parse_static_record_directory(blocks, total_bits)
+        logical_lines = (
+            logical_line
+            for entry in record_directory
+            for logical_line in _baseline_logical_lines_from_record_text(
+                decode_static_record_from_blocks(blocks, total_bits, parsed_window, entry)
+            )
+        )
+    else:
+        logical_lines = _baseline_logical_lines_from_text_path(baseline_text_path)
+
+    for logical_line in logical_lines:
+        line_bytes = logical_line.encode("utf-8")
+        if len(line_bytes) > 0xFFFFFFFF:
+            raise ValueError("qidx3 line directory supports line byte lengths up to uint32.")
+        line_offset = len(line_slab_buffer)
+        line_slab_buffer.extend(line_bytes)
+        line_directory_buffer.extend(_LINE_DIRECTORY_STRUCT.pack(line_offset, len(line_bytes)))
+        for gram_size in (1, 2, 3):
+            for gram in qgram_values_for_bytes(line_bytes, gram_size):
+                postings_sets[gram_size].setdefault(gram, set()).add(logical_line_id)
+        logical_line_id += 1
+
+    postings_buffer = bytearray()
+
+    def append_posting(record_ids: set[int]) -> tuple[int, int, int]:
+        sorted_record_ids = sorted(record_ids)
+        encoded_postings = encode_delta_varint_postings(sorted_record_ids)
+        offset = len(postings_buffer)
+        if offset > 0xFFFFFFFF or len(encoded_postings) > 0xFFFFFFFF:
+            raise ValueError("qidx3 postings dictionary exceeded the uint32 offset/length limit.")
+        postings_buffer.extend(encoded_postings)
+        return offset, len(encoded_postings), len(sorted_record_ids)
+
+    def build_dictionary_buffer(postings_by_gram: dict[int, set[int]]) -> bytearray:
+        dictionary_buffer = bytearray()
+        for gram, record_ids in sorted(postings_by_gram.items()):
+            postings_offset, postings_byte_length, count = append_posting(record_ids)
+            dictionary_buffer.extend(
+                _COMPACT_DICTIONARY_ENTRY_STRUCT.pack(gram, postings_offset, postings_byte_length, count)
+            )
+        return dictionary_buffer
+
+    q1_buffer = build_dictionary_buffer(postings_sets[1])
+    q2_buffer = build_dictionary_buffer(postings_sets[2])
+    q3_buffer = build_dictionary_buffer(postings_sets[3])
+
+    source_stat = (baseline_text_path or compressed_binary_path).stat()
+    window_stat = static_window_path.stat()
+
+    line_directory_offset = _COMPACT_HEADER_STRUCT.size
+    q1_offset = line_directory_offset + len(line_directory_buffer)
+    q2_offset = q1_offset + len(q1_buffer)
+    q3_offset = q2_offset + len(q2_buffer)
+    postings_offset = q3_offset + len(q3_buffer)
+    line_slab_offset = postings_offset + len(postings_buffer)
+    header_values = [
+        source_stat.st_size,
+        source_stat.st_mtime_ns,
+        window_stat.st_size,
+        window_stat.st_mtime_ns,
+        logical_line_id,
+        q1_offset,
+        len(postings_sets[1]),
+        q2_offset,
+        len(postings_sets[2]),
+        q3_offset,
+        len(postings_sets[3]),
+        postings_offset,
+        len(postings_buffer),
+        line_directory_offset,
+        len(line_directory_buffer),
+        line_slab_offset,
+        len(line_slab_buffer),
+    ]
+    header = _COMPACT_HEADER_STRUCT.pack(
+        STATIC_QGRAM_COMPACT_MAGIC,
+        STATIC_QGRAM_COMPACT_INDEX_VERSION,
+        _COMPACT_HEADER_STRUCT.size,
+        *header_values,
+    )
+
+    index_path.parent.mkdir(parents=True, exist_ok=True)
+    temporary_path = index_path.with_suffix(index_path.suffix + ".tmp")
+    with temporary_path.open("wb") as handle:
+        handle.write(header)
+        handle.write(line_directory_buffer)
+        handle.write(q1_buffer)
+        handle.write(q2_buffer)
+        handle.write(q3_buffer)
+        handle.write(postings_buffer)
+        handle.write(line_slab_buffer)
+    temporary_path.replace(index_path)
+    return load_static_qgram_compact_index_header(index_path)
+
+
 def load_static_qgram_index(index_path: Path) -> StaticQGramIndex:
     """Load a q-gram index and validate its schema version."""
 
@@ -597,6 +938,16 @@ def load_static_qgram_mmap_index_header(index_path: Path) -> StaticQGramMMapHead
     return _parse_mmap_header(header_bytes)
 
 
+def load_static_qgram_compact_index_header(index_path: Path) -> StaticQGramCompactHeader:
+    """Load only the fixed header from a compact qidx3 sidecar."""
+
+    with index_path.open("rb") as handle:
+        header_bytes = handle.read(_COMPACT_HEADER_STRUCT.size)
+    if len(header_bytes) != _COMPACT_HEADER_STRUCT.size:
+        raise ValueError(f"Static q-gram compact index is too small: {index_path}")
+    return _parse_compact_header(header_bytes)
+
+
 def open_static_qgram_mmap_index(index_path: Path) -> tuple[object, mmap.mmap, StaticQGramMMapView]:
     """Open a qidx2 file and return its handle, mmap, and parsed view."""
 
@@ -608,6 +959,24 @@ def open_static_qgram_mmap_index(index_path: Path) -> tuple[object, mmap.mmap, S
         raise
     try:
         view = StaticQGramMMapView(mmap_buffer)
+    except Exception:
+        mmap_buffer.close()
+        handle.close()
+        raise
+    return handle, mmap_buffer, view
+
+
+def open_static_qgram_compact_index(index_path: Path) -> tuple[object, mmap.mmap, StaticQGramCompactMMapView]:
+    """Open a qidx3 file and return its handle, mmap, and parsed view."""
+
+    handle = index_path.open("rb")
+    try:
+        mmap_buffer = mmap.mmap(handle.fileno(), 0, access=mmap.ACCESS_READ)
+    except Exception:
+        handle.close()
+        raise
+    try:
+        view = StaticQGramCompactMMapView(mmap_buffer)
     except Exception:
         mmap_buffer.close()
         handle.close()
@@ -841,6 +1210,123 @@ def keyword_search_loglite_static_qgram_index_mmap(
         handle.close()
 
 
+def keyword_search_loglite_static_qgram_index_mmap_compact(
+    index_path: Path,
+    query_keywords: str | tuple[str, ...] | list[str],
+) -> ModeRunResult:
+    """Search static LogLite using compact qidx3 plus planned exact verification."""
+
+    keywords = _normalize_query_keywords(query_keywords)
+    keyword_bytes = [keyword.encode("utf-8") for keyword in keywords]
+    handle, mmap_buffer, view = open_static_qgram_compact_index(index_path)
+    try:
+        gram_requests, missing_required_gram, estimated_postings_ids = _collect_compact_gram_requests(
+            view,
+            keywords,
+        )
+        use_slab_scan = _choose_compact_planner_strategy(view.record_count, gram_requests, estimated_postings_ids)
+        planner_strategy = "line_slab_scan" if use_slab_scan else "postings_intersection"
+
+        postings_lists_touched = 0
+        postings_ids_read = 0
+        if missing_required_gram:
+            candidate_ids: list[int] = []
+            planner_strategy = "missing_gram"
+        elif use_slab_scan or not gram_requests:
+            candidate_ids = list(range(view.record_count))
+        else:
+            posting_lists: list[list[int]] = []
+            for gram_size, gram_value, count in sorted(gram_requests, key=lambda item: item[2]):
+                postings = view.get_postings(gram_size, gram_value)
+                postings_lists_touched += 1
+                postings_ids_read += len(postings)
+                if not postings:
+                    posting_lists = []
+                    break
+                posting_lists.append(postings)
+            candidate_ids = intersect_sorted_postings(posting_lists) if posting_lists else []
+
+        matches: list[str] = []
+        verified_bytes = 0
+        for record_id in candidate_ids:
+            line_offset, line_length = view.line_location(record_id)
+            verified_bytes += line_length
+            line_start = view.header.line_slab_offset + line_offset
+            line_bytes = mmap_buffer[line_start : line_start + line_length]
+            if all(keyword in line_bytes for keyword in keyword_bytes):
+                matches.append(_decode_bytes_to_text(line_bytes))
+
+        verified_records = len(candidate_ids)
+        return ModeRunResult(
+            matches=matches,
+            decoded_records=verified_records,
+            decoded_bytes=verified_bytes,
+            skipped_records=view.record_count - verified_records,
+            skipped_bytes=None,
+            fallback_count=0,
+            total_records=view.record_count,
+            planner_strategy=planner_strategy,
+            postings_lists_touched=postings_lists_touched,
+            postings_ids_read=postings_ids_read,
+            verified_records=verified_records,
+            verified_bytes=verified_bytes,
+        )
+    finally:
+        mmap_buffer.close()
+        handle.close()
+
+
+def keyword_search_loglite_static_qgram_index_mmap_cpp(
+    index_path: Path,
+    query_keywords: str | tuple[str, ...] | list[str],
+) -> ModeRunResult:
+    """Search qidx3 with the native mmap helper and return exact matched lines."""
+
+    keywords = _normalize_query_keywords(query_keywords)
+    binary_path = ensure_qidx_search_binary()
+    completed_process = subprocess.run(
+        [str(binary_path), str(index_path), *keywords],
+        cwd=get_project_root(),
+        capture_output=True,
+        text=False,
+    )
+    if completed_process.returncode != 0:
+        raise RuntimeError(
+            "Native qidx-search failed.\n"
+            f"command: {binary_path} {index_path}\n"
+            f"stderr:\n{completed_process.stderr.decode('utf-8', 'ignore')}"
+        )
+    output = completed_process.stdout.decode("utf-8", "ignore")
+    matches = output.split("\n")
+    if matches and matches[-1] == "":
+        matches.pop()
+    native_stats = _parse_native_qidx_stats(completed_process.stderr)
+    try:
+        header = load_static_qgram_compact_index_header(index_path)
+        total_records = native_stats.get("total_records", header.record_count)
+    except (OSError, ValueError, struct.error):
+        total_records = native_stats.get("total_records")
+    verified_records = native_stats.get("verified_records")
+    skipped_records = (
+        None if total_records is None or verified_records is None else max(0, total_records - verified_records)
+    )
+    planner_strategy = native_stats.get("planner_strategy")
+    return ModeRunResult(
+        matches=matches,
+        decoded_records=verified_records,
+        decoded_bytes=native_stats.get("verified_bytes"),
+        skipped_records=skipped_records,
+        skipped_bytes=None,
+        fallback_count=0,
+        total_records=total_records,
+        planner_strategy=f"cpp_{planner_strategy}" if isinstance(planner_strategy, str) else "cpp_qidx3_planned_search",
+        postings_lists_touched=native_stats.get("postings_lists_touched"),
+        postings_ids_read=native_stats.get("postings_ids_read"),
+        verified_records=verified_records,
+        verified_bytes=native_stats.get("verified_bytes"),
+    )
+
+
 def _decode_rle_payload_length(reader: _StaticBitReader, payload_bit_length: int) -> int:
     """Decode only the output byte length of an RLE payload."""
 
@@ -863,6 +1349,29 @@ def _decode_rle_payload_length(reader: _StaticBitReader, payload_bit_length: int
 
     reader.position = min(start_position + payload_bit_length, reader.total_bits)
     return decoded_length
+
+
+def _parse_native_qidx_stats(stderr_bytes: bytes) -> dict[str, Any]:
+    """Parse the native qidx-search instrumentation line from stderr."""
+
+    stderr_text = stderr_bytes.decode("utf-8", "ignore")
+    for raw_line in stderr_text.splitlines():
+        if not raw_line.startswith("QIDX3_STATS "):
+            continue
+        stats: dict[str, Any] = {}
+        for token in raw_line.removeprefix("QIDX3_STATS ").split():
+            key, separator, value = token.partition("=")
+            if not separator:
+                continue
+            if key == "planner_strategy":
+                stats[key] = value
+                continue
+            try:
+                stats[key] = int(value)
+            except ValueError:
+                continue
+        return stats
+    return {}
 
 
 def _intersect_two_sorted_lists(left: list[int], right: list[int]) -> list[int]:
@@ -929,6 +1438,57 @@ def _load_static_blocks(bin_path: Path) -> tuple[tuple[int, ...], int]:
     return blocks, total_bits
 
 
+def _collect_compact_gram_requests(
+    view: StaticQGramCompactMMapView,
+    keywords: list[str],
+) -> tuple[list[tuple[int, int, int]], bool, int]:
+    """Collect required q-grams with cheap posting-cardinality estimates."""
+
+    required_grams: dict[tuple[int, int], int] = {}
+    missing_required_gram = False
+    for keyword in keywords:
+        if keyword == "":
+            continue
+        gram_size, gram_values = qgram_values_for_query_term(keyword)
+        if gram_size == 0:
+            continue
+        for gram_value in gram_values:
+            key = (gram_size, gram_value)
+            if key in required_grams:
+                continue
+            count = view.get_postings_count(gram_size, gram_value)
+            if count == 0:
+                missing_required_gram = True
+                required_grams.clear()
+                break
+            required_grams[key] = count
+        if missing_required_gram:
+            break
+    gram_requests = [
+        (gram_size, gram_value, count)
+        for (gram_size, gram_value), count in required_grams.items()
+    ]
+    estimated_postings_ids = sum(count for _gram_size, _gram_value, count in gram_requests)
+    return gram_requests, missing_required_gram, estimated_postings_ids
+
+
+def _choose_compact_planner_strategy(
+    record_count: int,
+    gram_requests: list[tuple[int, int, int]],
+    estimated_postings_ids: int,
+) -> bool:
+    """Return True when direct slab verification is cheaper than postings planning."""
+
+    if record_count <= 0:
+        return False
+    if not gram_requests:
+        return True
+    broad_short_gram = any(gram_size <= 2 and count >= record_count * 0.75 for gram_size, _gram, count in gram_requests)
+    if broad_short_gram:
+        return True
+    return estimated_postings_ids >= record_count * 2
+
+
 def _parse_mmap_header(buffer: bytes | mmap.mmap) -> StaticQGramMMapHeader:
     """Parse and validate a qidx2 fixed header from bytes or mmap."""
 
@@ -967,6 +1527,45 @@ def _parse_mmap_header(buffer: bytes | mmap.mmap) -> StaticQGramMMapHeader:
         line_directory_size=values[_HEADER_LINE_DIRECTORY_SIZE],
         line_slab_offset=values[_HEADER_LINE_SLAB_OFFSET],
         line_slab_size=values[_HEADER_LINE_SLAB_SIZE],
+    )
+
+
+def _parse_compact_header(buffer: bytes | mmap.mmap) -> StaticQGramCompactHeader:
+    """Parse and validate a qidx3 fixed header from bytes or mmap."""
+
+    unpacked = _COMPACT_HEADER_STRUCT.unpack_from(buffer, 0)
+    magic = unpacked[0]
+    version = int(unpacked[1])
+    header_size = int(unpacked[2])
+    values = [int(value) for value in unpacked[3:]]
+    if magic != STATIC_QGRAM_COMPACT_MAGIC:
+        raise ValueError(f"Unsupported static q-gram compact magic: {magic!r}")
+    if version != STATIC_QGRAM_COMPACT_INDEX_VERSION:
+        raise ValueError(
+            f"Unsupported static q-gram compact version {version}; expected {STATIC_QGRAM_COMPACT_INDEX_VERSION}."
+        )
+    if header_size != _COMPACT_HEADER_STRUCT.size:
+        raise ValueError(f"Unsupported static q-gram compact header size: {header_size}")
+    return StaticQGramCompactHeader(
+        version=version,
+        header_size=header_size,
+        source_size=values[_COMPACT_HEADER_SOURCE_SIZE],
+        source_mtime_ns=values[_COMPACT_HEADER_SOURCE_MTIME_NS],
+        window_size=values[_COMPACT_HEADER_WINDOW_SIZE],
+        window_mtime_ns=values[_COMPACT_HEADER_WINDOW_MTIME_NS],
+        record_count=values[_COMPACT_HEADER_RECORD_COUNT],
+        q1_offset=values[_COMPACT_HEADER_Q1_OFFSET],
+        q1_count=values[_COMPACT_HEADER_Q1_COUNT],
+        q2_offset=values[_COMPACT_HEADER_Q2_OFFSET],
+        q2_count=values[_COMPACT_HEADER_Q2_COUNT],
+        q3_offset=values[_COMPACT_HEADER_Q3_OFFSET],
+        q3_count=values[_COMPACT_HEADER_Q3_COUNT],
+        postings_offset=values[_COMPACT_HEADER_POSTINGS_OFFSET],
+        postings_size=values[_COMPACT_HEADER_POSTINGS_SIZE],
+        line_directory_offset=values[_COMPACT_HEADER_LINE_DIRECTORY_OFFSET],
+        line_directory_size=values[_COMPACT_HEADER_LINE_DIRECTORY_SIZE],
+        line_slab_offset=values[_COMPACT_HEADER_LINE_SLAB_OFFSET],
+        line_slab_size=values[_COMPACT_HEADER_LINE_SLAB_SIZE],
     )
 
 
@@ -1015,6 +1614,84 @@ def _mmap_index_needs_rebuild(index_path: Path, compressed_binary_path: Path, st
     )
 
 
+def _compact_index_needs_rebuild(
+    index_path: Path,
+    compressed_binary_path: Path,
+    static_window_path: Path,
+    baseline_text_path: Path | None = None,
+) -> bool:
+    """Return whether a compact qidx3 index is missing, stale, or incompatible."""
+
+    if not index_path.exists():
+        return True
+    try:
+        header = load_static_qgram_compact_index_header(index_path)
+    except (OSError, ValueError, struct.error):
+        return True
+
+    source_stat = (baseline_text_path or compressed_binary_path).stat()
+    window_stat = static_window_path.stat()
+    return (
+        header.source_size != source_stat.st_size
+        or header.source_mtime_ns != source_stat.st_mtime_ns
+        or header.window_size != window_stat.st_size
+        or header.window_mtime_ns != window_stat.st_mtime_ns
+        or header.line_directory_offset != _COMPACT_HEADER_STRUCT.size
+        or header.line_directory_size != header.record_count * _LINE_DIRECTORY_STRUCT.size
+        or header.q1_offset != header.line_directory_offset + header.line_directory_size
+        or header.q2_offset != header.q1_offset + header.q1_count * _COMPACT_DICTIONARY_ENTRY_STRUCT.size
+        or header.q3_offset != header.q2_offset + header.q2_count * _COMPACT_DICTIONARY_ENTRY_STRUCT.size
+        or header.postings_offset != header.q3_offset + header.q3_count * _COMPACT_DICTIONARY_ENTRY_STRUCT.size
+        or header.line_slab_offset != header.postings_offset + header.postings_size
+    )
+
+
+def ensure_qidx_search_binary(force_rebuild: bool = False) -> Path:
+    """Compile the native qidx-search helper if needed and return its path."""
+
+    source_path = get_project_root() / "query_eval" / "native" / "qidx_search.cc"
+    if not source_path.exists():
+        raise FileNotFoundError(f"Native qidx-search source not found: {source_path}")
+
+    runtime_root = get_runtime_root()
+    runtime_root.mkdir(parents=True, exist_ok=True)
+    binary_name = "qidx-search.exe" if platform.system().lower().startswith("win") else "qidx-search"
+    binary_path = runtime_root / binary_name
+    if (
+        binary_path.exists()
+        and not force_rebuild
+        and binary_path.stat().st_mtime_ns >= source_path.stat().st_mtime_ns
+    ):
+        return binary_path
+
+    compiler = (
+        shutil.which("clang++")
+        or shutil.which("g++")
+        or shutil.which("c++")
+    )
+    if compiler is None:
+        raise RuntimeError("static_qgram_index_mmap_cpp requires clang++, g++, or c++ on PATH.")
+
+    command = [
+        compiler,
+        "-std=c++17",
+        "-O3",
+        "-DNDEBUG",
+        str(source_path),
+        "-o",
+        str(binary_path),
+    ]
+    completed_process = subprocess.run(command, cwd=get_project_root(), capture_output=True, text=True)
+    if completed_process.returncode != 0:
+        raise RuntimeError(
+            "Failed to compile qidx-search.\n"
+            f"command: {' '.join(command)}\n"
+            f"stdout:\n{completed_process.stdout}\n"
+            f"stderr:\n{completed_process.stderr}"
+        )
+    return binary_path
+
+
 def _normalize_query_keywords(query_keywords: str | tuple[str, ...] | list[str]) -> list[str]:
     """Normalize query input into required substring terms."""
 
@@ -1027,6 +1704,20 @@ def _decode_bytes_to_text(raw_bytes: bytes) -> str:
     """Decode bytes with the permissive baseline semantics."""
 
     return raw_bytes.decode("utf-8", "ignore")
+
+
+def _baseline_logical_lines_from_record_text(record_text: str) -> list[str]:
+    """Return logical text lines produced by the decompressed-text baseline."""
+
+    return [raw_line.rstrip("\n") for raw_line in io.StringIO(record_text + "\n", newline=None)]
+
+
+def _baseline_logical_lines_from_text_path(text_path: Path):
+    """Yield logical lines exactly as the plaintext baseline scans them."""
+
+    with text_path.open("r", encoding="utf-8", errors="ignore") as handle:
+        for raw_line in handle:
+            yield raw_line.rstrip("\n")
 
 
 def _optional_int(value: Any) -> int | None:

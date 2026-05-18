@@ -45,6 +45,17 @@ from .registry import (
 )
 from .reports import build_reports_from_raw_jsonl
 from .specs import CellRunSpec, MemoryMeasurement, RunConfig, RunRecord, TimingMeasurement
+from .static_qgram_index import ensure_qidx_search_binary
+
+STRICT_EXACT_MODE_NAMES = {
+    "full_decompression",
+    "static_qgram_index",
+    "static_qgram_index_mmap",
+    "static_qgram_index_mmap_compact",
+    "static_qgram_index_mmap_cpp",
+    "grep_plaintext",
+    "ripgrep_plaintext",
+}
 
 
 def execute_cell_run(cell_run_spec: CellRunSpec, run_config: RunConfig, code_version: str | None = None) -> RunRecord:
@@ -66,7 +77,14 @@ def execute_cell_run(cell_run_spec: CellRunSpec, run_config: RunConfig, code_ver
     """
 
     dataset_spec = get_dataset_spec(cell_run_spec.dataset_slug)
-    artifact_spec = ensure_artifacts_for_datasets([dataset_spec])[dataset_spec.slug]
+    artifact_spec = ensure_artifacts_for_datasets(
+        [dataset_spec],
+        scale=run_config.scale,
+        source_root=run_config.source_root,
+        record_build_metrics=run_config.record_build_metrics,
+    )[dataset_spec.slug]
+    if cell_run_spec.mode_name == "static_qgram_index_mmap_cpp":
+        ensure_qidx_search_binary()
     query_payload = get_query_payload(dataset_spec.slug, cell_run_spec.query_id)
 
     candidate_callable = lambda: run_mode_query_result(
@@ -98,10 +116,11 @@ def execute_cell_run(cell_run_spec: CellRunSpec, run_config: RunConfig, code_ver
         sample_limit=run_config.sample_difference_limit,
     )
 
-    if run_config.strict_validation and cell_run_spec.mode_name == "full_decompression":
+    if run_config.strict_validation and cell_run_spec.mode_name in STRICT_EXACT_MODE_NAMES:
         if not correctness.exact_set_match:
             raise AssertionError(
-                "full_decompression diverged from decompressed_text, which violates the part-2 validation contract."
+                f"{cell_run_spec.mode_name} diverged from decompressed_text, "
+                "which violates the exact-mode validation contract."
             )
 
     return RunRecord(
@@ -130,6 +149,13 @@ def execute_cell_run(cell_run_spec: CellRunSpec, run_config: RunConfig, code_ver
         bloom_rejected_records=candidate_result.bloom_rejected_records,
         bloom_candidate_records=candidate_result.bloom_candidate_records,
         total_records=candidate_result.total_records,
+        scale=artifact_spec.scale,
+        effective_line_count=artifact_spec.effective_line_count,
+        planner_strategy=candidate_result.planner_strategy,
+        postings_lists_touched=candidate_result.postings_lists_touched,
+        postings_ids_read=candidate_result.postings_ids_read,
+        verified_records=candidate_result.verified_records,
+        verified_bytes=candidate_result.verified_bytes,
     )
 
 
@@ -159,7 +185,14 @@ def run_suite(
     code_version = get_code_version()
 
     dataset_specs = [get_dataset_spec(dataset_slug) for dataset_slug in dataset_slugs]
-    artifact_specs = ensure_artifacts_for_datasets(dataset_specs)
+    artifact_specs = ensure_artifacts_for_datasets(
+        dataset_specs,
+        scale=effective_run_config.scale,
+        source_root=effective_run_config.source_root,
+        record_build_metrics=effective_run_config.record_build_metrics,
+    )
+    if "static_qgram_index_mmap_cpp" in set(mode_names):
+        ensure_qidx_search_binary()
 
     suite_results_directory = _create_suite_results_directory(effective_run_config)
     raw_jsonl_path = suite_results_directory / "raw_runs.jsonl"
@@ -179,6 +212,9 @@ def run_suite(
                 "config_label": effective_run_config.config_label,
                 "config_version": effective_run_config.config_version,
                 "sample_difference_limit": effective_run_config.sample_difference_limit,
+                "scale": effective_run_config.scale,
+                "source_root": effective_run_config.source_root,
+                "record_build_metrics": effective_run_config.record_build_metrics,
             },
             "datasets": [dataset_spec.slug for dataset_spec in dataset_specs],
             "queries": query_ids,
@@ -274,7 +310,11 @@ def _run_cell_in_subprocess(
         str(run_config.profiling_enabled).lower(),
         "--strict-validation",
         str(run_config.strict_validation).lower(),
+        "--scale",
+        run_config.scale,
     ]
+    if run_config.source_root is not None:
+        command.extend(["--source-root", run_config.source_root])
     if cell_run_spec.is_warmup:
         command.extend(["--is-warmup", "true"])
     else:

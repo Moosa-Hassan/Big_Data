@@ -1,0 +1,2 @@
+dataset_slug,scale,effective_line_count,raw_bytes,static_compressed_bytes,qidx2_bytes,qidx3_bytes,qidx3_over_raw_ratio,qidx3_over_static_compressed_ratio,qidx3_over_qidx2_ratio,qidx3_smaller_than_qidx2
+linux,2k,2000,216485,86136,1614213,762659,3.522918447005566,8.854126033249745,0.4724649101450676,True

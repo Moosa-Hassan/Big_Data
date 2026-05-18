@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="430" viewBox="0 0 940 430" role="img"><rect width="100%" height="100%" fill="#ffffff" />
+<text x="470.0" y="28" text-anchor="middle" font-size="18" font-weight="700">Median Wall Time by Mode</text>
+<line x1="210" y1="52" x2="210" y2="392" stroke="#333" />
+<line x1="210" y1="392" x2="898" y2="392" stroke="#333" />
+<text x="202" y="77.8" text-anchor="end" font-size="12">Decompressed Text</text>
+<rect x="210" y="52.0" width="8.0" height="38.0" fill="#4C78A8" rx="3" />
+<text x="224.0" y="77.8" font-size="12">11.51 ms</text>
+<text x="202" y="125.8" text-anchor="end" font-size="12">Full Decompression</text>
+<rect x="210" y="100.0" width="572.3" height="38.0" fill="#F58518" rx="3" />
+<text x="788.3" y="125.8" font-size="12">824.14 ms</text>
+<text x="202" y="173.8" text-anchor="end" font-size="12">Static Bloom</text>
+<rect x="210" y="148.0" width="614.3" height="38.0" fill="#B279A2" rx="3" />
+<text x="830.3" y="173.8" font-size="12">884.55 ms</text>
+<text x="202" y="221.8" text-anchor="end" font-size="12">grep Plaintext</text>
+<rect x="210" y="196.0" width="14.9" height="38.0" fill="#9D755D" rx="3" />
+<text x="230.9" y="221.8" font-size="12">21.40 ms</text>
+<text x="202" y="269.8" text-anchor="end" font-size="12">ripgrep Plaintext</text>
+<rect x="210" y="244.0" width="4.0" height="38.0" fill="#BAB0AC" rx="3" />
+<text x="220.0" y="269.8" font-size="12">5.70 ms</text>
+<text x="202" y="317.8" text-anchor="end" font-size="12">Static Q-Gram qidx3</text>
+<rect x="210" y="292.0" width="7.5" height="38.0" fill="#EECA3B" rx="3" />
+<text x="223.5" y="317.8" font-size="12">10.86 ms</text>
+<text x="202" y="365.8" text-anchor="end" font-size="12">Static Q-Gram qidx3 C++</text>
+<rect x="210" y="340.0" width="2.5" height="38.0" fill="#FF9DA6" rx="3" />
+<text x="218.5" y="365.8" font-size="12">3.60 ms</text>
+</svg>

@@ -1,0 +1,15 @@
+dataset_slug,mode_name,aggregate_level,cell_count,median_wall_time_ms,median_cpu_time_ms,median_peak_rss_mb,median_match_count,median_tp,median_fp,median_fn,median_precision,median_recall,median_f1,median_decoded_records,median_decoded_bytes,median_skipped_records,median_skipped_bytes,median_fallback_count,median_bloom_rejected_records,median_bloom_candidate_records,median_total_records,median_bloom_skip_rate,all_cells_exact_set_match
+apache,decompressed_text,dataset_level,8,15.805229486431926,15.801000000000002,27.6953125,4349.0,2598.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,True
+apache,full_decompression,dataset_level,8,1048.765603452921,1033.4769999999999,34.8046875,4349.0,2598.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,True
+apache,grep_plaintext,dataset_level,8,41.09877097653225,4.663500000000001,29.1171875,4349.0,2598.0,0.0,0.0,1.0,1.0,1.0,6885.0,596003.5,,,0.0,,,,,True
+apache,ripgrep_plaintext,dataset_level,8,8.377207966987044,4.9195,29.4609375,4349.0,2598.0,0.0,0.0,1.0,1.0,1.0,6885.0,596003.5,,,0.0,,,,,True
+apache,static_bloom,dataset_level,8,1452.386166958604,1449.7755,62.90625,4349.0,2598.0,0.0,0.0,1.0,1.0,1.0,14418.5,1343464.5,42063.5,5750.0,0.0,42063.5,14418.5,56482.0,0.7447239828617966,False
+apache,static_qgram_index_mmap_compact,dataset_level,8,20.559312019031495,16.958499999999997,32.953125,4349.0,2598.0,0.0,0.0,1.0,1.0,1.0,6885.0,596003.5,49597.0,,0.0,,,56482.0,,True
+apache,static_qgram_index_mmap_cpp,dataset_level,8,5.622250027954578,1.967499999999997,28.65625,4349.0,2598.0,0.0,0.0,1.0,1.0,1.0,56482.0,,0.0,,0.0,,,56482.0,,True
+linux,decompressed_text,dataset_level,8,7.384353957604617,7.378499999999996,26.6640625,561.0,561.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,True
+linux,full_decompression,dataset_level,8,668.0096454801969,667.3625,32.546875,561.0,561.0,0.0,0.0,1.0,1.0,1.0,,,,,,,,,,True
+linux,grep_plaintext,dataset_level,8,20.26952098822221,1.5495000000000023,27.125,561.0,561.0,0.0,0.0,1.0,1.0,1.0,841.5,64219.5,,,0.0,,,,,True
+linux,ripgrep_plaintext,dataset_level,8,4.468604456633329,1.6520000000000006,26.6953125,561.0,561.0,0.0,0.0,1.0,1.0,1.0,841.5,64219.5,,,0.0,,,,,True
+linux,static_bloom,dataset_level,8,648.4572714543901,620.619,47.3984375,561.0,561.0,0.0,2.0,1.0,0.9992310649750096,0.9996152366294729,3800.0,400264.5,21767.0,24814.0,0.0,21767.0,3800.0,25567.0,0.8513709078108499,False
+linux,static_qgram_index_mmap_compact,dataset_level,8,7.9602079931646585,4.848999999999992,29.046875,561.0,561.0,0.0,0.0,1.0,1.0,1.0,561.0,41021.5,25006.0,,0.0,,,25567.0,,True
+linux,static_qgram_index_mmap_cpp,dataset_level,8,4.097062512300909,1.3835000000000064,27.140625,561.0,561.0,0.0,0.0,1.0,1.0,1.0,25567.0,,0.0,,0.0,,,25567.0,,True

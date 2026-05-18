@@ -33,8 +33,13 @@ ModeName = Literal[
     "static_bloom",
     "static_qgram_index",
     "static_qgram_index_mmap",
+    "static_qgram_index_mmap_compact",
+    "static_qgram_index_mmap_cpp",
+    "grep_plaintext",
+    "ripgrep_plaintext",
 ]
 QueryPayload = str | tuple[str, ...]
+ScaleName = Literal["2k", "10k", "100k", "full"]
 
 
 @dataclass(frozen=True)
@@ -103,8 +108,10 @@ class ArtifactSpec:
         static_window_path: Static L-window dump consumed by `static_bloom`.
         static_qgram_index_path: Sidecar exact q-gram index for the static
             bitstream.
-        static_qgram_mmap_index_path: Binary mmap sidecar exact q-gram index
+    static_qgram_mmap_index_path: Binary mmap sidecar exact q-gram index
             for the static bitstream.
+        static_qgram_compact_index_path: Compact qidx3 sidecar exact q-gram
+            index for scaled/publishability runs.
 
     Returns:
         Not applicable. This is a value object.
@@ -117,13 +124,17 @@ class ArtifactSpec:
     compressed_binary_path: Path
     decompressed_text_path: Path
     window_path: Path
+    scale: ScaleName = "2k"
+    effective_line_count: int | None = None
+    source_raw_log_path: Path | None = None
     static_compressed_binary_path: Path | None = None
     static_decompressed_text_path: Path | None = None
     static_window_path: Path | None = None
     static_qgram_index_path: Path | None = None
     static_qgram_mmap_index_path: Path | None = None
+    static_qgram_compact_index_path: Path | None = None
 
-    def to_json_dict(self) -> dict[str, str | None]:
+    def to_json_dict(self) -> dict[str, str | int | None]:
         """Return a JSON-safe mapping of artifact paths.
 
         Purpose:
@@ -136,6 +147,9 @@ class ArtifactSpec:
 
         return {
             "raw_log_path": str(self.raw_log_path),
+            "scale": self.scale,
+            "effective_line_count": self.effective_line_count,
+            "source_raw_log_path": str(self.source_raw_log_path) if self.source_raw_log_path else None,
             "compressed_binary_path": str(self.compressed_binary_path),
             "decompressed_text_path": str(self.decompressed_text_path),
             "window_path": str(self.window_path),
@@ -151,6 +165,9 @@ class ArtifactSpec:
             ),
             "static_qgram_mmap_index_path": (
                 str(self.static_qgram_mmap_index_path) if self.static_qgram_mmap_index_path else None
+            ),
+            "static_qgram_compact_index_path": (
+                str(self.static_qgram_compact_index_path) if self.static_qgram_compact_index_path else None
             ),
         }
 
@@ -235,6 +252,9 @@ class RunConfig:
     config_label: str = "part2_research_eval"
     config_version: str = "part2.v1"
     sample_difference_limit: int = 10
+    scale: ScaleName = "2k"
+    source_root: str | None = None
+    record_build_metrics: bool = False
 
 
 @dataclass(frozen=True)
@@ -299,6 +319,11 @@ class ModeRunResult:
     bloom_rejected_records: int | None = None
     bloom_candidate_records: int | None = None
     total_records: int | None = None
+    planner_strategy: str | None = None
+    postings_lists_touched: int | None = None
+    postings_ids_read: int | None = None
+    verified_records: int | None = None
+    verified_bytes: int | None = None
 
 
 @dataclass(frozen=True)
@@ -361,6 +386,13 @@ class RunRecord:
     bloom_rejected_records: int | None = None
     bloom_candidate_records: int | None = None
     total_records: int | None = None
+    scale: ScaleName = "2k"
+    effective_line_count: int | None = None
+    planner_strategy: str | None = None
+    postings_lists_touched: int | None = None
+    postings_ids_read: int | None = None
+    verified_records: int | None = None
+    verified_bytes: int | None = None
 
     def to_json_dict(self) -> dict[str, Any]:
         """Return a JSON-safe representation of the run record.
